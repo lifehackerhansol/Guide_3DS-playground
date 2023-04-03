@@ -1,0 +1,39 @@
+name: Deploy site
+
+on:
+  push:
+    branches: [ master ]
+    paths:
+      - _pages/**
+      - .github/workflows/publish.yml
+      - package.json
+      - Gemfile
+  workflow_dispatch:
+
+jobs:
+  doc-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          persist-credentials: false
+          submodules: recursive
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+
+      - name: Install dependencies
+        run: bundle install
+
+      - name: Run Jekyll
+        # Build the site using Jekyll
+        run: bundle exec jekyll build
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4.4.1
+        with:
+          branch: gh-pages # The branch the action should deploy to.
+          folder: _site # The folder the action should deploy.
+          clean: true # Automatically remove deleted files from the deploy branch
