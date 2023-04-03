@@ -1,0 +1,700 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<!-- for guide purposes all caching is removed and is separately built. -->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>FAQ - 3DS Hacks Guide</title>
+<meta name="description" content="A complete guide to 3DS custom firmware">
+
+
+  <meta name="author" content="Nintendo Homebrew">
+  
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="3DS Hacks Guide">
+<meta property="og:title" content="FAQ">
+<meta property="og:url" content="https://3ds.hacks.guide/it_IT/faq.html">
+
+
+  <meta property="og:description" content="A complete guide to 3DS custom firmware">
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://3ds.hacks.guide/it_IT/faq.html">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Nintendo Homebrew",
+      "url": "https://3ds.hacks.guide/"
+    
+  }
+</script>
+
+
+  <meta name="google-site-verification" content="jVXoPK_-qzKJp4SScnZYpOIX3yDXfGnAoTBJYixUOwg" />
+
+
+  <meta name="msvalidate.01" content="F3532011519E308583A0A2CAF2DD69E8">
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="3DS Hacks Guide Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=PYEmwKvQAx">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png?v=PYEmwKvQAx" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-194x194.png?v=PYEmwKvQAx" sizes="194x194">
+<link rel="icon" type="image/png" href="/images/android-chrome-192x192.png?v=PYEmwKvQAx" sizes="192x192">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png?v=PYEmwKvQAx" sizes="16x16">
+<link rel="manifest" href="/images/manifest.json?v=PYEmwKvQAx">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg?v=PYEmwKvQAx" color="#2E3440">
+<link rel="shortcut icon" href="/images/favicon.ico?v=PYEmwKvQAx">
+<meta name="apple-mobile-web-app-title" content="Guide">
+<meta name="application-name" content="Guide">
+<meta name="msapplication-TileColor" content="#2E3440">
+<meta name="msapplication-TileImage" content="/images/mstile-144x144.png?v=PYEmwKvQAx">
+<meta name="msapplication-config" content="/images/browserconfig.xml?v=PYEmwKvQAx">
+<meta name="theme-color" content="#2E3440">
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.css" integrity="sha512-LQ97camar/lOliT/MqjcQs5kWgy6Qz/cCRzzRzUCfv0fotsCTC9ZHXaPQmJV8Xu/PVALfJZ7BDezl5lW3/qBxg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js" integrity="sha512-yXXqOFjdjHNH1GND+1EO0jbvvebABpzGKD66djnUfiKlYME5HGMUJHoCaeE4D5PTG2YsSJf6dwqyUUvQvS0vaA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#2e3440"
+    },
+    "button": {
+      "background": "#60818f"
+    }
+  },
+  "theme": "edgeless",
+  "position": "top",
+  "static": true,
+  "content": {
+    "message": "Questo sito web utilizza i cookie per visualizzare l'avanzamento della guida sulla barra laterale o migliorare il sito."
+  }
+})});
+</script>
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <!-- <a class="site-title" href="/">
+          3DS Hacks Guide
+          
+        </a>
+      -->
+        <ul class="visible-links">
+          <!-- modified to use multilang, guide-specific -->
+          
+          
+          
+          
+          
+          
+            
+              <li class="masthead__menu-item masthead__menu-item--lg"><a href="/it_IT/">Home</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/it_IT/faq">FAQ</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/it_IT/troubleshooting">Risoluzione dei problemi</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/it_IT/checking-for-cfw">Verifica del CFW</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/it_IT/godmode9-usage">Usare GodMode9</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/it_IT/contribute">Contribuisci</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/it_IT/region-changing">Cambiare regione</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/it_IT/uninstall-cfw">Disinstallare il CFW</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/it_IT/credits">Riconoscimenti</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/it_IT/site-navigation">Mappa del sito</a></li>
+            
+          
+          <!-- end guide specific -->
+        </ul>
+        
+        <!-- completely redo hidden links for multilang, guide-specific -->
+        <ul class="hidden-links links-menu hidden"></ul>
+        <ul class="hidden-links lang-menu hidden">
+          
+          
+          
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/faq.html">English</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/es_ES/faq.html">Español</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/de_DE/faq.html">Deutsch</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/fr_FR/faq.html">Français</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/it_IT/faq.html">Italiano</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/nl_NL/faq.html">Nederlands</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/pt_BR/faq.html">Português do Brasil</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/pt_PT/faq.html">Português (Portugal)</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ru_RU/faq.html">Русский</a></li> -->
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/zh_CN/faq.html">简体中文</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/zh_TW/faq.html">繁體中文</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/pl_PL/faq.html">Polski</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/tr_TR/faq.html">Türkçe</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/vi_VN/faq.html">Tiếng Việt</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ca_ES/faq.html">Català</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/el_GR/faq.html">Ελληνικά</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/he_IL/faq.html">עברית‎</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/sv_SE/faq.html">Svenska</a></li> -->
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ko_KR/faq.html">한국어</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/no_NO/faq.html">Norsk</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ja_JP/faq.html">日本語</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ar_SA/faq.html">اللغة العربية</a></li> -->
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/hu_HU/faq.html">Magyar</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ro_RO/faq.html">Română</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/sr_SP/faq.html">Српски</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/af_ZA/faq.html">Afrikaans</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ms_MY/faq.html">Bahasa Melayu</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/fi_FI/faq.html">Suomi</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/da_DK/faq.html">Dansk</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/uk_UA/faq.html">Українська</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/cs_CZ/faq.html">Čeština</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/en_PT/faq.html">Pirate English</a></li> -->
+        </ul>
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <button class="greedy-nav__toggle_lang"><div class="langicon"><i class="fa fa-language fa-lg" aria-hidden="true"></i></div></button>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  <!-- 
+  <div class="sidebar sticky">
+  
+  
+    
+    
+  
+  </div>
+
+-->
+
+
+
+<div class="sidebar sticky" style="display: none;">
+  
+
+
+
+
+
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    <li>
+      <span class="nav__sub-title">Avanzamento</span>
+      <ol>
+        
+          
+            <li style="display: none;" data-name="home"><a href='/it_IT/'>Home</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="key-information"><a href='/it_IT/key-information'>Informazioni importanti</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="get-started"><a href='/it_IT/get-started'>Cominciamo!</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="ntrboot"><a href='/it_IT/ntrboot'>ntrboot</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer"><a href='/it_IT/seedminer'>Seedminer</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(twn)"><a href='/it_IT/seedminer-(twn)'>Seedminer (TWN)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="bannerbomb3"><a href='/it_IT/bannerbomb3'>BannerBomb3</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="multiple-options"><i>(Più Opzioni)</i></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(3ds-single-system)"><a href='/it_IT/flashing-ntrboot-(3ds-single-system)'>Flash di ntrboot (Singolo 3DS)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(3ds-multi-system)"><a href='/it_IT/flashing-ntrboot-(3ds-multi-system)'>Flash di ntrboot (Con più 3DS)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(dsi)"><a href='/it_IT/flashing-ntrboot-(dsi)'>Flash di ntrboot (DSi)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(nds)"><a href='/it_IT/flashing-ntrboot-(nds)'>Flash di ntrboot (NDS)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(pichaxx)"><a href='/it_IT/homebrew-launcher-(pichaxx)'>Homebrew Launcher (PicHaxx)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="bannerbomb3-fredtool-(twn)"><a href='/it_IT/bannerbomb3-fredtool-(twn)'>BannerBomb3 + Fredtool (TWN)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(hardmod)"><a href='/it_IT/installing-boot9strap-(hardmod)'>Installazione di boot9strap (Hardmod)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(hbl-usm)"><a href='/it_IT/installing-boot9strap-(hbl-usm)'>Installazione di boot9strap (HBL-USM)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(ntrboot)"><a href='/it_IT/installing-boot9strap-(ntrboot)'>Installazione di boot9strap (ntrboot)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(soundhax)"><a href='/it_IT/installing-boot9strap-(soundhax)'>Installazione di boot9strap (Soundhax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(ssloth-browser)"><a href='/it_IT/installing-boot9strap-(ssloth-browser)'>Installazione di boot9strap (SSLoth-Browser)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(fredtool)"><a href='/it_IT/installing-boot9strap-(fredtool)'>Installazione di boot9strap (Fredtool)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(usm)"><a href='/it_IT/installing-boot9strap-(usm)'>Installazione di boot9strap (USM)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(kartdlphax)"><a href='/it_IT/installing-boot9strap-(kartdlphax)'>Installazione di boot9strap (kartdlphax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(hbl-usm)"><a href='/it_IT/installing-boot9strap-(hbl-usm)'>Installazione di boot9strap (HBL-USM)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="finalizing-setup"><a href='/it_IT/finalizing-setup'>Completamento dell'installazione</a></li>
+          
+        
+      </ol>
+    </li>
+  </ul>
+</nav>
+</div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="FAQ">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">FAQ
+</h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+
+        <hr>
+
+        
+        
+
+        
+          
+          <div class ="notice"><b>Se hai bisogno di aiuto, chiedi pure su <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew su Discord</a> (in inglese).</b></div>
+        
+          
+          <div class ="notice"><b>Se hai gradito questa guida, accettiamo <a href="contribute#donations">Donazioni</a>.</b></div>
+        
+
+        <hr>
+
+        <aside class="sidebar__right">
+<nav class="toc">
+    <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Indice</h4></header>
+<ul class="toc__menu" id="markdown-toc">
+  <li><a href="#faq-pre-installazione" id="markdown-toc-faq-pre-installazione">FAQ Pre-Installazione</a></li>
+  <li><a href="#faq-post-installazione" id="markdown-toc-faq-post-installazione">FAQ Post-Installazione</a></li>
+  <li><a href="#faq-menuhax--a9lh--gateway" id="markdown-toc-faq-menuhax--a9lh--gateway">FAQ menuhax / A9LH / Gateway</a></li>
+</ul>
+
+  </nav>
+</aside>
+
+<p class="notice--info"><strong>Sì</strong>, puoi ancora installare un custom firmware sul tuo 3DS, anche dopo la chiusura dell’eShop.</p>
+
+<div class="notice--info">
+<p><strong>L’ultima versione del software 3DS è 11.16.0</strong>. Ecco cosa dovresti sapere:</p>
+
+<ul>
+  <li>Se la tua console sta eseguendo <em>Luma 11.0</em> o successivi, è <em>al 100% sicuro</em> eseguire l’aggiornamento. Puoi controllare la versione di Luma tenendo premuto (Select) durante l’avvio della console.</li>
+  <li>Se la tua console ha una versione precedente di Luma, dovresti <a href="checking-for-cfw">aggiornare Luma</a> prima di aggiornare la tua console alla versione 11.16.0.</li>
+</ul>
+</div>
+
+<h2 id="faq-pre-installazione">FAQ Pre-Installazione</h2>
+
+<details>
+<summary><u>Ho installato l'ultima versione di sistema. Posso modificare la mia console senza alcun dispositivo esterno?</u></summary>
+
+<p>Sì! La versione del software più recente (11.16.0) ha un metodo gratuito per ottenere un CFW chiamato <a href="seedminer">Seedminer</a>.</p>
+</details>
+
+<details>
+<summary><u>Con quali console è compatibile questa guida?</u></summary>
+
+<p>Le istruzioni sono identiche per tutte le console 3DS, 3DS XL, 2DS, New 3DS, New 3DS XL, e New 2DS XL. Se il nome della tua versione di sistema è “0.0.0-0”, potresti avere una console per sviluppatori.</p>
+</details>
+
+<details>
+<summary><u>Quanto è rischioso modificare la mia console?</u></summary>
+
+<p>Ora è essenzialmente impossibile brickare la console, a meno che tu non lo voglia fare di proposito.</p>
+</details>
+
+<details>
+<summary><u>Potrò avviare emulatori ed homebrew fantastici al termine della guida?</u></summary>
+
+<p>Sì! Questa guida installerà alcune applicazioni homebrew utili, tra cui <a href="https://github.com/Universal-Team/Universal-Updater/releases/latest">Universal-Updater</a>, che funge da app store per homebrew.</p>
+</details>
+
+<details>
+<summary><u>Potrò giocare a giochi comprati all'estero?</u></summary>
+
+<p>Sì; Luma3DS ignorerà automaticamente il controllo regione per le cartucce e i titoli installati. Alcuni giochi potrebbero aver bisogno di utilizzare la <a href="https://github.com/LumaTeam/Luma3DS/wiki/Optional-features">funzione di emulazione regionale</a> per funzionare correttamente su console fuori regione.</p>
+</details>
+
+<details>
+<summary><u>Perderò alcune funzionalità se installo un CFW?</u></summary>
+
+<p>No. Le console con custom firmware possono sempre giocare online e avviare le schede di gioco come qualunque altro 3DS.</p>
+</details>
+
+<details>
+<summary><u>Posso mantenere il mio NNID?</u></summary>
+
+<p>Il tuo NNID (se ne hai uno) non sarà influenzato da questa guida. Console di regione KOR, CHN, o TWN non hanno funzionalità NNID integrate, per cui non ne verranno influenzate.</p>
+</details>
+
+<details>
+<summary><u>Il mio 3DS sarà bandito avendo un CFW?</u></summary>
+
+<p>Nel Maggio 2017 c’è stata un’ondata di ban che ha impedito agli utenti CFW di giocare online (l’accesso all’eShop, I NNID e i Nintendo Account non sono stati influenzati), apparentemente in modo casuale. Da allora non si è più assistito a un’ondata di ban di tale portata. Detto questo, non sappiamo cosa possa riservarci Nintendo nel futuro. In questo momento, non pensiamo che i ban siano qualcosa di cui ci sia bisogno di preoccuparsi.</p>
+</details>
+
+<details>
+<summary><u>Posso seguire questa guida senza un computer a disposizione (ad esempio, un telefono Android)?</u></summary>
+
+<p>Sì! A patto che tu abbia modo di trasferire file su una scheda SD compatibile.</p>
+</details>
+
+<details>
+<summary><u>Quali dimensioni di scheda SD posso usare?</u></summary>
+
+<p>Avrai bisogno di almeno 1,5 GB di spazio libero nella scheda SD per seguire questa guida nella sua interezza. Anche se il 3DS è ufficialmente compatibile con schede SD fino a 32GB, schede SD più grandi possono essere usate una volta ri-formattate manualmente come FAT32. Non è consigliabile utilizzare schede SD superiori a 128GB a causa di problemi noti con grafica GBA e con temi personalizzati.</p>
+</details>
+
+<details>
+<summary><u>Ho sentito di questa cosa per cui dovrei pagare (Gateway, Sky3DS, ntrboot, R4, ecc). È qualcosa di cui ho bisogno?</u></summary>
+
+<p>No. Il custom firmware può essere installato gratuitamente sui firmware più recenti senza alcun dispositivo hardware. Peraltro, le flashcart in modalità 3DS come Gateway e Sky3DS non sono consigliate perché obsolete e possono comportare il ban o il rischio di brickare la console.</p>
+</details>
+
+<details>
+<summary><u>Qual è la differenza tra custom firmware e accesso agli homebrew?</u></summary>
+
+<p>Generalmente, con custom firmware si intende una modifica al sistema del 3DS per fare cose che normalmente non potrebbe fare. Con “homebrew” si intende generalmente un software creato al di fuori dei canali ufficiali (es. non distribuito tramite l’eShop o con schede di gioco).</p>
+
+<p>In passato era possibile utilizzare homebrew in modalità userland, chiamati generalmente “homebrew”, tramite vecchi exploit come ninjhax. Il livello di privilegi di sistema concesso in modalità userland permetteva di eseguire homebrew ed emulatori di base, ma non di modificare giochi o scaricare cartucce (facilmente). Era anche molto meno stabile, gli homebrew spesso crashavano e occorreva riavviare la console. Il custom firmware permette un livello di privilegi di sistema maggiore, oltre che ad essere più stabile di entrypoint esclusivi ad homebrew.</p>
+
+</details>
+
+<h2 id="faq-post-installazione">FAQ Post-Installazione</h2>
+
+<details>
+<summary><u>È sicuro aggiornare all'ultima versione il mio 3DS con un CFW?</u></summary>
+
+<p>Se stai usando Luma3DS, il loader del tuo custom firmware (boot9strap) non verrà <em>mai</em> rimosso con un aggiornamento di sistema. Ci sono stati aggiornamenti in passato che hanno portato al crash di Luma3DS all’avvio, quindi sarebbe meglio aspettare qualche ora per assicurarsi che l’ultimo aggiornamento non renderà temporaneamente inutilizzabile la console fino all’aggiornamento di Luma3DS. Gli aggiornamenti di sistema possono essere eseguiti con le stesse modalità di un normale 3DS: tramite le Impostazioni della console, via Safe Mode o accettando la richiesta allo scaricamento automatico di un aggiornamento.</p>
+</details>
+
+<details>
+<summary><u>Come faccio ad aggiornare la mia scheda SD?</u></summary>
+
+<p>Copia e incolla il contenuto della tua scheda SD in una nuova scheda SD formattata come FAT32. Per le SD da 128 GB, si raccomanda una dimensione di allocazione di 65536. SD più grandi di 128GB non sono consigliate a causa di problemi noti con la grafica GBA e con i temi personalizzati.</p>
+</details>
+
+<details>
+<summary><u>Posso eseguire un Trasferimento dati avendo un CFW?</u></summary>
+
+<p>Sì, i trasferimenti dati possono essere effettuati tramite la relativa funzione verso altre console con CFW (possono verificarsi inconsistenze se la console di destinazione è invece senza CFW). I ticket di titoli non legittimi (homebrew) non saranno trasferiti, ma possono venire fatti riapparire con <a href="https://github.com/ihaveamac/faketik/releases/latest">faketik</a>. Assicurati di non eseguire un trasferimento via wireless, altrimenti tutti i titoli non legittimi verranno eliminati. Il CFW rimarrà su entrambe le console.</p>
+</details>
+
+<details>
+<summary><u>Come faccio a cambiare la lingua di sistema di un 3DS giapponese?</u></summary>
+
+<p>L’unico modo per cambiare la lingua di sistema di un 3DS giapponese in una lingua diversa dal giapponese è tramite un <a href="region-changing">cambio di regione</a>. Presta attenzione al fatto che molto probabilmente questo corromperà il Nintendo eShop della tua console, per cui non potrai aggiornare i tuoi giochi, sia che siano interni sia esterni alla tua regione.</p>
+
+</details>
+
+<details>
+<summary><u>Come aggiorno le applicazioni homebrew?</u></summary>
+
+<p>Dipende dal formato dell’applicazione homebrew. Generalmente:</p>
+
+<ul>
+  <li>Gli homebrew in <strong>formato CIA</strong> possono venire aggiornati installando il nuovo CIA, che di solito sovrascriverà quello vecchio. Se il vecchio CIA non viene sovrascritto, potrai eliminare quello precedente da Gestione dati, come con qualunque altro titolo 3DS.</li>
+  <li>Gli homebrew in <strong>formato 3DSX</strong> possono venire aggiornati sostituendo il file 3DSX dentro <code class="language-plaintext highlighter-rouge">/3ds/</code> con la nuova versione. Se l’applicazione include risorse aggiuntive, potresti dover trasferire la relativa cartella da qualche altra parte. Consulta la documentazione dell’homebrew stesso.</li>
+  <li>Per aggiornare Luma3DS, consulta <a href="restoring-updating-cfw">questa pagina</a>. Per aggiornare GodMode9, consulta <a href="godmode9-usage#updating-godmode9">questa pagina</a>.</li>
+</ul>
+</details>
+
+<details>
+<summary><u>Come faccio ad aggiornare i miei giochi?</u></summary>
+
+<p>Puoi continuare scaricare gli aggiornamenti dei giochi dal Nintendo eShop, anche se è stato chiuso.</p>
+
+<p>Se il gioco non è della stessa regione della console, dovrai <a href="dumping-titles-and-game-cartridges">scaricare gli aggiornamenti</a> da un 3DS con gli aggiornamenti installati. Il Nintendo eShop contiene gli aggiornamenti relativi alla regione della console (un 3DS giapponese avrà solo gli aggiornamenti per i giochi giapponesi).</p>
+</details>
+
+<details>
+<summary><u>Aiuto! È successo qualcosa di brutto e il mio 3DS non avvia il nel menu HOME...</u></summary>
+
+<p>Consulta la <a href="troubleshooting#boot-issues-on-devices-with-custom-firmware">guida per risolvere i problemi</a>. <strong>Non è consigliato disinstallare il CFW se la console non è in grado di avviarsi normalmente, poiché è molto probabile che questo causerà un brick</strong>.</p>
+</details>
+
+<h2 id="faq-menuhax--a9lh--gateway">FAQ menuhax / A9LH / Gateway</h2>
+
+<details>
+<summary><u>Ho modificato la mia console (x) anni fa, quindi ha già degli homebrew. Cosa dovrei fare?</u></summary>
+
+<p>Si consiglia di aggiornare la tua installazione ad una più moderna, basata su boot9strap. Segui la guida <a href="checking-for-cfw">Verifica del CFW</a> per vedere come aggiornare la tua installazione.</p>
+</details>
+
+<details>
+<summary><u>La mia installazione funziona. Perché dovrei aggiornarla?</u></summary>
+
+<p>La stragrande maggioranza degli homebrew moderni (come Checkpoint e BootNTR Selector) è stata testata solo su installazioni moderne, basate su boot9strap, e potrebbero non funzionare completamente (o affatto) su installazioni più vecchie basate su menuhax, A9LH o Gateway. Inoltre, a seconda della tua installazione, potrebbe non essere sicuro aggiornare alla versione del software più recente. Installazioni moderne basate su boot9strap consentono un livello di accesso al sistema maggiore rispetto agli hack precedenti, inclusa la possibilità di scaricare il bootrom della tua console.</p>
+</details>
+
+<details>
+<summary><u>Perderò qualcosa se aggiornerò la mia installazione?</u></summary>
+
+<p>La tua vecchia installazione (inclusa la tua EmuNAND, se ne hai una) di solito può essere trasferita direttamente verso boot9strap senza perdite di dati. Se ci sono dati particolarmente importanti, sarebbe meglio prima fare un backup decriptato dei tuoi dati di salvataggio prima di aggiornare la tua installazione usando applicazioni come <a href="https://github.com/J-D-K/JKSM/releases/tag/12%2F20%2F2018">JKSM</a>.</p>
+</details>
+
+<details>
+<summary><u>Come faccio a spostare i salvataggi da un'installazione Gateway esistente a un'installazione più moderna?</u></summary>
+
+<p><strong>R:</strong> Guarda <a href="https://gbatemp.net/threads/425743/">questo thread</a>.</p>
+</details>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://github.com/hacks-guide/Guide_3DS" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+<!--
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+    </ul>
+  -->
+</div>
+
+<!-- custom footer, guide specific -->
+
+
+
+<div class="page__footer-copyright">&copy; 2023 Nintendo Homebrew. - <a href="site-navigation">Mappa del sito</a> - <a href="privacy-policy">Informativa sulla Privacy</a> <!-- Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.--></div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+<!-- for guide purposes all caching is removed and is separately built. -->
+
+
+
+
+
+
+
+
+  </body>
+</html>

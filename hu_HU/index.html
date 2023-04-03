@@ -1,0 +1,423 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<!-- for guide purposes all caching is removed and is separately built. -->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Útmutató 3DS hackeléshez - 3DS Hacks Guide</title>
+<meta name="description" content="Egy teljes útmutató 3DS (és 2DS) egyedi firmware-hez,  a gyári állapottól boot9strap-ig.">
+
+
+  <meta name="author" content="Nintendo Homebrew">
+  
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="3DS Hacks Guide">
+<meta property="og:title" content="Útmutató 3DS hackeléshez">
+<meta property="og:url" content="https://3ds.hacks.guide/hu_HU/">
+
+
+  <meta property="og:description" content="Egy teljes útmutató 3DS (és 2DS) egyedi firmware-hez,  a gyári állapottól boot9strap-ig.">
+
+
+
+  <meta property="og:image" content="https://3ds.hacks.guide/images/home-page-feature.jpg">
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://3ds.hacks.guide/hu_HU/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Nintendo Homebrew",
+      "url": "https://3ds.hacks.guide/"
+    
+  }
+</script>
+
+
+  <meta name="google-site-verification" content="jVXoPK_-qzKJp4SScnZYpOIX3yDXfGnAoTBJYixUOwg" />
+
+
+  <meta name="msvalidate.01" content="F3532011519E308583A0A2CAF2DD69E8">
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="3DS Hacks Guide Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=PYEmwKvQAx">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png?v=PYEmwKvQAx" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-194x194.png?v=PYEmwKvQAx" sizes="194x194">
+<link rel="icon" type="image/png" href="/images/android-chrome-192x192.png?v=PYEmwKvQAx" sizes="192x192">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png?v=PYEmwKvQAx" sizes="16x16">
+<link rel="manifest" href="/images/manifest.json?v=PYEmwKvQAx">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg?v=PYEmwKvQAx" color="#2E3440">
+<link rel="shortcut icon" href="/images/favicon.ico?v=PYEmwKvQAx">
+<meta name="apple-mobile-web-app-title" content="Guide">
+<meta name="application-name" content="Guide">
+<meta name="msapplication-TileColor" content="#2E3440">
+<meta name="msapplication-TileImage" content="/images/mstile-144x144.png?v=PYEmwKvQAx">
+<meta name="msapplication-config" content="/images/browserconfig.xml?v=PYEmwKvQAx">
+<meta name="theme-color" content="#2E3440">
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.css" integrity="sha512-LQ97camar/lOliT/MqjcQs5kWgy6Qz/cCRzzRzUCfv0fotsCTC9ZHXaPQmJV8Xu/PVALfJZ7BDezl5lW3/qBxg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js" integrity="sha512-yXXqOFjdjHNH1GND+1EO0jbvvebABpzGKD66djnUfiKlYME5HGMUJHoCaeE4D5PTG2YsSJf6dwqyUUvQvS0vaA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#2e3440"
+    },
+    "button": {
+      "background": "#60818f"
+    }
+  },
+  "theme": "edgeless",
+  "position": "top",
+  "static": true,
+  "content": {
+    "message": "A weboldal "sütiket" használ, hogy nyomon tudd követni a haladásod az oldalsó menüben, és hogy jobbá tegye az oldalt."
+  }
+})});
+</script>
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--splash">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <!-- <a class="site-title" href="/">
+          3DS Hacks Guide
+          
+        </a>
+      -->
+        <ul class="visible-links">
+          <!-- modified to use multilang, guide-specific -->
+          
+          
+          
+          
+          
+          
+            
+              <li class="masthead__menu-item masthead__menu-item--lg"><a href="/hu_HU/">Főoldal</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/hu_HU/faq">GYIK</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/hu_HU/troubleshooting">Hibaelhárítás</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/hu_HU/checking-for-cfw">CFW ellenőrzése</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/hu_HU/godmode9-usage">GodMode9 használata</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/hu_HU/contribute">Közreműködés</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/hu_HU/region-changing">Régió módosítás</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/hu_HU/uninstall-cfw">CFW eltávolítása</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/hu_HU/credits">Készítők</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/hu_HU/site-navigation">Oldaltérkép</a></li>
+            
+          
+          <!-- end guide specific -->
+        </ul>
+        
+        <!-- completely redo hidden links for multilang, guide-specific -->
+        <ul class="hidden-links links-menu hidden"></ul>
+        <ul class="hidden-links lang-menu hidden">
+          
+          
+          
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/">English</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/es_ES/">Español</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/de_DE/">Deutsch</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/fr_FR/">Français</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/it_IT/">Italiano</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/nl_NL/">Nederlands</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/pt_BR/">Português do Brasil</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/pt_PT/">Português (Portugal)</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ru_RU/">Русский</a></li> -->
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/zh_CN/">简体中文</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/zh_TW/">繁體中文</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/pl_PL/">Polski</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/tr_TR/">Türkçe</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/vi_VN/">Tiếng Việt</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ca_ES/">Català</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/el_GR/">Ελληνικά</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/he_IL/">עברית‎</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/sv_SE/">Svenska</a></li> -->
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ko_KR/">한국어</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/no_NO/">Norsk</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ja_JP/">日本語</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ar_SA/">اللغة العربية</a></li> -->
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/hu_HU/">Magyar</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ro_RO/">Română</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/sr_SP/">Српски</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/af_ZA/">Afrikaans</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ms_MY/">Bahasa Melayu</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/fi_FI/">Suomi</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/da_DK/">Dansk</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/uk_UA/">Українська</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/cs_CZ/">Čeština</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/en_PT/">Pirate English</a></li> -->
+        </ul>
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <button class="greedy-nav__toggle_lang"><div class="langicon"><i class="fa fa-language fa-lg" aria-hidden="true"></i></div></button>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+<div class="page__hero--overlay"
+  style="background-color: #5e616c; background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/home-page-feature.jpg');"
+>
+  
+    <div class="wrapper">
+      <h1 id="page-title" class="page__title" itemprop="headline">
+        
+          Útmutató 3DS hackeléshez
+
+        
+      </h1>
+      
+        <p class="page__lead">Egy teljes útmutató 3DS (és 2DS) egyedi firmware-hez, <br /> a gyári állapottól boot9strap-ig.<br />
+</p>
+      
+      
+
+
+      
+        <p><a href="/key-information" class="btn btn--light-outline btn--large">Kezdeti lépések</a></p>
+      
+      
+    </div>
+  
+  
+</div>
+
+
+
+<div id="main" role="main">
+  <article class="splash" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Útmutató 3DS hackeléshez">
+    <meta itemprop="description" content="Egy teljes útmutató 3DS (és 2DS) egyedi firmware-hez,  a gyári állapottól boot9strap-ig.">
+    
+    
+
+    <section class="page__content" itemprop="text">
+      <hr>
+
+      
+      
+
+      
+        
+        <div class ="notice"><b>Ha segítségre van szükséged (angol nyelven), keresd fel a <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew-t Discord-on</a>.</b></div>
+      
+        
+        <div class ="notice"><b>Amennyiben hasznosnak véled ezt az útmutatót, elfogadunk <a href="contribute#donations">adományokat</a>.</b></div>
+      
+
+      <hr>
+      <p class="notice--info">Alaposan olvasd végig az összes bevezető oldalt (beleértve ezt is) mielőtt bármibe belekezdenél.</p>
+
+<h2 id="mi-az-a-custom-firmware">Mi az a Custom Firmware?</h2>
+
+<p>A <strong>Custom firmware</strong> (“CFW”) egy teljes szoftver módosítása a 3DS-ednek, ami a számítógéped “rendszergazdai hozzáféréséhez” hasonlítható. Lehetővé teszi, hog bármit csinál amire a 3DS fizikailag képes, a helyett, hogy korlátozva lennél arra amit a Nintendo enged meg számodra.</p>
+
+<p>A custom firmware gyakori felhasználásai a következők:</p>
+
+<ul>
+  <li>Homebrew szoftver és játékok futtatásához, amik a Nintendo 3DS-re készültek vagy portoltak</li>
+  <li>A régió korlátozás megkerülése, lehetővé téve más régiós játékok futtatását</li>
+  <li>HOME Menü egyedivé tétel, a közösség által készített <a href="https://themeplaza.art">témákkal és jelvényekkel</a></li>
+  <li>Játékok módosítása (“ROM hackek”) a <a href="https://github.com/knight-ryu12/godmode9-layeredfs-usage/wiki/Using-Luma3DS'-layeredfs-(Only-version-8.0-and-higher)">LayeredFS</a>-en keresztül</li>
+  <li>Játékmentések szerkesztése, biztonsági mentése és visszaállítása</li>
+  <li>Régebbi konzolok emulációja, valamint natív DS és GBA játék futtatás</li>
+  <li>Fizikai cartridge-ek telepítése digitális használatra</li>
+</ul>
+
+<h2 id="mit-fogsz-telepíteni-ezzel-az-útmutatóval">Mit fogsz telepíteni ezzel az útmutatóval?</h2>
+
+<p>Az útmutató:</p>
+<ul>
+  <li>Telepíti a <strong>boot9strap</strong>-et és <strong>Luma3DS egyedi firmware</strong>-t módosítatlan kereskedelmi 3DS/2DS eszközökre
+    <ul>
+      <li>A Luma3DS automatikusan eltávolítja a régió zárat, és lehetővé teszi aláíratlan szoftver futtatását</li>
+    </ul>
+  </li>
+  <li>Telepít különböző homebrew szoftvereket, mint például a csomat telepítő, mentés fájl kezelő és egy homebrew app store</li>
+  <li>Kritikus rendszer mentéseket készít, ami segít elkerülni a brickelést (és helyreállítási adatot ment, arra az esetre, ha mégis bekövetkezne egy)</li>
+</ul>
+
+<hr />
+
+<h3 class="notice--primary" id="folytatás-az-alapvető-információkkal">Folytatás az <a href="key-information">Alapvető információkkal</a></h3>
+
+    </section>
+  </article>
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://github.com/hacks-guide/Guide_3DS" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+<!--
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+    </ul>
+  -->
+</div>
+
+<!-- custom footer, guide specific -->
+
+
+
+<div class="page__footer-copyright">&copy; 2023 Nintendo Homebrew. - <a href="site-navigation">Oldaltérkép</a> - <a href="privacy-policy">Adatvédelmi Irányelv</a> <!-- Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.--></div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+<!-- for guide purposes all caching is removed and is separately built. -->
+
+
+
+
+
+
+
+
+  </body>
+</html>

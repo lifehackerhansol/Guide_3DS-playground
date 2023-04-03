@@ -1,0 +1,684 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<!-- for guide purposes all caching is removed and is separately built. -->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Los geht’s - 3DS Hacks Guide</title>
+<meta name="description" content="A complete guide to 3DS custom firmware">
+
+
+  <meta name="author" content="Nintendo Homebrew">
+  
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="3DS Hacks Guide">
+<meta property="og:title" content="Los geht’s">
+<meta property="og:url" content="https://3ds.hacks.guide/de_DE/get-started.html">
+
+
+  <meta property="og:description" content="A complete guide to 3DS custom firmware">
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://3ds.hacks.guide/de_DE/get-started.html">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Nintendo Homebrew",
+      "url": "https://3ds.hacks.guide/"
+    
+  }
+</script>
+
+
+  <meta name="google-site-verification" content="jVXoPK_-qzKJp4SScnZYpOIX3yDXfGnAoTBJYixUOwg" />
+
+
+  <meta name="msvalidate.01" content="F3532011519E308583A0A2CAF2DD69E8">
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="3DS Hacks Guide Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=PYEmwKvQAx">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png?v=PYEmwKvQAx" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-194x194.png?v=PYEmwKvQAx" sizes="194x194">
+<link rel="icon" type="image/png" href="/images/android-chrome-192x192.png?v=PYEmwKvQAx" sizes="192x192">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png?v=PYEmwKvQAx" sizes="16x16">
+<link rel="manifest" href="/images/manifest.json?v=PYEmwKvQAx">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg?v=PYEmwKvQAx" color="#2E3440">
+<link rel="shortcut icon" href="/images/favicon.ico?v=PYEmwKvQAx">
+<meta name="apple-mobile-web-app-title" content="Guide">
+<meta name="application-name" content="Guide">
+<meta name="msapplication-TileColor" content="#2E3440">
+<meta name="msapplication-TileImage" content="/images/mstile-144x144.png?v=PYEmwKvQAx">
+<meta name="msapplication-config" content="/images/browserconfig.xml?v=PYEmwKvQAx">
+<meta name="theme-color" content="#2E3440">
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.css" integrity="sha512-LQ97camar/lOliT/MqjcQs5kWgy6Qz/cCRzzRzUCfv0fotsCTC9ZHXaPQmJV8Xu/PVALfJZ7BDezl5lW3/qBxg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js" integrity="sha512-yXXqOFjdjHNH1GND+1EO0jbvvebABpzGKD66djnUfiKlYME5HGMUJHoCaeE4D5PTG2YsSJf6dwqyUUvQvS0vaA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#2e3440"
+    },
+    "button": {
+      "background": "#60818f"
+    }
+  },
+  "theme": "edgeless",
+  "position": "top",
+  "static": true,
+  "content": {
+    "message": "Diese Website verwendet Cookies, um den aktuellen Anleitungsfortschritt auf der Seitenansicht anzuzeigen und um die Seite zu verbessern."
+  }
+})});
+</script>
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <!-- <a class="site-title" href="/">
+          3DS Hacks Guide
+          
+        </a>
+      -->
+        <ul class="visible-links">
+          <!-- modified to use multilang, guide-specific -->
+          
+          
+          
+          
+          
+          
+            
+              <li class="masthead__menu-item masthead__menu-item--lg"><a href="/de_DE/">Startseite</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/de_DE/faq">FAQ</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/de_DE/troubleshooting">Problemlösungen</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/de_DE/checking-for-cfw">Prüfe auf CFW</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/de_DE/godmode9-usage">Nutzung von GodMode9</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/de_DE/contribute">Beitragen</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/de_DE/region-changing">Wechseln der Region</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/de_DE/uninstall-cfw">CFW deinstallieren</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/de_DE/credits">Danksagungen</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/de_DE/site-navigation">Seitennavigation</a></li>
+            
+          
+          <!-- end guide specific -->
+        </ul>
+        
+        <!-- completely redo hidden links for multilang, guide-specific -->
+        <ul class="hidden-links links-menu hidden"></ul>
+        <ul class="hidden-links lang-menu hidden">
+          
+          
+          
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/get-started.html">English</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/es_ES/get-started.html">Español</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/de_DE/get-started.html">Deutsch</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/fr_FR/get-started.html">Français</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/it_IT/get-started.html">Italiano</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/nl_NL/get-started.html">Nederlands</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/pt_BR/get-started.html">Português do Brasil</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/pt_PT/get-started.html">Português (Portugal)</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ru_RU/get-started.html">Русский</a></li> -->
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/zh_CN/get-started.html">简体中文</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/zh_TW/get-started.html">繁體中文</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/pl_PL/get-started.html">Polski</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/tr_TR/get-started.html">Türkçe</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/vi_VN/get-started.html">Tiếng Việt</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ca_ES/get-started.html">Català</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/el_GR/get-started.html">Ελληνικά</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/he_IL/get-started.html">עברית‎</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/sv_SE/get-started.html">Svenska</a></li> -->
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ko_KR/get-started.html">한국어</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/no_NO/get-started.html">Norsk</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ja_JP/get-started.html">日本語</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ar_SA/get-started.html">اللغة العربية</a></li> -->
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/hu_HU/get-started.html">Magyar</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ro_RO/get-started.html">Română</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/sr_SP/get-started.html">Српски</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/af_ZA/get-started.html">Afrikaans</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ms_MY/get-started.html">Bahasa Melayu</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/fi_FI/get-started.html">Suomi</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/da_DK/get-started.html">Dansk</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/uk_UA/get-started.html">Українська</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/cs_CZ/get-started.html">Čeština</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/en_PT/get-started.html">Pirate English</a></li> -->
+        </ul>
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <button class="greedy-nav__toggle_lang"><div class="langicon"><i class="fa fa-language fa-lg" aria-hidden="true"></i></div></button>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  <!-- 
+  <div class="sidebar sticky">
+  
+  
+    
+    
+  
+  </div>
+
+-->
+
+
+
+<div class="sidebar sticky" style="display: none;">
+  
+
+
+
+
+
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    <li>
+      <span class="nav__sub-title">Gesamtfortschritt</span>
+      <ol>
+        
+          
+            <li style="display: none;" data-name="home"><a href='/de_DE/'>Startseite</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="key-information"><a href='/de_DE/key-information'>Wichtige Informationen</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="get-started"><a href='/de_DE/get-started'>Erste Schritte</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="ntrboot"><a href='/de_DE/ntrboot'>ntrboot</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer"><a href='/de_DE/seedminer'>Seedminer</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(twn)"><a href='/de_DE/seedminer-(twn)'>Seedminer (TWN)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="bannerbomb3"><a href='/de_DE/bannerbomb3'>BannerBomb3</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="multiple-options"><i>(Multiple Options)</i></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(3ds-single-system)"><a href='/de_DE/flashing-ntrboot-(3ds-single-system)'>Flashing ntrboot (3DS Single System)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(3ds-multi-system)"><a href='/de_DE/flashing-ntrboot-(3ds-multi-system)'>Flashing ntrboot (3DS Multi System)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(dsi)"><a href='/de_DE/flashing-ntrboot-(dsi)'>Flashing ntrboot (DSi)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(nds)"><a href='/de_DE/flashing-ntrboot-(nds)'>Flashing ntrboot (NDS)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(pichaxx)"><a href='/de_DE/homebrew-launcher-(pichaxx)'>Homebrew Launcher (PicHaxx)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="bannerbomb3-fredtool-(twn)"><a href='/de_DE/bannerbomb3-fredtool-(twn)'>BannerBomb3 + Fredtool (TWN)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(hardmod)"><a href='/de_DE/installing-boot9strap-(hardmod)'>Installing boot9strap (Hardmod)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(hbl-usm)"><a href='/de_DE/installing-boot9strap-(hbl-usm)'>Installing boot9strap (HBL-USM)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(ntrboot)"><a href='/de_DE/installing-boot9strap-(ntrboot)'>Installing boot9strap (ntrboot)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(soundhax)"><a href='/de_DE/installing-boot9strap-(soundhax)'>Installing boot9strap (Soundhax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(ssloth-browser)"><a href='/de_DE/installing-boot9strap-(ssloth-browser)'>Installing boot9strap (SSLoth-Browser)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(fredtool)"><a href='/de_DE/installing-boot9strap-(fredtool)'>Installing boot9strap (Fredtool)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(usm)"><a href='/de_DE/installing-boot9strap-(usm)'>Installing boot9strap (USM)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(kartdlphax)"><a href='/de_DE/installing-boot9strap-(kartdlphax)'>Installing boot9strap (kartdlphax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(hbl-usm)"><a href='/de_DE/installing-boot9strap-(hbl-usm)'>Installing boot9strap (HBL-USM)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="finalizing-setup"><a href='/de_DE/finalizing-setup'>Finalizing Setup</a></li>
+          
+        
+      </ol>
+    </li>
+  </ul>
+</nav>
+</div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Los geht’s">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Los geht’s
+</h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+
+        <hr>
+
+        
+        
+
+        
+          
+          <div class ="notice"><b>Für Support auf Englisch, bitte um Hilfe auf dem <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew Discord</a>.</b></div>
+        
+          
+          <div class ="notice"><b>Wenn du diese Anleitung wertschätzt, akzeptieren wir auch <a href="contribute#donations">Spenden</a>.</b></div>
+        
+
+        <hr>
+
+        <aside class="sidebar__right">
+<nav class="toc">
+    <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Inhalt</h4></header>
+<ul class="toc__menu" id="markdown-toc">
+  <li><a href="#abschnitt-i---cfw-check" id="markdown-toc-abschnitt-i---cfw-check">Abschnitt I - CFW Check</a></li>
+  <li><a href="#abschnitt-ii---system-version" id="markdown-toc-abschnitt-ii---system-version">Abschnitt II - System Version</a></li>
+  <li><a href="#abschnitt-iii---wähle-eine-methode" id="markdown-toc-abschnitt-iii---wähle-eine-methode">Abschnitt III - Wähle eine Methode</a></li>
+  <li><a href="#alternate-methods" id="markdown-toc-alternate-methods">Alternate Methods</a></li>
+</ul>
+
+  </nav>
+</aside>
+
+<p>Bevor wir diese Anleitung starten, werden wir sehen, ob Custom Firmware bereits installiert ist und überprüfen Sie die aktuelle Systemversion Ihres Geräts.</p>
+
+<h4 id="abschnitt-i---cfw-check">Abschnitt I - CFW Check</h4>
+
+<ol>
+  <li>Schalte deine Konsole aus</li>
+  <li>Halte den (Select) Knopf gedrückt</li>
+  <li>Schalte deine Konsole an während du den (Select) Knopf gedrückt hältst</li>
+  <li>Wenn du kein ungewöhliches Menü siehst (z.B. “Luma3DS Configuration”), kannst du zum nächsten Abschnitt fortfahren</li>
+</ol>
+
+<p class="notice--warning">Wenn du ein ungewöhnliches Menü siehst, STOP - du hast bereits Custom Firmware! Fahre <a href="checking-for-cfw#what-to-do-next">hier</a> fort.</p>
+
+<h4 id="abschnitt-ii---system-version">Abschnitt II - System Version</h4>
+
+<ol>
+  <li>Öffne die Systemeinstellungen</li>
+  <li>Your system version will be displayed on the bottom right of the top screen (e.g. “Ver. 11.16.0-49U”)</li>
+</ol>
+
+<h4 id="abschnitt-iii---wähle-eine-methode">Abschnitt III - Wähle eine Methode</h4>
+
+<p>To find the correct method for your device, please enter the system version you found in Section II.</p>
+
+<div id="selectversion" class="selectversion" style="display:none">
+    <br />
+    <select id="major">
+      <option>0</option>
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+      <option>6</option>
+      <option>7</option>
+      <option>8</option>
+      <option>9</option>
+      <option>10</option>
+      <option>11</option>
+    </select>.<select id="minor">
+        <option>0</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+        <option>7</option>
+        <option>8</option>
+        <option>9</option>
+        <option>10</option>
+        <option>11</option>
+        <option>12</option>
+        <option>13</option>
+        <option>14</option>
+        <option>15</option>
+        <option>16</option>
+    </select>.<select id="whydidnintendodecidetodothingslikethis">
+      <option>0</option>
+    </select>-<select id="nver">
+        <option>0</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+        <option>7</option>
+        <option>8</option>
+        <option>9</option>
+        <option>10</option>
+        <option>11</option>
+        <option>12</option>
+        <option>13</option>
+        <option>14</option>
+        <option>15</option>
+        <option>16</option>
+        <option>17</option>
+        <option>18</option>
+        <option>19</option>
+        <option>20</option>
+        <option>21</option>
+        <option>22</option>
+        <option>23</option>
+        <option>24</option>
+        <option>25</option>
+        <option>26</option>
+        <option>27</option>
+        <option>28</option>
+        <option>29</option>
+        <option>30</option>
+        <option>31</option>
+        <option>32</option>
+        <option>33</option>
+        <option>34</option>
+        <option>35</option>
+        <option>36</option>
+        <option>37</option>
+        <option>38</option>
+        <option>39</option>
+        <option>40</option>
+        <option>41</option>
+        <option>42</option>
+        <option>43</option>
+        <option>44</option>
+        <option>45</option>
+        <option>46</option>
+        <option>47</option>
+        <option>48</option>
+        <option>49</option>
+    </select><select id="region">
+      <option>E</option>
+      <option>U</option>
+      <option>J</option>
+      <option>K</option>
+      <option>T</option>
+      <option>C</option>
+    </select>
+    <br />
+    <input type="button" onclick="redirect()" value="Confirm" />
+</div>
+
+<script>
+document.getElementById("selectversion").style.display = "block";
+</script>
+
+<p id="result_invalidVersion" style="display:none">
+This doesn't seem to be a valid system version.
+</p>
+<p id="result_methodUnavailable" style="display:none">
+You currently cannot hack your 3DS on this version using the main methods. If you want to hack your console, you have to use ntrboot.
+</p>
+
+<script src="/assets/js/selecting.js"></script>
+
+<noscript>Please enable JavaScript to continue with the guide.</noscript>
+
+<hr />
+<h4 id="alternate-methods">Alternate Methods</h4>
+
+<p>If possible, you should follow the method given by the prompt above.</p>
+
+<p>Otherwise, methods that work on all versions are available, but require additional hardware:</p>
+
+<ol>
+  <li><a href="installing-boot9strap-(kartdlphax)">kartdlphax</a> - requires a second hacked 3DS and a copy of Mario Kart 7</li>
+  <li><a href="ntrboot">ntrboot</a> - requires compatible DS flashcart</li>
+  <li><a href="installing-boot9strap-(hardmod)">Installing boot9strap (Hardmod)</a> - requires soldering</li>
+</ol>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://github.com/hacks-guide/Guide_3DS" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+<!--
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+    </ul>
+  -->
+</div>
+
+<!-- custom footer, guide specific -->
+
+
+
+<div class="page__footer-copyright">&copy; 2023 Nintendo Homebrew. - <a href="site-navigation">Seitennavigation</a> - <a href="privacy-policy">Datenschutzerklärung</a> <!-- Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.--></div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+<!-- for guide purposes all caching is removed and is separately built. -->
+
+
+
+
+
+
+
+
+  </body>
+</html>

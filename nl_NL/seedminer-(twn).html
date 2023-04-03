@@ -1,0 +1,653 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<!-- for guide purposes all caching is removed and is separately built. -->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Seedminer (TWN) - 3DS Hacks Guide</title>
+<meta name="description" content="A complete guide to 3DS custom firmware">
+
+
+  <meta name="author" content="Nintendo Homebrew">
+  
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="3DS Hacks Guide">
+<meta property="og:title" content="Seedminer (TWN)">
+<meta property="og:url" content="https://3ds.hacks.guide/nl_NL/seedminer-(twn).html">
+
+
+  <meta property="og:description" content="A complete guide to 3DS custom firmware">
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://3ds.hacks.guide/nl_NL/seedminer-(twn).html">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Nintendo Homebrew",
+      "url": "https://3ds.hacks.guide/"
+    
+  }
+</script>
+
+
+  <meta name="google-site-verification" content="jVXoPK_-qzKJp4SScnZYpOIX3yDXfGnAoTBJYixUOwg" />
+
+
+  <meta name="msvalidate.01" content="F3532011519E308583A0A2CAF2DD69E8">
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="3DS Hacks Guide Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=PYEmwKvQAx">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png?v=PYEmwKvQAx" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-194x194.png?v=PYEmwKvQAx" sizes="194x194">
+<link rel="icon" type="image/png" href="/images/android-chrome-192x192.png?v=PYEmwKvQAx" sizes="192x192">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png?v=PYEmwKvQAx" sizes="16x16">
+<link rel="manifest" href="/images/manifest.json?v=PYEmwKvQAx">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg?v=PYEmwKvQAx" color="#2E3440">
+<link rel="shortcut icon" href="/images/favicon.ico?v=PYEmwKvQAx">
+<meta name="apple-mobile-web-app-title" content="Guide">
+<meta name="application-name" content="Guide">
+<meta name="msapplication-TileColor" content="#2E3440">
+<meta name="msapplication-TileImage" content="/images/mstile-144x144.png?v=PYEmwKvQAx">
+<meta name="msapplication-config" content="/images/browserconfig.xml?v=PYEmwKvQAx">
+<meta name="theme-color" content="#2E3440">
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.css" integrity="sha512-LQ97camar/lOliT/MqjcQs5kWgy6Qz/cCRzzRzUCfv0fotsCTC9ZHXaPQmJV8Xu/PVALfJZ7BDezl5lW3/qBxg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js" integrity="sha512-yXXqOFjdjHNH1GND+1EO0jbvvebABpzGKD66djnUfiKlYME5HGMUJHoCaeE4D5PTG2YsSJf6dwqyUUvQvS0vaA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#2e3440"
+    },
+    "button": {
+      "background": "#60818f"
+    }
+  },
+  "theme": "edgeless",
+  "position": "top",
+  "static": true,
+  "content": {
+    "message": "Deze website gebruikt cookies om de voortgang op de zijbalk bij te houden en de site te verbeteren."
+  }
+})});
+</script>
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <!-- <a class="site-title" href="/">
+          3DS Hacks Guide
+          
+        </a>
+      -->
+        <ul class="visible-links">
+          <!-- modified to use multilang, guide-specific -->
+          
+          
+          
+          
+          
+          
+            
+              <li class="masthead__menu-item masthead__menu-item--lg"><a href="/nl_NL/">Home</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/nl_NL/faq">Veelgestelde vragen (FAQ)</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/nl_NL/troubleshooting">Probleemoplossing</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/nl_NL/checking-for-cfw">Controleren op CFW</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/nl_NL/godmode9-usage">Het gebruiken van GodMode9</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/nl_NL/contribute">Bijdragen</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/nl_NL/region-changing">Regio wijzigen</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/nl_NL/uninstall-cfw">CFW verwijderen</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/nl_NL/credits">Credits</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/nl_NL/site-navigation">Navigatie</a></li>
+            
+          
+          <!-- end guide specific -->
+        </ul>
+        
+        <!-- completely redo hidden links for multilang, guide-specific -->
+        <ul class="hidden-links links-menu hidden"></ul>
+        <ul class="hidden-links lang-menu hidden">
+          
+          
+          
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/seedminer-(twn).html">English</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/es_ES/seedminer-(twn).html">Español</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/de_DE/seedminer-(twn).html">Deutsch</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/fr_FR/seedminer-(twn).html">Français</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/it_IT/seedminer-(twn).html">Italiano</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/nl_NL/seedminer-(twn).html">Nederlands</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/pt_BR/seedminer-(twn).html">Português do Brasil</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/pt_PT/seedminer-(twn).html">Português (Portugal)</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ru_RU/seedminer-(twn).html">Русский</a></li> -->
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/zh_CN/seedminer-(twn).html">简体中文</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/zh_TW/seedminer-(twn).html">繁體中文</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/pl_PL/seedminer-(twn).html">Polski</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/tr_TR/seedminer-(twn).html">Türkçe</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/vi_VN/seedminer-(twn).html">Tiếng Việt</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ca_ES/seedminer-(twn).html">Català</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/el_GR/seedminer-(twn).html">Ελληνικά</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/he_IL/seedminer-(twn).html">עברית‎</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/sv_SE/seedminer-(twn).html">Svenska</a></li> -->
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ko_KR/seedminer-(twn).html">한국어</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/no_NO/seedminer-(twn).html">Norsk</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ja_JP/seedminer-(twn).html">日本語</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ar_SA/seedminer-(twn).html">اللغة العربية</a></li> -->
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/hu_HU/seedminer-(twn).html">Magyar</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ro_RO/seedminer-(twn).html">Română</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/sr_SP/seedminer-(twn).html">Српски</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/af_ZA/seedminer-(twn).html">Afrikaans</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ms_MY/seedminer-(twn).html">Bahasa Melayu</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/fi_FI/seedminer-(twn).html">Suomi</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/da_DK/seedminer-(twn).html">Dansk</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/uk_UA/seedminer-(twn).html">Українська</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/cs_CZ/seedminer-(twn).html">Čeština</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/en_PT/seedminer-(twn).html">Pirate English</a></li> -->
+        </ul>
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <button class="greedy-nav__toggle_lang"><div class="langicon"><i class="fa fa-language fa-lg" aria-hidden="true"></i></div></button>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  <!-- 
+  <div class="sidebar sticky">
+  
+  
+    
+    
+  
+  </div>
+
+-->
+
+
+
+<div class="sidebar sticky" style="display: none;">
+  
+
+
+
+
+
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    <li>
+      <span class="nav__sub-title">Algemene vooruitgang</span>
+      <ol>
+        
+          
+            <li style="display: none;" data-name="home"><a href='/nl_NL/'>Home</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="key-information"><a href='/nl_NL/key-information'>Belangrijkste Informatie</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="get-started"><a href='/nl_NL/get-started'>Begin</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="ntrboot"><a href='/nl_NL/ntrboot'>ntrboot</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer"><a href='/nl_NL/seedminer'>Seedminer</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(twn)"><a href='/nl_NL/seedminer-(twn)'>Seedminer (TWN)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="bannerbomb3"><a href='/nl_NL/bannerbomb3'>BannerBomb3</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="multiple-options"><i>(Multiple Options)</i></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(3ds-single-system)"><a href='/nl_NL/flashing-ntrboot-(3ds-single-system)'>Flashing ntrboot (3DS Single System)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(3ds-multi-system)"><a href='/nl_NL/flashing-ntrboot-(3ds-multi-system)'>Flashing ntrboot (3DS Multi System)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(dsi)"><a href='/nl_NL/flashing-ntrboot-(dsi)'>Flashing ntrboot (DSi)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(nds)"><a href='/nl_NL/flashing-ntrboot-(nds)'>Flashing ntrboot (NDS)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(pichaxx)"><a href='/nl_NL/homebrew-launcher-(pichaxx)'>Homebrew Launcher (PicHaxx)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="bannerbomb3-fredtool-(twn)"><a href='/nl_NL/bannerbomb3-fredtool-(twn)'>BannerBomb3 + Fredtool (TWN)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(hardmod)"><a href='/nl_NL/installing-boot9strap-(hardmod)'>Installing boot9strap (Hardmod)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(hbl-usm)"><a href='/nl_NL/installing-boot9strap-(hbl-usm)'>Installing boot9strap (HBL-USM)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(ntrboot)"><a href='/nl_NL/installing-boot9strap-(ntrboot)'>Installing boot9strap (ntrboot)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(soundhax)"><a href='/nl_NL/installing-boot9strap-(soundhax)'>Installing boot9strap (Soundhax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(ssloth-browser)"><a href='/nl_NL/installing-boot9strap-(ssloth-browser)'>Installing boot9strap (SSLoth-Browser)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(fredtool)"><a href='/nl_NL/installing-boot9strap-(fredtool)'>Installing boot9strap (Fredtool)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(usm)"><a href='/nl_NL/installing-boot9strap-(usm)'>Installing boot9strap (USM)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(kartdlphax)"><a href='/nl_NL/installing-boot9strap-(kartdlphax)'>Installing boot9strap (kartdlphax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(hbl-usm)"><a href='/nl_NL/installing-boot9strap-(hbl-usm)'>Installing boot9strap (HBL-USM)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="finalizing-setup"><a href='/nl_NL/finalizing-setup'>Finalizing Setup</a></li>
+          
+        
+      </ol>
+    </li>
+  </ul>
+</nav>
+</div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Seedminer (TWN)">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Seedminer (TWN)
+</h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+
+        <hr>
+
+        
+        
+
+        
+          
+          <div class ="notice"><b>Voor hulp in het Engels kan je terecht bij <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew op Discord</a>.</b></div>
+        
+          
+          <div class ="notice"><b>Vind je dit een goede handleiding? We accepteren <a href="contribute#donations">donaties</a>.</b></div>
+        
+
+        <hr>
+
+        <aside class="sidebar__right">
+<nav class="toc">
+    <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Inhoudsopgave</h4></header>
+<ul class="toc__menu" id="markdown-toc">
+  <li><a href="#section-i---updating-the-system" id="markdown-toc-section-i---updating-the-system">Section I - Updating the System</a></li>
+  <li><a href="#section-ii---prep-work" id="markdown-toc-section-ii---prep-work">Section II - Prep Work</a></li>
+  <li><a href="#section-iii---seedminer" id="markdown-toc-section-iii---seedminer">Section III - Seedminer</a></li>
+  <li><a href="#next-step-bannerbomb3" id="markdown-toc-next-step-bannerbomb3">Next step: BannerBomb3</a></li>
+</ul>
+
+  </nav>
+</aside>
+<details class="notice--info">
+<summary><em>Technical Details (optional)</em></summary>
+
+<p>To install boot9strap on your device, we derive your device’s unique encryption key. To accomplish this, we use a tool called Seedminer to calculate the data encryption key (movable.sed) for your device.</p>
+
+<p>For information on how Seedminer works, see <a href="https://zoogie.github.io/web/34⅕c3">this presentation</a>.</p>
+
+<p>This method uses a powerful graphics card to perform the calculations needed. A volunteer-run website is used for the purpose of assisting you with this method.</p>
+
+</details>
+
+<h3 id="section-i---updating-the-system">Section I - Updating the System</h3>
+
+<p>In this section, you will update your system to the latest version, which is necessary for Seedminer.</p>
+
+<ol>
+  <li>Update je 3DS door naar System Settings en dan naar “Algemene Instellingen” te gaan. Ga in dat menu helemaal naar rechts en klik op “Systeemupdate”
+    <ul>
+      <li>De updater kan een bericht weergeven met de woorden “Your system is up to date” in plaats van te updaten. This is normal if you are already up to date; continue to the next section</li>
+      <li>If this gives you an error, set both your DNS settings and Proxy settings to “Auto”</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="section-ii---prep-work">Section II - Prep Work</h3>
+
+<p>In this section, you will get the necessary details from your 3DS that are required to figure out your device’s encryption key.</p>
+
+<p>Before following this section:</p>
+<ul class="notice--info">
+  <li>Ensure that you have turned on your console with the SD card inserted at least once to generate the necessary data</li>
+  <li>Ensure that your console is connected to the Internet (you should see a blue “Internet” indicator on the top-left corner of the HOME screen)</li>
+</ul>
+
+<ol>
+  <li>Schakel je 3DS uit</li>
+  <li>Plaats je SD kaart in je computer</li>
+  <li>Ga naar de <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> map op je SD-kaart</li>
+  <li>Copy the name of the 32-letter folder you see directly inside Nintendo 3DS
+    <ul>
+      <li>This 32-letter name is system-specific and will be different for each console</li>
+      <li>If you see multiple 32-letter folders, follow <a href="troubleshooting#seedminer">these instructions</a></li>
+      <li>Je kunt de <code class="language-plaintext highlighter-rouge">private</code> map negeren als je deze hebt</li>
+    </ul>
+
+    <p class="notice--info"><img src="https://3ds.hacks.guide/images/screenshots/seedminer/id0-example.png" alt="" /></p>
+  </li>
+  <li>Paste your 32-letter folder name into <a href="/images/screenshots/seedminer/text-document.png">a document</a> you can reference later
+    <ul>
+      <li>This folder is known as your “ID0”. Take note of this as this guide will refer to it as such later</li>
+    </ul>
+  </li>
+  <li>Zet je 3DS aan
+    <ul>
+      <li>Je SD-kaart hoeft niet geplaatst te worden op dit moment</li>
+    </ul>
+  </li>
+  <li>Ga naar je Friend List (het oranje gezichsticoontje](https://3ds.hacks.guide/images/friend-list-icon.png) op de bovenste rij van je HOME Menu)
+    <ul>
+      <li>Als je een error krijgt en uit het menu wordt gegooid, moet je een nieuwe Mii maken of kan je 3DS niet met Nintendo’s servers verbinden (door een ban of connectie problemen)</li>
+    </ul>
+  </li>
+  <li>Zoek je Mii profiel, zoek dan naar het “Friend Code” veld op het bovenste scherm</li>
+</ol>
+
+<h3 id="section-iii---seedminer">Section III - Seedminer</h3>
+
+<p>In this section, you will use the Bruteforce Movable website to retrieve your device’s encryption key in the form of <code class="language-plaintext highlighter-rouge">movable.sed</code>.</p>
+
+<ol>
+  <li>Open <a href="https://seedminer.hacks.guide/">Bruteforce Movable</a> on your computer
+    <ul>
+      <li>If the site isn’t working, join <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew on Discord</a> and ask (in English) for someone there to assist you</li>
+    </ul>
+  </li>
+  <li>Enter your device’s Friend Code (with no spaces or dashes) into the “Your friend code” field</li>
+  <li>Paste your device’s 32 character long folder name into the “Your ID0” field
+    <ul>
+      <li>Do not attempt to enter the ID0 manually, as it is easy to make a mistake. Ensure the ID0 is entered correctly by copying and pasting it from where you saved it in the previous section</li>
+    </ul>
+  </li>
+  <li>Select “Go”
+    <ul>
+      <li>If the site immediately goes to step 4, the website has already correctly processed your bruteforce request. You can download your <code class="language-plaintext highlighter-rouge">movable.sed</code> file and continue to the next section. You do not need to (re-)add the bot</li>
+    </ul>
+  </li>
+  <li>Use the <a href="/images/screenshots/seedminer/register-friend.png">“Register Friend” button</a> on your device to add the bot’s friend code as given by the website
+    <ul>
+      <li>If prompted, the name that you give to the friend does not matter</li>
+    </ul>
+  </li>
+  <li>Wait for the site to update
+    <ul>
+      <li>If it does not, wait a few minutes before refreshing the page once</li>
+    </ul>
+  </li>
+  <li>Once the site processes your information, the site will continue to <code class="language-plaintext highlighter-rouge">Step 2: Bruteforce</code> automatically</li>
+  <li>Wait for the remainder of the process to complete
+    <ul>
+      <li>This is usually fast (1-5 minutes)</li>
+      <li>During this process, the bot you added may not show up on your 3DS. As long as the website updates, this is not an issue</li>
+      <li>If you are still waiting after half an hour, join <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew on Discord</a> and ask (in English) for someone there to assist you</li>
+    </ul>
+  </li>
+  <li>When the process is completed, download your <code class="language-plaintext highlighter-rouge">movable.sed</code> file from the site
+    <ul>
+      <li>Keep this file as you will need it in the upcoming page</li>
+    </ul>
+  </li>
+  <li>Schakel je 3DS uit</li>
+</ol>
+
+<hr />
+
+<h3 id="next-step-bannerbomb3">Next step: BannerBomb3</h3>
+
+<p>Once you have your device’s encryption key (<code class="language-plaintext highlighter-rouge">movable.sed</code>), you will use it in conjunction with BannerBomb3, which uses your <code class="language-plaintext highlighter-rouge">movable.sed</code> file to take advantage of exploits in the System Settings application.</p>
+
+<p class="notice--primary">Continue to <a href="bannerbomb3-fredtool-(twn)">BannerBomb3 + Fredtool (TWN)</a></p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://github.com/hacks-guide/Guide_3DS" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+<!--
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+    </ul>
+  -->
+</div>
+
+<!-- custom footer, guide specific -->
+
+
+
+<div class="page__footer-copyright">&copy; 2023 Nintendo Homebrew. - <a href="site-navigation">Site Navigatie</a> - <a href="privacy-policy">Privacybeleid</a> <!-- Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.--></div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+<!-- for guide purposes all caching is removed and is separately built. -->
+
+
+
+
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,839 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<!-- for guide purposes all caching is removed and is separately built. -->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>boot9strap 설치 (ntrboot) - 3DS Hacks Guide</title>
+<meta name="description" content="A complete guide to 3DS custom firmware">
+
+
+  <meta name="author" content="Nintendo Homebrew">
+  
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="3DS Hacks Guide">
+<meta property="og:title" content="boot9strap 설치 (ntrboot)">
+<meta property="og:url" content="https://3ds.hacks.guide/ko_KR/installing-boot9strap-(ntrboot).html">
+
+
+  <meta property="og:description" content="A complete guide to 3DS custom firmware">
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://3ds.hacks.guide/ko_KR/installing-boot9strap-(ntrboot).html">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Nintendo Homebrew",
+      "url": "https://3ds.hacks.guide/"
+    
+  }
+</script>
+
+
+  <meta name="google-site-verification" content="jVXoPK_-qzKJp4SScnZYpOIX3yDXfGnAoTBJYixUOwg" />
+
+
+  <meta name="msvalidate.01" content="F3532011519E308583A0A2CAF2DD69E8">
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="3DS Hacks Guide Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=PYEmwKvQAx">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png?v=PYEmwKvQAx" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-194x194.png?v=PYEmwKvQAx" sizes="194x194">
+<link rel="icon" type="image/png" href="/images/android-chrome-192x192.png?v=PYEmwKvQAx" sizes="192x192">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png?v=PYEmwKvQAx" sizes="16x16">
+<link rel="manifest" href="/images/manifest.json?v=PYEmwKvQAx">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg?v=PYEmwKvQAx" color="#2E3440">
+<link rel="shortcut icon" href="/images/favicon.ico?v=PYEmwKvQAx">
+<meta name="apple-mobile-web-app-title" content="Guide">
+<meta name="application-name" content="Guide">
+<meta name="msapplication-TileColor" content="#2E3440">
+<meta name="msapplication-TileImage" content="/images/mstile-144x144.png?v=PYEmwKvQAx">
+<meta name="msapplication-config" content="/images/browserconfig.xml?v=PYEmwKvQAx">
+<meta name="theme-color" content="#2E3440">
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.css" integrity="sha512-LQ97camar/lOliT/MqjcQs5kWgy6Qz/cCRzzRzUCfv0fotsCTC9ZHXaPQmJV8Xu/PVALfJZ7BDezl5lW3/qBxg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js" integrity="sha512-yXXqOFjdjHNH1GND+1EO0jbvvebABpzGKD66djnUfiKlYME5HGMUJHoCaeE4D5PTG2YsSJf6dwqyUUvQvS0vaA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#2e3440"
+    },
+    "button": {
+      "background": "#60818f"
+    }
+  },
+  "theme": "edgeless",
+  "position": "top",
+  "static": true,
+  "content": {
+    "message": "이 사이트는 현재 진행상황을 표시하고 사용자 경험을 향상시키기 위해 쿠키를 사용합니다."
+  }
+})});
+</script>
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <!-- <a class="site-title" href="/">
+          3DS Hacks Guide
+          
+        </a>
+      -->
+        <ul class="visible-links">
+          <!-- modified to use multilang, guide-specific -->
+          
+          
+          
+          
+          
+          
+            
+              <li class="masthead__menu-item masthead__menu-item--lg"><a href="/ko_KR/">홈</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/ko_KR/faq">자주 묻는 질문</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/ko_KR/troubleshooting">문제 해결</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/ko_KR/checking-for-cfw">CFW 확인</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/ko_KR/godmode9-usage">GodMode9 사용법</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/ko_KR/contribute">기여하기</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/ko_KR/region-changing">지역 변경</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/ko_KR/uninstall-cfw">CFW 제거하기</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/ko_KR/credits">기여자</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/ko_KR/site-navigation">사이트 탐색</a></li>
+            
+          
+          <!-- end guide specific -->
+        </ul>
+        
+        <!-- completely redo hidden links for multilang, guide-specific -->
+        <ul class="hidden-links links-menu hidden"></ul>
+        <ul class="hidden-links lang-menu hidden">
+          
+          
+          
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/installing-boot9strap-(ntrboot).html">English</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/es_ES/installing-boot9strap-(ntrboot).html">Español</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/de_DE/installing-boot9strap-(ntrboot).html">Deutsch</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/fr_FR/installing-boot9strap-(ntrboot).html">Français</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/it_IT/installing-boot9strap-(ntrboot).html">Italiano</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/nl_NL/installing-boot9strap-(ntrboot).html">Nederlands</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/pt_BR/installing-boot9strap-(ntrboot).html">Português do Brasil</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/pt_PT/installing-boot9strap-(ntrboot).html">Português (Portugal)</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ru_RU/installing-boot9strap-(ntrboot).html">Русский</a></li> -->
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/zh_CN/installing-boot9strap-(ntrboot).html">简体中文</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/zh_TW/installing-boot9strap-(ntrboot).html">繁體中文</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/pl_PL/installing-boot9strap-(ntrboot).html">Polski</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/tr_TR/installing-boot9strap-(ntrboot).html">Türkçe</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/vi_VN/installing-boot9strap-(ntrboot).html">Tiếng Việt</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ca_ES/installing-boot9strap-(ntrboot).html">Català</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/el_GR/installing-boot9strap-(ntrboot).html">Ελληνικά</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/he_IL/installing-boot9strap-(ntrboot).html">עברית‎</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/sv_SE/installing-boot9strap-(ntrboot).html">Svenska</a></li> -->
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ko_KR/installing-boot9strap-(ntrboot).html">한국어</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/no_NO/installing-boot9strap-(ntrboot).html">Norsk</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ja_JP/installing-boot9strap-(ntrboot).html">日本語</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ar_SA/installing-boot9strap-(ntrboot).html">اللغة العربية</a></li> -->
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/hu_HU/installing-boot9strap-(ntrboot).html">Magyar</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ro_RO/installing-boot9strap-(ntrboot).html">Română</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/sr_SP/installing-boot9strap-(ntrboot).html">Српски</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/af_ZA/installing-boot9strap-(ntrboot).html">Afrikaans</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ms_MY/installing-boot9strap-(ntrboot).html">Bahasa Melayu</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/fi_FI/installing-boot9strap-(ntrboot).html">Suomi</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/da_DK/installing-boot9strap-(ntrboot).html">Dansk</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/uk_UA/installing-boot9strap-(ntrboot).html">Українська</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/cs_CZ/installing-boot9strap-(ntrboot).html">Čeština</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/en_PT/installing-boot9strap-(ntrboot).html">Pirate English</a></li> -->
+        </ul>
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <button class="greedy-nav__toggle_lang"><div class="langicon"><i class="fa fa-language fa-lg" aria-hidden="true"></i></div></button>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  <!-- 
+  <div class="sidebar sticky">
+  
+  
+    
+    
+  
+  </div>
+
+-->
+
+
+
+<div class="sidebar sticky" style="display: none;">
+  
+
+
+
+
+
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    <li>
+      <span class="nav__sub-title">전체 진행 상황</span>
+      <ol>
+        
+          
+            <li style="display: none;" data-name="home"><a href='/ko_KR/'>홈</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="key-information"><a href='/ko_KR/key-information'>주요 내용</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="get-started"><a href='/ko_KR/get-started'>시작하기</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="ntrboot"><a href='/ko_KR/ntrboot'>ntrboot</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer"><a href='/ko_KR/seedminer'>Seedminer</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(twn)"><a href='/ko_KR/seedminer-(twn)'>Seedminer (TWN)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="bannerbomb3"><a href='/ko_KR/bannerbomb3'>BannerBomb3</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="multiple-options"><i>(Multiple Options)</i></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(3ds-single-system)"><a href='/ko_KR/flashing-ntrboot-(3ds-single-system)'>Flashing ntrboot (3DS Single System)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(3ds-multi-system)"><a href='/ko_KR/flashing-ntrboot-(3ds-multi-system)'>Flashing ntrboot (3DS Multi System)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(dsi)"><a href='/ko_KR/flashing-ntrboot-(dsi)'>Flashing ntrboot (DSi)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(nds)"><a href='/ko_KR/flashing-ntrboot-(nds)'>Flashing ntrboot (NDS)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(pichaxx)"><a href='/ko_KR/homebrew-launcher-(pichaxx)'>Homebrew Launcher (PicHaxx)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="bannerbomb3-fredtool-(twn)"><a href='/ko_KR/bannerbomb3-fredtool-(twn)'>BannerBomb3 + Fredtool (TWN)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(hardmod)"><a href='/ko_KR/installing-boot9strap-(hardmod)'>Installing boot9strap (Hardmod)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(hbl-usm)"><a href='/ko_KR/installing-boot9strap-(hbl-usm)'>Installing boot9strap (HBL-USM)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(ntrboot)"><a href='/ko_KR/installing-boot9strap-(ntrboot)'>Installing boot9strap (ntrboot)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(soundhax)"><a href='/ko_KR/installing-boot9strap-(soundhax)'>Installing boot9strap (Soundhax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(ssloth-browser)"><a href='/ko_KR/installing-boot9strap-(ssloth-browser)'>Installing boot9strap (SSLoth-Browser)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(fredtool)"><a href='/ko_KR/installing-boot9strap-(fredtool)'>Installing boot9strap (Fredtool)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(usm)"><a href='/ko_KR/installing-boot9strap-(usm)'>Installing boot9strap (USM)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(kartdlphax)"><a href='/ko_KR/installing-boot9strap-(kartdlphax)'>Installing boot9strap (kartdlphax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(hbl-usm)"><a href='/ko_KR/installing-boot9strap-(hbl-usm)'>Installing boot9strap (HBL-USM)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="finalizing-setup"><a href='/ko_KR/finalizing-setup'>Finalizing Setup</a></li>
+          
+        
+      </ol>
+    </li>
+  </ul>
+</nav>
+</div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="boot9strap 설치 (ntrboot)">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">boot9strap 설치 (ntrboot)
+</h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+
+        <hr>
+
+        
+        
+
+        
+          
+          <div class ="notice"><b>영어로 지원을 요청하고 싶으시면 <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew Discord 서버</a>에 도움을 요청해 주세요.</b></div>
+        
+          
+          <div class ="notice"><b>이 가이드가 도움이 되었다면, <a href="contribute#donations">기부해 주시면</a> 감사하겠습니다.</b></div>
+        
+
+        <hr>
+
+        <aside class="sidebar__right">
+<nav class="toc">
+    <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> 목차</h4></header>
+<ul class="toc__menu" id="markdown-toc">
+  <li><a href="#중요" id="markdown-toc-중요">중요</a></li>
+  <li><a href="#준비물" id="markdown-toc-준비물">준비물</a></li>
+  <li><a href="#진행-방법" id="markdown-toc-진행-방법">진행 방법</a>    <ul>
+      <li><a href="#섹션-i---준비-작업" id="markdown-toc-섹션-i---준비-작업">섹션 I - 준비 작업</a>        <ul>
+          <li><a href="#섹션-ii---ntrboot" id="markdown-toc-섹션-ii---ntrboot">섹션 II - ntrboot</a></li>
+        </ul>
+      </li>
+      <li><a href="#섹션-iii---boot9strap-설치하기" id="markdown-toc-섹션-iii---boot9strap-설치하기">섹션 III - boot9strap 설치하기</a></li>
+      <li><a href="#섹션-iv---luma3ds-설정" id="markdown-toc-섹션-iv---luma3ds-설정">섹션 IV - Luma3DS 설정</a></li>
+    </ul>
+  </li>
+  <li><a href="#마무리-단계-로-계속합니다" id="markdown-toc-마무리-단계-로-계속합니다">마무리 단계 로 계속합니다</a>    <ul>
+      <li><a href="#섹션-v---ntrboot-제거" id="markdown-toc-섹션-v---ntrboot-제거">섹션 V - ntrboot 제거</a>        <ul>
+          <li><a href="#준비물-1" id="markdown-toc-준비물-1">준비물</a></li>
+          <li><a href="#진행-방법-1" id="markdown-toc-진행-방법-1">진행 방법</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+  </nav>
+</aside>
+
+<h3 id="중요">중요</h3>
+
+<p>이 페이지의 <a href="https://wikipedia.org/wiki/Magnet_URI_scheme">마그넷</a>링크를 사용하려면
+ <a href="https://www.qbittorrent.org/download.php">qBittorrent</a> 또는 <a href="http://dev.deluge-torrent.org/wiki/Download">Deluge</a>와 같은 토렌트 클라이언트가 필요합니다.</p>
+
+<h3 id="준비물">준비물</h3>
+
+<p>당신의 기기의 슬립모드를 작동시킬 자석 (접는 형식의 기기를 사용할 경우만)</p>
+<ul>
+  <li>ntrboot 플래시된 플래시카트</li>
+  <li>최신 버전의 <a href="https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip">SafeB9SInstaller</a> (직접 다운로드)</li>
+  <li>최신 버전의 <a href="https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip">boot9strap</a> (직접 다운로드)</li>
+  <li>최신 버전의 <a href="https://github.com/LumaTeam/Luma3DS/releases/latest">Luma3DS</a> (<code class="language-plaintext highlighter-rouge">.zip</code> 파일)</li>
+</ul>
+
+<h3 id="진행-방법">진행 방법</h3>
+
+<h4 id="섹션-i---준비-작업">섹션 I - 준비 작업</h4>
+
+<ol>
+  <li>기기를 종료해 주세요</li>
+  <li>기기의 SD 카드를 컴퓨터에 삽입해 주세요
+    <ul>
+      <li>이것은 3DS의 SD 카드이며, 플래시카트의 SD 카드가 아닙니다</li>
+    </ul>
+  </li>
+  <li>SafeB9SInstaller <code class="language-plaintext highlighter-rouge">.zip</code>의 <code class="language-plaintext highlighter-rouge">SafeB9SInstaller.firm</code>을 SD 카드의 루트에 복사하고 <code class="language-plaintext highlighter-rouge">boot.firm</code>으로 이름을 변경해 주세요
+    <ul>
+      <li>SD 카드의 루트는 SD 카드를 열 때 보이는 디렉토리이고, Nintendo 3DS 폴더가 보이지만 그 안에 들어가 있지 않은 상태의 폴더입니다</li>
+    </ul>
+  </li>
+  <li>Luma3DS <code class="language-plaintext highlighter-rouge">.zip</code>안에 있는 <code class="language-plaintext highlighter-rouge">boot.3dsx</code>을 SD 카드의 루트에 복사해 주세요</li>
+  <li>SD 카드이 루트에 <code class="language-plaintext highlighter-rouge">boot9strap</code> 라는 이름으로 새 폴더를 생성해 주세요</li>
+  <li>
+    <p>SD 카드에 있는 <code class="language-plaintext highlighter-rouge">/boot9strap/</code> 폴더에 boot9strap <code class="language-plaintext highlighter-rouge">.zip</code> 파일 안에 압축되있는 <code class="language-plaintext highlighter-rouge">boot9strap.firm</code>과 <code class="language-plaintext highlighter-rouge">boot9strap.firm.sha</code>을 복사해 주세요</p>
+
+    <p class="notice--info"><img src="https://3ds.hacks.guide/images/screenshots/boot9strap-ntrboot-file-layout.png" alt="" /></p>
+  </li>
+  <li>SD 카드를 기기에 다시 삽입해 주세요</li>
+  <li>기기를 시작해 주세요</li>
+</ol>
+
+<h5 id="섹션-ii---ntrboot">섹션 II - ntrboot</h5>
+
+<ol>
+  <li>자석을 이용해 당신의 기기에서 슬립센서가 작동하는 지점을 찾으세요
+    <ul>
+      <li>이 단계는 구형 2DS에서 필효하지 않습니다 (슬립모드 스위치가 있는 모델)</li>
+    </ul>
+  </li>
+  <li>기기를 종료해 주세요</li>
+  <li>플래시카트를 기기에 삽입해 주세요</li>
+  <li>자석을 기기에 놓아 슬립센서를 작동시켜 주세요
+    <ul>
+      <li>구형 2DS에서는, 이것 대신 슬립모드 스위치를 켜 주세요</li>
+    </ul>
+  </li>
+  <li>(Start) + (Select) + (X) + (전원) 버튼을 몇초간 누르고 놓아 주세요
+    <ul>
+      <li>이 작업을 하는데에 자세가 불편해서 여러번 시도해야 할 수 있습니다</li>
+    </ul>
+  </li>
+  <li>익스플로잇이 성공적이었다면 SafeB9SInstaller로 부팅되었을 것입니다</li>
+  <li>자석을 3DS로 부터 제거해 주세요
+    <ul>
+      <li>구형 2DS에서는, 이것 대신 슬립모드 스위치를 꺼 주세요</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="섹션-iii---boot9strap-설치하기">섹션 III - boot9strap 설치하기</h4>
+
+<p>이 섹션에서는, 커스텀 펌웨어를 설치할 것입니다.</p>
+
+<ol>
+  <li>메시지가 나타나면, boot9strap을 설치하기 위하여 화면에 주어진 키 조합을 입력해 주세요</li>
+  <li>이 작업이 끝나면, 전원 버튼을 길게 눌러 기기를 종료해 주세요
+    <ul>
+      <li>다음 작업이 완료되기 전까지는 기기는 SafeB9SInstaller로만 부팅 됩니다</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="섹션-iv---luma3ds-설정">섹션 IV - Luma3DS 설정</h4>
+
+<ol>
+  <li>SD 카드를 컴퓨터에 삽입해 주세요</li>
+  <li><code class="language-plaintext highlighter-rouge">boot.firm</code> 파일을 SD 카드의 루트에서 삭제해 주세요</li>
+  <li>Luma3DS <code class="language-plaintext highlighter-rouge">.zip</code>안에 있는 <code class="language-plaintext highlighter-rouge">boot.firm</code>을 SD 카드의 루트에 복사해 주세요</li>
+  <li>SD 카드를 기기에 다시 삽입해 주세요</li>
+  <li>기기를 시작해 주세요1. Your device should have booted into the Luma3DS configuration menu
+    <ul>
+      <li>Luma3DS 구성 메뉴는 Luma3DS 커스텀 펌웨어의 설정들 입니다. 이 설정들은 디버깅 또는 맞춤화의 유용합니다</li>
+      <li>For the purpose of this guide, <strong>leave these options on the default settings</strong> (do not check or uncheck anything)</li>
+      <li>만약 기기가 부팅시에 꺼진다면 Luma3DS <code class="language-plaintext highlighter-rouge">.zip</code> 파일 안에 압축 되있는 <code class="language-plaintext highlighter-rouge">boot.firm</code>을 SD 카드의 루트로 복사 했는지 확인해 주세요</li>
+    </ul>
+  </li>
+  <li>(Start)를 눌러 저장하고 기기를 다시 시작해 주세요</li>
+</ol>
+
+<p>이제 기기는 Luma3DS를 기본으로 부팅 됩니다.</p>
+<ul>
+  <li>Luma3DS는 보통 HOME 메뉴와 똑같이 보입니다. 만약 기기가 HOME 메뉴로 부팅되었다면, 커스텀 펌웨어가 설치되어 있습니다.</li>
+  <li>다음 페이지에서는 커펌에 유용한 홈브류를 설치해 기기 준비를 완료할 것 입니다.</li>
+</ul>
+
+<hr />
+
+<h3 class="notice--primary" id="마무리-단계-로-계속합니다"><a href="finalizing-setup">마무리 단계</a> 로 계속합니다</h3>
+
+<hr />
+
+<p>다음 단계는 플래시카트를 원상복구를 하기 위한 선택 사항 섹션입니다 (원래 기능으로 되돌리기 위한).</p>
+
+<p>Acekard 2i는 ntrboot 익스플로잇이 설치된 상태에도 <code class="language-plaintext highlighter-rouge">.nds</code> 파일을 실행하는 기능을 유지합니다. 이것은 Acekard 2i가 NDS 혹은 커스텀 펌웨어 3DS에 있을때만 적용됩니다! Acekard 2i에 ntrboot 익스플로잇이 설치되어 있는 동안, DSi 또는 순정 3DS에서는 <code class="language-plaintext highlighter-rouge">.nds</code> 파일을 실행할 수 없습니다.</p>
+
+<p>이 페이지의 남은 진행단계를 완료한 후 진행해 주시기 바랍니다.</p>
+
+<h4 id="섹션-v---ntrboot-제거">섹션 V - ntrboot 제거</h4>
+
+<h5 id="준비물-1">준비물</h5>
+
+<ul>
+  <li>최신 버전의 <a href="https://github.com/ntrteam/ntrboot_flasher/releases/latest">ntrboot_flasher</a> (<code class="language-plaintext highlighter-rouge">ntrboot_flasher.firm</code>)</li>
+  <li>플래시카트에 부합하는 플래시롬 백업
+    <ul>
+      <li>만약 <a href="flashing-ntrboot-(3ds-multi-system)">ntrboot 플래싱 (3DS 두 대)</a>를 따랐다면, 플래시롬이 이미 올바른 위치에 있고 다운로드할 필요가 없습니다</li>
+      <li>만약 <a href="flashing-ntrboot-(3ds-single-system)">ntrboot 플래싱 (단일 3DS)</a>, 또는 <a href="flashing-ntrboot-(nds)">ntrboot 플래싱 (NDS)</a>를 따랐다면, 플래시롬이 이미 올바른 위치에 있고 다운로드할 필요가 없습니다</li>
+      <li>만약 가진 카트의 HW 수정버전을 모른다면, 각각 시도해 보세요. 올바른 것만 HOME 메뉴에서 플래시카트가 올바르게 실행되게 할 것이고, 잘못된 것을 선택하면 실행되지 않을 것입니다.</li>
+    </ul>
+  </li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>플래시카드</th>
+      <th style="text-align: center">하드웨어 수정버전</th>
+      <th style="text-align: center">플래시롬</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Ace3DS X</strong></td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center"><em>N/A</em></td>
+    </tr>
+    <tr>
+      <td><strong>Acekard 2i</strong></td>
+      <td style="text-align: center">HW 81</td>
+      <td style="text-align: center"><i class="fa fa-magnet" aria-hidden="true" title="마그넷 링크입니다. 토렌트 클라이언트를 사용해 파일을 다운로드 해주세요."></i> - <a href="magnet:?xt=urn:btih:71ce385a1d65e28719c419fe58d171a4873501ff&amp;dn=Acekard_2i_(HW_81)-Flashrom.zip&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.lelux.fi%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.loadbt.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.monitorit4.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.ololosh.space%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.srv00.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.theoks.net%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.zerobytes.xyz%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker1.bt.moack.co.kr%3a80%2fannounce&amp;tr=udp%3a%2f%2fvibe.sleepyinternetfun.xyz%3a1738%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=http%3a%2f%2fopenbittorrent.com%3a80%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce">Acekard_2i_(HW_81)-Flashrom.zip</a></td>
+    </tr>
+    <tr>
+      <td><strong>Acekard 2i</strong></td>
+      <td style="text-align: center">HW 44</td>
+      <td style="text-align: center"><i class="fa fa-magnet" aria-hidden="true" title="마그넷 링크입니다. 토렌트 클라이언트를 사용해 파일을 다운로드 해주세요."></i> - <a href="magnet:?xt=urn:btih:d04bd19e15bf8600ccef6540bdbd043846888132&amp;dn=Acekard_2i_(HW_44)-Flashrom.zip&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.lelux.fi%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.loadbt.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.monitorit4.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.ololosh.space%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.srv00.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.theoks.net%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.zerobytes.xyz%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker1.bt.moack.co.kr%3a80%2fannounce&amp;tr=udp%3a%2f%2fvibe.sleepyinternetfun.xyz%3a1738%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=http%3a%2f%2fopenbittorrent.com%3a80%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce">Acekard_2i_(HW_44)-Flashrom.zip</a></td>
+    </tr>
+    <tr>
+      <td><strong>DSTT</strong></td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center"><em>없음</em></td>
+    </tr>
+    <tr>
+      <td><strong>Infinity 3 R4i</strong></td>
+      <td style="text-align: center">HW A5</td>
+      <td style="text-align: center"><i class="fa fa-magnet" aria-hidden="true" title="마그넷 링크입니다. 토렌트 클라이언트를 사용해 파일을 다운로드 해주세요."></i> - <a href="magnet:?xt=urn:btih:c6dee8cc9535d58284ccb8430c9af4682c3e1efc&amp;dn=R4i_Gold_3DS_(HW_A5)-Flashrom.zip&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.lelux.fi%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.monitorit4.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.ololosh.space%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.srv00.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.theoks.net%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2ftracker.zerobytes.xyz%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker1.bt.moack.co.kr%3a80%2fannounce&amp;tr=udp%3a%2f%2fvibe.sleepyinternetfun.xyz%3a1738%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.loadbt.com%3a6969%2fannounce&amp;tr=http%3a%2f%2fopenbittorrent.com%3a80%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce">R4i_Gold_3DS_(HW_A5)-Flashrom.zip</a></td>
+    </tr>
+    <tr>
+      <td><strong>R4 3D Revolution</strong></td>
+      <td style="text-align: center">HW A6</td>
+      <td style="text-align: center"><i class="fa fa-magnet" aria-hidden="true" title="마그넷 링크입니다. 토렌트 클라이언트를 사용해 파일을 다운로드 해주세요."></i> - <a href="magnet:?xt=urn:btih:e1675722834b870ea64ddf1ef9ca77d78db2be00&amp;dn=R4i_Gold_3DS_(HW_A6)-Flashrom.zip&amp;tr=udp%3a%2f%2ftracker1.bt.moack.co.kr%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.monitorit4.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.ololosh.space%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.srv00.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.theoks.net%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.zerobytes.xyz%3a1337%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2fvibe.sleepyinternetfun.xyz%3a1738%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.lelux.fi%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.loadbt.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&amp;tr=http%3a%2f%2fopenbittorrent.com%3a80%2fannounce">R4i_Gold_3DS_(HW_A6)-Flashrom.zip</a></td>
+    </tr>
+    <tr>
+      <td><strong>R4i Gold 3DS Deluxe “Starter”</strong></td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center"><em>없음</em></td>
+    </tr>
+    <tr>
+      <td><strong>R4i Gold 3DS</strong></td>
+      <td style="text-align: center">HW 4</td>
+      <td style="text-align: center"><i class="fa fa-magnet" aria-hidden="true" title="마그넷 링크입니다. 토렌트 클라이언트를 사용해 파일을 다운로드 해주세요."></i> - <a href="magnet:?xt=urn:btih:a742778ade94b4a0b877cc481ba0f1a4120262da&amp;dn=R4i_Gold_3DS_(HW_4)-Flashrom.zip&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.lelux.fi%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.loadbt.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.monitorit4.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.ololosh.space%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.srv00.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.theoks.net%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2ftracker.zerobytes.xyz%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker1.bt.moack.co.kr%3a80%2fannounce&amp;tr=udp%3a%2f%2fvibe.sleepyinternetfun.xyz%3a1738%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=http%3a%2f%2fopenbittorrent.com%3a80%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce">R4i_Gold_3DS_(HW_4)-Flashrom.zip</a></td>
+    </tr>
+    <tr>
+      <td><strong>R4i Gold 3DS</strong></td>
+      <td style="text-align: center">HW 5</td>
+      <td style="text-align: center"><em>없음</em></td>
+    </tr>
+    <tr>
+      <td><strong>R4i Gold 3DS</strong></td>
+      <td style="text-align: center">HW 6</td>
+      <td style="text-align: center"><em>없음</em></td>
+    </tr>
+    <tr>
+      <td><strong>R4i Gold 3DS</strong></td>
+      <td style="text-align: center">HW 7</td>
+      <td style="text-align: center"><em>없음</em></td>
+    </tr>
+    <tr>
+      <td><strong>R4i Gold 3DS</strong></td>
+      <td style="text-align: center">HW 8</td>
+      <td style="text-align: center"><i class="fa fa-magnet" aria-hidden="true" title="마그넷 링크입니다. 토렌트 클라이언트를 사용해 파일을 다운로드 해주세요."></i> - <a href="magnet:?xt=urn:btih:e56429289034529f05023b3d4722ed66f6270338&amp;xt=urn:btmh:122088bafa255809c2cd458edfce96e3dd463ce819ce05c9d335db1dafd54c254195&amp;dn=R4i_Gold_3DS_(HW_8)-Flashrom.zip&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.dler.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.bitsearch.to%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker-udp.gbitt.info%3a80%2fannounce&amp;tr=udp%3a%2f%2fretracker.netbynet.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fretracker.lanta-net.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopentor.org%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopen.stealth.si%3a80%2fannounce&amp;tr=udp%3a%2f%2fmts.tvbit.co%3a6969%2fannounce&amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2fbt2.archive.org%3a6969%2fannounce">R4i_Gold_3DS_(HW_8)-Flashrom.zip</a></td>
+    </tr>
+    <tr>
+      <td><strong>R4i Gold 3DS</strong></td>
+      <td style="text-align: center">HW D</td>
+      <td style="text-align: center"><i class="fa fa-magnet" aria-hidden="true" title="마그넷 링크입니다. 토렌트 클라이언트를 사용해 파일을 다운로드 해주세요."></i> - <a href="magnet:?xt=urn:btih:0a074dd475a26166d90ae26e313dcbc6d51cfa12&amp;dn=R4i_Gold_3DS_(HW_D)-Flashrom.zip&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.lelux.fi%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.loadbt.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.monitorit4.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.ololosh.space%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.srv00.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.theoks.net%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2ftracker.zerobytes.xyz%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker1.bt.moack.co.kr%3a80%2fannounce&amp;tr=udp%3a%2f%2fvibe.sleepyinternetfun.xyz%3a1738%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=http%3a%2f%2fopenbittorrent.com%3a80%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce">R4i_Gold_3DS_(HW_D)-Flashrom.zip</a></td>
+    </tr>
+    <tr>
+      <td><strong>R4i Gold 3DS Plus</strong></td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center"><em>N/A</em></td>
+    </tr>
+    <tr>
+      <td><strong>R4i Gold 3DS RTS</strong></td>
+      <td style="text-align: center">HW A5</td>
+      <td style="text-align: center"><i class="fa fa-magnet" aria-hidden="true" title="마그넷 링크입니다. 토렌트 클라이언트를 사용해 파일을 다운로드 해주세요."></i> - <a href="magnet:?xt=urn:btih:c6dee8cc9535d58284ccb8430c9af4682c3e1efc&amp;dn=R4i_Gold_3DS_(HW_A5)-Flashrom.zip&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.lelux.fi%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.monitorit4.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.ololosh.space%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.srv00.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.theoks.net%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2ftracker.zerobytes.xyz%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker1.bt.moack.co.kr%3a80%2fannounce&amp;tr=udp%3a%2f%2fvibe.sleepyinternetfun.xyz%3a1738%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.loadbt.com%3a6969%2fannounce&amp;tr=http%3a%2f%2fopenbittorrent.com%3a80%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce">R4i_Gold_3DS_(HW_A5)-Flashrom.zip</a></td>
+    </tr>
+    <tr>
+      <td><strong>R4i Gold 3DS RTS</strong></td>
+      <td style="text-align: center">HW A6</td>
+      <td style="text-align: center"><i class="fa fa-magnet" aria-hidden="true" title="마그넷 링크입니다. 토렌트 클라이언트를 사용해 파일을 다운로드 해주세요."></i> - <a href="magnet:?xt=urn:btih:e1675722834b870ea64ddf1ef9ca77d78db2be00&amp;dn=R4i_Gold_3DS_(HW_A6)-Flashrom.zip&amp;tr=udp%3a%2f%2ftracker1.bt.moack.co.kr%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.monitorit4.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.ololosh.space%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.srv00.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.theoks.net%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.zerobytes.xyz%3a1337%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2fvibe.sleepyinternetfun.xyz%3a1738%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.lelux.fi%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.loadbt.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&amp;tr=http%3a%2f%2fopenbittorrent.com%3a80%2fannounce">R4i_Gold_3DS_(HW_A6)-Flashrom.zip</a></td>
+    </tr>
+    <tr>
+      <td><strong>R4i Gold 3DS RTS</strong></td>
+      <td style="text-align: center">HW A7</td>
+      <td style="text-align: center"><i class="fa fa-magnet" aria-hidden="true" title="마그넷 링크입니다. 토렌트 클라이언트를 사용해 파일을 다운로드 해주세요."></i> - <a href="magnet:?xt=urn:btih:d780a1fbcb83d0d3c99748c87534f77957da98ce&amp;dn=R4i_Gold_3DS_(HW_A7)-Flashrom.zip&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.lelux.fi%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.loadbt.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.monitorit4.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.ololosh.space%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.srv00.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.theoks.net%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2ftracker.zerobytes.xyz%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker1.bt.moack.co.kr%3a80%2fannounce&amp;tr=udp%3a%2f%2fvibe.sleepyinternetfun.xyz%3a1738%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&amp;tr=http%3a%2f%2fopenbittorrent.com%3a80%2fannounce">R4i_Gold_3DS_(HW_A7)-Flashrom.zip</a></td>
+    </tr>
+    <tr>
+      <td><strong>R4i Ultra</strong></td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center"><i class="fa fa-magnet" aria-hidden="true" title="마그넷 링크입니다. 토렌트 클라이언트를 사용해 파일을 다운로드 해주세요."></i> - <a href="magnet:?xt=urn:btih:e2a080eb70b92d3127ffea2a5be6bbdb1928a438&amp;dn=R4i_Ultra-Flashrom.zip&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.lelux.fi%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.loadbt.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.monitorit4.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.ololosh.space%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.srv00.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.theoks.net%3a6969%2fannounce&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.zerobytes.xyz%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker1.bt.moack.co.kr%3a80%2fannounce&amp;tr=udp%3a%2f%2fvibe.sleepyinternetfun.xyz%3a1738%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&amp;tr=http%3a%2f%2fopenbittorrent.com%3a80%2fannounce">R4i_Ultra-Flashrom.zip</a></td>
+    </tr>
+    <tr>
+      <td><strong>R4i-SDHC 3DS RTS</strong></td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center"><i class="fa fa-magnet" aria-hidden="true" title="마그넷 링크입니다. 토렌트 클라이언트를 사용해 파일을 다운로드 해주세요."></i> - <a href="magnet:?xt=urn:btih:dc5aeeb4bfffd09d10f1d9f20179df3e74223fd1&amp;dn=R4i-SDHC_3DS_RTS_B9S-Flashrom.zip&amp;tr=udp%3a%2f%2fbt2.archive.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2fvibe.sleepyinternetfun.xyz%3a1738%2fannounce&amp;tr=udp%3a%2f%2ftracker1.bt.moack.co.kr%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.zerobytes.xyz%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.theoks.net%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.srv00.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.ololosh.space%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.monitorit4.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.loadbt.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.lelux.fi%3a6969%2fannounce&amp;tr=http%3a%2f%2fopenbittorrent.com%3a80%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2fopen.stealth.si%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.bitsearch.to%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.dler.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker-udp.gbitt.info%3a80%2fannounce&amp;tr=udp%3a%2f%2fretracker.netbynet.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fretracker.lanta-net.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopentor.org%3a2710%2fannounce&amp;tr=udp%3a%2f%2fmts.tvbit.co%3a6969%2fannounce&amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce">R4i-SDHC_3DS_RTS_B9S-Flashrom.zip</a></td>
+    </tr>
+    <tr>
+      <td><strong>R4i-SDHC B9S</strong></td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center"><i class="fa fa-magnet" aria-hidden="true" title="마그넷 링크입니다. 토렌트 클라이언트를 사용해 파일을 다운로드 해주세요."></i> - <a href="magnet:?xt=urn:btih:dc5aeeb4bfffd09d10f1d9f20179df3e74223fd1&amp;dn=R4i-SDHC_3DS_RTS_B9S-Flashrom.zip&amp;tr=udp%3a%2f%2fbt2.archive.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2fvibe.sleepyinternetfun.xyz%3a1738%2fannounce&amp;tr=udp%3a%2f%2ftracker1.bt.moack.co.kr%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.zerobytes.xyz%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.theoks.net%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.srv00.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.ololosh.space%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.monitorit4.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.loadbt.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.lelux.fi%3a6969%2fannounce&amp;tr=http%3a%2f%2fopenbittorrent.com%3a80%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2fopen.stealth.si%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.bitsearch.to%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.dler.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker-udp.gbitt.info%3a80%2fannounce&amp;tr=udp%3a%2f%2fretracker.netbynet.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fretracker.lanta-net.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopentor.org%3a2710%2fannounce&amp;tr=udp%3a%2f%2fmts.tvbit.co%3a6969%2fannounce&amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce">R4i-SDHC_3DS_RTS_B9S-Flashrom.zip</a></td>
+    </tr>
+    <tr>
+      <td><strong>R4iSDHC GOLD Pro 20XX (r4isdhc.com)</strong></td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center"><i class="fa fa-magnet" aria-hidden="true" title="마그넷 링크입니다. 토렌트 클라이언트를 사용해 파일을 다운로드 해주세요."></i> - <a href="magnet:?xt=urn:btih:d16817f7fdd0eac18d71d2ebd73d51315389d90e&amp;dn=R4iSDHC.com_20XX-Flashrom.zip&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.lelux.fi%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.loadbt.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.monitorit4.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.ololosh.space%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.srv00.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.theoks.net%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.zerobytes.xyz%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker1.bt.moack.co.kr%3a80%2fannounce&amp;tr=udp%3a%2f%2fvibe.sleepyinternetfun.xyz%3a1738%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&amp;tr=http%3a%2f%2fopenbittorrent.com%3a80%2fannounce">R4iSDHC.com_20XX-Flashrom.zip</a></td>
+    </tr>
+    <tr>
+      <td><strong>R4iSDHC RTS LITE 20XX (r4isdhc.com)</strong></td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center"><i class="fa fa-magnet" aria-hidden="true" title="마그넷 링크입니다. 토렌트 클라이언트를 사용해 파일을 다운로드 해주세요."></i> - <a href="magnet:?xt=urn:btih:d16817f7fdd0eac18d71d2ebd73d51315389d90e&amp;dn=R4iSDHC.com_20XX-Flashrom.zip&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.lelux.fi%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.loadbt.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.monitorit4.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.ololosh.space%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.srv00.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.theoks.net%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.zerobytes.xyz%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker1.bt.moack.co.kr%3a80%2fannounce&amp;tr=udp%3a%2f%2fvibe.sleepyinternetfun.xyz%3a1738%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&amp;tr=http%3a%2f%2fopenbittorrent.com%3a80%2fannounce">R4iSDHC.com_20XX-Flashrom.zip</a></td>
+    </tr>
+    <tr>
+      <td><strong>R4iSDHC Dual-Core 20XX (r4isdhc.com)</strong></td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center"><i class="fa fa-magnet" aria-hidden="true" title="마그넷 링크입니다. 토렌트 클라이언트를 사용해 파일을 다운로드 해주세요."></i> - <a href="magnet:?xt=urn:btih:d16817f7fdd0eac18d71d2ebd73d51315389d90e&amp;dn=R4iSDHC.com_20XX-Flashrom.zip&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.lelux.fi%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.loadbt.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.monitorit4.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.ololosh.space%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.srv00.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.theoks.net%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.zerobytes.xyz%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker1.bt.moack.co.kr%3a80%2fannounce&amp;tr=udp%3a%2f%2fvibe.sleepyinternetfun.xyz%3a1738%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&amp;tr=http%3a%2f%2fopenbittorrent.com%3a80%2fannounce">R4iSDHC.com_20XX-Flashrom.zip</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="진행-방법-1">진행 방법</h5>
+
+<ol>
+  <li>기기를 종료해 주세요</li>
+  <li>SD 카드를 컴퓨터에 삽입해 주세요
+    <ul>
+      <li>이것은 3DS의 SD 카드이며, 플래시카트의 SD 카드가 아닙니다</li>
+    </ul>
+  </li>
+  <li>SD 카드의 루트에 ‘ntrboot’ 폴더를 생성해 주세요</li>
+  <li>flashrom backup <code class="language-plaintext highlighter-rouge">.zip</code>의 <code class="language-plaintext highlighter-rouge">.bin</code> 파일을 SD 카드 루트에 있는 <code class="language-plaintext highlighter-rouge">/ntrboot/</code> 폴더에 복사해 주세요</li>
+  <li>SD 카드 내 <code class="language-plaintext highlighter-rouge">luma</code> 폴더에 <code class="language-plaintext highlighter-rouge">payloads</code> 폴더가 없을 경우 폴더를 만들어 주세요</li>
+  <li><code class="language-plaintext highlighter-rouge">ntrboot_flasher.firm</code> 파일을 SD 카드에 있는 <code class="language-plaintext highlighter-rouge">/luma/payloads/</code> 폴더에 복사해 주세요</li>
+  <li>SD 카드를 기기에 다시 삽입해 주세요</li>
+  <li>ntrboot와 호환되는 DS / DSi 플래시카트를 기기에 삽입해 주세요</li>
+  <li>부팅시 (Start) 를 눌러서 ntrboot_flasher를 실행해 주세요</li>
+  <li>붉은 화면에 뜬 경고를 읽어 주세요</li>
+  <li>(A)를 눌러 진행해 주세요</li>
+  <li>소유하고 있는 플래시카드를 선택해 주세요
+    <ul>
+      <li>만약 윗화면에 리스트에 플래시카드가 없다면 각각의 옵션의 정보를 보기 위해 아랫화면을 보아 주세요</li>
+    </ul>
+  </li>
+  <li>“Restore Flash”를 선택해 주세요</li>
+  <li>(A)를 눌러 진행해 주세요</li>
+  <li>완료될 때까지 기다려 주세요</li>
+  <li>(A)를 눌러 메인 메뉴로 돌아가 주세요</li>
+  <li>(B) 를 눌러 기기를 종료해 주세요</li>
+</ol>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://github.com/hacks-guide/Guide_3DS" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+<!--
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+    </ul>
+  -->
+</div>
+
+<!-- custom footer, guide specific -->
+
+
+
+<div class="page__footer-copyright">&copy; 2023 Nintendo Homebrew. - <a href="site-navigation">사이트 탐색</a> - <a href="privacy-policy">개인정보 보호 정책</a> <!-- Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.--></div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+<!-- for guide purposes all caching is removed and is separately built. -->
+
+
+
+
+
+
+
+
+  </body>
+</html>

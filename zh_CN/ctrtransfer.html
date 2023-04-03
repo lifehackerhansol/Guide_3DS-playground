@@ -1,0 +1,699 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<!-- for guide purposes all caching is removed and is separately built. -->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>CTRtransfer - 3DS Hacks Guide</title>
+<meta name="description" content="A complete guide to 3DS custom firmware">
+
+
+  <meta name="author" content="Nintendo Homebrew">
+  
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="3DS Hacks Guide">
+<meta property="og:title" content="CTRtransfer">
+<meta property="og:url" content="https://3ds.hacks.guide/zh_CN/ctrtransfer.html">
+
+
+  <meta property="og:description" content="A complete guide to 3DS custom firmware">
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://3ds.hacks.guide/zh_CN/ctrtransfer.html">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Nintendo Homebrew",
+      "url": "https://3ds.hacks.guide/"
+    
+  }
+</script>
+
+
+  <meta name="google-site-verification" content="jVXoPK_-qzKJp4SScnZYpOIX3yDXfGnAoTBJYixUOwg" />
+
+
+  <meta name="msvalidate.01" content="F3532011519E308583A0A2CAF2DD69E8">
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="3DS Hacks Guide Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=PYEmwKvQAx">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png?v=PYEmwKvQAx" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-194x194.png?v=PYEmwKvQAx" sizes="194x194">
+<link rel="icon" type="image/png" href="/images/android-chrome-192x192.png?v=PYEmwKvQAx" sizes="192x192">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png?v=PYEmwKvQAx" sizes="16x16">
+<link rel="manifest" href="/images/manifest.json?v=PYEmwKvQAx">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg?v=PYEmwKvQAx" color="#2E3440">
+<link rel="shortcut icon" href="/images/favicon.ico?v=PYEmwKvQAx">
+<meta name="apple-mobile-web-app-title" content="Guide">
+<meta name="application-name" content="Guide">
+<meta name="msapplication-TileColor" content="#2E3440">
+<meta name="msapplication-TileImage" content="/images/mstile-144x144.png?v=PYEmwKvQAx">
+<meta name="msapplication-config" content="/images/browserconfig.xml?v=PYEmwKvQAx">
+<meta name="theme-color" content="#2E3440">
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.css" integrity="sha512-LQ97camar/lOliT/MqjcQs5kWgy6Qz/cCRzzRzUCfv0fotsCTC9ZHXaPQmJV8Xu/PVALfJZ7BDezl5lW3/qBxg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js" integrity="sha512-yXXqOFjdjHNH1GND+1EO0jbvvebABpzGKD66djnUfiKlYME5HGMUJHoCaeE4D5PTG2YsSJf6dwqyUUvQvS0vaA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#2e3440"
+    },
+    "button": {
+      "background": "#60818f"
+    }
+  },
+  "theme": "edgeless",
+  "position": "top",
+  "static": true,
+  "content": {
+    "message": "本网站利用cookies在侧边栏上显示当前的操作进度并改善此站点的使用体验。"
+  }
+})});
+</script>
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <!-- <a class="site-title" href="/">
+          3DS Hacks Guide
+          
+        </a>
+      -->
+        <ul class="visible-links">
+          <!-- modified to use multilang, guide-specific -->
+          
+          
+          
+          
+          
+          
+            
+              <li class="masthead__menu-item masthead__menu-item--lg"><a href="/zh_CN/">主页</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/zh_CN/faq">常见问题</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/zh_CN/troubleshooting">问题排查</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/zh_CN/checking-for-cfw">检查自制固件</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/zh_CN/godmode9-usage">GodMode9 使用教程</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/zh_CN/contribute">捐助</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/zh_CN/region-changing">区域变更</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/zh_CN/uninstall-cfw">卸载自制固件</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/zh_CN/credits">致谢</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/zh_CN/site-navigation">网站导航</a></li>
+            
+          
+          <!-- end guide specific -->
+        </ul>
+        
+        <!-- completely redo hidden links for multilang, guide-specific -->
+        <ul class="hidden-links links-menu hidden"></ul>
+        <ul class="hidden-links lang-menu hidden">
+          
+          
+          
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ctrtransfer.html">English</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/es_ES/ctrtransfer.html">Español</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/de_DE/ctrtransfer.html">Deutsch</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/fr_FR/ctrtransfer.html">Français</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/it_IT/ctrtransfer.html">Italiano</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/nl_NL/ctrtransfer.html">Nederlands</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/pt_BR/ctrtransfer.html">Português do Brasil</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/pt_PT/ctrtransfer.html">Português (Portugal)</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ru_RU/ctrtransfer.html">Русский</a></li> -->
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/zh_CN/ctrtransfer.html">简体中文</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/zh_TW/ctrtransfer.html">繁體中文</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/pl_PL/ctrtransfer.html">Polski</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/tr_TR/ctrtransfer.html">Türkçe</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/vi_VN/ctrtransfer.html">Tiếng Việt</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ca_ES/ctrtransfer.html">Català</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/el_GR/ctrtransfer.html">Ελληνικά</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/he_IL/ctrtransfer.html">עברית‎</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/sv_SE/ctrtransfer.html">Svenska</a></li> -->
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ko_KR/ctrtransfer.html">한국어</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/no_NO/ctrtransfer.html">Norsk</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ja_JP/ctrtransfer.html">日本語</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ar_SA/ctrtransfer.html">اللغة العربية</a></li> -->
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/hu_HU/ctrtransfer.html">Magyar</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ro_RO/ctrtransfer.html">Română</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/sr_SP/ctrtransfer.html">Српски</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/af_ZA/ctrtransfer.html">Afrikaans</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ms_MY/ctrtransfer.html">Bahasa Melayu</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/fi_FI/ctrtransfer.html">Suomi</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/da_DK/ctrtransfer.html">Dansk</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/uk_UA/ctrtransfer.html">Українська</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/cs_CZ/ctrtransfer.html">Čeština</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/en_PT/ctrtransfer.html">Pirate English</a></li> -->
+        </ul>
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <button class="greedy-nav__toggle_lang"><div class="langicon"><i class="fa fa-language fa-lg" aria-hidden="true"></i></div></button>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  <!-- 
+  <div class="sidebar sticky">
+  
+  
+    
+    
+  
+  </div>
+
+-->
+
+
+
+<div class="sidebar sticky" style="display: none;">
+  
+
+
+
+
+
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    <li>
+      <span class="nav__sub-title">总进度</span>
+      <ol>
+        
+          
+            <li style="display: none;" data-name="home"><a href='/zh_CN/'>主页</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="key-information"><a href='/zh_CN/key-information'>Key Information</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="get-started"><a href='/zh_CN/get-started'>Get Started</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="ntrboot"><a href='/zh_CN/ntrboot'>ntrboot</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer"><a href='/zh_CN/seedminer'>Seedminer</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(twn)"><a href='/zh_CN/seedminer-(twn)'>Seedminer (TWN)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="bannerbomb3"><a href='/zh_CN/bannerbomb3'>BannerBomb3</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="multiple-options"><i>(Multiple Options)</i></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(3ds-single-system)"><a href='/zh_CN/flashing-ntrboot-(3ds-single-system)'>Flashing ntrboot (3DS Single System)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(3ds-multi-system)"><a href='/zh_CN/flashing-ntrboot-(3ds-multi-system)'>Flashing ntrboot (3DS Multi System)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(dsi)"><a href='/zh_CN/flashing-ntrboot-(dsi)'>Flashing ntrboot (DSi)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(nds)"><a href='/zh_CN/flashing-ntrboot-(nds)'>Flashing ntrboot (NDS)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(pichaxx)"><a href='/zh_CN/homebrew-launcher-(pichaxx)'>Homebrew Launcher (PicHaxx)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="bannerbomb3-fredtool-(twn)"><a href='/zh_CN/bannerbomb3-fredtool-(twn)'>BannerBomb3 + Fredtool (TWN)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(hardmod)"><a href='/zh_CN/installing-boot9strap-(hardmod)'>Installing boot9strap (Hardmod)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(hbl-usm)"><a href='/zh_CN/installing-boot9strap-(hbl-usm)'>Installing boot9strap (HBL-USM)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(ntrboot)"><a href='/zh_CN/installing-boot9strap-(ntrboot)'>Installing boot9strap (ntrboot)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(soundhax)"><a href='/zh_CN/installing-boot9strap-(soundhax)'>Installing boot9strap (Soundhax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(ssloth-browser)"><a href='/zh_CN/installing-boot9strap-(ssloth-browser)'>Installing boot9strap (SSLoth-Browser)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(fredtool)"><a href='/zh_CN/installing-boot9strap-(fredtool)'>Installing boot9strap (Fredtool)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(usm)"><a href='/zh_CN/installing-boot9strap-(usm)'>Installing boot9strap (USM)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(kartdlphax)"><a href='/zh_CN/installing-boot9strap-(kartdlphax)'>Installing boot9strap (kartdlphax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(hbl-usm)"><a href='/zh_CN/installing-boot9strap-(hbl-usm)'>Installing boot9strap (HBL-USM)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="finalizing-setup"><a href='/zh_CN/finalizing-setup'>Finalizing Setup</a></li>
+          
+        
+      </ol>
+    </li>
+  </ul>
+</nav>
+</div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="CTRtransfer">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">CTRtransfer
+</h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+
+        <hr>
+
+        
+        
+
+        
+          
+          <div class ="notice"><b>如果有疑问并且懂英语的话，可以到 <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew Discord 服务器</a>上使用英文寻求帮助。（请注意，如果你身处中国大陆，你可能需要通过科学上网来访问 Discord）
+你也可以到译者的 <a href="https://stray-soul.site/index.php/qqgroup">QQ 群</a>寻求帮助，群号为 942052497。</b></div>
+        
+          
+          <div class ="notice"><b>如果你喜欢我们的教程，可以通过<a href="contribute#donations">捐赠</a>支持我们。</b></div>
+        
+
+        <hr>
+
+        <aside class="sidebar__right">
+<nav class="toc">
+    <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> 目录內容</h4></header>
+<ul class="toc__menu" id="markdown-toc">
+  <li><a href="#必读事项" id="markdown-toc-必读事项">必读事项</a></li>
+  <li><a href="#你需要准备点啥" id="markdown-toc-你需要准备点啥">你需要准备点啥？</a></li>
+  <li><a href="#操作步骤" id="markdown-toc-操作步骤">操作步骤</a>    <ul>
+      <li><a href="#第一步--准备工作" id="markdown-toc-第一步--准备工作">第一步 – 准备工作</a></li>
+      <li><a href="#第二步--ctrtransfer" id="markdown-toc-第二步--ctrtransfer">第二步 – CTRTransfer</a></li>
+      <li><a href="#第五步--启动-fbi-应用" id="markdown-toc-第五步--启动-fbi-应用">第五步 – 启动 FBI 应用</a></li>
+      <li><a href="#第四步--重装tickets" id="markdown-toc-第四步--重装tickets">第四步 – 重装Tickets</a></li>
+      <li><a href="#第五步--删除-ctr转移ctrtransfer-镜像" id="markdown-toc-第五步--删除-ctr转移ctrtransfer-镜像">第五步 – 删除 CTR转移(CTRtransfer) 镜像</a></li>
+    </ul>
+  </li>
+  <li><a href="#继续至完成安装" id="markdown-toc-继续至完成安装">继续至完成安装</a></li>
+</ul>
+
+  </nav>
+</aside>
+
+<h3 id="必读事项">必读事项</h3>
+
+<p>这是个为主机安装 11.15.0 CTRtransfer 镜像的附加章节。</p>
+
+<p>请注意，如果你的 SD 卡中的 <code class="language-plaintext highlighter-rouge">/luma/payloads/</code> 目录中有 <code class="language-plaintext highlighter-rouge">GodMode9.firm</code> 以外的 <code class="language-plaintext highlighter-rouge">.firm</code> 文件，那么你在按住 “Start” 键开机的时候，你的主机将不会直接进入到 Godmode9，而会进入到一个叫做 “chainloader menu” 的菜单，这个时候你需要通过十字键来移动红色光标至 “Godmode9” 来启动教程需要的文件。</p>
+
+<p class="notice--danger">在开始之前，你必须确认你已装好了 Luma3DS 和 boot9strap。</p>
+
+<p class="notice--warning">做 CTRTransfer 可能会破坏旧版 3DS/2DS 的内存扩展模式（这会导致怪物猎人、任天堂大乱斗和宝可梦日月系列等等游戏无法启动） 如果出现了这个问题，则你得初始化主机（使用 TinyFormat 或者系统设置内的主机初始化）来解决它。</p>
+
+<h3 id="你需要准备点啥">你需要准备点啥？</h3>
+
+<p class="notice--warning">你需要一个支持 BT 协议的下载程序，如 <a href="https://www.qbittorrent.org/download.php">qBittorrent</a> 或 <a href="http://dev.deluge-torrent.org/wiki/Download">Deluge</a> 来下载本教程中的<a href="https://zh.wikipedia.org/wiki/%E7%A3%81%E5%8A%9B%E9%93%BE%E6%8E%A5">磁力链接</a> 。</p>
+
+<ul>
+  <li>最新版本的 <a href="https://github.com/d0k3/GodMode9/releases/latest">GodMode9</a>（下载 GodMode9 <code class="language-plaintext highlighter-rouge">.zip</code> 文件）</li>
+  <li>最新版本的 <a href="https://github.com/Steveice10/FBI/releases/latest">FBI</a> <strong>（下载 <code class="language-plaintext highlighter-rouge">.3dsx</code> 文件）</strong></li>
+  <li>对应你主机型号和地区的 11.15.0 Ctrtransfer 镜像   <br />
+<strong>（如果你的主机不在下面所列的区域中，那么挑选一个对应你的主机型号的即可）</strong>：
+    <ul>
+      <li><i class="fa fa-magnet" aria-hidden="true" title="这是一个磁力链。 使用 BT 下载客户端下载文件。"></i> - <a href="magnet:?xt=urn:btih:2a39586a0a10d1f0a9470b082ef1453e502b2425&amp;xt=urn:btmh:12205090f0a43a956bd7449658ee0580949d15ae112c80007fb2ef42e3265b6c5f6c&amp;dn=11.15.0-47E_ctrtransfer_n3ds.zip&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.dler.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.bitsearch.to%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker-udp.gbitt.info%3a80%2fannounce&amp;tr=udp%3a%2f%2fretracker.netbynet.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fretracker.lanta-net.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopentor.org%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopen.stealth.si%3a80%2fannounce&amp;tr=udp%3a%2f%2fmts.tvbit.co%3a6969%2fannounce&amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2fbt2.archive.org%3a6969%2fannounce">New 3DS 或 2DS - 11.15.0 - 欧版 - CTRTransfer</a></li>
+      <li><i class="fa fa-magnet" aria-hidden="true" title="这是一个磁力链。 使用 BT 下载客户端下载此文件。"></i> - <a href="magnet:?xt=urn:btih:986b454cab2d9f27daa63d4291f61aed039871d2&amp;xt=urn:btmh:1220c8c96bd76b6fef041aada9ce4e3cf06ef141f3c4558310b9c3a00e39bccc43a1&amp;dn=11.15.0-47J_ctrtransfer_n3ds.zip&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.dler.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.bitsearch.to%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker-udp.gbitt.info%3a80%2fannounce&amp;tr=udp%3a%2f%2fretracker.netbynet.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fretracker.lanta-net.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopentor.org%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopen.stealth.si%3a80%2fannounce&amp;tr=udp%3a%2f%2fmts.tvbit.co%3a6969%2fannounce&amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2fbt2.archive.org%3a6969%2fannounce">New 3DS 或 2DS - 11.15.0 - 日版 - CTRTransfer</a></li>
+      <li><i class="fa fa-magnet" aria-hidden="true" title="这是一个磁力链。 使用 BT 下载客户端下载文件。"></i> - <a href="magnet:?xt=urn:btih:e247b21e1f81f76acf6d3140da45da858e76f1f6&amp;xt=urn:btmh:122008168a003666c14783998d1dd82ac02d1b3be902efa75cf5a03ee47da1fecd73&amp;dn=11.15.0-41K_ctrtransfer_n3ds.zip&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.dler.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.bitsearch.to%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker-udp.gbitt.info%3a80%2fannounce&amp;tr=udp%3a%2f%2fretracker.netbynet.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fretracker.lanta-net.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopentor.org%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopen.stealth.si%3a80%2fannounce&amp;tr=udp%3a%2f%2fmts.tvbit.co%3a6969%2fannounce&amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2fbt2.archive.org%3a6969%2fannounce">New 3DS 或 2DS - 11.15.0 - 韩版 - CTRTransfer</a></li>
+      <li><i class="fa fa-magnet" aria-hidden="true" title="这是一个磁力链。 使用 BT 下载客户端下载文件。"></i> - <a href="magnet:?xt=urn:btih:8ae25de1ab01c9304eece9785d5db6cdd6728214&amp;xt=urn:btmh:1220ab284cc822f3170305723e9920e1bb4d7649fdf528c3ea04aada31e09bfbbe57&amp;dn=11.15.0-47U_ctrtransfer_n3ds.zip&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.dler.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.bitsearch.to%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker-udp.gbitt.info%3a80%2fannounce&amp;tr=udp%3a%2f%2fretracker.netbynet.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fretracker.lanta-net.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopentor.org%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopen.stealth.si%3a80%2fannounce&amp;tr=udp%3a%2f%2fmts.tvbit.co%3a6969%2fannounce&amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2fbt2.archive.org%3a6969%2fannounce">New 3DS 或 2DS - 11.15.0 - 美版 - CTRTransfer</a>  <br />
+~</li>
+      <li><i class="fa fa-magnet" aria-hidden="true" title="这是一个磁力链。 使用 BT 下载客户端下载文件。"></i> - <a href="magnet:?xt=urn:btih:f71d2379e577db22d7f14a656bca7bf2eb5243f8&amp;xt=urn:btmh:12200c6ee93f63deef8ce9023b8214ca36cd29c37d2726acf7a15594256409f6629b&amp;dn=11.15.0-4C_ctrtransfer_o3ds.zip&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.dler.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.bitsearch.to%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker-udp.gbitt.info%3a80%2fannounce&amp;tr=udp%3a%2f%2fretracker.netbynet.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fretracker.lanta-net.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopentor.org%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopen.stealth.si%3a80%2fannounce&amp;tr=udp%3a%2f%2fmts.tvbit.co%3a6969%2fannounce&amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2fbt2.archive.org%3a6969%2fannounce">旧版 3DS 或 2DS - 11.15.0 - 神游版 - CTRTransfer</a></li>
+      <li><i class="fa fa-magnet" aria-hidden="true" title="这是一个磁力链。 使用 BT 下载客户端下载文件。"></i> - <a href="magnet:?xt=urn:btih:fc71540a99c884ab8a4211192d3af92c7ffb9372&amp;xt=urn:btmh:12203c317846d43110fd3a35cedf427cb5fdd58ac764316f4d0634181efbb762ee92&amp;dn=11.15.0-47E_ctrtransfer_o3ds.zip&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.dler.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.bitsearch.to%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker-udp.gbitt.info%3a80%2fannounce&amp;tr=udp%3a%2f%2fretracker.netbynet.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fretracker.lanta-net.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopentor.org%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopen.stealth.si%3a80%2fannounce&amp;tr=udp%3a%2f%2fmts.tvbit.co%3a6969%2fannounce&amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2fbt2.archive.org%3a6969%2fannounce">旧版 3DS 或 2DS - 11.15.0 - 欧版 - CTRTransfer</a></li>
+      <li><i class="fa fa-magnet" aria-hidden="true" title="这是一个磁力链。 使用 BT 下载客户端下载文件。"></i> - <a href="magnet:?xt=urn:btih:7b88adf3f47d036bcdee987f6597770eaafdd8dd&amp;xt=urn:btmh:1220f39be6c14438b07ebdf120161215088d56c59608d5f34f0744d972c7a0cf7ca2&amp;dn=11.15.0-47J_ctrtransfer_o3ds.zip&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.dler.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.bitsearch.to%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker-udp.gbitt.info%3a80%2fannounce&amp;tr=udp%3a%2f%2fretracker.netbynet.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fretracker.lanta-net.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopentor.org%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopen.stealth.si%3a80%2fannounce&amp;tr=udp%3a%2f%2fmts.tvbit.co%3a6969%2fannounce&amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2fbt2.archive.org%3a6969%2fannounce">旧版 3DS 或 2DS - 11.15.0 - 日版 - CTRTransfer</a></li>
+      <li><i class="fa fa-magnet" aria-hidden="true" title="这是一个磁力链。 使用 BT 下载客户端下载文件。"></i> - <a href="magnet:?xt=urn:btih:90d6689106751b057616d32445442fc1b7370e38&amp;xt=urn:btmh:1220a08fe569ac1596f6a113730de3cc7aa0dfd6858d40830cc0f0cee07bf585fd93&amp;dn=11.15.0-41K_ctrtransfer_o3ds.zip&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.dler.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.bitsearch.to%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker-udp.gbitt.info%3a80%2fannounce&amp;tr=udp%3a%2f%2fretracker.netbynet.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fretracker.lanta-net.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopentor.org%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopen.stealth.si%3a80%2fannounce&amp;tr=udp%3a%2f%2fmts.tvbit.co%3a6969%2fannounce&amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2fbt2.archive.org%3a6969%2fannounce">旧版 3DS 或 2DS - 11.15.0 - 韩版 - CTRTransfer</a></li>
+      <li><i class="fa fa-magnet" aria-hidden="true" title="这是一个磁力链。 使用 BT 下载客户端下载文件。"></i> - <a href="magnet:?xt=urn:btih:19f978d42b0d9590bc742d7598efa45091567cee&amp;xt=urn:btmh:12204429bc94456825530a2dff233ed399a292e1004a64b65fa4b451a69e116cad2a&amp;dn=11.15.0-39T_ctrtransfer_o3ds.zip&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.dler.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.bitsearch.to%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker-udp.gbitt.info%3a80%2fannounce&amp;tr=udp%3a%2f%2fretracker.netbynet.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fretracker.lanta-net.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopentor.org%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopen.stealth.si%3a80%2fannounce&amp;tr=udp%3a%2f%2fmts.tvbit.co%3a6969%2fannounce&amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2fbt2.archive.org%3a6969%2fannounce">旧版 3DS 或 2DS - 11.15.0 - 港台版 - CTRTransfer</a></li>
+      <li><i class="fa fa-magnet" aria-hidden="true" title="这是一个磁力链。 使用 BT 下载客户端下载文件。"></i> - <a href="magnet:?xt=urn:btih:fd39778d4116a210c3116c014521120f0e7b9e1d&amp;xt=urn:btmh:12203a51aca201f0635eecb15645cd4598bd49b1ad354e1ea81c24eb488760f3bd2b&amp;dn=11.15.0-47U_ctrtransfer_o3ds.zip&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.dler.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.bitsearch.to%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker-udp.gbitt.info%3a80%2fannounce&amp;tr=udp%3a%2f%2fretracker.netbynet.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fretracker.lanta-net.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopentor.org%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopen.stealth.si%3a80%2fannounce&amp;tr=udp%3a%2f%2fmts.tvbit.co%3a6969%2fannounce&amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2fbt2.archive.org%3a6969%2fannounce">旧版 3DS 或 2DS - 11.15.0 - 美版 - CTRTransfer</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="操作步骤">操作步骤</h3>
+
+<h4 id="第一步--准备工作">第一步 – 准备工作</h4>
+
+<ol>
+  <li>将主机关机</li>
+  <li>将你的 SD 卡插入到电脑</li>
+  <li>检查 SD 卡的根目录是否存在一个名为 <code class="language-plaintext highlighter-rouge">3ds</code> 的文件夹，如果没有则手动新建一个</li>
+  <li>将 GodMode9 <code class="language-plaintext highlighter-rouge">.zip</code> 中的 <code class="language-plaintext highlighter-rouge">GodMode9.firm</code> 复制到你 SD 卡的 <code class="language-plaintext highlighter-rouge">/luma/payloads/</code> 文件夹中</li>
+  <li>将 GodMode9 <code class="language-plaintext highlighter-rouge">.zip</code> 中的整个 <code class="language-plaintext highlighter-rouge">gm9</code> 文件夹复制到 SD 卡的根目录下</li>
+  <li>从 CTRTransfer <code class="language-plaintext highlighter-rouge">.zip</code> 中复制 11.15.0 CTRTransfer <code class="language-plaintext highlighter-rouge">.bin</code> 到 SD 卡的 <code class="language-plaintext highlighter-rouge">/gm9/</code> 目录下</li>
+  <li>复制 <code class="language-plaintext highlighter-rouge">FBI.3dsx</code> 到 SD 卡的 <code class="language-plaintext highlighter-rouge">/3ds/</code> 目录下</li>
+  <li>将 SD 卡重新插入你的主机</li>
+</ol>
+
+<h4 id="第二步--ctrtransfer">第二步 – CTRTransfer</h4>
+
+<ol>
+  <li>按住 “START” 键，然后将主机开机。 这会启动 GodMode9</li>
+  <li>如果工具提示是否需要创建重要文件备份，请按下 “A” 键确认。完成后再次按下 “A” 键来继续。</li>
+  <li>如果出现修复 RTC 日期与时间的提示，按 “A” 键执行修复，然后设置好日期和时间，并按 “A” 继续
+    <ul>
+      <li>请注意，如果出现了该提示，则执行完本指南后你还需要在系统设置中重新设置时间</li>
+    </ul>
+  </li>
+  <li>进入到 <code class="language-plaintext highlighter-rouge">[0:] SDCARD</code> -&gt; <code class="language-plaintext highlighter-rouge">gm9</code></li>
+  <li>在 CTRTransfer <code class="language-plaintext highlighter-rouge">.bin</code> 上按 “A” 键以选中它</li>
+  <li>选择 “CTRNAND options…”</li>
+  <li>选择 “Transfer image to CTRNAND”</li>
+  <li>如果出现提示，选择 “Transfer to SysNAND”
+    <ul>
+      <li>只有当你有 EmuNAND 时，这个提示才会出现</li>
+    </ul>
+  </li>
+  <li>按 “A” 键解锁SysNAND (lvl1) 写入权限，并根据屏幕上的提示依次按下按键
+    <ul>
+      <li>此过程将花费一些时间</li>
+    </ul>
+  </li>
+  <li>
+    <ul>
+      <li>待完成后，按 “A” 键以继续</li>
+    </ul>
+  </li>
+  <li>如果弹出重新锁定写入权限的提示，按下 “B” 键来拒绝。</li>
+  <li>按两次 “B” 键返回到主菜单</li>
+  <li>按下 “Home” 键来打开功能菜单</li>
+  <li>选择 “Scripts…”</li>
+  <li>选择 “GM9Megascript”</li>
+  <li>选择 “Scripts from Plailect’s Guide”</li>
+  <li>选择 “CTRTransfer Ticket Copy”</li>
+  <li>出现提示时，按 “A” 键继续</li>
+  <li>按 “A” 键继续</li>
+  <li>按下 “B” 键返回到主菜单</li>
+  <li>选择 “Exit”</li>
+  <li>如果提示重新锁定写入权限，按下 “A” 键来确认</li>
+  <li>按 “Start” 键重启你的主机</li>
+  <li>进入 “系统设置(System Settings)”，接着点击“其他设置(Other Settings)”，然后移动到最右边，点击“系统升级(System Update)”来升级你的主机
+    <ul>
+      <li>你使用 B9S 和 Luma 时升级系统是安全的</li>
+      <li>如果在更新中途出错，请将主机的 DNS 设置改为 “自动(auto)”</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="第五步--启动-fbi-应用">第五步 – 启动 FBI 应用</h4>
+
+<ol>
+  <li>启动“下载通信(Download Play)”程序 (<img src="https://3ds.hacks.guide/images/download-play-icon.png" alt="" height="24px" width="24px" />)</li>
+  <li>等到你看到 <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> 和 <code class="language-plaintext highlighter-rouge">Nintendo DS</code> 按钮</li>
+  <li>同时按下 “L” + “↓” + “Select” 键来打开 Rosalina 菜单</li>
+  <li>选择 “Miscellaneous options”</li>
+  <li>选择 “Switch the hb. title to the current app.”</li>
+  <li>按 “B” 键继续</li>
+  <li>按 “B” 键返回 Rosalina 主菜单</li>
+  <li>按 “B” 键退出 Rosalina 菜单</li>
+  <li>按下 “Home” 键，然后关闭“下载通信(Download Play)”</li>
+  <li>运行“下载通信（Download Play）”程序</li>
+  <li>此时你的主机应该会启动 Homebrew Launcher了
+    <ul>
+      <li>If your device is stuck on the loading splash screen, you are missing <code class="language-plaintext highlighter-rouge">boot.3dsx</code> from the root of your SD card</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="第四步--重装tickets">第四步 – 重装Tickets</h4>
+
+<p class="notice--info">如果脚本提示没有找到任何使用者的 tickets 并且告诉你跳过本步，那么就跳过这一步。</p>
+
+<ol>
+  <li>从自制程序列表中找到并启动 FBI</li>
+  <li>Select “SD”</li>
+  <li>选择 “gm9”</li>
+  <li>选择 “out”</li>
+  <li>选择 “ctrtransfer_tickets”</li>
+  <li>对 <code class="language-plaintext highlighter-rouge">eshop</code> 、 <code class="language-plaintext highlighter-rouge">unknown</code> 文件夹，或两者都执行以下操作
+    <ul>
+      <li>进入到相应文件夹</li>
+      <li>选择 “&lt;current directory&gt;”</li>
+      <li>选择 “Install and delete all tickets”</li>
+      <li>稍等一下。 系统可能会卡住一会，请耐心等待。</li>
+      <li>按 “A” 键确定</li>
+      <li>按 “B” 键来拒绝从 CDN 安装 tickets。</li>
+    </ul>
+  </li>
+  <li>按 “Home” 键退出 FBI</li>
+</ol>
+
+<h4 id="第五步--删除-ctr转移ctrtransfer-镜像">第五步 – 删除 CTR转移(CTRtransfer) 镜像</h4>
+
+<ol>
+  <li>按住 “START” 键，然后将主机开机。 这会启动 GodMode9</li>
+  <li>进入到 <code class="language-plaintext highlighter-rouge">[0:] SDCARD</code> -&gt; <code class="language-plaintext highlighter-rouge">gm9</code></li>
+  <li>在 CTRTransfer <code class="language-plaintext highlighter-rouge">.bin</code> 上按 “X” 来删除它</li>
+  <li>按下 “A” 键确认</li>
+  <li>按 “Start” 键重启你的主机</li>
+</ol>
+
+<hr />
+
+<h3 class="notice--primary" id="继续至完成安装">继续至<a href="finalizing-setup">完成安装</a></h3>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://github.com/hacks-guide/Guide_3DS" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+<!--
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+    </ul>
+  -->
+</div>
+
+<!-- custom footer, guide specific -->
+
+
+
+<div class="page__footer-copyright">&copy; 2023 Nintendo Homebrew. - <a href="site-navigation">网站导航</a> - <a href="privacy-policy">隐私政策</a> <!-- Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.--></div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+<!-- for guide purposes all caching is removed and is separately built. -->
+
+
+
+
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,755 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<!-- for guide purposes all caching is removed and is separately built. -->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Mover EmuNAND - 3DS Hacks Guide</title>
+<meta name="description" content="A complete guide to 3DS custom firmware">
+
+
+  <meta name="author" content="Nintendo Homebrew">
+  
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="3DS Hacks Guide">
+<meta property="og:title" content="Mover EmuNAND">
+<meta property="og:url" content="https://3ds.hacks.guide/pt_BR/move-emunand.html">
+
+
+  <meta property="og:description" content="A complete guide to 3DS custom firmware">
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://3ds.hacks.guide/pt_BR/move-emunand.html">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Nintendo Homebrew",
+      "url": "https://3ds.hacks.guide/"
+    
+  }
+</script>
+
+
+  <meta name="google-site-verification" content="jVXoPK_-qzKJp4SScnZYpOIX3yDXfGnAoTBJYixUOwg" />
+
+
+  <meta name="msvalidate.01" content="F3532011519E308583A0A2CAF2DD69E8">
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="3DS Hacks Guide Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=PYEmwKvQAx">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png?v=PYEmwKvQAx" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-194x194.png?v=PYEmwKvQAx" sizes="194x194">
+<link rel="icon" type="image/png" href="/images/android-chrome-192x192.png?v=PYEmwKvQAx" sizes="192x192">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png?v=PYEmwKvQAx" sizes="16x16">
+<link rel="manifest" href="/images/manifest.json?v=PYEmwKvQAx">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg?v=PYEmwKvQAx" color="#2E3440">
+<link rel="shortcut icon" href="/images/favicon.ico?v=PYEmwKvQAx">
+<meta name="apple-mobile-web-app-title" content="Guide">
+<meta name="application-name" content="Guide">
+<meta name="msapplication-TileColor" content="#2E3440">
+<meta name="msapplication-TileImage" content="/images/mstile-144x144.png?v=PYEmwKvQAx">
+<meta name="msapplication-config" content="/images/browserconfig.xml?v=PYEmwKvQAx">
+<meta name="theme-color" content="#2E3440">
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.css" integrity="sha512-LQ97camar/lOliT/MqjcQs5kWgy6Qz/cCRzzRzUCfv0fotsCTC9ZHXaPQmJV8Xu/PVALfJZ7BDezl5lW3/qBxg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js" integrity="sha512-yXXqOFjdjHNH1GND+1EO0jbvvebABpzGKD66djnUfiKlYME5HGMUJHoCaeE4D5PTG2YsSJf6dwqyUUvQvS0vaA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#2e3440"
+    },
+    "button": {
+      "background": "#60818f"
+    }
+  },
+  "theme": "edgeless",
+  "position": "top",
+  "static": true,
+  "content": {
+    "message": "Esta página usa cookies para mostrar o atual progresso da guia na barra lateral e, desta forma melhorar o site."
+  }
+})});
+</script>
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <!-- <a class="site-title" href="/">
+          3DS Hacks Guide
+          
+        </a>
+      -->
+        <ul class="visible-links">
+          <!-- modified to use multilang, guide-specific -->
+          
+          
+          
+          
+          
+          
+            
+              <li class="masthead__menu-item masthead__menu-item--lg"><a href="/pt_BR/">Página Inicial</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/pt_BR/faq">FAQ</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/pt_BR/troubleshooting">Troubleshooting</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/pt_BR/checking-for-cfw">Checando por CFW</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/pt_BR/godmode9-usage">Utilização do GodMode9</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/pt_BR/contribute">Contribuir</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/pt_BR/region-changing">Mudança de Região</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/pt_BR/uninstall-cfw">Desinstalar CFW</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/pt_BR/credits">Créditos</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/pt_BR/site-navigation">Navegação do Site</a></li>
+            
+          
+          <!-- end guide specific -->
+        </ul>
+        
+        <!-- completely redo hidden links for multilang, guide-specific -->
+        <ul class="hidden-links links-menu hidden"></ul>
+        <ul class="hidden-links lang-menu hidden">
+          
+          
+          
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/move-emunand.html">English</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/es_ES/move-emunand.html">Español</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/de_DE/move-emunand.html">Deutsch</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/fr_FR/move-emunand.html">Français</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/it_IT/move-emunand.html">Italiano</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/nl_NL/move-emunand.html">Nederlands</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/pt_BR/move-emunand.html">Português do Brasil</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/pt_PT/move-emunand.html">Português (Portugal)</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ru_RU/move-emunand.html">Русский</a></li> -->
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/zh_CN/move-emunand.html">简体中文</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/zh_TW/move-emunand.html">繁體中文</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/pl_PL/move-emunand.html">Polski</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/tr_TR/move-emunand.html">Türkçe</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/vi_VN/move-emunand.html">Tiếng Việt</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ca_ES/move-emunand.html">Català</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/el_GR/move-emunand.html">Ελληνικά</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/he_IL/move-emunand.html">עברית‎</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/sv_SE/move-emunand.html">Svenska</a></li> -->
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ko_KR/move-emunand.html">한국어</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/no_NO/move-emunand.html">Norsk</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ja_JP/move-emunand.html">日本語</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ar_SA/move-emunand.html">اللغة العربية</a></li> -->
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/hu_HU/move-emunand.html">Magyar</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ro_RO/move-emunand.html">Română</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/sr_SP/move-emunand.html">Српски</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/af_ZA/move-emunand.html">Afrikaans</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ms_MY/move-emunand.html">Bahasa Melayu</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/fi_FI/move-emunand.html">Suomi</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/da_DK/move-emunand.html">Dansk</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/uk_UA/move-emunand.html">Українська</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/cs_CZ/move-emunand.html">Čeština</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/en_PT/move-emunand.html">Pirate English</a></li> -->
+        </ul>
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <button class="greedy-nav__toggle_lang"><div class="langicon"><i class="fa fa-language fa-lg" aria-hidden="true"></i></div></button>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  <!-- 
+  <div class="sidebar sticky">
+  
+  
+    
+    
+  
+  </div>
+
+-->
+
+
+
+<div class="sidebar sticky" style="display: none;">
+  
+
+
+
+
+
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    <li>
+      <span class="nav__sub-title">Progresso Geral</span>
+      <ol>
+        
+          
+            <li style="display: none;" data-name="home"><a href='/pt_BR/'>Página Inicial</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="key-information"><a href='/pt_BR/key-information'>Informação Importante</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="get-started"><a href='/pt_BR/get-started'>Começando</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="ntrboot"><a href='/pt_BR/ntrboot'>ntrboot</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer"><a href='/pt_BR/seedminer'>Seedminer</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(twn)"><a href='/pt_BR/seedminer-(twn)'>Seedminer (TWN)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="bannerbomb3"><a href='/pt_BR/bannerbomb3'>BannerBomb3</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="multiple-options"><i>(Múltiplas Opções)</i></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(3ds-single-system)"><a href='/pt_BR/flashing-ntrboot-(3ds-single-system)'>Injetando ntrboot (Único 3DS)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(3ds-multi-system)"><a href='/pt_BR/flashing-ntrboot-(3ds-multi-system)'>Injetando ntrboot (Múltiplos 3DS)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(dsi)"><a href='/pt_BR/flashing-ntrboot-(dsi)'>Injetando ntrboot (DSi)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(nds)"><a href='/pt_BR/flashing-ntrboot-(nds)'>Injetando ntrboot (NDS)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(pichaxx)"><a href='/pt_BR/homebrew-launcher-(pichaxx)'>Homebrew Launcher (PicHaxx)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="bannerbomb3-fredtool-(twn)"><a href='/pt_BR/bannerbomb3-fredtool-(twn)'>BannerBomb3 + Fredtool (TWN)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(hardmod)"><a href='/pt_BR/installing-boot9strap-(hardmod)'>Instalando boot9strap (Hardmod)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(hbl-usm)"><a href='/pt_BR/instalando-boot9strap-(hbl-usm)'>Instalando boot9strap (HBL-USM)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(ntrboot)"><a href='/pt_BR/instalando-boot9strap-(ntrboot)'>Instalando boot9strap (ntrboot)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(soundhax)"><a href='/pt_BR/instalando-boot9strap-(soundhax)'>Instalando boot9strap (Soundhax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(ssloth-browser)"><a href='/pt_BR/instalando-boot9strap-(ssloth-browser)'>Instalando boot9strap (SSLoth-Browser)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(fredtool)"><a href='/pt_BR/instalando-boot9strap-(fredtool)'>Instalando boot9strap (Fredtool)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(usm)"><a href='/pt_BR/instalando-boot9strap-(usm)'>Instalando boot9strap (USM)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(kartdlphax)"><a href='/pt_BR/instalando-boot9strap-(kartdlphax)'>Instalando boot9strap (kartdlphax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(hbl-usm)"><a href='/pt_BR/instalando-boot9strap-(hbl-usm)'>Instalando boot9strap (HBL-USM)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="finalizing-setup"><a href='/pt_BR/finalizando-a-instalação'>Finalizando a Instalação</a></li>
+          
+        
+      </ol>
+    </li>
+  </ul>
+</nav>
+</div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Mover EmuNAND">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Mover EmuNAND
+</h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+
+        <hr>
+
+        
+        
+
+        
+          
+          <div class ="notice"><b>Para suporte em Inglês, peça ajuda no <a href="https://discord.gg/MWxPgEp">Discord do Nintendo Homebrew</a>.</b></div>
+        
+          
+          <div class ="notice"><b>Se você gostou deste guia, nós aceitamos <a href="contribute#donations">Doações</a>.</b></div>
+        
+
+        <hr>
+
+        <aside class="sidebar__right">
+<nav class="toc">
+    <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Tabela de Conteúdo</h4></header>
+<ul class="toc__menu" id="markdown-toc">
+  <li><a href="#leitura-obrigatória" id="markdown-toc-leitura-obrigatória">Leitura Obrigatória</a></li>
+  <li><a href="#o-que-você-precisa" id="markdown-toc-o-que-você-precisa">O que você precisa</a></li>
+  <li><a href="#instruções" id="markdown-toc-instruções">Instruções</a>    <ul>
+      <li><a href="#seção-i---preparação" id="markdown-toc-seção-i---preparação">Seção I - Preparação</a></li>
+      <li><a href="#seção-ii---backup-da-sysnand-e-saves-dsiware" id="markdown-toc-seção-ii---backup-da-sysnand-e-saves-dsiware">Seção II - Backup da SysNAND e Saves DSiWare</a></li>
+      <li><a href="#seção-iii---backup-de-saves-do-vc-de-gba" id="markdown-toc-seção-iii---backup-de-saves-do-vc-de-gba">Seção III - Backup de Saves do VC de GBA</a></li>
+      <li><a href="#seção-iv---copiar-a-emunand-para-a-sysnand" id="markdown-toc-seção-iv---copiar-a-emunand-para-a-sysnand">Seção IV - Copiar a EmuNAND para a SysNAND</a></li>
+      <li><a href="#seção-v---restaurando-os-saves-de-dsiware" id="markdown-toc-seção-v---restaurando-os-saves-de-dsiware">Seção V - Restaurando os saves de DSiWare</a></li>
+      <li><a href="#seção-vi---restaurando-saves-de-vc-de-gba" id="markdown-toc-seção-vi---restaurando-saves-de-vc-de-gba">Seção VI - Restaurando Saves de VC de GBA</a></li>
+      <li><a href="#seção-vii---backup-da-sysnand" id="markdown-toc-seção-vii---backup-da-sysnand">Seção VII - Backup da SysNAND</a></li>
+      <li><a href="#seção-viii---formatar-o-cartão-sd" id="markdown-toc-seção-viii---formatar-o-cartão-sd">Seção VIII - Formatar o cartão SD</a></li>
+    </ul>
+  </li>
+  <li><a href="#retorne-para-finalizando-a-instalação" id="markdown-toc-retorne-para-finalizando-a-instalação">Retorne para Finalizando a instalação.</a></li>
+</ul>
+
+  </nav>
+</aside>
+
+<h3 id="leitura-obrigatória">Leitura Obrigatória</h3>
+
+<p>Esta é uma seção adicional, na qual moveremos o conteúdo de uma EmuNAND anterior para o seu novo CFW na SysNAND. Depois, removeremos a antiga partição da EmuNAND. Note que os termos EmuNAND e RedNAND se referem a implementações ligeiramente diferentes do <a href="http://3dbrew.org/wiki/NAND_Redirection">mesmo conceito</a>.</p>
+
+<p>Note que se você tem outros arquivos de payload diferentes do <code class="language-plaintext highlighter-rouge">GodMode9.firm</code> na pasta <code class="language-plaintext highlighter-rouge">/luma/payloads/</code> do seu cartão SD, segure (Start) durante a inicialização para exibir um “menu de chainloader” onde você terá que utilizar os botões direcionais e o botão (A) para selecionar “GodMode9” para estas instruções.</p>
+
+<p class="notice--danger">Você já DEVE ter instalado Luma3DS e boot9strap para usar isto.</p>
+
+<h3 id="o-que-você-precisa">O que você precisa</h3>
+
+<ul>
+  <li>Uma EmuNAND já existente</li>
+  <li>A versão mais recente do <a href="https://github.com/d0k3/GodMode9/releases/latest">GodMode9</a></li>
+  <li>A versão mais recente do <a href="https://github.com/Steveice10/FBI/releases/latest">FBI</a></li>
+</ul>
+
+<h3 id="instruções">Instruções</h3>
+
+<h4 id="seção-i---preparação">Seção I - Preparação</h4>
+
+<ol>
+  <li>Desligue seu dispositivo</li>
+  <li>Insira o cartão SD no seu computador</li>
+  <li>Copie <code class="language-plaintext highlighter-rouge">GodMode9.firm</code> do <code class="language-plaintext highlighter-rouge">.zip</code> do GodMode9 para a pasta <code class="language-plaintext highlighter-rouge">/luma/payloads/</code> no seu cartão SD</li>
+  <li>Copie a pasta <code class="language-plaintext highlighter-rouge">gm9</code> do <code class="language-plaintext highlighter-rouge">.zip</code> do GodMode9 para a raiz do seu cartão SD</li>
+  <li>Reinsira seu cartão SD no seu dispositivo</li>
+</ol>
+
+<h4 id="seção-ii---backup-da-sysnand-e-saves-dsiware">Seção II - Backup da SysNAND e Saves DSiWare</h4>
+
+<p class="notice--info">Se você não tem nenhum jogo ou save de DSiWare que você se importa, pule esta seção.</p>
+
+<ol>
+  <li>Pressione e segure (Start), e enquanto segura (Start), ligue seu dispositivo. Isso vai inicializar o GodMode9</li>
+  <li>Se você for solicitado para criar backups de arquivos essenciais, aperte (A) para fazê-lo, então aperte (A) novamente para continuar quando o backup for concluído</li>
+  <li>Se você for solicitado para consertar o RTC date&amp;time, pressione (A) para consertar, então insira a data e a hora, depois pressione (A) para continuar
+    <ul>
+      <li>Note que, se você teve que consertar o RTC date&amp;time, você precisará consertar a hora na Configuração do Console também depois que acabar o guia</li>
+    </ul>
+  </li>
+  <li>Navegue para <code class="language-plaintext highlighter-rouge">[2:] SYSNAND TWLN</code> -&gt; <code class="language-plaintext highlighter-rouge">title</code></li>
+  <li>Segure (R) e aperte (A) ao mesmo tempo em <code class="language-plaintext highlighter-rouge">00030004</code> para selecionar a pasta, depois selecione “Copy to 0:/gm9/out”
+    <ul>
+      <li>Este processo pode tomar algum tempo caso você tenha muitos jogos DSiWare</li>
+    </ul>
+  </li>
+  <li>Aperte (B) duas vezes para retornar para o menu principal</li>
+</ol>
+
+<h4 id="seção-iii---backup-de-saves-do-vc-de-gba">Seção III - Backup de Saves do VC de GBA</h4>
+
+<p class="notice--info">Se você não tem nenhum jogo ou save de VC de GBA que você se importa, pule esta seção.</p>
+
+<p class="notice--info">Note que isto não é necessário para nenhum outro tipo de jogo de Virtual Console (GBC, NES, etc)</p>
+
+<p class="notice--info">O jogo vai ser criado na pasta ‘/gm9/out/’ do cartão SD com o nome ‘<TitleID>.gbavc.sav'.</TitleID></p>
+
+<p class="notice--info">Para identificar o TitleID de um arquivo ‘<TitleID>. gbavc.sav', você pode obter uma listagem de todos os jogos no sistema e suas IDs correspondentes navegando em ['R:] SYSNAND SD', segurando (Gatilho Direito) e apertando (A) ao mesmo tempo, em seguida, selecionando "Search for titles".</TitleID></p>
+
+<ol>
+  <li>Faça o seguinte processo para cada jogo de VC de GBA que você quer fazer um backup do save:
+    <ul>
+      <li>Inicie o jogo de VC de GBA</li>
+      <li>Saia do jogo de VC de GBA</li>
+      <li>Inicie seu dispositivo enquanto segura (Start) para iniciar o menu do chainloader do Luma3DS</li>
+      <li>Inicie o GodMode9 apertando (A)</li>
+      <li>Navegue para <code class="language-plaintext highlighter-rouge">[S:] SYSNAND VIRTUAL</code></li>
+      <li>Aperte (A) no <code class="language-plaintext highlighter-rouge">agbsave.bin</code> para selecioná-lo</li>
+      <li>Selecione “AGBSAVE options…”</li>
+      <li>Selecione “Dump GBA VC save”</li>
+      <li>Aperte (A) para continuar</li>
+      <li>Aperte (Start) para reiniciar seu dispositivo</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="seção-iv---copiar-a-emunand-para-a-sysnand">Seção IV - Copiar a EmuNAND para a SysNAND</h4>
+
+<ol>
+  <li>Pressione e segure (Start), e enquanto segura (Start), ligue seu dispositivo. Isso vai inicializar o GodMode9</li>
+  <li>Navegue para <code class="language-plaintext highlighter-rouge">[E:] EMUNAND VIRTUAL</code></li>
+  <li>Aperte (A) em <code class="language-plaintext highlighter-rouge">nand.bin</code> para selecioná-lo, depois selecione “NAND image options…”, depois selecione “Restore SysNAND (safe)”</li>
+  <li>Aperte (A) para destravar as modificações na SysNAND, então aperte a sequência de botões solicitada
+    <ul>
+      <li>Isso não irá substituir sua instalação do boot9strap</li>
+    </ul>
+  </li>
+  <li>Aperte a sequência de botões solicitada para desbloquear “SysNAND (lvl1) writing”
+    <ul>
+      <li>Este processo levará algum tempo</li>
+    </ul>
+  </li>
+  <li>Quando concluído, aperte (A) para continuar</li>
+  <li>Se solicitado, aperte (B) para recusar o bloqueio da permissão de escrita</li>
+  <li>Aperte (B) para retornar para o menu principal</li>
+</ol>
+
+<h4 id="seção-v---restaurando-os-saves-de-dsiware">Seção V - Restaurando os saves de DSiWare</h4>
+
+<p class="notice--info">Se você não fez o backup de Saves de DSiWare anteriormente, pule esta seção.</p>
+
+<ol>
+  <li>Navegue para <code class="language-plaintext highlighter-rouge">[0:] SDCARD</code> -&gt; <code class="language-plaintext highlighter-rouge">gm9</code> -&gt; <code class="language-plaintext highlighter-rouge">out</code></li>
+  <li>Aperte (Y) na pasta <code class="language-plaintext highlighter-rouge">00030004</code> para copiá-la</li>
+  <li>Aperte (B) duas vezes para retornar para o menu principal</li>
+  <li>Navegue para <code class="language-plaintext highlighter-rouge">[2:] SYSNAND TWLN</code> -&gt; <code class="language-plaintext highlighter-rouge">title</code></li>
+  <li>Aperte (Y) para colar a pasta <code class="language-plaintext highlighter-rouge">00030004</code></li>
+  <li>Selecione “Copy path(s)”</li>
+  <li>Aperte (A) para destravar “SysNAND (lvl1) writing”, então aperte a sequência de botões solicitada</li>
+  <li>Selecione “Overwrite file(s)”
+    <ul>
+      <li>Este processo pode tomar algum tempo caso você tenha muitos jogos DSiWare</li>
+    </ul>
+  </li>
+  <li>Se solicitado, aperte (B) para recusar o bloqueio da permissão de escrita</li>
+  <li>Aperte (B) duas vezes para retornar para o menu principal</li>
+</ol>
+
+<h4 id="seção-vi---restaurando-saves-de-vc-de-gba">Seção VI - Restaurando Saves de VC de GBA</h4>
+
+<p class="notice--info">Se você não fez o backup de Saves do VC de GBA anteriormente, pule esta seção.</p>
+
+<p class="notice--info">Para identificar o TitleID de um arquivo ‘<TitleID>. gbavc.sav', você pode obter uma listagem de todos os jogos no sistema e suas IDs correspondentes segurando (Gatilho Direito) e apertando (A) no menu principal do GodeMode9, em seguida, selecionando "Search for titles".</TitleID></p>
+
+<ol>
+  <li>Segure (R) e aperte (Start) ao mesmo tempo para desligar o seu dispositivo</li>
+  <li>Ligue o seu dispositivo na SysNAND</li>
+  <li>Faça o seguinte processo para cada jogo de VC de GBA que você deseja restaurar o save:
+    <ul>
+      <li>Inicie o jogo de VC de GBA</li>
+      <li>Saia do jogo de VC de GBA</li>
+      <li>Inicie seu dispositivo enquanto segura (Start) para iniciar o menu do chainloader do Luma3DS</li>
+      <li>Inicie o GodMode9 apertando (A)</li>
+      <li>Navegue para <code class="language-plaintext highlighter-rouge">[0:] SDCARD</code> -&gt; <code class="language-plaintext highlighter-rouge">gm9</code></li>
+      <li>Aperte (Y) sobre o arquivo ‘<TitleID>. gbavc.sav' que você deseja restaurar para copiá-lo</TitleID></li>
+      <li>Aperte (B) para retornar para o menu principal</li>
+      <li>Navegue para <code class="language-plaintext highlighter-rouge">[S:] SYSNAND VIRTUAL</code></li>
+      <li>Aperte (A) no <code class="language-plaintext highlighter-rouge">agbsave.bin</code> para selecioná-lo</li>
+      <li>Selecione “AGBSAVE options…”</li>
+      <li>Selecione “Inject GBA VC save”</li>
+      <li>Aperte (A) para continuar</li>
+      <li>Aperte (Start) para reiniciar seu dispositivo</li>
+      <li>Inicie o jogo de VC de GBA</li>
+      <li>Saia do jogo de VC de GBA</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="seção-vii---backup-da-sysnand">Seção VII - Backup da SysNAND</h4>
+
+<ol>
+  <li>Pressione e segure (Start), e enquanto segura (Start), ligue seu dispositivo. Isso vai inicializar o GodMode9</li>
+  <li>Aperte (Home) para abrir o menu de ações</li>
+  <li>Selecione “Scripts…”</li>
+  <li>Selecione “GM9Megascript”</li>
+  <li>Selecione “Backup Options”</li>
+  <li>Selecione “SysNAND Backup”</li>
+  <li>Aperte (A) para confirmar
+    <ul>
+      <li>Este processo levará algum tempo</li>
+      <li>Se você receber um erro, procure por seu problema no <a href="troubleshooting#finalizing-setup">guia de troubleshooting</a></li>
+    </ul>
+  </li>
+  <li>Aperte (A) para continuar</li>
+  <li>Aperte (B) para retornar para o menu principal</li>
+  <li>Selecione “Exit”</li>
+  <li>Se solicitado, aperte (A) para bloquear as permissões de escrita</li>
+  <li>Segure (R) e aperte (Start) ao mesmo tempo para desligar o seu dispositivo</li>
+  <li>Insira o cartão SD no seu computador</li>
+  <li>Copie <code class="language-plaintext highlighter-rouge">&lt;date&gt;_&lt;serialnumber&gt;_sysnand_##.bin</code> e <code class="language-plaintext highlighter-rouge">essential.exefs</code> da pasta <code class="language-plaintext highlighter-rouge">/gm9/out/</code> em seu cartão SD para um local seguro em seu computador
+    <ul>
+      <li>Faça backups em diversos lugares (tais como armazenamento de arquivos online)</li>
+      <li>Esses backups irão te salvar de um brick e/ou te ajudarão a recuperar os arquivos da memória NAND caso algo dê errado</li>
+    </ul>
+  </li>
+  <li>Delete <code class="language-plaintext highlighter-rouge">&lt;date&gt;_&lt;serialnumber&gt;_sysnand_##.bin</code> e <code class="language-plaintext highlighter-rouge">&lt;date&gt;_&lt;serialnumber&gt;_sysnand_##.bin.sha</code> da pasta <code class="language-plaintext highlighter-rouge">/gm9/out/</code> no seu cartão SD após copiá-lo</li>
+  <li>Reinsira seu cartão SD no seu dispositivo</li>
+  <li><strong>Faça backup de todos os arquivos no seu cartão SD para uma pasta no seu computador; todos os arquivos serão apagados na próxima etapa</strong></li>
+</ol>
+
+<h4 id="seção-viii---formatar-o-cartão-sd">Seção VIII - Formatar o cartão SD</h4>
+
+<ol>
+  <li>Pressione e segure (Start), e enquanto segura (Start), ligue seu dispositivo. Isso vai inicializar o GodMode9</li>
+  <li>Aperte (Home) para abrir o menu de ações</li>
+  <li>Selecione “More…”</li>
+  <li>Selecione “SD format menu”</li>
+  <li>Selecione “No EmuNAND”</li>
+  <li>Selecione “Auto”</li>
+  <li>Aperte (A) para aceitar o nome <code class="language-plaintext highlighter-rouge">GM9SD</code>
+    <ul>
+      <li>Opcionalmente, você pode inserir um nome personalizado para o cartão SD</li>
+    </ul>
+  </li>
+  <li>Quando solicitado, aperte a sequência de botões solicitada para confirmar</li>
+  <li>Segure (R) e aperte (B) ao mesmo tempo para ejetar o cartão SD</li>
+  <li>Insira o cartão SD no seu computador</li>
+  <li>Copie todos os seus arquivos de volta para o seu cartão SD
+    <ul>
+      <li>Certifique-se de substituir o arquivo <code class="language-plaintext highlighter-rouge">boot.firm</code> no seu cartão SD com o do seu backup</li>
+    </ul>
+  </li>
+  <li>Reinsira seu cartão SD no seu dispositivo</li>
+  <li>Aperte (A) para remontar seu cartão SD</li>
+  <li>Aperte (Start) para reiniciar</li>
+</ol>
+
+<hr />
+
+<h3 class="notice--primary" id="retorne-para-finalizando-a-instalação">Retorne para <a href="finalizing-setup">Finalizando a instalação</a>.</h3>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://github.com/hacks-guide/Guide_3DS" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+<!--
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+    </ul>
+  -->
+</div>
+
+<!-- custom footer, guide specific -->
+
+
+
+<div class="page__footer-copyright">&copy; 2023 Nintendo Homebrew. - <a href="site-navigation">Navegação do Site</a> - <a href="privacy-policy">Política de Privacidade</a> <!-- Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.--></div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+<!-- for guide purposes all caching is removed and is separately built. -->
+
+
+
+
+
+
+
+
+  </body>
+</html>

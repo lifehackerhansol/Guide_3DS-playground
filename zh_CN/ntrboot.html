@@ -1,0 +1,749 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<!-- for guide purposes all caching is removed and is separately built. -->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>ntrboot - 3DS Hacks Guide</title>
+<meta name="description" content="A complete guide to 3DS custom firmware">
+
+
+  <meta name="author" content="Nintendo Homebrew">
+  
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="3DS Hacks Guide">
+<meta property="og:title" content="ntrboot">
+<meta property="og:url" content="https://3ds.hacks.guide/zh_CN/ntrboot.html">
+
+
+  <meta property="og:description" content="A complete guide to 3DS custom firmware">
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://3ds.hacks.guide/zh_CN/ntrboot.html">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Nintendo Homebrew",
+      "url": "https://3ds.hacks.guide/"
+    
+  }
+</script>
+
+
+  <meta name="google-site-verification" content="jVXoPK_-qzKJp4SScnZYpOIX3yDXfGnAoTBJYixUOwg" />
+
+
+  <meta name="msvalidate.01" content="F3532011519E308583A0A2CAF2DD69E8">
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="3DS Hacks Guide Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=PYEmwKvQAx">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png?v=PYEmwKvQAx" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-194x194.png?v=PYEmwKvQAx" sizes="194x194">
+<link rel="icon" type="image/png" href="/images/android-chrome-192x192.png?v=PYEmwKvQAx" sizes="192x192">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png?v=PYEmwKvQAx" sizes="16x16">
+<link rel="manifest" href="/images/manifest.json?v=PYEmwKvQAx">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg?v=PYEmwKvQAx" color="#2E3440">
+<link rel="shortcut icon" href="/images/favicon.ico?v=PYEmwKvQAx">
+<meta name="apple-mobile-web-app-title" content="Guide">
+<meta name="application-name" content="Guide">
+<meta name="msapplication-TileColor" content="#2E3440">
+<meta name="msapplication-TileImage" content="/images/mstile-144x144.png?v=PYEmwKvQAx">
+<meta name="msapplication-config" content="/images/browserconfig.xml?v=PYEmwKvQAx">
+<meta name="theme-color" content="#2E3440">
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.css" integrity="sha512-LQ97camar/lOliT/MqjcQs5kWgy6Qz/cCRzzRzUCfv0fotsCTC9ZHXaPQmJV8Xu/PVALfJZ7BDezl5lW3/qBxg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js" integrity="sha512-yXXqOFjdjHNH1GND+1EO0jbvvebABpzGKD66djnUfiKlYME5HGMUJHoCaeE4D5PTG2YsSJf6dwqyUUvQvS0vaA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#2e3440"
+    },
+    "button": {
+      "background": "#60818f"
+    }
+  },
+  "theme": "edgeless",
+  "position": "top",
+  "static": true,
+  "content": {
+    "message": "本网站利用cookies在侧边栏上显示当前的操作进度并改善此站点的使用体验。"
+  }
+})});
+</script>
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <!-- <a class="site-title" href="/">
+          3DS Hacks Guide
+          
+        </a>
+      -->
+        <ul class="visible-links">
+          <!-- modified to use multilang, guide-specific -->
+          
+          
+          
+          
+          
+          
+            
+              <li class="masthead__menu-item masthead__menu-item--lg"><a href="/zh_CN/">主页</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/zh_CN/faq">常见问题</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/zh_CN/troubleshooting">问题排查</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/zh_CN/checking-for-cfw">检查自制固件</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/zh_CN/godmode9-usage">GodMode9 使用教程</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/zh_CN/contribute">捐助</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/zh_CN/region-changing">区域变更</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/zh_CN/uninstall-cfw">卸载自制固件</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/zh_CN/credits">致谢</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/zh_CN/site-navigation">网站导航</a></li>
+            
+          
+          <!-- end guide specific -->
+        </ul>
+        
+        <!-- completely redo hidden links for multilang, guide-specific -->
+        <ul class="hidden-links links-menu hidden"></ul>
+        <ul class="hidden-links lang-menu hidden">
+          
+          
+          
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ntrboot.html">English</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/es_ES/ntrboot.html">Español</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/de_DE/ntrboot.html">Deutsch</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/fr_FR/ntrboot.html">Français</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/it_IT/ntrboot.html">Italiano</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/nl_NL/ntrboot.html">Nederlands</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/pt_BR/ntrboot.html">Português do Brasil</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/pt_PT/ntrboot.html">Português (Portugal)</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ru_RU/ntrboot.html">Русский</a></li> -->
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/zh_CN/ntrboot.html">简体中文</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/zh_TW/ntrboot.html">繁體中文</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/pl_PL/ntrboot.html">Polski</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/tr_TR/ntrboot.html">Türkçe</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/vi_VN/ntrboot.html">Tiếng Việt</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ca_ES/ntrboot.html">Català</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/el_GR/ntrboot.html">Ελληνικά</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/he_IL/ntrboot.html">עברית‎</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/sv_SE/ntrboot.html">Svenska</a></li> -->
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ko_KR/ntrboot.html">한국어</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/no_NO/ntrboot.html">Norsk</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ja_JP/ntrboot.html">日本語</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ar_SA/ntrboot.html">اللغة العربية</a></li> -->
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/hu_HU/ntrboot.html">Magyar</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ro_RO/ntrboot.html">Română</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/sr_SP/ntrboot.html">Српски</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/af_ZA/ntrboot.html">Afrikaans</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ms_MY/ntrboot.html">Bahasa Melayu</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/fi_FI/ntrboot.html">Suomi</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/da_DK/ntrboot.html">Dansk</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/uk_UA/ntrboot.html">Українська</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/cs_CZ/ntrboot.html">Čeština</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/en_PT/ntrboot.html">Pirate English</a></li> -->
+        </ul>
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <button class="greedy-nav__toggle_lang"><div class="langicon"><i class="fa fa-language fa-lg" aria-hidden="true"></i></div></button>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  <!-- 
+  <div class="sidebar sticky">
+  
+  
+    
+    
+  
+  </div>
+
+-->
+
+
+
+<div class="sidebar sticky" style="display: none;">
+  
+
+
+
+
+
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    <li>
+      <span class="nav__sub-title">总进度</span>
+      <ol>
+        
+          
+            <li style="display: none;" data-name="home"><a href='/zh_CN/'>主页</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="key-information"><a href='/zh_CN/key-information'>Key Information</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="get-started"><a href='/zh_CN/get-started'>Get Started</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="ntrboot"><a href='/zh_CN/ntrboot'>ntrboot</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer"><a href='/zh_CN/seedminer'>Seedminer</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(twn)"><a href='/zh_CN/seedminer-(twn)'>Seedminer (TWN)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="bannerbomb3"><a href='/zh_CN/bannerbomb3'>BannerBomb3</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="multiple-options"><i>(Multiple Options)</i></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(3ds-single-system)"><a href='/zh_CN/flashing-ntrboot-(3ds-single-system)'>Flashing ntrboot (3DS Single System)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(3ds-multi-system)"><a href='/zh_CN/flashing-ntrboot-(3ds-multi-system)'>Flashing ntrboot (3DS Multi System)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(dsi)"><a href='/zh_CN/flashing-ntrboot-(dsi)'>Flashing ntrboot (DSi)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(nds)"><a href='/zh_CN/flashing-ntrboot-(nds)'>Flashing ntrboot (NDS)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(pichaxx)"><a href='/zh_CN/homebrew-launcher-(pichaxx)'>Homebrew Launcher (PicHaxx)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="bannerbomb3-fredtool-(twn)"><a href='/zh_CN/bannerbomb3-fredtool-(twn)'>BannerBomb3 + Fredtool (TWN)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(hardmod)"><a href='/zh_CN/installing-boot9strap-(hardmod)'>Installing boot9strap (Hardmod)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(hbl-usm)"><a href='/zh_CN/installing-boot9strap-(hbl-usm)'>Installing boot9strap (HBL-USM)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(ntrboot)"><a href='/zh_CN/installing-boot9strap-(ntrboot)'>Installing boot9strap (ntrboot)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(soundhax)"><a href='/zh_CN/installing-boot9strap-(soundhax)'>Installing boot9strap (Soundhax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(ssloth-browser)"><a href='/zh_CN/installing-boot9strap-(ssloth-browser)'>Installing boot9strap (SSLoth-Browser)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(fredtool)"><a href='/zh_CN/installing-boot9strap-(fredtool)'>Installing boot9strap (Fredtool)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(usm)"><a href='/zh_CN/installing-boot9strap-(usm)'>Installing boot9strap (USM)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(kartdlphax)"><a href='/zh_CN/installing-boot9strap-(kartdlphax)'>Installing boot9strap (kartdlphax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(hbl-usm)"><a href='/zh_CN/installing-boot9strap-(hbl-usm)'>Installing boot9strap (HBL-USM)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="finalizing-setup"><a href='/zh_CN/finalizing-setup'>Finalizing Setup</a></li>
+          
+        
+      </ol>
+    </li>
+  </ul>
+</nav>
+</div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="ntrboot">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">ntrboot
+</h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+
+        <hr>
+
+        
+        
+
+        
+          
+          <div class ="notice"><b>如果有疑问并且懂英语的话，可以到 <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew Discord 服务器</a>上使用英文寻求帮助。（请注意，如果你身处中国大陆，你可能需要通过科学上网来访问 Discord）
+你也可以到译者的 <a href="https://stray-soul.site/index.php/qqgroup">QQ 群</a>寻求帮助，群号为 942052497。</b></div>
+        
+          
+          <div class ="notice"><b>如果你喜欢我们的教程，可以通过<a href="contribute#donations">捐赠</a>支持我们。</b></div>
+        
+
+        <hr>
+
+        <aside class="sidebar__right">
+<nav class="toc">
+    <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> 内容目录</h4></header>
+<ul class="toc__menu" id="markdown-toc">
+  <li><a href="#重要事项" id="markdown-toc-重要事项">重要事项</a></li>
+  <li><a href="#方法" id="markdown-toc-方法">方法</a>    <ul>
+      <li><a href="#使用单台-3ds-写入-ntrboot-到烧录卡" id="markdown-toc-使用单台-3ds-写入-ntrboot-到烧录卡">使用单台 3DS 写入 ntrboot 到烧录卡</a></li>
+      <li><a href="#通过多台-3ds-写入-ntrboot-至烧录卡" id="markdown-toc-通过多台-3ds-写入-ntrboot-至烧录卡">通过多台 3DS 写入 ntrboot 至烧录卡</a></li>
+      <li><a href="#利用-nds-写入-ntrboot-到-3ds" id="markdown-toc-利用-nds-写入-ntrboot-到-3ds">利用 NDS 写入 ntrboot 到 3DS</a></li>
+      <li><a href="#使用-dsi-写入-ntrboot-到烧录卡" id="markdown-toc-使用-dsi-写入-ntrboot-到烧录卡">使用 DSi 写入 ntrboot 到烧录卡</a></li>
+    </ul>
+  </li>
+</ul>
+
+  </nav>
+</aside>
+
+<p class="notice--success">如果你的烧录卡里预先已经安装了 ntrboot（或者你已经将 ntrboot 漏洞写入了烧录卡），那么你可以直接转至<a href="installing-boot9strap-(ntrboot)">安装 boot9strap（通过 ntrboot）</a>来进行破解。</p>
+
+<h3 id="重要事项">重要事项</h3>
+
+<p>若想使用 ntrboot 漏洞来安装 boot9strap，那么你需要一张兼容的 NDS / DSi 烧录卡来将 ntrboot 写入烧录卡。 请注意，有一些烧录卡已经预先写入了 ntrboot。</p>
+
+<p>3DS 在任何的系统版本下都可以使用 ntrboot 漏洞，不过在将 ntrboot 写入烧录卡之前不一定可以正常使用烧录卡。 因此，你需要根据你的烧录卡支持的版本和主机选择相应的方法。</p>
+
+<p>请注意带有 “Time Bomb” 的烧录卡在检测到主机的系统时间超过了烧录卡固件中设置的某一日期后，将无法正常运行并启动 <code class="language-plaintext highlighter-rouge">.nds</code> 文件。 绕过这一限制的方法之一是把系统时间调到较早日期。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>烧录卡名</th>
+      <th style="text-align: right">目前价格</th>
+      <th style="text-align: center">有无 “Time Bomb”？</th>
+      <th style="text-align: center">3DS版本？</th>
+      <th style="text-align: center">DSi版本？</th>
+      <th>备注</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="http://www.nds-card.com/ProShow.asp?ProID=574"><strong>R4i-SDHC B9S</strong></a></td>
+      <td style="text-align: right">15.99 美元</td>
+      <td style="text-align: center">2024 年 9 月 3 日</td>
+      <td style="text-align: center">所有</td>
+      <td style="text-align: center">所有</td>
+      <td><strong>自带 ntrboot</strong>，可刷回 NDS 烧录卡。</td>
+    </tr>
+    <tr>
+      <td><a href="http://www.nds-card.com/ProShow.asp?ProID=575"><strong>R4i Gold 3DS Plus</strong></a></td>
+      <td style="text-align: right">19.99 美元</td>
+      <td style="text-align: center">否</td>
+      <td style="text-align: center">所有</td>
+      <td style="text-align: center">所有</td>
+      <td><strong>自带 ntrboot</strong>（<a href="https://3ds.hacks.guide/images/screenshots/r4i-gold-3ds-plus.png">支持切换 ntrboot 和 NDS 模式</a>），请勿手动刷入 ntrboot。</td>
+    </tr>
+    <tr>
+      <td><a href="http://www.nds-card.com/ProShow.asp?ProID=160"><strong>Acekard 2i</strong></a></td>
+      <td style="text-align: right">20.99美元</td>
+      <td style="text-align: center">无</td>
+      <td style="text-align: center">&lt;= 4.3.0</td>
+      <td style="text-align: center">&lt;= 1.4.4</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><a href="http://www.nds-card.com/ProShow.asp?ProID=157"><strong>DSTT</strong></a></td>
+      <td style="text-align: right">9.99 美元</td>
+      <td style="text-align: center">否</td>
+      <td style="text-align: center">无</td>
+      <td style="text-align: center">无</td>
+      <td>只有一些带有<a href="https://gist.github.com/aspargas2/fa2a70aed3a7fe33f1f10bc264d9fab6">特定 flash 芯片型号</a>的烧录卡兼容 ntrboot。</td>
+    </tr>
+    <tr>
+      <td><a href="http://www.nds-card.com/ProShow.asp?ProID=149"><strong>R4i Gold 3DS</strong></a></td>
+      <td style="text-align: right">19.99 美元</td>
+      <td style="text-align: center">否</td>
+      <td style="text-align: center">所有</td>
+      <td style="text-align: center">所有</td>
+      <td>支持所有 RTS 修订版本。</td>
+    </tr>
+    <tr>
+      <td><a href="http://www.nds-card.com/ProShow.asp?ProID=146"><strong>R4i-SDHC 3DS RTS</strong></a></td>
+      <td style="text-align: right">13.99 美元</td>
+      <td style="text-align: center">1.85b：2024 年 9 月 3 日</td>
+      <td style="text-align: center">所有</td>
+      <td style="text-align: center">所有</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><a href="http://www.nds-card.com/ProShow.asp?ProID=490"><strong>R4iSDHC GOLD Pro 20XX</strong></a></td>
+      <td style="text-align: right">9.99 美元</td>
+      <td style="text-align: center">4.0b：2024 年 9 月 3 日</td>
+      <td style="text-align: center">所有</td>
+      <td style="text-align: center">所有</td>
+      <td>只有卡上标记了 2014 至 2020 版的 r4isdhc <strong>.com</strong> 卡兼容。</td>
+    </tr>
+    <tr>
+      <td><a href="http://www.nds-card.com/ProShow.asp?ProID=450"><strong>R4iSDHC RTS LITE 20XX</strong></a></td>
+      <td style="text-align: right">13.99 美元</td>
+      <td style="text-align: center">4.0b：2024 年 9 月 3 日</td>
+      <td style="text-align: center">所有</td>
+      <td style="text-align: center">所有</td>
+      <td>只有卡上标记了 2014 至 2020 版的 r4isdhc <strong>.com</strong> 卡兼容。</td>
+    </tr>
+    <tr>
+      <td><strong>Ace3DS X</strong></td>
+      <td style="text-align: right"> </td>
+      <td style="text-align: center">否</td>
+      <td style="text-align: center">所有</td>
+      <td style="text-align: center">所有</td>
+      <td><strong>自带ntrboot</strong>（使用外部开关可在 ntrboot（“3DS”）和 NDS 模式间切换，请勿手动刷入 ntrboot。</td>
+    </tr>
+    <tr>
+      <td><strong>Ace3DS Plus</strong></td>
+      <td style="text-align: right"> </td>
+      <td style="text-align: center">否</td>
+      <td style="text-align: center">所有</td>
+      <td style="text-align: center">所有</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><strong>Gateway Blue</strong></td>
+      <td style="text-align: right"> </td>
+      <td style="text-align: center">否</td>
+      <td style="text-align: center">4.1.0 - 4.5.0</td>
+      <td style="text-align: center">所有</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><strong>Infinity 3 R4i</strong></td>
+      <td style="text-align: right"> </td>
+      <td style="text-align: center">否</td>
+      <td style="text-align: center">所有</td>
+      <td style="text-align: center">所有</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><strong>R4 3D Revolution</strong></td>
+      <td style="text-align: right"> </td>
+      <td style="text-align: center">无</td>
+      <td style="text-align: center">无</td>
+      <td style="text-align: center">无</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><strong>R4i Gold 3DS Deluxe “Starter”</strong></td>
+      <td style="text-align: right"> </td>
+      <td style="text-align: center">否</td>
+      <td style="text-align: center">4.1.0 至 4.5.0</td>
+      <td style="text-align: center">所有</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><strong>R4i Ultra</strong></td>
+      <td style="text-align: right"> </td>
+      <td style="text-align: center">否</td>
+      <td style="text-align: center">4.3.0 或更低</td>
+      <td style="text-align: center">所有</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><strong>R4i-SDHC 3DS RTS Deluxe Edition</strong></td>
+      <td style="text-align: right"> </td>
+      <td style="text-align: center">未知</td>
+      <td style="text-align: center">所有</td>
+      <td style="text-align: center">所有</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><strong>R4iSDHC Dual-Core 20XX</strong></td>
+      <td style="text-align: right"> </td>
+      <td style="text-align: center">4.0b：2024 年 9 月 3 日</td>
+      <td style="text-align: center">所有</td>
+      <td style="text-align: center">所有</td>
+      <td>只有卡上标记了 2014 至 2020 版的 r4isdhc <strong>.com</strong> 卡兼容。</td>
+    </tr>
+  </tbody>
+</table>
+
+<p class="notice--info"><img src="https://3ds.hacks.guide/images/screenshots/ntrboot-flashcarts.png" alt="" /></p>
+
+<p>在开始前，请确认你的烧录卡可以在你的主机上使用并运行 <code class="language-plaintext highlighter-rouge">.nds</code> 文件。 某些烧录卡可能需要其 SD 卡内含有固件或“内核”文件。 请阅读你的烧录卡的说明书来了解更多细节。</p>
+
+<p>请注意，某些方法可能有额外的兼容步骤供参阅。</p>
+
+<p>如果你的主机是折叠式（除了带有睡眠开关的老型号的 2DS 外的所有 3DS 系列机型），且你要通过此方法破解，则你必须准备一小块磁铁。 这是因为这个漏洞需要在主机进入休眠模式后再按下组合键。</p>
+
+<p class="notice--info">你可以在开机时将磁铁放在 A、B、X、Y 键上方或附近然后看看你的主机是否黑屏。 如果会的话，只要把磁铁在那个位置附近，主机的两个屏幕就应该都会变黑。</p>
+
+<p>请注意，在写入 ntrboot 漏洞后你将无法使用烧录卡的正常功能（除了Acekard 2i，其在 <strong>NDS 和已破解的 3DS 上</strong>仍能正常使用）。 也就是说大部分烧录卡在被写入 ntrboot 后在主菜单中都不会出现其图标。 在写入 ntrboot 后，你可以通过可选步骤将其从烧录卡中移除。</p>
+
+<p class="notice--danger">请注意，极少见的情況下某些伪劣烧录卡有可能会在破解过程中坏掉且无法恢复。 这不太可能， 但无论如何我们只支持写在兼容表格中的烧录卡。 为了防止买到伪劣烧录卡，建议你从一些知名度较高的网站上购买你需要的烧录卡（如 <a href="http://www.nds-card.com/">NDS Card</a>）。</p>
+
+<hr />
+<h3 id="方法">方法</h3>
+
+<hr />
+
+<h4 id="使用单台-3ds-写入-ntrboot-到烧录卡">使用单台 3DS 写入 ntrboot 到烧录卡</h4>
+
+<p>本方法只需一台未破解的 3DS 和一张兼容的烧录卡。 本教程烧录卡将用于在你的 3DS 上运行 ntrboot flasher <code class="language-plaintext highlighter-rouge">.nds</code> 文件。 这也就是说，若想要在 3DS 上使用你持有的烧录卡运行 <code class="language-plaintext highlighter-rouge">.nds</code> 文件，烧录卡必须支持在你的 3DS 系统版本上运行。 请参阅上方的烧录卡兼容列表了解更多。</p>
+
+<p class="notice--primary">继续至<a href="flashing-ntrboot-(3ds-single-system)">写入ntrboot（通过单台 3DS）</a></p>
+
+<hr />
+
+<h4 id="通过多台-3ds-写入-ntrboot-至烧录卡">通过多台 3DS 写入 ntrboot 至烧录卡</h4>
+
+<p>本方法会需要暂时用到一台已经破解了 boot9strap 的 3DS 主机， 你的烧录卡在本方法中不受 3DS 系统版本的限制。</p>
+
+<p class="notice--primary">继续至<a href="flashing-ntrboot-(3ds-multi-system)">写入 ntrboot（通过多台 3DS）</a></p>
+
+<hr />
+
+<h4 id="利用-nds-写入-ntrboot-到-3ds">利用 NDS 写入 ntrboot 到 3DS</h4>
+
+<p>此方法需要暂时用到支持你烧录卡的 NDS 或 NDS Lite。 烧录卡将用于在你的 NDS 上运行 ntrboot 写入程序的 <code class="language-plaintext highlighter-rouge">.nds</code> 文件。</p>
+
+<p class="notice--primary">继续至<a href="flashing-ntrboot-(nds)">写入 ntrboot（通过 NDS）</a></p>
+
+<hr />
+
+<h4 id="使用-dsi-写入-ntrboot-到烧录卡">使用 DSi 写入 ntrboot 到烧录卡</h4>
+
+<p>本方法需要暂时用到一台与你的烧录卡兼容的 Nintendo DSi 主机。 烧录卡将用于在你的 DSi 上运行 ntrboot 写入程序的 <code class="language-plaintext highlighter-rouge">.nds</code> 文件。 这也就是说，若想要在 DSi 上使用你持有的烧录卡运行 <code class="language-plaintext highlighter-rouge">.nds</code> 文件，烧录卡必须支持在你的 DSi 系统版本上运行。 请参阅上方的烧录卡兼容列表了解更多。</p>
+
+<p class="notice--primary">继续至<a href="flashing-ntrboot-(dsi)">写入 ntrboot（通过 DSi）</a></p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://github.com/hacks-guide/Guide_3DS" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+<!--
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+    </ul>
+  -->
+</div>
+
+<!-- custom footer, guide specific -->
+
+
+
+<div class="page__footer-copyright">&copy; 2023 Nintendo Homebrew. - <a href="site-navigation">网站导航</a> - <a href="privacy-policy">隐私政策</a> <!-- Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.--></div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+<!-- for guide purposes all caching is removed and is separately built. -->
+
+
+
+
+
+
+
+
+  </body>
+</html>

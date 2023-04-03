@@ -1,0 +1,623 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<!-- for guide purposes all caching is removed and is separately built. -->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>A9LH-ről B9S-re - 3DS Hacks Guide</title>
+<meta name="description" content="A complete guide to 3DS custom firmware">
+
+
+  <meta name="author" content="Nintendo Homebrew">
+  
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="3DS Hacks Guide">
+<meta property="og:title" content="A9LH-ről B9S-re">
+<meta property="og:url" content="https://3ds.hacks.guide/hu_HU/a9lh-to-b9s.html">
+
+
+  <meta property="og:description" content="A complete guide to 3DS custom firmware">
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://3ds.hacks.guide/hu_HU/a9lh-to-b9s.html">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Nintendo Homebrew",
+      "url": "https://3ds.hacks.guide/"
+    
+  }
+</script>
+
+
+  <meta name="google-site-verification" content="jVXoPK_-qzKJp4SScnZYpOIX3yDXfGnAoTBJYixUOwg" />
+
+
+  <meta name="msvalidate.01" content="F3532011519E308583A0A2CAF2DD69E8">
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="3DS Hacks Guide Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=PYEmwKvQAx">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png?v=PYEmwKvQAx" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-194x194.png?v=PYEmwKvQAx" sizes="194x194">
+<link rel="icon" type="image/png" href="/images/android-chrome-192x192.png?v=PYEmwKvQAx" sizes="192x192">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png?v=PYEmwKvQAx" sizes="16x16">
+<link rel="manifest" href="/images/manifest.json?v=PYEmwKvQAx">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg?v=PYEmwKvQAx" color="#2E3440">
+<link rel="shortcut icon" href="/images/favicon.ico?v=PYEmwKvQAx">
+<meta name="apple-mobile-web-app-title" content="Guide">
+<meta name="application-name" content="Guide">
+<meta name="msapplication-TileColor" content="#2E3440">
+<meta name="msapplication-TileImage" content="/images/mstile-144x144.png?v=PYEmwKvQAx">
+<meta name="msapplication-config" content="/images/browserconfig.xml?v=PYEmwKvQAx">
+<meta name="theme-color" content="#2E3440">
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.css" integrity="sha512-LQ97camar/lOliT/MqjcQs5kWgy6Qz/cCRzzRzUCfv0fotsCTC9ZHXaPQmJV8Xu/PVALfJZ7BDezl5lW3/qBxg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js" integrity="sha512-yXXqOFjdjHNH1GND+1EO0jbvvebABpzGKD66djnUfiKlYME5HGMUJHoCaeE4D5PTG2YsSJf6dwqyUUvQvS0vaA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#2e3440"
+    },
+    "button": {
+      "background": "#60818f"
+    }
+  },
+  "theme": "edgeless",
+  "position": "top",
+  "static": true,
+  "content": {
+    "message": "A weboldal "sütiket" használ, hogy nyomon tudd követni a haladásod az oldalsó menüben, és hogy jobbá tegye az oldalt."
+  }
+})});
+</script>
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <!-- <a class="site-title" href="/">
+          3DS Hacks Guide
+          
+        </a>
+      -->
+        <ul class="visible-links">
+          <!-- modified to use multilang, guide-specific -->
+          
+          
+          
+          
+          
+          
+            
+              <li class="masthead__menu-item masthead__menu-item--lg"><a href="/hu_HU/">Főoldal</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/hu_HU/faq">GYIK</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/hu_HU/troubleshooting">Hibaelhárítás</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/hu_HU/checking-for-cfw">CFW ellenőrzése</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/hu_HU/godmode9-usage">GodMode9 használata</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/hu_HU/contribute">Közreműködés</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/hu_HU/region-changing">Régió módosítás</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/hu_HU/uninstall-cfw">CFW eltávolítása</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/hu_HU/credits">Készítők</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/hu_HU/site-navigation">Oldaltérkép</a></li>
+            
+          
+          <!-- end guide specific -->
+        </ul>
+        
+        <!-- completely redo hidden links for multilang, guide-specific -->
+        <ul class="hidden-links links-menu hidden"></ul>
+        <ul class="hidden-links lang-menu hidden">
+          
+          
+          
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/a9lh-to-b9s.html">English</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/es_ES/a9lh-to-b9s.html">Español</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/de_DE/a9lh-to-b9s.html">Deutsch</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/fr_FR/a9lh-to-b9s.html">Français</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/it_IT/a9lh-to-b9s.html">Italiano</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/nl_NL/a9lh-to-b9s.html">Nederlands</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/pt_BR/a9lh-to-b9s.html">Português do Brasil</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/pt_PT/a9lh-to-b9s.html">Português (Portugal)</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ru_RU/a9lh-to-b9s.html">Русский</a></li> -->
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/zh_CN/a9lh-to-b9s.html">简体中文</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/zh_TW/a9lh-to-b9s.html">繁體中文</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/pl_PL/a9lh-to-b9s.html">Polski</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/tr_TR/a9lh-to-b9s.html">Türkçe</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/vi_VN/a9lh-to-b9s.html">Tiếng Việt</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ca_ES/a9lh-to-b9s.html">Català</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/el_GR/a9lh-to-b9s.html">Ελληνικά</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/he_IL/a9lh-to-b9s.html">עברית‎</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/sv_SE/a9lh-to-b9s.html">Svenska</a></li> -->
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ko_KR/a9lh-to-b9s.html">한국어</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/no_NO/a9lh-to-b9s.html">Norsk</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ja_JP/a9lh-to-b9s.html">日本語</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ar_SA/a9lh-to-b9s.html">اللغة العربية</a></li> -->
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/hu_HU/a9lh-to-b9s.html">Magyar</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ro_RO/a9lh-to-b9s.html">Română</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/sr_SP/a9lh-to-b9s.html">Српски</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/af_ZA/a9lh-to-b9s.html">Afrikaans</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ms_MY/a9lh-to-b9s.html">Bahasa Melayu</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/fi_FI/a9lh-to-b9s.html">Suomi</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/da_DK/a9lh-to-b9s.html">Dansk</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/uk_UA/a9lh-to-b9s.html">Українська</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/cs_CZ/a9lh-to-b9s.html">Čeština</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/en_PT/a9lh-to-b9s.html">Pirate English</a></li> -->
+        </ul>
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <button class="greedy-nav__toggle_lang"><div class="langicon"><i class="fa fa-language fa-lg" aria-hidden="true"></i></div></button>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  <!-- 
+  <div class="sidebar sticky">
+  
+  
+    
+    
+  
+  </div>
+
+-->
+
+
+
+<div class="sidebar sticky" style="display: none;">
+  
+
+
+
+
+
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    <li>
+      <span class="nav__sub-title">Előrehaladás</span>
+      <ol>
+        
+          
+            <li style="display: none;" data-name="home"><a href='/hu_HU/'>Főoldal</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="key-information"><a href='/hu_HU/key-information'>Alapvető információk</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="get-started"><a href='/hu_HU/get-started'>Kezdeti lépések</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="ntrboot"><a href='/hu_HU/ntrboot'>ntrboot</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer"><a href='/hu_HU/seedminer'>Seedminer</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(twn)"><a href='/hu_HU/seedminer-(twn)'>Seedminer (TWN)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="bannerbomb3"><a href='/hu_HU/bannerbomb3'>BannerBomb3</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="multiple-options"><i>(Több lehetőség)</i></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(3ds-single-system)"><a href='/hu_HU/flashing-ntrboot-(3ds-single-system)'>Ntrboot flashelése (egy 3DS rendszer)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(3ds-multi-system)"><a href='/hu_HU/flashing-ntrboot-(3ds-multi-system)'>Ntrboot flashelése (több 3DS rendszer)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(dsi)"><a href='/hu_HU/flashing-ntrboot-(dsi)'>Ntrboot flashelése (DSi)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(nds)"><a href='/hu_HU/flashing-ntrboot-(nds)'>Ntrboot flashelése (NDS)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(pichaxx)"><a href='/hu_HU/homebrew-launcher-(pichaxx)'>Homebrew Launcher (PicHaxx)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="bannerbomb3-fredtool-(twn)"><a href='/hu_HU/bannerbomb3-fredtool-(twn)'>BannerBomb3 + Fredtool (TWN)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(hardmod)"><a href='/hu_HU/installing-boot9strap-(hardmod)'>Boot9strap telepítése (Hardmod)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(hbl-usm)"><a href='/hu_HU/installing-boot9strap-(hbl-usm)'>Boot9strap telepítése (HBL-USM)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(ntrboot)"><a href='/hu_HU/installing-boot9strap-(ntrboot)'>Boot9strap telepítése (ntrboot)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(soundhax)"><a href='/hu_HU/installing-boot9strap-(soundhax)'>Boot9strap telepítése (Soundhax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(ssloth-browser)"><a href='/hu_HU/installing-boot9strap-(ssloth-browser)'>Boot9strap telepítése (SSLoth-Browser)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(fredtool)"><a href='/hu_HU/installing-boot9strap-(fredtool)'>Boot9strap telepítése (Fredtool)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(usm)"><a href='/hu_HU/installing-boot9strap-(usm)'>Boot9strap telepítése (USM)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(kartdlphax)"><a href='/hu_HU/installing-boot9strap-(kartdlphax)'>Boot9strap telepítése (kartdlphax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(hbl-usm)"><a href='/hu_HU/installing-boot9strap-(hbl-usm)'>Boot9strap telepítése (HBL-USM)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="finalizing-setup"><a href='/hu_HU/finalizing-setup'>Telepítés véglegesítése</a></li>
+          
+        
+      </ol>
+    </li>
+  </ul>
+</nav>
+</div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="A9LH-ről B9S-re">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">A9LH-ről B9S-re
+</h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+
+        <hr>
+
+        
+        
+
+        
+          
+          <div class ="notice"><b>Ha segítségre van szükséged (angol nyelven), keresd fel a <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew-t Discord-on</a>.</b></div>
+        
+          
+          <div class ="notice"><b>Amennyiben hasznosnak véled ezt az útmutatót, elfogadunk <a href="contribute#donations">adományokat</a>.</b></div>
+        
+
+        <hr>
+
+        <aside class="sidebar__right">
+<nav class="toc">
+    <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Tartalomjegyzék</h4></header>
+<ul class="toc__menu" id="markdown-toc">
+  <li><a href="#fontos-tudnivalók" id="markdown-toc-fontos-tudnivalók">Fontos tudnivalók</a></li>
+  <li><a href="#amire-szükséged-lesz" id="markdown-toc-amire-szükséged-lesz">Amire szükséged lesz</a></li>
+  <li><a href="#lépések" id="markdown-toc-lépések">Lépések</a>    <ul>
+      <li><a href="#i-rész---előkészületek" id="markdown-toc-i-rész---előkészületek">I. rész - Előkészületek</a></li>
+      <li><a href="#ii-rész---boot9strap-telepítése" id="markdown-toc-ii-rész---boot9strap-telepítése">II. rész - boot9strap telepítése</a></li>
+    </ul>
+  </li>
+  <li><a href="#tovább-a-telepítés-véglegesítésére" id="markdown-toc-tovább-a-telepítés-véglegesítésére">Tovább a telepítés véglegesítésére</a></li>
+</ul>
+
+  </nav>
+</aside>
+
+<h3 id="fontos-tudnivalók">Fontos tudnivalók</h3>
+
+<p>Ez az oldal az arm9loaderhax felhasználóknak készült, hogy frissíthessék az eszközüket boot9strap-re.</p>
+
+<p>A Luma3DS a jövőben csak <code class="language-plaintext highlighter-rouge">.firm</code> formátumban kerül kiadásra, amely csak a boot9strap-pel és a sighax-szel kompatibilis. Ez azt jelenti, hogy amennyiben továbbra is szeretnéd a Luma3DS frissítéseit megkapni, ezt az útmutatót kell követned, hogy eszközödet naprakésszé tedd.</p>
+
+<p>Ahhoz, hogy kicsomagold az oldalon található <code class="language-plaintext highlighter-rouge">.7z</code> fájlokat, egy fájl archiváló programra lesz szükséged, mint amilyen a <a href="http://www.7-zip.org/">7-Zip</a> vagy a <a href="https://theunarchiver.com/">The Unarchiver</a>.</p>
+
+<p class="notice--warning">Habár hiszünk abban, hogy az egyedi firmware online használata biztonságos, fordultak elő online hálózati bannolások a múltban, elsősorban csalásért, vagy gyanús eShop aktívitásért.</p>
+
+<h3 id="amire-szükséged-lesz">Amire szükséged lesz</h3>
+
+<p class="notice--warning">Ahhoz, hogy használhasd a <a href="https://wikipedia.org/wiki/Magnet_URI_scheme">magnet</a> linkeket ezen az oldalon, szükséged lesz egy torrent kliensre, mint például a <a href="https://www.qbittorrent.org/download.php">qBittorrent</a> vagy a <a href="http://dev.deluge-torrent.org/wiki/Download">Deluge</a>.</p>
+
+<p class="notice--info">Vedd figyelembe, hogy New 3DS esetében a <code class="language-plaintext highlighter-rouge">secret_sector.bin</code> fájlra az arm9loaderhax exploit eltávolításához van szükség. Ezért nem kell a gyári állapotú konzolokon a boot9strap telepítéséhez. Ha ezt nem egy New 3DS-en csinálod, akkor nem kell a <code class="language-plaintext highlighter-rouge">secret_sector.bin</code>.</p>
+
+<ul>
+  <li><i class="fa fa-magnet" aria-hidden="true" title="Ez egy mágneslink. Használj torrent klienst a fájl letölteséhez."></i> - <strong>Csak New 3DS-t használóknak:</strong> <a href="magnet:?xt=urn:btih:15a3c97acf17d67af98ae8657cc66820cc58f655&amp;dn=secret_sector.bin&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.lelux.fi%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.loadbt.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.monitorit4.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.ololosh.space%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.srv00.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.theoks.net%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.zerobytes.xyz%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker1.bt.moack.co.kr%3a80%2fannounce&amp;tr=udp%3a%2f%2fvibe.sleepyinternetfun.xyz%3a1738%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&amp;tr=http%3a%2f%2fopenbittorrent.com%3a80%2fannounce">secret_sector.bin</a> (magnet link)</li>
+  <li>A <a href="https://github.com/LumaTeam/Luma3DS/releases/latest">Luma3DS</a> legújabb kiadása (a Luma3DS <code class="language-plaintext highlighter-rouge">.zip</code> fájl)</li>
+  <li>A <a href="https://github.com/LumaTeam/Luma3DS/releases/download/v7.0.5/Luma3DSv7.0.5.7z">Luma3DS</a> v7.0.5 verziója (közvetlen letöltés)</li>
+  <li>A <a href="https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip">SafeB9SInstaller</a> legfrisseb verziója (közvetlen letöltés)</li>
+  <li>A <a href="https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip">boot9strap</a> legfrisseb verziója (közvetlen letöltés)
+    <h3 id="lépések">Lépések</h3>
+  </li>
+</ul>
+
+<h4 id="i-rész---előkészületek">I. rész - Előkészületek</h4>
+
+<p class="notice--info">A most következő lépésekben mindig írd felül az SD kártyán található fájlokat, ha már létezne bármelyik.</p>
+
+<ol>
+  <li>Kapcsold ki a készüléked</li>
+  <li>Helyezd az SD kártyád a számítógépbe</li>
+  <li>Másold át a <code class="language-plaintext highlighter-rouge">boot.firm</code> és <code class="language-plaintext highlighter-rouge">boot.3dsx</code> fájlt a legfrisebb verziószámú Luma3DS <code class="language-plaintext highlighter-rouge">.zip</code>-ből az SD kártya gyökerébe
+    <ul>
+      <li>Az SD kártya gyökere a kezdőkönyvtárt jelenti az SD kártyán, ahol látható a Nintendo 3DS könyvtár, de nem vagyunk benne</li>
+    </ul>
+  </li>
+  <li>Másold át az <code class="language-plaintext highlighter-rouge">arm9loaderhax.bin</code> fájlt a v7.0.5-ös Luma3DS <code class="language-plaintext highlighter-rouge">.7z</code>-ből az SD kártya gyökerébe</li>
+  <li>Másold át a <code class="language-plaintext highlighter-rouge">SafeB9SInstaller.bin</code> fájlt a SafeB9SInstaller <code class="language-plaintext highlighter-rouge">.zip</code>-ből az SD kártyád <code class="language-plaintext highlighter-rouge">/luma/payloads/</code> mappájába
+    <ul>
+      <li>Ha a <code class="language-plaintext highlighter-rouge">luma</code> vagy <code class="language-plaintext highlighter-rouge">payloads</code> mappa nem létezik, hozd létre őket</li>
+      <li>Törölj ki minden már létező <code class="language-plaintext highlighter-rouge">.bin</code> payloadot (<code class="language-plaintext highlighter-rouge">GodMode9.bin</code>, <code class="language-plaintext highlighter-rouge">Decrypt9WIP.bin</code>, <code class="language-plaintext highlighter-rouge">Hourglass9.bin</code>, stb.) a <code class="language-plaintext highlighter-rouge">/luma/payloads/</code> mappából az SD kártyán, mivel ezek nem lesznek kompatibilisek a boot9strap kompatibilis Luma3DS verziókkal</li>
+    </ul>
+  </li>
+  <li>Hozz létre egy mappát <code class="language-plaintext highlighter-rouge">boot9strap</code> néven az SD kártya gyökerében</li>
+  <li>Másold át a <code class="language-plaintext highlighter-rouge">boot9strap.firm</code> fájlt és a <code class="language-plaintext highlighter-rouge">boot9strap.firm.sha</code> fájlt a boot9strap <code class="language-plaintext highlighter-rouge">.zip</code> fájlból az SD kártyád <code class="language-plaintext highlighter-rouge">/boot9strap/</code> mappájába</li>
+  <li>
+    <p><strong>Csak New 3DS felhasználóknak:</strong> Másold át a <code class="language-plaintext highlighter-rouge">secret_sector.bin</code> fájlt az SD kártyádon található <code class="language-plaintext highlighter-rouge">/boot9strap/</code> mappába</p>
+
+    <p class="notice--info"><img src="https://3ds.hacks.guide/images/screenshots/a9lh-to-b9s-root-layout.png" alt="" /></p>
+  </li>
+  <li>Tedd vissza az SD kártyád a 3DS-be</li>
+</ol>
+
+<h4 id="ii-rész---boot9strap-telepítése">II. rész - boot9strap telepítése</h4>
+
+<ol>
+  <li>Indítsd el a készülékedet a (Start) lenyomva tartásával, hogy megjelenjen a SafeB9SInstaller
+    <ul>
+      <li>Ha a Luma konfigurációját látod a SafeB9SInstaller helyett, egyszerűen nyomd meg a (Start) gombot, majd állítsd le a 3DS-edet, és próbáld újra</li>
+      <li>Ha ez egy hibát ad, akkor vagy használj egy új SD kártyát vagy formázd a jelenlegit (mentsd el a már létező fájlokat először)</li>
+    </ul>
+  </li>
+  <li>Várj, amíg az összes biztonsági ellenőrzés be nem fejeződik
+    <ul>
+      <li>Ha egy “OTP Crypto Fail” hibaüzenetet kapsz, akkor töltsd le a következőt: <i class="fa fa-magnet" aria-hidden="true" title="Ez egy mágneslink. Használj torrent klienst a fájl letöltéséhez."></i> - <a href="magnet:?xt=urn:btih:d25dab06a7e127922d70ddaa4fe896709dc99a1e&amp;dn=aeskeydb.bin&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.lelux.fi%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.loadbt.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.monitorit4.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.ololosh.space%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.srv00.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.theoks.net%3a6969%2fannounce&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.zerobytes.xyz%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker1.bt.moack.co.kr%3a80%2fannounce&amp;tr=udp%3a%2f%2fvibe.sleepyinternetfun.xyz%3a1738%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=http%3a%2f%2fopenbittorrent.com%3a80%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce">aeskeydb.bin</a>, then put it in the <code class="language-plaintext highlighter-rouge">/boot9strap/</code> folder on your SD card and try again</li>
+    </ul>
+  </li>
+  <li>Ha kéri, akkor nyomd meg a gombokat egyszerre, amiket kijelez a felső képernyőn, hogy telepíthesd a boot9strap-et</li>
+  <li>Ha ez elkészült, nyomd meg az (A) gombot az eszközöd újraindításához</li>
+  <li>A készülékednek az előzőekben a Luma3DS-be kellett bootolnia
+    <ul>
+      <li>A Luma3DS konfigurációs menü a beállítások a Luma3DS egyedi firmverhez. Sok ezek közül a beállítások közül hasznos az egyedivé tételhez vagy a debuggoláshoz</li>
+      <li>Az útmutató céljának megfeleléshez ezen beállítások alapértelmezett állapoton lesznek hagyva</li>
+      <li>Ha fekete képernyőt kapsz, <a href="troubleshooting#boot-issues-on-devices-with-custom-firmware">nézd át ezt a hibaelhárítási útmutatót</a></li>
+    </ul>
+  </li>
+  <li>Mentéshez és újraindításhoz nyomd meg a (Start) gombot</li>
+</ol>
+
+<hr />
+
+<h3 class="notice--primary" id="tovább-a-telepítés-véglegesítésére">Tovább a <a href="finalizing-setup">telepítés véglegesítésére</a></h3>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://github.com/hacks-guide/Guide_3DS" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+<!--
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+    </ul>
+  -->
+</div>
+
+<!-- custom footer, guide specific -->
+
+
+
+<div class="page__footer-copyright">&copy; 2023 Nintendo Homebrew. - <a href="site-navigation">Oldaltérkép</a> - <a href="privacy-policy">Adatvédelmi Irányelv</a> <!-- Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.--></div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+<!-- for guide purposes all caching is removed and is separately built. -->
+
+
+
+
+
+
+
+
+  </body>
+</html>

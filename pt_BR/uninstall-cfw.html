@@ -1,0 +1,768 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<!-- for guide purposes all caching is removed and is separately built. -->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Desinstalar o CFW - 3DS Hacks Guide</title>
+<meta name="description" content="A complete guide to 3DS custom firmware">
+
+
+  <meta name="author" content="Nintendo Homebrew">
+  
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="3DS Hacks Guide">
+<meta property="og:title" content="Desinstalar o CFW">
+<meta property="og:url" content="https://3ds.hacks.guide/pt_BR/uninstall-cfw.html">
+
+
+  <meta property="og:description" content="A complete guide to 3DS custom firmware">
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://3ds.hacks.guide/pt_BR/uninstall-cfw.html">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Nintendo Homebrew",
+      "url": "https://3ds.hacks.guide/"
+    
+  }
+</script>
+
+
+  <meta name="google-site-verification" content="jVXoPK_-qzKJp4SScnZYpOIX3yDXfGnAoTBJYixUOwg" />
+
+
+  <meta name="msvalidate.01" content="F3532011519E308583A0A2CAF2DD69E8">
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="3DS Hacks Guide Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=PYEmwKvQAx">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png?v=PYEmwKvQAx" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-194x194.png?v=PYEmwKvQAx" sizes="194x194">
+<link rel="icon" type="image/png" href="/images/android-chrome-192x192.png?v=PYEmwKvQAx" sizes="192x192">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png?v=PYEmwKvQAx" sizes="16x16">
+<link rel="manifest" href="/images/manifest.json?v=PYEmwKvQAx">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg?v=PYEmwKvQAx" color="#2E3440">
+<link rel="shortcut icon" href="/images/favicon.ico?v=PYEmwKvQAx">
+<meta name="apple-mobile-web-app-title" content="Guide">
+<meta name="application-name" content="Guide">
+<meta name="msapplication-TileColor" content="#2E3440">
+<meta name="msapplication-TileImage" content="/images/mstile-144x144.png?v=PYEmwKvQAx">
+<meta name="msapplication-config" content="/images/browserconfig.xml?v=PYEmwKvQAx">
+<meta name="theme-color" content="#2E3440">
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.css" integrity="sha512-LQ97camar/lOliT/MqjcQs5kWgy6Qz/cCRzzRzUCfv0fotsCTC9ZHXaPQmJV8Xu/PVALfJZ7BDezl5lW3/qBxg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js" integrity="sha512-yXXqOFjdjHNH1GND+1EO0jbvvebABpzGKD66djnUfiKlYME5HGMUJHoCaeE4D5PTG2YsSJf6dwqyUUvQvS0vaA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#2e3440"
+    },
+    "button": {
+      "background": "#60818f"
+    }
+  },
+  "theme": "edgeless",
+  "position": "top",
+  "static": true,
+  "content": {
+    "message": "Esta página usa cookies para mostrar o atual progresso da guia na barra lateral e, desta forma melhorar o site."
+  }
+})});
+</script>
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <!-- <a class="site-title" href="/">
+          3DS Hacks Guide
+          
+        </a>
+      -->
+        <ul class="visible-links">
+          <!-- modified to use multilang, guide-specific -->
+          
+          
+          
+          
+          
+          
+            
+              <li class="masthead__menu-item masthead__menu-item--lg"><a href="/pt_BR/">Página Inicial</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/pt_BR/faq">FAQ</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/pt_BR/troubleshooting">Troubleshooting</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/pt_BR/checking-for-cfw">Checando por CFW</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/pt_BR/godmode9-usage">Utilização do GodMode9</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/pt_BR/contribute">Contribuir</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/pt_BR/region-changing">Mudança de Região</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/pt_BR/uninstall-cfw">Desinstalar CFW</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/pt_BR/credits">Créditos</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/pt_BR/site-navigation">Navegação do Site</a></li>
+            
+          
+          <!-- end guide specific -->
+        </ul>
+        
+        <!-- completely redo hidden links for multilang, guide-specific -->
+        <ul class="hidden-links links-menu hidden"></ul>
+        <ul class="hidden-links lang-menu hidden">
+          
+          
+          
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/uninstall-cfw.html">English</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/es_ES/uninstall-cfw.html">Español</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/de_DE/uninstall-cfw.html">Deutsch</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/fr_FR/uninstall-cfw.html">Français</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/it_IT/uninstall-cfw.html">Italiano</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/nl_NL/uninstall-cfw.html">Nederlands</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/pt_BR/uninstall-cfw.html">Português do Brasil</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/pt_PT/uninstall-cfw.html">Português (Portugal)</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ru_RU/uninstall-cfw.html">Русский</a></li> -->
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/zh_CN/uninstall-cfw.html">简体中文</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/zh_TW/uninstall-cfw.html">繁體中文</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/pl_PL/uninstall-cfw.html">Polski</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/tr_TR/uninstall-cfw.html">Türkçe</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/vi_VN/uninstall-cfw.html">Tiếng Việt</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ca_ES/uninstall-cfw.html">Català</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/el_GR/uninstall-cfw.html">Ελληνικά</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/he_IL/uninstall-cfw.html">עברית‎</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/sv_SE/uninstall-cfw.html">Svenska</a></li> -->
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ko_KR/uninstall-cfw.html">한국어</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/no_NO/uninstall-cfw.html">Norsk</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ja_JP/uninstall-cfw.html">日本語</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ar_SA/uninstall-cfw.html">اللغة العربية</a></li> -->
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/hu_HU/uninstall-cfw.html">Magyar</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ro_RO/uninstall-cfw.html">Română</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/sr_SP/uninstall-cfw.html">Српски</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/af_ZA/uninstall-cfw.html">Afrikaans</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ms_MY/uninstall-cfw.html">Bahasa Melayu</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/fi_FI/uninstall-cfw.html">Suomi</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/da_DK/uninstall-cfw.html">Dansk</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/uk_UA/uninstall-cfw.html">Українська</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/cs_CZ/uninstall-cfw.html">Čeština</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/en_PT/uninstall-cfw.html">Pirate English</a></li> -->
+        </ul>
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <button class="greedy-nav__toggle_lang"><div class="langicon"><i class="fa fa-language fa-lg" aria-hidden="true"></i></div></button>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  <!-- 
+  <div class="sidebar sticky">
+  
+  
+    
+    
+  
+  </div>
+
+-->
+
+
+
+<div class="sidebar sticky" style="display: none;">
+  
+
+
+
+
+
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    <li>
+      <span class="nav__sub-title">Progresso Geral</span>
+      <ol>
+        
+          
+            <li style="display: none;" data-name="home"><a href='/pt_BR/'>Página Inicial</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="key-information"><a href='/pt_BR/key-information'>Informação Importante</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="get-started"><a href='/pt_BR/get-started'>Começando</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="ntrboot"><a href='/pt_BR/ntrboot'>ntrboot</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer"><a href='/pt_BR/seedminer'>Seedminer</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(twn)"><a href='/pt_BR/seedminer-(twn)'>Seedminer (TWN)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="bannerbomb3"><a href='/pt_BR/bannerbomb3'>BannerBomb3</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="multiple-options"><i>(Múltiplas Opções)</i></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(3ds-single-system)"><a href='/pt_BR/flashing-ntrboot-(3ds-single-system)'>Injetando ntrboot (Único 3DS)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(3ds-multi-system)"><a href='/pt_BR/flashing-ntrboot-(3ds-multi-system)'>Injetando ntrboot (Múltiplos 3DS)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(dsi)"><a href='/pt_BR/flashing-ntrboot-(dsi)'>Injetando ntrboot (DSi)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(nds)"><a href='/pt_BR/flashing-ntrboot-(nds)'>Injetando ntrboot (NDS)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(pichaxx)"><a href='/pt_BR/homebrew-launcher-(pichaxx)'>Homebrew Launcher (PicHaxx)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="bannerbomb3-fredtool-(twn)"><a href='/pt_BR/bannerbomb3-fredtool-(twn)'>BannerBomb3 + Fredtool (TWN)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(hardmod)"><a href='/pt_BR/installing-boot9strap-(hardmod)'>Instalando boot9strap (Hardmod)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(hbl-usm)"><a href='/pt_BR/instalando-boot9strap-(hbl-usm)'>Instalando boot9strap (HBL-USM)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(ntrboot)"><a href='/pt_BR/instalando-boot9strap-(ntrboot)'>Instalando boot9strap (ntrboot)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(soundhax)"><a href='/pt_BR/instalando-boot9strap-(soundhax)'>Instalando boot9strap (Soundhax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(ssloth-browser)"><a href='/pt_BR/instalando-boot9strap-(ssloth-browser)'>Instalando boot9strap (SSLoth-Browser)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(fredtool)"><a href='/pt_BR/instalando-boot9strap-(fredtool)'>Instalando boot9strap (Fredtool)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(usm)"><a href='/pt_BR/instalando-boot9strap-(usm)'>Instalando boot9strap (USM)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(kartdlphax)"><a href='/pt_BR/instalando-boot9strap-(kartdlphax)'>Instalando boot9strap (kartdlphax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(hbl-usm)"><a href='/pt_BR/instalando-boot9strap-(hbl-usm)'>Instalando boot9strap (HBL-USM)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="finalizing-setup"><a href='/pt_BR/finalizando-a-instalação'>Finalizando a Instalação</a></li>
+          
+        
+      </ol>
+    </li>
+  </ul>
+</nav>
+</div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Desinstalar o CFW">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Desinstalar o CFW
+</h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+
+        <hr>
+
+        
+        
+
+        
+          
+          <div class ="notice"><b>Para suporte em Inglês, peça ajuda no <a href="https://discord.gg/MWxPgEp">Discord do Nintendo Homebrew</a>.</b></div>
+        
+          
+          <div class ="notice"><b>Se você gostou deste guia, nós aceitamos <a href="contribute#donations">Doações</a>.</b></div>
+        
+
+        <hr>
+
+        <aside class="sidebar__right">
+<nav class="toc">
+    <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Tabela de Conteúdo</h4></header>
+<ul class="toc__menu" id="markdown-toc">
+  <li><a href="#leitura-obrigatória" id="markdown-toc-leitura-obrigatória">Leitura Obrigatória</a></li>
+  <li><a href="#o-que-você-precisa" id="markdown-toc-o-que-você-precisa">O que você precisa</a></li>
+  <li><a href="#instruções" id="markdown-toc-instruções">Instruções</a>    <ul>
+      <li><a href="#seção-i---preparação" id="markdown-toc-seção-i---preparação">Seção I - Preparação</a></li>
+      <li><a href="#seção-ii---testes-do-modo-ds" id="markdown-toc-seção-ii---testes-do-modo-ds">Seção II - Testes do Modo DS</a>        <ul>
+          <li><a href="#teste-via-conexões-nintendo-ds" id="markdown-toc-teste-via-conexões-nintendo-ds">Teste via Conexões Nintendo DS</a></li>
+          <li><a href="#teste-via-ds-download-play" id="markdown-toc-teste-via-ds-download-play">Teste via DS Download Play</a></li>
+        </ul>
+      </li>
+      <li><a href="#seção-iii---teste-de-segurança" id="markdown-toc-seção-iii---teste-de-segurança">Seção III - Teste de Segurança</a></li>
+      <li><a href="#seção-iv---backup-da-nand" id="markdown-toc-seção-iv---backup-da-nand">Seção IV - Backup da NAND</a></li>
+      <li><a href="#seção-v---removendo-conteúdo-ilegítimo" id="markdown-toc-seção-v---removendo-conteúdo-ilegítimo">Seção V - Removendo conteúdo ilegítimo</a></li>
+      <li><a href="#seção-vi---formatando-o-sistema" id="markdown-toc-seção-vi---formatando-o-sistema">Seção VI - Formatando o sistema</a></li>
+      <li><a href="#seção-vii---executando-o-script-de-desinstalação" id="markdown-toc-seção-vii---executando-o-script-de-desinstalação">Seção VII - Executando o Script de Desinstalação</a></li>
+    </ul>
+  </li>
+</ul>
+
+  </nav>
+</aside>
+
+<h3 id="leitura-obrigatória">Leitura Obrigatória</h3>
+
+<p>Isso irá remover completamente o CFW do seu dispositivo, incluindo boot9strap e Luma3DS, com o propósito de restaurar o dispositivo ao estado de varejo.</p>
+
+<p>Quaisquer jogos não assinados (ilegítimos) serão dados como inutilizáveis e serão removidos durante este processo. Use um <a href="https://github.com/FlagBrew/Checkpoint/releases/latest">gerenciador de saves</a> para fazer backup de quaisquer saves com que você se importe.</p>
+
+<div class="notice--danger">
+<p>Se você está removendo o CFW porque:</p>
+
+<ul>
+  <li>Você deseja reinstalá-lo</li>
+  <li>Um dos seus jogos está quebrado</li>
+  <li>Um dos seus aplicativos do sistema está quebrado</li>
+  <li>Seu console não pode iniciar no Menu HOME</li>
+</ul>
+
+<p><u><strong>PARE!!!</strong></u> Desinstalar custom firmware é um risco desnecessário que, na melhor das hipóteses, perderá seu tempo e, no mínimo, o seu console poderá ter um <u><strong>BRICK</strong></u>. Uma ideia melhor seria pedir ajuda a <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew no Discord</a>.</p>
+</div>
+
+<div class="notice--danger">
+<p>Se você já fez QUALQUER das seguintes coisas:</p>
+<ul>
+  <li><a href="region-changing">Alterou a região</a> do console</li>
+  <li>Instalado um teclado personalizado</li>
+  <li>Instalado um Menu HOME personalizado (<em>não</em> um tema personalizado)</li>
+  <li>Manualmente mudou a chave de criptografia (<code class="language-plaintext highlighter-rouge">movable.sed</code>) do console</li>
+  <li>Desbaniu o console</li>
+</ul>
+
+<p>então desinstalar CFW <u><strong>IRÁ CAUSAR UM BRICK EM SEU CONSOLE</strong></u>. Se isso se aplicar a você, <a href="godmode9-usage#restoring-a-nand-backup">restaure um backup da NAND limpo</a> antes de continuar.</p>
+</div>
+
+<p class="notice--warning">Estas instruções só funcionarão em dispositivos com o Luma3DS versão 8.0 e adiante. Se você tem uma versão mais antiga do Luma, você deve atualizar sua configuração antes de seguir estas instruções. Siga <a href="checking-for-cfw">esta página</a> para encontrar suas instruções de atualização.</p>
+
+<h3 id="o-que-você-precisa">O que você precisa</h3>
+
+<ul>
+  <li>A versão mais recente do <a href="https://github.com/LumaTeam/Luma3DS/releases/latest">Luma3DS</a></li>
+  <li>A versão mais recente do <a href="https://github.com/d0k3/GodMode9/releases/latest">GodMode9</a></li>
+  <li>A versão mais recente do <a href="https://github.com/MechanicalDragon0687/DSiWare-Uninstaller/releases/latest">DSiWare Uninstaller</a></li>
+  <li><a href="/gm9_scripts/safety_test.gm9">safety_test.gm9</a></li>
+</ul>
+
+<h3 id="instruções">Instruções</h3>
+
+<h4 id="seção-i---preparação">Seção I - Preparação</h4>
+<ol>
+  <li>Desligue seu dispositivo</li>
+  <li>Insira o cartão SD no seu computador</li>
+  <li>Copie <code class="language-plaintext highlighter-rouge">boot.firm</code> e <code class="language-plaintext highlighter-rouge">boot.3dsx</code> do <code class="language-plaintext highlighter-rouge">.zip</code> do Luma3DS para a raiz do seu cartão SD</li>
+  <li>Copie <code class="language-plaintext highlighter-rouge">GodMode9.firm</code> do <code class="language-plaintext highlighter-rouge">.zip</code> do GodMode9 para a pasta <code class="language-plaintext highlighter-rouge">/luma/payloads/</code> no seu cartão SD</li>
+  <li>Copie a pasta <code class="language-plaintext highlighter-rouge">gm9</code> do <code class="language-plaintext highlighter-rouge">.zip</code> do GodMode9 para a raiz do seu cartão SD</li>
+  <li>Copie <code class="language-plaintext highlighter-rouge">DSiWareUninstaller.3dsx</code> para a pasta <code class="language-plaintext highlighter-rouge">/3ds/</code> no seu cartão SD</li>
+  <li>Copie <code class="language-plaintext highlighter-rouge">safety_test.gm9</code> para a pasta <code class="language-plaintext highlighter-rouge">/gm9/scripts/</code> no seu cartão SD</li>
+  <li>Reinsira seu cartão SD no seu dispositivo</li>
+</ol>
+
+<h4 id="seção-ii---testes-do-modo-ds">Seção II - Testes do Modo DS</h4>
+<p>O objetivo desta seção é verificar se os aplicativos do modo DS embutidos continuarão a funcionar assim que o CFW for desinstalado. Se você pular esta seção, o modo DS ou suas funções poderão ficar inacessíveis até que o CFW seja reinstalado.</p>
+
+<h5 id="teste-via-conexões-nintendo-ds">Teste via Conexões Nintendo DS</h5>
+<ol>
+  <li>Ligue o seu dispositivo</li>
+  <li>Abra o aplicativo Configuração do Console</li>
+  <li>Navegue para <code class="language-plaintext highlighter-rouge">Configuração de Internet</code> -&gt; <code class="language-plaintext highlighter-rouge">Conexões Nintendo DS</code>, depois clique em OK</li>
+  <li>Você deve iniciar no menu de Conexões Nintendo DS
+    <ul>
+      <li>Se o seu console exibe a versão japonesa do Flipnote Studio, uma tela preta ou uma mensagem de erro, o teste falhou</li>
+    </ul>
+  </li>
+  <li>Desligue seu dispositivo</li>
+</ol>
+
+<h5 id="teste-via-ds-download-play">Teste via DS Download Play</h5>
+<ol>
+  <li>Ligue o seu dispositivo</li>
+  <li>Abra o aplicativo Download Play (<img src="https://3ds.hacks.guide/images/download-play-icon.png" alt="" height="24px" width="24px" />)</li>
+  <li>Selecione “Nintendo DS”</li>
+  <li>Se seu dispositivo carregar em um menu “Download de software via DS Download Play”, o teste foi bem sucedido
+    <ul>
+      <li>Se o seu console exibe a versão japonesa do Flipnote Studio, uma tela preta ou uma mensagem de erro, o teste falhou</li>
+    </ul>
+  </li>
+  <li>Desligue seu dispositivo</li>
+</ol>
+
+<p class="notice--warning">Se qualquer um desses testes falhar, o Modo DS, DS Download Play, e/ou Conexões Nintendo DS podem estar inacessíveis quando o CFW for desinstalado! Você deve <a href="troubleshooting#software-issues-on-devices-with-custom-firmware">corrigir o modo DS</a> antes de continuar.</p>
+
+<h4 id="seção-iii---teste-de-segurança">Seção III - Teste de Segurança</h4>
+<p>O objetivo desta seção é verificar se o console irá ligar e que as funções críticas do sistema, como as configurações do sistema e o teclado, funcionarão quando o CFW for desinstalado. <strong>Se você pular esta seção, você pode CAUSAR UM BRICK em seu dispositivo!</strong></p>
+
+<ol>
+  <li>Pressione e segure (Start), e enquanto segura (Start), ligue seu dispositivo. Isso vai inicializar o GodMode9</li>
+  <li>Se você for solicitado para criar um backup de arquivos essenciais, aperte (A) para fazê-lo, e então aperte (A) para continuar assim que estiver concluído</li>
+  <li>Se você for solicitado para consertar o RTC date&amp;time, pressione (A) para consertar, então insira a data e a hora, depois pressione (A) para continuar
+    <ul>
+      <li>Note que, se você teve que consertar o RTC date&amp;time, você precisará consertar a hora na Configuração do Console também depois que acabar o guia</li>
+    </ul>
+  </li>
+  <li>Aperte (Home) para abrir o menu de ações</li>
+  <li>Selecione “Scripts…”</li>
+  <li>Selecione “safety_test”</li>
+  <li>Leia o texto na tela e aperte (A) para continuar</li>
+  <li>Você deve iniciar no Menu HOME padrão do 3DS (qualquer tema personalizado é irrelevante). Se sim, continue estas instruções
+    <ul>
+      <li>Se você não inicializar no Menu HOME padrão do 3DS (tela preta, tela de erro, etc.), desinstalar o CFW <strong>IRÁ CAUSAR UM BRICK EM SEU DISPOSITIVO!</strong></li>
+    </ul>
+  </li>
+  <li>Abra o aplicativo Configuração do Console
+    <ul>
+      <li>Se o console parar de funcionar neste momento, o teste falhou</li>
+    </ul>
+  </li>
+  <li>Selecione “Outras Configurações”</li>
+  <li>Selecione “Perfil”</li>
+  <li>Selecione “Nome de Usuário”</li>
+  <li>Se você puder digitar um novo nome de usuário, o teste foi bem sucedido
+    <ul>
+      <li>Se o teclado não aparecer, a tela congelar, ou o console crashar, o teste falhou</li>
+    </ul>
+  </li>
+  <li>Desligue seu dispositivo</li>
+</ol>
+
+<p class="notice--danger">Se você NÃO inicializar no Menu HOME padrão do 3DS, ou a configuração do sistema / seu teclado está inacessível, <strong>NÃO continue com estas instruções</strong>! Entre no <a href="https://discord.gg/MWxPgEp">Discord do Nintendo Homebrew</a> e pergunte (em Inglês) para alguém lá te ajudar.</p>
+
+<h4 id="seção-iv---backup-da-nand">Seção IV - Backup da NAND</h4>
+
+<ol>
+  <li>Pressione e segure (Start), e enquanto segura (Start), ligue seu dispositivo. Isso vai inicializar o GodMode9</li>
+  <li>Aperte (Home) para abrir o menu de ações</li>
+  <li>Selecione “Scripts…”</li>
+  <li>Selecione “GM9Megascript”</li>
+  <li>Selecione “Backup Options”</li>
+  <li>Selecione “SysNAND Backup”</li>
+  <li>Aperte (A) para confirmar
+    <ul>
+      <li>Este processo levará algum tempo</li>
+      <li>Caso você receba um erro, certifique-se de ter pelo menos 1.3GB de espaço livre no seu cartão SD</li>
+    </ul>
+  </li>
+  <li>Aperte (B) para retornar para o menu principal</li>
+  <li>Selecione “Exit”</li>
+  <li>Aperte (Home) para abrir o menu de ações</li>
+  <li>Selecione “Poweroff system” para desligar seu dispositivo</li>
+</ol>
+
+<h4 id="seção-v---removendo-conteúdo-ilegítimo">Seção V - Removendo conteúdo ilegítimo</h4>
+<p class="notice--warning">Esta seção removerá conteúdo ilegítimo, como homebrew e cartuchos dumped. Se você tem saves com que você se importa, faça backup com um gerenciador de saves antes de continuar!</p>
+
+<ol>
+  <li>Ligue o seu dispositivo</li>
+  <li>Abra o aplicativo Configuração do Console</li>
+  <li>Navegue até Gerenciador de Dados &gt; Nintendo 3DS &gt; Software</li>
+  <li>Nessa lista de software, delete qualquer conteúdo que não seja relativo a Nintendo instalado enquanto estiver usando o CFW
+    <ul>
+      <li>Isso inclui software de sistema comum como FBI, Anemone3DS, Luma Updater, Homebrew Launcher, Checkpoint e outros, juntamente com quaisquer jogos e títulos que você <em>não</em> instalou da eShop</li>
+    </ul>
+  </li>
+  <li>Navegue para Gerenciador de Dados -&gt; DSiWare</li>
+  <li>Nessa lista de software, delete qualquer conteúdo que não seja relativo a Nintendo instalado enquanto estiver usando o CFW
+    <ul>
+      <li>Isto inclui software como TWiLightMenu++, juntamente com quaisquer jogos e aplicativos que você <em>não</em> instalou da eShop</li>
+      <li>Falha ao remover todos os softwares CFW das seções de 3DS e DSiWare antes de desinstalar CFW pode impedir ou desabilitar o acesso ao menu de Gerenciamento de Dados após desinstalar o CFW, o que dificultará a reinstalação de CFW no futuro</li>
+    </ul>
+  </li>
+  <li>Saia do aplicativo Configuração do Console</li>
+  <li>Abra o aplicativo Download Play (<img src="https://3ds.hacks.guide/images/download-play-icon.png" alt="" height="24px" width="24px" />)</li>
+  <li>Aguarde até que você veja os dois botões</li>
+  <li>Aperte (Gatilho Esquerdo) + (D-pad pra baixo) + (Select) ao mesmo tempo para abrir o menu Rosalina</li>
+  <li>Selecione “Miscellaneous options”</li>
+  <li>Selecione “Switch the hb. title to the current app.”</li>
+  <li>Aperte (B) para continuar</li>
+  <li>Aperte (B) para retornar para o menu principal do Rosalina</li>
+  <li>Aperte (B) para sair do menu do Rosalina</li>
+  <li>Aperte (Home), depois feche o Download Play</li>
+  <li>Inicie o aplicativo Download Play</li>
+  <li>Seu dispositivo deve abrir o Homebrew Launcher</li>
+  <li>Inicie o DSiWare Uninstaller da lista de homebrew</li>
+  <li>Siga as instruções e permita que o programa desinstale</li>
+  <li>Assim que o processo tiver sido bem-sucedido, saia do Homebrew Launcher e desligue seu dispositivo</li>
+</ol>
+
+<h4 id="seção-vi---formatando-o-sistema">Seção VI - Formatando o sistema</h4>
+<p>Essa seção irá garantir que todos os tickets ilegítimos sejam removidos, permitindo que a eShop funcione normalmente. Isso removerá todo o conteúdo do 3DS e desconectará você do seu NNID. Tenha em mente que a chave de criptografia do seu console será embaralhada, o que significa que quaisquer dados antigos ficarão inacessíveis, mesmo que você tenha um backup do conteúdo do seu SD.</p>
+
+<ol>
+  <li>Ligue o seu dispositivo</li>
+  <li>Abra o aplicativo Configuração do Console</li>
+  <li>Navegue para Outras Configurações -&gt; Próxima Página (até a página final) -&gt; Formatar console</li>
+  <li>Siga as instruções para formatar seu 3DS</li>
+</ol>
+
+<h4 id="seção-vii---executando-o-script-de-desinstalação">Seção VII - Executando o Script de Desinstalação</h4>
+<p class="notice--warning">Esta é a sua oportunidade final de verificar se todas as etapas de segurança acima foram seguidas! Por favor, certifique-se de que você seguiu todas as seções desta página, <strong>especialmente</strong> <code class="language-plaintext highlighter-rouge">Seção III - Teste de segurança</code>, antes de continuar.</p>
+
+<ol>
+  <li>Pressione e segure (Start), e enquanto segura (Start), ligue seu dispositivo. Isso vai inicializar o GodMode9
+    <ul>
+      <li>Caso você veja o chainloader do Luma3DS, use o botão direcional e o botão (A) para selecionar o GodMode9</li>
+    </ul>
+  </li>
+  <li>Aperte (Home) para abrir o menu de ações</li>
+  <li>Selecione “Scripts…”</li>
+  <li>Selecione “GM9Megascript”</li>
+  <li>Selecione “Hax Options”</li>
+  <li>Selecione “Un-install Hax”</li>
+  <li>Quando solicitado, aperte (A) para prosseguir</li>
+  <li>Aperte (A) para destravar “SysNAND (lvl3) writing”, então aperte a sequência de botões solicitada</li>
+  <li>Aperte (A) para continuar</li>
+  <li>Aperte (B) para retornar para o menu principal</li>
+  <li>Selecione “Exit”</li>
+  <li>Se solicitado, aperte (A) para bloquear as permissões de escrita</li>
+  <li>Aperte (Start) para reiniciar seu dispositivo</li>
+</ol>
+
+<hr />
+
+<p class="notice--success">Todo o custom firmware foi removido do seu dispositivo.</p>
+
+<p class="notice--info">Agora você pode remover quaisquer arquivos e pastas extras da raiz do seu cartão SD que <em>não</em> são as pastas <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code>, <code class="language-plaintext highlighter-rouge">DCIM</code> ou <code class="language-plaintext highlighter-rouge">private</code>.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://github.com/hacks-guide/Guide_3DS" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+<!--
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+    </ul>
+  -->
+</div>
+
+<!-- custom footer, guide specific -->
+
+
+
+<div class="page__footer-copyright">&copy; 2023 Nintendo Homebrew. - <a href="site-navigation">Navegação do Site</a> - <a href="privacy-policy">Política de Privacidade</a> <!-- Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.--></div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+<!-- for guide purposes all caching is removed and is separately built. -->
+
+
+
+
+
+
+
+
+  </body>
+</html>

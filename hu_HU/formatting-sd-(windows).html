@@ -1,0 +1,613 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<!-- for guide purposes all caching is removed and is separately built. -->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>SD formázás (Windows) - 3DS Hacks Guide</title>
+<meta name="description" content="A complete guide to 3DS custom firmware">
+
+
+  <meta name="author" content="Nintendo Homebrew">
+  
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="3DS Hacks Guide">
+<meta property="og:title" content="SD formázás (Windows)">
+<meta property="og:url" content="https://3ds.hacks.guide/hu_HU/formatting-sd-(windows).html">
+
+
+  <meta property="og:description" content="A complete guide to 3DS custom firmware">
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://3ds.hacks.guide/hu_HU/formatting-sd-(windows).html">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Nintendo Homebrew",
+      "url": "https://3ds.hacks.guide/"
+    
+  }
+</script>
+
+
+  <meta name="google-site-verification" content="jVXoPK_-qzKJp4SScnZYpOIX3yDXfGnAoTBJYixUOwg" />
+
+
+  <meta name="msvalidate.01" content="F3532011519E308583A0A2CAF2DD69E8">
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="3DS Hacks Guide Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=PYEmwKvQAx">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png?v=PYEmwKvQAx" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-194x194.png?v=PYEmwKvQAx" sizes="194x194">
+<link rel="icon" type="image/png" href="/images/android-chrome-192x192.png?v=PYEmwKvQAx" sizes="192x192">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png?v=PYEmwKvQAx" sizes="16x16">
+<link rel="manifest" href="/images/manifest.json?v=PYEmwKvQAx">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg?v=PYEmwKvQAx" color="#2E3440">
+<link rel="shortcut icon" href="/images/favicon.ico?v=PYEmwKvQAx">
+<meta name="apple-mobile-web-app-title" content="Guide">
+<meta name="application-name" content="Guide">
+<meta name="msapplication-TileColor" content="#2E3440">
+<meta name="msapplication-TileImage" content="/images/mstile-144x144.png?v=PYEmwKvQAx">
+<meta name="msapplication-config" content="/images/browserconfig.xml?v=PYEmwKvQAx">
+<meta name="theme-color" content="#2E3440">
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.css" integrity="sha512-LQ97camar/lOliT/MqjcQs5kWgy6Qz/cCRzzRzUCfv0fotsCTC9ZHXaPQmJV8Xu/PVALfJZ7BDezl5lW3/qBxg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js" integrity="sha512-yXXqOFjdjHNH1GND+1EO0jbvvebABpzGKD66djnUfiKlYME5HGMUJHoCaeE4D5PTG2YsSJf6dwqyUUvQvS0vaA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#2e3440"
+    },
+    "button": {
+      "background": "#60818f"
+    }
+  },
+  "theme": "edgeless",
+  "position": "top",
+  "static": true,
+  "content": {
+    "message": "A weboldal "sütiket" használ, hogy nyomon tudd követni a haladásod az oldalsó menüben, és hogy jobbá tegye az oldalt."
+  }
+})});
+</script>
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <!-- <a class="site-title" href="/">
+          3DS Hacks Guide
+          
+        </a>
+      -->
+        <ul class="visible-links">
+          <!-- modified to use multilang, guide-specific -->
+          
+          
+          
+          
+          
+          
+            
+              <li class="masthead__menu-item masthead__menu-item--lg"><a href="/hu_HU/">Főoldal</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/hu_HU/faq">GYIK</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/hu_HU/troubleshooting">Hibaelhárítás</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/hu_HU/checking-for-cfw">CFW ellenőrzése</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/hu_HU/godmode9-usage">GodMode9 használata</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/hu_HU/contribute">Közreműködés</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/hu_HU/region-changing">Régió módosítás</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/hu_HU/uninstall-cfw">CFW eltávolítása</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/hu_HU/credits">Készítők</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/hu_HU/site-navigation">Oldaltérkép</a></li>
+            
+          
+          <!-- end guide specific -->
+        </ul>
+        
+        <!-- completely redo hidden links for multilang, guide-specific -->
+        <ul class="hidden-links links-menu hidden"></ul>
+        <ul class="hidden-links lang-menu hidden">
+          
+          
+          
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/formatting-sd-(windows).html">English</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/es_ES/formatting-sd-(windows).html">Español</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/de_DE/formatting-sd-(windows).html">Deutsch</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/fr_FR/formatting-sd-(windows).html">Français</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/it_IT/formatting-sd-(windows).html">Italiano</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/nl_NL/formatting-sd-(windows).html">Nederlands</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/pt_BR/formatting-sd-(windows).html">Português do Brasil</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/pt_PT/formatting-sd-(windows).html">Português (Portugal)</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ru_RU/formatting-sd-(windows).html">Русский</a></li> -->
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/zh_CN/formatting-sd-(windows).html">简体中文</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/zh_TW/formatting-sd-(windows).html">繁體中文</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/pl_PL/formatting-sd-(windows).html">Polski</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/tr_TR/formatting-sd-(windows).html">Türkçe</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/vi_VN/formatting-sd-(windows).html">Tiếng Việt</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ca_ES/formatting-sd-(windows).html">Català</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/el_GR/formatting-sd-(windows).html">Ελληνικά</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/he_IL/formatting-sd-(windows).html">עברית‎</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/sv_SE/formatting-sd-(windows).html">Svenska</a></li> -->
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ko_KR/formatting-sd-(windows).html">한국어</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/no_NO/formatting-sd-(windows).html">Norsk</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ja_JP/formatting-sd-(windows).html">日本語</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ar_SA/formatting-sd-(windows).html">اللغة العربية</a></li> -->
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/hu_HU/formatting-sd-(windows).html">Magyar</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ro_RO/formatting-sd-(windows).html">Română</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/sr_SP/formatting-sd-(windows).html">Српски</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/af_ZA/formatting-sd-(windows).html">Afrikaans</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ms_MY/formatting-sd-(windows).html">Bahasa Melayu</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/fi_FI/formatting-sd-(windows).html">Suomi</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/da_DK/formatting-sd-(windows).html">Dansk</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/uk_UA/formatting-sd-(windows).html">Українська</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/cs_CZ/formatting-sd-(windows).html">Čeština</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/en_PT/formatting-sd-(windows).html">Pirate English</a></li> -->
+        </ul>
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <button class="greedy-nav__toggle_lang"><div class="langicon"><i class="fa fa-language fa-lg" aria-hidden="true"></i></div></button>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  <!-- 
+  <div class="sidebar sticky">
+  
+  
+    
+    
+  
+  </div>
+
+-->
+
+
+
+<div class="sidebar sticky" style="display: none;">
+  
+
+
+
+
+
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    <li>
+      <span class="nav__sub-title">Előrehaladás</span>
+      <ol>
+        
+          
+            <li style="display: none;" data-name="home"><a href='/hu_HU/'>Főoldal</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="key-information"><a href='/hu_HU/key-information'>Alapvető információk</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="get-started"><a href='/hu_HU/get-started'>Kezdeti lépések</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="ntrboot"><a href='/hu_HU/ntrboot'>ntrboot</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer"><a href='/hu_HU/seedminer'>Seedminer</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(twn)"><a href='/hu_HU/seedminer-(twn)'>Seedminer (TWN)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="bannerbomb3"><a href='/hu_HU/bannerbomb3'>BannerBomb3</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="multiple-options"><i>(Több lehetőség)</i></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(3ds-single-system)"><a href='/hu_HU/flashing-ntrboot-(3ds-single-system)'>Ntrboot flashelése (egy 3DS rendszer)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(3ds-multi-system)"><a href='/hu_HU/flashing-ntrboot-(3ds-multi-system)'>Ntrboot flashelése (több 3DS rendszer)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(dsi)"><a href='/hu_HU/flashing-ntrboot-(dsi)'>Ntrboot flashelése (DSi)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(nds)"><a href='/hu_HU/flashing-ntrboot-(nds)'>Ntrboot flashelése (NDS)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(pichaxx)"><a href='/hu_HU/homebrew-launcher-(pichaxx)'>Homebrew Launcher (PicHaxx)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="bannerbomb3-fredtool-(twn)"><a href='/hu_HU/bannerbomb3-fredtool-(twn)'>BannerBomb3 + Fredtool (TWN)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(hardmod)"><a href='/hu_HU/installing-boot9strap-(hardmod)'>Boot9strap telepítése (Hardmod)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(hbl-usm)"><a href='/hu_HU/installing-boot9strap-(hbl-usm)'>Boot9strap telepítése (HBL-USM)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(ntrboot)"><a href='/hu_HU/installing-boot9strap-(ntrboot)'>Boot9strap telepítése (ntrboot)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(soundhax)"><a href='/hu_HU/installing-boot9strap-(soundhax)'>Boot9strap telepítése (Soundhax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(ssloth-browser)"><a href='/hu_HU/installing-boot9strap-(ssloth-browser)'>Boot9strap telepítése (SSLoth-Browser)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(fredtool)"><a href='/hu_HU/installing-boot9strap-(fredtool)'>Boot9strap telepítése (Fredtool)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(usm)"><a href='/hu_HU/installing-boot9strap-(usm)'>Boot9strap telepítése (USM)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(kartdlphax)"><a href='/hu_HU/installing-boot9strap-(kartdlphax)'>Boot9strap telepítése (kartdlphax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(hbl-usm)"><a href='/hu_HU/installing-boot9strap-(hbl-usm)'>Boot9strap telepítése (HBL-USM)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="finalizing-setup"><a href='/hu_HU/finalizing-setup'>Telepítés véglegesítése</a></li>
+          
+        
+      </ol>
+    </li>
+  </ul>
+</nav>
+</div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="SD formázás (Windows)">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">SD formázás (Windows)
+</h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+
+        <hr>
+
+        
+        
+
+        
+          
+          <div class ="notice"><b>Ha segítségre van szükséged (angol nyelven), keresd fel a <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew-t Discord-on</a>.</b></div>
+        
+          
+          <div class ="notice"><b>Amennyiben hasznosnak véled ezt az útmutatót, elfogadunk <a href="contribute#donations">adományokat</a>.</b></div>
+        
+
+        <hr>
+
+        <aside class="sidebar__right">
+<nav class="toc">
+    <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Tartalomjegyzék</h4></header>
+<ul class="toc__menu" id="markdown-toc">
+  <li><a href="#fontos-tudnivalók" id="markdown-toc-fontos-tudnivalók">Fontos tudnivalók</a></li>
+  <li><a href="#amire-szükséged-lesz" id="markdown-toc-amire-szükséged-lesz">Amire szükséged lesz</a></li>
+  <li><a href="#lépések-32gb-vagy-kisebb" id="markdown-toc-lépések-32gb-vagy-kisebb">Lépések (32GB vagy kisebb)</a></li>
+  <li><a href="#lépések-64gb-vagy-nagyobb" id="markdown-toc-lépések-64gb-vagy-nagyobb">Lépések (64GB vagy nagyobb)</a></li>
+  <li><a href="#gyakori-hibák-a-guiformat-használata-során" id="markdown-toc-gyakori-hibák-a-guiformat-használata-során">Gyakori hibák a guiformat használata során</a></li>
+</ul>
+
+  </nav>
+</aside>
+
+<h3 id="fontos-tudnivalók">Fontos tudnivalók</h3>
+
+<p>Ez egy kiegészítő rész az SD kártya formázásához, hogy az működjön a 3DS-el.</p>
+
+<p>Ha a 3DS már felismeri az SD kártyát, ez az útmutató nem szükséges.</p>
+
+<p>Ez az oldal Windows felhasználókra vonatkozik. Ha nem Windows rendszeren vagy, kövesd az <a href="formatting-sd-(linux)">SD formázás (Linux)</a> vagy <a href="formatting-sd-(mac)">SD formázás (Mac)</a> útmutatókat.</p>
+
+<h3 id="amire-szükséged-lesz">Amire szükséged lesz</h3>
+
+<ul>
+  <li><strong>32GB vagy kisebb SD kártya esetén:</strong> Az <a href="https://www.sdcard.org/downloads/formatter/sd-memory-card-formatter-for-windows-download/">SD Formatter</a> legfrissebb verziója</li>
+  <li><strong>64GB vagy nagyobb SD kártya esetén:</strong> A <a href="http://ridgecrop.co.uk/index.htm?guiformat.htm">guiformat</a> legfrissebb verziója</li>
+</ul>
+
+<h3 id="lépések-32gb-vagy-kisebb">Lépések (32GB vagy kisebb)</h3>
+
+<ol>
+  <li>Helyezd az SD kártyád a számítógépbe</li>
+  <li>Ha az SD kártya tartalmaz adatot, akkor azokat másold át a számítógépre</li>
+  <li>Futtasd az <code class="language-plaintext highlighter-rouge">SD Card Formatter Setup</code>-ot (az <code class="language-plaintext highlighter-rouge">.exe</code> fájlt) a letöltött <code class="language-plaintext highlighter-rouge">.zip</code> fájlból rendszergazda joggal a program telepítéséhez</li>
+  <li>Futtasd az <code class="language-plaintext highlighter-rouge">SD Card Formatter</code>-t a Start menüből</li>
+  <li>
+    <p>Válaszd ki az SD kártyád betűjelét a “Select card”-nál</p>
+
+    <p class="notice--danger">Legyél biztos abban, hogy a jó meghajtó betűt választod, egyébként rossz merevlemezt törölhetsz!</p>
+  </li>
+  <li>Írj be valamit “Volume label”-nek</li>
+  <li>Ügyelj rá, hogy a “Quick Format” ki legyen választva</li>
+  <li>Kattints a “Format”-ra</li>
+  <li>Kattints az “OK”-ra</li>
+  <li>Várd meg amíg a formázás befejeződik</li>
+  <li>Kattints az “OK”-ra</li>
+  <li>Zárd be az SD Card Formatter-t</li>
+  <li>Ha az SD kártya tartalmazott adatot a formázás előtt, akkor azokat most másold vissza a számítógépről</li>
+</ol>
+
+<h3 id="lépések-64gb-vagy-nagyobb">Lépések (64GB vagy nagyobb)</h3>
+
+<ol>
+  <li>Helyezd az SD kártyád a számítógépbe</li>
+  <li>Ha az SD kártya tartalmaz adatot, akkor azokat másold át a számítógépre</li>
+  <li>Futtasd a <code class="language-plaintext highlighter-rouge">guiformat.exe</code> alkalmazást</li>
+  <li>
+    <p>Válaszd ki az SD kártyád betűjelét a “Drive” alatt</p>
+
+    <p class="notice--danger">Legyél biztos abban, hogy a jó meghajtó betűt választod, egyébként rossz merevlemezt törölhetsz!</p>
+  </li>
+  <li>Válassz méretet az “Allocation unit size” alatt
+    <ul>
+      <li>Ha az SD kártya 64GB, válaszd a 32768-ot</li>
+      <li>Ha az SD kártya nagyobb, mint 64GB, válaszd a 65536-ot</li>
+    </ul>
+  </li>
+  <li>Írj be valamit “Volume label”-nek</li>
+  <li>Ügyelj rá, hogy a “Quick Format” ki legyen választva</li>
+  <li>Kattints a “Start”-ra</li>
+  <li>Kattints az “OK”-ra</li>
+  <li>Várd meg amíg a formázás befejeződik</li>
+  <li>Kattints a “Close”-ra</li>
+  <li>Ha az SD kártya tartalmazott adatot a formázás előtt, akkor azokat most másold vissza a számítógépről</li>
+</ol>
+
+<h3 id="gyakori-hibák-a-guiformat-használata-során">Gyakori hibák a guiformat használata során</h3>
+
+<ul>
+  <li>Failed to open device: GetLastError()=32
+    <ul>
+      <li>Csukj le mindent, ami esetleg használhatja az SD kártyát, mint például bármelyik Fájlkezelő ablak.</li>
+    </ul>
+  </li>
+  <li>GetLastError()=1117
+    <ul>
+      <li>Az SD kártyád írás védelmi kapcsolója lehet, hogy <a href="/images/sdlock.png">be van állítva</a>. A zárat felfelé kell tolni, hogy engedélyezd az írást az SD kártyára (beleértve a formázást is).</li>
+    </ul>
+  </li>
+</ul>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://github.com/hacks-guide/Guide_3DS" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+<!--
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+    </ul>
+  -->
+</div>
+
+<!-- custom footer, guide specific -->
+
+
+
+<div class="page__footer-copyright">&copy; 2023 Nintendo Homebrew. - <a href="site-navigation">Oldaltérkép</a> - <a href="privacy-policy">Adatvédelmi Irányelv</a> <!-- Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.--></div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+<!-- for guide purposes all caching is removed and is separately built. -->
+
+
+
+
+
+
+
+
+  </body>
+</html>

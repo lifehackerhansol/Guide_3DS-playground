@@ -1,0 +1,676 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<!-- for guide purposes all caching is removed and is separately built. -->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>boot9strap 설치 (SSLoth-Browser) - 3DS Hacks Guide</title>
+<meta name="description" content="A complete guide to 3DS custom firmware">
+
+
+  <meta name="author" content="Nintendo Homebrew">
+  
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="3DS Hacks Guide">
+<meta property="og:title" content="boot9strap 설치 (SSLoth-Browser)">
+<meta property="og:url" content="https://3ds.hacks.guide/ko_KR/installing-boot9strap-(ssloth-browser).html">
+
+
+  <meta property="og:description" content="A complete guide to 3DS custom firmware">
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://3ds.hacks.guide/ko_KR/installing-boot9strap-(ssloth-browser).html">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Nintendo Homebrew",
+      "url": "https://3ds.hacks.guide/"
+    
+  }
+</script>
+
+
+  <meta name="google-site-verification" content="jVXoPK_-qzKJp4SScnZYpOIX3yDXfGnAoTBJYixUOwg" />
+
+
+  <meta name="msvalidate.01" content="F3532011519E308583A0A2CAF2DD69E8">
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="3DS Hacks Guide Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=PYEmwKvQAx">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png?v=PYEmwKvQAx" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-194x194.png?v=PYEmwKvQAx" sizes="194x194">
+<link rel="icon" type="image/png" href="/images/android-chrome-192x192.png?v=PYEmwKvQAx" sizes="192x192">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png?v=PYEmwKvQAx" sizes="16x16">
+<link rel="manifest" href="/images/manifest.json?v=PYEmwKvQAx">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg?v=PYEmwKvQAx" color="#2E3440">
+<link rel="shortcut icon" href="/images/favicon.ico?v=PYEmwKvQAx">
+<meta name="apple-mobile-web-app-title" content="Guide">
+<meta name="application-name" content="Guide">
+<meta name="msapplication-TileColor" content="#2E3440">
+<meta name="msapplication-TileImage" content="/images/mstile-144x144.png?v=PYEmwKvQAx">
+<meta name="msapplication-config" content="/images/browserconfig.xml?v=PYEmwKvQAx">
+<meta name="theme-color" content="#2E3440">
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.css" integrity="sha512-LQ97camar/lOliT/MqjcQs5kWgy6Qz/cCRzzRzUCfv0fotsCTC9ZHXaPQmJV8Xu/PVALfJZ7BDezl5lW3/qBxg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js" integrity="sha512-yXXqOFjdjHNH1GND+1EO0jbvvebABpzGKD66djnUfiKlYME5HGMUJHoCaeE4D5PTG2YsSJf6dwqyUUvQvS0vaA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#2e3440"
+    },
+    "button": {
+      "background": "#60818f"
+    }
+  },
+  "theme": "edgeless",
+  "position": "top",
+  "static": true,
+  "content": {
+    "message": "이 사이트는 현재 진행상황을 표시하고 사용자 경험을 향상시키기 위해 쿠키를 사용합니다."
+  }
+})});
+</script>
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <!-- <a class="site-title" href="/">
+          3DS Hacks Guide
+          
+        </a>
+      -->
+        <ul class="visible-links">
+          <!-- modified to use multilang, guide-specific -->
+          
+          
+          
+          
+          
+          
+            
+              <li class="masthead__menu-item masthead__menu-item--lg"><a href="/ko_KR/">홈</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/ko_KR/faq">자주 묻는 질문</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/ko_KR/troubleshooting">문제 해결</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/ko_KR/checking-for-cfw">CFW 확인</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/ko_KR/godmode9-usage">GodMode9 사용법</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/ko_KR/contribute">기여하기</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/ko_KR/region-changing">지역 변경</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/ko_KR/uninstall-cfw">CFW 제거하기</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/ko_KR/credits">기여자</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/ko_KR/site-navigation">사이트 탐색</a></li>
+            
+          
+          <!-- end guide specific -->
+        </ul>
+        
+        <!-- completely redo hidden links for multilang, guide-specific -->
+        <ul class="hidden-links links-menu hidden"></ul>
+        <ul class="hidden-links lang-menu hidden">
+          
+          
+          
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/installing-boot9strap-(ssloth-browser).html">English</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/es_ES/installing-boot9strap-(ssloth-browser).html">Español</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/de_DE/installing-boot9strap-(ssloth-browser).html">Deutsch</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/fr_FR/installing-boot9strap-(ssloth-browser).html">Français</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/it_IT/installing-boot9strap-(ssloth-browser).html">Italiano</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/nl_NL/installing-boot9strap-(ssloth-browser).html">Nederlands</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/pt_BR/installing-boot9strap-(ssloth-browser).html">Português do Brasil</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/pt_PT/installing-boot9strap-(ssloth-browser).html">Português (Portugal)</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ru_RU/installing-boot9strap-(ssloth-browser).html">Русский</a></li> -->
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/zh_CN/installing-boot9strap-(ssloth-browser).html">简体中文</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/zh_TW/installing-boot9strap-(ssloth-browser).html">繁體中文</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/pl_PL/installing-boot9strap-(ssloth-browser).html">Polski</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/tr_TR/installing-boot9strap-(ssloth-browser).html">Türkçe</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/vi_VN/installing-boot9strap-(ssloth-browser).html">Tiếng Việt</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ca_ES/installing-boot9strap-(ssloth-browser).html">Català</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/el_GR/installing-boot9strap-(ssloth-browser).html">Ελληνικά</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/he_IL/installing-boot9strap-(ssloth-browser).html">עברית‎</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/sv_SE/installing-boot9strap-(ssloth-browser).html">Svenska</a></li> -->
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ko_KR/installing-boot9strap-(ssloth-browser).html">한국어</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/no_NO/installing-boot9strap-(ssloth-browser).html">Norsk</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ja_JP/installing-boot9strap-(ssloth-browser).html">日本語</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ar_SA/installing-boot9strap-(ssloth-browser).html">اللغة العربية</a></li> -->
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/hu_HU/installing-boot9strap-(ssloth-browser).html">Magyar</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ro_RO/installing-boot9strap-(ssloth-browser).html">Română</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/sr_SP/installing-boot9strap-(ssloth-browser).html">Српски</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/af_ZA/installing-boot9strap-(ssloth-browser).html">Afrikaans</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ms_MY/installing-boot9strap-(ssloth-browser).html">Bahasa Melayu</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/fi_FI/installing-boot9strap-(ssloth-browser).html">Suomi</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/da_DK/installing-boot9strap-(ssloth-browser).html">Dansk</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/uk_UA/installing-boot9strap-(ssloth-browser).html">Українська</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/cs_CZ/installing-boot9strap-(ssloth-browser).html">Čeština</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/en_PT/installing-boot9strap-(ssloth-browser).html">Pirate English</a></li> -->
+        </ul>
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <button class="greedy-nav__toggle_lang"><div class="langicon"><i class="fa fa-language fa-lg" aria-hidden="true"></i></div></button>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  <!-- 
+  <div class="sidebar sticky">
+  
+  
+    
+    
+  
+  </div>
+
+-->
+
+
+
+<div class="sidebar sticky" style="display: none;">
+  
+
+
+
+
+
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    <li>
+      <span class="nav__sub-title">전체 진행 상황</span>
+      <ol>
+        
+          
+            <li style="display: none;" data-name="home"><a href='/ko_KR/'>홈</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="key-information"><a href='/ko_KR/key-information'>주요 내용</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="get-started"><a href='/ko_KR/get-started'>시작하기</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="ntrboot"><a href='/ko_KR/ntrboot'>ntrboot</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer"><a href='/ko_KR/seedminer'>Seedminer</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(twn)"><a href='/ko_KR/seedminer-(twn)'>Seedminer (TWN)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="bannerbomb3"><a href='/ko_KR/bannerbomb3'>BannerBomb3</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="multiple-options"><i>(Multiple Options)</i></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(3ds-single-system)"><a href='/ko_KR/flashing-ntrboot-(3ds-single-system)'>Flashing ntrboot (3DS Single System)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(3ds-multi-system)"><a href='/ko_KR/flashing-ntrboot-(3ds-multi-system)'>Flashing ntrboot (3DS Multi System)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(dsi)"><a href='/ko_KR/flashing-ntrboot-(dsi)'>Flashing ntrboot (DSi)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(nds)"><a href='/ko_KR/flashing-ntrboot-(nds)'>Flashing ntrboot (NDS)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(pichaxx)"><a href='/ko_KR/homebrew-launcher-(pichaxx)'>Homebrew Launcher (PicHaxx)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="bannerbomb3-fredtool-(twn)"><a href='/ko_KR/bannerbomb3-fredtool-(twn)'>BannerBomb3 + Fredtool (TWN)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(hardmod)"><a href='/ko_KR/installing-boot9strap-(hardmod)'>Installing boot9strap (Hardmod)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(hbl-usm)"><a href='/ko_KR/installing-boot9strap-(hbl-usm)'>Installing boot9strap (HBL-USM)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(ntrboot)"><a href='/ko_KR/installing-boot9strap-(ntrboot)'>Installing boot9strap (ntrboot)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(soundhax)"><a href='/ko_KR/installing-boot9strap-(soundhax)'>Installing boot9strap (Soundhax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(ssloth-browser)"><a href='/ko_KR/installing-boot9strap-(ssloth-browser)'>Installing boot9strap (SSLoth-Browser)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(fredtool)"><a href='/ko_KR/installing-boot9strap-(fredtool)'>Installing boot9strap (Fredtool)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(usm)"><a href='/ko_KR/installing-boot9strap-(usm)'>Installing boot9strap (USM)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(kartdlphax)"><a href='/ko_KR/installing-boot9strap-(kartdlphax)'>Installing boot9strap (kartdlphax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(hbl-usm)"><a href='/ko_KR/installing-boot9strap-(hbl-usm)'>Installing boot9strap (HBL-USM)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="finalizing-setup"><a href='/ko_KR/finalizing-setup'>Finalizing Setup</a></li>
+          
+        
+      </ol>
+    </li>
+  </ul>
+</nav>
+</div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="boot9strap 설치 (SSLoth-Browser)">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">boot9strap 설치 (SSLoth-Browser)
+</h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+
+        <hr>
+
+        
+        
+
+        
+          
+          <div class ="notice"><b>영어로 지원을 요청하고 싶으시면 <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew Discord 서버</a>에 도움을 요청해 주세요.</b></div>
+        
+          
+          <div class ="notice"><b>이 가이드가 도움이 되었다면, <a href="contribute#donations">기부해 주시면</a> 감사하겠습니다.</b></div>
+        
+
+        <hr>
+
+        <aside class="sidebar__right">
+<nav class="toc">
+    <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> 목차</h4></header>
+<ul class="toc__menu" id="markdown-toc">
+  <li><a href="#호환성-안내" id="markdown-toc-호환성-안내">호환성 안내</a></li>
+  <li><a href="#준비물" id="markdown-toc-준비물">준비물</a>    <ul>
+      <li><a href="#섹션-i---준비-작업" id="markdown-toc-섹션-i---준비-작업">섹션 I - 준비 작업</a></li>
+      <li><a href="#섹션-ii---ssloth" id="markdown-toc-섹션-ii---ssloth">섹션 II - SSLoth</a></li>
+      <li><a href="#섹션-iii---safeb9sinstaller-실행" id="markdown-toc-섹션-iii---safeb9sinstaller-실행">섹션 III - SafeB9SInstaller 실행</a></li>
+      <li><a href="#섹션-iv---boot9strap-설치" id="markdown-toc-섹션-iv---boot9strap-설치">섹션 IV - boot9strap 설치</a></li>
+      <li><a href="#섹션-v---기본-프록시-복원" id="markdown-toc-섹션-v---기본-프록시-복원">섹션 V - 기본 프록시 복원</a></li>
+    </ul>
+  </li>
+  <li><a href="#마무리-단계-로-계속합니다" id="markdown-toc-마무리-단계-로-계속합니다">마무리 단계 로 계속합니다</a></li>
+</ul>
+
+  </nav>
+</aside>
+
+<details class="notice--info">
+<summary><em>기술적 상세 정보 (선택 사항)</em></summary>
+
+<p>브라우저 앱을 해킹하기 위해서는, 최신 버전으로의 시스템 업데이트 없이 브라우저 앱을 이용하지 못하게 하는 버전 확인 과정을 건너뛰어야 합니다.</p>
+
+<p>SSLoth 익스플로잇의 도움을 받아 이러한 확인을 건너뛸 수 있는 공개 프록시 서버가 있습니다.</p>
+
+<p>확인을 건너뛴 후, 나머지 작업을 진행하게 될 익스플로잇 사이트가 준비되어 있습니다.</p>
+
+<p>이 페이지에 사용되는 익스플로잇에 자세한 설명은 [여기]https://github.com/MrNbaYoh/3ds-ssloth) (SSLoth)와 <a href="https://github.com/TuxSH/universal-otherapp/">여기</a> (universal-otherapp) (영어) 를 참고해 주세요.</p>
+
+</details>
+
+<h3 id="호환성-안내">호환성 안내</h3>
+
+<p>SSLoth는 시스템 버전 11.13.0 및 이전 버전에 있는 사용자가 브라우저 버전 확인을 건너뛰고, 이후 universal-otherapp과 함께 사용할 수 있는 new-broserhax 또는 old-browserhax (모든 지역의 시스템 버전 11.4.0에서 11.13.0에서 호환됨) 을 사용할 수 있게 합니다.</p>
+
+<p class="notice--warning">카트리지를 통해 기기를 업데이트하는 경우, 인터넷 브라우저의 접근이 제한될 것입니다. 그런 경우에는 기기를 본체 설정 앱을 통해 최신 버전으로 업데이트한 후 그에 맞는 방법을 따라야 합니다.</p>
+
+<h3 id="준비물">준비물</h3>
+
+<ul>
+  <li>최신 버전의 <a href="https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip">SafeB9SInstaller</a> (직접 다운로드)</li>
+  <li>최신 버전의 <a href="https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip">boot9strap</a> (직접 다운로드)</li>
+  <li>최신 버전의 <a href="https://github.com/LumaTeam/Luma3DS/releases/latest">Luma3DS</a> (<code class="language-plaintext highlighter-rouge">.zip</code> 파일)</li>
+  <li>최신 버전의 <a href="https://github.com/TuxSH/universal-otherapp/releases/latest`">universal-otherapp</a> (<code class="language-plaintext highlighter-rouge">otherapp.bin</code>)</li>
+</ul>
+
+<h4 id="섹션-i---준비-작업">섹션 I - 준비 작업</h4>
+
+<p>이 섹션에서 browserhax하고 universal-otherapp을 실행할 파일을 복사합니다.</p>
+
+<ol>
+  <li>기기를 종료해 주세요</li>
+  <li>SD 카드를 컴퓨터에 삽입해 주세요</li>
+  <li><code class="language-plaintext highlighter-rouge">otherapp.bin</code>을 SD 카드의 루트에 복사하고 이름을 <code class="language-plaintext highlighter-rouge">arm11code.bin</code>으로 바꿔 주세요
+    <ul>
+      <li>SD 카드의 루트는 SD 카드를 열 때 보이는 디렉토리이고, Nintendo 3DS 폴더가 보이지만 그 안에 않 들어가 있는 상태의 폴더 입니다</li>
+      <li><code class="language-plaintext highlighter-rouge">.bin</code> 확장명이 안 보인다면 파일 끝에 추가하지 마세요</li>
+    </ul>
+  </li>
+  <li>Luma3DS <code class="language-plaintext highlighter-rouge">.zip</code>안에 있는 <code class="language-plaintext highlighter-rouge">boot.firm</code>과 <code class="language-plaintext highlighter-rouge">boot.3dsx</code>를 SD 카드의 루트에 복사해 주세요</li>
+  <li>SD 카드이 루트에 <code class="language-plaintext highlighter-rouge">boot9strap</code> 라는 이름으로 새 폴더를 생성해 주세요</li>
+  <li>SD 카드에 있는 <code class="language-plaintext highlighter-rouge">/boot9strap/</code> 폴더에 boot9strap <code class="language-plaintext highlighter-rouge">.zip</code> 파일 안에 압축되있는 <code class="language-plaintext highlighter-rouge">boot9strap.firm</code>과 <code class="language-plaintext highlighter-rouge">boot9strap.firm.sha</code>을 복사해 주세요</li>
+  <li>SafeB9SInstaller <code class="language-plaintext highlighter-rouge">.zip</code>의 <code class="language-plaintext highlighter-rouge">SafeB9SInstaller.bin</code>을 SD 카드의 루트로 복사해 주세요</li>
+  <li>SD 카드를 기기에 다시 삽입해 주세요</li>
+  <li>기기를 시작해 주세요</li>
+</ol>
+
+<h4 id="섹션-ii---ssloth">섹션 II - SSLoth</h4>
+
+<p>이 섹션에서는, 브라우저가 시스템 업데이트 없이도 정상 작동할 수 있도록, 인터넷 연결 설정을 프록시 네트워크를 이용하게 변경하게 됩니다. 이렇게 하면 다음 섹션에서 브라우저 익스플로잇에 접근할 수 있게 됩니다.</p>
+
+<p class="notice--info">If you haven’t already, make sure you have a working Internet connection set up on your console.</p>
+
+<ol>
+  <li>본체 설정 에플리케이션을 실행해 주세요</li>
+  <li><code class="language-plaintext highlighter-rouge">인터넷 설정</code> -&gt; <code class="language-plaintext highlighter-rouge">인터넷 접속 설정</code>으로 이동해 주세요</li>
+  <li>네트워크 접속 경로을 클릭해, <code class="language-plaintext highlighter-rouge">설정 변경</code> -&gt; <code class="language-plaintext highlighter-rouge">다음 페이지 (오른쪽 화살표)</code> -&gt; <code class="language-plaintext highlighter-rouge">Proxy 설정</code>으로 이동해 주세요</li>
+  <li>“Proxy 설정”을 “예”로 설정하고, <code class="language-plaintext highlighter-rouge">세부 설정</code>을 눌러 주세요</li>
+  <li>Proxy 서버를 <code class="language-plaintext highlighter-rouge">192.9.234.11</code>로 설정하고, 포트를 <code class="language-plaintext highlighter-rouge">8080</code>으로 설정해 주세요</li>
+  <li>OK하고 저장을 차례로 눌러주세요</li>
+  <li>접속 테스트 안내문이 표시되면, <code class="language-plaintext highlighter-rouge">예</code>를 눌러 인터넷 접속 테스트를 진행해 주세요
+    <ul>
+      <li>이 테스트가 성공적일 겁니다</li>
+    </ul>
+  </li>
+  <li>“OK”을 눌러 진행해 주세요</li>
+  <li>“뒤로”을 두 번 누르고 “종료”를 눌러 HOME 메뉴로 돌아가 주세요</li>
+</ol>
+
+<h4 id="섹션-iii---safeb9sinstaller-실행">섹션 III - SafeB9SInstaller 실행</h4>
+
+<p>이 섹션에서는, boot9strap (커스텀 펌웨어) 설치 도구를 실행하기 위해 브라우저 익스플로잇 웹페이지에서 universal-otherapp을 실행합니다.</p>
+
+<ol>
+  <li>HOME 메뉴에서 L, R 버튼을 동시에 눌러 카메라를 여세요
+    <ul>
+      <li>카메라가 사용이 불가능하다면, 인터넷 브라우저를 열어 다음 URL을 직접 입력하세요: <code class="language-plaintext highlighter-rouge">https://zoogie.github.io/web/nbhax/</code></li>
+    </ul>
+  </li>
+  <li>QR 코드 버튼을 눌러 <a href="http://api.qrserver.com/v1/create-qr-code/?color=000000&amp;bgcolor=FFFFFF&amp;data=https%3A%2F%2Fzoogie.github.io%2Fweb%2Fnbhax&amp;qzone=1&amp;margin=0&amp;size=400x400&amp;ecc=L">이 QR 코드</a> 를 스캔해 주세요
+    <ul>
+      <li>오류가 발생하면 이 <a href="troubleshooting#installing-boot9strap-ssloth-browser">문제 해결 가이드</a> 를 참고해 주세요</li>
+      <li>보안 인증서 경고가 표시되면, (A)를 눌러 연결을 허용하세요</li>
+    </ul>
+  </li>
+  <li>“PROCEED TO HAXX” 버튼을 눌러주세요</li>
+  <li>익스플로잇이 성공적이었다면 SafeB9SInstaller로 부팅되었을 것입니다</li>
+</ol>
+
+<h4 id="섹션-iv---boot9strap-설치">섹션 IV - boot9strap 설치</h4>
+
+<p>이 섹션에서는, 커스텀 펌웨어를 설치할 것입니다.</p>
+
+<ol>
+  <li>메시지가 나타나면, boot9strap을 설치하기 위하여 화면에 주어진 키 조합을 입력해 주세요</li>
+  <li>작업이 완료되면, (A) 를 눌려 기기를 재부팅해 주세요</li>
+  <li>Your device should have booted into the Luma3DS configuration menu
+    <ul>
+      <li>Luma3DS 구성 메뉴는 Luma3DS 커스텀 펌웨어의 설정들 입니다. 이 설정들은 디버깅 또는 맞춤화의 유용합니다</li>
+      <li>For the purpose of this guide, <strong>leave these options on the default settings</strong> (do not check or uncheck anything)</li>
+      <li>만약 기기가 부팅시에 꺼진다면 Luma3DS <code class="language-plaintext highlighter-rouge">.zip</code> 파일 안에 압축 되있는 <code class="language-plaintext highlighter-rouge">boot.firm</code>을 SD 카드의 루트로 복사 했는지 확인해 주세요</li>
+    </ul>
+  </li>
+  <li>(Start)를 눌러 저장하고 기기를 다시 시작해 주세요</li>
+</ol>
+
+<p>이제 기기는 Luma3DS를 기본으로 부팅 됩니다.</p>
+<ul>
+  <li>Luma3DS는 보통 HOME 메뉴와 똑같이 보입니다. 만약 기기가 HOME 메뉴로 부팅되었다면, 커스텀 펌웨어가 설치되어 있습니다.</li>
+  <li>다음 페이지에서는 커펌에 유용한 홈브류를 설치해 기기 준비를 완료할 것 입니다.</li>
+</ul>
+
+<h4 id="섹션-v---기본-프록시-복원">섹션 V - 기본 프록시 복원</h4>
+
+<p>이 섹션에서는, 인터넷 설정을 복원할 것입니다.</p>
+
+<ol>
+  <li>본체 설정 에플리케이션을 실행해 주세요</li>
+  <li><code class="language-plaintext highlighter-rouge">인터넷 설정</code> -&gt; <code class="language-plaintext highlighter-rouge">인터넷 접속 설정</code>으로 이동해 주세요</li>
+  <li>네트워크 접속 경로을 클릭해, <code class="language-plaintext highlighter-rouge">설정 변경</code> -&gt; <code class="language-plaintext highlighter-rouge">다음 페이지 (오른쪽 화살표)</code> -&gt; <code class="language-plaintext highlighter-rouge">Proxy 설정</code>으로 이동해 주세요</li>
+  <li>“Proxy 설정”을 “아니요”로 설정해 주세요</li>
+  <li>OK하고 저장을 차례로 눌러주세요</li>
+  <li>접속 테스트 안내문이 표시되면, <code class="language-plaintext highlighter-rouge">예</code>를 눌러 인터넷 접속 테스트를 진행해 주세요
+    <ul>
+      <li>이 테스트가 성공적일 겁니다</li>
+    </ul>
+  </li>
+  <li>기기를 종료해 주세요</li>
+</ol>
+
+<hr />
+
+<h3 class="notice--primary" id="마무리-단계-로-계속합니다"><a href="finalizing-setup">마무리 단계</a> 로 계속합니다</h3>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://github.com/hacks-guide/Guide_3DS" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+<!--
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+    </ul>
+  -->
+</div>
+
+<!-- custom footer, guide specific -->
+
+
+
+<div class="page__footer-copyright">&copy; 2023 Nintendo Homebrew. - <a href="site-navigation">사이트 탐색</a> - <a href="privacy-policy">개인정보 보호 정책</a> <!-- Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.--></div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+<!-- for guide purposes all caching is removed and is separately built. -->
+
+
+
+
+
+
+
+
+  </body>
+</html>

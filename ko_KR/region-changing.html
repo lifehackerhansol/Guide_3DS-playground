@@ -1,0 +1,749 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<!-- for guide purposes all caching is removed and is separately built. -->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>지역 변경 - 3DS Hacks Guide</title>
+<meta name="description" content="A complete guide to 3DS custom firmware">
+
+
+  <meta name="author" content="Nintendo Homebrew">
+  
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="3DS Hacks Guide">
+<meta property="og:title" content="지역 변경">
+<meta property="og:url" content="https://3ds.hacks.guide/ko_KR/region-changing.html">
+
+
+  <meta property="og:description" content="A complete guide to 3DS custom firmware">
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://3ds.hacks.guide/ko_KR/region-changing.html">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Nintendo Homebrew",
+      "url": "https://3ds.hacks.guide/"
+    
+  }
+</script>
+
+
+  <meta name="google-site-verification" content="jVXoPK_-qzKJp4SScnZYpOIX3yDXfGnAoTBJYixUOwg" />
+
+
+  <meta name="msvalidate.01" content="F3532011519E308583A0A2CAF2DD69E8">
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="3DS Hacks Guide Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=PYEmwKvQAx">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png?v=PYEmwKvQAx" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-194x194.png?v=PYEmwKvQAx" sizes="194x194">
+<link rel="icon" type="image/png" href="/images/android-chrome-192x192.png?v=PYEmwKvQAx" sizes="192x192">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png?v=PYEmwKvQAx" sizes="16x16">
+<link rel="manifest" href="/images/manifest.json?v=PYEmwKvQAx">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg?v=PYEmwKvQAx" color="#2E3440">
+<link rel="shortcut icon" href="/images/favicon.ico?v=PYEmwKvQAx">
+<meta name="apple-mobile-web-app-title" content="Guide">
+<meta name="application-name" content="Guide">
+<meta name="msapplication-TileColor" content="#2E3440">
+<meta name="msapplication-TileImage" content="/images/mstile-144x144.png?v=PYEmwKvQAx">
+<meta name="msapplication-config" content="/images/browserconfig.xml?v=PYEmwKvQAx">
+<meta name="theme-color" content="#2E3440">
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.css" integrity="sha512-LQ97camar/lOliT/MqjcQs5kWgy6Qz/cCRzzRzUCfv0fotsCTC9ZHXaPQmJV8Xu/PVALfJZ7BDezl5lW3/qBxg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js" integrity="sha512-yXXqOFjdjHNH1GND+1EO0jbvvebABpzGKD66djnUfiKlYME5HGMUJHoCaeE4D5PTG2YsSJf6dwqyUUvQvS0vaA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#2e3440"
+    },
+    "button": {
+      "background": "#60818f"
+    }
+  },
+  "theme": "edgeless",
+  "position": "top",
+  "static": true,
+  "content": {
+    "message": "이 사이트는 현재 진행상황을 표시하고 사용자 경험을 향상시키기 위해 쿠키를 사용합니다."
+  }
+})});
+</script>
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <!-- <a class="site-title" href="/">
+          3DS Hacks Guide
+          
+        </a>
+      -->
+        <ul class="visible-links">
+          <!-- modified to use multilang, guide-specific -->
+          
+          
+          
+          
+          
+          
+            
+              <li class="masthead__menu-item masthead__menu-item--lg"><a href="/ko_KR/">홈</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/ko_KR/faq">자주 묻는 질문</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/ko_KR/troubleshooting">문제 해결</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/ko_KR/checking-for-cfw">CFW 확인</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/ko_KR/godmode9-usage">GodMode9 사용법</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/ko_KR/contribute">기여하기</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/ko_KR/region-changing">지역 변경</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/ko_KR/uninstall-cfw">CFW 제거하기</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/ko_KR/credits">기여자</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/ko_KR/site-navigation">사이트 탐색</a></li>
+            
+          
+          <!-- end guide specific -->
+        </ul>
+        
+        <!-- completely redo hidden links for multilang, guide-specific -->
+        <ul class="hidden-links links-menu hidden"></ul>
+        <ul class="hidden-links lang-menu hidden">
+          
+          
+          
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/region-changing.html">English</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/es_ES/region-changing.html">Español</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/de_DE/region-changing.html">Deutsch</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/fr_FR/region-changing.html">Français</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/it_IT/region-changing.html">Italiano</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/nl_NL/region-changing.html">Nederlands</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/pt_BR/region-changing.html">Português do Brasil</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/pt_PT/region-changing.html">Português (Portugal)</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ru_RU/region-changing.html">Русский</a></li> -->
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/zh_CN/region-changing.html">简体中文</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/zh_TW/region-changing.html">繁體中文</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/pl_PL/region-changing.html">Polski</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/tr_TR/region-changing.html">Türkçe</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/vi_VN/region-changing.html">Tiếng Việt</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ca_ES/region-changing.html">Català</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/el_GR/region-changing.html">Ελληνικά</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/he_IL/region-changing.html">עברית‎</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/sv_SE/region-changing.html">Svenska</a></li> -->
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ko_KR/region-changing.html">한국어</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/no_NO/region-changing.html">Norsk</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ja_JP/region-changing.html">日本語</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ar_SA/region-changing.html">اللغة العربية</a></li> -->
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/hu_HU/region-changing.html">Magyar</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ro_RO/region-changing.html">Română</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/sr_SP/region-changing.html">Српски</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/af_ZA/region-changing.html">Afrikaans</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ms_MY/region-changing.html">Bahasa Melayu</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/fi_FI/region-changing.html">Suomi</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/da_DK/region-changing.html">Dansk</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/uk_UA/region-changing.html">Українська</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/cs_CZ/region-changing.html">Čeština</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/en_PT/region-changing.html">Pirate English</a></li> -->
+        </ul>
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <button class="greedy-nav__toggle_lang"><div class="langicon"><i class="fa fa-language fa-lg" aria-hidden="true"></i></div></button>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  <!-- 
+  <div class="sidebar sticky">
+  
+  
+    
+    
+  
+  </div>
+
+-->
+
+
+
+<div class="sidebar sticky" style="display: none;">
+  
+
+
+
+
+
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    <li>
+      <span class="nav__sub-title">전체 진행 상황</span>
+      <ol>
+        
+          
+            <li style="display: none;" data-name="home"><a href='/ko_KR/'>홈</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="key-information"><a href='/ko_KR/key-information'>주요 내용</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="get-started"><a href='/ko_KR/get-started'>시작하기</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="ntrboot"><a href='/ko_KR/ntrboot'>ntrboot</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer"><a href='/ko_KR/seedminer'>Seedminer</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(twn)"><a href='/ko_KR/seedminer-(twn)'>Seedminer (TWN)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="bannerbomb3"><a href='/ko_KR/bannerbomb3'>BannerBomb3</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="multiple-options"><i>(Multiple Options)</i></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(3ds-single-system)"><a href='/ko_KR/flashing-ntrboot-(3ds-single-system)'>Flashing ntrboot (3DS Single System)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(3ds-multi-system)"><a href='/ko_KR/flashing-ntrboot-(3ds-multi-system)'>Flashing ntrboot (3DS Multi System)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(dsi)"><a href='/ko_KR/flashing-ntrboot-(dsi)'>Flashing ntrboot (DSi)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(nds)"><a href='/ko_KR/flashing-ntrboot-(nds)'>Flashing ntrboot (NDS)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(pichaxx)"><a href='/ko_KR/homebrew-launcher-(pichaxx)'>Homebrew Launcher (PicHaxx)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="bannerbomb3-fredtool-(twn)"><a href='/ko_KR/bannerbomb3-fredtool-(twn)'>BannerBomb3 + Fredtool (TWN)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(hardmod)"><a href='/ko_KR/installing-boot9strap-(hardmod)'>Installing boot9strap (Hardmod)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(hbl-usm)"><a href='/ko_KR/installing-boot9strap-(hbl-usm)'>Installing boot9strap (HBL-USM)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(ntrboot)"><a href='/ko_KR/installing-boot9strap-(ntrboot)'>Installing boot9strap (ntrboot)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(soundhax)"><a href='/ko_KR/installing-boot9strap-(soundhax)'>Installing boot9strap (Soundhax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(ssloth-browser)"><a href='/ko_KR/installing-boot9strap-(ssloth-browser)'>Installing boot9strap (SSLoth-Browser)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(fredtool)"><a href='/ko_KR/installing-boot9strap-(fredtool)'>Installing boot9strap (Fredtool)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(usm)"><a href='/ko_KR/installing-boot9strap-(usm)'>Installing boot9strap (USM)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(kartdlphax)"><a href='/ko_KR/installing-boot9strap-(kartdlphax)'>Installing boot9strap (kartdlphax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(hbl-usm)"><a href='/ko_KR/installing-boot9strap-(hbl-usm)'>Installing boot9strap (HBL-USM)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="finalizing-setup"><a href='/ko_KR/finalizing-setup'>Finalizing Setup</a></li>
+          
+        
+      </ol>
+    </li>
+  </ul>
+</nav>
+</div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="지역 변경">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">지역 변경
+</h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+
+        <hr>
+
+        
+        
+
+        
+          
+          <div class ="notice"><b>영어로 지원을 요청하고 싶으시면 <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew Discord 서버</a>에 도움을 요청해 주세요.</b></div>
+        
+          
+          <div class ="notice"><b>이 가이드가 도움이 되었다면, <a href="contribute#donations">기부해 주시면</a> 감사하겠습니다.</b></div>
+        
+
+        <hr>
+
+        <aside class="sidebar__right">
+<nav class="toc">
+    <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> 목차</h4></header>
+<ul class="toc__menu" id="markdown-toc">
+  <li><a href="#중요" id="markdown-toc-중요">중요</a></li>
+  <li><a href="#준비물" id="markdown-toc-준비물">준비물</a></li>
+  <li><a href="#진행-방법" id="markdown-toc-진행-방법">진행 방법</a>    <ul>
+      <li><a href="#섹션-i---준비-작업" id="markdown-toc-섹션-i---준비-작업">섹션 I - 준비 작업</a></li>
+      <li><a href="#섹션-ii---nand-백업" id="markdown-toc-섹션-ii---nand-백업">섹션 II - NAND 백업</a></li>
+      <li><a href="#섹션-iii---ctrtransfer" id="markdown-toc-섹션-iii---ctrtransfer">섹션 III - CTRTransfer</a></li>
+      <li><a href="#섹션-iv---fbi-실행" id="markdown-toc-섹션-iv---fbi-실행">섹션 IV - FBI 실행</a></li>
+      <li><a href="#섹션-v---티켓-재설치" id="markdown-toc-섹션-v---티켓-재설치">섹션 V - 티켓 재설치</a></li>
+      <li><a href="#섹션-vi---지역-설정" id="markdown-toc-섹션-vi---지역-설정">섹션 VI - 지역 설정</a></li>
+      <li><a href="#섹션-vii---ctrtransfer-이미지-제거" id="markdown-toc-섹션-vii---ctrtransfer-이미지-제거">섹션 VII - CTRTransfer 이미지 제거</a></li>
+    </ul>
+  </li>
+</ul>
+
+  </nav>
+</aside>
+
+<h3 id="중요">중요</h3>
+
+<p>이 페이지는 CFW SysNAND의 지역을 변경하는 방법을 안내하는 부가 섹션입니다. 이 작업은 바꾸고자 하는 지역의 11.15.0 CTRTransfer 이미지를 설치합니다. 이미지 설치 후, 장치를 최신 펌웨어 버전(11.16.0)으로 업데이트할 수 있습니다.</p>
+
+<p>Luma3DS가 지역 외 게임들과 <a href="https://github.com/LumaTeam/Luma3DS/wiki/Optional-features">타이틀별 지역 에뮬레이션</a>을 지원하기 때문에, 지역 변경은 거의 불필요하다는 점을 참고해 주시기 바랍니다. 또한, 다른 지역의 NDS게임을 실행하는 것 또한 <a href="https://github.com/DS-Homebrew/TWiLightMenu/releases">TWiLight Menu++</a>에 의해 지원됩니다.</p>
+
+<p>만약 여러분의 SD 카드의 <code class="language-plaintext highlighter-rouge">/luma/payloads/</code> 폴더에 <code class="language-plaintext highlighter-rouge">GodMode9.firm</code> 외의 페이로드 파일이 있다면, (Start)를 누르면서 부팅할 시에 화면에 표시되는 “chainloader menu” 에서 십자 패드와 (A) 버튼으로 조작하여 “GodMode9”을 선택하여야 합니다.</p>
+
+<div class="notice--danger">
+<p>기기의 지역을 바꾸게 된다면:</p>
+
+<ul>
+  <li>(만약 있다면) Nintendo 네트워크 ID를 이용할 수 없게 됩니다. NNID들은 작성된 지역에서만 사용할 수 있습니다.</li>
+  <li>이전에 <a href="https://en-americas-support.nintendo.com/app/answers/detail/a_id/74/~/how-to-delete-a-nintendo-eshop-account">eShop 계정을 지우더라도 (영어)</a>, eShop에 접속하지 못할 수 있습니다. 몇몇 타이틀들은, 계정 삭제 후도 3DS 링크를 유지하려는 경향이 있어서입니다 (특히 New 3DS에서).
+    <ul>
+      <li>While purchases can no longer be made on eShop, game updates can still be downloaded. 업데이트들은 보통 온라인 플레이를 할 시 필요합니다.</li>
+    </ul>
+  </li>
+  <li><strong>기기를 벽돌로 하는 것을 감수하지 않고선 커스텀 펌웨어를 지울 수 없습니다!</strong> 만약 미래에 커스텀 펌웨어를 지우려고 생각한다면, <strong>절대로</strong> 지역 변경을 하기 전의 NAND 백업을 복원하고 나서 해야 합니다.</li>
+</ul>
+</div>
+
+<p class="notice--danger">이것은 Luma3DS 및 boot9strap가 이미 설치되어 있어야 가능합니다.</p>
+
+<p class="notice--warning">구형 3DS/2DS 기기에서는 지역 변경 후, 추가 메모리 모드 개임을 (예: 대난투 스매시브라더스, 포켓몬스터 썬/문, 몬스터 헌터)를 사용할 수 없게 될 수 있습니다. 만약 이게 발생한다면, 이 문제를 고치기 위해 (TinyFormat 및 본체 설정을 이용해서) 기기를 포맷하셔야 합니다.</p>
+
+<h3 id="준비물">준비물</h3>
+
+<p class="notice--warning">이 페이지의 <a href="https://wikipedia.org/wiki/Magnet_URI_scheme">마그넷</a>링크를 사용하려면
+ <a href="https://www.qbittorrent.org/download.php">qBittorrent</a> 또는 <a href="http://dev.deluge-torrent.org/wiki/Download">Deluge</a>와 같은 토렌트 클라이언트가 필요합니다.</p>
+
+<ul>
+  <li>최신 버전의 <a href="https://github.com/d0k3/GodMode9/releases/latest">GodMode9</a> (<code class="language-plaintext highlighter-rouge">.zip</code> 파일)</li>
+  <li>최신 버전의 <a href="https://github.com/Steveice10/FBI/releases/latest">FBI</a> <em>(<code class="language-plaintext highlighter-rouge">.3dsx</code> 파일)</em></li>
+  <li>변경하고 싶은 지역의 종류에 맞는 11.15.0 CTRTransfer 이미지 (예: New 3DS를 가지고 있고 지역을 미국으로 변경하려면 “New 3DS or 3DS - USA”를 다운로드)
+    <ul>
+      <li><i class="fa fa-magnet" aria-hidden="true" title="이것은 마그넷 링크입니다. 토렌트 클라이언트를 사용해 파일을 다운로드 해주세요."></i> - New 3DS/New 2DS - 11.15.0 - EUR - CTRTransfer](magnet:?xt=urn:btih:2a39586a0a10d1f0a9470b082ef1453e502b2425&amp;xt=urn:btmh:12205090f0a43a956bd7449658ee0580949d15ae112c80007fb2ef42e3265b6c5f6c&amp;dn=11.15.0-47E_ctrtransfer_n3ds.zip&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.dler.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.bitsearch.to%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker-udp.gbitt.info%3a80%2fannounce&amp;tr=udp%3a%2f%2fretracker.netbynet.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fretracker.lanta-net.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopentor.org%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopen.stealth.si%3a80%2fannounce&amp;tr=udp%3a%2f%2fmts.tvbit.co%3a6969%2fannounce&amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2fbt2.archive.org%3a6969%2fannounce)</li>
+      <li><i class="fa fa-magnet" aria-hidden="true" title="이것은 마그넷 링크입니다. 토렌트 클라이언트를 사용해 파일을 다운로드 해주세요."></i> - <a href="magnet:?xt=urn:btih:986b454cab2d9f27daa63d4291f61aed039871d2&amp;xt=urn:btmh:1220c8c96bd76b6fef041aada9ce4e3cf06ef141f3c4558310b9c3a00e39bccc43a1&amp;dn=11.15.0-47J_ctrtransfer_n3ds.zip&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.dler.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.bitsearch.to%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker-udp.gbitt.info%3a80%2fannounce&amp;tr=udp%3a%2f%2fretracker.netbynet.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fretracker.lanta-net.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopentor.org%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopen.stealth.si%3a80%2fannounce&amp;tr=udp%3a%2f%2fmts.tvbit.co%3a6969%2fannounce&amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2fbt2.archive.org%3a6969%2fannounce">New 3DS/New 2DS - 11.15.0 - JPN - CTRTransfer</a></li>
+      <li><i class="fa fa-magnet" aria-hidden="true" title="이것은 마그넷 링크입니다. 토렌트 클라이언트를 사용해 파일을 다운로드 해주세요."></i> - <a href="magnet:?xt=urn:btih:e247b21e1f81f76acf6d3140da45da858e76f1f6&amp;xt=urn:btmh:122008168a003666c14783998d1dd82ac02d1b3be902efa75cf5a03ee47da1fecd73&amp;dn=11.15.0-41K_ctrtransfer_n3ds.zip&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.dler.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.bitsearch.to%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker-udp.gbitt.info%3a80%2fannounce&amp;tr=udp%3a%2f%2fretracker.netbynet.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fretracker.lanta-net.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopentor.org%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopen.stealth.si%3a80%2fannounce&amp;tr=udp%3a%2f%2fmts.tvbit.co%3a6969%2fannounce&amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2fbt2.archive.org%3a6969%2fannounce">New 3DS/New 2DS - 11.15.0 - KOR - CTRTransfer</a></li>
+      <li><i class="fa fa-magnet" aria-hidden="true" title="이것은 마그넷 링크입니다. 토렌트 클라이언트를 사용해 파일을 다운로드 해주세요."></i> - <a href="magnet:?xt=urn:btih:8ae25de1ab01c9304eece9785d5db6cdd6728214&amp;xt=urn:btmh:1220ab284cc822f3170305723e9920e1bb4d7649fdf528c3ea04aada31e09bfbbe57&amp;dn=11.15.0-47U_ctrtransfer_n3ds.zip&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.dler.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.bitsearch.to%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker-udp.gbitt.info%3a80%2fannounce&amp;tr=udp%3a%2f%2fretracker.netbynet.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fretracker.lanta-net.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopentor.org%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopen.stealth.si%3a80%2fannounce&amp;tr=udp%3a%2f%2fmts.tvbit.co%3a6969%2fannounce&amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2fbt2.archive.org%3a6969%2fannounce">New 3DS/New 2DS - 11.15.0 - USA - CTRTransfer</a>  <br />
+~</li>
+      <li><i class="fa fa-magnet" aria-hidden="true" title="이것은 마그넷 링크입니다. 토렌트 클라이언트를 사용해 파일을 다운로드 해주세요."></i> - <a href="magnet:?xt=urn:btih:f71d2379e577db22d7f14a656bca7bf2eb5243f8&amp;xt=urn:btmh:12200c6ee93f63deef8ce9023b8214ca36cd29c37d2726acf7a15594256409f6629b&amp;dn=11.15.0-4C_ctrtransfer_o3ds.zip&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.dler.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.bitsearch.to%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker-udp.gbitt.info%3a80%2fannounce&amp;tr=udp%3a%2f%2fretracker.netbynet.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fretracker.lanta-net.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopentor.org%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopen.stealth.si%3a80%2fannounce&amp;tr=udp%3a%2f%2fmts.tvbit.co%3a6969%2fannounce&amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2fbt2.archive.org%3a6969%2fannounce">구형 3DS/2DS - 11.15.0 - CHN - CTRTransfer</a></li>
+      <li><i class="fa fa-magnet" aria-hidden="true" title="이것은 마그넷 링크입니다. 토렌트 클라이언트를 사용해 파일을 다운로드 해주세요."></i> - <a href="magnet:?xt=urn:btih:fc71540a99c884ab8a4211192d3af92c7ffb9372&amp;xt=urn:btmh:12203c317846d43110fd3a35cedf427cb5fdd58ac764316f4d0634181efbb762ee92&amp;dn=11.15.0-47E_ctrtransfer_o3ds.zip&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.dler.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.bitsearch.to%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker-udp.gbitt.info%3a80%2fannounce&amp;tr=udp%3a%2f%2fretracker.netbynet.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fretracker.lanta-net.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopentor.org%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopen.stealth.si%3a80%2fannounce&amp;tr=udp%3a%2f%2fmts.tvbit.co%3a6969%2fannounce&amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2fbt2.archive.org%3a6969%2fannounce">구형 3DS/2DS - 11.15.0 - EUR - CTRTransfer</a></li>
+      <li><i class="fa fa-magnet" aria-hidden="true" title="이것은 마그넷 링크입니다. 토렌트 클라이언트를 사용해 파일을 다운로드 해주세요."></i> - <a href="magnet:?xt=urn:btih:7b88adf3f47d036bcdee987f6597770eaafdd8dd&amp;xt=urn:btmh:1220f39be6c14438b07ebdf120161215088d56c59608d5f34f0744d972c7a0cf7ca2&amp;dn=11.15.0-47J_ctrtransfer_o3ds.zip&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.dler.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.bitsearch.to%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker-udp.gbitt.info%3a80%2fannounce&amp;tr=udp%3a%2f%2fretracker.netbynet.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fretracker.lanta-net.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopentor.org%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopen.stealth.si%3a80%2fannounce&amp;tr=udp%3a%2f%2fmts.tvbit.co%3a6969%2fannounce&amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2fbt2.archive.org%3a6969%2fannounce">구형 3DS/2DS - 11.15.0 - JPN - CTRTransfer</a></li>
+      <li><i class="fa fa-magnet" aria-hidden="true" title="이것은 마그넷 링크입니다. 토렌트 클라이언트를 사용해 파일을 다운로드 해주세요."></i> - 구형 3DS/2DS - 11.15.0 - KOR - CTRTransfer](magnet:?xt=urn:btih:90d6689106751b057616d32445442fc1b7370e38&amp;xt=urn:btmh:1220a08fe569ac1596f6a113730de3cc7aa0dfd6858d40830cc0f0cee07bf585fd93&amp;dn=11.15.0-41K_ctrtransfer_o3ds.zip&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.dler.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.bitsearch.to%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker-udp.gbitt.info%3a80%2fannounce&amp;tr=udp%3a%2f%2fretracker.netbynet.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fretracker.lanta-net.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopentor.org%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopen.stealth.si%3a80%2fannounce&amp;tr=udp%3a%2f%2fmts.tvbit.co%3a6969%2fannounce&amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2fbt2.archive.org%3a6969%2fannounce)</li>
+      <li><i class="fa fa-magnet" aria-hidden="true" title="이것은 마그넷 링크입니다. 토렌트 클라이언트를 사용해 파일을 다운로드 해주세요."></i> - <a href="magnet:?xt=urn:btih:19f978d42b0d9590bc742d7598efa45091567cee&amp;xt=urn:btmh:12204429bc94456825530a2dff233ed399a292e1004a64b65fa4b451a69e116cad2a&amp;dn=11.15.0-39T_ctrtransfer_o3ds.zip&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.dler.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.bitsearch.to%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker-udp.gbitt.info%3a80%2fannounce&amp;tr=udp%3a%2f%2fretracker.netbynet.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fretracker.lanta-net.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopentor.org%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopen.stealth.si%3a80%2fannounce&amp;tr=udp%3a%2f%2fmts.tvbit.co%3a6969%2fannounce&amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2fbt2.archive.org%3a6969%2fannounce">구형 3DS/2DS - 11.15.0 - TWN - CTRTransfer</a></li>
+      <li><i class="fa fa-magnet" aria-hidden="true" title="이것은 마그넷 링크입니다. 토렌트 클라이언트를 사용해 파일을 다운로드 해주세요."></i> - <a href="magnet:?xt=urn:btih:fd39778d4116a210c3116c014521120f0e7b9e1d&amp;xt=urn:btmh:12203a51aca201f0635eecb15645cd4598bd49b1ad354e1ea81c24eb488760f3bd2b&amp;dn=11.15.0-47U_ctrtransfer_o3ds.zip&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.dler.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.bitsearch.to%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker-udp.gbitt.info%3a80%2fannounce&amp;tr=udp%3a%2f%2fretracker.netbynet.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fretracker.lanta-net.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopentor.org%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopen.stealth.si%3a80%2fannounce&amp;tr=udp%3a%2f%2fmts.tvbit.co%3a6969%2fannounce&amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2fbt2.archive.org%3a6969%2fannounce">구형 3DS/2DS - 11.15.0 - USA - CTRTransfer</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="진행-방법">진행 방법</h3>
+
+<h4 id="섹션-i---준비-작업">섹션 I - 준비 작업</h4>
+
+<ol>
+  <li>기기를 종료해 주세요</li>
+  <li>SD 카드를 컴퓨터에 삽입해 주세요</li>
+  <li>SD 카드의 루트에 <code class="language-plaintext highlighter-rouge">3ds</code> 폴더가 없을 경우 폴더를 만들어 주세요</li>
+  <li>SD 카드의 <code class="language-plaintext highlighter-rouge">/luma/payloads/</code>폴더에 GodMode9 <code class="language-plaintext highlighter-rouge">.zip</code>안에 압축되있는 <code class="language-plaintext highlighter-rouge">GodMode9.firm</code>을 복사해 주세요</li>
+  <li>SD 카드의 루트로 GodMode9 <code class="language-plaintext highlighter-rouge">.zip</code>안에 압축이 되있는 <code class="language-plaintext highlighter-rouge">gm9</code> 폴더를 복사해 주세요</li>
+  <li>SD 카드의 <code class="language-plaintext highlighter-rouge">/gm9/</code> 폴더에 CTRTransfer <code class="language-plaintext highlighter-rouge">.zip</code>안에 압축되어 있는 11.15.0 CTRTransfer 이미지 <code class="language-plaintext highlighter-rouge">.bin</code>을 복사해 주세요</li>
+  <li><code class="language-plaintext highlighter-rouge">FBI.3dsx</code> 파일을 SD 카드의 <code class="language-plaintext highlighter-rouge">/3ds/</code> 폴더에 복사해 주세요</li>
+  <li>SD 카드를 기기에 다시 삽입해 주세요</li>
+</ol>
+
+<h4 id="섹션-ii---nand-백업">섹션 II - NAND 백업</h4>
+
+<ol>
+  <li>(Start)를 길게 누르고, 이 상태에서 전원을 켜 주세요. GodMode9이 실행 될 겁니다</li>
+  <li>(Home)을 눌러 작업 메뉴를 열어 주세요</li>
+  <li>“Scripts…“를 선택해 주세요</li>
+  <li>“GM9Megascript”를 선택해 주세요</li>
+  <li>“Backup Options”를 선택해 주세요</li>
+  <li>“SysNAND Backup”을 선택해 주세요</li>
+  <li>(A)를 눌러 확인해 주세요
+    <ul>
+      <li>이 과정은 시간이 좀 걸릴 것입니다</li>
+      <li>If you get an error, look for your issue in the <a href="troubleshooting#finalizing-setup">troubleshooting guide</a></li>
+    </ul>
+  </li>
+  <li>(A)를 눌러 진행해 주세요</li>
+  <li>(B)를 눌러 메인 메뉴로 돌아가 주세요</li>
+  <li>“Exit”를 선택해 주세요</li>
+  <li>메세지가 표시되면, (A)를 눌러서 쓰기잠금을 확인해 주세요</li>
+  <li>(R)을 누른 채 (Start)를 눌러 기기를 종료해 주세요</li>
+  <li>SD 카드를 컴퓨터에 삽입해 주세요</li>
+  <li>SD 카드<code class="language-plaintext highlighter-rouge">/gm9/out/</code> 폴더의 <code class="language-plaintext highlighter-rouge">&lt;날짜&gt;_&lt;일련번호&gt;_nandmin_##.bin</code>과 ‘essential.exefs’ 를 컴퓨터의 안전한 위치에 복사해 주세요
+    <ul>
+      <li>여러 위치에 백업을 해 주세요 (온라인 파일 저장 공간 등)</li>
+      <li>이 백업들은 기기를 벽돌로부터 지켜줄 것이고 만약 나중에 문제가 생겼을 때 NAND 이미지로부터 파일을 복구하는 것을 도울 것입니다</li>
+    </ul>
+  </li>
+  <li>SD 카드에 있는 <code class="language-plaintext highlighter-rouge">/gm9/out/</code>의 <code class="language-plaintext highlighter-rouge">&lt;날짜&gt;_&lt;일련번호&gt;_sysnand_##.bin</code> 과`<날짜>_<일련번호>_sysnand_##.bin.sha' 파일을 복사 후에 지워 주세요</일련번호></날짜></li>
+  <li>SD 카드를 기기에 다시 삽입해 주세요</li>
+</ol>
+
+<h4 id="섹션-iii---ctrtransfer">섹션 III - CTRTransfer</h4>
+
+<ol>
+  <li>(Start)를 길게 누르고, 이 상태에서 전원을 켜 주세요. GodMode9이 실행 될 겁니다</li>
+  <li>만약 “Essential files backup not found” 메세지가 표시되면, (A) 룰 눌러서 백업을 만들고, 끝나면 (A) 를 눌러서 진행해 주세요</li>
+  <li>만약 “RTC date&amp;time seems to be wrong” 메세지가 표시되면 (A) 버튼을 눌러 하고, 날짜와 시간을 고친 다음 (A) 버튼을 눌러 계속해 주세요
+    <ul>
+      <li>만약 RTC 날짜와 시간을 수정해야 했다면, 이 가이드 끝나고 본체 설정에서도 시간을 수정해야 합니다</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">[0:] SDCARD</code> -&gt; <code class="language-plaintext highlighter-rouge">gm9</code>으로 이동해 주세요</li>
+  <li>CTRTransfer <code class="language-plaintext highlighter-rouge">.bin</code>에 (A)를 눌러 선택해 주세요</li>
+  <li>“CTRNAND options…“를 선택해 주세요</li>
+  <li>“Transfer image to CTRNAND”를 선택해 주세요</li>
+  <li>메시지가 나타나면 “Transfer to SysNAND”를 선택해 주세요
+    <ul>
+      <li>이 메시지는 EmuNAND가 있을 경우에만 나타납니다</li>
+    </ul>
+  </li>
+  <li>(A)를 눌려 SysNAND (lvl1) 쓰기 잠금을 풀고 주어진 키 조합을 입력해 주세요
+    <ul>
+      <li>이 과정은 시간이 좀 걸릴 것입니다</li>
+    </ul>
+  </li>
+  <li>작업이 완료되면 (A)를 눌려 계속해 주세요</li>
+  <li>만약 메세지가 표시되면, (B) 를 눌러서 쓰기잠금을 거부해 주세요</li>
+  <li>(B)를 두 번 눌러 메인 메뉴로 돌아가 주세요</li>
+  <li>(Home)을 눌러 작업 메뉴를 열어 주세요</li>
+  <li>“Scripts…“를 선택해 주세요</li>
+  <li>“GM9Megascript”를 선택해 주세요</li>
+  <li>“Scripts from Plailect’s Guide”를 선택해 주세요</li>
+  <li>“CTRTransfer Ticket Copy”를 선택해 주세요</li>
+  <li>프롬프트가 뜨면, (A) 를 눌러서 진행해 주세요</li>
+  <li>(A)를 눌러 진행해 주세요</li>
+  <li>(B)를 눌러 메인 메뉴로 돌아가 주세요</li>
+  <li>“Exit”를 선택해 주세요</li>
+  <li>메세지가 표시되면, (A)를 눌러서 쓰기잠금을 확인해 주세요</li>
+  <li>(Start)를 눌러 기기를 다시 시작해 주세요</li>
+  <li>본체 설정의 “기타 설정”에서 가장 오른쪽에 있는 “본체 업데이트”를 선택해 기기를 업데이트해 주세요
+    <ul>
+      <li>boot9strap과 Luma을 이용한 (지금 가지고 계신 버전) 업데이트는 안전합니다</li>
+      <li>오류가 발생하면 DNS 설정을 “자동”으로 설정해 주세요</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="섹션-iv---fbi-실행">섹션 IV - FBI 실행</h4>
+
+<ol>
+  <li>다운로드 플레이 앱을 실행해 주세요 (<img src="https://3ds.hacks.guide/images/download-play-icon.png" alt="" height="24px" width="24px" />)</li>
+  <li><code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> 하고 <code class="language-plaintext highlighter-rouge">Nintendo DS</code> 버튼이 표시 될 때까지 기다려 주세요</li>
+  <li>(L 어깨) + (십자 Down) + (Select) 을 동시에 눌러서 Rosalina 메뉴를 실행해 주세요</li>
+  <li>“Miscellaneous options”을 선택해 주세요</li>
+  <li>“Switch the hb. title to the current app.”를 선택해 주세요</li>
+  <li>(B)를 눌러 진행해 주세요</li>
+  <li>(B)를 눌러 Rosalina 메뉴로 돌아가 주세요</li>
+  <li>(B)를 눌러 Rosalina 메뉴를 나와 주세요</li>
+  <li>(Home) 키를 누르고, 다운로드 플레이를 종료해 주세요</li>
+  <li>다운로드 플레이 앱을 실행해 주세요</li>
+  <li>성공하면 Homebrew Launcher가 실행될 것입니다
+    <ul>
+      <li>If your device is stuck on the loading splash screen, you are missing <code class="language-plaintext highlighter-rouge">boot.3dsx</code> from the root of your SD card</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="섹션-v---티켓-재설치">섹션 V - 티켓 재설치</h4>
+
+<p class="notice--info">만약 “No user tickets found” 표시가 되면, 이 부분을 넘기세요.</p>
+
+<ol>
+  <li>홈브류 목록에서 FBI를 실행해 주세요</li>
+  <li>“SD”를 선택해 주세요</li>
+  <li>“gm9”을 선택해 주세요</li>
+  <li>“out”을 선택해 주세요</li>
+  <li>“ctrtransfer_tickets”을 선택해 주세요</li>
+  <li><code class="language-plaintext highlighter-rouge">eshop</code> 폴더와 <code class="language-plaintext highlighter-rouge">unknown</code> 폴더 중 1개 이상의 폴더에 다음 과정을 수행해 주세요.
+    <ul>
+      <li>그 폴더로 이동해 주세요</li>
+      <li>”&lt;current directory&gt;”를 선택해 주세요</li>
+      <li>“Install and delete all tickets”를 선택해 주세요</li>
+      <li>잠시 기다려 주세요. 시스템이 멈춘 것 같아 보여도 기다려 주세요</li>
+      <li>(A)를 눌러 확인해 주세요</li>
+      <li>(B)를 눌러 CDN에서 티켓 설치를 거절해 주세요</li>
+    </ul>
+  </li>
+  <li>(Home)을 눌러 FBI를 종료해 주세요</li>
+</ol>
+
+<h4 id="섹션-vi---지역-설정">섹션 VI - 지역 설정</h4>
+
+<ol>
+  <li>본체 설정을 실행해 주세요</li>
+  <li>“기타 설정”, “유저 정보”및 “지역 정보”로 이동해 주세요</li>
+  <li>변경한 지역에 속한 국가를 선택해 주세요</li>
+  <li>메시지가 뜨더라도 ‘도’까지 설정할 필요는 없습니다</li>
+</ol>
+
+<h4 id="섹션-vii---ctrtransfer-이미지-제거">섹션 VII - CTRTransfer 이미지 제거</h4>
+
+<ol>
+  <li>(Start)를 길게 누르고, 이 상태에서 전원을 켜 주세요. GodMode9이 실행 될 겁니다</li>
+  <li><code class="language-plaintext highlighter-rouge">[0:] SDCARD</code> -&gt; <code class="language-plaintext highlighter-rouge">gm9</code>으로 이동해 주세요</li>
+  <li>CTRTransfer 이미지 <code class="language-plaintext highlighter-rouge">.bin</code>에 (X)를 눌러 삭제해 주세요</li>
+  <li>(A)를 눌러 확인해 주세요</li>
+  <li>(Start)를 눌러 기기를 다시 시작해 주세요</li>
+</ol>
+
+<hr />
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://github.com/hacks-guide/Guide_3DS" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+<!--
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+    </ul>
+  -->
+</div>
+
+<!-- custom footer, guide specific -->
+
+
+
+<div class="page__footer-copyright">&copy; 2023 Nintendo Homebrew. - <a href="site-navigation">사이트 탐색</a> - <a href="privacy-policy">개인정보 보호 정책</a> <!-- Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.--></div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+<!-- for guide purposes all caching is removed and is separately built. -->
+
+
+
+
+
+
+
+
+  </body>
+</html>

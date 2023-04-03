@@ -1,0 +1,753 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<!-- for guide purposes all caching is removed and is separately built. -->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>BannerBomb3 + Fredtool (TWN) - 3DS Hacks Guide</title>
+<meta name="description" content="A complete guide to 3DS custom firmware">
+
+
+  <meta name="author" content="Nintendo Homebrew">
+  
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="3DS Hacks Guide">
+<meta property="og:title" content="BannerBomb3 + Fredtool (TWN)">
+<meta property="og:url" content="https://3ds.hacks.guide/it_IT/bannerbomb3-fredtool-(twn).html">
+
+
+  <meta property="og:description" content="A complete guide to 3DS custom firmware">
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://3ds.hacks.guide/it_IT/bannerbomb3-fredtool-(twn).html">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Nintendo Homebrew",
+      "url": "https://3ds.hacks.guide/"
+    
+  }
+</script>
+
+
+  <meta name="google-site-verification" content="jVXoPK_-qzKJp4SScnZYpOIX3yDXfGnAoTBJYixUOwg" />
+
+
+  <meta name="msvalidate.01" content="F3532011519E308583A0A2CAF2DD69E8">
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="3DS Hacks Guide Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=PYEmwKvQAx">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png?v=PYEmwKvQAx" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-194x194.png?v=PYEmwKvQAx" sizes="194x194">
+<link rel="icon" type="image/png" href="/images/android-chrome-192x192.png?v=PYEmwKvQAx" sizes="192x192">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png?v=PYEmwKvQAx" sizes="16x16">
+<link rel="manifest" href="/images/manifest.json?v=PYEmwKvQAx">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg?v=PYEmwKvQAx" color="#2E3440">
+<link rel="shortcut icon" href="/images/favicon.ico?v=PYEmwKvQAx">
+<meta name="apple-mobile-web-app-title" content="Guide">
+<meta name="application-name" content="Guide">
+<meta name="msapplication-TileColor" content="#2E3440">
+<meta name="msapplication-TileImage" content="/images/mstile-144x144.png?v=PYEmwKvQAx">
+<meta name="msapplication-config" content="/images/browserconfig.xml?v=PYEmwKvQAx">
+<meta name="theme-color" content="#2E3440">
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.css" integrity="sha512-LQ97camar/lOliT/MqjcQs5kWgy6Qz/cCRzzRzUCfv0fotsCTC9ZHXaPQmJV8Xu/PVALfJZ7BDezl5lW3/qBxg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js" integrity="sha512-yXXqOFjdjHNH1GND+1EO0jbvvebABpzGKD66djnUfiKlYME5HGMUJHoCaeE4D5PTG2YsSJf6dwqyUUvQvS0vaA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#2e3440"
+    },
+    "button": {
+      "background": "#60818f"
+    }
+  },
+  "theme": "edgeless",
+  "position": "top",
+  "static": true,
+  "content": {
+    "message": "Questo sito web utilizza i cookie per visualizzare l'avanzamento della guida sulla barra laterale o migliorare il sito."
+  }
+})});
+</script>
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <!-- <a class="site-title" href="/">
+          3DS Hacks Guide
+          
+        </a>
+      -->
+        <ul class="visible-links">
+          <!-- modified to use multilang, guide-specific -->
+          
+          
+          
+          
+          
+          
+            
+              <li class="masthead__menu-item masthead__menu-item--lg"><a href="/it_IT/">Home</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/it_IT/faq">FAQ</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/it_IT/troubleshooting">Risoluzione dei problemi</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/it_IT/checking-for-cfw">Verifica del CFW</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/it_IT/godmode9-usage">Usare GodMode9</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/it_IT/contribute">Contribuisci</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/it_IT/region-changing">Cambiare regione</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/it_IT/uninstall-cfw">Disinstallare il CFW</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/it_IT/credits">Riconoscimenti</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/it_IT/site-navigation">Mappa del sito</a></li>
+            
+          
+          <!-- end guide specific -->
+        </ul>
+        
+        <!-- completely redo hidden links for multilang, guide-specific -->
+        <ul class="hidden-links links-menu hidden"></ul>
+        <ul class="hidden-links lang-menu hidden">
+          
+          
+          
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/bannerbomb3-fredtool-(twn).html">English</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/es_ES/bannerbomb3-fredtool-(twn).html">Español</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/de_DE/bannerbomb3-fredtool-(twn).html">Deutsch</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/fr_FR/bannerbomb3-fredtool-(twn).html">Français</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/it_IT/bannerbomb3-fredtool-(twn).html">Italiano</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/nl_NL/bannerbomb3-fredtool-(twn).html">Nederlands</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/pt_BR/bannerbomb3-fredtool-(twn).html">Português do Brasil</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/pt_PT/bannerbomb3-fredtool-(twn).html">Português (Portugal)</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ru_RU/bannerbomb3-fredtool-(twn).html">Русский</a></li> -->
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/zh_CN/bannerbomb3-fredtool-(twn).html">简体中文</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/zh_TW/bannerbomb3-fredtool-(twn).html">繁體中文</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/pl_PL/bannerbomb3-fredtool-(twn).html">Polski</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/tr_TR/bannerbomb3-fredtool-(twn).html">Türkçe</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/vi_VN/bannerbomb3-fredtool-(twn).html">Tiếng Việt</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ca_ES/bannerbomb3-fredtool-(twn).html">Català</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/el_GR/bannerbomb3-fredtool-(twn).html">Ελληνικά</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/he_IL/bannerbomb3-fredtool-(twn).html">עברית‎</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/sv_SE/bannerbomb3-fredtool-(twn).html">Svenska</a></li> -->
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ko_KR/bannerbomb3-fredtool-(twn).html">한국어</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/no_NO/bannerbomb3-fredtool-(twn).html">Norsk</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ja_JP/bannerbomb3-fredtool-(twn).html">日本語</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ar_SA/bannerbomb3-fredtool-(twn).html">اللغة العربية</a></li> -->
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/hu_HU/bannerbomb3-fredtool-(twn).html">Magyar</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ro_RO/bannerbomb3-fredtool-(twn).html">Română</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/sr_SP/bannerbomb3-fredtool-(twn).html">Српски</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/af_ZA/bannerbomb3-fredtool-(twn).html">Afrikaans</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ms_MY/bannerbomb3-fredtool-(twn).html">Bahasa Melayu</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/fi_FI/bannerbomb3-fredtool-(twn).html">Suomi</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/da_DK/bannerbomb3-fredtool-(twn).html">Dansk</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/uk_UA/bannerbomb3-fredtool-(twn).html">Українська</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/cs_CZ/bannerbomb3-fredtool-(twn).html">Čeština</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/en_PT/bannerbomb3-fredtool-(twn).html">Pirate English</a></li> -->
+        </ul>
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <button class="greedy-nav__toggle_lang"><div class="langicon"><i class="fa fa-language fa-lg" aria-hidden="true"></i></div></button>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  <!-- 
+  <div class="sidebar sticky">
+  
+  
+    
+    
+  
+  </div>
+
+-->
+
+
+
+<div class="sidebar sticky" style="display: none;">
+  
+
+
+
+
+
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    <li>
+      <span class="nav__sub-title">Avanzamento</span>
+      <ol>
+        
+          
+            <li style="display: none;" data-name="home"><a href='/it_IT/'>Home</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="key-information"><a href='/it_IT/key-information'>Informazioni importanti</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="get-started"><a href='/it_IT/get-started'>Cominciamo!</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="ntrboot"><a href='/it_IT/ntrboot'>ntrboot</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer"><a href='/it_IT/seedminer'>Seedminer</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(twn)"><a href='/it_IT/seedminer-(twn)'>Seedminer (TWN)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="bannerbomb3"><a href='/it_IT/bannerbomb3'>BannerBomb3</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="multiple-options"><i>(Più Opzioni)</i></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(3ds-single-system)"><a href='/it_IT/flashing-ntrboot-(3ds-single-system)'>Flash di ntrboot (Singolo 3DS)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(3ds-multi-system)"><a href='/it_IT/flashing-ntrboot-(3ds-multi-system)'>Flash di ntrboot (Con più 3DS)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(dsi)"><a href='/it_IT/flashing-ntrboot-(dsi)'>Flash di ntrboot (DSi)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(nds)"><a href='/it_IT/flashing-ntrboot-(nds)'>Flash di ntrboot (NDS)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(pichaxx)"><a href='/it_IT/homebrew-launcher-(pichaxx)'>Homebrew Launcher (PicHaxx)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="bannerbomb3-fredtool-(twn)"><a href='/it_IT/bannerbomb3-fredtool-(twn)'>BannerBomb3 + Fredtool (TWN)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(hardmod)"><a href='/it_IT/installing-boot9strap-(hardmod)'>Installazione di boot9strap (Hardmod)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(hbl-usm)"><a href='/it_IT/installing-boot9strap-(hbl-usm)'>Installazione di boot9strap (HBL-USM)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(ntrboot)"><a href='/it_IT/installing-boot9strap-(ntrboot)'>Installazione di boot9strap (ntrboot)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(soundhax)"><a href='/it_IT/installing-boot9strap-(soundhax)'>Installazione di boot9strap (Soundhax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(ssloth-browser)"><a href='/it_IT/installing-boot9strap-(ssloth-browser)'>Installazione di boot9strap (SSLoth-Browser)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(fredtool)"><a href='/it_IT/installing-boot9strap-(fredtool)'>Installazione di boot9strap (Fredtool)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(usm)"><a href='/it_IT/installing-boot9strap-(usm)'>Installazione di boot9strap (USM)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(kartdlphax)"><a href='/it_IT/installing-boot9strap-(kartdlphax)'>Installazione di boot9strap (kartdlphax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(hbl-usm)"><a href='/it_IT/installing-boot9strap-(hbl-usm)'>Installazione di boot9strap (HBL-USM)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="finalizing-setup"><a href='/it_IT/finalizing-setup'>Completamento dell'installazione</a></li>
+          
+        
+      </ol>
+    </li>
+  </ul>
+</nav>
+</div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="BannerBomb3 + Fredtool (TWN)">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">BannerBomb3 + Fredtool (TWN)
+</h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+
+        <hr>
+
+        
+        
+
+        
+          
+          <div class ="notice"><b>Se hai bisogno di aiuto, chiedi pure su <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew su Discord</a> (in inglese).</b></div>
+        
+          
+          <div class ="notice"><b>Se hai gradito questa guida, accettiamo <a href="contribute#donations">Donazioni</a>.</b></div>
+        
+
+        <hr>
+
+        <aside class="sidebar__right">
+<nav class="toc">
+    <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Indice</h4></header>
+<ul class="toc__menu" id="markdown-toc">
+  <li><a href="#lettura-necessaria" id="markdown-toc-lettura-necessaria">Lettura necessaria</a></li>
+  <li><a href="#cosa-serve" id="markdown-toc-cosa-serve">Cosa serve</a>    <ul>
+      <li><a href="#sezione-i---controllo-del-cfw" id="markdown-toc-sezione-i---controllo-del-cfw">Sezione I - Controllo del CFW</a></li>
+      <li><a href="#sezione-ii---preparazione" id="markdown-toc-sezione-ii---preparazione">Sezione II - Preparazione</a></li>
+      <li><a href="#sezione-iii---bannerbomb3" id="markdown-toc-sezione-iii---bannerbomb3">Sezione III - BannerBomb3</a></li>
+      <li><a href="#sezione-iv---fredtool" id="markdown-toc-sezione-iv---fredtool">Sezione IV - Fredtool</a></li>
+      <li><a href="#sezione-v---exploit-flipnote" id="markdown-toc-sezione-v---exploit-flipnote">Sezione V - Exploit Flipnote</a></li>
+      <li><a href="#sezione-vi---configurazione-di-luma3ds" id="markdown-toc-sezione-vi---configurazione-di-luma3ds">Sezione VI - Configurazione di Luma3DS</a></li>
+      <li><a href="#sezione-vii---ripristino-della-modalità-download-ds" id="markdown-toc-sezione-vii---ripristino-della-modalità-download-ds">Sezione VII - Ripristino della Modalità Download DS</a></li>
+    </ul>
+  </li>
+  <li><a href="#prosegui-con-il-completamento-dellinstallazione" id="markdown-toc-prosegui-con-il-completamento-dellinstallazione">Prosegui con il Completamento dell’installazione</a></li>
+</ul>
+
+  </nav>
+</aside>
+
+<h3 id="lettura-necessaria">Lettura necessaria</h3>
+
+<p>Per eseguire un dump dei DSiWare di sistema, approfittiamo di una falla di sicurezza nella sezione Gestione Nintendo DSiWare dell’applicazione Impostazioni della console.</p>
+
+<p>Per realizzare l’obiettivo, utilizziamo la chiave di cifratura della tua console (movable.sed) per generare un backup DSiWare che induce la console a creare un dump dell’applicazione Impostazioni Internet DSi nella directory principale della scheda SD.</p>
+
+<p>Una volta ottenuto un backup DSiWare, si può initiettare nella “Modalità download” un titolo DSiWare utilizzabile per installare un custom firmware.</p>
+
+<p class="notice--warning">Queste istruzioni sono SOLO per le console taiwanesi (indicate da una T alla fine della versione di sistema, ad esempio 11.16.0-39T)! Se la tua console proviene da qualsiasi altra regione, <a href="bannerbomb3">scegli l’altro metodo</a>.</p>
+
+<h3 id="cosa-serve">Cosa serve</h3>
+
+<ul>
+  <li>Il tuo file <code class="language-plaintext highlighter-rouge">movable.sed</code> dalla sezione <a href="seedminer">Seedminer</a></li>
+  <li>L’ultima versione di <a href="https://github.com/LumaTeam/Luma3DS/releases/latest">Luma3DS</a> (il file <code class="language-plaintext highlighter-rouge">.zip</code> di Luma3DS)</li>
+  <li>L’ultima versione di <a href="https://github.com/zoogie/b9sTool/releases/latest">b9stool</a> (<code class="language-plaintext highlighter-rouge">boot.nds</code>)</li>
+  <li>L’ultima versione di <a href="https://github.com/zoogie/Frogminer/releases/latest">Frogminer_save</a> (<code class="language-plaintext highlighter-rouge">Frogminer_save.zip</code>)</li>
+</ul>
+
+<h4 id="sezione-i---controllo-del-cfw">Sezione I - Controllo del CFW</h4>
+
+<p>Come precauzione aggiuntiva, controlleremo anche la presenza di un custom firmware. È necessario poiché se un custom firmware fosse già installato, questo metodo rischierebbe di brickare la console (rendendola inutilizzabile in assenza di metodi di ripristino come <a href="ntrboot">ntrboot</a>).</p>
+
+<ol>
+  <li>Spegni il tuo 3DS</li>
+  <li>Premi il pulsante (Select)</li>
+  <li>Accendi la tua console continuando a tenere premuto il pulsante (Select)</li>
+  <li>Se il controllo è andato a buon fine, verrà avviato il menu HOME e potrai procedere con questa guida</li>
+  <li>Spegni il tuo 3DS</li>
+</ol>
+
+<p class="notice--danger">Se visualizzi un menu di configurazione o la console si spegne immediatamente, hai già un CFW e continuando con queste istruzioni potresti BRICKARE la tua console! Procedi con la <a href="checking-for-cfw">Verifica del CFW</a> per aggiornare il tuo CFW esistente.</p>
+
+<h4 id="sezione-ii---preparazione">Sezione II - Preparazione</h4>
+
+<ol>
+  <li>Spegni il tuo 3DS</li>
+  <li>Inserisci la scheda SD nel tuo computer</li>
+  <li>Copia i file <code class="language-plaintext highlighter-rouge">boot.firm</code> e <code class="language-plaintext highlighter-rouge">boot.3dsx</code> dall’archivio <code class="language-plaintext highlighter-rouge">.zip</code> di Luma3DS nella directory principale della tua scheda SD
+    <ul>
+      <li>La directory principale della scheda SD è la cartella della tua scheda SD in cui è possibile visualizzare la cartella Nintendo 3DS, ma non il suo interno</li>
+    </ul>
+  </li>
+  <li>Copia il file <code class="language-plaintext highlighter-rouge">boot.nds</code> (B9STool) nella directory principale della tua scheda SD</li>
+  <li>Copia la cartella <code class="language-plaintext highlighter-rouge">private</code> presente nell’archivio <code class="language-plaintext highlighter-rouge">.zip</code> di Frogminer_save nella directory principale della tua scheda SD</li>
+  <li>Tieni la scheda SD nel tuo computer - ci sono altre cose da fare nella prossima sezione</li>
+</ol>
+
+<p class="notice--info"><img src="https://3ds.hacks.guide/images/screenshots/fredtool/fredtool-twn-root-layout.png" alt="" /></p>
+
+<h4 id="sezione-iii---bannerbomb3">Sezione III - BannerBomb3</h4>
+
+<ol>
+  <li>Apri il sito <a href="https://jenkins.nelthorya.net/job/DSIHaxInjector%20v2/build?delay=0sec">DSIHaxInjector V2</a> sul tuo computer</li>
+  <li>Sotto il campo “Username” inserisci un nome alfanumerico qualunque (senza spazi o caratteri speciali)</li>
+  <li>Sotto il campo “MovableSed”, carica il tuo file <code class="language-plaintext highlighter-rouge">movable.sed</code> cliccando sull’opzione “Browse…”</li>
+  <li>Clicca “Build”
+    <ul>
+      <li>Attendi qualche secondo che termini il processo di compilazione</li>
+    </ul>
+  </li>
+  <li>Nella sezione “Build History” a sinistra, inserisci l’Username nel campo “Filter Builds”</li>
+  <li>Clicca sul primo risultato della ricerca
+    <ul>
+      <li>Dovrebbe avere la data più recente</li>
+    </ul>
+  </li>
+  <li>Clicca il link “output_(name).zip”</li>
+  <li>Nella tua scheda SD, entra in <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID0&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID1&gt;</code>
+    <ul>
+      <li>Questo <code class="language-plaintext highlighter-rouge">&lt;ID0&gt;</code> sarà lo stesso che hai utilizzato in <a href="seedminer">Seedminer</a></li>
+      <li><code class="language-plaintext highlighter-rouge">&lt;ID1&gt;</code> è una cartella dal nome lungo 32 caratteri all’interno di <code class="language-plaintext highlighter-rouge">&lt;ID0&gt;</code></li>
+    </ul>
+  </li>
+  <li>Crea una cartella chiamata <code class="language-plaintext highlighter-rouge">Nintendo DSiWare</code> all’interno di <code class="language-plaintext highlighter-rouge">&lt;ID1&gt;</code>
+    <ul>
+      <li>Se hai già la cartella <em>e</em> sono già presenti dei file di backup DSiWare (<code class="language-plaintext highlighter-rouge">&lt;id-a-8-caratteri&gt;.bin</code>) all’interno, copiali sul PC e rimuovili dalla scheda SD</li>
+    </ul>
+  </li>
+  <li>Apri il file <code class="language-plaintext highlighter-rouge">.zip</code> output_(nome) e naviga su <code class="language-plaintext highlighter-rouge">China_Taiwan</code> -&gt; <code class="language-plaintext highlighter-rouge">output_setup</code></li>
+  <li>Copia tutti i sei file <code class="language-plaintext highlighter-rouge">.bin</code> nella cartella <code class="language-plaintext highlighter-rouge">Nintendo DSiWare</code></li>
+  <li>Reinserisci la scheda SD nella tua console</li>
+  <li>Accendi la console</li>
+  <li>Avvia “Impostazioni della console”</li>
+  <li>Entra in <code class="language-plaintext highlighter-rouge">Gestione dati</code> -&gt; <code class="language-plaintext highlighter-rouge">DSiWare</code> -&gt; <code class="language-plaintext highlighter-rouge">Scheda SD</code> -&gt; (pagina 2)</li>
+  <li>Prendi nota del numero sul titolo DSiWare nella seconda pagina (sarà un numero compreso tra 1 e 6)</li>
+  <li>Spegni il tuo 3DS</li>
+  <li>Inserisci la scheda SD nel tuo computer</li>
+  <li>Nella tua scheda SD, entra in <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID0&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID1&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">Nintendo DSiWare</code></li>
+  <li>Apri il file <code class="language-plaintext highlighter-rouge">.zip</code> output_(nome) e naviga su <code class="language-plaintext highlighter-rouge">China_Taiwan</code> -&gt; <code class="language-plaintext highlighter-rouge">output_hax</code></li>
+  <li>Copia il file <code class="language-plaintext highlighter-rouge">.bin</code> con lo stesso numero di quello nella seconda pagina del menu “Gestione Nintendo DSiWare” nella cartella <code class="language-plaintext highlighter-rouge">Nintendo DSiWare</code>, e sovrascrivi quando richiesto</li>
+  <li>Accendi la console</li>
+  <li>Avvia “Impostazioni della console”</li>
+  <li>Entra in <code class="language-plaintext highlighter-rouge">Gestione Dati</code> -&gt; <code class="language-plaintext highlighter-rouge">DSiWare</code> -&gt; <code class="language-plaintext highlighter-rouge">Scheda SD</code></li>
+  <li>Attendi
+    <ul>
+      <li>Dovrebbero succedere in ordine le seguenti cose: Una barra di caricamento, un breve blocco, lo schermo inferiore viola, l’arresto della musica, infine la console mostrerà un errore e si riavvierà</li>
+      <li>Se non hai visto lo schermo viola, qualcosa è andato storto</li>
+    </ul>
+  </li>
+  <li>Ora dovresti avere il file <code class="language-plaintext highlighter-rouge">42383821.bin</code> nella directory principale della tua scheda SD</li>
+  <li>Nella tua scheda SD, entra in <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID0&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID1&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">Nintendo DSiWare</code></li>
+  <li>Elimina tutti i file <code class="language-plaintext highlighter-rouge">.bin</code> dalla cartella <code class="language-plaintext highlighter-rouge">Nintendo DSiWare</code></li>
+</ol>
+
+<h4 id="sezione-iv---fredtool">Sezione IV - Fredtool</h4>
+
+<ol>
+  <li>Apri il sito <a href="https://jenkins.nelthorya.net/job/DSIHaxInjector_new/build?delay=0sec">DSIHaxInjector_new</a> sul tuo computer</li>
+  <li>Sotto il campo “Username” inserisci un nome alfanumerico qualunque (senza spazi o caratteri speciali)
+    <ul>
+      <li>Ti conviene inserire un nome diverso per differenziarlo dall’output di BannerBomb3</li>
+    </ul>
+  </li>
+  <li>Sul campo “DSiBin”, carica il tuo file <code class="language-plaintext highlighter-rouge">42383821.bin</code> usando la prima opzione “Browse…”</li>
+  <li>Sul campo “MovableSed”, carica il tuo file <code class="language-plaintext highlighter-rouge">movable.sed</code> usando la seconda opzione “Browse…”</li>
+  <li>Sul campo “InjectionTarget”, imposta l’obiettivo dell’iniezione su <code class="language-plaintext highlighter-rouge">DSdownloadplay</code> (NON memorypit)</li>
+  <li>Clicca “Build”
+    <ul>
+      <li>Attendi qualche secondo che termini il processo di compilazione</li>
+    </ul>
+  </li>
+  <li>Nella sezione “Build History” a sinistra, inserisci l’Username nel campo “Filter Builds”</li>
+  <li>Clicca sul primo risultato della ricerca
+    <ul>
+      <li>Dovrebbe avere la data più recente</li>
+    </ul>
+  </li>
+  <li>Clicca il link “output_(name).zip”</li>
+  <li>Nella tua scheda SD, entra in <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID0&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID1&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">Nintendo DSiWare</code></li>
+  <li>Copia il file <code class="language-plaintext highlighter-rouge">484E4441.bin</code> dalla cartella <code class="language-plaintext highlighter-rouge">hax</code> dall’archivio DSiWare appena scaricato (<code class="language-plaintext highlighter-rouge">output_(name).zip</code>) nella cartella <code class="language-plaintext highlighter-rouge">Nintendo DSiWare</code></li>
+  <li>Reinserisci la scheda SD nella tua console</li>
+  <li>Accendi la console</li>
+  <li>Avvia “Impostazioni della console”</li>
+  <li>Entra in <code class="language-plaintext highlighter-rouge">Gestione dati</code> -&gt; <code class="language-plaintext highlighter-rouge">DSiWare</code></li>
+  <li>Nella sezione “Scheda SD”, scegli il titolo “Haxxxxxxxxx!”</li>
+  <li>Seleziona “Copia”, quindi “OK”</li>
+  <li>Esci da Impostazioni della console</li>
+  <li>Avvia Download Play sulla tua console (l’icona arancione con un 3DS)</li>
+  <li>Seleziona “Nintendo DS”</li>
+  <li>Se l’exploit ha avuto successo, la tua console avrà caricato la versione JPN di Flipnote Studio</li>
+</ol>
+
+<h4 id="sezione-v---exploit-flipnote">Sezione V - Exploit Flipnote</h4>
+
+<p class="notice--info">Se desideri una guida visiva per questa parte, è disponibile <a href="https://zoogie.github.io/web/flipnote_directions/">qui</a>.</p>
+
+<p>In questa sezione eseguirai una serie di passaggi molto specifici all’interno di Flipnote Studio che, eseguiti correttamente, avvieranno l’installazione di boot9strap (custom firmware).</p>
+
+<ol>
+  <li>Completa la configurazione iniziale del gioco finché non avrai raggiunto il menu principale
+    <ul>
+      <li>Seleziona l’opzione di sinistra quando richiesto durante la configurazione</li>
+    </ul>
+  </li>
+  <li>Con il touch screen, seleziona il riquadro grande a sinistra, poi il riquadro con l’icona di una scheda SD</li>
+  <li>Al termine del caricamento del menu, scegli l’icona col volto, poi premi l’icona in basso a destra per proseguire</li>
+  <li>Premi (X) o (SU) sul D-Pad a seconda di cosa sia visualizzato sullo schermo superiore</li>
+  <li>Seleziona il secondo pulsante in cima, con l’icona di una pellicola</li>
+  <li>Scorri a destra fino a visualizzare la bobina “3/3”</li>
+  <li>Seleziona il terzo riquadro con la lettera “A” all’interno</li>
+  <li>Scorri a sinistra fino a visualizzare la bobina “1/3”</li>
+  <li>Seleziona il quarto riquadro con la lettera “A” all’interno</li>
+  <li>Se l’exploit ha avuto successo, la tua console avrà caricato b9sTool</li>
+  <li>Usando il D-Pad, vai su “Install boot9strap”
+    <ul>
+      <li>Se salti questo passaggio, la console si riavvierà nel menu HOME senza aver installato boot9strap, e sarà necessario riaprire l’applicazione Modalità download DS e ricominciare dall’inizio di questa sezione</li>
+    </ul>
+  </li>
+  <li>Premi (A), quindi premi START e SELECT contemporaneamente per avviare il processo</li>
+  <li>Al termine lo schermo inferiore presenterà la scritta “done.”. Esci da b9sTool, quindi spegni la console
+    <ul>
+      <li>Potresti dover forzare lo spegnimento tenendo premuto il pulsante di accensione</li>
+      <li>Se la console dovesse spegnersi quando provi ad accenderla, assicurati di aver copiato il file <code class="language-plaintext highlighter-rouge">boot.firm</code> dall’archivio <code class="language-plaintext highlighter-rouge">.zip</code> di Luma3DS nella directory principale della tua scheda SD</li>
+      <li>Se vedi la schermata di Configurazione Luma, spegni la tua console e procedi alla sezione successiva</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="sezione-vi---configurazione-di-luma3ds">Sezione VI - Configurazione di Luma3DS</h4>
+
+<ol>
+  <li>Premi (Select) e accendi la console continuando a tenerlo premuto. Verrà avviata la configurazione di Luma3DS
+    <ul>
+      <li>Il menu di configurazione di Luma3DS contiene le impostazioni per il custom firmware Luma3DS. Molte di queste impostazioni possono essere utili per la personalizzazione o per debug</li>
+      <li>Ai fini di questa guida, queste impostazioni rimarranno sui valori predefiniti</li>
+      <li>Se viene avviato il menu HOME <a href="https://github.com/zoogie/b9sTool/blob/master/TROUBLESHOOTING.md">segui questa guida per risolvere il problema</a></li>
+    </ul>
+  </li>
+  <li>Premi (Start) per salvare e riavviare il 3DS</li>
+</ol>
+
+<h4 id="sezione-vii---ripristino-della-modalità-download-ds">Sezione VII - Ripristino della Modalità Download DS</h4>
+
+<ol>
+  <li>Nella tua scheda SD, entra in <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID0&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID1&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">Nintendo DSiWare</code></li>
+  <li>Copia il file <code class="language-plaintext highlighter-rouge">484E4441.bin</code> dalla cartella <code class="language-plaintext highlighter-rouge">clean</code> dall’archivio DSiWare appena scaricato (<code class="language-plaintext highlighter-rouge">output_(name).zip) nella cartella </code>Nintendo DSiWare`</li>
+  <li>Reinserisci la scheda SD nella tua console</li>
+  <li>Accendi la console</li>
+  <li>Avvia “Impostazioni della console”</li>
+  <li>Entra in <code class="language-plaintext highlighter-rouge">Gestione dati</code> -&gt; <code class="language-plaintext highlighter-rouge">DSiWare</code></li>
+  <li>Nella sezione “Scheda SD”, scegli il titolo “Haxxxxxxxxx!”</li>
+  <li>Seleziona “Copia”, quindi “OK”</li>
+  <li>Esci da Impostazioni della console</li>
+  <li>Spegni il tuo 3DS</li>
+</ol>
+
+<hr />
+
+<h3 class="notice--primary" id="prosegui-con-il-completamento-dellinstallazione">Prosegui con il <a href="finalizing-setup">Completamento dell’installazione</a></h3>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://github.com/hacks-guide/Guide_3DS" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+<!--
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+    </ul>
+  -->
+</div>
+
+<!-- custom footer, guide specific -->
+
+
+
+<div class="page__footer-copyright">&copy; 2023 Nintendo Homebrew. - <a href="site-navigation">Mappa del sito</a> - <a href="privacy-policy">Informativa sulla Privacy</a> <!-- Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.--></div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+<!-- for guide purposes all caching is removed and is separately built. -->
+
+
+
+
+
+
+
+
+  </body>
+</html>

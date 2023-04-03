@@ -1,0 +1,1204 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<!-- for guide purposes all caching is removed and is separately built. -->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Probleemoplossing - 3DS Hacks Guide</title>
+<meta name="description" content="A complete guide to 3DS custom firmware">
+
+
+  <meta name="author" content="Nintendo Homebrew">
+  
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="3DS Hacks Guide">
+<meta property="og:title" content="Probleemoplossing">
+<meta property="og:url" content="https://3ds.hacks.guide/nl_NL/troubleshooting.html">
+
+
+  <meta property="og:description" content="A complete guide to 3DS custom firmware">
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://3ds.hacks.guide/nl_NL/troubleshooting.html">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Nintendo Homebrew",
+      "url": "https://3ds.hacks.guide/"
+    
+  }
+</script>
+
+
+  <meta name="google-site-verification" content="jVXoPK_-qzKJp4SScnZYpOIX3yDXfGnAoTBJYixUOwg" />
+
+
+  <meta name="msvalidate.01" content="F3532011519E308583A0A2CAF2DD69E8">
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="3DS Hacks Guide Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=PYEmwKvQAx">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png?v=PYEmwKvQAx" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-194x194.png?v=PYEmwKvQAx" sizes="194x194">
+<link rel="icon" type="image/png" href="/images/android-chrome-192x192.png?v=PYEmwKvQAx" sizes="192x192">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png?v=PYEmwKvQAx" sizes="16x16">
+<link rel="manifest" href="/images/manifest.json?v=PYEmwKvQAx">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg?v=PYEmwKvQAx" color="#2E3440">
+<link rel="shortcut icon" href="/images/favicon.ico?v=PYEmwKvQAx">
+<meta name="apple-mobile-web-app-title" content="Guide">
+<meta name="application-name" content="Guide">
+<meta name="msapplication-TileColor" content="#2E3440">
+<meta name="msapplication-TileImage" content="/images/mstile-144x144.png?v=PYEmwKvQAx">
+<meta name="msapplication-config" content="/images/browserconfig.xml?v=PYEmwKvQAx">
+<meta name="theme-color" content="#2E3440">
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.css" integrity="sha512-LQ97camar/lOliT/MqjcQs5kWgy6Qz/cCRzzRzUCfv0fotsCTC9ZHXaPQmJV8Xu/PVALfJZ7BDezl5lW3/qBxg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js" integrity="sha512-yXXqOFjdjHNH1GND+1EO0jbvvebABpzGKD66djnUfiKlYME5HGMUJHoCaeE4D5PTG2YsSJf6dwqyUUvQvS0vaA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#2e3440"
+    },
+    "button": {
+      "background": "#60818f"
+    }
+  },
+  "theme": "edgeless",
+  "position": "top",
+  "static": true,
+  "content": {
+    "message": "Deze website gebruikt cookies om de voortgang op de zijbalk bij te houden en de site te verbeteren."
+  }
+})});
+</script>
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <!-- <a class="site-title" href="/">
+          3DS Hacks Guide
+          
+        </a>
+      -->
+        <ul class="visible-links">
+          <!-- modified to use multilang, guide-specific -->
+          
+          
+          
+          
+          
+          
+            
+              <li class="masthead__menu-item masthead__menu-item--lg"><a href="/nl_NL/">Home</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/nl_NL/faq">Veelgestelde vragen (FAQ)</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/nl_NL/troubleshooting">Probleemoplossing</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/nl_NL/checking-for-cfw">Controleren op CFW</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/nl_NL/godmode9-usage">Het gebruiken van GodMode9</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/nl_NL/contribute">Bijdragen</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/nl_NL/region-changing">Regio wijzigen</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/nl_NL/uninstall-cfw">CFW verwijderen</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/nl_NL/credits">Credits</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/nl_NL/site-navigation">Navigatie</a></li>
+            
+          
+          <!-- end guide specific -->
+        </ul>
+        
+        <!-- completely redo hidden links for multilang, guide-specific -->
+        <ul class="hidden-links links-menu hidden"></ul>
+        <ul class="hidden-links lang-menu hidden">
+          
+          
+          
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/troubleshooting.html">English</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/es_ES/troubleshooting.html">Español</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/de_DE/troubleshooting.html">Deutsch</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/fr_FR/troubleshooting.html">Français</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/it_IT/troubleshooting.html">Italiano</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/nl_NL/troubleshooting.html">Nederlands</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/pt_BR/troubleshooting.html">Português do Brasil</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/pt_PT/troubleshooting.html">Português (Portugal)</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ru_RU/troubleshooting.html">Русский</a></li> -->
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/zh_CN/troubleshooting.html">简体中文</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/zh_TW/troubleshooting.html">繁體中文</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/pl_PL/troubleshooting.html">Polski</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/tr_TR/troubleshooting.html">Türkçe</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/vi_VN/troubleshooting.html">Tiếng Việt</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ca_ES/troubleshooting.html">Català</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/el_GR/troubleshooting.html">Ελληνικά</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/he_IL/troubleshooting.html">עברית‎</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/sv_SE/troubleshooting.html">Svenska</a></li> -->
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ko_KR/troubleshooting.html">한국어</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/no_NO/troubleshooting.html">Norsk</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ja_JP/troubleshooting.html">日本語</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ar_SA/troubleshooting.html">اللغة العربية</a></li> -->
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/hu_HU/troubleshooting.html">Magyar</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ro_RO/troubleshooting.html">Română</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/sr_SP/troubleshooting.html">Српски</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/af_ZA/troubleshooting.html">Afrikaans</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ms_MY/troubleshooting.html">Bahasa Melayu</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/fi_FI/troubleshooting.html">Suomi</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/da_DK/troubleshooting.html">Dansk</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/uk_UA/troubleshooting.html">Українська</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/cs_CZ/troubleshooting.html">Čeština</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/en_PT/troubleshooting.html">Pirate English</a></li> -->
+        </ul>
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <button class="greedy-nav__toggle_lang"><div class="langicon"><i class="fa fa-language fa-lg" aria-hidden="true"></i></div></button>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  <!-- 
+  <div class="sidebar sticky">
+  
+  
+    
+    
+  
+  </div>
+
+-->
+
+
+
+<div class="sidebar sticky" style="display: none;">
+  
+
+
+
+
+
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    <li>
+      <span class="nav__sub-title">Algemene vooruitgang</span>
+      <ol>
+        
+          
+            <li style="display: none;" data-name="home"><a href='/nl_NL/'>Home</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="key-information"><a href='/nl_NL/key-information'>Belangrijkste Informatie</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="get-started"><a href='/nl_NL/get-started'>Begin</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="ntrboot"><a href='/nl_NL/ntrboot'>ntrboot</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer"><a href='/nl_NL/seedminer'>Seedminer</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(twn)"><a href='/nl_NL/seedminer-(twn)'>Seedminer (TWN)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="bannerbomb3"><a href='/nl_NL/bannerbomb3'>BannerBomb3</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="multiple-options"><i>(Multiple Options)</i></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(3ds-single-system)"><a href='/nl_NL/flashing-ntrboot-(3ds-single-system)'>Flashing ntrboot (3DS Single System)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(3ds-multi-system)"><a href='/nl_NL/flashing-ntrboot-(3ds-multi-system)'>Flashing ntrboot (3DS Multi System)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(dsi)"><a href='/nl_NL/flashing-ntrboot-(dsi)'>Flashing ntrboot (DSi)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(nds)"><a href='/nl_NL/flashing-ntrboot-(nds)'>Flashing ntrboot (NDS)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(pichaxx)"><a href='/nl_NL/homebrew-launcher-(pichaxx)'>Homebrew Launcher (PicHaxx)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="bannerbomb3-fredtool-(twn)"><a href='/nl_NL/bannerbomb3-fredtool-(twn)'>BannerBomb3 + Fredtool (TWN)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(hardmod)"><a href='/nl_NL/installing-boot9strap-(hardmod)'>Installing boot9strap (Hardmod)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(hbl-usm)"><a href='/nl_NL/installing-boot9strap-(hbl-usm)'>Installing boot9strap (HBL-USM)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(ntrboot)"><a href='/nl_NL/installing-boot9strap-(ntrboot)'>Installing boot9strap (ntrboot)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(soundhax)"><a href='/nl_NL/installing-boot9strap-(soundhax)'>Installing boot9strap (Soundhax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(ssloth-browser)"><a href='/nl_NL/installing-boot9strap-(ssloth-browser)'>Installing boot9strap (SSLoth-Browser)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(fredtool)"><a href='/nl_NL/installing-boot9strap-(fredtool)'>Installing boot9strap (Fredtool)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(usm)"><a href='/nl_NL/installing-boot9strap-(usm)'>Installing boot9strap (USM)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(kartdlphax)"><a href='/nl_NL/installing-boot9strap-(kartdlphax)'>Installing boot9strap (kartdlphax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(hbl-usm)"><a href='/nl_NL/installing-boot9strap-(hbl-usm)'>Installing boot9strap (HBL-USM)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="finalizing-setup"><a href='/nl_NL/finalizing-setup'>Finalizing Setup</a></li>
+          
+        
+      </ol>
+    </li>
+  </ul>
+</nav>
+</div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Probleemoplossing">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Probleemoplossing
+</h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+
+        <hr>
+
+        
+        
+
+        
+          
+          <div class ="notice"><b>Voor hulp in het Engels kan je terecht bij <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew op Discord</a>.</b></div>
+        
+          
+          <div class ="notice"><b>Vind je dit een goede handleiding? We accepteren <a href="contribute#donations">donaties</a>.</b></div>
+        
+
+        <hr>
+
+        <p>Deze pagina biedt advies voor het oplossen van problemen die algemeen zijn ondervonden. Als je je probleem niet kunt oplossen met het advies op deze pagina, neem dan deel aan <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew op Discord</a> en beschrijf je probleem, inclusief wat je al hebt geprobeerd.</p>
+
+<details class="notice--info">
+<summary>Table of Contents</summary>
+
+<p>Used on multiple pages:</p>
+<ul>
+  <li><a href="#issues-with-safeb9sinstaller">SafeB9SInstaller</a></li>
+</ul>
+
+<p>Guide pages:</p>
+<ul>
+  <li><a href="#seedminer">Seedminer</a>
+    <ul>
+      <li><a href="#bannerbomb3">BannerBomb3</a></li>
+      <li><a href="#installing-boot9strap-usm">Installing boot9strap (USM)</a></li>
+      <li><a href="#installing-boot9strap-fredtool">Installing boot9strap (Fredtool)</a></li>
+    </ul>
+  </li>
+  <li><a href="#installing-boot9strap-soundhax">Installing boot9strap (Soundhax)</a></li>
+  <li>
+    <p><a href="#installing-boot9strap-ssloth-browser">Installing boot9strap (SSLoth-Browser)</a></p>
+  </li>
+  <li><a href="#finalizing-setup">Finalizing Setup</a></li>
+</ul>
+
+<p>Issues after installation:</p>
+<ul>
+  <li><a href="#boot-issues-on-devices-with-custom-firmware">Boot issues</a></li>
+  <li><a href="#software-issues-on-devices-with-custom-firmware">Software issues</a></li>
+</ul>
+
+</details>
+
+<h2 id="problemen-met-safeb9sinstaller">Problemen met SafeB9SInstaller</h2>
+
+<h3 id="sighaxed-firm-was-not-installed-kijk-naar-het-onderste-scherm-voor-meer-informatie">SigHaxed FIRM was not installed! Kijk naar het onderste scherm voor meer informatie.</h3>
+
+<details>
+<summary><u>SigHaxed FIRM - File not found</u></summary>
+
+<p>Ofwel zitten <code class="language-plaintext highlighter-rouge">boot9strap.firm</code> en <code class="language-plaintext highlighter-rouge">boot9strap.firm.sha</code> niet in de <code class="language-plaintext highlighter-rouge">boot9strap</code> map, of de <code class="language-plaintext highlighter-rouge">boot9strap</code> map heeft de verkeerde naam. Download de nieuwste versie van <a href="https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip">boot9strap</a> en plaats <code class="language-plaintext highlighter-rouge">boot9strap.firm</code> en <code class="language-plaintext highlighter-rouge">boot9strap.firm.sha</code> in de <code class="language-plaintext highlighter-rouge">boot9strap</code> map.</p>
+</details>
+
+<details>
+<summary><u>SigHaxed FIRM - invalid FIRM</u></summary>
+
+<p>Er is een probleem met je <code class="language-plaintext highlighter-rouge">boot9strap.firm</code> en <code class="language-plaintext highlighter-rouge">boot9strap.firm.sha</code> bestanden. Download de nieuwste versie van <a href="https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip">boot9strap</a> opnieuw en plaats <code class="language-plaintext highlighter-rouge">boot9strap.firm</code> en <code class="language-plaintext highlighter-rouge">boot9strap.firm.sha</code> in de <code class="language-plaintext highlighter-rouge">boot9strap</code> map.</p>
+</details>
+
+<details>
+<summary><u>Secret Sector - File not found</u></summary>
+
+<p>Je mist <code class="language-plaintext highlighter-rouge">secret_sector.bin</code> van de <code class="language-plaintext highlighter-rouge">boot9strap</code> map, of de <code class="language-plaintext highlighter-rouge">boot9strap</code> map heeft niet de juiste naam. Download <a href="magnet:?xt=urn:btih:15a3c97acf17d67af98ae8657cc66820cc58f655&amp;dn=secret_sector.bin&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.lelux.fi%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.loadbt.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.monitorit4.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.ololosh.space%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.srv00.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.theoks.net%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.zerobytes.xyz%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker1.bt.moack.co.kr%3a80%2fannounce&amp;tr=udp%3a%2f%2fvibe.sleepyinternetfun.xyz%3a1738%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&amp;tr=http%3a%2f%2fopenbittorrent.com%3a80%2fannounce">secret_sector.bin</a> met behulp van een torrent client en plaats het in de <code class="language-plaintext highlighter-rouge">boot9strap</code> map.</p>
+</details>
+
+<details>
+<summary><u>Something else</u></summary>
+
+<p>Sluit je aan bij <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew op Discord</a> voor hulp, en beschrijf het bericht dat je ziet.</p>
+</details>
+
+<h2 id="seedminer">Seedminer</h2>
+
+<details>
+<summary><u>Multiple long folder names in Nintendo 3DS folder</u></summary>
+
+<p class="notice--info"><img src="https://3ds.hacks.guide/images/screenshots/multiple-id0.png" alt="" /></p>
+
+<p>Dit gebeurt wanneer je je SD-kaart in meerdere 3DS systemen gebruikt en is bedoeld om te voorkomen dat je per ongeluk gegevens samenvoegt die niet geldig zouden zijn op een ander apparaat. Om erachter te komen welke lange mapnaam correct is voor je 3DS, volg dan deze instructies:</p>
+
+<ol>
+  <li>Hernoem de <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> map naar <code class="language-plaintext highlighter-rouge">BACKUP_Nintendo 3DS</code></li>
+  <li>Stop je SD-kaart terug in je 3DS en zet je 3DS aan</li>
+  <li>Wacht tot het apparaat de SD-kaart gegevens genereert
+    <ul>
+      <li>Je applicaties zullen verdwenen zijn. Dit is normaal en wordt binnenkort opgelost</li>
+    </ul>
+  </li>
+  <li>Zet je apparaat uit en plaats je SD-kaart terug in je computer</li>
+  <li>Ga naar de <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> map op je SD-kaart</li>
+  <li>Kopieer de 32-tekens lange naam van de map die je ziet
+    <ul>
+      <li>Dit is je echte ID0 die je zal gebruiken in <a href="seedminer#section-ii---seedminer">Deel II van Seedminer</a></li>
+    </ul>
+  </li>
+  <li>Verwijder de <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> map</li>
+  <li>Hernoem de <code class="language-plaintext highlighter-rouge">BACKUP_Nintendo 3DS</code> map naar <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code></li>
+</ol>
+</details>
+
+<details>
+<summary><u>Bruteforce Movable skips to step 4</u></summary>
+
+<p>De website heeft al je <code class="language-plaintext highlighter-rouge">movable.sed</code> gemijnd met je friend code en ID0 combinatie. Je kunt de ‘movable.sed’ gebruiken die het je biedt.</p>
+</details>
+
+<details>
+<summary><u>Important! You have been locked out of the automated part1 dumper system...</u></summary>
+
+<p>Je friend code is geblokkeerd voor het gebruik van de friend code bot omdat je 3DS de bot niet succesvol heeft bevriend. Zorg ervoor dat je 3DS correct is verbonden met het internet, ga dan naar de <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew Discord server</a> en vraag om ontgrendeld te worden.</p>
+</details>
+
+<details>
+<summary><u>We were unable to successfully complete your bruteforce request. :`(</u></summary>
+
+<p>De website heeft bepaald dat jouw ‘movable.sed’ niet kan gebruteforced worden. Zorg ervoor dat je de website het juiste ID0 gegeven hebt. Als blijkt dat je ID0 juist is, dan kun je geen gebruik maken van Seedminer en zul je een andere methode moeten proberen dat ofwel extra spellen of hardware vereist.</p>
+</details>
+
+<h2 id="bannerbomb3">BannerBomb3</h2>
+
+<details>
+<summary><u>Multiple ID1 folders inside of ID0</u></summary>
+
+<p><img src="https://3ds.hacks.guide/images/screenshots/multiple-id1.png" alt="" /></p>
+
+<p>This can occur if you’ve used multiple SD cards on a 3DS and then merged the contents of the SD cards together. This is done to prevent conflicting, valid data from being merged together.</p>
+
+<p>To fix this, you will need to determine which folder contains your data. Usually, this will be the larger (or largest) of the folders. Backup and delete the smaller one(s), then create a <code class="language-plaintext highlighter-rouge">Nintendo DSiWare</code> folder in the one that remains and move <code class="language-plaintext highlighter-rouge">F00D43D5.bin</code> to that location.</p>
+
+</details>
+
+<details>
+<summary><u>DSiWare Management menu crashes without showing BB3 multihax menu</u></summary>
+<p>Zorg ervoor dat <code class="language-plaintext highlighter-rouge">F00D43D5.bin</code> het enige bestand in <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID0&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID1&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">Nintendo DSiWare</code> is. If it is, then re-create it with the <a href="http://3dstools.nhnarwhal.com/#/bb3gen">Bannerbomb3 Injector</a>.</p>
+
+<p>Also, ensure that <code class="language-plaintext highlighter-rouge">bb3.bin</code> is on the root of the SD card. If it is missing, then download the latest release of <a href="https://github.com/lifehackerhansol/Bannerbomb3/releases/download/v3.0-lhs1/bb3.bin">Bannerbomb3</a> (direct download), and copy the <code class="language-plaintext highlighter-rouge">bb3.bin</code> file to the root of your SD card.</p>
+
+<p>If neither of these solutions fixes this problem, then custom firmware may have been uninstalled on this device in a way that makes this method impossible to perform. If this is the case, join <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew on Discord</a> and ask, in English, for help.</p>
+</details>
+
+<details>
+<summary><u>DSiWare Management menu displays "No accessible software data."</u></summary>
+
+<p><code class="language-plaintext highlighter-rouge">F00D43D5.bin</code> bevindt zich niet in <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID0&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID1&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">Nintendo DSiWare</code>. Zorg ervoor dat <code class="language-plaintext highlighter-rouge">Nintendo DSiWare</code> correct gespeld is en een spatie heeft. Hoofdletters/kleine letters maken niet uit.</p>
+</details>
+
+<details>
+<summary><u>DSiWare Management shows a question mark</u></summary>
+
+<p>Er kan een probleem zijn met je <code class="language-plaintext highlighter-rouge">F00D43D5.bin</code> bestand (het kan beschadigd zijn of bedoeld voor een andere 3DS). Re-create your <code class="language-plaintext highlighter-rouge">F00D43D5.bin</code> file with the <a href="http://3dstools.nhnarwhal.com/#/bb3gen">Bannerbomb3 Injector</a>, ensuring that you use the <code class="language-plaintext highlighter-rouge">movable.sed</code> file for your console.</p>
+</details>
+
+<h2 id="boot9strap-installeren-usm">Boot9strap installeren (USM)</h2>
+
+<details>
+<summary><u>Safe Mode system update succeeds instead of giving error 003-1099</u></summary>
+
+<p>unSAFE_MODE is not installed. <a href="installing-boot9strap-(usm)">Follow the instructions</a> to install it.</p>
+</details>
+
+<details>
+<summary><u>Red screen after selecting "Detailed Setup"</u></summary>
+
+<p>The file <code class="language-plaintext highlighter-rouge">usm.bin</code> is missing or misplaced. Download the latest release of <a href="https://github.com/zoogie/unSAFE_MODE/releases/download/v1.3/usm.bin">unSAFE_MODE</a> and place <code class="language-plaintext highlighter-rouge">usm.bin</code> on the root of your SD card. Voeg de <code class="language-plaintext highlighter-rouge">.bin</code> extensie niet toe als je het nog niet ziet.</p>
+
+<p>There is also a possibility that the console isn’t reading your SD card. Make sure it is inserted and formatted correctly.</p>
+</details>
+
+<details>
+<summary><u>Failed to open SafeB9SInstaller.bin</u></summary>
+
+<p>Het bestand <code class="language-plaintext highlighter-rouge">SafeB9SInstaller.bin</code> ontbreekt of zit in de verkeerde map. Download de nieuwste versie van <a href="https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip">SafeB9SInstaller</a>, pak het uit en plaats <code class="language-plaintext highlighter-rouge">SafeB9SInstaller.bin</code> op de hoofdmap van je SD-kaart. Voeg de <code class="language-plaintext highlighter-rouge">.bin</code> extensie niet toe als je het nog niet ziet.</p>
+</details>
+
+<details>
+<summary><u>Failed to mount the SD card!</u></summary>
+
+<p>Maak een back-up van je data en herformatteer je SD-kaart als FAT32 met het aanbevolen hulpmiddel afhankelijk van je besturingssysteem: (<a href="formatting-sd-(windows)">Windows</a>, <a href="formatting-sd-(mac)">macOS</a> of <a href="formatting-sd-(linux)">Linux</a>). MiniTool Partition Wizard and the HP formatting tool (HPUSBDisk) are known to cause issues with 3DS SD cards.</p>
+
+<p>Mocht dit niet lukken, gebruik dan een andere SD-kaart.</p>
+</details>
+
+<h2 id="boot9strap-installeren-fredtool">Boot9strap installeren (Fredtool)</h2>
+
+<details>
+<summary><u>Error on Fredtool Injector page</u></summary>
+
+<p>Zorg ervoor dat je <code class="language-plaintext highlighter-rouge">movable.sed</code> en DSiWare back-up van dezelfde console komen. Een mismatch resulteert in een error.</p>
+</details>
+
+<details>
+<summary><u>Unable to select "Haxxxxxxxxx!" because the BB3 multihax menu appears</u></summary>
+
+<p>You forgot to delete <code class="language-plaintext highlighter-rouge">F00D43D5.bin</code> from the SD card. Navigate to <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID0&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID1&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">Nintendo DSiWare</code> on your SD card and delete the <code class="language-plaintext highlighter-rouge">F00D43D5.bin</code> file.</p>
+</details>
+
+<details>
+<summary><u>"Haxxxxxxxxx!" does not appear</u></summary>
+
+<p>Er is een probleem met je <code class="language-plaintext highlighter-rouge">42383821.bin</code> bestand (het is onjuist, het ontbreekt, werd misplaatst of is beschadigd). Re-create your files with the <a href="https://jenkins.nelthorya.net/job/DSIHaxInjector_new/build?delay=0sec">DSIHaxInjector_new</a> website and ensure that you place the <code class="language-plaintext highlighter-rouge">42383821.bin</code> file from <code class="language-plaintext highlighter-rouge">output.zip</code> -&gt; <code class="language-plaintext highlighter-rouge">hax</code> in <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID0&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID1&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">Nintendo DSiWare</code>.</p>
+</details>
+
+<details>
+<summary><u>DS Connection Settings launches normally</u></summary>
+
+<p><code class="language-plaintext highlighter-rouge">Haxxxxxxxxx!</code> is niet van je SD-kaart naar het systeemgeheugen gekopieerd.</p>
+</details>
+
+<details>
+<summary><u>Black screen when launching DS Connection Settings</u></summary>
+
+<p>Je DS Connection Settings app is stuk en je zult toegang nodig hebben tot de Homebrew Launcher om dit probleem op te lossen. Sluit je aan bij <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew op Discord</a> voor hulp.</p>
+</details>
+
+<details>
+<summary><u>SD card is grayed out in Flipnote</u></summary>
+
+<p>Flipnote kan een lange tijd nemen om je kaart te indexeren als je een grote SD-kaart hebt. Laat het een aantal minuten blijven zitten.</p>
+</details>
+
+<details>
+<summary><u>Lenny face verschijnt niet in SD-kaart sectie</u></summary>
+
+<p>Je hebt de <code class="language-plaintext highlighter-rouge">private</code> map niet van Frogminer_save <code class="language-plaintext highlighter-rouge">.zip</code> naar de hoofdmap van je SD-kaart gekopieert.</p>
+</details>
+
+<details>
+<summary><u>Flipnote bevriest</u></summary>
+
+<p>Het zou kunnen dat je per ongelijk het touch screen hebt aangeraakt terwijl de gemodificeerde Flipnote open stond. Voer je DS Connection Settings opnieuw in en zorg ervoor dat je niet per ongelijk het touchscreen gebruikt.</p>
+</details>
+
+<details>
+<summary><u>Green screen after pasting</u></summary>
+
+<p>Het bestand <code class="language-plaintext highlighter-rouge">boot.nds</code> ontbreekt of is misplaatst. Download de nieuwste versie van <a href="https://github.com/zoogie/b9sTool/releases/latest">b9stool</a> en plaats <code class="language-plaintext highlighter-rouge">boot.nds</code> op de hoofdmap van je SD-kaart, ter vervanging van het bestaande bestand.</p>
+</details>
+
+<details>
+<summary><u>White screen after pasting</u></summary>
+<p>Er is een probleem met je <code class="language-plaintext highlighter-rouge">boot.nds</code> bestand. Download de nieuwste versie van <a href="https://github.com/zoogie/b9sTool/releases/latest">b9stool</a> opnieuw en plaats <code class="language-plaintext highlighter-rouge">boot.nds</code> op de hoofdmap van je SD-kaart, ter vervanging van het bestaande bestand.</p>
+</details>
+
+<details>
+<summary><u>Unable to open Luma3DS configuration menu after running B9STool</u></summary>
+
+<p>Join <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew on Discord</a> and explain what has happened.</p>
+</details>
+
+<h2 id="boot9strap-installeren-soundhax">Boot9strap installeren (Soundhax)</h2>
+
+<details>
+<summary><u>Red/purple/pink and white screen after running Soundhax</u></summary>
+
+<p>Als jouw apparaat op systeemversie 9.4.0, 9.5.0 of 9.6.0 is, kun je op een bug stuiten met een oude versie van universal-otherapp. Download de nieuwste versie <a href="https://github.com/TuxSH/universal-otherapp/releases/latest">hier</a>.</p>
+
+<p>Als je apparaat niet op deze firmware draait, is de kans groot dat je al custom firmware hebt. Je zou best <a href="checking-for-cfw">controleren op CFW</a>.</p>
+</details>
+
+<details>
+<summary><u>"An error has occurred, forcing the software to close..." (white message box)</u></summary>
+
+<p>Er is een probleem met je <code class="language-plaintext highlighter-rouge">otherapp.bin</code> bestand (het ontbreekt, werd misplaatst of is corrupted). Download de nieuwste versie van <a href="https://github.com/TuxSH/universal-otherapp/releases/latest">universal-otherapp</a> en plaats het op de hoofdmap van je SD-kaart.</p>
+</details>
+
+<details>
+<summary><u>"Could not play"</u></summary>
+
+<p>Je hebt het verkeerde Soundhax bestand gebruikt voor je apparaat en regio, of je apparaat is niet compatibel met Soundhax. In het laatste geval moet je je apparaat updaten naar de nieuwste versie en volg <a href="seedminer">Seedminer</a>.</p>
+</details>
+
+<details>
+<summary><u>Failed to open SafeB9SInstaller.bin</u></summary>
+
+<p>Het bestand <code class="language-plaintext highlighter-rouge">SafeB9SInstaller.bin</code> ontbreekt of zit in de verkeerde map. Download de nieuwste versie van <a href="https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip">SafeB9SInstaller</a>, pak het uit en plaats <code class="language-plaintext highlighter-rouge">SafeB9SInstaller.bin</code> op de hoofdmap van je SD-kaart. Voeg de <code class="language-plaintext highlighter-rouge">.bin</code> extensie niet toe als je het nog niet ziet.</p>
+</details>
+
+<details>
+<summary><u>Failed to mount the SD card!</u></summary>
+<p>Maak een back-up van je data en herformatteer je SD-kaart als FAT32 met het aanbevolen hulpmiddel afhankelijk van je besturingssysteem: (<a href="formatting-sd-(windows)">Windows</a>, <a href="formatting-sd-(mac)">macOS</a> of <a href="formatting-sd-(linux)">Linux</a>). MiniTool Partition Wizard and the HP formatting tool (HPUSBDisk) are known to cause issues with 3DS SD cards.</p>
+
+<p>Mocht dit niet lukken, gebruik dan een andere SD-kaart.</p>
+</details>
+
+<h2 id="installing-boot9strap-ssloth-browser">Installing boot9strap (SSLoth-Browser)</h2>
+
+<details>
+<summary><u>Red/purple/pink and white screen after running Browserhax</u></summary>
+
+<p>This likely indicates that you already have custom firmware. Je zou best <a href="checking-for-cfw">controleren op CFW</a>.</p>
+</details>
+
+<details>
+<summary><u>"An error has occurred. Hold down the POWER button to turn off the power..." (black screen with text)</u></summary>
+
+<p>The file <code class="language-plaintext highlighter-rouge">arm11code.bin</code> is missing or misplaced. Download the latest release of <a href="https://github.com/TuxSH/universal-otherapp/releases/latest">universal-otherapp</a>, place <code class="language-plaintext highlighter-rouge">otherapp.bin</code> on the root of your SD card and rename it to <code class="language-plaintext highlighter-rouge">arm11code.bin</code>. Voeg de <code class="language-plaintext highlighter-rouge">.bin</code> extensie niet toe als je het nog niet ziet.</p>
+</details>
+
+<details>
+<summary><u>"An error has occurred, forcing the software to close..." (white message box)</u></summary>
+
+<p>There is an issue with your <code class="language-plaintext highlighter-rouge">arm11code.bin</code> file. Download the latest release of <a href="https://github.com/TuxSH/universal-otherapp/releases/latest">universal-otherapp</a>, place <code class="language-plaintext highlighter-rouge">otherapp.bin</code> on the root of your SD card and rename it to <code class="language-plaintext highlighter-rouge">arm11code.bin</code>. Voeg de <code class="language-plaintext highlighter-rouge">.bin</code> extensie niet toe als je het nog niet ziet.</p>
+</details>
+
+<details>
+<summary><u>Opening the browserhax QR code or URL crashes</u></summary>
+
+<p>Browser based exploits (such as this one) are often unstable and crash frequently, but they can sometimes be fixed by doing the following steps.</p>
+
+<ol>
+  <li>Launch the browser, then launch the browser settings</li>
+  <li>Scroll to the bottom and Initialize Savedata (it also may be called Clear All Save Data)</li>
+  <li>Try the exploit again</li>
+</ol>
+</details>
+
+<details>
+<summary><u>System Update prompt when opening browser</u></summary>
+
+<p>The SSLoth proxy was incorrectly configured. Re-do the SSLoth section on the page.</p>
+</details>
+
+<details>
+<summary><u>Error 032-0420 when opening browser</u></summary>
+
+<p>Follow these steps in order:</p>
+
+<ol>
+  <li>Launch the System Settings application</li>
+  <li>Navigate to <code class="language-plaintext highlighter-rouge">Internet Settings</code> -&gt; <code class="language-plaintext highlighter-rouge">Connection Settings</code></li>
+  <li>Click on your network connection slot and navigate to <code class="language-plaintext highlighter-rouge">Change Settings</code> -&gt; <code class="language-plaintext highlighter-rouge">Next Page (right arrow)</code> -&gt; <code class="language-plaintext highlighter-rouge">Proxy Settings</code></li>
+  <li>Set “Proxy Settings” to “No”</li>
+  <li>Click OK, then click Save</li>
+  <li>When prompted, click “Test” to perform the connection test
+    <ul>
+      <li>The test should succeed</li>
+    </ul>
+  </li>
+  <li>Click “OK” to continue</li>
+  <li>Press “Back” twice, then “Close” to go back to the HOME Menu</li>
+  <li>Open the Internet Browser once</li>
+  <li>If prompted about a system update, press OK
+    <ul>
+      <li>This won’t actually update the system</li>
+    </ul>
+  </li>
+  <li>Start again from <a href="installing-boot9strap-(ssloth-browser).html#section-ii---ssloth">Section II</a></li>
+</ol>
+</details>
+
+<details>
+<summary><u>"To use the Internet Browser, please update your system using the System Update option in the System Settings."</u></summary>
+
+<p>First, make sure you entered the correct proxy for the connection you’re using. If not, go back to <a href="installing-boot9strap-(ssloth-browser).html#section-ii---ssloth">Section II</a>. If the proxy is correct, then your device has been cart-updated, which means an alternate exploit will need to be used.</p>
+
+<p><u>Method 1</u><br />
+If the two numbers before the region in the system version string is equal to or less than 36 (e.g. Ver. 11.14.0-<strong>36</strong>U), you can follow <a href="installing-boot9strap-(soundhax)">Soundhax</a>. When prompted to select a firmware to generate the sound file, use:</p>
+
+<ul>
+  <li>1.x - 2.1 if the number is between 0 and 2</li>
+  <li>2.1 - 2.2 if the number is between 3 and 4</li>
+  <li>3.x - 4.x if the number is between 5 and 10</li>
+  <li>5.x - 11.3 if the number is between 11 and 36</li>
+</ul>
+
+<p><u>Method 2 (Old 3DS only)</u><br />
+If you have an Old 3DS / Old 3DS XL / 2DS, you can try a Safe Mode update, which will trigger an alternate exploit:</p>
+
+<ol>
+  <li>Ensure that the proxy that you used for SSLoth is still actively applied to your internet connection</li>
+  <li>With your device powered off, hold the following buttons: (Left Shoulder) + (Right Shoulder) + (D-Pad Up) + (A), and while holding these buttons together, power on your device
+    <ul>
+      <li>Keep holding the buttons until the device boots into Safe Mode (a “system update” menu)</li>
+    </ul>
+  </li>
+  <li>Press “OK” to accept the update</li>
+  <li>If everything worked correctly, the update will fail and the 3DS will boot into SafeB9SInstaller. If it did, then continue from <a href="installing-boot9strap-(ssloth-browser)#section-iv---installing-boot9strap">Section IV</a>.</li>
+</ol>
+
+<hr />
+
+<p>If these methods didn’t work (or do not apply to you), update your device to the latest version and follow <a href="seedminer">Seedminer</a>.</p>
+
+</details>
+
+<details>
+<summary><u>Failed to open SafeB9SInstaller.bin</u></summary>
+
+<p>Het bestand <code class="language-plaintext highlighter-rouge">SafeB9SInstaller.bin</code> ontbreekt of zit in de verkeerde map. Download de nieuwste versie van <a href="https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip">SafeB9SInstaller</a>, pak het uit en plaats <code class="language-plaintext highlighter-rouge">SafeB9SInstaller.bin</code> op de hoofdmap van je SD-kaart. Voeg de <code class="language-plaintext highlighter-rouge">.bin</code> extensie niet toe als je het nog niet ziet.</p>
+</details>
+
+<details>
+<summary><u>Frozen on "Doing agbhax..."</u></summary>
+<p>There may be an issue with your <code class="language-plaintext highlighter-rouge">arm11code.bin</code> file. Re-download the latest release of <a href="https://github.com/TuxSH/universal-otherapp/releases/latest">universal-otherapp</a>, place it on the root of your SD card, and rename it to <code class="language-plaintext highlighter-rouge">arm11code.bin</code>. Voeg de <code class="language-plaintext highlighter-rouge">.bin</code> extensie niet toe als je het nog niet ziet.</p>
+
+<p>If you have a Taiwanese unit (with a T in the version string, ie. 11.3.0-##T), you will not be able to follow these instructions, and you will need to update your console and follow <a href="seedminer">Seedminer</a> instead.</p>
+
+<p>If you have a Mainland Chinese unit (with a C in the version string, ie. 11.3.0-##C), join <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew on Discord</a> for assistance.</p>
+</details>
+
+<details>
+<summary><u>"PrepareArm9ForTwl returned error c8804631!"</u></summary>
+
+<p>Sluit je aan bij <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew op Discord</a> voor hulp.</p>
+</details>
+
+<details>
+<summary><u>Failed to mount the SD card!</u></summary>
+
+<p>Maak een back-up van je data en herformatteer je SD-kaart als FAT32 met het aanbevolen hulpmiddel afhankelijk van je besturingssysteem: (<a href="formatting-sd-(windows)">Windows</a>, <a href="formatting-sd-(mac)">macOS</a> of <a href="formatting-sd-(linux)">Linux</a>). MiniTool Partition Wizard and the HP formatting tool (HPUSBDisk) are known to cause issues with 3DS SD cards.</p>
+
+<p>Mocht dit niet lukken, gebruik dan een andere SD-kaart.</p>
+</details>
+
+<h2 id="installatie-voltooien">Installatie voltooien</h2>
+
+<details>
+<summary><u>Unable to update device</u></summary>
+
+<p>De volgende stappen kunnen in elke volgorde uitgevoerd worden, maar zijn gesorteerd volgens de moeilijkheidsgraad om ze uit te voeren.</p>
+
+<ol>
+  <li>Stel uw DNS instellingen in op “Auto”</li>
+  <li>Verplaats je dichter bij je wifi-router</li>
+  <li>Update vanuit Safe Mode door je console uit te schakelen, (Left Shoulder) + (Right Shoulder) + (D-Pad Up) + (A) ingedrukt te houden tijdens het opstarten en de instructies te volgen op het scherm</li>
+  <li>Verwijder je wifi connectie, verbind daarne opnieuw met je wifi</li>
+  <li>Herstart je wifi-router</li>
+  <li>Maak verbinding met een andere wifi-verbinding, zoals een mobiele hotspot</li>
+  <li>Nintendo servers kunnen offline zijn; Probeer het later opnieuw</li>
+  <li>Als je nog steeds een foutmelding krijgt, <a href="ctrtransfer">volg dan CTRTransfer</a> en probeer het opnieuw</li>
+  <li>Voor verdere ondersteuning (in het Engels), join dan <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew op Discord</a></li>
+</ol>
+</details>
+
+<details>
+<summary><u>Unable to enter Rosalina menu due to broken Left Shoulder / Down D-Pad / Select button(s)</u></summary>
+
+<p>Download this <a href="assets/config.ini">alternate config.ini</a> and place it in <code class="language-plaintext highlighter-rouge">/luma/</code>. Dit zal de Rosalina sleutel combinatie veranderen naar (X) + (Y).</p>
+</details>
+
+<details>
+<summary><u>"An exception occurred" or infinite "Nintendo 3DS" screen after trying to launch Homebrew Launcher from Download Play</u></summary>
+
+<p>Er is een probleem met je <code class="language-plaintext highlighter-rouge">boot.3dsx</code> bestand (het ontbreekt, werd misplaatst of is corrupted). Download de nieuwste versie van <a href="https://github.com/devkitPro/3ds-hbmenu/releases/latest">de Homebrew Launcher</a> en plaats <code class="language-plaintext highlighter-rouge">boot.3dsx</code> op de hoofdmap van je SD-kaart, ter vervanging van elk bestaand bestand.</p>
+</details>
+
+<details>
+<summary><u>"Scripts directory not found" in GodMode9</u></summary>
+
+<p>Je hebt de map <code class="language-plaintext highlighter-rouge">gm9</code> niet van de GodMode9 <code class="language-plaintext highlighter-rouge">.zip</code> naar de hoofdmap van de SD-kaart gekopieert. Download de nieuwste versie van <a href="https://github.com/d0k3/GodMode9/releases/latest">GodMode9</a> en plaats de <code class="language-plaintext highlighter-rouge">gm9</code> map op de hoofdmap van je SD-kaart, voeg deze samen met de bestaande bestanden.</p>
+</details>
+
+<details>
+<summary><u>"Backup failed" or "Error: Could not open directory" when attempting a NAND backup</u></summary>
+<p>Make sure you have at least 1.3GB available in your SD card. If you don’t have enough space, follow these steps:</p>
+<ol>
+  <li>Power off your console</li>
+  <li>Remove the SD card and insert it into your computer</li>
+  <li>Copy the <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> folder from the root of your SD card to your computer</li>
+  <li>Delete the Nintendo 3DS folder from the SD card</li>
+  <li>Power off your console, hold START and power on still holding START to boot on GodMode9</li>
+  <li>Perform a <a href="godmode9-usage#creating-a-nand-backup">NAND Backup</a></li>
+  <li>Copy the files in <code class="language-plaintext highlighter-rouge">gm9/out</code> on your SD to a safe location on your computer</li>
+  <li>Delete the <code class="language-plaintext highlighter-rouge">&lt;date&gt;_&lt;serialnumber&gt;_sysnand_##.bin</code> and <code class="language-plaintext highlighter-rouge">&lt;date&gt;_&lt;serialnumber&gt;_sysnand_##.bin.sha</code> files from the SD card, keeping essential.exefs in <code class="language-plaintext highlighter-rouge">/gm9/out/</code></li>
+  <li>Copy the <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> folder from your computer to the root of your SD card</li>
+  <li>Delete the <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> folder from your computer</li>
+</ol>
+
+<p>If you have enough space on your SD card, your SD might be corrupted or faulty. Check your SD card for any errors by following the guide according to your computer’s operating system: <a href="h2testw-(windows)">Windows</a>, <a href="f3-(linux)">Linux</a>, <a href="f3xswift-(mac)">macOS</a>.</p>
+</details>
+
+<hr />
+
+<h2 id="boot-issues-on-devices-with-custom-firmware">Boot issues on devices with custom firmware</h2>
+
+<p class="notice--info">De instructies die hier vermeld worden gaan er van uit dat je console een moderne custom firmware setup heeft (boot9strap + Luma3DS 8.0 of hoger). Als je console een oudere homebrew setup heeft (bijvoorbeeld iets gebaseerd op arm9loaderhax of menuhax), dan moet je updaten voor je deze instructies probeert.</p>
+
+<h3 id="powernotification-light-indicators">Power/notification light indicators</h3>
+
+<details>
+<summary><u>My device powers off when I try to turn it on, and/or the notification LED shows a color on boot</u></summary>
+
+<p>Er is een probleem met je <code class="language-plaintext highlighter-rouge">boot.firm</code> bestand. Als je <a href="https://github.com/SciresM/boot9strap/releases/tag/1.4">boot9strap 1.4</a> gebruikt, kan je 3DS notificatie LED een bepaalde kleur flashen. Deze kleur wordt gebruikt om problemen met je <code class="language-plaintext highlighter-rouge">boot.firm</code> bestand op SD-kaart of intern geheugen te diagnosticeren. Bij oudere versies van boot9strap zal het blauwe licht bijna onmiddellijk uitgeschakeld worden wanneer je je apparaat probeert op te starten.</p>
+
+<p>Als de notificatie LED knippert:</p>
+
+<p>-<strong>Wit</strong>: Je 3DS was niet in staat om <code class="language-plaintext highlighter-rouge">boot.firm</code> te vinden op je SD-kaart of in je interne geheugen.
+-<strong>Magenta</strong>: Je 3DS was niet in staat om <code class="language-plaintext highlighter-rouge">boot.firm</code> te vinden op je SD-kaart. Het kon <code class="language-plaintext highlighter-rouge">boot.firm</code> vinden in het interne geheugen, maar het bestand is beschadigd.
+-<strong>Red</strong>: Je 3DS kon <code class="language-plaintext highlighter-rouge">boot.firm</code> vinden op je SD-kaart en in je interne geheugen, maar beide bestanden zijn beschadigd.</p>
+
+<p>Je kunt een nieuw <code class="language-plaintext highlighter-rouge">boot.firm</code> bestand krijgen door de <a href="https://github.com/LumaTeam/Luma3DS/releases/latest">nieuwste versie van Luma3DS</a> te downloaden, het uitpakken en <code class="language-plaintext highlighter-rouge">boot.firm</code> plaatsen op de hoofdmap van je SD-kaart. Indien je <code class="language-plaintext highlighter-rouge">boot.firm</code> bestand consequent gedetecteerd wordt als beschadigd, controleer je best je SD-kaart op fouten (<a href="h2testw-(windows)">Windows</a>, <a href="f3-(linux)">Linux</a>, of <a href="f3xswift-(mac)">macOS</a>). Houd er ook rekening mee dat de 3DS problemen heeft met bestanden die zijn uitgepakt met WinRAR.</p>
+
+<p>Als je een “pop” hoort, mogelijks samen met de achtergrondverlichting die eventjes aanschiet, is er een hardware probleem met je console (zoals een achtergrondlicht kabel die niet aangesloten is). Je zou je apparaat kunnen laten opstarten door het op bepaalde hoeken vast te houden.</p>
+</details>
+
+<details>
+<summary><u>My device gets stuck on a black screen with blue power light staying on</u></summary>
+
+<p>De volgende stappen kunnen in elke volgorde uitgevoerd worden, maar zijn gesorteerd volgens de tijdsduur om ze uit te voeren.</p>
+
+<ol>
+  <li>Power off your device, remove the SD card, re-insert it, then power on your device.</li>
+  <li>Zet je apparaat uit, haal de gamecartridge eruit als deze is geplaatst, zet je apparaat aan en wacht tien minuten. Als je apparaat binnen tien minuten wordt opgestart, is het probleem opgelost en zal het waarschijnlijk niet meer voorkomen</li>
+  <li>Hernoem de <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> map op je SD-kaart naar <code class="language-plaintext highlighter-rouge">Nintendo 3DS_BACKUP</code> en probeer dan je 3DS op te starten. Als je apparaat succesvol opstart, is er een probleem in je <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> map. Probeer HOME Menu extdata te wissen:
+    <ul>
+      <li>Navigeer naar <code class="language-plaintext highlighter-rouge">/Nintendo 3DS/&lt;ID0&gt;/&lt;ID1&gt;/extdata/00000000/</code>
+      + Verwijder de overeenkomende map voor je 3DS regio:
+        <ul>
+          <li><strong>EUR Regio</strong>: <code class="language-plaintext highlighter-rouge">00000098</code></li>
+          <li><strong>JPN Regio</strong>: <code class="language-plaintext highlighter-rouge">00000082</code></li>
+          <li><strong>USA Regio</strong>: <code class="language-plaintext highlighter-rouge">0000008f</code></li>
+          <li><strong>CHN Regio</strong>: <code class="language-plaintext highlighter-rouge">000000A1</code></li>
+          <li><strong>KOR Regio</strong>: <code class="language-plaintext highlighter-rouge">000000A9</code></li>
+          <li><strong>TWN Regio</strong>: <code class="language-plaintext highlighter-rouge">000000B1</code></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Probeer in herstelmodus op te starten en je systeem up te daten:
+    <ul>
+      <li>Schakel je 3DS uit</li>
+      <li>Hou de volgende knoppen vast: (Left Shoulder) + (Right Shoulder) + (D-Pad omhoog) + (A)</li>
+      <li>Zet je 3DS aan</li>
+      <li>Als je succesvol was, zal het apparaat opstarten naar een “update je systeem” scherm</li>
+    </ul>
+  </li>
+  <li>Volg de <a href="ctrtransfer">CTRTransfer</a> handleiding</li>
+  <li>Voor verdere ondersteuning vraag om hulp in de <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew Discord</a></li>
+</ol>
+</details>
+
+<h3 id="error-message-on-boot">Error message on boot</h3>
+
+<details>
+<summary><u>"An error has occurred: Failed to apply 1 FIRM patch(es)" or "An exception has occurred -- Current process: pm"</u></summary>
+
+<p>Je Luma3DS versie is verouderd. Download de nieuwste versie van <a href="https://github.com/LumaTeam/Luma3DS/releases/latest">Luma3DS</a> en plaats <code class="language-plaintext highlighter-rouge">boot.firm</code> op de hoofdmap van je SD-kaart, ter vervanging van het bestaande bestand. Zorg ervoor dat je het ZIP-bestand uitpakt met een andere tool dan WinRAR, omdat het bekend is dat het problemen veroorzaakt met 3DS-gerelateerde bestanden.</p>
+</details>
+
+<details>
+<summary><u>"Unable to mount CTRNAND or load the CTRNAND FIRM. Please use an external one."</u></summary>
+<p>There are a number of reasons as to why this could be happening. In any case, this error can usually be fixed by following the <a href="ctrtransfer">CTRTransfer</a> guide.</p>
+</details>
+
+<details>
+<summary><u>"An error has occurred. Hold down the POWER button to turn off the power..."</u></summary>
+
+<p>ARM11 exception handlers zijn uitgeschakeld of custom firmware is niet geïnstalleerd. Probeer ARM11 exception handlers in te schakelen:</p>
+<ul>
+  <li>Schakel je 3DS uit</li>
+  <li>Hou (Select) vast</li>
+  <li>Zet je apparaat aan, terwijl je (Select) ingedrukt houdt</li>
+  <li>Als “Disable ARM11 exception handlers” is aangevinkt, vink het uit</li>
+</ul>
+</details>
+
+<details>
+<summary><u>HOME Menu is missing installed applications</u></summary>
+
+<p>This could be caused by various reasons, but most likely because your SD card is not being read by the system.
+You can check if your SD is being read by holding SELECT on boot and checking the yellow text on the bottom screen; if it says “Booted from CTRNAND via B9S”, then your device is booting from the internal memory and not from the SD card.
+If this is the case, attempt the steps below, which are listed from easiest to hardest:</p>
+<ol>
+  <li>Power off your device, remove the SD card, re-insert it, then power on your device</li>
+  <li>Power off your device, remove the SD card, insert it on your PC, download the latest release of <a href="https://github.com/LumaTeam/Luma3DS/releases/latest">Luma3DS</a>, extract <code class="language-plaintext highlighter-rouge">boot.firm</code> from the <code class="language-plaintext highlighter-rouge">Luma3DS.zip</code> and place it on the root of your SD card (replacing any existing file)</li>
+  <li>Power off your device, remove the SD card, insert it on your PC and reformat your SD card according to your computer’s operating system: <a href="formatting-sd-(windows)">Windows</a>, <a href="formatting-sd-(mac)">macOS</a>, <a href="formatting-sd-(linux)">Linux</a> <em>(this will wipe your SD card data)</em></li>
+  <li>Test your SD card for errors by following the guide according to your computer’s operating system: <a href="h2testw-(windows)">Windows</a>, <a href="f3-(linux)">Linux</a>, <a href="f3xswift-(mac)">macOS</a>. If your SD card is marked as faulty, then you will have to replace your SD card</li>
+  <li>Your SD card slot may be broken. Join <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew on Discord</a> for further assistance</li>
+</ol>
+</details>
+
+<details>
+<summary><u>Blue "BOOTROM ERROR" screen</u></summary>
+
+<p>Je apparaat is waarschijnlijk hard-bricked. Je zult een ntrboot flashcard moeten kopen om boot9strap te herinstalleren om te proberen je apparaat te repareren. Dit kan ook duiden op een hardware probleem dat niet kan worden opgelost. In ieder geval, join <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew op Discord</a> voor hulp.</p>
+<ul>
+  <li>Het is ook mogelijk dat iemand een boot-time splash screen heeft ingesteld dat eruit ziet als een brick. Probeer je apparaat ingeschakeld te laten, wacht op het blauwe scherm gedurende vijf minuten.</li>
+</ul>
+</details>
+
+<details>
+<summary><u>Some other error</u></summary>
+
+<p>Neem een foto van de fout en meld je aan bij <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew on Discord</a> voor hulp.</p>
+</details>
+
+<h2 id="software-issues-on-devices-with-custom-firmware">Software issues on devices with custom firmware</h2>
+
+<details>
+<summary><u>DSi / DS functionality is broken or has been replaced with Flipnote Studio</u></summary>
+
+<ol>
+  <li>Download de nieuwste versie van <a href="https://github.com/MechanicalDragon0687/TWLFix-CFW/releases/latest">TWLFix-CFW</a> (het <code class="language-plaintext highlighter-rouge">.3dsx</code> bestand)</li>
+  <li>Schakel je 3DS uit</li>
+  <li>Maak een map genaamd “3ds” op de hoofdmap van je SD-kaart als die nog niet bestaat</li>
+  <li>Kopieer <code class="language-plaintext highlighter-rouge">TWLFix-CFW.3dsx</code> naar de <code class="language-plaintext highlighter-rouge">/3ds/</code> map op je SD kaart</li>
+  <li>Stop je SD kaart terug in je 3DS</li>
+  <li>Start de Homebrew Launcher op</li>
+  <li>Start TWLFix-CFW op uit de lijst met homebrew</li>
+  <li>Klik op (A) om de kapotte TWL titels te verwijderen</li>
+  <li>Klik op (Start) om je 3DS opnieuw op te starten</li>
+  <li>Update je 3DS door naar Systeemsinstellingen te gaan en dan naar “Algemeene Instellingen”. Ga in dit menu helemaal naar rechts en klik op “Systeemupdate”
+    <ul>
+      <li>De update zal zien dat de essenciële TWL titels zijn gedeïstalleerd en zal ze opnieuw installeren</li>
+    </ul>
+  </li>
+  <li>Wanneer de update klaar is, klik dan op “OK” om je 3DS opnieuw op te starten</li>
+</ol>
+</details>
+
+<details>
+<summary><u>GBA Virtual Console and/or Safe Mode functionality is broken</u></summary>
+
+<p>Your device is running Luma3DS 6.6 or older, likely via arm9loaderhax. Volg <a href="a9lh-to-b9s">A9LH naar B9S</a> om je 3DS te updaten naar een moderne custom firmware omgeving.</p>
+</details>
+
+<details>
+<summary><u>Extended memory mode games (Pokemon Sun/Moon, Smash, etc.) don't work</u></summary>
+
+<p>Dit kan gebeuren na een CTRTransfer of regio verandering op Old 3DS / 2DS. Je moet je apparaat formatteren om dit probleem op te lossen.</p>
+</details>
+
+<details>
+<summary><u>Exception screen when booting/loading an application</u></summary>
+
+<p>Look for your exception screen in <a href="https://wiki.hacks.guide/wiki/3DS:Error_screens/Luma3DS_exception_screen">this page</a>.
+If you weren’t able to find your error or the instructions didn’t work, join <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew on Discord</a> for further assistance.</p>
+</details>
+
+<hr />
+
+<h2 id="andere-problemen-oplossen">Andere problemen oplossen</h2>
+
+<details>
+<summary><u>Clear HOME Menu extdata</u></summary>
+
+<ol>
+  <li>Schakel je 3DS uit</li>
+  <li>Plaats je SD kaart in je computer</li>
+  <li>Navigeer naar de <code class="language-plaintext highlighter-rouge">/Nintendo 3DS/&lt;ID0&gt;/&lt;ID1&gt;/extdata/00000000/</code> map op je SD-kaart</li>
+  <li>Verwijder de overeenkomende map voor je 3DS regio:
+    <ul>
+      <li><strong>EUR Regio</strong>: <code class="language-plaintext highlighter-rouge">00000098</code></li>
+      <li><strong>JPN Regio</strong>: <code class="language-plaintext highlighter-rouge">00000082</code></li>
+      <li><strong>USA Regio</strong>: <code class="language-plaintext highlighter-rouge">0000008f</code></li>
+      <li><strong>CHN Regio</strong>: <code class="language-plaintext highlighter-rouge">000000A1</code></li>
+      <li><strong>KOR Regio</strong>: <code class="language-plaintext highlighter-rouge">000000A9</code></li>
+      <li><strong>TWN Regio</strong>: <code class="language-plaintext highlighter-rouge">000000B1</code></li>
+    </ul>
+  </li>
+  <li>Stop je SD kaart terug in je 3DS</li>
+</ol>
+</details>
+
+<details>
+<summary><u>Clear HOME Menu theme data</u></summary>
+
+<ol>
+  <li>Schakel je 3DS uit</li>
+  <li>Plaats je SD kaart in je computer</li>
+  <li>Navigeer naar de <code class="language-plaintext highlighter-rouge">/Nintendo 3DS/&lt;ID0&gt;/&lt;ID1&gt;/extdata/00000000/</code> map op je SD-kaart</li>
+  <li>Verwijder de overeenkomende map voor je 3DS regio:
+    <ul>
+      <li><strong>EUR Regio</strong>: <code class="language-plaintext highlighter-rouge">000002ce</code></li>
+      <li><strong>JPN Regio</strong>: <code class="language-plaintext highlighter-rouge">000002cc</code></li>
+      <li><strong>USA Regio</strong>: <code class="language-plaintext highlighter-rouge">000002cd</code></li>
+    </ul>
+  </li>
+  <li>Stop je SD kaart terug in je 3DS</li>
+</ol>
+</details>
+
+<details>
+<summary><u>Turning off Parental Controls</u></summary>
+
+<p>You can disable the Parental Controls feature by going to System Settings -&gt; Parental Controls and inserting the PIN, then pressing “Clear Settings”, then “Delete” to remove it.
+However, if you do not know the PIN and therefore cannot access the device’s settings, you will need to disable it. In order to do this, you need to obtain your device’s master key (mkey):</p>
+<ol>
+  <li>Go to <a href="https://mkey.eiphax.tech/">this website</a></li>
+  <li>Fill the following boxes with the information:
+    <ul>
+      <li>Device Type: Select “3DS” (the same applies if you are using a 2DS, New 3DS (XL/LL) or New 2DS (XL/LL))</li>
+      <li>System Date: The day and month your console’s clock is set to</li>
+      <li>Inquiry Number: Can be obtained by pressing “Forgot PIN” then “I Forgot” in the Parental Controls screen</li>
+    </ul>
+  </li>
+  <li>After you have obtained your mkey, press OK on the screen you have obtained your Inquiry Number, then input the master key</li>
+  <li>Press “Clear Settings”, then “Delete” to remove all Parental Controls data</li>
+</ol>
+</details>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://github.com/hacks-guide/Guide_3DS" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+<!--
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+    </ul>
+  -->
+</div>
+
+<!-- custom footer, guide specific -->
+
+
+
+<div class="page__footer-copyright">&copy; 2023 Nintendo Homebrew. - <a href="site-navigation">Site Navigatie</a> - <a href="privacy-policy">Privacybeleid</a> <!-- Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.--></div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+<!-- for guide purposes all caching is removed and is separately built. -->
+
+
+
+
+
+
+
+
+  </body>
+</html>

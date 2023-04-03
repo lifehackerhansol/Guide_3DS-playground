@@ -1,0 +1,697 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<!-- for guide purposes all caching is removed and is separately built. -->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Usare GodMode9 - 3DS Hacks Guide</title>
+<meta name="description" content="A complete guide to 3DS custom firmware">
+
+
+  <meta name="author" content="Nintendo Homebrew">
+  
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="3DS Hacks Guide">
+<meta property="og:title" content="Usare GodMode9">
+<meta property="og:url" content="https://3ds.hacks.guide/it_IT/godmode9-usage.html">
+
+
+  <meta property="og:description" content="A complete guide to 3DS custom firmware">
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://3ds.hacks.guide/it_IT/godmode9-usage.html">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Nintendo Homebrew",
+      "url": "https://3ds.hacks.guide/"
+    
+  }
+</script>
+
+
+  <meta name="google-site-verification" content="jVXoPK_-qzKJp4SScnZYpOIX3yDXfGnAoTBJYixUOwg" />
+
+
+  <meta name="msvalidate.01" content="F3532011519E308583A0A2CAF2DD69E8">
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="3DS Hacks Guide Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=PYEmwKvQAx">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png?v=PYEmwKvQAx" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-194x194.png?v=PYEmwKvQAx" sizes="194x194">
+<link rel="icon" type="image/png" href="/images/android-chrome-192x192.png?v=PYEmwKvQAx" sizes="192x192">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png?v=PYEmwKvQAx" sizes="16x16">
+<link rel="manifest" href="/images/manifest.json?v=PYEmwKvQAx">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg?v=PYEmwKvQAx" color="#2E3440">
+<link rel="shortcut icon" href="/images/favicon.ico?v=PYEmwKvQAx">
+<meta name="apple-mobile-web-app-title" content="Guide">
+<meta name="application-name" content="Guide">
+<meta name="msapplication-TileColor" content="#2E3440">
+<meta name="msapplication-TileImage" content="/images/mstile-144x144.png?v=PYEmwKvQAx">
+<meta name="msapplication-config" content="/images/browserconfig.xml?v=PYEmwKvQAx">
+<meta name="theme-color" content="#2E3440">
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.css" integrity="sha512-LQ97camar/lOliT/MqjcQs5kWgy6Qz/cCRzzRzUCfv0fotsCTC9ZHXaPQmJV8Xu/PVALfJZ7BDezl5lW3/qBxg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js" integrity="sha512-yXXqOFjdjHNH1GND+1EO0jbvvebABpzGKD66djnUfiKlYME5HGMUJHoCaeE4D5PTG2YsSJf6dwqyUUvQvS0vaA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#2e3440"
+    },
+    "button": {
+      "background": "#60818f"
+    }
+  },
+  "theme": "edgeless",
+  "position": "top",
+  "static": true,
+  "content": {
+    "message": "Questo sito web utilizza i cookie per visualizzare l'avanzamento della guida sulla barra laterale o migliorare il sito."
+  }
+})});
+</script>
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <!-- <a class="site-title" href="/">
+          3DS Hacks Guide
+          
+        </a>
+      -->
+        <ul class="visible-links">
+          <!-- modified to use multilang, guide-specific -->
+          
+          
+          
+          
+          
+          
+            
+              <li class="masthead__menu-item masthead__menu-item--lg"><a href="/it_IT/">Home</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/it_IT/faq">FAQ</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/it_IT/troubleshooting">Risoluzione dei problemi</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/it_IT/checking-for-cfw">Verifica del CFW</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/it_IT/godmode9-usage">Usare GodMode9</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/it_IT/contribute">Contribuisci</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/it_IT/region-changing">Cambiare regione</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/it_IT/uninstall-cfw">Disinstallare il CFW</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/it_IT/credits">Riconoscimenti</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/it_IT/site-navigation">Mappa del sito</a></li>
+            
+          
+          <!-- end guide specific -->
+        </ul>
+        
+        <!-- completely redo hidden links for multilang, guide-specific -->
+        <ul class="hidden-links links-menu hidden"></ul>
+        <ul class="hidden-links lang-menu hidden">
+          
+          
+          
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/godmode9-usage.html">English</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/es_ES/godmode9-usage.html">Español</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/de_DE/godmode9-usage.html">Deutsch</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/fr_FR/godmode9-usage.html">Français</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/it_IT/godmode9-usage.html">Italiano</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/nl_NL/godmode9-usage.html">Nederlands</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/pt_BR/godmode9-usage.html">Português do Brasil</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/pt_PT/godmode9-usage.html">Português (Portugal)</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ru_RU/godmode9-usage.html">Русский</a></li> -->
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/zh_CN/godmode9-usage.html">简体中文</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/zh_TW/godmode9-usage.html">繁體中文</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/pl_PL/godmode9-usage.html">Polski</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/tr_TR/godmode9-usage.html">Türkçe</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/vi_VN/godmode9-usage.html">Tiếng Việt</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ca_ES/godmode9-usage.html">Català</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/el_GR/godmode9-usage.html">Ελληνικά</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/he_IL/godmode9-usage.html">עברית‎</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/sv_SE/godmode9-usage.html">Svenska</a></li> -->
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ko_KR/godmode9-usage.html">한국어</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/no_NO/godmode9-usage.html">Norsk</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ja_JP/godmode9-usage.html">日本語</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ar_SA/godmode9-usage.html">اللغة العربية</a></li> -->
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/hu_HU/godmode9-usage.html">Magyar</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ro_RO/godmode9-usage.html">Română</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/sr_SP/godmode9-usage.html">Српски</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/af_ZA/godmode9-usage.html">Afrikaans</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ms_MY/godmode9-usage.html">Bahasa Melayu</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/fi_FI/godmode9-usage.html">Suomi</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/da_DK/godmode9-usage.html">Dansk</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/uk_UA/godmode9-usage.html">Українська</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/cs_CZ/godmode9-usage.html">Čeština</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/en_PT/godmode9-usage.html">Pirate English</a></li> -->
+        </ul>
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <button class="greedy-nav__toggle_lang"><div class="langicon"><i class="fa fa-language fa-lg" aria-hidden="true"></i></div></button>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  <!-- 
+  <div class="sidebar sticky">
+  
+  
+    
+    
+  
+  </div>
+
+-->
+
+
+
+<div class="sidebar sticky" style="display: none;">
+  
+
+
+
+
+
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    <li>
+      <span class="nav__sub-title">Avanzamento</span>
+      <ol>
+        
+          
+            <li style="display: none;" data-name="home"><a href='/it_IT/'>Home</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="key-information"><a href='/it_IT/key-information'>Informazioni importanti</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="get-started"><a href='/it_IT/get-started'>Cominciamo!</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="ntrboot"><a href='/it_IT/ntrboot'>ntrboot</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer"><a href='/it_IT/seedminer'>Seedminer</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(twn)"><a href='/it_IT/seedminer-(twn)'>Seedminer (TWN)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="bannerbomb3"><a href='/it_IT/bannerbomb3'>BannerBomb3</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="multiple-options"><i>(Più Opzioni)</i></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(3ds-single-system)"><a href='/it_IT/flashing-ntrboot-(3ds-single-system)'>Flash di ntrboot (Singolo 3DS)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(3ds-multi-system)"><a href='/it_IT/flashing-ntrboot-(3ds-multi-system)'>Flash di ntrboot (Con più 3DS)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(dsi)"><a href='/it_IT/flashing-ntrboot-(dsi)'>Flash di ntrboot (DSi)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(nds)"><a href='/it_IT/flashing-ntrboot-(nds)'>Flash di ntrboot (NDS)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(pichaxx)"><a href='/it_IT/homebrew-launcher-(pichaxx)'>Homebrew Launcher (PicHaxx)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="bannerbomb3-fredtool-(twn)"><a href='/it_IT/bannerbomb3-fredtool-(twn)'>BannerBomb3 + Fredtool (TWN)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(hardmod)"><a href='/it_IT/installing-boot9strap-(hardmod)'>Installazione di boot9strap (Hardmod)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(hbl-usm)"><a href='/it_IT/installing-boot9strap-(hbl-usm)'>Installazione di boot9strap (HBL-USM)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(ntrboot)"><a href='/it_IT/installing-boot9strap-(ntrboot)'>Installazione di boot9strap (ntrboot)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(soundhax)"><a href='/it_IT/installing-boot9strap-(soundhax)'>Installazione di boot9strap (Soundhax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(ssloth-browser)"><a href='/it_IT/installing-boot9strap-(ssloth-browser)'>Installazione di boot9strap (SSLoth-Browser)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(fredtool)"><a href='/it_IT/installing-boot9strap-(fredtool)'>Installazione di boot9strap (Fredtool)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(usm)"><a href='/it_IT/installing-boot9strap-(usm)'>Installazione di boot9strap (USM)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(kartdlphax)"><a href='/it_IT/installing-boot9strap-(kartdlphax)'>Installazione di boot9strap (kartdlphax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(hbl-usm)"><a href='/it_IT/installing-boot9strap-(hbl-usm)'>Installazione di boot9strap (HBL-USM)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="finalizing-setup"><a href='/it_IT/finalizing-setup'>Completamento dell'installazione</a></li>
+          
+        
+      </ol>
+    </li>
+  </ul>
+</nav>
+</div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Usare GodMode9">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Usare GodMode9
+</h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+
+        <hr>
+
+        
+        
+
+        
+          
+          <div class ="notice"><b>Se hai bisogno di aiuto, chiedi pure su <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew su Discord</a> (in inglese).</b></div>
+        
+          
+          <div class ="notice"><b>Se hai gradito questa guida, accettiamo <a href="contribute#donations">Donazioni</a>.</b></div>
+        
+
+        <hr>
+
+        <aside class="sidebar__right">
+<nav class="toc">
+    <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Indice</h4></header>
+<ul class="toc__menu" id="markdown-toc">
+  <li><a href="#lettura-necessaria" id="markdown-toc-lettura-necessaria">Lettura necessaria</a></li>
+  <li><a href="#aggiornare-godmode9" id="markdown-toc-aggiornare-godmode9">Aggiornare GodMode9</a>    <ul>
+      <li><a href="#cosa-serve" id="markdown-toc-cosa-serve">Cosa serve</a></li>
+      <li><a href="#istruzioni" id="markdown-toc-istruzioni">Istruzioni</a></li>
+    </ul>
+  </li>
+  <li><a href="#creare-un-backup-della-nand" id="markdown-toc-creare-un-backup-della-nand">Creare un backup della NAND</a></li>
+  <li><a href="#ripristinare-un-backup-della-nand" id="markdown-toc-ripristinare-un-backup-della-nand">Ripristinare un backup della NAND</a></li>
+  <li><a href="#iniettare-unapp-cia-dentro-informazioni-per-la-salute-e-la-sicurezza" id="markdown-toc-iniettare-unapp-cia-dentro-informazioni-per-la-salute-e-la-sicurezza">Iniettare un’app .CIA dentro “Informazioni per la salute e la sicurezza”</a></li>
+  <li><a href="#ripristinare-informazioni-per-la-salute-e-la-sicurezza-dopo-aver-iniettato-unapp-cia" id="markdown-toc-ripristinare-informazioni-per-la-salute-e-la-sicurezza-dopo-aver-iniettato-unapp-cia">Ripristinare “Informazioni per la salute e la sicurezza” dopo aver iniettato un’app .CIA</a></li>
+  <li><a href="#formattare-una-scheda-sd" id="markdown-toc-formattare-una-scheda-sd">Formattare una scheda SD</a></li>
+  <li><a href="#rimuovere-un-nnid-senza-formattare-la-console" id="markdown-toc-rimuovere-un-nnid-senza-formattare-la-console">Rimuovere un NNID senza formattare la console</a></li>
+</ul>
+
+  </nav>
+</aside>
+
+<p class="notice--info">Per informazioni su come estrarre cartucce o il contenuto della scheda SD, guarda <a href="dumping-titles-and-game-cartridges">Dump di titoli e schede di gioco</a>.</p>
+
+<p class="notice--primary">Per ricevere supporto su GodMode9, aiuto per gli script e informazioni sugli ultimi aggiornamenti, entra nel <a href="https://discord.gg/BRcbvtFxX4">server Discord di GodMode9</a> (in Inglese).</p>
+
+<h3 id="lettura-necessaria">Lettura necessaria</h3>
+
+<p>GodMode9 è un file browser per il Nintendo 3DS che dà pieno accesso ai file sulla tua scheda SD, ai file delle partizioni FAT della SysNAND e della EmuNAND, e a molto altro ancora. Tra le varie funzioni, puoi anche copiare, cancellare, rinominare file e creare cartelle.</p>
+
+<p>Tieni presente che se hai altri file payload oltre a <code class="language-plaintext highlighter-rouge">GodMode9.firm</code> nella cartella <code class="language-plaintext highlighter-rouge">/luma/payloads/</code> della tua scheda SD, per seguire le istruzioni riportate dovrai avviare la console tenendo (Start); apparirà un “menu chainloader” dove dovrai selezionare “GodMode9” tramite il D-Pad e il pulsante (A).</p>
+
+<p>GodMode9 è un software potente che rende possibile la modifica di qualunque aspetto riguardante la tua console. Anche se la maggior parte delle modifiche sono bloccate da un sistema di permessi, ed è impossibile eseguire accidentalmente azioni pericolose senza sbloccare volutamente i permessi di scrittura, faresti meglio a seguire queste istruzioni con cautela e ad avere dei backup utilizzabili.</p>
+
+<h2 id="aggiornare-godmode9">Aggiornare GodMode9</h2>
+
+<p class="notice--info">Alcune delle istruzioni qui sotto riportate sono valide solo sull’ultima versione di GodMode9, perciò, prima di continuare, faresti meglio a seguire questa sezione per aggiornare GodMode9. Sovrascrivi qualunque file preesistente.</p>
+
+<h3 id="cosa-serve">Cosa serve</h3>
+
+<ul>
+  <li>L’ultima versione di <a href="https://github.com/d0k3/GodMode9/releases/latest">GodMode9</a></li>
+</ul>
+
+<h3 id="istruzioni">Istruzioni</h3>
+
+<ol>
+  <li>Spegni il tuo 3DS</li>
+  <li>Inserisci la scheda SD nel tuo computer</li>
+  <li>Copia il file <code class="language-plaintext highlighter-rouge">GodMode9.firm</code> dall’archivio <code class="language-plaintext highlighter-rouge">.zip</code> di GodMode9 dentro la cartella <code class="language-plaintext highlighter-rouge">/luma/payloads/</code> della tua scheda SD</li>
+  <li>Copia la cartella <code class="language-plaintext highlighter-rouge">gm9</code> presente nell’archivio <code class="language-plaintext highlighter-rouge">.zip</code> di GodMode9 nella directory principale della tua scheda SD</li>
+  <li>Reinserisci la scheda SD nella tua console</li>
+</ol>
+
+<h2 id="creare-un-backup-della-nand">Creare un backup della NAND</h2>
+
+<ol>
+  <li>Premi (Start) e accendi la console continuando a tenerlo premuto. Verrà avviato GodMode9</li>
+  <li>Premi il pulsante HOME per far apparire il menu delle azioni</li>
+  <li>Seleziona “Scripts…”</li>
+  <li>Seleziona “GM9Megascript”</li>
+  <li>Seleziona “Backup Options”</li>
+  <li>Seleziona “SysNAND Backup”</li>
+  <li>Premi (A) per confermare
+    <ul>
+      <li>Questo processo durerà un po’</li>
+      <li>Se ottieni un errore, cerca il tuo problema nella <a href="troubleshooting#finalizing-setup">guida per la risoluzione dei problemi</a></li>
+    </ul>
+  </li>
+  <li>Premi il pulsante (A) per continuare</li>
+  <li>Premi (B) per ritornare al menu principale</li>
+  <li>Seleziona “Exit”</li>
+  <li>Se richiesto, premi (A) per ritirare le autorizzazioni di scrittura</li>
+  <li>Tenendo premuto (R), premi (Start) per spegnere la console</li>
+  <li>Inserisci la scheda SD nel tuo computer</li>
+  <li>Copia i file <code class="language-plaintext highlighter-rouge">&lt;data&gt;_&lt;codiceseriale&gt;_sysnand_##.bin</code> ed <code class="language-plaintext highlighter-rouge">essential.exefs</code> dalla cartella <code class="language-plaintext highlighter-rouge">/gm9/out/</code> della tua scheda SD in una posizione sicura sul tuo computer
+    <ul>
+      <li>Crea dei backup in più posti (come ad esempio un servizio di storage dei file online)</li>
+      <li>Questi backup ti salveranno da un brick e/o ti aiuteranno a recuperare i file dalla NAND nel caso dovesse accadere qualcosa in futuro</li>
+    </ul>
+  </li>
+  <li>Dopo la copia, elimina i file <code class="language-plaintext highlighter-rouge">&lt;data&gt;_&lt;codiceseriale&gt;_sysnand_##.bin</code> e <code class="language-plaintext highlighter-rouge">&lt;data&gt;_&lt;codiceseriale&gt;_sysnand_##.bin.sha</code> dalla cartella <code class="language-plaintext highlighter-rouge">/gm9/out/</code> della tua scheda SD</li>
+  <li>Reinserisci la scheda SD nella tua console</li>
+</ol>
+
+<h2 id="ripristinare-un-backup-della-nand">Ripristinare un backup della NAND</h2>
+
+<ol>
+  <li>Spegni il tuo 3DS</li>
+  <li>Inserisci la scheda SD nel tuo computer</li>
+  <li>Copia il file <code class="language-plaintext highlighter-rouge">&lt;data&gt;_&lt;codiceseriale&gt;_sysnand_##.bin</code> dal tuo computer alla cartella <code class="language-plaintext highlighter-rouge">/gm9/out/</code> della scheda SD</li>
+  <li>Reinserisci la scheda SD nella tua console</li>
+  <li>Premi (Start) e accendi la console continuando a tenerlo premuto. Verrà avviato GodMode9</li>
+  <li>Premi il pulsante HOME per far apparire il menu delle azioni</li>
+  <li>Seleziona “Scripts…”</li>
+  <li>Seleziona “GM9Megascript”</li>
+  <li>Seleziona “Restore Options”</li>
+  <li>Seleziona “SysNAND Restore (safe)”</li>
+  <li>Seleziona il tuo backup della NAND</li>
+  <li>Premi il pulsante (A) per sbloccare i permessi di scrittura di terzo livello su SysNAND, quindi inserisci la combinazione di tasti richiesta a schermo
+    <ul>
+      <li>Questo processo non eliminerà boot9strap</li>
+      <li>Questo processo durerà un po’</li>
+    </ul>
+  </li>
+  <li>Premi il pulsante (A) per continuare</li>
+  <li>Premi (B) per ritornare al menu principale</li>
+  <li>Seleziona “Exit”</li>
+  <li>Se richiesto, premi (A) per ritirare le autorizzazioni di scrittura</li>
+</ol>
+
+<h2 id="iniettare-unapp-cia-dentro-informazioni-per-la-salute-e-la-sicurezza">Iniettare un’app .CIA dentro “Informazioni per la salute e la sicurezza”</h2>
+
+<p class="notice--info">Per motivi pratici, copia il file <code class="language-plaintext highlighter-rouge">.cia</code> che desideri iniettare dentro la cartella <code class="language-plaintext highlighter-rouge">/cias/</code> della tua scheda SD</p>
+
+<p class="notice--info">Tieni presente che non possibile iniettare dentro “Informazioni per la salute e la sicurezza” file che siano più grandi di quest’ultima (come giochi o altre applicazioni pesanti)</p>
+
+<ol>
+  <li>Premi (Start) e accendi la console continuando a tenerlo premuto. Verrà avviato GodMode9</li>
+  <li>Entra nella cartella <code class="language-plaintext highlighter-rouge">[0:] SDCARD</code> -&gt; <code class="language-plaintext highlighter-rouge">cias</code></li>
+  <li>Premi (A) sul file <code class="language-plaintext highlighter-rouge">.cia</code> per selezionarlo, quindi seleziona “CIA image options…”, ed infine seleziona “Mount image to drive”</li>
+  <li>Premi (A) sul file <code class="language-plaintext highlighter-rouge">.app</code>, quindi seleziona “NCHH image options”, ed infine seleziona “Inject to H&amp;S”</li>
+  <li>Premi il pulsante (A) per sbloccare i permessi di scrittura di primo livello su SysNAND, quindi inserisci la combinazione di tasti richiesta a schermo</li>
+  <li>Premi il pulsante (A) per continuare</li>
+  <li>Se richiesto, premi (A) per ritirare le autorizzazioni di scrittura</li>
+</ol>
+
+<h2 id="ripristinare-informazioni-per-la-salute-e-la-sicurezza-dopo-aver-iniettato-unapp-cia">Ripristinare “Informazioni per la salute e la sicurezza” dopo aver iniettato un’app .CIA</h2>
+
+<p class="notice--info">Questo metodo funzionerà solo se l’inject di “Informazioni per la salute e la sicurezza” è stato eseguito con GodMode9 (e non con Decrypt9 o con Hourglass9).</p>
+
+<ol>
+  <li>Premi (Start) e accendi la console continuando a tenerlo premuto. Verrà avviato GodMode9</li>
+  <li>Premi il pulsante HOME per far apparire il menu delle azioni</li>
+  <li>Seleziona “More…”</li>
+  <li>Seleziona “Restore H&amp;S”</li>
+  <li>Premi il pulsante (A) per sbloccare i permessi di scrittura di primo livello su SysNAND, quindi inserisci la combinazione di tasti richiesta a schermo</li>
+  <li>Se richiesto, premi (A) per ritirare le autorizzazioni di scrittura</li>
+</ol>
+
+<h2 id="formattare-una-scheda-sd">Formattare una scheda SD</h2>
+
+<p class="notice--danger"><strong>Questo procedimento cancellerà tutti i dati della tua scheda SD!</strong></p>
+
+<ol>
+  <li>Premi (Start) e accendi la console continuando a tenerlo premuto. Verrà avviato GodMode9</li>
+  <li>Premi il pulsante HOME per far apparire il menu delle azioni</li>
+  <li>Seleziona “More…”</li>
+  <li>Seleziona “SD format menu”</li>
+  <li>Seleziona “No EmuNAND”</li>
+  <li>Seleziona “Auto”</li>
+  <li>Premi (A) per accettare il nome <code class="language-plaintext highlighter-rouge">GM9SD</code>
+    <ul>
+      <li>Puoi comunque scegliere un altro nome per la tua scheda SD</li>
+    </ul>
+  </li>
+  <li>Quando richiesto, inserisci la combinazione di tasti richiesta a schermo</li>
+</ol>
+
+<h2 id="rimuovere-un-nnid-senza-formattare-la-console">Rimuovere un NNID senza formattare la console</h2>
+
+<ol>
+  <li>Premi (Start) e accendi la console continuando a tenerlo premuto. Verrà avviato GodMode9</li>
+  <li>Premi il pulsante HOME per far apparire il menu delle azioni</li>
+  <li>Seleziona “Scripts…”</li>
+  <li>Seleziona “GM9Megascript”</li>
+  <li>Seleziona “Scripts from Plailect’s Guide”</li>
+  <li>Seleziona “Remove NNID”</li>
+  <li>Premi il pulsante (A) per continuare</li>
+  <li>Premi il pulsante (A) per sbloccare i permessi di scrittura di primo livello su SysNAND, quindi inserisci la combinazione di tasti richiesta a schermo</li>
+  <li>Premi il pulsante (A) per continuare</li>
+  <li>Premi (B) per ritornare al menu principale</li>
+  <li>Seleziona “Exit”</li>
+  <li>Se richiesto, premi (A) per ritirare le autorizzazioni di scrittura</li>
+  <li>Premi (Start) per riavviare la console</li>
+</ol>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://github.com/hacks-guide/Guide_3DS" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+<!--
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+    </ul>
+  -->
+</div>
+
+<!-- custom footer, guide specific -->
+
+
+
+<div class="page__footer-copyright">&copy; 2023 Nintendo Homebrew. - <a href="site-navigation">Mappa del sito</a> - <a href="privacy-policy">Informativa sulla Privacy</a> <!-- Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.--></div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+<!-- for guide purposes all caching is removed and is separately built. -->
+
+
+
+
+
+
+
+
+  </body>
+</html>

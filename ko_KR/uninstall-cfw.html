@@ -1,0 +1,768 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<!-- for guide purposes all caching is removed and is separately built. -->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>CFW 제거하기 - 3DS Hacks Guide</title>
+<meta name="description" content="A complete guide to 3DS custom firmware">
+
+
+  <meta name="author" content="Nintendo Homebrew">
+  
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="3DS Hacks Guide">
+<meta property="og:title" content="CFW 제거하기">
+<meta property="og:url" content="https://3ds.hacks.guide/ko_KR/uninstall-cfw.html">
+
+
+  <meta property="og:description" content="A complete guide to 3DS custom firmware">
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://3ds.hacks.guide/ko_KR/uninstall-cfw.html">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Nintendo Homebrew",
+      "url": "https://3ds.hacks.guide/"
+    
+  }
+</script>
+
+
+  <meta name="google-site-verification" content="jVXoPK_-qzKJp4SScnZYpOIX3yDXfGnAoTBJYixUOwg" />
+
+
+  <meta name="msvalidate.01" content="F3532011519E308583A0A2CAF2DD69E8">
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="3DS Hacks Guide Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=PYEmwKvQAx">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png?v=PYEmwKvQAx" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-194x194.png?v=PYEmwKvQAx" sizes="194x194">
+<link rel="icon" type="image/png" href="/images/android-chrome-192x192.png?v=PYEmwKvQAx" sizes="192x192">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png?v=PYEmwKvQAx" sizes="16x16">
+<link rel="manifest" href="/images/manifest.json?v=PYEmwKvQAx">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg?v=PYEmwKvQAx" color="#2E3440">
+<link rel="shortcut icon" href="/images/favicon.ico?v=PYEmwKvQAx">
+<meta name="apple-mobile-web-app-title" content="Guide">
+<meta name="application-name" content="Guide">
+<meta name="msapplication-TileColor" content="#2E3440">
+<meta name="msapplication-TileImage" content="/images/mstile-144x144.png?v=PYEmwKvQAx">
+<meta name="msapplication-config" content="/images/browserconfig.xml?v=PYEmwKvQAx">
+<meta name="theme-color" content="#2E3440">
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.css" integrity="sha512-LQ97camar/lOliT/MqjcQs5kWgy6Qz/cCRzzRzUCfv0fotsCTC9ZHXaPQmJV8Xu/PVALfJZ7BDezl5lW3/qBxg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js" integrity="sha512-yXXqOFjdjHNH1GND+1EO0jbvvebABpzGKD66djnUfiKlYME5HGMUJHoCaeE4D5PTG2YsSJf6dwqyUUvQvS0vaA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#2e3440"
+    },
+    "button": {
+      "background": "#60818f"
+    }
+  },
+  "theme": "edgeless",
+  "position": "top",
+  "static": true,
+  "content": {
+    "message": "이 사이트는 현재 진행상황을 표시하고 사용자 경험을 향상시키기 위해 쿠키를 사용합니다."
+  }
+})});
+</script>
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <!-- <a class="site-title" href="/">
+          3DS Hacks Guide
+          
+        </a>
+      -->
+        <ul class="visible-links">
+          <!-- modified to use multilang, guide-specific -->
+          
+          
+          
+          
+          
+          
+            
+              <li class="masthead__menu-item masthead__menu-item--lg"><a href="/ko_KR/">홈</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/ko_KR/faq">자주 묻는 질문</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/ko_KR/troubleshooting">문제 해결</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/ko_KR/checking-for-cfw">CFW 확인</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/ko_KR/godmode9-usage">GodMode9 사용법</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/ko_KR/contribute">기여하기</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/ko_KR/region-changing">지역 변경</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/ko_KR/uninstall-cfw">CFW 제거하기</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/ko_KR/credits">기여자</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/ko_KR/site-navigation">사이트 탐색</a></li>
+            
+          
+          <!-- end guide specific -->
+        </ul>
+        
+        <!-- completely redo hidden links for multilang, guide-specific -->
+        <ul class="hidden-links links-menu hidden"></ul>
+        <ul class="hidden-links lang-menu hidden">
+          
+          
+          
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/uninstall-cfw.html">English</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/es_ES/uninstall-cfw.html">Español</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/de_DE/uninstall-cfw.html">Deutsch</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/fr_FR/uninstall-cfw.html">Français</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/it_IT/uninstall-cfw.html">Italiano</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/nl_NL/uninstall-cfw.html">Nederlands</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/pt_BR/uninstall-cfw.html">Português do Brasil</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/pt_PT/uninstall-cfw.html">Português (Portugal)</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ru_RU/uninstall-cfw.html">Русский</a></li> -->
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/zh_CN/uninstall-cfw.html">简体中文</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/zh_TW/uninstall-cfw.html">繁體中文</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/pl_PL/uninstall-cfw.html">Polski</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/tr_TR/uninstall-cfw.html">Türkçe</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/vi_VN/uninstall-cfw.html">Tiếng Việt</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ca_ES/uninstall-cfw.html">Català</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/el_GR/uninstall-cfw.html">Ελληνικά</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/he_IL/uninstall-cfw.html">עברית‎</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/sv_SE/uninstall-cfw.html">Svenska</a></li> -->
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ko_KR/uninstall-cfw.html">한국어</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/no_NO/uninstall-cfw.html">Norsk</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ja_JP/uninstall-cfw.html">日本語</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ar_SA/uninstall-cfw.html">اللغة العربية</a></li> -->
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/hu_HU/uninstall-cfw.html">Magyar</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ro_RO/uninstall-cfw.html">Română</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/sr_SP/uninstall-cfw.html">Српски</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/af_ZA/uninstall-cfw.html">Afrikaans</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ms_MY/uninstall-cfw.html">Bahasa Melayu</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/fi_FI/uninstall-cfw.html">Suomi</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/da_DK/uninstall-cfw.html">Dansk</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/uk_UA/uninstall-cfw.html">Українська</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/cs_CZ/uninstall-cfw.html">Čeština</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/en_PT/uninstall-cfw.html">Pirate English</a></li> -->
+        </ul>
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <button class="greedy-nav__toggle_lang"><div class="langicon"><i class="fa fa-language fa-lg" aria-hidden="true"></i></div></button>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  <!-- 
+  <div class="sidebar sticky">
+  
+  
+    
+    
+  
+  </div>
+
+-->
+
+
+
+<div class="sidebar sticky" style="display: none;">
+  
+
+
+
+
+
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    <li>
+      <span class="nav__sub-title">전체 진행 상황</span>
+      <ol>
+        
+          
+            <li style="display: none;" data-name="home"><a href='/ko_KR/'>홈</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="key-information"><a href='/ko_KR/key-information'>주요 내용</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="get-started"><a href='/ko_KR/get-started'>시작하기</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="ntrboot"><a href='/ko_KR/ntrboot'>ntrboot</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer"><a href='/ko_KR/seedminer'>Seedminer</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(twn)"><a href='/ko_KR/seedminer-(twn)'>Seedminer (TWN)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="bannerbomb3"><a href='/ko_KR/bannerbomb3'>BannerBomb3</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="multiple-options"><i>(Multiple Options)</i></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(3ds-single-system)"><a href='/ko_KR/flashing-ntrboot-(3ds-single-system)'>Flashing ntrboot (3DS Single System)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(3ds-multi-system)"><a href='/ko_KR/flashing-ntrboot-(3ds-multi-system)'>Flashing ntrboot (3DS Multi System)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(dsi)"><a href='/ko_KR/flashing-ntrboot-(dsi)'>Flashing ntrboot (DSi)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(nds)"><a href='/ko_KR/flashing-ntrboot-(nds)'>Flashing ntrboot (NDS)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(pichaxx)"><a href='/ko_KR/homebrew-launcher-(pichaxx)'>Homebrew Launcher (PicHaxx)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="bannerbomb3-fredtool-(twn)"><a href='/ko_KR/bannerbomb3-fredtool-(twn)'>BannerBomb3 + Fredtool (TWN)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(hardmod)"><a href='/ko_KR/installing-boot9strap-(hardmod)'>Installing boot9strap (Hardmod)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(hbl-usm)"><a href='/ko_KR/installing-boot9strap-(hbl-usm)'>Installing boot9strap (HBL-USM)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(ntrboot)"><a href='/ko_KR/installing-boot9strap-(ntrboot)'>Installing boot9strap (ntrboot)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(soundhax)"><a href='/ko_KR/installing-boot9strap-(soundhax)'>Installing boot9strap (Soundhax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(ssloth-browser)"><a href='/ko_KR/installing-boot9strap-(ssloth-browser)'>Installing boot9strap (SSLoth-Browser)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(fredtool)"><a href='/ko_KR/installing-boot9strap-(fredtool)'>Installing boot9strap (Fredtool)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(usm)"><a href='/ko_KR/installing-boot9strap-(usm)'>Installing boot9strap (USM)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(kartdlphax)"><a href='/ko_KR/installing-boot9strap-(kartdlphax)'>Installing boot9strap (kartdlphax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(hbl-usm)"><a href='/ko_KR/installing-boot9strap-(hbl-usm)'>Installing boot9strap (HBL-USM)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="finalizing-setup"><a href='/ko_KR/finalizing-setup'>Finalizing Setup</a></li>
+          
+        
+      </ol>
+    </li>
+  </ul>
+</nav>
+</div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="CFW 제거하기">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">CFW 제거하기
+</h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+
+        <hr>
+
+        
+        
+
+        
+          
+          <div class ="notice"><b>영어로 지원을 요청하고 싶으시면 <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew Discord 서버</a>에 도움을 요청해 주세요.</b></div>
+        
+          
+          <div class ="notice"><b>이 가이드가 도움이 되었다면, <a href="contribute#donations">기부해 주시면</a> 감사하겠습니다.</b></div>
+        
+
+        <hr>
+
+        <aside class="sidebar__right">
+<nav class="toc">
+    <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> 목차</h4></header>
+<ul class="toc__menu" id="markdown-toc">
+  <li><a href="#중요" id="markdown-toc-중요">중요</a></li>
+  <li><a href="#준비물" id="markdown-toc-준비물">준비물</a></li>
+  <li><a href="#진행-방법" id="markdown-toc-진행-방법">진행 방법</a>    <ul>
+      <li><a href="#섹션-i---준비-작업" id="markdown-toc-섹션-i---준비-작업">섹션 I - 준비 작업</a></li>
+      <li><a href="#섹션-ii---ds-모드-확인" id="markdown-toc-섹션-ii---ds-모드-확인">섹션 II - DS 모드 확인</a>        <ul>
+          <li><a href="#ds-소프트웨어용-설정-테스트" id="markdown-toc-ds-소프트웨어용-설정-테스트">DS 소프트웨어용 설정 테스트</a></li>
+          <li><a href="#ds-다운로드-플레이-테스트" id="markdown-toc-ds-다운로드-플레이-테스트">DS 다운로드 플레이 테스트</a></li>
+        </ul>
+      </li>
+      <li><a href="#섹션-iii---안전-테스트" id="markdown-toc-섹션-iii---안전-테스트">섹션 III - 안전 테스트</a></li>
+      <li><a href="#섹션-iv---nand-백업" id="markdown-toc-섹션-iv---nand-백업">섹션 IV - NAND 백업</a></li>
+      <li><a href="#섹션-v---비정상적-콘텐츠-삭제" id="markdown-toc-섹션-v---비정상적-콘텐츠-삭제">섹션 V - 비정상적 콘텐츠 삭제</a></li>
+      <li><a href="#섹션-vi---본체-초기화" id="markdown-toc-섹션-vi---본체-초기화">섹션 VI - 본체 초기화</a></li>
+      <li><a href="#섹션-vii---제거-스크립트-실행" id="markdown-toc-섹션-vii---제거-스크립트-실행">섹션 VII - 제거 스크립트 실행</a></li>
+    </ul>
+  </li>
+</ul>
+
+  </nav>
+</aside>
+
+<h3 id="중요">중요</h3>
+
+<p>이것은 기기를 순정 상태 로 되돌리기위하여 boot9strap 이나 Luma3DS을 포함한 CFW을 완벽히 제거합니다.</p>
+
+<p>모든 서명되지 않은 (비정상적인) 게임은 사용하지 못하며 이 과정에서 삭제됩니다. 만약 신경 쓰는 것들이 있다면, 이 <a href="https://github.com/FlagBrew/Checkpoint/releases/latest">저장 데이터 매니저</a>를 이용하여 저장 데이터를 백업 시켜주세요.</p>
+
+<div class="notice--danger">
+<p>이러한 이유로 커펌을 제거하려 한다면:</p>
+
+<ul>
+  <li>커펌을 다시 설치하고 싶습니다</li>
+  <li>게임 하나가 정상 동작하지 않습니다</li>
+  <li>시스템 어플리케이션 하나가 정상 동작하지 않습니다</li>
+  <li>콘솔이 HOME 메뉴로 정상 부팅되지 않습니다</li>
+</ul>
+
+<p><u><strong>당장 멈추세요!!</strong></u> 커펌을 삭제하는 것은 시간만 잡아먹는 불필요한 모험이며, 심할 경우 콘솔을 <u><strong>벽돌로 만들 수 있습니다</strong></u>. <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew Discord 서버</a>에 (영어로) 도움을 요청하는 것이 더 나을 것입니다.</p>
+</div>
+
+<div class="notice--danger">
+<p>만약 다음 중 어떤 것이라도 했다면:</p>
+<ul>
+  <li>콘솔의 <a href="region-changing">지역을 변경</a>했습니다</li>
+  <li>커스텀 키보드를 설치했습니다</li>
+  <li>(커스텀 테마가 <em>아닌</em>) 커스텀 HOME 메뉴를 설치했습니다</li>
+  <li>콘솔의 암호화 키 (<code class="language-plaintext highlighter-rouge">movable.sed</code>)를 직접 바꿨습니다</li>
+  <li>콘솔의 밴을 풀었습니다</li>
+</ul>
+
+<p>커펌을 삭제하는 것 자체만으로 <u><strong>콘솔을 벽돌로 만들게 됩니다</strong></u>. 만약 이것에 해당한다면, 계속하기 전에 <a href="godmode9-usage#restoring-a-nand-backup">순정 NAND 백업 복구</a>를 진행해주세요.</p>
+</div>
+
+<p class="notice--warning">이 절차들은 버전 8.0 이상의 Luma3DS를 사용하고 있는 기기에서만 작동합니다. 만약 Luma의 구 버전을 사용하고 계신다면, Luma3DS를 업그레이드하시고 나서 이 절차를 따라야 합니다. 업그레이드를 하려면 <a href="checking-for-cfw">이 페이지</a>를 따라 주세요.</p>
+
+<h3 id="준비물">준비물</h3>
+
+<ul>
+  <li>최신 버전의 <a href="https://github.com/LumaTeam/Luma3DS/releases/latest">Luma3DS</a></li>
+  <li>최신 버전의 <a href="https://github.com/d0k3/GodMode9/releases/latest">GodMode9</a></li>
+  <li>최신 버전의 <a href="https://github.com/MechanicalDragon0687/DSiWare-Uninstaller/releases/latest">DSiWare Uninstaller</a></li>
+  <li><a href="/gm9_scripts/safety_test.gm9">safety_test.gm9</a></li>
+</ul>
+
+<h3 id="진행-방법">진행 방법</h3>
+
+<h4 id="섹션-i---준비-작업">섹션 I - 준비 작업</h4>
+<ol>
+  <li>기기를 종료해 주세요</li>
+  <li>SD 카드를 컴퓨터에 삽입해 주세요</li>
+  <li>Luma3DS <code class="language-plaintext highlighter-rouge">.zip</code>안에 있는 <code class="language-plaintext highlighter-rouge">boot.firm</code>과 <code class="language-plaintext highlighter-rouge">boot.3dsx</code>를 SD 카드의 루트에 복사해 주세요</li>
+  <li>SD 카드의 <code class="language-plaintext highlighter-rouge">/luma/payloads/</code>폴더에 GodMode9 <code class="language-plaintext highlighter-rouge">.zip</code>안에 압축되있는 <code class="language-plaintext highlighter-rouge">GodMode9.firm</code>을 복사해 주세요</li>
+  <li>SD 카드의 루트로 GodMode9 <code class="language-plaintext highlighter-rouge">.zip</code>안에 압축이 되있는 <code class="language-plaintext highlighter-rouge">gm9</code> 폴더를 복사해 주세요</li>
+  <li><code class="language-plaintext highlighter-rouge">DSiWareUninstaller.3dsx</code> 파일을 SD 카드의 <code class="language-plaintext highlighter-rouge">/3ds/</code> 폴더에 복사해 주세요</li>
+  <li>SD 카드의 <code class="language-plaintext highlighter-rouge">/gm9/scripts/</code>폴더에 <code class="language-plaintext highlighter-rouge">safety_test.gm9</code>을 복사해 주세요</li>
+  <li>SD 카드를 기기에 다시 삽입해 주세요</li>
+</ol>
+
+<h4 id="섹션-ii---ds-모드-확인">섹션 II - DS 모드 확인</h4>
+<p>이 섹션은 기기의 DS 모드 앱들이 커펌 제거후 올바르게 작동 할수 있는지 확인하는 작업을 합니다. 이 섹션을 건너간다면, 커펌 재설치 할 때가지 DS 모드와 이의 관련 기능들의 사용이 불가능 할 수 있습니다. 특히 한글판 (KOR) 기기들은 현재 이 기능 없이 <strong>커펌을 설치할 수가 없습니다!</strong></p>
+
+<h5 id="ds-소프트웨어용-설정-테스트">DS 소프트웨어용 설정 테스트</h5>
+<ol>
+  <li>기기를 시작해 주세요</li>
+  <li>본체 설정 에플리케이션을 실행해 주세요</li>
+  <li><code class="language-plaintext highlighter-rouge">인터넷 설정</code> -&gt; <code class="language-plaintext highlighter-rouge">DS 소프트웨어용 설정</code>으로 들어가 “OK”를 선택해 주세요</li>
+  <li>기기는 DS 소프트웨어용 설정으로 부팅 되었을 겁니다
+    <ul>
+      <li>만약 에러가 발생하거나, 검정색 화면이 표시되거나, 일본판 Flipnote Studio가 표시 되면, 이 테스트는 실패했습니다</li>
+    </ul>
+  </li>
+  <li>기기를 종료해 주세요</li>
+</ol>
+
+<h5 id="ds-다운로드-플레이-테스트">DS 다운로드 플레이 테스트</h5>
+<ol>
+  <li>기기를 시작해 주세요</li>
+  <li>다운로드 플레이 앱을 실행해 주세요 (<img src="https://3ds.hacks.guide/images/download-play-icon.png" alt="" height="24px" width="24px" />)</li>
+  <li>“Nintendo DS”를 선택해 주세요</li>
+  <li>만약 기기가 “DS 다운로드 플레이 | 다운로드할 소프트를 선택합니다.” 메뉴로 로드된다면, 이 테스트는 성공했습니다
+    <ul>
+      <li>만약 에러가 발생하거나, 검정색 화면이 표시되거나, 일본판 Flipnote Studio가 표시 되면, 이 테스트는 실패했습니다</li>
+    </ul>
+  </li>
+  <li>기기를 종료해 주세요</li>
+</ol>
+
+<p class="notice--warning">만약 이 테스트 중 하나라도 실패했다면, 커펌 삭제 이후 DS 모드, DS 다운로드 플레이, 혹은 DS 연결 설정이 작동하지 않을 수 있습니다. <a href="troubleshooting#software-issues-on-devices-with-custom-firmware">DS 모드를 고치고</a> 계속해야 합니다.</p>
+
+<h4 id="섹션-iii---안전-테스트">섹션 III - 안전 테스트</h4>
+<p>이 섹션의 목적은 기기가 커펌 삭제 이후 정상적으로 부팅되며, 본체 설정이나 키보드와 같은 중요 기능이 정상적으로 작동함을 확인하는 것입니다. <strong>이 섹션을 건너뛴다면, 기기가 벽돌이 될 수 있습니다!</strong></p>
+
+<ol>
+  <li>(Start)를 길게 누르고, 이 상태에서 전원을 켜 주세요. GodMode9이 실행 될 겁니다</li>
+  <li>만약 “Essential files backup not found” 메세지가 표시되면, (A) 룰 눌러서 백업을 만들고, 끝나면 (A) 를 눌러서 진행해 주세요</li>
+  <li>만약 “RTC date&amp;time seems to be wrong” 메세지가 표시되면 (A) 버튼을 눌러 하고, 날짜와 시간을 고친 다음 (A) 버튼을 눌러 계속해 주세요
+    <ul>
+      <li>만약 RTC 날짜와 시간을 수정해야 했다면, 이 가이드 끝나고 본체 설정에서도 시간을 수정해야 합니다</li>
+    </ul>
+  </li>
+  <li>(Home)을 눌러 작업 메뉴를 열어 주세요</li>
+  <li>“Scripts…“를 선택해 주세요</li>
+  <li>“safety_test”를 선택해 주세요</li>
+  <li>화면에 있는 텍스트를 잘 읽고 (A)를 눌러 진행하세요</li>
+  <li>커스텀 메뉴가 없는 일반 3DS 홈 메뉴로 부팅되어야 합니다. 만약 부팅되었다면, 다음을 따라 계속 진행해주세요
+    <ul>
+      <li>만약 일반 3DS 메뉴로 부팅되지 않는다면 (검은 화면, 오류 화면 등 표시), 커펌을 지우면 <strong>기기를 사용하지 못하게 됩니다!</strong></li>
+    </ul>
+  </li>
+  <li>본체 설정 에플리케이션을 실행해 주세요
+    <ul>
+      <li>기기가 이 시점에서 오류가 발생한다면, 테스트가 실패했습니다</li>
+    </ul>
+  </li>
+  <li>“기타 설정”을 선택해 주세요</li>
+  <li>“프로필”을 선택해 주세요</li>
+  <li>“사용자 이름”을 선택해 주세요</li>
+  <li>새 사용자 이름을 입력할 수 있다면, 테스트는 성공했습니다
+    <ul>
+      <li>키보드가 나타나지 않거나, 화면이 멈추거나, 기기에서 오류가 발생하면, 테스트는 실패했습니다</li>
+    </ul>
+  </li>
+  <li>기기를 종료해 주세요</li>
+</ol>
+
+<p class="notice--danger">만약 일반 3DS 홈 메뉴로 부팅되지 않거나, 본체 설정 앱 혹은 키보드에 접근이 불가하다면, <strong>즉시 커펌 삭제를 중단하십시오</strong>! <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew Discord 서버</a>에서 영어로 도움을 요청하십시오. “My 3DS has failed the safety test.” 정도로 시작하여 실패한 구간을 (영문 설명서를 확인하여) 설명해 주세요.</p>
+
+<h4 id="섹션-iv---nand-백업">섹션 IV - NAND 백업</h4>
+
+<ol>
+  <li>(Start)를 길게 누르고, 이 상태에서 전원을 켜 주세요. GodMode9이 실행 될 겁니다</li>
+  <li>(Home)을 눌러 작업 메뉴를 열어 주세요</li>
+  <li>“Scripts…“를 선택해 주세요</li>
+  <li>“GM9Megascript”를 선택해 주세요</li>
+  <li>“Backup Options”를 선택해 주세요</li>
+  <li>“SysNAND Backup”을 선택해 주세요</li>
+  <li>(A)를 눌러 확인해 주세요
+    <ul>
+      <li>이 과정은 시간이 좀 걸릴 것입니다</li>
+      <li>만일 에러 발생시, SD 카드의 용량이 최소 1.3GB가 남아 있는지 확인 하세요</li>
+    </ul>
+  </li>
+  <li>(B)를 눌러 메인 메뉴로 돌아가 주세요</li>
+  <li>“Exit”를 선택해 주세요</li>
+  <li>(Home)을 눌러 작업 메뉴를 열어 주세요</li>
+  <li>“Poweroff system”을 선택해 기기의 전원을 꺼 주세요</li>
+</ol>
+
+<h4 id="섹션-v---비정상적-콘텐츠-삭제">섹션 V - 비정상적 콘텐츠 삭제</h4>
+<p class="notice--warning">이 섹션에서는 홈브류나 덤프된 카트리지 데이터와 같이, 비정상적인 콘텐츠를 전부 삭제합니다. 만약 중요한 세이브 데이터가 있다면, 저장 데이터 매니저를 통해 백업 후 진행해 주세요!</p>
+
+<ol>
+  <li>기기를 시작해 주세요</li>
+  <li>본체 설정 에플리케이션을 실행해 주세요</li>
+  <li><code class="language-plaintext highlighter-rouge">데이터 관리</code> -&gt; <code class="language-plaintext highlighter-rouge">닌텐도 3DS</code> -&gt; <code class="language-plaintext highlighter-rouge">소프트웨어 관리</code>로 이동하세요</li>
+  <li>소프트웨어 목록에서, 커펌 사용 중 설치한 닌텐도 제품이 아닌 콘텐츠를 모두 지워주세요
+    <ul>
+      <li>이것은 FBI, Anemone3DS, Luma Updater, Homebrew Launcher, Chekpoint 등의 시스템 소프트웨어와, eShop에서 설치하지 <em>않은</em> 게임 혹은 타이틀을 모두 포함합니다</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">데이터 관리</code> -&gt; <code class="language-plaintext highlighter-rouge">DSiWare</code> 메뉴를 열어 주세요</li>
+  <li>소프트웨어 목록에서, 커펌 사용 중 설치한 닌텐도 제품이 아닌 콘텐츠를 모두 지워주세요
+    <ul>
+      <li>이것은 TWiLightMenu++와 같은 소프트웨어와, eShop을 통해 설치하지 <em>않은</em> 게임 혹은 타이틀을 모두 포함합니다</li>
+      <li>커펌 이후 설치한 소프트웨어를 3DS와 DSiWare 섹션에서 모두 지우지 못하면, 커펌 삭제 이후 데이터 관리 메뉴에 접근하지 못하게 될 수 있습니다. 이렇게 되면, 이후 커펌을 재설치하기 어렵게 됩니다. 특히 한글판 (KOR) 기기들은 현재 이 메뉴 없이 <strong>커펌을 설치할 수가 없습니다!</strong></li>
+    </ul>
+  </li>
+  <li>본체 설정 에플리케이션을 종료해 주세요</li>
+  <li>다운로드 플레이 앱을 실행해 주세요 (<img src="https://3ds.hacks.guide/images/download-play-icon.png" alt="" height="24px" width="24px" />)</li>
+  <li>두 가지의 버튼이 화면에 뜰 때까지 기다려 주세요</li>
+  <li>(L 어깨) + (십자 Down) + (Select) 을 동시에 눌러서 Rosalina 메뉴를 실행해 주세요</li>
+  <li>“Miscellaneous options”을 선택해 주세요</li>
+  <li>“Switch the hb. title to the current app.”를 선택해 주세요</li>
+  <li>(B)를 눌러 진행해 주세요</li>
+  <li>(B)를 눌러 Rosalina 메뉴로 돌아가 주세요</li>
+  <li>(B)를 눌러 Rosalina 메뉴를 나와 주세요</li>
+  <li>(Home) 키를 누르고, 다운로드 플레이를 종료해 주세요</li>
+  <li>다운로드 플레이 앱을 실행해 주세요</li>
+  <li>성공하면 Homebrew Launcher가 실행될 것입니다</li>
+  <li>홈브류 목록에서 DSiWare Uninstaller를 실행해 주세요</li>
+  <li>안내문을 따라 진행하며 프로그램에서 삭제를 진행하도록 하세요</li>
+  <li>이 방법이 성공했다면, Homebrew Launcher를 나가서 기기를 종료해 주세요</li>
+</ol>
+
+<h4 id="섹션-vi---본체-초기화">섹션 VI - 본체 초기화</h4>
+<p>이 섹션에서는 모든 비정상 항목이 삭제되고, eShop이 정상적으로 동작하게 유도합니다. 이 과정에서 3DS에 설치된 모든 항목이 삭제되며, 한국 내수용이 아닌 기기에서는 NNID에서도 로그아웃됩니다. 이 과정에서 콘솔의 암호화 키가 재설정되며, 이는 SD 콘텐츠의 백업이 있더라도 기존 데이터를 사용하지 못하게 됨을 의미한다는 걸 명심하십시오.</p>
+
+<ol>
+  <li>기기를 시작해 주세요</li>
+  <li>본체 설정 에플리케이션을 실행해 주세요</li>
+  <li>기타 설정 -&gt; 5페이지 (마지막 페이지) -&gt; 본체 초기화로 이동해 주세요</li>
+  <li>안내를 따라 3DS를 초기화해 주세요</li>
+</ol>
+
+<h4 id="섹션-vii---제거-스크립트-실행">섹션 VII - 제거 스크립트 실행</h4>
+<p class="notice--warning">이 섹션은 상단의 모든 과정을 거쳐왔다는 것을 확인할 마지막 기회입니다! 진행하기 전에 이 페이지의 모든 섹션을, <strong>특히</strong> <code class="language-plaintext highlighter-rouge">섹션 III - 안전 테스트</code>를 진행하였는지 확인해 주세요.</p>
+
+<ol>
+  <li>(Start)를 길게 누르고, 이 상태에서 전원을 켜 주세요. GodMode9이 실행 될 겁니다
+    <ul>
+      <li>Luma3DS 체인로더가 대신 표시되면, 십자 패드와 (A) 버튼으로 GodMode9을 선택해주세요</li>
+    </ul>
+  </li>
+  <li>(Home)을 눌러 작업 메뉴를 열어 주세요</li>
+  <li>“Scripts…“를 선택해 주세요</li>
+  <li>“GM9Megascript”를 선택해 주세요</li>
+  <li>“Hax Options”를 선택해 주세요</li>
+  <li>“Un-install Hax”를 선택해 주세요</li>
+  <li>프롬프트가 뜨면, (A) 를 눌러서 진행해 주세요</li>
+  <li>(A) 를 눌려 SysNAND (lvl3) 쓰기 잠금을 풀고 화면에 표시된 키 조합을 입력해 주세요</li>
+  <li>(A)를 눌러 진행해 주세요</li>
+  <li>(B)를 눌러 메인 메뉴로 돌아가 주세요</li>
+  <li>“Exit”를 선택해 주세요</li>
+  <li>메세지가 표시되면, (A)를 눌러서 쓰기잠금을 확인해 주세요</li>
+  <li>(Start)를 눌러 기기를 다시 시작해 주세요</li>
+</ol>
+
+<hr />
+
+<p class="notice--success">기기에서 모든 커스텀 펌웨어는 제거 되었습니다.</p>
+
+<p class="notice--info">이제 SD 카드의 루트에서 <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code>, <code class="language-plaintext highlighter-rouge">DCIM</code>과 <code class="language-plaintext highlighter-rouge">private</code> 폴더를 제외한 모든 추가 파일이나 폴더를 지우셔도 됩니다.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://github.com/hacks-guide/Guide_3DS" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+<!--
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+    </ul>
+  -->
+</div>
+
+<!-- custom footer, guide specific -->
+
+
+
+<div class="page__footer-copyright">&copy; 2023 Nintendo Homebrew. - <a href="site-navigation">사이트 탐색</a> - <a href="privacy-policy">개인정보 보호 정책</a> <!-- Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.--></div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+<!-- for guide purposes all caching is removed and is separately built. -->
+
+
+
+
+
+
+
+
+  </body>
+</html>

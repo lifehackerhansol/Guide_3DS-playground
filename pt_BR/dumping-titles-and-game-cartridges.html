@@ -1,0 +1,707 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<!-- for guide purposes all caching is removed and is separately built. -->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Fazendo dump de aplicativos e jogos de cartucho - 3DS Hacks Guide</title>
+<meta name="description" content="A complete guide to 3DS custom firmware">
+
+
+  <meta name="author" content="Nintendo Homebrew">
+  
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="3DS Hacks Guide">
+<meta property="og:title" content="Fazendo dump de aplicativos e jogos de cartucho">
+<meta property="og:url" content="https://3ds.hacks.guide/pt_BR/dumping-titles-and-game-cartridges.html">
+
+
+  <meta property="og:description" content="A complete guide to 3DS custom firmware">
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://3ds.hacks.guide/pt_BR/dumping-titles-and-game-cartridges.html">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Nintendo Homebrew",
+      "url": "https://3ds.hacks.guide/"
+    
+  }
+</script>
+
+
+  <meta name="google-site-verification" content="jVXoPK_-qzKJp4SScnZYpOIX3yDXfGnAoTBJYixUOwg" />
+
+
+  <meta name="msvalidate.01" content="F3532011519E308583A0A2CAF2DD69E8">
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="3DS Hacks Guide Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=PYEmwKvQAx">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png?v=PYEmwKvQAx" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-194x194.png?v=PYEmwKvQAx" sizes="194x194">
+<link rel="icon" type="image/png" href="/images/android-chrome-192x192.png?v=PYEmwKvQAx" sizes="192x192">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png?v=PYEmwKvQAx" sizes="16x16">
+<link rel="manifest" href="/images/manifest.json?v=PYEmwKvQAx">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg?v=PYEmwKvQAx" color="#2E3440">
+<link rel="shortcut icon" href="/images/favicon.ico?v=PYEmwKvQAx">
+<meta name="apple-mobile-web-app-title" content="Guide">
+<meta name="application-name" content="Guide">
+<meta name="msapplication-TileColor" content="#2E3440">
+<meta name="msapplication-TileImage" content="/images/mstile-144x144.png?v=PYEmwKvQAx">
+<meta name="msapplication-config" content="/images/browserconfig.xml?v=PYEmwKvQAx">
+<meta name="theme-color" content="#2E3440">
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.css" integrity="sha512-LQ97camar/lOliT/MqjcQs5kWgy6Qz/cCRzzRzUCfv0fotsCTC9ZHXaPQmJV8Xu/PVALfJZ7BDezl5lW3/qBxg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js" integrity="sha512-yXXqOFjdjHNH1GND+1EO0jbvvebABpzGKD66djnUfiKlYME5HGMUJHoCaeE4D5PTG2YsSJf6dwqyUUvQvS0vaA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#2e3440"
+    },
+    "button": {
+      "background": "#60818f"
+    }
+  },
+  "theme": "edgeless",
+  "position": "top",
+  "static": true,
+  "content": {
+    "message": "Esta página usa cookies para mostrar o atual progresso da guia na barra lateral e, desta forma melhorar o site."
+  }
+})});
+</script>
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <!-- <a class="site-title" href="/">
+          3DS Hacks Guide
+          
+        </a>
+      -->
+        <ul class="visible-links">
+          <!-- modified to use multilang, guide-specific -->
+          
+          
+          
+          
+          
+          
+            
+              <li class="masthead__menu-item masthead__menu-item--lg"><a href="/pt_BR/">Página Inicial</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/pt_BR/faq">FAQ</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/pt_BR/troubleshooting">Troubleshooting</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/pt_BR/checking-for-cfw">Checando por CFW</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/pt_BR/godmode9-usage">Utilização do GodMode9</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/pt_BR/contribute">Contribuir</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/pt_BR/region-changing">Mudança de Região</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/pt_BR/uninstall-cfw">Desinstalar CFW</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/pt_BR/credits">Créditos</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/pt_BR/site-navigation">Navegação do Site</a></li>
+            
+          
+          <!-- end guide specific -->
+        </ul>
+        
+        <!-- completely redo hidden links for multilang, guide-specific -->
+        <ul class="hidden-links links-menu hidden"></ul>
+        <ul class="hidden-links lang-menu hidden">
+          
+          
+          
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/dumping-titles-and-game-cartridges.html">English</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/es_ES/dumping-titles-and-game-cartridges.html">Español</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/de_DE/dumping-titles-and-game-cartridges.html">Deutsch</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/fr_FR/dumping-titles-and-game-cartridges.html">Français</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/it_IT/dumping-titles-and-game-cartridges.html">Italiano</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/nl_NL/dumping-titles-and-game-cartridges.html">Nederlands</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/pt_BR/dumping-titles-and-game-cartridges.html">Português do Brasil</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/pt_PT/dumping-titles-and-game-cartridges.html">Português (Portugal)</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ru_RU/dumping-titles-and-game-cartridges.html">Русский</a></li> -->
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/zh_CN/dumping-titles-and-game-cartridges.html">简体中文</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/zh_TW/dumping-titles-and-game-cartridges.html">繁體中文</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/pl_PL/dumping-titles-and-game-cartridges.html">Polski</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/tr_TR/dumping-titles-and-game-cartridges.html">Türkçe</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/vi_VN/dumping-titles-and-game-cartridges.html">Tiếng Việt</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ca_ES/dumping-titles-and-game-cartridges.html">Català</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/el_GR/dumping-titles-and-game-cartridges.html">Ελληνικά</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/he_IL/dumping-titles-and-game-cartridges.html">עברית‎</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/sv_SE/dumping-titles-and-game-cartridges.html">Svenska</a></li> -->
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ko_KR/dumping-titles-and-game-cartridges.html">한국어</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/no_NO/dumping-titles-and-game-cartridges.html">Norsk</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ja_JP/dumping-titles-and-game-cartridges.html">日本語</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ar_SA/dumping-titles-and-game-cartridges.html">اللغة العربية</a></li> -->
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/hu_HU/dumping-titles-and-game-cartridges.html">Magyar</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ro_RO/dumping-titles-and-game-cartridges.html">Română</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/sr_SP/dumping-titles-and-game-cartridges.html">Српски</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/af_ZA/dumping-titles-and-game-cartridges.html">Afrikaans</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ms_MY/dumping-titles-and-game-cartridges.html">Bahasa Melayu</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/fi_FI/dumping-titles-and-game-cartridges.html">Suomi</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/da_DK/dumping-titles-and-game-cartridges.html">Dansk</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/uk_UA/dumping-titles-and-game-cartridges.html">Українська</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/cs_CZ/dumping-titles-and-game-cartridges.html">Čeština</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/en_PT/dumping-titles-and-game-cartridges.html">Pirate English</a></li> -->
+        </ul>
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <button class="greedy-nav__toggle_lang"><div class="langicon"><i class="fa fa-language fa-lg" aria-hidden="true"></i></div></button>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  <!-- 
+  <div class="sidebar sticky">
+  
+  
+    
+    
+  
+  </div>
+
+-->
+
+
+
+<div class="sidebar sticky" style="display: none;">
+  
+
+
+
+
+
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    <li>
+      <span class="nav__sub-title">Progresso Geral</span>
+      <ol>
+        
+          
+            <li style="display: none;" data-name="home"><a href='/pt_BR/'>Página Inicial</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="key-information"><a href='/pt_BR/key-information'>Informação Importante</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="get-started"><a href='/pt_BR/get-started'>Começando</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="ntrboot"><a href='/pt_BR/ntrboot'>ntrboot</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer"><a href='/pt_BR/seedminer'>Seedminer</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(twn)"><a href='/pt_BR/seedminer-(twn)'>Seedminer (TWN)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="bannerbomb3"><a href='/pt_BR/bannerbomb3'>BannerBomb3</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="multiple-options"><i>(Múltiplas Opções)</i></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(3ds-single-system)"><a href='/pt_BR/flashing-ntrboot-(3ds-single-system)'>Injetando ntrboot (Único 3DS)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(3ds-multi-system)"><a href='/pt_BR/flashing-ntrboot-(3ds-multi-system)'>Injetando ntrboot (Múltiplos 3DS)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(dsi)"><a href='/pt_BR/flashing-ntrboot-(dsi)'>Injetando ntrboot (DSi)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(nds)"><a href='/pt_BR/flashing-ntrboot-(nds)'>Injetando ntrboot (NDS)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(pichaxx)"><a href='/pt_BR/homebrew-launcher-(pichaxx)'>Homebrew Launcher (PicHaxx)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="bannerbomb3-fredtool-(twn)"><a href='/pt_BR/bannerbomb3-fredtool-(twn)'>BannerBomb3 + Fredtool (TWN)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(hardmod)"><a href='/pt_BR/installing-boot9strap-(hardmod)'>Instalando boot9strap (Hardmod)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(hbl-usm)"><a href='/pt_BR/instalando-boot9strap-(hbl-usm)'>Instalando boot9strap (HBL-USM)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(ntrboot)"><a href='/pt_BR/instalando-boot9strap-(ntrboot)'>Instalando boot9strap (ntrboot)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(soundhax)"><a href='/pt_BR/instalando-boot9strap-(soundhax)'>Instalando boot9strap (Soundhax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(ssloth-browser)"><a href='/pt_BR/instalando-boot9strap-(ssloth-browser)'>Instalando boot9strap (SSLoth-Browser)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(fredtool)"><a href='/pt_BR/instalando-boot9strap-(fredtool)'>Instalando boot9strap (Fredtool)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(usm)"><a href='/pt_BR/instalando-boot9strap-(usm)'>Instalando boot9strap (USM)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(kartdlphax)"><a href='/pt_BR/instalando-boot9strap-(kartdlphax)'>Instalando boot9strap (kartdlphax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(hbl-usm)"><a href='/pt_BR/instalando-boot9strap-(hbl-usm)'>Instalando boot9strap (HBL-USM)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="finalizing-setup"><a href='/pt_BR/finalizando-a-instalação'>Finalizando a Instalação</a></li>
+          
+        
+      </ol>
+    </li>
+  </ul>
+</nav>
+</div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Fazendo dump de aplicativos e jogos de cartucho">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Fazendo dump de aplicativos e jogos de cartucho
+</h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+
+        <hr>
+
+        
+        
+
+        
+          
+          <div class ="notice"><b>Para suporte em Inglês, peça ajuda no <a href="https://discord.gg/MWxPgEp">Discord do Nintendo Homebrew</a>.</b></div>
+        
+          
+          <div class ="notice"><b>Se você gostou deste guia, nós aceitamos <a href="contribute#donations">Doações</a>.</b></div>
+        
+
+        <hr>
+
+        <aside class="sidebar__right">
+<nav class="toc">
+    <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Tabela de Conteúdo</h4></header>
+<ul class="toc__menu" id="markdown-toc">
+  <li><a href="#leitura-obrigatória" id="markdown-toc-leitura-obrigatória">Leitura Obrigatória</a></li>
+  <li><a href="#atualizando-o-godmode9" id="markdown-toc-atualizando-o-godmode9">Atualizando o GodMode9</a>    <ul>
+      <li><a href="#o-que-é-necessário" id="markdown-toc-o-que-é-necessário">O que é necessário</a></li>
+      <li><a href="#instruções" id="markdown-toc-instruções">Instruções</a></li>
+    </ul>
+  </li>
+  <li><a href="#fazendo-dump-de-um-jogo-de-cartucho" id="markdown-toc-fazendo-dump-de-um-jogo-de-cartucho">Fazendo Dump de um Jogo de Cartucho</a></li>
+  <li><a href="#instalando-um-jogo-de-cartucho-diretamente-no-sistema" id="markdown-toc-instalando-um-jogo-de-cartucho-diretamente-no-sistema">Instalando um Jogo de Cartucho Diretamente no Sistema</a></li>
+  <li><a href="#copiando-um-jogo-de-cartucho-do-3ds-para-cia" id="markdown-toc-copiando-um-jogo-de-cartucho-do-3ds-para-cia">Copiando um Jogo de Cartucho do 3DS para .CIA</a></li>
+  <li><a href="#fazendo-dump-de-um-aplicativo-instalado" id="markdown-toc-fazendo-dump-de-um-aplicativo-instalado">Fazendo Dump de um Aplicativo Instalado</a></li>
+  <li><a href="#backup-de-saves-vc-de-gba" id="markdown-toc-backup-de-saves-vc-de-gba">Backup de Saves VC de GBA</a></li>
+  <li><a href="#restaurando-saves-do-vc-de-gba" id="markdown-toc-restaurando-saves-do-vc-de-gba">Restaurando Saves do VC de GBA</a></li>
+  <li><a href="#criptografando--descriptografando-um-arquivo-cia" id="markdown-toc-criptografando--descriptografando-um-arquivo-cia">Criptografando / Descriptografando um arquivo .CIA</a></li>
+</ul>
+
+  </nav>
+</aside>
+
+<p class="notice--primary">Para suporte (em inglês) com o GodMode9, bem como ajuda com scripting e obter atualizações e informações, junte-se ao <a href="https://discord.gg/BRcbvtFxX4">Discord do GodMode9</a>.</p>
+
+<h3 id="leitura-obrigatória">Leitura Obrigatória</h3>
+
+<p>Além de criar e restaurar backups da NAND, o GodMode9 tem a funcionalidade de fazer dump de aplicativos instalados para um arquivo <code class="language-plaintext highlighter-rouge">.cia</code> instalável, dump de dados de jogos de cartucho para um arquivo ROM <code class="language-plaintext highlighter-rouge">.3ds</code> e instalar diretamente um jogo de um cartucho para o sistema.</p>
+
+<h2 id="atualizando-o-godmode9">Atualizando o GodMode9</h2>
+
+<p class="notice--info">Estas instruções estão escritas para serem usadas com o GodMode9 v2.0.0 ou adiante. Se você tem uma versão mais antiga do GodMode9, siga estas instruções para atualizá-lo.</p>
+
+<h3 id="o-que-é-necessário">O que é necessário</h3>
+
+<ul>
+  <li>A versão mais recente do <a href="https://github.com/d0k3/GodMode9/releases/latest">GodMode9</a></li>
+</ul>
+
+<h3 id="instruções">Instruções</h3>
+
+<ol>
+  <li>Desligue seu dispositivo</li>
+  <li>Insira o cartão SD no seu computador</li>
+  <li>Copie <code class="language-plaintext highlighter-rouge">GodMode9.firm</code> do <code class="language-plaintext highlighter-rouge">.zip</code> do GodMode9 para a pasta <code class="language-plaintext highlighter-rouge">/luma/payloads/</code> no seu cartão SD</li>
+  <li>Copie a pasta <code class="language-plaintext highlighter-rouge">gm9</code> do <code class="language-plaintext highlighter-rouge">.zip</code> do GodMode9 para a raiz do seu cartão SD</li>
+  <li>Reinsira seu cartão SD no seu dispositivo</li>
+</ol>
+
+<h2 id="fazendo-dump-de-um-jogo-de-cartucho">Fazendo Dump de um Jogo de Cartucho</h2>
+
+<div class="notice--info">
+<p>Insira o cartucho do jogo que você pretende fazer um dump em seu dispositivo</p>
+<ul>
+  <li>Jogos de cartucho de 3DS serão copiados para o formato <code class="language-plaintext highlighter-rouge">.3ds</code></li>
+  <li>Jogos de cartucho de NDS serão copiados para o formato <code class="language-plaintext highlighter-rouge">.nds</code></li>
+</ul>
+</div>
+
+<ol>
+  <li>Pressione e segure (Start), e enquanto segura (Start), ligue seu dispositivo. Isso vai inicializar o GodMode9</li>
+  <li>Navegue para <code class="language-plaintext highlighter-rouge">[C:] GAMECART</code></li>
+  <li>Siga os passos aplicáveis ao seu jogo de cartucho:
+    <ul>
+      <li><strong>Jogo de cartucho de 3DS:</strong> Aperte (A) no <code class="language-plaintext highlighter-rouge">[TitleID].trim.3ds</code> para selecioná-lo</li>
+      <li><strong>Jogo de cartucho de NDS:</strong> Aperte (A) no<code class="language-plaintext highlighter-rouge">[TitleID].nds</code> para selecioná-lo
+        <ul>
+          <li>Trimmed dumps não são recomendados para jogos do NDS em geral, pois podem causar vários problemas de reprodução</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Selecione “Copy to 0:/gm9/out’’</li>
+  <li>Seu arquivo formatado <code class="language-plaintext highlighter-rouge">.3ds</code> não-instalável ou <code class="language-plaintext highlighter-rouge">.nds</code> será gravado na pasta <code class="language-plaintext highlighter-rouge">/gm9/out/</code> no seu cartão SD</li>
+</ol>
+
+<h2 id="instalando-um-jogo-de-cartucho-diretamente-no-sistema">Instalando um Jogo de Cartucho Diretamente no Sistema</h2>
+
+<p class="notice--info">Isto só funcionará para jogos de 3DS; não é possível instalar um jogo de cartucho de NDS no sistema como um aplicativo.</p>
+
+<ol>
+  <li>Pressione e segure (Start), e enquanto segura (Start), ligue seu dispositivo. Isso vai inicializar o GodMode9</li>
+  <li>Navegue para <code class="language-plaintext highlighter-rouge">[C:] GAMECART</code></li>
+  <li>Aperte (A) no <code class="language-plaintext highlighter-rouge">[TitleID].trim.3ds</code> para selecioná-lo, depois selecione “NCSD image options…”, depois selecione “Install game image”</li>
+  <li>Aperte (A) para destravar “SysNAND (lvl1) writing”, então aperte a sequência de botões solicitada</li>
+  <li>Assim que o processo for completo, seu jogo aparecerá no Menu HOME como um aplicativo instalado.</li>
+</ol>
+
+<h2 id="copiando-um-jogo-de-cartucho-do-3ds-para-cia">Copiando um Jogo de Cartucho do 3DS para .CIA</h2>
+
+<p class="notice--info">Isso só deve ser usado se <a href="#installing-a-game-cartridge-directly-to-the-system">Instalar um Jogo de Cartucho diretamente no Sistema</a> não funcionar.</p>
+
+<ol>
+  <li>Pressione e segure (Start), e enquanto segura (Start), ligue seu dispositivo. Isso vai inicializar o GodMode9</li>
+  <li>Navegue para <code class="language-plaintext highlighter-rouge">[C:] GAMECART</code></li>
+  <li>Aperte (A) em <code class="language-plaintext highlighter-rouge">[TitleID].trim.3ds</code> para selecioná-lo, depois selecione “NCSD image options…”, depois selecione “Build CIA from file”</li>
+  <li>Seu <code class="language-plaintext highlighter-rouge">.cia</code> instalável formatado será gravado na pasta <code class="language-plaintext highlighter-rouge">/gm9/out/</code> no seu cartão SD</li>
+</ol>
+
+<h2 id="fazendo-dump-de-um-aplicativo-instalado">Fazendo Dump de um Aplicativo Instalado</h2>
+
+<p class="notice--info">Isso permite o dump de aplicativos digitais instalados tanto do Sistema como aplicativos instalados pelo Usuário, como os instalados da eShop.</p>
+
+<ol>
+  <li>Pressione e segure (Start), e enquanto segura (Start), ligue seu dispositivo. Isso vai inicializar o GodMode9</li>
+  <li>Aperte (Home) para abrir o menu de ações</li>
+  <li>Selecione “Title manager”</li>
+  <li>Selecione um dos seguintes dependendo do tipo de aplicativo que você deseja descarregar
+    <ul>
+      <li><strong>Aplicativo Instalado pelo Usuário</strong>: <code class="language-plaintext highlighter-rouge">[A:] SD CARD</code></li>
+      <li><strong>Aplicativo do Sistema / DSiWare</strong>: <code class="language-plaintext highlighter-rouge">[1:] NAND / TWL</code></li>
+    </ul>
+  </li>
+  <li>Selecione o título que você deseja fazer um dump</li>
+  <li>Selecione “Manage Title…”</li>
+  <li>Selecione “Build CIA (standard)”</li>
+  <li>Seu <code class="language-plaintext highlighter-rouge">.cia</code> instalável formatado será gravado na pasta <code class="language-plaintext highlighter-rouge">/gm9/out/</code> no seu cartão SD</li>
+</ol>
+
+<h2 id="backup-de-saves-vc-de-gba">Backup de Saves VC de GBA</h2>
+
+<p class="notice--info">O jogo será criado na pasta <code class="language-plaintext highlighter-rouge">/gm9/out/</code> do seu cartão SD com o nome <code class="language-plaintext highlighter-rouge">&lt;TitleID&gt;.gbavc.sav</code>.</p>
+
+<p class="notice--info">Para identificar o TitleID de um arquivo <code class="language-plaintext highlighter-rouge">&lt;TitleID&gt;.gbavc.sav</code>, você pode obter uma listagem de todos os jogos no sistema e suas IDs correspondentes apertando (Home) para obter o menu de ações, selecionando <code class="language-plaintext highlighter-rouge">Title manager</code>, e selecionando <code class="language-plaintext highlighter-rouge">[A:] SD CARD</code>.</p>
+
+<ol>
+  <li>Faça o seguinte processo para cada jogo de VC de GBA que você quer fazer um backup do save:
+    <ul>
+      <li>Inicie o jogo de VC de GBA</li>
+      <li>Saia do jogo de VC de GBA</li>
+      <li>Desligue seu dispositivo</li>
+      <li>Pressione e segure (Start) e enquanto segura (Start), ligue seu dispositivo. Isso vai inicializar o GodMode9</li>
+      <li>Navegue para <code class="language-plaintext highlighter-rouge">[S:] SYSNAND VIRTUAL</code></li>
+      <li>Aperte (A) no <code class="language-plaintext highlighter-rouge">agbsave.bin</code> para selecioná-lo</li>
+      <li>Selecione “AGBSAVE options…”</li>
+      <li>Selecione “Dump GBA VC save”</li>
+      <li>Aperte (A) para continuar</li>
+      <li>Aperte (Start) para reiniciar seu dispositivo</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="restaurando-saves-do-vc-de-gba">Restaurando Saves do VC de GBA</h2>
+
+<p class="notice--info">Para identificar o TitleID de um arquivo <code class="language-plaintext highlighter-rouge">&lt;TitleID&gt;.gbavc.sav</code>, você pode obter uma listagem de todos os jogos no sistema e suas IDs correspondentes apertando (Home) para obter o menu de ações, selecionando <code class="language-plaintext highlighter-rouge">Title manager</code>, e selecionando <code class="language-plaintext highlighter-rouge">[A:] SD CARD</code>.</p>
+
+<ol>
+  <li>Faça o seguinte processo para cada jogo de VC de GBA que você deseja restaurar o save:
+    <ul>
+      <li>Inicie o jogo de VC de GBA</li>
+      <li>Saia do jogo de VC de GBA</li>
+      <li>Desligue seu dispositivo</li>
+      <li>Pressione e segure (Start) e enquanto segura (Start), ligue seu dispositivo. Isso vai inicializar o GodMode9</li>
+      <li>Navegue para <code class="language-plaintext highlighter-rouge">[0:] SDCARD</code> -&gt; <code class="language-plaintext highlighter-rouge">gm9</code></li>
+      <li>Aperte (Y) sobre o arquivo ‘<TitleID>. gbavc.sav' que você deseja restaurar para copiá-lo</TitleID></li>
+      <li>Aperte (B) para retornar para o menu principal</li>
+      <li>Navegue para <code class="language-plaintext highlighter-rouge">[S:] SYSNAND VIRTUAL</code></li>
+      <li>Aperte (A) no <code class="language-plaintext highlighter-rouge">agbsave.bin</code> para selecioná-lo</li>
+      <li>Selecione “AGBSAVE options…”</li>
+      <li>Selecione “Inject GBA VC save”</li>
+      <li>Aperte (A) para continuar</li>
+      <li>Aperte (Start) para reiniciar seu dispositivo</li>
+      <li>Inicie o jogo de VC de GBA</li>
+      <li>Saia do jogo de VC de GBA</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="criptografando--descriptografando-um-arquivo-cia">Criptografando / Descriptografando um arquivo .CIA</h2>
+
+<p class="notice--info">Para fins organizacionais, copie cada arquivo <code class="language-plaintext highlighter-rouge">.cia</code> que você deseja criptografar / descriptografar para a pasta <code class="language-plaintext highlighter-rouge">/cias/</code> no seu cartão SD</p>
+
+<ol>
+  <li>Pressione e segure (Start), e enquanto segura (Start), ligue seu dispositivo. Isso vai inicializar o GodMode9</li>
+  <li>Navegue para <code class="language-plaintext highlighter-rouge">[0:] SDCARD</code> -&gt; <code class="language-plaintext highlighter-rouge">cias</code></li>
+  <li>Aperte (A) no arquivo <code class="language-plaintext highlighter-rouge">.cia</code> para selecioná-lo, depois selecione “CIA image options…”</li>
+  <li>Selecione a opção para executar a função desejada:
+    <ul>
+      <li><strong>Encrypt to 0:/gm9/out:</strong> Cria uma cópia criptografada do arquivo <code class="language-plaintext highlighter-rouge">.cia</code> selecionado na pasta <code class="language-plaintext highlighter-rouge">/gm9/out/</code> no seu cartão SD</li>
+      <li><strong>Decrypt to 0:/gm9/out:</strong> Cria uma cópia descriptografada do arquivo <code class="language-plaintext highlighter-rouge">.cia</code> selecionado na pasta <code class="language-plaintext highlighter-rouge">/gm9/out/</code> no seu cartão SD</li>
+      <li><strong>Encrypt inplace:</strong> Substitui o arquivo <code class="language-plaintext highlighter-rouge">.cia</code> selecionado por uma versão criptografada</li>
+      <li><strong>Decrypt inplace:</strong> Substitui o arquivo <code class="language-plaintext highlighter-rouge">.cia</code> selecionado por uma versão descriptografada</li>
+    </ul>
+  </li>
+  <li>Seu <code class="language-plaintext highlighter-rouge">.cia</code> criptografado / descriptografado será colocado no local desejado</li>
+</ol>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://github.com/hacks-guide/Guide_3DS" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+<!--
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+    </ul>
+  -->
+</div>
+
+<!-- custom footer, guide specific -->
+
+
+
+<div class="page__footer-copyright">&copy; 2023 Nintendo Homebrew. - <a href="site-navigation">Navegação do Site</a> - <a href="privacy-policy">Política de Privacidade</a> <!-- Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.--></div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+<!-- for guide purposes all caching is removed and is separately built. -->
+
+
+
+
+
+
+
+
+  </body>
+</html>

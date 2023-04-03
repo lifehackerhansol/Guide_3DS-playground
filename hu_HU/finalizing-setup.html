@@ -1,0 +1,774 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<!-- for guide purposes all caching is removed and is separately built. -->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Telepítés véglegesítése - 3DS Hacks Guide</title>
+<meta name="description" content="A complete guide to 3DS custom firmware">
+
+
+  <meta name="author" content="Nintendo Homebrew">
+  
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="3DS Hacks Guide">
+<meta property="og:title" content="Telepítés véglegesítése">
+<meta property="og:url" content="https://3ds.hacks.guide/hu_HU/finalizing-setup.html">
+
+
+  <meta property="og:description" content="A complete guide to 3DS custom firmware">
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://3ds.hacks.guide/hu_HU/finalizing-setup.html">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Nintendo Homebrew",
+      "url": "https://3ds.hacks.guide/"
+    
+  }
+</script>
+
+
+  <meta name="google-site-verification" content="jVXoPK_-qzKJp4SScnZYpOIX3yDXfGnAoTBJYixUOwg" />
+
+
+  <meta name="msvalidate.01" content="F3532011519E308583A0A2CAF2DD69E8">
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="3DS Hacks Guide Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=PYEmwKvQAx">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png?v=PYEmwKvQAx" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-194x194.png?v=PYEmwKvQAx" sizes="194x194">
+<link rel="icon" type="image/png" href="/images/android-chrome-192x192.png?v=PYEmwKvQAx" sizes="192x192">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png?v=PYEmwKvQAx" sizes="16x16">
+<link rel="manifest" href="/images/manifest.json?v=PYEmwKvQAx">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg?v=PYEmwKvQAx" color="#2E3440">
+<link rel="shortcut icon" href="/images/favicon.ico?v=PYEmwKvQAx">
+<meta name="apple-mobile-web-app-title" content="Guide">
+<meta name="application-name" content="Guide">
+<meta name="msapplication-TileColor" content="#2E3440">
+<meta name="msapplication-TileImage" content="/images/mstile-144x144.png?v=PYEmwKvQAx">
+<meta name="msapplication-config" content="/images/browserconfig.xml?v=PYEmwKvQAx">
+<meta name="theme-color" content="#2E3440">
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.css" integrity="sha512-LQ97camar/lOliT/MqjcQs5kWgy6Qz/cCRzzRzUCfv0fotsCTC9ZHXaPQmJV8Xu/PVALfJZ7BDezl5lW3/qBxg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js" integrity="sha512-yXXqOFjdjHNH1GND+1EO0jbvvebABpzGKD66djnUfiKlYME5HGMUJHoCaeE4D5PTG2YsSJf6dwqyUUvQvS0vaA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#2e3440"
+    },
+    "button": {
+      "background": "#60818f"
+    }
+  },
+  "theme": "edgeless",
+  "position": "top",
+  "static": true,
+  "content": {
+    "message": "A weboldal "sütiket" használ, hogy nyomon tudd követni a haladásod az oldalsó menüben, és hogy jobbá tegye az oldalt."
+  }
+})});
+</script>
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <!-- <a class="site-title" href="/">
+          3DS Hacks Guide
+          
+        </a>
+      -->
+        <ul class="visible-links">
+          <!-- modified to use multilang, guide-specific -->
+          
+          
+          
+          
+          
+          
+            
+              <li class="masthead__menu-item masthead__menu-item--lg"><a href="/hu_HU/">Főoldal</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/hu_HU/faq">GYIK</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/hu_HU/troubleshooting">Hibaelhárítás</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/hu_HU/checking-for-cfw">CFW ellenőrzése</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/hu_HU/godmode9-usage">GodMode9 használata</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/hu_HU/contribute">Közreműködés</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/hu_HU/region-changing">Régió módosítás</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/hu_HU/uninstall-cfw">CFW eltávolítása</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/hu_HU/credits">Készítők</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/hu_HU/site-navigation">Oldaltérkép</a></li>
+            
+          
+          <!-- end guide specific -->
+        </ul>
+        
+        <!-- completely redo hidden links for multilang, guide-specific -->
+        <ul class="hidden-links links-menu hidden"></ul>
+        <ul class="hidden-links lang-menu hidden">
+          
+          
+          
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/finalizing-setup.html">English</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/es_ES/finalizing-setup.html">Español</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/de_DE/finalizing-setup.html">Deutsch</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/fr_FR/finalizing-setup.html">Français</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/it_IT/finalizing-setup.html">Italiano</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/nl_NL/finalizing-setup.html">Nederlands</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/pt_BR/finalizing-setup.html">Português do Brasil</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/pt_PT/finalizing-setup.html">Português (Portugal)</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ru_RU/finalizing-setup.html">Русский</a></li> -->
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/zh_CN/finalizing-setup.html">简体中文</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/zh_TW/finalizing-setup.html">繁體中文</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/pl_PL/finalizing-setup.html">Polski</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/tr_TR/finalizing-setup.html">Türkçe</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/vi_VN/finalizing-setup.html">Tiếng Việt</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ca_ES/finalizing-setup.html">Català</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/el_GR/finalizing-setup.html">Ελληνικά</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/he_IL/finalizing-setup.html">עברית‎</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/sv_SE/finalizing-setup.html">Svenska</a></li> -->
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ko_KR/finalizing-setup.html">한국어</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/no_NO/finalizing-setup.html">Norsk</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ja_JP/finalizing-setup.html">日本語</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ar_SA/finalizing-setup.html">اللغة العربية</a></li> -->
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/hu_HU/finalizing-setup.html">Magyar</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ro_RO/finalizing-setup.html">Română</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/sr_SP/finalizing-setup.html">Српски</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/af_ZA/finalizing-setup.html">Afrikaans</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ms_MY/finalizing-setup.html">Bahasa Melayu</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/fi_FI/finalizing-setup.html">Suomi</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/da_DK/finalizing-setup.html">Dansk</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/uk_UA/finalizing-setup.html">Українська</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/cs_CZ/finalizing-setup.html">Čeština</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/en_PT/finalizing-setup.html">Pirate English</a></li> -->
+        </ul>
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <button class="greedy-nav__toggle_lang"><div class="langicon"><i class="fa fa-language fa-lg" aria-hidden="true"></i></div></button>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  <!-- 
+  <div class="sidebar sticky">
+  
+  
+    
+    
+  
+  </div>
+
+-->
+
+
+
+<div class="sidebar sticky" style="display: none;">
+  
+
+
+
+
+
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    <li>
+      <span class="nav__sub-title">Előrehaladás</span>
+      <ol>
+        
+          
+            <li style="display: none;" data-name="home"><a href='/hu_HU/'>Főoldal</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="key-information"><a href='/hu_HU/key-information'>Alapvető információk</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="get-started"><a href='/hu_HU/get-started'>Kezdeti lépések</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="ntrboot"><a href='/hu_HU/ntrboot'>ntrboot</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer"><a href='/hu_HU/seedminer'>Seedminer</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(twn)"><a href='/hu_HU/seedminer-(twn)'>Seedminer (TWN)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="bannerbomb3"><a href='/hu_HU/bannerbomb3'>BannerBomb3</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="multiple-options"><i>(Több lehetőség)</i></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(3ds-single-system)"><a href='/hu_HU/flashing-ntrboot-(3ds-single-system)'>Ntrboot flashelése (egy 3DS rendszer)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(3ds-multi-system)"><a href='/hu_HU/flashing-ntrboot-(3ds-multi-system)'>Ntrboot flashelése (több 3DS rendszer)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(dsi)"><a href='/hu_HU/flashing-ntrboot-(dsi)'>Ntrboot flashelése (DSi)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(nds)"><a href='/hu_HU/flashing-ntrboot-(nds)'>Ntrboot flashelése (NDS)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(pichaxx)"><a href='/hu_HU/homebrew-launcher-(pichaxx)'>Homebrew Launcher (PicHaxx)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="bannerbomb3-fredtool-(twn)"><a href='/hu_HU/bannerbomb3-fredtool-(twn)'>BannerBomb3 + Fredtool (TWN)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(hardmod)"><a href='/hu_HU/installing-boot9strap-(hardmod)'>Boot9strap telepítése (Hardmod)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(hbl-usm)"><a href='/hu_HU/installing-boot9strap-(hbl-usm)'>Boot9strap telepítése (HBL-USM)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(ntrboot)"><a href='/hu_HU/installing-boot9strap-(ntrboot)'>Boot9strap telepítése (ntrboot)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(soundhax)"><a href='/hu_HU/installing-boot9strap-(soundhax)'>Boot9strap telepítése (Soundhax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(ssloth-browser)"><a href='/hu_HU/installing-boot9strap-(ssloth-browser)'>Boot9strap telepítése (SSLoth-Browser)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(fredtool)"><a href='/hu_HU/installing-boot9strap-(fredtool)'>Boot9strap telepítése (Fredtool)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(usm)"><a href='/hu_HU/installing-boot9strap-(usm)'>Boot9strap telepítése (USM)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(kartdlphax)"><a href='/hu_HU/installing-boot9strap-(kartdlphax)'>Boot9strap telepítése (kartdlphax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(hbl-usm)"><a href='/hu_HU/installing-boot9strap-(hbl-usm)'>Boot9strap telepítése (HBL-USM)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="finalizing-setup"><a href='/hu_HU/finalizing-setup'>Telepítés véglegesítése</a></li>
+          
+        
+      </ol>
+    </li>
+  </ul>
+</nav>
+</div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Telepítés véglegesítése">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Telepítés véglegesítése
+</h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+
+        <hr>
+
+        
+        
+
+        
+          
+          <div class ="notice"><b>Ha segítségre van szükséged (angol nyelven), keresd fel a <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew-t Discord-on</a>.</b></div>
+        
+          
+          <div class ="notice"><b>Amennyiben hasznosnak véled ezt az útmutatót, elfogadunk <a href="contribute#donations">adományokat</a>.</b></div>
+        
+
+        <hr>
+
+        <aside class="sidebar__right">
+<nav class="toc">
+    <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Tartalomjegyzék</h4></header>
+<ul class="toc__menu" id="markdown-toc">
+  <li><a href="#fontos-tudnivalók" id="markdown-toc-fontos-tudnivalók">Fontos tudnivalók</a></li>
+  <li><a href="#kompatibilitási-megjegyzések" id="markdown-toc-kompatibilitási-megjegyzések">Kompatibilitási megjegyzések</a></li>
+  <li><a href="#amire-szükséged-lesz" id="markdown-toc-amire-szükséged-lesz">Amire szükséged lesz</a></li>
+  <li><a href="#utasítások" id="markdown-toc-utasítások">Utasítások</a>    <ul>
+      <li><a href="#i-rész---előkészületek" id="markdown-toc-i-rész---előkészületek">I. rész - Előkészületek</a></li>
+      <li><a href="#ii-rész---a-rendszer-frissítése" id="markdown-toc-ii-rész---a-rendszer-frissítése">II. rész - A rendszer frissítése</a></li>
+      <li><a href="#iii-rész---homebrew-launcher" id="markdown-toc-iii-rész---homebrew-launcher">III. rész - Homebrew Launcher</a></li>
+      <li><a href="#iv-rész---rtc-és-dsp-telepítése" id="markdown-toc-iv-rész---rtc-és-dsp-telepítése">IV. rész - RTC és DSP telepítése</a></li>
+      <li><a href="#v-rész---cia-fájlok-telepítése" id="markdown-toc-v-rész---cia-fájlok-telepítése">V. rész - CIA fájlok telepítése</a></li>
+      <li><a href="#vi-rész---luma3ds-telepítése-ctrnand-ba" id="markdown-toc-vi-rész---luma3ds-telepítése-ctrnand-ba">VI. rész - Luma3DS telepítése CTRNAND-ba</a></li>
+      <li><a href="#vii-rész---takarítás-az-sd-kártyán" id="markdown-toc-vii-rész---takarítás-az-sd-kártyán">VII. rész - Takarítás az SD kártyán</a></li>
+      <li><a href="#viii-rész---backup-essential-files" id="markdown-toc-viii-rész---backup-essential-files">VIII. rész - Backup Essential Files</a></li>
+    </ul>
+  </li>
+  <li><a href="#információk-és-megjegyzések" id="markdown-toc-információk-és-megjegyzések">Információk és megjegyzések</a></li>
+</ul>
+
+  </nav>
+</aside>
+
+<h3 id="fontos-tudnivalók">Fontos tudnivalók</h3>
+
+<p>A <code class="language-plaintext highlighter-rouge">boot.firm</code> nevezetű fájl az, amit maga a boot9strap elindít, amint betöltődik a NAND-ból. Ebben az esetben a <a href="https://github.com/LumaTeam/">LumaTeam</a> által készített Luma3DS-t használjuk az eszköz patcheléséhez, hogy tudjon homebrew programokat futtatni.</p>
+
+<p>Ezen az oldalon kritikus rendszer mentéseket fogunk csinálni és a következő homebrew alkalmazásokat fogjuk telepíteni:</p>
+
+<ul>
+  <li><strong>FBI</strong> <em>(CIA formátumú alkalmazásokat telepít)</em></li>
+  <li><strong>Anemone3DS</strong> <em>(egyedi témákat telepít)</em></li>
+  <li><strong>Checkpoint</strong> <em>(3DS és DS játékok mentéseiről lehet biztonsági mentést készíteni és visszaállítani)</em></li>
+  <li><strong>Universal-Updater</strong> <em>(egy homebrew app store homebrew letöltéséhez a 3DS-re WiFi-n keresztül)</em></li>
+  <li><strong>GodMode9</strong> <em>(sokféle dologra használható eszköz, például NAND és kártya műveletekre)</em></li>
+  <li><strong>Homebrew Launcher Loader</strong> <em>(elindítja a Homebrew Launchert)</em></li>
+</ul>
+
+<p class="notice--warning">Nem ajánlott ezeket az alkalmazásokat nem letölteni, mert mindegyik még használva lesz ezen az oldalon. Ennek az oldalnak a végén az SD kártyádról el lesznek távolítva a felesleges telepítő fájlok.</p>
+
+<h3 id="kompatibilitási-megjegyzések">Kompatibilitási megjegyzések</h3>
+
+<p class="notice--warning">Ha az <strong>új 3DS</strong> konzolod a 2.1.0 verzión volt, a <a href="godmode9-usage#nand-ról-készült-bizonsági-másolat-visszaállítása">NAND-ról készült bizonsági másolatot állítsd vissza</a> mielőtt tovább mennél. Ez valószínűleg nem vonatkozik rád, ha csak nem 2017-ben olvasod ezt az útmutatót.</p>
+
+<p class="notice--info">Ha az előző egyedi firmware rendszered EmuNAND alapú volt és szeretnéd az EmuNAND/RedNAND tartalmait a SysNAND-re másolni, kövest az <a href="move-emunand">EmuNAND költöztetése</a> útmutatót ez az oldal előtt. Ha nem tudod mi az az EmuNAND, ez nem vonatkozik rád.</p>
+
+<h3 id="amire-szükséged-lesz">Amire szükséged lesz</h3>
+
+<ul>
+  <li>Az <a href="https://github.com/astronautlevel2/Anemone3DS/releases/latest">Anemone3DS</a> legújabb kiadása (a <code class="language-plaintext highlighter-rouge">.cia</code> fájl)</li>
+  <li>A <a href="https://github.com/FlagBrew/Checkpoint/releases/tag/v3.7.4">Checkpoint</a> v3.7.4 verziója (a <code class="language-plaintext highlighter-rouge">.cia</code> fájl)</li>
+  <li>A <a href="https://github.com/mariohackandglitch/homebrew_launcher_dummy/releases/latest">Homebrew Launcher Wrapper</a> legújabb kiadása (a <code class="language-plaintext highlighter-rouge">.cia</code> fájl)</li>
+  <li>Az <a href="https://github.com/Universal-Team/Universal-Updater/releases/latest">Universal-Updater</a> legújabb kiadása (a <code class="language-plaintext highlighter-rouge">.cia</code> fájl)</li>
+  <li>Az <a href="https://github.com/Steveice10/FBI/releases/latest">FBI</a> legújabb kiadása (<strong>mindkét fájl</strong>, a <code class="language-plaintext highlighter-rouge">.cia</code> és a <code class="language-plaintext highlighter-rouge">.3dsx</code> is szükséges)</li>
+  <li>A <a href="https://github.com/d0k3/GodMode9/releases/latest">GodMode9</a> legújabb kiadása (a GodMode9 <code class="language-plaintext highlighter-rouge">.zip</code> fájl)</li>
+</ul>
+
+<h3 id="utasítások">Utasítások</h3>
+
+<h4 id="i-rész---előkészületek">I. rész - Előkészületek</h4>
+
+<p>Ebben a fejezetben fel fogod másolni az ahhoz szükséges fájlokat, hogy kövesd a lépéseket ezen az oldalon.</p>
+
+<ol>
+  <li>Kapcsold ki a készüléked</li>
+  <li>Helyezd az SD kártyád a számítógépbe</li>
+  <li>Hozz létre egy mappát <code class="language-plaintext highlighter-rouge">cias</code> néven az SD kártyád gyökerében, ha még nem létezik ilyen</li>
+  <li>Másold be az összes CIA fájlt (<code class="language-plaintext highlighter-rouge">Anemone3DS.cia</code>, <code class="language-plaintext highlighter-rouge">Checkpoint.cia</code>, <code class="language-plaintext highlighter-rouge">FBI.cia</code>, <code class="language-plaintext highlighter-rouge">Homebrew_Launcher.cia</code>, és <code class="language-plaintext highlighter-rouge">Universal-Updater.cia</code>) a <code class="language-plaintext highlighter-rouge">/cias/</code> mappába az SD kártyádon</li>
+  <li>Hozz létre egy mappát <code class="language-plaintext highlighter-rouge">3ds</code> néven az SD kártyád gyökerében, ha még nem létezik ilyen
+    <ul>
+      <li>Ez a mappa tárolja a homebrew applikációkat és adataikat; ez mást mint a <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> mappa, amit az eszköz automatikusan generál</li>
+    </ul>
+  </li>
+  <li>Másold az <code class="language-plaintext highlighter-rouge">FBI.3dsx</code> fájlt az SD kártyád <code class="language-plaintext highlighter-rouge">/3ds/</code> mappájába</li>
+  <li>Hozz létre egy mappát <code class="language-plaintext highlighter-rouge">payloads</code> néven az SD kártyád <code class="language-plaintext highlighter-rouge">luma</code> nevezetű mappájában, ha még nem létezik ilyen</li>
+  <li>Másold át a <code class="language-plaintext highlighter-rouge">GodMode9.firm</code> fájlt a GodMode9 <code class="language-plaintext highlighter-rouge">.zip</code>-ből az SD kártyád <code class="language-plaintext highlighter-rouge">/luma/payloads/</code> mappájába</li>
+  <li>Másold át a <code class="language-plaintext highlighter-rouge">gm9</code> mappát a GodMode9 <code class="language-plaintext highlighter-rouge">.zip</code>-ből az SD kártyád gyökerébe</li>
+  <li>Tedd vissza az SD kártyád a készülékedbe</li>
+  <li>Kapcsold be a készülékedet</li>
+</ol>
+
+<p>Az alábbi képernyőképek mutatják az SD kártya minimális elrendezését ahhoz, hogy ezt az útmutatót követni tudd. Lehetnek extra fájljaid és mappáid az SD kártyádon, függően a korábbi telepítésedtől vagy metódustól, amit követtél.</p>
+
+<p class="notice--info"><img src="https://3ds.hacks.guide/images/screenshots/finalizing-root-layout.png" alt="" /></p>
+
+<p class="notice--info"><img src="https://3ds.hacks.guide/images/screenshots/godmode9-location.png" alt="" /></p>
+
+<h4 id="ii-rész---a-rendszer-frissítése">II. rész - A rendszer frissítése</h4>
+
+<p>Ebben a fejezetben frissíteni fogod a rendszered a legutolsó verzióra, ami biztonságos az egyedi firmware-rel.</p>
+
+<ol>
+  <li>Frissítsd az eszközödet következőképp. Lépj be a System Settings-be, majd az “Other settings”-be, ahol addig lépkedj jobbra, amíg a végére nem érsz. Itt válaszd a “System Update” opciót.
+    <ul>
+      <li>B9S és Luma használatakor (mint esetedben) biztonságosak a rendszerfrissítések</li>
+      <li>A frissítő elképzelhető, hogy megjeleníti a “Your system is up to date” üzenetet a frissítés helyett. Ez normális, ha már frissítettél; folytasd a következő szakasszal</li>
+      <li>Ha ez hibát ad, akkor állítsd a DNS és Proxy beállításodat egyaránt “auto”-ra</li>
+      <li>Ha továbbra is hibát kapsz, <a href="troubleshooting#finalizing-setup">kövesd ezt a hibaelhárítási útmutatót</a></li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="iii-rész---homebrew-launcher">III. rész - Homebrew Launcher</h4>
+
+<p>Ebben a fejezetben átmenetileg le fogod cserélni a Download Play-t a Homebrew Launcher-rel (ami szükséges az FBI indításához). A Download Play automatikusan visszaáll normálisra, amint újrabootolod az eszközödet.</p>
+
+<ol>
+  <li>Indítsd el a Download Play alkalmazást (<img src="https://3ds.hacks.guide/images/download-play-icon.png" alt="" height="24px" width="24px" />)</li>
+  <li>Várj, amíg <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> és <code class="language-plaintext highlighter-rouge">Nintendo DS</code> gombokat nem látsz</li>
+  <li>Nyomd le az (Bal Váll) + (D-Pad le) + (Select) gombokat egyszerre a Rosalina menü megnyitásához</li>
+  <li>Válaszd ki a “Miscellaneous options”-t</li>
+  <li>Válaszd a “Switch the hb. title to the current app.” opciót</li>
+  <li>Nyomd meg a (B) gombot a folytatáshoz</li>
+  <li>Nyomd meg a (B) gombot, hogy visszakerülj a Rosalina főmenüjébe</li>
+  <li>Nyomd meg a (B) gombot, hogy kilépj a Rosalina menüből</li>
+  <li>Nyomd meg a (Home) gombot és zárd be a Download Play-t</li>
+  <li>Indítsd el a Download Play alkalmazást</li>
+  <li>A készülékednek ezek után be kell töltenie a Homebrew Launchert
+    <ul>
+      <li>Ha az eszközöd a betöltő splash képernyőn ragad, akkor hiányzik az <code class="language-plaintext highlighter-rouge">boot.3dsx</code> az SD kártyád gyökeréből</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="iv-rész---rtc-és-dsp-telepítése">IV. rész - RTC és DSP telepítése</h4>
+
+<p>Ebben a fejezetben szinkronizálni fogod a 3DS belső óráját az aktuális időhöz és dumpolni a hang firmware-t (ami szükséges néhány homebrew alkalmazáshoz, hogy a hangot megfelelően használja).</p>
+
+<ol>
+  <li>Nyomd le az (Bal Váll) + (D-Pad le) + (Select) gombokat egyszerre a Rosalina menü megnyitásához</li>
+  <li>Válaszd ki a “Miscellaneous options”-t</li>
+  <li>Válaszd a “Dump DSP firmware” opciót</li>
+  <li>Nyomd meg a (B) gombot a folytatáshoz</li>
+  <li>Válaszd a “Nullify user time offset” opciót</li>
+  <li>Nyomd meg a (B) gombot a folytatáshoz</li>
+  <li>Nyomd meg a (B) gombot, hogy visszakerülj a Rosalina főmenüjébe</li>
+  <li>Nyomd meg a (B) gombot, hogy kilépj a Rosalina menüből</li>
+</ol>
+
+<h4 id="v-rész---cia-fájlok-telepítése">V. rész - CIA fájlok telepítése</h4>
+
+<p>Ebben a fejezetben fel fogsz telepíteni néhány hasznos homebrew alkalmazást a HOME Menube.</p>
+
+<ol>
+  <li>Indítsd el az FBI-t a homebrew listából</li>
+  <li>Menj ide: <code class="language-plaintext highlighter-rouge">SD</code> -&gt; <code class="language-plaintext highlighter-rouge">cias</code></li>
+  <li>Válaszd ezt: “&lt;current directory&gt;”</li>
+  <li>Válaszd az “Install and delete all CIAs” opciót, majd nyomd meg az (A) gombot a megerősítéshez</li>
+  <li>Nyomd meg a (Home) gombot és zárd be a Download Play-t</li>
+</ol>
+
+<h4 id="vi-rész---luma3ds-telepítése-ctrnand-ba">VI. rész - Luma3DS telepítése CTRNAND-ba</h4>
+
+<p>Ebben a fejezetben egy szkriptet fogsz használni, hogy bemásold a Luma3DS néhány fájlját a belső memóriába, így elérhetők még akkor is, ha nincs SD kártya behelyezve.</p>
+
+<ol>
+  <li>Kapcsold ki a készüléked</li>
+  <li>Nyomd le és tartsd nyomva a (Start) gombot, és a (Start) nyomva tartása mellett kapcsold be az eszközödet. Ez elindítja a GodMode9-et
+    <ul>
+      <li>Ha nem bootolsz be GodMode9 módba, ellenőrizd, hogy, a <code class="language-plaintext highlighter-rouge">GodMode9.firm</code> megtalálható a <code class="language-plaintext highlighter-rouge">/luma/payloads/</code> könyvtárban és hogy a <code class="language-plaintext highlighter-rouge">payloads</code> helyesen van írva</li>
+    </ul>
+  </li>
+  <li>Ha rákérdez arra, hogy csináljon-e egy biztonsági másolatot (essential files backup), akkor nyomd meg az (A) gombot, hogy csináljon, majd amikor végzett, nyomd meg ismét az (A) gombot a folytatáshoz</li>
+  <li>Ha rákérdez arra, hogy szeretnéd-e a valós dátumot és időt javítani (fix the RTC date&amp;time), nyomd meg az (A) gombot, állítsd be a helyes dátumot és időt, majd nyomd meg az (A) gombot a folytatáshoz</li>
+  <li>Nyomd meg a (Home) gombot, hogy megjelenjen a műveleti menü</li>
+  <li>Válaszd a “Scripts…” opciót</li>
+  <li>Válaszd ezt: “GM9Megascript”</li>
+  <li>Válaszd ezt: “Scripts from Plailect’s Guide”</li>
+  <li>Válaszd ezt: “Setup Luma3DS to CTRNAND”</li>
+  <li>Amikor kéri, nyomd meg az (A) gombot a folytatáshoz</li>
+  <li>Nyomd meg az (A) gombot, hogy feloldd a SysNand (lvl1) írást, majd sorban nyomd meg a kijelzett gombokat</li>
+  <li>Nyomd meg az (A) gombot a folytatáshoz</li>
+</ol>
+
+<h4 id="vii-rész---takarítás-az-sd-kártyán">VII. rész - Takarítás az SD kártyán</h4>
+
+<p>Ebben a fejezetben egy szkriptet fogsz használni arra, hogy eltávolítsd a felesleges fájlokat az SD kártyádról.</p>
+
+<ol>
+  <li>Válaszd ezt: “Cleanup SD Card”</li>
+  <li>Amikor kéri, nyomd meg az (A) gombot a folytatáshoz</li>
+  <li>Nyomd meg az (A) gombot a folytatáshoz</li>
+  <li>Nyomd meg a (B) gombot, hogy visszamenj a főmenübe</li>
+</ol>
+
+<h4 id="viii-rész---backup-essential-files">VIII. rész - Backup Essential Files</h4>
+
+<p>Ebben a fejezetben mentés fájlokat fogsz készíteni, amik a helyreállításhoz használhatók, ha szoftveres brickelés történik, vagy ha helyre szeretnéd állítani az adatokat.</p>
+
+<ol>
+  <li>Válaszd ezt: “Backup Options”</li>
+  <li>Válaszd ezt: “SysNAND Backup”</li>
+  <li>Nyomd meg az (A) gombot a megerősítéshez
+    <ul>
+      <li>Ez a folyamat igénybe vesz majd némi időt</li>
+      <li>Ha hibát kapsz, nézz utána a <a href="troubleshooting#finalizing-setup">hibaelhárítási útmutatóban</a></li>
+    </ul>
+  </li>
+  <li>Nyomd meg az (A) gombot a folytatáshoz</li>
+  <li>Nyomd meg a (B) gombot, hogy visszamenj a főmenübe</li>
+  <li>Válaszd az “Exit” opciót</li>
+  <li>Nyomd meg az (A) gombot az írási engedélyek visszavonásához</li>
+  <li>Menj ide: <code class="language-plaintext highlighter-rouge">[S:] SYSNAND VIRTUAL</code></li>
+  <li>Nyomd meg az (A) gombot a <code class="language-plaintext highlighter-rouge">essential.exefs</code> fájlon, hogy kijelöld</li>
+  <li>Válaszd ki ezt: “Copy to 0:/gm9/out”
+    <ul>
+      <li>Ha azt látod, hogy “Destination already exists”, nyomj (A) gombot az “Overwrite file(s)” opción</li>
+    </ul>
+  </li>
+  <li>Nyomd meg az (A) gombot a folytatáshoz</li>
+  <li>Nyomd meg a (Home) gombot, hogy megjelenjen a műveleti menü</li>
+  <li>Válaszd a “Poweroff system”-et az eszközöd kikapcsolásához</li>
+  <li>Helyezd az SD kártyád a számítógépbe</li>
+  <li>Másold a <code class="language-plaintext highlighter-rouge">&lt;date&gt;_&lt;serialnumber&gt;_sysnand_##.bin</code>, <code class="language-plaintext highlighter-rouge">&lt;date&gt;_&lt;serialnumber&gt;_sysnand_##.bin.sha</code>, <code class="language-plaintext highlighter-rouge">essential.exefs</code> fájlokat a <code class="language-plaintext highlighter-rouge">/gm9/out/</code> mappából az SD kártyáról egy biztonságos helyre a számítógépeden
+    <ul>
+      <li>Tarts belőle biztonsági másolatokat több különböző helyen is (például online tárhelyen, külső merevlemezen.)</li>
+      <li>Ezek a biztonsági mentések fognak megmenteni, ha a későbbiekben brickelődne a konzolod, vagy bármi félresikerülne a jövőben</li>
+    </ul>
+  </li>
+  <li>Töröld a <code class="language-plaintext highlighter-rouge">&lt;dátum&gt;_&lt;sorozatszám&gt;_sysnand_##.bin</code> és a <code class="language-plaintext highlighter-rouge">&lt;dátum&gt;_&lt;sorozatszám&gt;_sysnand_##.bin.sha</code> fájlokat az SD kártyád <code class="language-plaintext highlighter-rouge">/gm9/out/</code> mappájából, miután lemásoltad azokat
+    <ul>
+      <li>A többi biztonségi mentés fájl mérete elhanyagolható és a könnyű hozzáférés érdekében az SD kártyádon tárolt</li>
+    </ul>
+  </li>
+  <li>Ha van ilyened, másold a <code class="language-plaintext highlighter-rouge">/luma/backups/</code> mappát az SD kártyáról egy biztonságos helyre a számítógépeden</li>
+  <li>Tedd vissza az SD kártyád a készülékedbe</li>
+  <li>Kapcsold be a készülékedet</li>
+</ol>
+
+<hr />
+
+<p class="notice--success">Kész vagy! Az egyedi firmware most már teljesen be van állítva az eszközödön.</p>
+
+<p class="notice--info">Szia! Szívesen veszünk visszajelzéseket az útmutatónk követéséről. Ha szeretnél segíteni, töltsd ki a kérdőívünket <a href="https://forms.gle/vZNoc4QLCz5MEXCK7">itt</a> (csak angolul elérhető). Köszönjük!</p>
+
+<h3 id="információk-és-megjegyzések">Információk és megjegyzések</h3>
+
+<div class="notice--info">
+<p>Néhány billentyű kombináció amit ismerned kell:</p>
+
+<ul>
+  <li>Indításkor előhozhatod a Luma3DS konfigurációs menüjét a (Select) gomb lenyomva tartásával.</li>
+  <li>Indításkor előhozhatod a GodMode9-et, vagy ha több payload van a <code class="language-plaintext highlighter-rouge">/luma/payloads/</code> mappában a Luma3DS chainloader-t a (Select) gomb lenyomva tartásával.</li>
+  <li>Alapból a (Bal váll) + (D-pad le) + (Select) gombok megnyomásával 3DS módban a Rosalina menü megnyílik, ahol többek közt megnézhetsz rendszer információkat, csinálhatsz képernyő képeket, és engedélyezhetsz csalásokat. Ezt lehet módosítani a Rosalina menüben.</li>
+  <li>A (Start) + (Select) + (X) lenyomva tartása indítás közben a figyelmeztető LED-en színt mutat debug célokból. Tekintsd meg <a href="https://github.com/SciresM/boot9strap/releases/tag/1.4">változási naplót</a> egy listáért.</li>
+</ul>
+</div>
+
+<p class="notice--info">Nézd meg <a href="https://3ds.eiphax.tech/tips.html">ezt</a> ötletekért, hogy mit tudsz csinálni az egyedi firmware-rel.</p>
+
+<p class="notice--info">Információkért a GodMode9 különféle funkcióiról olvasd el a <a href="godmode9-usage">GodMode9 használata</a> és a <a href="dumping-titles-and-game-cartridges">Címek és Játék Cartridge-ek dumpolása</a> című leírásokat.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://github.com/hacks-guide/Guide_3DS" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+<!--
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+    </ul>
+  -->
+</div>
+
+<!-- custom footer, guide specific -->
+
+
+
+<div class="page__footer-copyright">&copy; 2023 Nintendo Homebrew. - <a href="site-navigation">Oldaltérkép</a> - <a href="privacy-policy">Adatvédelmi Irányelv</a> <!-- Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.--></div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+<!-- for guide purposes all caching is removed and is separately built. -->
+
+
+
+
+
+
+
+
+  </body>
+</html>

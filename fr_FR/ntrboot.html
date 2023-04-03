@@ -1,0 +1,749 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<!-- for guide purposes all caching is removed and is separately built. -->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>ntrboot - 3DS Hacks Guide</title>
+<meta name="description" content="A complete guide to 3DS custom firmware">
+
+
+  <meta name="author" content="Nintendo Homebrew">
+  
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="3DS Hacks Guide">
+<meta property="og:title" content="ntrboot">
+<meta property="og:url" content="https://3ds.hacks.guide/fr_FR/ntrboot.html">
+
+
+  <meta property="og:description" content="A complete guide to 3DS custom firmware">
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://3ds.hacks.guide/fr_FR/ntrboot.html">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Nintendo Homebrew",
+      "url": "https://3ds.hacks.guide/"
+    
+  }
+</script>
+
+
+  <meta name="google-site-verification" content="jVXoPK_-qzKJp4SScnZYpOIX3yDXfGnAoTBJYixUOwg" />
+
+
+  <meta name="msvalidate.01" content="F3532011519E308583A0A2CAF2DD69E8">
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="3DS Hacks Guide Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=PYEmwKvQAx">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png?v=PYEmwKvQAx" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-194x194.png?v=PYEmwKvQAx" sizes="194x194">
+<link rel="icon" type="image/png" href="/images/android-chrome-192x192.png?v=PYEmwKvQAx" sizes="192x192">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png?v=PYEmwKvQAx" sizes="16x16">
+<link rel="manifest" href="/images/manifest.json?v=PYEmwKvQAx">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg?v=PYEmwKvQAx" color="#2E3440">
+<link rel="shortcut icon" href="/images/favicon.ico?v=PYEmwKvQAx">
+<meta name="apple-mobile-web-app-title" content="Guide">
+<meta name="application-name" content="Guide">
+<meta name="msapplication-TileColor" content="#2E3440">
+<meta name="msapplication-TileImage" content="/images/mstile-144x144.png?v=PYEmwKvQAx">
+<meta name="msapplication-config" content="/images/browserconfig.xml?v=PYEmwKvQAx">
+<meta name="theme-color" content="#2E3440">
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.css" integrity="sha512-LQ97camar/lOliT/MqjcQs5kWgy6Qz/cCRzzRzUCfv0fotsCTC9ZHXaPQmJV8Xu/PVALfJZ7BDezl5lW3/qBxg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js" integrity="sha512-yXXqOFjdjHNH1GND+1EO0jbvvebABpzGKD66djnUfiKlYME5HGMUJHoCaeE4D5PTG2YsSJf6dwqyUUvQvS0vaA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#2e3440"
+    },
+    "button": {
+      "background": "#60818f"
+    }
+  },
+  "theme": "edgeless",
+  "position": "top",
+  "static": true,
+  "content": {
+    "message": "Ce site web utilise des cookies pour afficher l'avancement actuel du guide sur la barre latérale et améliorer le site."
+  }
+})});
+</script>
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <!-- <a class="site-title" href="/">
+          3DS Hacks Guide
+          
+        </a>
+      -->
+        <ul class="visible-links">
+          <!-- modified to use multilang, guide-specific -->
+          
+          
+          
+          
+          
+          
+            
+              <li class="masthead__menu-item masthead__menu-item--lg"><a href="/fr_FR/">Accueil</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/fr_FR/faq">FAQ</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/fr_FR/troubleshooting">Dépannage</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/fr_FR/checking-for-cfw">Vérification de la présence d'un CFW</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/fr_FR/godmode9-usage">Utilisation de GodMode9</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/fr_FR/contribute">Contribuer</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/fr_FR/region-changing">Changement de région</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/fr_FR/uninstall-cfw">Désinstallation du CFW</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/fr_FR/credits">Remerciements</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/fr_FR/site-navigation">Index du site</a></li>
+            
+          
+          <!-- end guide specific -->
+        </ul>
+        
+        <!-- completely redo hidden links for multilang, guide-specific -->
+        <ul class="hidden-links links-menu hidden"></ul>
+        <ul class="hidden-links lang-menu hidden">
+          
+          
+          
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ntrboot.html">English</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/es_ES/ntrboot.html">Español</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/de_DE/ntrboot.html">Deutsch</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/fr_FR/ntrboot.html">Français</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/it_IT/ntrboot.html">Italiano</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/nl_NL/ntrboot.html">Nederlands</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/pt_BR/ntrboot.html">Português do Brasil</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/pt_PT/ntrboot.html">Português (Portugal)</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ru_RU/ntrboot.html">Русский</a></li> -->
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/zh_CN/ntrboot.html">简体中文</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/zh_TW/ntrboot.html">繁體中文</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/pl_PL/ntrboot.html">Polski</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/tr_TR/ntrboot.html">Türkçe</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/vi_VN/ntrboot.html">Tiếng Việt</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ca_ES/ntrboot.html">Català</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/el_GR/ntrboot.html">Ελληνικά</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/he_IL/ntrboot.html">עברית‎</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/sv_SE/ntrboot.html">Svenska</a></li> -->
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ko_KR/ntrboot.html">한국어</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/no_NO/ntrboot.html">Norsk</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ja_JP/ntrboot.html">日本語</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ar_SA/ntrboot.html">اللغة العربية</a></li> -->
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/hu_HU/ntrboot.html">Magyar</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ro_RO/ntrboot.html">Română</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/sr_SP/ntrboot.html">Српски</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/af_ZA/ntrboot.html">Afrikaans</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ms_MY/ntrboot.html">Bahasa Melayu</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/fi_FI/ntrboot.html">Suomi</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/da_DK/ntrboot.html">Dansk</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/uk_UA/ntrboot.html">Українська</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/cs_CZ/ntrboot.html">Čeština</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/en_PT/ntrboot.html">Pirate English</a></li> -->
+        </ul>
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <button class="greedy-nav__toggle_lang"><div class="langicon"><i class="fa fa-language fa-lg" aria-hidden="true"></i></div></button>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  <!-- 
+  <div class="sidebar sticky">
+  
+  
+    
+    
+  
+  </div>
+
+-->
+
+
+
+<div class="sidebar sticky" style="display: none;">
+  
+
+
+
+
+
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    <li>
+      <span class="nav__sub-title">Progression globale</span>
+      <ol>
+        
+          
+            <li style="display: none;" data-name="home"><a href='/fr_FR/'>Accueil</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="key-information"><a href='/fr_FR/key-information'>Informations clés</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="get-started"><a href='/fr_FR/get-started'>Pour commencer</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="ntrboot"><a href='/fr_FR/ntrboot'>ntrboot</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer"><a href='/fr_FR/seedminer'>Seedminer</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(twn)"><a href='/fr_FR/seedminer-(twn)'>Seedminer (TWN)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="bannerbomb3"><a href='/fr_FR/bannerbomb3'>BannerBomb3</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="multiple-options"><i>(Multiple Options)</i></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(3ds-single-system)"><a href='/fr_FR/flashing-ntrboot-(3ds-single-system)'>Flashing ntrboot (3DS Single System)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(3ds-multi-system)"><a href='/fr_FR/flashing-ntrboot-(3ds-multi-system)'>Flashing ntrboot (3DS Multi System)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(dsi)"><a href='/fr_FR/flashing-ntrboot-(dsi)'>Flashing ntrboot (DSi)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(nds)"><a href='/fr_FR/flashing-ntrboot-(nds)'>Flashing ntrboot (NDS)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(pichaxx)"><a href='/fr_FR/homebrew-launcher-(pichaxx)'>Homebrew Launcher (PicHaxx)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="bannerbomb3-fredtool-(twn)"><a href='/fr_FR/bannerbomb3-fredtool-(twn)'>BannerBomb3 + Fredtool (TWN)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(hardmod)"><a href='/fr_FR/installing-boot9strap-(hardmod)'>Installing boot9strap (Hardmod)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(hbl-usm)"><a href='/fr_FR/installing-boot9strap-(hbl-usm)'>Installing boot9strap (HBL-USM)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(ntrboot)"><a href='/fr_FR/installing-boot9strap-(ntrboot)'>Installing boot9strap (ntrboot)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(soundhax)"><a href='/fr_FR/installing-boot9strap-(soundhax)'>Installing boot9strap (Soundhax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(ssloth-browser)"><a href='/fr_FR/installing-boot9strap-(ssloth-browser)'>Installing boot9strap (SSLoth-Browser)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(fredtool)"><a href='/fr_FR/installing-boot9strap-(fredtool)'>Installing boot9strap (Fredtool)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(usm)"><a href='/fr_FR/installing-boot9strap-(usm)'>Installing boot9strap (USM)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(kartdlphax)"><a href='/fr_FR/installing-boot9strap-(kartdlphax)'>Installing boot9strap (kartdlphax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(hbl-usm)"><a href='/fr_FR/installing-boot9strap-(hbl-usm)'>Installing boot9strap (HBL-USM)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="finalizing-setup"><a href='/fr_FR/finalizing-setup'>Finalizing Setup</a></li>
+          
+        
+      </ol>
+    </li>
+  </ul>
+</nav>
+</div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="ntrboot">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">ntrboot
+</h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+
+        <hr>
+
+        
+        
+
+        
+          
+          <div class ="notice"><b>Pour un support en Anglais, demander de l'aide sur le <a href="https://discord.gg/MWxPgEp">Discord Nintendo Homebrew</a>.</b></div>
+        
+          
+          <div class ="notice"><b>Si vous appréciez ce guide, nous acceptons les <a href="contribute#donations">Dons</a>.</b></div>
+        
+
+        <hr>
+
+        <aside class="sidebar__right">
+<nav class="toc">
+    <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Table des matières</h4></header>
+<ul class="toc__menu" id="markdown-toc">
+  <li><a href="#lecture-requise" id="markdown-toc-lecture-requise">Lecture requise</a></li>
+  <li><a href="#méthodes" id="markdown-toc-méthodes">Méthodes</a>    <ul>
+      <li><a href="#flasher-ntrboot-une-seule-3ds" id="markdown-toc-flasher-ntrboot-une-seule-3ds">Flasher ntrboot (Une Seule 3DS)</a></li>
+      <li><a href="#flasher-ntrboot-3ds-multi-system" id="markdown-toc-flasher-ntrboot-3ds-multi-system">Flasher ntrboot (3DS Multi System)</a></li>
+      <li><a href="#flasher-ntrboot-nds" id="markdown-toc-flasher-ntrboot-nds">Flasher ntrboot (NDS)</a></li>
+      <li><a href="#flasher-ntrboot-dsi" id="markdown-toc-flasher-ntrboot-dsi">Flasher ntrboot (DSi)</a></li>
+    </ul>
+  </li>
+</ul>
+
+  </nav>
+</aside>
+
+<p class="notice--success">Si votre linker est déjà pré-flashé avec ntrboot (ou que vous avez déjà flashé votre linker avec ntrboot), vous pouvez passer directement à <a href="installing-boot9strap-(ntrboot)">Installer boot9strap (ntrboot)</a> pour les instructions sur comment l’utiliser.</p>
+
+<h3 id="lecture-requise">Lecture requise</h3>
+
+<p>L’installation de boot9strap à partir de ntrboot nécessite un linker compatible. Notez que certains de ces linkers sont vendus pré-flashés avec ntrboot.</p>
+
+<p>While the ntrboot exploit works independently of the system version, the ntrboot flasher (which installs the exploit to the cart) is not. Ceci signifie que, selon les versions et consoles supportées par votre linker, seules certaines méthodes peuvent vous être disponibles.</p>
+
+<p>Note : les linkers avec une “bombe à retardement” ne seront plus capables de lancers des fichiers <code class="language-plaintext highlighter-rouge">.nds</code> s’ils détectent que l’horloge système a passé une date déterminée par le firmware du linker. Une façon de contourner cela est de positionner l’horloge système sur une date antérieure.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Linker</th>
+      <th style="text-align: right">Prix actuel</th>
+      <th style="text-align: center">“Bombe à retardement” ?</th>
+      <th style="text-align: center">Compatible 3DS ?</th>
+      <th style="text-align: center">Compatible DSi ?</th>
+      <th>Autres notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="http://www.nds-card.com/ProShow.asp?ProID=574"><strong>R4i-SDHC B9S</strong></a></td>
+      <td style="text-align: right">$15.99</td>
+      <td style="text-align: center">September 3, 2024</td>
+      <td style="text-align: center">ALL</td>
+      <td style="text-align: center">ALL</td>
+      <td><strong>Comes pre-flashed with ntrboot</strong>; can be flashed back to an NDS flashcart.</td>
+    </tr>
+    <tr>
+      <td><a href="http://www.nds-card.com/ProShow.asp?ProID=575"><strong>R4i Gold 3DS Plus</strong></a></td>
+      <td style="text-align: right">$19.99</td>
+      <td style="text-align: center">No</td>
+      <td style="text-align: center">ALL</td>
+      <td style="text-align: center">ALL</td>
+      <td><strong>Comes pre-flashed with ntrboot</strong> (<a href="https://3ds.hacks.guide/images/screenshots/r4i-gold-3ds-plus.png">internal switch to switch between ntrboot and NDS modes</a>); do not manually flash with ntrboot.</td>
+    </tr>
+    <tr>
+      <td><a href="http://www.nds-card.com/ProShow.asp?ProID=160"><strong>Acekard 2i</strong></a></td>
+      <td style="text-align: right">30,99 €</td>
+      <td style="text-align: center">Non</td>
+      <td style="text-align: center">&lt;= 4.3.0</td>
+      <td style="text-align: center">&lt;= 1.4.4</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><a href="http://www.nds-card.com/ProShow.asp?ProID=157"><strong>DSTT</strong></a></td>
+      <td style="text-align: right">9,99€</td>
+      <td style="text-align: center">Non</td>
+      <td style="text-align: center">Aucun</td>
+      <td style="text-align: center">Aucun</td>
+      <td>Uniquement les modèles avec un <a href="https://gist.github.com/aspargas2/fa2a70aed3a7fe33f1f10bc264d9fab6">type de mémoire flash particulier</a> sont compatibles avec ntrboot.</td>
+    </tr>
+    <tr>
+      <td><a href="http://www.nds-card.com/ProShow.asp?ProID=149"><strong>R4i Gold 3DS</strong></a></td>
+      <td style="text-align: right">$19.99</td>
+      <td style="text-align: center">No</td>
+      <td style="text-align: center">ALL</td>
+      <td style="text-align: center">ALL</td>
+      <td>All RTS revisions are compatible.</td>
+    </tr>
+    <tr>
+      <td><a href="http://www.nds-card.com/ProShow.asp?ProID=146"><strong>R4i-SDHC 3DS RTS</strong></a></td>
+      <td style="text-align: right">$13.99</td>
+      <td style="text-align: center">1.85b: September 3, 2024</td>
+      <td style="text-align: center">ALL</td>
+      <td style="text-align: center">ALL</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><a href="http://www.nds-card.com/ProShow.asp?ProID=490"><strong>R4iSDHC GOLD Pro 20XX</strong></a></td>
+      <td style="text-align: right">$9.99</td>
+      <td style="text-align: center">4.0b: September 3, 2024</td>
+      <td style="text-align: center">ALL</td>
+      <td style="text-align: center">ALL</td>
+      <td>Only r4isdhc <strong>.com</strong> carts marked with a year between 2014 and 2020 are compatible.</td>
+    </tr>
+    <tr>
+      <td><a href="http://www.nds-card.com/ProShow.asp?ProID=450"><strong>R4iSDHC RTS LITE 20XX</strong></a></td>
+      <td style="text-align: right">$13.99</td>
+      <td style="text-align: center">4.0b: September 3, 2024</td>
+      <td style="text-align: center">ALL</td>
+      <td style="text-align: center">ALL</td>
+      <td>Only r4isdhc <strong>.com</strong> carts marked with a year between 2014 and 2020 are compatible.</td>
+    </tr>
+    <tr>
+      <td><strong>Ace3DS X</strong></td>
+      <td style="text-align: right"> </td>
+      <td style="text-align: center">No</td>
+      <td style="text-align: center">ALL</td>
+      <td style="text-align: center">ALL</td>
+      <td><strong>Comes pre-flashed with ntrboot</strong> (external switch to switch between ntrboot (“3DS”) and NDS modes); do not manually flash with ntrboot.</td>
+    </tr>
+    <tr>
+      <td><strong>Ace3DS Plus</strong></td>
+      <td style="text-align: right"> </td>
+      <td style="text-align: center">No</td>
+      <td style="text-align: center">ALL</td>
+      <td style="text-align: center">ALL</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><strong>Gateway Blue</strong></td>
+      <td style="text-align: right"> </td>
+      <td style="text-align: center">No</td>
+      <td style="text-align: center">4.1.0 - 4.5.0</td>
+      <td style="text-align: center">ALL</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><strong>Infinity 3 R4i</strong></td>
+      <td style="text-align: right"> </td>
+      <td style="text-align: center">No</td>
+      <td style="text-align: center">ALL</td>
+      <td style="text-align: center">ALL</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><strong>R4 3D Revolution</strong></td>
+      <td style="text-align: right"> </td>
+      <td style="text-align: center">Non</td>
+      <td style="text-align: center">Aucun</td>
+      <td style="text-align: center">Aucun</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><strong>R4i Gold 3DS Deluxe “Starter”</strong></td>
+      <td style="text-align: right"> </td>
+      <td style="text-align: center">No</td>
+      <td style="text-align: center">4.1.0 - 4.5.0</td>
+      <td style="text-align: center">ALL</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><strong>R4i Ultra</strong></td>
+      <td style="text-align: right"> </td>
+      <td style="text-align: center">No</td>
+      <td style="text-align: center">&lt;= 4.3.0</td>
+      <td style="text-align: center">ALL</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><strong>R4i-SDHC 3DS RTS Deluxe Edition</strong></td>
+      <td style="text-align: right"> </td>
+      <td style="text-align: center">Unknown</td>
+      <td style="text-align: center">ALL</td>
+      <td style="text-align: center">ALL</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><strong>R4iSDHC Dual-Core 20XX</strong></td>
+      <td style="text-align: right"> </td>
+      <td style="text-align: center">4.0b: September 3, 2024</td>
+      <td style="text-align: center">ALL</td>
+      <td style="text-align: center">ALL</td>
+      <td>Only r4isdhc <strong>.com</strong> carts marked with a year between 2014 and 2020 are compatible.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p class="notice--info"><img src="https://3ds.hacks.guide/images/screenshots/ntrboot-flashcarts.png" alt="" /></p>
+
+<p>Vérifiez que votre linker est capable de lancer des fichiers <code class="language-plaintext highlighter-rouge">.nds</code> sur votre console avant de démarrer. Certains linkers peuvent requérir de copier des fichiers firmware ou “kernel” sur la carte SD. Consultez les instructions spécifiques à votre linker pour plus d’informations.</p>
+
+<p>Notez que des méthodes spécifiques peuvent avoir des informations de compatibilité supplémentaire.</p>
+
+<p>The usage of this exploit, regardless of the flashing method, requires access to a small magnet if the target device is of a folding style (any 3DS family system that is not the old 2DS with a sleep switch). C’est parce que l’exploit demande de mettre la console en veille tout en ayant accès aux boutons.</p>
+
+<p class="notice--info">Pour tester un aimant , il suffit de mettre l’aimant autour des boutons (A), (B), (X), (Y) lorsque l’appareil est allumé ,
+puis de voir si l’appareil se met en mode veille . Si cela fonctionne , l’écran restera noir jusqu’à ce que vous retirez l’aimant.</p>
+
+<p>Notez que le Linker ne pourra pas être utilisé pour ses fonctions standards tant que l’exploit de ntrboot est installé dessus (sauf dans le cas de l’Acekard 2i, qui reste fonctionnel <em>sur NDS et 3DS avec custom firmware installé seulement</em>). This means that, for most flashcarts, it will not even display on the HOME Menu. Des étapes facultatives se trouvent à la fin des instructions de flash Ntrboot , concernant la suppresion de l’exploit de votre Linker .</p>
+
+<p class="notice--danger">Notez qu’il est possible que pendant le flash sur un clone celui-ci devienne <strong>inutilisable</strong>. This is unlikely, but nevertheless, only original listed flashcarts are supported. Pour réduire les chances de recevoir un linker contrefait, il est recommandé d’utiliser un site réputable pour acheter votre linker (comme <a href="http://www.nds-card.com/">NDS Card</a>)</p>
+
+<hr />
+<h3 id="méthodes">Méthodes</h3>
+
+<hr />
+
+<h4 id="flasher-ntrboot-une-seule-3ds">Flasher ntrboot (Une Seule 3DS)</h4>
+
+<p>Cette méthode n’exige rien de plus que votre 3DS originale non hackée et un linker compatible. Cette méthode utilise le linker pour lancer le flasheur ntrboot contenu dans le fichier <code class="language-plaintext highlighter-rouge">.nds</code> sur votre 3DS. Cela signifie que votre Linker doit supporter le lancement des fichiers <code class="language-plaintext highlighter-rouge">.nds</code> sur votre 3DS. Référez-vous au tableau ci-dessus pour une liste des versions compatibles.</p>
+
+<p class="notice--primary">Continuer vers <a href="flashing-ntrboot-(3ds-single-system)">Flashing ntrboot (3DS Single System)</a></p>
+
+<hr />
+
+<h4 id="flasher-ntrboot-3ds-multi-system">Flasher ntrboot (3DS Multi System)</h4>
+
+<p>Cette méthode nécessite un accès temporaire à un second périphérique de la famille 3DS qui utilise déjà boot9strap. Il n’est pas nécessaire que votre linker supporte la version d’aucune des 3DS.</p>
+
+<p class="notice--primary">Continuer vers <a href="flashing-ntrboot-(3ds-multi-system)">Flashing ntrboot (3DS Multi System)</a></p>
+
+<hr />
+
+<h4 id="flasher-ntrboot-nds">Flasher ntrboot (NDS)</h4>
+
+<p>Cette méthode nécessite un accès temporaire à une Nintendo DS ou DS LITE qui soit compatible avec votre linker. Cette méthode utilise le linker pour exécuter le flasheur ntrboot <code class="language-plaintext highlighter-rouge">.nds</code> sur votre NDS.</p>
+
+<p class="notice--primary">Continuer vers <a href="flashing-ntrboot-(nds)">Flashing ntrboot (NDS)</a></p>
+
+<hr />
+
+<h4 id="flasher-ntrboot-dsi">Flasher ntrboot (DSi)</h4>
+
+<p>Cette méthode nécessite un accès temporaire à une Nintendo DSI qui soit compatible avec votre linker. Cette méthode utilise le linker pour lancer le flasheur ntrboot contenu dans le fichier <code class="language-plaintext highlighter-rouge">.nds</code> sur votre DSi. Cela signifie que votre linker doit pouvoir lancer des fichiers <code class="language-plaintext highlighter-rouge">.nds</code> sur votre DSi. Référez-vous au tableau ci-dessus pour une liste des versions compatibles.</p>
+
+<p class="notice--primary">Continuer vers <a href="flashing-ntrboot-(dsi)">Flashing ntrboot (DSi)</a></p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://github.com/hacks-guide/Guide_3DS" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+<!--
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+    </ul>
+  -->
+</div>
+
+<!-- custom footer, guide specific -->
+
+
+
+<div class="page__footer-copyright">&copy; 2023 Nintendo Homebrew. - <a href="site-navigation">Index du site</a> - <a href="privacy-policy">Politique de confidentialité</a> <!-- Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.--></div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+<!-- for guide purposes all caching is removed and is separately built. -->
+
+
+
+
+
+
+
+
+  </body>
+</html>

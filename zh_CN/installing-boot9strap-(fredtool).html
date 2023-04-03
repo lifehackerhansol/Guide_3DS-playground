@@ -1,0 +1,732 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<!-- for guide purposes all caching is removed and is separately built. -->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>安装 boot9strap（通过 Fredtool） - 3DS Hacks Guide</title>
+<meta name="description" content="A complete guide to 3DS custom firmware">
+
+
+  <meta name="author" content="Nintendo Homebrew">
+  
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="3DS Hacks Guide">
+<meta property="og:title" content="安装 boot9strap（通过 Fredtool）">
+<meta property="og:url" content="https://3ds.hacks.guide/zh_CN/installing-boot9strap-(fredtool).html">
+
+
+  <meta property="og:description" content="A complete guide to 3DS custom firmware">
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://3ds.hacks.guide/zh_CN/installing-boot9strap-(fredtool).html">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Nintendo Homebrew",
+      "url": "https://3ds.hacks.guide/"
+    
+  }
+</script>
+
+
+  <meta name="google-site-verification" content="jVXoPK_-qzKJp4SScnZYpOIX3yDXfGnAoTBJYixUOwg" />
+
+
+  <meta name="msvalidate.01" content="F3532011519E308583A0A2CAF2DD69E8">
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="3DS Hacks Guide Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=PYEmwKvQAx">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png?v=PYEmwKvQAx" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-194x194.png?v=PYEmwKvQAx" sizes="194x194">
+<link rel="icon" type="image/png" href="/images/android-chrome-192x192.png?v=PYEmwKvQAx" sizes="192x192">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png?v=PYEmwKvQAx" sizes="16x16">
+<link rel="manifest" href="/images/manifest.json?v=PYEmwKvQAx">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg?v=PYEmwKvQAx" color="#2E3440">
+<link rel="shortcut icon" href="/images/favicon.ico?v=PYEmwKvQAx">
+<meta name="apple-mobile-web-app-title" content="Guide">
+<meta name="application-name" content="Guide">
+<meta name="msapplication-TileColor" content="#2E3440">
+<meta name="msapplication-TileImage" content="/images/mstile-144x144.png?v=PYEmwKvQAx">
+<meta name="msapplication-config" content="/images/browserconfig.xml?v=PYEmwKvQAx">
+<meta name="theme-color" content="#2E3440">
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.css" integrity="sha512-LQ97camar/lOliT/MqjcQs5kWgy6Qz/cCRzzRzUCfv0fotsCTC9ZHXaPQmJV8Xu/PVALfJZ7BDezl5lW3/qBxg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js" integrity="sha512-yXXqOFjdjHNH1GND+1EO0jbvvebABpzGKD66djnUfiKlYME5HGMUJHoCaeE4D5PTG2YsSJf6dwqyUUvQvS0vaA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#2e3440"
+    },
+    "button": {
+      "background": "#60818f"
+    }
+  },
+  "theme": "edgeless",
+  "position": "top",
+  "static": true,
+  "content": {
+    "message": "本网站利用cookies在侧边栏上显示当前的操作进度并改善此站点的使用体验。"
+  }
+})});
+</script>
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <!-- <a class="site-title" href="/">
+          3DS Hacks Guide
+          
+        </a>
+      -->
+        <ul class="visible-links">
+          <!-- modified to use multilang, guide-specific -->
+          
+          
+          
+          
+          
+          
+            
+              <li class="masthead__menu-item masthead__menu-item--lg"><a href="/zh_CN/">主页</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/zh_CN/faq">常见问题</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/zh_CN/troubleshooting">问题排查</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/zh_CN/checking-for-cfw">检查自制固件</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/zh_CN/godmode9-usage">GodMode9 使用教程</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/zh_CN/contribute">捐助</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/zh_CN/region-changing">区域变更</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/zh_CN/uninstall-cfw">卸载自制固件</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/zh_CN/credits">致谢</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/zh_CN/site-navigation">网站导航</a></li>
+            
+          
+          <!-- end guide specific -->
+        </ul>
+        
+        <!-- completely redo hidden links for multilang, guide-specific -->
+        <ul class="hidden-links links-menu hidden"></ul>
+        <ul class="hidden-links lang-menu hidden">
+          
+          
+          
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/installing-boot9strap-(fredtool).html">English</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/es_ES/installing-boot9strap-(fredtool).html">Español</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/de_DE/installing-boot9strap-(fredtool).html">Deutsch</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/fr_FR/installing-boot9strap-(fredtool).html">Français</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/it_IT/installing-boot9strap-(fredtool).html">Italiano</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/nl_NL/installing-boot9strap-(fredtool).html">Nederlands</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/pt_BR/installing-boot9strap-(fredtool).html">Português do Brasil</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/pt_PT/installing-boot9strap-(fredtool).html">Português (Portugal)</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ru_RU/installing-boot9strap-(fredtool).html">Русский</a></li> -->
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/zh_CN/installing-boot9strap-(fredtool).html">简体中文</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/zh_TW/installing-boot9strap-(fredtool).html">繁體中文</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/pl_PL/installing-boot9strap-(fredtool).html">Polski</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/tr_TR/installing-boot9strap-(fredtool).html">Türkçe</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/vi_VN/installing-boot9strap-(fredtool).html">Tiếng Việt</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ca_ES/installing-boot9strap-(fredtool).html">Català</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/el_GR/installing-boot9strap-(fredtool).html">Ελληνικά</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/he_IL/installing-boot9strap-(fredtool).html">עברית‎</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/sv_SE/installing-boot9strap-(fredtool).html">Svenska</a></li> -->
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ko_KR/installing-boot9strap-(fredtool).html">한국어</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/no_NO/installing-boot9strap-(fredtool).html">Norsk</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ja_JP/installing-boot9strap-(fredtool).html">日本語</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ar_SA/installing-boot9strap-(fredtool).html">اللغة العربية</a></li> -->
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/hu_HU/installing-boot9strap-(fredtool).html">Magyar</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ro_RO/installing-boot9strap-(fredtool).html">Română</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/sr_SP/installing-boot9strap-(fredtool).html">Српски</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/af_ZA/installing-boot9strap-(fredtool).html">Afrikaans</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ms_MY/installing-boot9strap-(fredtool).html">Bahasa Melayu</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/fi_FI/installing-boot9strap-(fredtool).html">Suomi</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/da_DK/installing-boot9strap-(fredtool).html">Dansk</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/uk_UA/installing-boot9strap-(fredtool).html">Українська</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/cs_CZ/installing-boot9strap-(fredtool).html">Čeština</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/en_PT/installing-boot9strap-(fredtool).html">Pirate English</a></li> -->
+        </ul>
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <button class="greedy-nav__toggle_lang"><div class="langicon"><i class="fa fa-language fa-lg" aria-hidden="true"></i></div></button>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  <!-- 
+  <div class="sidebar sticky">
+  
+  
+    
+    
+  
+  </div>
+
+-->
+
+
+
+<div class="sidebar sticky" style="display: none;">
+  
+
+
+
+
+
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    <li>
+      <span class="nav__sub-title">总进度</span>
+      <ol>
+        
+          
+            <li style="display: none;" data-name="home"><a href='/zh_CN/'>主页</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="key-information"><a href='/zh_CN/key-information'>Key Information</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="get-started"><a href='/zh_CN/get-started'>Get Started</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="ntrboot"><a href='/zh_CN/ntrboot'>ntrboot</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer"><a href='/zh_CN/seedminer'>Seedminer</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(twn)"><a href='/zh_CN/seedminer-(twn)'>Seedminer (TWN)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="bannerbomb3"><a href='/zh_CN/bannerbomb3'>BannerBomb3</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="multiple-options"><i>(Multiple Options)</i></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(3ds-single-system)"><a href='/zh_CN/flashing-ntrboot-(3ds-single-system)'>Flashing ntrboot (3DS Single System)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(3ds-multi-system)"><a href='/zh_CN/flashing-ntrboot-(3ds-multi-system)'>Flashing ntrboot (3DS Multi System)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(dsi)"><a href='/zh_CN/flashing-ntrboot-(dsi)'>Flashing ntrboot (DSi)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(nds)"><a href='/zh_CN/flashing-ntrboot-(nds)'>Flashing ntrboot (NDS)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(pichaxx)"><a href='/zh_CN/homebrew-launcher-(pichaxx)'>Homebrew Launcher (PicHaxx)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="bannerbomb3-fredtool-(twn)"><a href='/zh_CN/bannerbomb3-fredtool-(twn)'>BannerBomb3 + Fredtool (TWN)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(hardmod)"><a href='/zh_CN/installing-boot9strap-(hardmod)'>Installing boot9strap (Hardmod)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(hbl-usm)"><a href='/zh_CN/installing-boot9strap-(hbl-usm)'>Installing boot9strap (HBL-USM)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(ntrboot)"><a href='/zh_CN/installing-boot9strap-(ntrboot)'>Installing boot9strap (ntrboot)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(soundhax)"><a href='/zh_CN/installing-boot9strap-(soundhax)'>Installing boot9strap (Soundhax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(ssloth-browser)"><a href='/zh_CN/installing-boot9strap-(ssloth-browser)'>Installing boot9strap (SSLoth-Browser)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(fredtool)"><a href='/zh_CN/installing-boot9strap-(fredtool)'>Installing boot9strap (Fredtool)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(usm)"><a href='/zh_CN/installing-boot9strap-(usm)'>Installing boot9strap (USM)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(kartdlphax)"><a href='/zh_CN/installing-boot9strap-(kartdlphax)'>Installing boot9strap (kartdlphax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(hbl-usm)"><a href='/zh_CN/installing-boot9strap-(hbl-usm)'>Installing boot9strap (HBL-USM)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="finalizing-setup"><a href='/zh_CN/finalizing-setup'>Finalizing Setup</a></li>
+          
+        
+      </ol>
+    </li>
+  </ul>
+</nav>
+</div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="安装 boot9strap（通过 Fredtool）">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">安装 boot9strap（通过 Fredtool）
+</h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+
+        <hr>
+
+        
+        
+
+        
+          
+          <div class ="notice"><b>如果有疑问并且懂英语的话，可以到 <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew Discord 服务器</a>上使用英文寻求帮助。（请注意，如果你身处中国大陆，你可能需要通过科学上网来访问 Discord）
+你也可以到译者的 <a href="https://stray-soul.site/index.php/qqgroup">QQ 群</a>寻求帮助，群号为 942052497。</b></div>
+        
+          
+          <div class ="notice"><b>如果你喜欢我们的教程，可以通过<a href="contribute#donations">捐赠</a>支持我们。</b></div>
+        
+
+        <hr>
+
+        <aside class="sidebar__right">
+<nav class="toc">
+    <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> 目录内容</h4></header>
+<ul class="toc__menu" id="markdown-toc">
+  <li><a href="#你需要准备点啥" id="markdown-toc-你需要准备点啥">你需要准备点啥？</a>    <ul>
+      <li><a href="#第一步--检查自制固件" id="markdown-toc-第一步--检查自制固件">第一步 – 检查自制固件</a></li>
+      <li><a href="#第二步--bannerbomb3" id="markdown-toc-第二步--bannerbomb3">第二步 – BannerBomb3</a></li>
+      <li><a href="#第三步--准备工作" id="markdown-toc-第三步--准备工作">第三步 – 准备工作</a></li>
+      <li><a href="#第四步--覆盖-ds-连接设置ds-connection-settings" id="markdown-toc-第四步--覆盖-ds-连接设置ds-connection-settings">第四步 – 覆盖 “DS 连接设置（DS Connection Settings）”</a></li>
+      <li><a href="#第五步--触发-flipnote-漏洞" id="markdown-toc-第五步--触发-flipnote-漏洞">第五步 – 触发 Flipnote 漏洞</a></li>
+      <li><a href="#第四部分--配置-luma3ds" id="markdown-toc-第四部分--配置-luma3ds">第四部分 — 配置 Luma3DS</a></li>
+      <li><a href="#第七步--还原-ds-连接设置ds-connection-settings" id="markdown-toc-第七步--还原-ds-连接设置ds-connection-settings">第七步 – 还原 “DS 连接设置（DS Connection Settings）”</a></li>
+    </ul>
+  </li>
+  <li><a href="#继续至完成安装" id="markdown-toc-继续至完成安装">继续至完成安装</a></li>
+</ul>
+
+  </nav>
+</aside>
+
+<details class="notice--info">
+<summary><em>技术细节（选看）</em></summary>
+
+<p>本章节 Seedminer 将使用你的 <code class="language-plaintext highlighter-rouge">movable.sed</code> 文件来解密所有的 DSiWare 程序，以便在3DS中内置的 DS 网络设定中注入修改后的 DSiWare 程序。</p>
+
+<p>本教程是使用 “FIRM partitions known-plaintext” 漏洞来进行破解的， 欲知相关资料请查阅<a href="https://www.3dbrew.org/wiki/3DS_System_Flaws">这里</a>。</p>
+
+</details>
+
+<h3 id="你需要准备点啥">你需要准备点啥？</h3>
+
+<ul>
+  <li>你在 <a href="seedminer">Seedminer</a> 步骤中获得的 <code class="language-plaintext highlighter-rouge">movable.sed</code> 文件</li>
+  <li>最新版本的 <a href="https://github.com/zoogie/Frogminer/releases/latest">Frogminer_save</a>（下载 <code class="language-plaintext highlighter-rouge">Frogminer_save.zip</code>）</li>
+  <li>最新版本的 <a href="https://github.com/zoogie/b9sTool/releases/latest">b9sTool</a>（下载 <code class="language-plaintext highlighter-rouge">boot.nds</code>）</li>
+  <li>最新版本的 <a href="https://github.com/LumaTeam/Luma3DS/releases/latest">Luma3DS</a>（下载 Luma3DS <code class="language-plaintext highlighter-rouge">.zip</code> 文件）</li>
+</ul>
+
+<h4 id="第一步--检查自制固件">第一步 – 检查自制固件</h4>
+
+<p>As an additional safety measure, we will perform an additional check for custom firmware. This is because using this method when custom firmware is already installed has a risk of bricking the console (rendering it unusable without recovery methods like <a href="ntrboot">ntrboot</a>).</p>
+
+<ol>
+  <li>将主机关机</li>
+  <li>按住 “Select” 键</li>
+  <li>在按住 “Select” 键的同时按下电源键开机</li>
+  <li>If the check was successful, you will boot to the HOME Menu and you may proceed with this guide</li>
+  <li>将主机关机</li>
+</ol>
+
+<p class="notice--danger">If you see a configuration menu or the console immediately powers off, you already have CFW, and continuing with these instructions may BRICK your device! Follow <a href="checking-for-cfw">Checking for CFW</a> to upgrade your existing CFW.</p>
+
+<h4 id="第二步--bannerbomb3">第二步 – BannerBomb3</h4>
+
+<p>本节中，你将会使用 DSiWare 数据管理菜单触发 BannerBomb3 漏洞，并利用它导出一个在下一个步骤中需要使用的文件。</p>
+
+<ol>
+  <li>将 SD 卡重新插入你的主机</li>
+  <li>启动你的主机</li>
+  <li>启动你主机上的 “系统设置(System settings)”</li>
+  <li>依次点击 <code class="language-plaintext highlighter-rouge">数据管理（データ管理/Data Management）</code> -&gt; <code class="language-plaintext highlighter-rouge">DSiWare 数据管理（DSiWareデータ管理/DSiWare）</code> -&gt; <code class="language-plaintext highlighter-rouge">SD卡（micro SDカード/SDカード/SD/microSD）</code>（<a href="/images/screenshots/bb3/dsiware-management.png">例图</a>）
+    <ul>
+      <li>你的主机将会打开 BB3 multihax 菜单</li>
+      <li>If this step causes your device to crash, <a href="troubleshooting#installing-boot9strap-fredtool">follow this troubleshooting guide</a></li>
+    </ul>
+  </li>
+  <li>使用十字键移动至 “Dump DSiWare” ，然后按下 A 键
+    <ul>
+      <li>主机将会自动重启</li>
+    </ul>
+  </li>
+  <li>将主机关机</li>
+</ol>
+
+<h4 id="第三步--准备工作">第三步 – 准备工作</h4>
+
+<p>本节中，你将会临时将 DS 连接设置（DS Connection Settings）程序临时替换为 Flipnote Studio，用来启动 boot9strap（自制固件）安装器。</p>
+
+<ol>
+  <li>将你的 SD 卡插入到电脑</li>
+  <li>在电脑上打开 <a href="https://jenkins.nelthorya.net/job/DSIHaxInjector_new/build?delay=0sec">DSIHaxInjector_new</a> 站点</li>
+  <li>于“Username”一行，填入一个你的英文名（不带空格或特殊字符）</li>
+  <li>于 “DSiBin” 一行，点击“Browse…”（选择文件）来上传根目录中的 <code class="language-plaintext highlighter-rouge">42383841.bin</code> 文件</li>
+  <li>于“MovableSed”一行，点击“Browse…”（选择文件）上传你的 <code class="language-plaintext highlighter-rouge">movable.sed</code> 文件</li>
+  <li>于“InjectionTarget”一行，设置注入对象为 <code class="language-plaintext highlighter-rouge">DSinternet</code>（<strong>不是带有</strong> memorypit 字串的那个）</li>
+  <li>点击 “Build”
+    <ul>
+      <li>等待片刻，直到构建完成</li>
+    </ul>
+  </li>
+  <li>将你的名字输入左边的 Build History 菜单中的 Filter Builds 一栏</li>
+  <li>点击第一个搜索结果
+    <ul>
+      <li>它应该是所有显示的结果中时间最新的那一个</li>
+    </ul>
+  </li>
+  <li>点击 “output_(<你的名字>).zip" 的链接</你的名字></li>
+  <li>打开内存卡的 <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID0&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID1&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">Nintendo DSiWare</code> 文件夹
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">&lt;ID0&gt;</code> 是你在 <a href="seedminer">Seedminer</a> 部分中复制的 32 位字母长的文件夹名称</li>
+      <li><code class="language-plaintext highlighter-rouge">&lt;ID1&gt;</code> 是一个在 <code class="language-plaintext highlighter-rouge">&lt;ID0&gt;</code> 文件夹内，另一个 32 位字母长的文件夹</li>
+    </ul>
+  </li>
+  <li>删除 Nintendo DSiWare 文件夹中的 <code class="language-plaintext highlighter-rouge">F00D43D5.bin</code> 文件</li>
+  <li>从下载的 DSiWare 压缩包 （<code class="language-plaintext highlighter-rouge">output_(&lt;你的名字&gt;).zip</code>） 里的 <code class="language-plaintext highlighter-rouge">hax</code> 文件夹复制 <code class="language-plaintext highlighter-rouge">42383841.bin</code> 到 <code class="language-plaintext highlighter-rouge">Nintendo DSiWare</code> 文件夹
+  <img src="https://3ds.hacks.guide/images/screenshots/bb3/dsiware-location-4.png" alt="" class="notice--info" /></li>
+  <li>解压 Luma3DS <code class="language-plaintext highlighter-rouge">.zip</code> 里的 <code class="language-plaintext highlighter-rouge">boot.firm</code> 和 <code class="language-plaintext highlighter-rouge">boot.3dsx</code> 到你 SD 卡的根目录
+    <ul>
+      <li>根目录指的是你点进 SD 卡看到的目录，你可以在这个目录下看到 Nintendo 3DS 文件夹，但请不要点进去</li>
+    </ul>
+  </li>
+  <li>复制 <code class="language-plaintext highlighter-rouge">boot.nds</code> （B9STool）到你的 SD 卡根目录</li>
+  <li>从 Frogminer_save <code class="language-plaintext highlighter-rouge">.zip</code> 压缩包中复制 <code class="language-plaintext highlighter-rouge">private</code> 文件夹到内存卡的根目录</li>
+  <li>将 SD 卡重新插入你的主机</li>
+  <li>
+    <p>启动你的主机</p>
+
+    <p class="notice--info"><img src="https://3ds.hacks.guide/images/screenshots/fredtool/fredtool-root-layout.png" alt="" /></p>
+  </li>
+</ol>
+
+<h4 id="第四步--覆盖-ds-连接设置ds-connection-settings">第四步 – 覆盖 “DS 连接设置（DS Connection Settings）”</h4>
+
+<p>本节中，你将把被修改过的 DS 连接设置应用程序复制进内部存储，这将临时替换其为 Flipnote Studio。</p>
+
+<ol>
+  <li>启动你主机上的 “系统设置(System settings)”</li>
+  <li>依次点击 <code class="language-plaintext highlighter-rouge">数据管理（データ管理/Data Management）</code> -&gt; <code class="language-plaintext highlighter-rouge">DSiWare 数据管理（DSiWareデータ管理/DSiWare）</code> -&gt; <code class="language-plaintext highlighter-rouge">SD卡（micro SDカード/SDカード/SD/microSD）</code>（<a href="/images/screenshots/bb3/dsiware-management.png">例图</a>）</li>
+  <li>选择 “Haxxxxxxxxx!”</li>
+  <li>选择 “Copy” ，然后选择 “OK”</li>
+  <li>返回系统设置的主菜单</li>
+  <li>进入至 <code class="language-plaintext highlighter-rouge">网络设置（インターネツト設定/Internet Settings）</code> -&gt; <code class="language-plaintext highlighter-rouge">DS 连接设置（DSソフト用設定/Nintendo DS Connections）</code>，然后点击 “OK”（<a href="/images/screenshots/fredtool/dsconnection.png">例图</a>）</li>
+  <li>如果漏洞执行成功，你的主机将进入到日版的“うごくメモ帳 (Flipnote Studio)”</li>
+</ol>
+
+<h4 id="第五步--触发-flipnote-漏洞">第五步 – 触发 Flipnote 漏洞</h4>
+
+<p class="notice--info">If you would prefer a visual guide to this section, one is available <a href="https://zoogie.github.io/web/flipnote_directions/">here</a>.</p>
+
+<p>In this section, you will perform a series of very specific steps within Flipnote Studio that, when performed correctly, will launch the boot9strap (custom firmware) installer.</p>
+
+<ol>
+  <li>Complete the initial setup process for the launched game until you reach the main menu
+    <ul>
+      <li>Select the left option whenever prompted during the setup process</li>
+    </ul>
+  </li>
+  <li>Using the touch-screen, select the large left box, then select the box with an SD card icon</li>
+  <li>Once the menu loads, select the face icon, then the bottom right icon to continue</li>
+  <li>Press (X) or (UP) on the D-Pad depending on which is shown on the top screen</li>
+  <li>Select the second button along the top with a film-reel icon</li>
+  <li>Scroll right until reel “3/3” is selected</li>
+  <li>Tap the third box with the letter “A” in it</li>
+  <li>Scroll left until reel “1/3” is selected</li>
+  <li>Tap the fourth box with the letter “A” in it</li>
+  <li>If the exploit was successful, your device will have loaded b9sTool</li>
+  <li>Using the D-Pad, move to “Install boot9strap”
+    <ul>
+      <li>If you miss this step, the system will exit to HOME Menu instead of installing boot9strap and you will need to open Nintendo DS Connections and start over from the beginning of this section</li>
+    </ul>
+  </li>
+  <li>Press (A), then press START and SELECT at the same time to begin the process</li>
+  <li>Once completed and the bottom screen says “done.”, exit b9sTool, then power off your device
+    <ul>
+      <li>You may have to force power off by holding the power button</li>
+      <li>If your device shuts down when you try to power it on, ensure that you have copied <code class="language-plaintext highlighter-rouge">boot.firm</code> from the Luma3DS <code class="language-plaintext highlighter-rouge">.zip</code> to the root of your SD card</li>
+      <li>If you see the Luma Configuration screen, power off your device and continue to the next section</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="第四部分--配置-luma3ds">第四部分 — 配置 Luma3DS</h4>
+
+<ol>
+  <li>按住 “SELECT” 键，然后按下电源键开机。 这将会启动 Luma3DS 配置菜单</li>
+  <li>Your device should have booted into the Luma3DS configuration menu
+    <ul>
+      <li>Luma3DS 配置菜单用于设置 Luma3DS 自制固件的可选功能 其中有许多功能可用于个性化或调试</li>
+      <li>For the purpose of this guide, <strong>leave these options on the default settings</strong> (do not check or uncheck anything)</li>
+      <li>If your device shuts down when you try to power it on, ensure that you have copied <code class="language-plaintext highlighter-rouge">boot.firm</code> from the Luma3DS <code class="language-plaintext highlighter-rouge">.zip</code> to the root of your SD card</li>
+    </ul>
+  </li>
+  <li>按下 “Start” 键保存设置并重启</li>
+</ol>
+
+<p>At this point, your console will boot to Luma3DS by default.</p>
+<ul>
+  <li>Luma3DS does not look any different from the normal HOME Menu. If your console has booted into the HOME Menu, it is running custom firmware.</li>
+  <li>On the next page, you will install useful homebrew applications to complete your setup.</li>
+</ul>
+
+<h4 id="第七步--还原-ds-连接设置ds-connection-settings">第七步 – 还原 “DS 连接设置（DS Connection Settings）”</h4>
+
+<p>本节中，你将会把之前第四步中被替换为 Flipnote Studio 的 DS 连接设置程序还原回原来的状态。</p>
+
+<ol>
+  <li>打开内存卡的 <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID0&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID1&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">Nintendo DSiWare</code> 文件夹</li>
+  <li>下载的 DSiWare 压缩包 （<code class="language-plaintext highlighter-rouge">output_(&lt;你的名字&gt;).zip</code>） 里的 <code class="language-plaintext highlighter-rouge">clean</code> 文件夹复制 <code class="language-plaintext highlighter-rouge">42383841.bin</code> 到 <code class="language-plaintext highlighter-rouge">Nintendo DSiWare</code> 文件夹，替换已有文件</li>
+  <li>将 SD 卡重新插入你的主机</li>
+  <li>启动你的主机</li>
+  <li>启动你主机上的 “系统设置(System settings)”</li>
+  <li>依次点击 <code class="language-plaintext highlighter-rouge">数据管理（データ管理/Data Management）</code> -&gt; <code class="language-plaintext highlighter-rouge">DSiWare 数据管理（DSiWareデータ管理/DSiWare）</code> -&gt; <code class="language-plaintext highlighter-rouge">SD卡（micro SDカード/SDカード/SD/microSD）</code>（<a href="/images/screenshots/bb3/dsiware-management.png">例图</a>）</li>
+  <li>选择 “Nintendo DSi™”</li>
+  <li>选择 “Copy” ，然后选择 “OK”</li>
+</ol>
+
+<hr />
+
+<h3 class="notice--primary" id="继续至完成安装">继续至<a href="finalizing-setup">完成安装</a></h3>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://github.com/hacks-guide/Guide_3DS" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+<!--
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+    </ul>
+  -->
+</div>
+
+<!-- custom footer, guide specific -->
+
+
+
+<div class="page__footer-copyright">&copy; 2023 Nintendo Homebrew. - <a href="site-navigation">网站导航</a> - <a href="privacy-policy">隐私政策</a> <!-- Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.--></div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+<!-- for guide purposes all caching is removed and is separately built. -->
+
+
+
+
+
+
+
+
+  </body>
+</html>

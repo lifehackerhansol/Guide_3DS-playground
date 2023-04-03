@@ -1,0 +1,769 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<!-- for guide purposes all caching is removed and is separately built. -->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>卸载自制固件 - 3DS Hacks Guide</title>
+<meta name="description" content="A complete guide to 3DS custom firmware">
+
+
+  <meta name="author" content="Nintendo Homebrew">
+  
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="3DS Hacks Guide">
+<meta property="og:title" content="卸载自制固件">
+<meta property="og:url" content="https://3ds.hacks.guide/zh_CN/uninstall-cfw.html">
+
+
+  <meta property="og:description" content="A complete guide to 3DS custom firmware">
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://3ds.hacks.guide/zh_CN/uninstall-cfw.html">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Nintendo Homebrew",
+      "url": "https://3ds.hacks.guide/"
+    
+  }
+</script>
+
+
+  <meta name="google-site-verification" content="jVXoPK_-qzKJp4SScnZYpOIX3yDXfGnAoTBJYixUOwg" />
+
+
+  <meta name="msvalidate.01" content="F3532011519E308583A0A2CAF2DD69E8">
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="3DS Hacks Guide Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=PYEmwKvQAx">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png?v=PYEmwKvQAx" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-194x194.png?v=PYEmwKvQAx" sizes="194x194">
+<link rel="icon" type="image/png" href="/images/android-chrome-192x192.png?v=PYEmwKvQAx" sizes="192x192">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png?v=PYEmwKvQAx" sizes="16x16">
+<link rel="manifest" href="/images/manifest.json?v=PYEmwKvQAx">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg?v=PYEmwKvQAx" color="#2E3440">
+<link rel="shortcut icon" href="/images/favicon.ico?v=PYEmwKvQAx">
+<meta name="apple-mobile-web-app-title" content="Guide">
+<meta name="application-name" content="Guide">
+<meta name="msapplication-TileColor" content="#2E3440">
+<meta name="msapplication-TileImage" content="/images/mstile-144x144.png?v=PYEmwKvQAx">
+<meta name="msapplication-config" content="/images/browserconfig.xml?v=PYEmwKvQAx">
+<meta name="theme-color" content="#2E3440">
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.css" integrity="sha512-LQ97camar/lOliT/MqjcQs5kWgy6Qz/cCRzzRzUCfv0fotsCTC9ZHXaPQmJV8Xu/PVALfJZ7BDezl5lW3/qBxg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js" integrity="sha512-yXXqOFjdjHNH1GND+1EO0jbvvebABpzGKD66djnUfiKlYME5HGMUJHoCaeE4D5PTG2YsSJf6dwqyUUvQvS0vaA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#2e3440"
+    },
+    "button": {
+      "background": "#60818f"
+    }
+  },
+  "theme": "edgeless",
+  "position": "top",
+  "static": true,
+  "content": {
+    "message": "本网站利用cookies在侧边栏上显示当前的操作进度并改善此站点的使用体验。"
+  }
+})});
+</script>
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <!-- <a class="site-title" href="/">
+          3DS Hacks Guide
+          
+        </a>
+      -->
+        <ul class="visible-links">
+          <!-- modified to use multilang, guide-specific -->
+          
+          
+          
+          
+          
+          
+            
+              <li class="masthead__menu-item masthead__menu-item--lg"><a href="/zh_CN/">主页</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/zh_CN/faq">常见问题</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/zh_CN/troubleshooting">问题排查</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/zh_CN/checking-for-cfw">检查自制固件</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/zh_CN/godmode9-usage">GodMode9 使用教程</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/zh_CN/contribute">捐助</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/zh_CN/region-changing">区域变更</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/zh_CN/uninstall-cfw">卸载自制固件</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/zh_CN/credits">致谢</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/zh_CN/site-navigation">网站导航</a></li>
+            
+          
+          <!-- end guide specific -->
+        </ul>
+        
+        <!-- completely redo hidden links for multilang, guide-specific -->
+        <ul class="hidden-links links-menu hidden"></ul>
+        <ul class="hidden-links lang-menu hidden">
+          
+          
+          
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/uninstall-cfw.html">English</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/es_ES/uninstall-cfw.html">Español</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/de_DE/uninstall-cfw.html">Deutsch</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/fr_FR/uninstall-cfw.html">Français</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/it_IT/uninstall-cfw.html">Italiano</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/nl_NL/uninstall-cfw.html">Nederlands</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/pt_BR/uninstall-cfw.html">Português do Brasil</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/pt_PT/uninstall-cfw.html">Português (Portugal)</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ru_RU/uninstall-cfw.html">Русский</a></li> -->
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/zh_CN/uninstall-cfw.html">简体中文</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/zh_TW/uninstall-cfw.html">繁體中文</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/pl_PL/uninstall-cfw.html">Polski</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/tr_TR/uninstall-cfw.html">Türkçe</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/vi_VN/uninstall-cfw.html">Tiếng Việt</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ca_ES/uninstall-cfw.html">Català</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/el_GR/uninstall-cfw.html">Ελληνικά</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/he_IL/uninstall-cfw.html">עברית‎</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/sv_SE/uninstall-cfw.html">Svenska</a></li> -->
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ko_KR/uninstall-cfw.html">한국어</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/no_NO/uninstall-cfw.html">Norsk</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ja_JP/uninstall-cfw.html">日本語</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ar_SA/uninstall-cfw.html">اللغة العربية</a></li> -->
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/hu_HU/uninstall-cfw.html">Magyar</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ro_RO/uninstall-cfw.html">Română</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/sr_SP/uninstall-cfw.html">Српски</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/af_ZA/uninstall-cfw.html">Afrikaans</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ms_MY/uninstall-cfw.html">Bahasa Melayu</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/fi_FI/uninstall-cfw.html">Suomi</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/da_DK/uninstall-cfw.html">Dansk</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/uk_UA/uninstall-cfw.html">Українська</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/cs_CZ/uninstall-cfw.html">Čeština</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/en_PT/uninstall-cfw.html">Pirate English</a></li> -->
+        </ul>
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <button class="greedy-nav__toggle_lang"><div class="langicon"><i class="fa fa-language fa-lg" aria-hidden="true"></i></div></button>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  <!-- 
+  <div class="sidebar sticky">
+  
+  
+    
+    
+  
+  </div>
+
+-->
+
+
+
+<div class="sidebar sticky" style="display: none;">
+  
+
+
+
+
+
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    <li>
+      <span class="nav__sub-title">总进度</span>
+      <ol>
+        
+          
+            <li style="display: none;" data-name="home"><a href='/zh_CN/'>主页</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="key-information"><a href='/zh_CN/key-information'>Key Information</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="get-started"><a href='/zh_CN/get-started'>Get Started</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="ntrboot"><a href='/zh_CN/ntrboot'>ntrboot</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer"><a href='/zh_CN/seedminer'>Seedminer</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(twn)"><a href='/zh_CN/seedminer-(twn)'>Seedminer (TWN)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="bannerbomb3"><a href='/zh_CN/bannerbomb3'>BannerBomb3</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="multiple-options"><i>(Multiple Options)</i></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(3ds-single-system)"><a href='/zh_CN/flashing-ntrboot-(3ds-single-system)'>Flashing ntrboot (3DS Single System)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(3ds-multi-system)"><a href='/zh_CN/flashing-ntrboot-(3ds-multi-system)'>Flashing ntrboot (3DS Multi System)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(dsi)"><a href='/zh_CN/flashing-ntrboot-(dsi)'>Flashing ntrboot (DSi)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(nds)"><a href='/zh_CN/flashing-ntrboot-(nds)'>Flashing ntrboot (NDS)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(pichaxx)"><a href='/zh_CN/homebrew-launcher-(pichaxx)'>Homebrew Launcher (PicHaxx)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="bannerbomb3-fredtool-(twn)"><a href='/zh_CN/bannerbomb3-fredtool-(twn)'>BannerBomb3 + Fredtool (TWN)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(hardmod)"><a href='/zh_CN/installing-boot9strap-(hardmod)'>Installing boot9strap (Hardmod)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(hbl-usm)"><a href='/zh_CN/installing-boot9strap-(hbl-usm)'>Installing boot9strap (HBL-USM)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(ntrboot)"><a href='/zh_CN/installing-boot9strap-(ntrboot)'>Installing boot9strap (ntrboot)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(soundhax)"><a href='/zh_CN/installing-boot9strap-(soundhax)'>Installing boot9strap (Soundhax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(ssloth-browser)"><a href='/zh_CN/installing-boot9strap-(ssloth-browser)'>Installing boot9strap (SSLoth-Browser)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(fredtool)"><a href='/zh_CN/installing-boot9strap-(fredtool)'>Installing boot9strap (Fredtool)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(usm)"><a href='/zh_CN/installing-boot9strap-(usm)'>Installing boot9strap (USM)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(kartdlphax)"><a href='/zh_CN/installing-boot9strap-(kartdlphax)'>Installing boot9strap (kartdlphax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(hbl-usm)"><a href='/zh_CN/installing-boot9strap-(hbl-usm)'>Installing boot9strap (HBL-USM)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="finalizing-setup"><a href='/zh_CN/finalizing-setup'>Finalizing Setup</a></li>
+          
+        
+      </ol>
+    </li>
+  </ul>
+</nav>
+</div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="卸载自制固件">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">卸载自制固件
+</h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+
+        <hr>
+
+        
+        
+
+        
+          
+          <div class ="notice"><b>如果有疑问并且懂英语的话，可以到 <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew Discord 服务器</a>上使用英文寻求帮助。（请注意，如果你身处中国大陆，你可能需要通过科学上网来访问 Discord）
+你也可以到译者的 <a href="https://stray-soul.site/index.php/qqgroup">QQ 群</a>寻求帮助，群号为 942052497。</b></div>
+        
+          
+          <div class ="notice"><b>如果你喜欢我们的教程，可以通过<a href="contribute#donations">捐赠</a>支持我们。</b></div>
+        
+
+        <hr>
+
+        <aside class="sidebar__right">
+<nav class="toc">
+    <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> 目录内容</h4></header>
+<ul class="toc__menu" id="markdown-toc">
+  <li><a href="#重要事项" id="markdown-toc-重要事项">重要事项</a></li>
+  <li><a href="#你需要准备点啥" id="markdown-toc-你需要准备点啥">你需要准备点啥？</a></li>
+  <li><a href="#操作步骤" id="markdown-toc-操作步骤">操作步骤</a>    <ul>
+      <li><a href="#第一步--准备工作" id="markdown-toc-第一步--准备工作">第一步 – 准备工作</a></li>
+      <li><a href="#第二步--ds-模式测试" id="markdown-toc-第二步--ds-模式测试">第二步 – DS 模式测试</a>        <ul>
+          <li><a href="#ds-连接设置测试" id="markdown-toc-ds-连接设置测试">DS 连接设置测试</a></li>
+          <li><a href="#ds-下载通信测试" id="markdown-toc-ds-下载通信测试">DS 下载通信测试</a></li>
+        </ul>
+      </li>
+      <li><a href="#第三步--安全性测试" id="markdown-toc-第三步--安全性测试">第三步 – 安全性测试</a></li>
+      <li><a href="#第四步--备份-nand" id="markdown-toc-第四步--备份-nand">第四步 – 备份 NAND</a></li>
+      <li><a href="#第五步--移除非法内容" id="markdown-toc-第五步--移除非法内容">第五步 – 移除非法内容</a></li>
+      <li><a href="#第六步--初始化主机" id="markdown-toc-第六步--初始化主机">第六步 – 初始化主机</a></li>
+      <li><a href="#第七步--运行卸载脚本" id="markdown-toc-第七步--运行卸载脚本">第七步 – 运行卸载脚本</a></li>
+    </ul>
+  </li>
+</ul>
+
+  </nav>
+</aside>
+
+<h3 id="重要事项">重要事项</h3>
+
+<p>本章节将会教你如何完全把自制固件从你的主机完全移除，为了完全恢复原厂系统，所有的自制固件将被卸载，包括 B9S 和 Luma3DS。</p>
+
+<p>任何未签名（盗版）游戏都将被标记为不可用，并将在此过程中被删除。 你可以使用一个<a href="https://github.com/FlagBrew/Checkpoint/releases/latest">存档管理器</a>来备份你想要保留的游戏存档。</p>
+
+<div class="notice--danger">
+<p>如果你想卸载自制固件的目的是：</p>
+
+<ul>
+  <li>重新安装它</li>
+  <li>游戏无法正常运行</li>
+  <li>某个应用无法打开</li>
+  <li>主机进入不了主菜单，保持黑屏</li>
+</ul>
+
+<p><u><strong>停下！！！！！！！！！！！！！！！！！！！！！！！！！！</strong></u>卸载自制固件只会浪费时间把这几件事搞的更糟，且有概率导致主机直接<u><strong>变砖</strong></u>。 更好的点子是在<a href="https://discord.gg/MWxPgEp"> Nintendo Homebrew Discord 服务器</a>上使用英文寻求帮助。（请注意，如果你身处中国大陆，则你可能需要通过科学上网访问 Discord），你也可以到译者的 <a href="https://stray-soul.site/index.php/qqgroup">QQ 群</a>寻求帮助，群号为 942052497。</p>
+</div>
+
+<div class="notice--danger">
+<p>你是否做过以下的任何一件事：</p>
+<ul>
+  <li>更改过主机的<a href="region-changing">区域</a></li>
+  <li>安装过自制输入法</li>
+  <li>安装过自制的主菜单（例如：汉化系统，<strong>不是</strong>自制主题）</li>
+  <li>手动修改过主机的加密密钥（<code class="language-plaintext highlighter-rouge">movable.sed</code>）</li>
+  <li>给主机解 ban 过</li>
+</ul>
+
+<p>如果你干过以上的任何一件事，卸载自制固件将<u><strong>直接导致主机砖机</strong></u>。 如果你确实做了，但是你仍然想要卸载自制固件，请<a href="godmode9-usage#restoring-a-nand-backup">还原一份干净的 NAND 备份</a>，然后再继续。</p>
+</div>
+
+<p class="notice--warning">这些步骤仅适用于 Luma3DS 版本在 8.0 或以上的主机。 如果你的主机 Luma 版本比要求的旧，则你必须先升级版本再做这些操作。 请参考<a href="checking-for-cfw">这个页面</a>来找到适合你主机的升级操作。</p>
+
+<h3 id="你需要准备点啥">你需要准备点啥？</h3>
+
+<ul>
+  <li>最新版本的 <a href="https://github.com/LumaTeam/Luma3DS/releases/latest">Luma3DS</a></li>
+  <li>最新版本的 <a href="https://github.com/d0k3/GodMode9/releases/latest">GodMode9</a></li>
+  <li>最新版本的 <a href="https://github.com/MechanicalDragon0687/DSiWare-Uninstaller/releases/latest">DSiWare Uninstaller</a></li>
+  <li><a href="/gm9_scripts/safety_test.gm9">safety_test.gm9</a></li>
+</ul>
+
+<h3 id="操作步骤">操作步骤</h3>
+
+<h4 id="第一步--准备工作">第一步 – 准备工作</h4>
+<ol>
+  <li>将主机关机</li>
+  <li>将你的 SD 卡插入到电脑</li>
+  <li>解压 Luma3DS <code class="language-plaintext highlighter-rouge">.zip</code> 里的 <code class="language-plaintext highlighter-rouge">boot.firm</code> 和 <code class="language-plaintext highlighter-rouge">boot.3dsx</code> 到你 SD 卡的根目录</li>
+  <li>将 GodMode9 <code class="language-plaintext highlighter-rouge">.zip</code> 中的 <code class="language-plaintext highlighter-rouge">GodMode9.firm</code> 复制到你 SD 卡的 <code class="language-plaintext highlighter-rouge">/luma/payloads/</code> 文件夹中</li>
+  <li>将 GodMode9 <code class="language-plaintext highlighter-rouge">.zip</code> 中的整个 <code class="language-plaintext highlighter-rouge">gm9</code> 文件夹复制到 SD 卡的根目录下</li>
+  <li>复制 <code class="language-plaintext highlighter-rouge">DSiWareUninstaller.3dsx</code>  到你 SD 卡的 <code class="language-plaintext highlighter-rouge">/3ds/</code> 文件夹</li>
+  <li>复制 <code class="language-plaintext highlighter-rouge">safety_test.gm9</code> 到 SD 卡的<code class="language-plaintext highlighter-rouge">/gm9/scripts/</code>目录下</li>
+  <li>将 SD 卡重新插入你的主机</li>
+</ol>
+
+<h4 id="第二步--ds-模式测试">第二步 – DS 模式测试</h4>
+<p>本步骤的目的是检查内建的 DS 模式应用是否能够在卸载自制固件后继续正常运作。 如果你跳过此章节，DS 模式或它的功能可能会无法正常使用，除非你重新安装自制固件。</p>
+
+<h5 id="ds-连接设置测试">DS 连接设置测试</h5>
+<ol>
+  <li>启动你的主机</li>
+  <li>打开系统设置（本体設定 / System Settings）</li>
+  <li>移动到 <code class="language-plaintext highlighter-rouge">网络设置（Internet Settings）</code> -&gt; <code class="language-plaintext highlighter-rouge">任天堂 DS 连接（Nintendo DS Connections）</code>，然后选择 “OK”</li>
+  <li>你的主机应该会正常启动到任天堂 DS 连接设置菜单
+    <ul>
+      <li>如果你的主机显示了日版的 Flipnote Studio 或黑屏亦或出现报错，则代表测试失败。</li>
+    </ul>
+  </li>
+  <li>将主机关机</li>
+</ol>
+
+<h5 id="ds-下载通信测试">DS 下载通信测试</h5>
+<ol>
+  <li>启动你的主机</li>
+  <li>启动“下载通信(Download Play)”程序 (<img src="https://3ds.hacks.guide/images/download-play-icon.png" alt="" height="24px" width="24px" />)</li>
+  <li>选择 “Nintendo DS”</li>
+  <li>如果你的主机正常进入了 DS “下载通信（Download Play）” 程序，那么测试成功。
+    <ul>
+      <li>如果你的主机显示了日版的 Flipnote Studio 或黑屏亦或出现报错，则代表测试失败。</li>
+    </ul>
+  </li>
+  <li>将主机关机</li>
+</ol>
+
+<p class="notice--warning">如果以上其一测试失败了，则 DS 模式、DS 下载通信和/或 DS 连接设定可能会在卸载自制固件后无法正常使用！ You should <a href="troubleshooting#software-issues-on-devices-with-custom-firmware">fix DS mode</a> before continuing.</p>
+
+<h4 id="第三步--安全性测试">第三步 – 安全性测试</h4>
+<p>本步骤的目的是为了检查主机是否能在卸载自制固件后正常开机，以及核心系统组件（如系统设置和键盘）是否能够正常运作。 <strong>如果你跳过此部分，主机可能会变砖！</strong></p>
+
+<ol>
+  <li>按住 “START” 键，然后将主机开机。 这会启动 GodMode9</li>
+  <li>如果工具提示是否需要创建重要文件备份，请按下 “A” 键确认。完成后再次按下 “A” 键来继续。</li>
+  <li>如果出现修复 RTC 日期与时间的提示，按 “A” 键执行修复，然后设置好日期和时间，并按 “A” 继续
+    <ul>
+      <li>请注意，如果出现了该提示，则执行完本手册后你还需要在系统设置中重新设置时间</li>
+    </ul>
+  </li>
+  <li>按下 “Home” 键来打开功能菜单</li>
+  <li>选择 “Scripts…”</li>
+  <li>选择 “safety_test”</li>
+  <li>阅读屏幕上的文本，然后按下 “A” 键继续</li>
+  <li>主机应该会自动进入到正常的 3DS 主菜单（有没有自制主题无关）。 如果是这样，那么继续下面的操作
+    <ul>
+      <li>如果主机没有进入到正常的 3DS 主菜单（发生黑屏、报错等），卸载自制固件<strong>将会把主机变砖</strong>！</li>
+    </ul>
+  </li>
+  <li>打开系统设置（本体設定 / System Settings）
+    <ul>
+      <li>如果主机此时崩溃，则测试失败</li>
+    </ul>
+  </li>
+  <li>选择 “其他设置（Other Settings）”</li>
+  <li>选择 “档案（Profile）”</li>
+  <li>选择 “用户名（User Name）”</li>
+  <li>如果你能够输入新的用户名，则测试成功
+    <ul>
+      <li>如果键盘没有出现且主机死机或崩溃了，则测试失败</li>
+    </ul>
+  </li>
+  <li>将主机关机</li>
+</ol>
+
+<p class="notice--danger">如果没有进入到正常的 3DS 主菜单或系统设置/键盘不可用，则<strong>请不要再继续做下面的步骤了！</strong> 请加入 <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew Discord 服务器</a> 并说英文来请求支持。</p>
+
+<h4 id="第四步--备份-nand">第四步 – 备份 NAND</h4>
+
+<ol>
+  <li>按住 “START” 键，然后将主机开机。 这会启动 GodMode9</li>
+  <li>按下 “Home” 键来打开功能菜单</li>
+  <li>选择 “Scripts…”</li>
+  <li>选择 “GM9Megascript”</li>
+  <li>选择 “Backup Options”</li>
+  <li>选择 “SysNAND Backup”</li>
+  <li>按下 “A” 键确认
+    <ul>
+      <li>此过程将花费一些时间</li>
+      <li>如果你遇到了错误，请确保你的 SD 卡上至少有 1.3GB 的可用空间</li>
+    </ul>
+  </li>
+  <li>按下 “B” 键返回到主菜单</li>
+  <li>选择 “退出（Exit）”</li>
+  <li>按下 “Home” 键来打开功能菜单</li>
+  <li>选择 “Poweroff system” 来将主机关机</li>
+</ol>
+
+<h4 id="第五步--移除非法内容">第五步 – 移除非法内容</h4>
+<p class="notice--warning">本步骤将会删除非法内容，例如自制程序、导出的程序（安装 CIA 格式的应用得来的）。 如果你有还想要的存档，请在继续前使用一个存档工具将它导出来后再继续！</p>
+
+<ol>
+  <li>启动你的主机</li>
+  <li>打开系统设置（本体設定 / System Settings）</li>
+  <li>进入到 “数据管理（Data Management）” &gt; “Nintendo 3DS” &gt; “软件（Software）”</li>
+  <li>在此列表中，删除你在使用自制系统时安装的任何非来自任天堂的自制程序。
+    <ul>
+      <li>这其中包括常见的自制程序如 FBI、Anemone3DS、Luma Updater、Homebrew Launcher、Checkpoint 等等…和任何非通过 eShop 安装的游戏</li>
+    </ul>
+  </li>
+  <li>进入到“数据管理（Data Management）” &gt; “DSiWare”</li>
+  <li>在此列表中，删除你在使用自制系统时安装的任何非来自任天堂的自制程序。
+    <ul>
+      <li>这包括诸如 TWiLightMenu++ 之类的软件，和你<strong>非</strong>从 eShop 安装的任何游戏程序</li>
+      <li>如果无法卸载这些 3DS 和 DSiWare 软件，卸载自制固件可能会导致数据管理无法进入或数据损坏。如果将来想要重新安装自制固件时，操作步骤可能会变得更加困难。</li>
+    </ul>
+  </li>
+  <li>退出系统设置</li>
+  <li>启动“下载通信(Download Play)”程序 (<img src="https://3ds.hacks.guide/images/download-play-icon.png" alt="" height="24px" width="24px" />)</li>
+  <li>等到你看到两个按钮</li>
+  <li>同时按下 “L” + “↓” + “Select” 键来打开 Rosalina 菜单</li>
+  <li>选择 “Miscellaneous options”</li>
+  <li>选择 “Switch the hb. title to the current app.”</li>
+  <li>按 “B” 键继续</li>
+  <li>按 “B” 键返回 Rosalina 主菜单</li>
+  <li>按 “B” 键退出 Rosalina 菜单</li>
+  <li>按下 “Home” 键，然后关闭“下载通信(Download Play)”</li>
+  <li>运行“下载通信（Download Play）”程序</li>
+  <li>此时你的主机应该会启动 Homebrew Launcher了</li>
+  <li>从自制程序列表中运行 DSiWare Uninstaller</li>
+  <li>阅读提示并允许程序卸载</li>
+  <li>一旦完成后，退出 Homebrew Launcher 然后关机</li>
+</ol>
+
+<h4 id="第六步--初始化主机">第六步 – 初始化主机</h4>
+<p>本步骤将会把所有的非法 ticket 从主机中移除，使 eShop 能够正常工作。 这会移除 3DS 中的所有内容，并登出 NNID。 这会重新生成你的主机解密密钥，意味着你先前的所有数据将会全部不可用，即使你把它们从 SD 卡中备份出来也是如此。</p>
+
+<ol>
+  <li>启动你的主机</li>
+  <li>打开系统设置（本体設定 / System Settings）</li>
+  <li>进入“其他设置（Other Settings）” -&gt; 右箭头（直到最后一页）-&gt; “初始化系统（Format System Memory）”</li>
+  <li>按照提示步骤重置你的 3DS</li>
+</ol>
+
+<h4 id="第七步--运行卸载脚本">第七步 – 运行卸载脚本</h4>
+<p class="notice--warning">这是你核验所有安全检查步骤是否已正确遵循的最后一次机会！ 请确保你已经做完了本页面先前的所有步骤，<strong>特别是</strong> <code class="language-plaintext highlighter-rouge">第三步</code>。</p>
+
+<ol>
+  <li>按住 “START” 键，然后将主机开机。 这会启动 GodMode9
+    <ul>
+      <li>如果你看到了 Luma3DS chainloader 菜单，则请使用十字键移动到 Godmode9 然后按 A 进入</li>
+    </ul>
+  </li>
+  <li>按下 “Home” 键来打开功能菜单</li>
+  <li>选择 “Scripts…”</li>
+  <li>选择 “GM9Megascript”</li>
+  <li>选择 “Hax Options”</li>
+  <li>选择 “Un-install Hax”</li>
+  <li>出现提示时，按 “A” 键继续</li>
+  <li>按 “A” 键解锁SysNAND (lvl3) 写入权限，并根据屏幕上的提示依次按下按键</li>
+  <li>按 “A” 键继续</li>
+  <li>按下 “B” 键返回到主菜单</li>
+  <li>选择 “Exit”</li>
+  <li>如果提示重新锁定写入权限，按下 “A” 键来确认</li>
+  <li>按 “Start” 键重启你的主机</li>
+</ol>
+
+<hr />
+
+<p class="notice--success">所有自制固件都已经被卸载了。</p>
+
+<p class="notice--info">你可以将<strong>除了</strong> “Nintendo 3DS” 和 “DCIM” 还有 “private” 以外的文件、文件夹从 SD 卡根目录删除。</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://github.com/hacks-guide/Guide_3DS" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+<!--
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+    </ul>
+  -->
+</div>
+
+<!-- custom footer, guide specific -->
+
+
+
+<div class="page__footer-copyright">&copy; 2023 Nintendo Homebrew. - <a href="site-navigation">网站导航</a> - <a href="privacy-policy">隐私政策</a> <!-- Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.--></div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+<!-- for guide purposes all caching is removed and is separately built. -->
+
+
+
+
+
+
+
+
+  </body>
+</html>

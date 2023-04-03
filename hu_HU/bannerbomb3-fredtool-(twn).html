@@ -1,0 +1,753 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<!-- for guide purposes all caching is removed and is separately built. -->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>BannerBomb3 + Fredtool (TWN) - 3DS Hacks Guide</title>
+<meta name="description" content="A complete guide to 3DS custom firmware">
+
+
+  <meta name="author" content="Nintendo Homebrew">
+  
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="3DS Hacks Guide">
+<meta property="og:title" content="BannerBomb3 + Fredtool (TWN)">
+<meta property="og:url" content="https://3ds.hacks.guide/hu_HU/bannerbomb3-fredtool-(twn).html">
+
+
+  <meta property="og:description" content="A complete guide to 3DS custom firmware">
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://3ds.hacks.guide/hu_HU/bannerbomb3-fredtool-(twn).html">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Nintendo Homebrew",
+      "url": "https://3ds.hacks.guide/"
+    
+  }
+</script>
+
+
+  <meta name="google-site-verification" content="jVXoPK_-qzKJp4SScnZYpOIX3yDXfGnAoTBJYixUOwg" />
+
+
+  <meta name="msvalidate.01" content="F3532011519E308583A0A2CAF2DD69E8">
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="3DS Hacks Guide Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=PYEmwKvQAx">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png?v=PYEmwKvQAx" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-194x194.png?v=PYEmwKvQAx" sizes="194x194">
+<link rel="icon" type="image/png" href="/images/android-chrome-192x192.png?v=PYEmwKvQAx" sizes="192x192">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png?v=PYEmwKvQAx" sizes="16x16">
+<link rel="manifest" href="/images/manifest.json?v=PYEmwKvQAx">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg?v=PYEmwKvQAx" color="#2E3440">
+<link rel="shortcut icon" href="/images/favicon.ico?v=PYEmwKvQAx">
+<meta name="apple-mobile-web-app-title" content="Guide">
+<meta name="application-name" content="Guide">
+<meta name="msapplication-TileColor" content="#2E3440">
+<meta name="msapplication-TileImage" content="/images/mstile-144x144.png?v=PYEmwKvQAx">
+<meta name="msapplication-config" content="/images/browserconfig.xml?v=PYEmwKvQAx">
+<meta name="theme-color" content="#2E3440">
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.css" integrity="sha512-LQ97camar/lOliT/MqjcQs5kWgy6Qz/cCRzzRzUCfv0fotsCTC9ZHXaPQmJV8Xu/PVALfJZ7BDezl5lW3/qBxg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js" integrity="sha512-yXXqOFjdjHNH1GND+1EO0jbvvebABpzGKD66djnUfiKlYME5HGMUJHoCaeE4D5PTG2YsSJf6dwqyUUvQvS0vaA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#2e3440"
+    },
+    "button": {
+      "background": "#60818f"
+    }
+  },
+  "theme": "edgeless",
+  "position": "top",
+  "static": true,
+  "content": {
+    "message": "A weboldal "sütiket" használ, hogy nyomon tudd követni a haladásod az oldalsó menüben, és hogy jobbá tegye az oldalt."
+  }
+})});
+</script>
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <!-- <a class="site-title" href="/">
+          3DS Hacks Guide
+          
+        </a>
+      -->
+        <ul class="visible-links">
+          <!-- modified to use multilang, guide-specific -->
+          
+          
+          
+          
+          
+          
+            
+              <li class="masthead__menu-item masthead__menu-item--lg"><a href="/hu_HU/">Főoldal</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/hu_HU/faq">GYIK</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/hu_HU/troubleshooting">Hibaelhárítás</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/hu_HU/checking-for-cfw">CFW ellenőrzése</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/hu_HU/godmode9-usage">GodMode9 használata</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/hu_HU/contribute">Közreműködés</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/hu_HU/region-changing">Régió módosítás</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/hu_HU/uninstall-cfw">CFW eltávolítása</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/hu_HU/credits">Készítők</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/hu_HU/site-navigation">Oldaltérkép</a></li>
+            
+          
+          <!-- end guide specific -->
+        </ul>
+        
+        <!-- completely redo hidden links for multilang, guide-specific -->
+        <ul class="hidden-links links-menu hidden"></ul>
+        <ul class="hidden-links lang-menu hidden">
+          
+          
+          
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/bannerbomb3-fredtool-(twn).html">English</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/es_ES/bannerbomb3-fredtool-(twn).html">Español</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/de_DE/bannerbomb3-fredtool-(twn).html">Deutsch</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/fr_FR/bannerbomb3-fredtool-(twn).html">Français</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/it_IT/bannerbomb3-fredtool-(twn).html">Italiano</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/nl_NL/bannerbomb3-fredtool-(twn).html">Nederlands</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/pt_BR/bannerbomb3-fredtool-(twn).html">Português do Brasil</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/pt_PT/bannerbomb3-fredtool-(twn).html">Português (Portugal)</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ru_RU/bannerbomb3-fredtool-(twn).html">Русский</a></li> -->
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/zh_CN/bannerbomb3-fredtool-(twn).html">简体中文</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/zh_TW/bannerbomb3-fredtool-(twn).html">繁體中文</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/pl_PL/bannerbomb3-fredtool-(twn).html">Polski</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/tr_TR/bannerbomb3-fredtool-(twn).html">Türkçe</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/vi_VN/bannerbomb3-fredtool-(twn).html">Tiếng Việt</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ca_ES/bannerbomb3-fredtool-(twn).html">Català</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/el_GR/bannerbomb3-fredtool-(twn).html">Ελληνικά</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/he_IL/bannerbomb3-fredtool-(twn).html">עברית‎</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/sv_SE/bannerbomb3-fredtool-(twn).html">Svenska</a></li> -->
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ko_KR/bannerbomb3-fredtool-(twn).html">한국어</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/no_NO/bannerbomb3-fredtool-(twn).html">Norsk</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ja_JP/bannerbomb3-fredtool-(twn).html">日本語</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ar_SA/bannerbomb3-fredtool-(twn).html">اللغة العربية</a></li> -->
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/hu_HU/bannerbomb3-fredtool-(twn).html">Magyar</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ro_RO/bannerbomb3-fredtool-(twn).html">Română</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/sr_SP/bannerbomb3-fredtool-(twn).html">Српски</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/af_ZA/bannerbomb3-fredtool-(twn).html">Afrikaans</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ms_MY/bannerbomb3-fredtool-(twn).html">Bahasa Melayu</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/fi_FI/bannerbomb3-fredtool-(twn).html">Suomi</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/da_DK/bannerbomb3-fredtool-(twn).html">Dansk</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/uk_UA/bannerbomb3-fredtool-(twn).html">Українська</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/cs_CZ/bannerbomb3-fredtool-(twn).html">Čeština</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/en_PT/bannerbomb3-fredtool-(twn).html">Pirate English</a></li> -->
+        </ul>
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <button class="greedy-nav__toggle_lang"><div class="langicon"><i class="fa fa-language fa-lg" aria-hidden="true"></i></div></button>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  <!-- 
+  <div class="sidebar sticky">
+  
+  
+    
+    
+  
+  </div>
+
+-->
+
+
+
+<div class="sidebar sticky" style="display: none;">
+  
+
+
+
+
+
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    <li>
+      <span class="nav__sub-title">Előrehaladás</span>
+      <ol>
+        
+          
+            <li style="display: none;" data-name="home"><a href='/hu_HU/'>Főoldal</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="key-information"><a href='/hu_HU/key-information'>Alapvető információk</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="get-started"><a href='/hu_HU/get-started'>Kezdeti lépések</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="ntrboot"><a href='/hu_HU/ntrboot'>ntrboot</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer"><a href='/hu_HU/seedminer'>Seedminer</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(twn)"><a href='/hu_HU/seedminer-(twn)'>Seedminer (TWN)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="bannerbomb3"><a href='/hu_HU/bannerbomb3'>BannerBomb3</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="multiple-options"><i>(Több lehetőség)</i></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(3ds-single-system)"><a href='/hu_HU/flashing-ntrboot-(3ds-single-system)'>Ntrboot flashelése (egy 3DS rendszer)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(3ds-multi-system)"><a href='/hu_HU/flashing-ntrboot-(3ds-multi-system)'>Ntrboot flashelése (több 3DS rendszer)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(dsi)"><a href='/hu_HU/flashing-ntrboot-(dsi)'>Ntrboot flashelése (DSi)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(nds)"><a href='/hu_HU/flashing-ntrboot-(nds)'>Ntrboot flashelése (NDS)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(pichaxx)"><a href='/hu_HU/homebrew-launcher-(pichaxx)'>Homebrew Launcher (PicHaxx)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="bannerbomb3-fredtool-(twn)"><a href='/hu_HU/bannerbomb3-fredtool-(twn)'>BannerBomb3 + Fredtool (TWN)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(hardmod)"><a href='/hu_HU/installing-boot9strap-(hardmod)'>Boot9strap telepítése (Hardmod)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(hbl-usm)"><a href='/hu_HU/installing-boot9strap-(hbl-usm)'>Boot9strap telepítése (HBL-USM)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(ntrboot)"><a href='/hu_HU/installing-boot9strap-(ntrboot)'>Boot9strap telepítése (ntrboot)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(soundhax)"><a href='/hu_HU/installing-boot9strap-(soundhax)'>Boot9strap telepítése (Soundhax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(ssloth-browser)"><a href='/hu_HU/installing-boot9strap-(ssloth-browser)'>Boot9strap telepítése (SSLoth-Browser)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(fredtool)"><a href='/hu_HU/installing-boot9strap-(fredtool)'>Boot9strap telepítése (Fredtool)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(usm)"><a href='/hu_HU/installing-boot9strap-(usm)'>Boot9strap telepítése (USM)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(kartdlphax)"><a href='/hu_HU/installing-boot9strap-(kartdlphax)'>Boot9strap telepítése (kartdlphax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(hbl-usm)"><a href='/hu_HU/installing-boot9strap-(hbl-usm)'>Boot9strap telepítése (HBL-USM)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="finalizing-setup"><a href='/hu_HU/finalizing-setup'>Telepítés véglegesítése</a></li>
+          
+        
+      </ol>
+    </li>
+  </ul>
+</nav>
+</div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="BannerBomb3 + Fredtool (TWN)">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">BannerBomb3 + Fredtool (TWN)
+</h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+
+        <hr>
+
+        
+        
+
+        
+          
+          <div class ="notice"><b>Ha segítségre van szükséged (angol nyelven), keresd fel a <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew-t Discord-on</a>.</b></div>
+        
+          
+          <div class ="notice"><b>Amennyiben hasznosnak véled ezt az útmutatót, elfogadunk <a href="contribute#donations">adományokat</a>.</b></div>
+        
+
+        <hr>
+
+        <aside class="sidebar__right">
+<nav class="toc">
+    <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Tartalomjegyzék</h4></header>
+<ul class="toc__menu" id="markdown-toc">
+  <li><a href="#fontos-tudnivalók" id="markdown-toc-fontos-tudnivalók">Fontos tudnivalók</a></li>
+  <li><a href="#amire-szükséged-lesz" id="markdown-toc-amire-szükséged-lesz">Amire szükséged lesz</a>    <ul>
+      <li><a href="#i-rész---cfw-ellenőrzés" id="markdown-toc-i-rész---cfw-ellenőrzés">I. rész - CFW ellenőrzés</a></li>
+      <li><a href="#ii-rész---előkészületek" id="markdown-toc-ii-rész---előkészületek">II. rész - Előkészületek</a></li>
+      <li><a href="#iii-rész---bannerbomb3" id="markdown-toc-iii-rész---bannerbomb3">III. rész - BannerBomb3</a></li>
+      <li><a href="#iv-rész---fredtool" id="markdown-toc-iv-rész---fredtool">IV. rész - Fredtool</a></li>
+      <li><a href="#v-rész---flipnote-exploit" id="markdown-toc-v-rész---flipnote-exploit">V. rész - Flipnote Exploit</a></li>
+      <li><a href="#vi-rész---luma3ds-beállítás" id="markdown-toc-vi-rész---luma3ds-beállítás">VI. rész - Luma3DS beállítás</a></li>
+      <li><a href="#vii-rész---a-ds-download-play-visszaállítása" id="markdown-toc-vii-rész---a-ds-download-play-visszaállítása">VII. rész - A DS Download Play visszaállítása</a></li>
+    </ul>
+  </li>
+  <li><a href="#tovább-a-telepítés-véglegesítésére" id="markdown-toc-tovább-a-telepítés-véglegesítésére">Tovább a telepítés véglegesítésére</a></li>
+</ul>
+
+  </nav>
+</aside>
+
+<h3 id="fontos-tudnivalók">Fontos tudnivalók</h3>
+
+<p>Ahhoz, hogy a rendszerből kinyerjük a DSiWare adatokat, egy hibát használunk ki a DSiWare adat kezelési ablakában, a rendszer beállításokban.</p>
+
+<p>Hogy ezt elérjük, szükségünk van a rendszer titkosítási kulcsára (movable.sed), hogy újra építsünk egy DSiWare mentést, aminek segítségével ki tudjuk nyerni a DSi Internet beállítások alkalmazást az SD kártyára.</p>
+
+<p>Ha van egy DSiWare mentésed, egy exploitolható DSiWare cím injektálható a DS Download Play-be, amivel telepíthető az egyéni firmware.</p>
+
+<p class="notice--warning">Ezek a lépések CSAK tajvani konzolokhoz jók (amit T betű jelez a rendszer verzió mögött, mint például 11.16.0-39<strong>T</strong>)! Ha a konzolod más régióból van <a href="bannerbomb3">válaszd a másik metódust</a>.</p>
+
+<h3 id="amire-szükséged-lesz">Amire szükséged lesz</h3>
+
+<ul>
+  <li>A <code class="language-plaintext highlighter-rouge">movable.sed</code> fájlodra a <a href="seedminer">Seedminer</a>-ből</li>
+  <li>A <a href="https://github.com/LumaTeam/Luma3DS/releases/latest">Luma3DS</a> legújabb kiadása (a Luma3DS <code class="language-plaintext highlighter-rouge">.zip</code> fájl)</li>
+  <li>A [b9stool] legújabb kiadása (https://github.com/zoogie/b9sTool/releases/latest) (<code class="language-plaintext highlighter-rouge">boot.nds</code>)</li>
+  <li>A [Frogminer_save] legújabb kiadása (https://github.com/zoogie/Frogminer/releases/latest) (<code class="language-plaintext highlighter-rouge">Frogminer_save.zip</code>)</li>
+</ul>
+
+<h4 id="i-rész---cfw-ellenőrzés">I. rész - CFW ellenőrzés</h4>
+
+<p>További biztonsági lépésként további ellenőrzést végzünk egyedi firmware-re. Ez azért szükséges, mert ha ezt a metódust használjuk már telepített egyedi firmware esetén, meg van a kockázata, hogy brickeljük a konzolt (ami használhatatlanna teszi helyreállítási metódusok nélkül, mint az <a href="ntrboot">ntrboot</a>).</p>
+
+<ol>
+  <li>Kapcsold ki a készüléked</li>
+  <li>Nyomd le és tartsd nyomva (Select) gombot</li>
+  <li>Kapcsold be az eszközöd, miközben nyomva tartod a (Select) gombot</li>
+  <li>Ha az ellenőrzés sikeres volt, be fogsz bootolni a HOME Menübe és végrehajthatod ezt az útmutatót</li>
+  <li>Kapcsold ki a készüléked</li>
+</ol>
+
+<p class="notice--danger">Ha a konfigurációs menüt látod vagy a konzolod azonnal kikapcsol, már van CFW-d és az útmutató folyatása BRICKELHETI az eszközödet! Kövesd a <a href="checking-for-cfw">CFW ellenőrzését</a> a már meglévő CFW-d frissítéséhez.</p>
+
+<h4 id="ii-rész---előkészületek">II. rész - Előkészületek</h4>
+
+<ol>
+  <li>Kapcsold ki a készüléked</li>
+  <li>Helyezd az SD kártyád a számítógépbe</li>
+  <li>Másold át a <code class="language-plaintext highlighter-rouge">boot.firm</code> és <code class="language-plaintext highlighter-rouge">boot.3dsx</code> fájlt a Luma3DS <code class="language-plaintext highlighter-rouge">.zip</code>-ből az SD kártya gyökerébe
+    <ul>
+      <li>Az SD kártya gyökere a kezdőkönyvtárt jelenti az SD kártyán, ahol látható a Nintendo 3DS könyvtár, de nem vagyunk benne</li>
+    </ul>
+  </li>
+  <li>Másold a <code class="language-plaintext highlighter-rouge">boot.nds</code> (B9STool) fájlt az SD kártyád gyökerébe</li>
+  <li>Másold át a <code class="language-plaintext highlighter-rouge">private</code> mappát a Frogminer_save <code class="language-plaintext highlighter-rouge">.zip</code>-ből az SD kártyád gyökerébe</li>
+  <li>Maradjon az SD kártya a számítógépedben - további teendő lesznek még vele a következő fejezetben</li>
+</ol>
+
+<p class="notice--info"><img src="https://3ds.hacks.guide/images/screenshots/fredtool/fredtool-twn-root-layout.png" alt="" /></p>
+
+<h4 id="iii-rész---bannerbomb3">III. rész - BannerBomb3</h4>
+
+<ol>
+  <li>Nyisd meg a <a href="https://jenkins.nelthorya.net/job/DSIHaxInjector%20v2/build?delay=0sec">DSIHaxInjector V2</a> oldalt a számítógépeden</li>
+  <li>A “Username” mező alatt adj meg egy tetszőleges alfanumerikus nevet (nem lehet benne szóköz vagy speciális karakter)</li>
+  <li>A “MovableSed” mező alatt töltsd fel a <code class="language-plaintext highlighter-rouge">movable.sed</code> fájlod a “Browse…” opció használatával</li>
+  <li>Kattints a “Build”-re
+    <ul>
+      <li>Várj néhány másodpercet a build folyamat befejezésére</li>
+    </ul>
+  </li>
+  <li>A Build History szekcióban a bal oldalon gépeld be a felhasználónevet (Username) a “Filter Builds” mezőbe</li>
+  <li>Kattints az első keresési találatra
+    <ul>
+      <li>Ennek kell a legutolsó időbélyeggel rendelkeznie</li>
+    </ul>
+  </li>
+  <li>Kattints az “output_(name).zip” linkre</li>
+  <li>Navigálj a <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID0&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID1&gt;</code> mappába az SD kártyádon
+    <ul>
+      <li>Az <code class="language-plaintext highlighter-rouge">&lt;ID0&gt;</code> ugyanaz, mint amit a <a href="seedminer">Seedminer</a>-nél használtál</li>
+      <li>Az <code class="language-plaintext highlighter-rouge">&lt;ID1&gt;</code> egy 32 karakter hosszú nevű mappa az <code class="language-plaintext highlighter-rouge">&lt;ID0&gt;</code> mappában</li>
+    </ul>
+  </li>
+  <li>Hozz létre egy <code class="language-plaintext highlighter-rouge">Nintendo DSiWare</code> nevű mappát az <code class="language-plaintext highlighter-rouge">&lt;ID1&gt;</code> mappában
+    <ul>
+      <li>Ha már van mappád <em>és</em> van benne DSiWare mentés fájl (<code class="language-plaintext highlighter-rouge">&lt;8-character-id&gt;.bin</code>), másold őket a számítógépedre és töröld őket az SD kártyáról</li>
+    </ul>
+  </li>
+  <li>Nyisd meg az output_(name) <code class="language-plaintext highlighter-rouge">.zip</code> fájlt és navigálj ide: <code class="language-plaintext highlighter-rouge">China_Taiwan</code> -&gt; <code class="language-plaintext highlighter-rouge">output_setup</code></li>
+  <li>Másold mind a hat <code class="language-plaintext highlighter-rouge">.bin</code> fájlt a <code class="language-plaintext highlighter-rouge">Nintendo DSiWare</code> mappába</li>
+  <li>Tedd vissza az SD kártyád a készülékedbe</li>
+  <li>Kapcsold be a készülékedet</li>
+  <li>Lépj be a System Settings-be a készülékeden</li>
+  <li>Navigálj ide: <code class="language-plaintext highlighter-rouge">Data Management</code> -&gt; <code class="language-plaintext highlighter-rouge">DSiWare</code> -&gt; <code class="language-plaintext highlighter-rouge">SD Card</code> -&gt; (2. oldal)</li>
+  <li>Jegyezd fel milyen szám találhat a DSiWare címben a második oldalon (egy 1 és 6 közötti szám kell legyen)</li>
+  <li>Kapcsold ki a készüléked</li>
+  <li>Helyezd az SD kártyád a számítógépbe</li>
+  <li>Navigálj a <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID0&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID1&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">Nintendo DSiWare</code> mappába az SD kártyán</li>
+  <li>Nyisd meg az output_(name) <code class="language-plaintext highlighter-rouge">.zip</code> fájlt és navigálj ide: <code class="language-plaintext highlighter-rouge">China_Taiwan</code> -&gt; <code class="language-plaintext highlighter-rouge">output_setup</code> -&gt; <code class="language-plaintext highlighter-rouge">output_hax</code></li>
+  <li>Másold a <code class="language-plaintext highlighter-rouge">.bin</code> fájlt aminek a száma látható volt a második oldalán a DSiWare Management menünek a <code class="language-plaintext highlighter-rouge">Nintendo DSiWare</code> mappába és írd felül, hogyha kérdezi</li>
+  <li>Kapcsold be a készülékedet</li>
+  <li>Lépj be a System Settings-be a készülékeden</li>
+  <li>Navigálj ide: <code class="language-plaintext highlighter-rouge">Data Management</code> -&gt; <code class="language-plaintext highlighter-rouge">DSiWare</code> -&gt; <code class="language-plaintext highlighter-rouge">SD Card</code></li>
+  <li>Várj egy picit
+    <ul>
+      <li>A következőknek kell történnie ebben a sorrendben: folyamatjelző, egy rövid fagyás, az alső képernyő lilára vált, a zene megáll, majd az eszköz egy hibaüzenetet jelenít meg és újraindul</li>
+      <li>Ha nem látod a lila képernyőt, valami hiba történt</li>
+    </ul>
+  </li>
+  <li>Most egy <code class="language-plaintext highlighter-rouge">42383821.bin</code> fájlnak kell lennie az SD kártya gyökerében</li>
+  <li>Navigálj a <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID0&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID1&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">Nintendo DSiWare</code> mappába az SD kártyán</li>
+  <li>Töröld az összes <code class="language-plaintext highlighter-rouge">.bin</code> fájlt a <code class="language-plaintext highlighter-rouge">Nintendo DSiWare</code> mappából</li>
+</ol>
+
+<h4 id="iv-rész---fredtool">IV. rész - Fredtool</h4>
+
+<ol>
+  <li>Nyisd meg a <a href="https://jenkins.nelthorya.net/job/DSIHaxInjector_new/build?delay=0sec/">DSIHaxInjector_new</a> oldalt a számítógépeden</li>
+  <li>A “Username” mező alatt adj meg egy tetszőleges alfanumerikus nevet (nem lehet benne szóköz vagy speciális karakter)
+    <ul>
+      <li>Lehet, hogy szeretnél más nevet megadni, hogy megkülönböztesd a BannerBomb3 kimenetétől</li>
+    </ul>
+  </li>
+  <li>A “DSiBin” mező alatt töltsd fel a <code class="language-plaintext highlighter-rouge">42383821.bin</code> fájlod az első “Browse…” opció használatával</li>
+  <li>A “MovableSed” mező alatt töltsd fel a <code class="language-plaintext highlighter-rouge">movable.sed</code> fájlod a második “Browse…” opció használatával</li>
+  <li>Az “InjectionTarget” mező alatt válaszd ki az injection target-et <code class="language-plaintext highlighter-rouge">DSdownloadplay</code>-re (NEM memorypit)</li>
+  <li>Kattints a “Build”-re
+    <ul>
+      <li>Várj néhány másodpercet a build folyamat befejezésére</li>
+    </ul>
+  </li>
+  <li>A Build History szekcióban a bal oldalon gépeld be a felhasználónevet (Username) a “Filter Builds” mezőbe</li>
+  <li>Kattints az első keresési találatra
+    <ul>
+      <li>Ennek kell a legutolsó időbélyeggel rendelkeznie</li>
+    </ul>
+  </li>
+  <li>Kattints az “output_(name).zip” linkre</li>
+  <li>Navigálj a <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID0&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID1&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">Nintendo DSiWare</code> mappába az SD kártyán</li>
+  <li>Másold a <code class="language-plaintext highlighter-rouge">484E4441.bin</code> fájlt az <code class="language-plaintext highlighter-rouge">hax</code> mappájából a letöltött DSiWare csomagból (output_(name).zip) a <code class="language-plaintext highlighter-rouge">Nintendo DSiWare</code> mappába</li>
+  <li>Tedd vissza az SD kártyád a készülékedbe</li>
+  <li>Kapcsold be a készülékedet</li>
+  <li>Lépj be a System Settings-be a készülékeden</li>
+  <li>Navigálj ide: <code class="language-plaintext highlighter-rouge">Data Management</code> -&gt; <code class="language-plaintext highlighter-rouge">DSiWare</code></li>
+  <li>Az “SD Card” szekcióban válaszd a “Haxxxxxxxxx!” címet</li>
+  <li>Válaszd a “Copy”-t, majd az “OK”-t</li>
+  <li>Lépj ki a System Settings-ből</li>
+  <li>Idítsd el a Download Play-t az eszközödön (a narancssárga ikon egy 3DS-el)</li>
+  <li>Válaszd “Nintendo DS”-t</li>
+  <li>Ha az exploit sikeres volt, a 3DS-ednek ezt követően be kell töltenie a JPN verzióját a Flipnote Studio-nak</li>
+</ol>
+
+<h4 id="v-rész---flipnote-exploit">V. rész - Flipnote Exploit</h4>
+
+<p class="notice--info">Ha inkább egy vizuális útmutatót szeretnél ehhez a fejezethez, <a href="https://zoogie.github.io/web/flipnote_directions/">itt</a> elérhető egy.</p>
+
+<p>Ebben a fejezetben végrehajtasz egy specifikus lépés sorozatot a Flipnote Studio-val, ami ha helyesen került végrehajtásra, elindítja a boot9strap (egyedi firmware) telepítőt.</p>
+
+<ol>
+  <li>Fejezd be a kezdeti telepítését az elindított játéknak, amíg el nem éri a fő menüt
+    <ul>
+      <li>Válaszd a bal opciót, ha kérdezi a telepítési folyamat során</li>
+    </ul>
+  </li>
+  <li>Az érintőképernyőt használva válaszd ki a bal nagy dobozt, majd válaszd a dobozt az SD kártya ikonnal</li>
+  <li>Ha a menü betöltött válaszd az arc ikont utána, pedig a jobb alsó ikont a folytatáshoz</li>
+  <li>Nyomj (X)-et vagy (Fel)-t a D-Pad-on, attól függően mi jelenik meg a képernyőn</li>
+  <li>Válaszd a második gombot a film-szalag ikonnal</li>
+  <li>Görgess jobbra, amíg a 3/3 filmtekercs kiválasztásra kerül</li>
+  <li>Nyomd meg a harmadik dobozt benne az “A” betűvel</li>
+  <li>Görgess balra, amíg a 1/3 filmtekercs kiválasztásra kerül</li>
+  <li>Nyomd meg a negyedik dobozt benne az “A” betűvel</li>
+  <li>Ha az exploit sikeres volt, a készülékednek ezt követően be kell töltenie a b9sTool-t</li>
+  <li>A D-Pad-dal menj az “Install boot9strap” opcióra
+    <ul>
+      <li>Ha kihagytad ez a lépést a rendszer a HOME Menübe kerülsz a boot9strap telepítése helyett, és meg kell nyitnod a DS Download Play-t és elölről kell kezdened a ennek a résznek az elejétől</li>
+    </ul>
+  </li>
+  <li>Nyomj (A)-t majd ezt követően START-ot és SELECT-et egyszerre a folyamat elkezdéséhez</li>
+  <li>Ha végzett és az alsó képernyő azt mondja “done.” lépj ki a b9sTool-ból, majd kapcsold ki eszközöd
+    <ul>
+      <li>Elképzelhető, hogy kényszerítened kell a leállást a bekapcsológomb lenyomva tartásával</li>
+      <li>Ha a készüléked kikapcsol amikor bekapcsolod, bizonyosodj meg róla, hogy átmásoltad-e a <code class="language-plaintext highlighter-rouge">boot.firm</code> fájlt a Luma3DS <code class="language-plaintext highlighter-rouge">.zip</code> fájlból az SD kártya gyökerébe</li>
+      <li>Ha a Luma konfigurációs képernyőjét látod, kapcsold ki az eszközöd, majd folytasd a következő résszel</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="vi-rész---luma3ds-beállítás">VI. rész - Luma3DS beállítás</h4>
+
+<ol>
+  <li>Nyomd le és tartsd nyomva a (Select) gombot, és a (Select) nyomva tartása mellett kapcsold be az eszközödet. Ez el fogja indítani a Luma3DS beállításokat
+    <ul>
+      <li>A Luma3DS konfigurációs menü a beállítások a Luma3DS egyedi firmverhez. Sok ezek közül a beállítások közül hasznos az egyedivé tételhez vagy a debuggoláshoz</li>
+      <li>Az útmutató céljának megfeleléshez ezen beállítások alapértelmezett állapoton lesznek hagyva
+  +Ha a HOME Menübe bootolsz, <a href="https://github.com/zoogie/b9sTool/blob/master/TROUBLESHOOTING.md">kövesd ezt a hibaelhárítási útmutatót</a></li>
+    </ul>
+  </li>
+  <li>Mentéshez és újraindításhoz nyomd meg a (Start) gombot</li>
+</ol>
+
+<h4 id="vii-rész---a-ds-download-play-visszaállítása">VII. rész - A DS Download Play visszaállítása</h4>
+
+<ol>
+  <li>Navigálj a <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID0&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID1&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">Nintendo DSiWare</code> mappába az SD kártyán</li>
+  <li>Másold a <code class="language-plaintext highlighter-rouge">484E4441.bin</code> fájlt az <code class="language-plaintext highlighter-rouge">clean</code> mappájából a letöltött DSiWare csomagból (output_(name).zip) a <code class="language-plaintext highlighter-rouge">Nintendo DSiWare</code> mappába</li>
+  <li>Tedd vissza az SD kártyád a készülékedbe</li>
+  <li>Kapcsold be a készülékedet</li>
+  <li>Lépj be a System Settings-be a készülékeden</li>
+  <li>Navigálj ide: <code class="language-plaintext highlighter-rouge">Data Management</code> -&gt; <code class="language-plaintext highlighter-rouge">DSiWare</code></li>
+  <li>Az “SD Card” szekcióban válaszd a “Haxxxxxxxxx!” címet</li>
+  <li>Válaszd a “Copy”-t, majd az “OK”-t</li>
+  <li>Lépj ki a System Settings-ből</li>
+  <li>Kapcsold ki a készüléked</li>
+</ol>
+
+<hr />
+
+<h3 class="notice--primary" id="tovább-a-telepítés-véglegesítésére">Tovább a <a href="finalizing-setup">telepítés véglegesítésére</a></h3>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://github.com/hacks-guide/Guide_3DS" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+<!--
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+    </ul>
+  -->
+</div>
+
+<!-- custom footer, guide specific -->
+
+
+
+<div class="page__footer-copyright">&copy; 2023 Nintendo Homebrew. - <a href="site-navigation">Oldaltérkép</a> - <a href="privacy-policy">Adatvédelmi Irányelv</a> <!-- Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.--></div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+<!-- for guide purposes all caching is removed and is separately built. -->
+
+
+
+
+
+
+
+
+  </body>
+</html>
