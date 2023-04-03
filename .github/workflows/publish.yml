@@ -31,6 +31,14 @@ jobs:
         # Build the site using Jekyll
         run: bundle exec jekyll build
 
+        # Copy (or touch) other needed files
+        # .nojekyll: to tell GH Pages to not rebuild (lol)
+        # CNAME: to tell GH Pages about the domain name
+      - name: Post-Jekyll build copy files
+        run: |
+          cp CNAME _site
+          touch _site/.nojekyll
+
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4.4.1
         with:
