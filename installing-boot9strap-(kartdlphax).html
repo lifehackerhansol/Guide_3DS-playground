@@ -330,6 +330,14 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="homebrew-launcher-(super-skaterhax)"><a href='/homebrew-launcher-(super-skaterhax)'>Homebrew Launcher (super-skaterhax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="dumping-movable-(nimhax)"><a href='/dumping-movable-(nimhax)'>Dumping Movable (nimhax)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="multiple-options"><i>(Multiple Options)</i></li>
           
         
@@ -347,10 +355,6 @@ window.cookieconsent.initialise({
         
           
             <li style="display: none;" data-name="flashing-ntrboot-(nds)"><a href='/flashing-ntrboot-(nds)'>Flashing ntrboot (NDS)</a></li>
-          
-        
-          
-            <li style="display: none;" data-name="homebrew-launcher-(pichaxx)"><a href='/homebrew-launcher-(pichaxx)'>Homebrew Launcher (PicHaxx)</a></li>
           
         
           
@@ -374,6 +378,10 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="installing-boot9strap-(safecerthax)"><a href='/installing-boot9strap-(safecerthax)'>Installing boot9strap (safecerthax)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="installing-boot9strap-(ssloth-browser)"><a href='/installing-boot9strap-(ssloth-browser)'>Installing boot9strap (SSLoth-Browser)</a></li>
           
         
@@ -390,7 +398,7 @@ window.cookieconsent.initialise({
           
         
           
-            <li style="display: none;" data-name="installing-boot9strap-(hbl-usm)"><a href='/installing-boot9strap-(hbl-usm)'>Installing boot9strap (HBL-USM)</a></li>
+            <li style="display: none;" data-name="installing-boot9strap-(frogtool)"><a href='/installing-boot9strap-(frogtool)'>Installing boot9strap (Frogtool)</a></li>
           
         
           
@@ -446,12 +454,13 @@ window.cookieconsent.initialise({
 <ul class="toc__menu" id="markdown-toc">
   <li><a href="#compatibility-notes" id="markdown-toc-compatibility-notes">Compatibility Notes</a></li>
   <li><a href="#what-you-need" id="markdown-toc-what-you-need">What You Need</a>    <ul>
-      <li><a href="#section-i---prep-work-source-3ds" id="markdown-toc-section-i---prep-work-source-3ds">Section I - Prep Work (source 3DS)</a></li>
-      <li><a href="#section-ii---prep-work-target-3ds" id="markdown-toc-section-ii---prep-work-target-3ds">Section II - Prep Work (target 3DS)</a></li>
-      <li><a href="#section-iii---kartdlphax" id="markdown-toc-section-iii---kartdlphax">Section III - kartdlphax</a></li>
-      <li><a href="#section-iv---unsafe_mode" id="markdown-toc-section-iv---unsafe_mode">Section IV - unSAFE_MODE</a></li>
-      <li><a href="#section-v---installing-boot9strap" id="markdown-toc-section-v---installing-boot9strap">Section V - Installing boot9strap</a></li>
-      <li><a href="#section-vi---restoring-wifi-configuration-profiles" id="markdown-toc-section-vi---restoring-wifi-configuration-profiles">Section VI - Restoring WiFi Configuration Profiles</a></li>
+      <li><a href="#section-i---hardware-button-check-target-3ds" id="markdown-toc-section-i---hardware-button-check-target-3ds">Section I - Hardware Button Check (target 3DS)</a></li>
+      <li><a href="#section-ii---prep-work-source-3ds" id="markdown-toc-section-ii---prep-work-source-3ds">Section II - Prep Work (source 3DS)</a></li>
+      <li><a href="#section-iii---prep-work-target-3ds" id="markdown-toc-section-iii---prep-work-target-3ds">Section III - Prep Work (target 3DS)</a></li>
+      <li><a href="#section-iv---kartdlphax" id="markdown-toc-section-iv---kartdlphax">Section IV - kartdlphax</a></li>
+      <li><a href="#section-v---unsafe_mode" id="markdown-toc-section-v---unsafe_mode">Section V - unSAFE_MODE</a></li>
+      <li><a href="#section-vi---installing-boot9strap" id="markdown-toc-section-vi---installing-boot9strap">Section VI - Installing boot9strap</a></li>
+      <li><a href="#section-vii---restoring-wifi-configuration-profiles" id="markdown-toc-section-vii---restoring-wifi-configuration-profiles">Section VII - Restoring WiFi Configuration Profiles</a></li>
     </ul>
   </li>
   <li><a href="#continue-to-finalizing-setup" id="markdown-toc-continue-to-finalizing-setup">Continue to Finalizing Setup</a></li>
@@ -489,15 +498,13 @@ window.cookieconsent.initialise({
   <li>An SD card for both devices</li>
 </ul>
 
-<p class="notice--warning">If the (Right/Left Shoulder), (D-Pad Up), or (A) buttons on the <strong>target 3DS</strong> do not work, you will not be able to follow these instructions. For further assistance with this matter, join <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew on Discord</a> and ask, in English, for help.</p>
-
 <h3 id="what-you-need">What You Need</h3>
 
 <p>On the <strong>source 3DS</strong> (the 3DS with custom firmware):</p>
 
 <ul>
   <li>The latest release of <a href="https://github.com/PabloMK7/kartdlphax/releases/latest">kartdlphax</a> (<code class="language-plaintext highlighter-rouge">plugin.3gx</code>)</li>
-  <li>The latest release of <a href="https://github.com/Nanquitas/Luma3DS/releases/latest">Luma3DS 3GX Loader Edition</a> (<code class="language-plaintext highlighter-rouge">boot.firm</code>)</li>
+  <li>The latest release of <a href="https://github.com/PabloMK7/Luma3DS_3GX/releases/latest">Luma3DS 3GX Loader Edition</a> (<code class="language-plaintext highlighter-rouge">boot.firm</code>)</li>
 </ul>
 
 <p>On the <strong>target 3DS</strong> (the 3DS that you are trying to modify):</p>
@@ -509,7 +516,25 @@ window.cookieconsent.initialise({
   <li>The latest release of <a href="https://github.com/zoogie/unSAFE_MODE/releases/latest">unSAFE_MODE</a> (the RELEASE <code class="language-plaintext highlighter-rouge">.zip</code> file)</li>
 </ul>
 
-<h4 id="section-i---prep-work-source-3ds">Section I - Prep Work (source 3DS)</h4>
+<h4 id="section-i---hardware-button-check-target-3ds">Section I - Hardware Button Check (target 3DS)</h4>
+
+<ol>
+  <li>With your device still powered off, hold the following buttons: (Left Shoulder) + (Right Shoulder) + (D-Pad Up) + (A), and while holding these buttons together, power on your device
+    <ul>
+      <li>Keep holding the buttons until the device boots to a system update screen (this is Safe Mode)</li>
+    </ul>
+  </li>
+  <li>If you see the system update screen, press Cancel
+    <ul>
+      <li>Your device will power off</li>
+      <li>If the device boots to the HOME Menu, just power off your device</li>
+    </ul>
+  </li>
+</ol>
+
+<p class="notice--warning">If you do not boot into Safe Mode, the system update menu after multiple attempts, you cannot follow this method. If this is the case, join <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew on Discord</a> and ask, in English, for help.</p>
+
+<h4 id="section-ii---prep-work-source-3ds">Section II - Prep Work (source 3DS)</h4>
 
 <p>In this section, you will set up your source 3DS (the 3DS with custom firmware) for delivery of the exploit data to the target 3DS.</p>
 
@@ -531,7 +556,7 @@ window.cookieconsent.initialise({
   <li>Eject the SD card and put it in the <strong>source 3DS</strong></li>
 </ol>
 
-<h4 id="section-ii---prep-work-target-3ds">Section II - Prep Work (target 3DS)</h4>
+<h4 id="section-iii---prep-work-target-3ds">Section III - Prep Work (target 3DS)</h4>
 
 <p>In this section, you will copy the files needed to trigger the unSAFE_MODE exploit onto your target 3DS (the 3DS that you are trying to modify)’s SD card.</p>
 
@@ -547,7 +572,7 @@ window.cookieconsent.initialise({
   <li>Eject the SD card and put it in the <strong>target 3DS</strong></li>
 </ol>
 
-<h4 id="section-iii---kartdlphax">Section III - kartdlphax</h4>
+<h4 id="section-iv---kartdlphax">Section IV - kartdlphax</h4>
 
 <p>In this section, you will use Download Play to transfer the exploit data from the source 3DS to the target 3DS, which can be used to overwrite your Wi-Fi slots with hacked data. Your Wi-Fi connection settings will be temporarily overwritten while the exploit is active.</p>
 
@@ -608,7 +633,7 @@ window.cookieconsent.initialise({
 
 <p class="notice--info">You will <strong>not</strong> need to use your <strong>source 3DS</strong> to complete any further steps on this guide. Any further steps should only be completed on the <strong>target 3DS</strong>.</p>
 
-<h4 id="section-iv---unsafe_mode">Section IV - unSAFE_MODE</h4>
+<h4 id="section-v---unsafe_mode">Section V - unSAFE_MODE</h4>
 
 <p>In this section, you will enter Safe Mode (a feature available on all 3DS family devices) and navigate to a menu where unSAFE_MODE will be triggered, which will launch you into the boot9strap (custom firmware) installer.</p>
 
@@ -616,7 +641,6 @@ window.cookieconsent.initialise({
   <li>With your device still powered off, hold the following buttons: (Left Shoulder) + (Right Shoulder) + (D-Pad Up) + (A), and while holding these buttons together, power on your device
     <ul>
       <li>Keep holding the buttons until the device boots into Safe Mode (a “system update” menu)</li>
-      <li>If you’re unable to get into Safe Mode after multiple attempts, one of your buttons may be failing or broken. If this is the case, join <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew on Discord</a> and ask, in English, for help.</li>
     </ul>
   </li>
   <li>Press “OK” to accept the update
@@ -628,10 +652,15 @@ window.cookieconsent.initialise({
   <li>The update will eventually fail, with the error code <code class="language-plaintext highlighter-rouge">003-1099</code>. This is intended behaviour</li>
   <li>When asked “Would you like to configure Internet settings?”, select “Yes”</li>
   <li>On the following menu, navigate to <code class="language-plaintext highlighter-rouge">Connection 1</code> -&gt; <code class="language-plaintext highlighter-rouge">Change Settings</code> -&gt; <code class="language-plaintext highlighter-rouge">Next Page (right arrow)</code> -&gt; <code class="language-plaintext highlighter-rouge">Proxy Settings</code> -&gt; <code class="language-plaintext highlighter-rouge">Detailed Setup</code> (<a href="/images/screenshots/usm/safemode_highlighted.png">image</a>)</li>
-  <li>If the exploit was successful, your device will have booted into SafeB9SInstaller</li>
+  <li>If the exploit was successful, your device will have booted into SafeB9SInstaller
+    <ul>
+      <li>If your device instead freezes on a white screen, hold the POWER button until it turns off, then retry this section</li>
+      <li>If your device instead freezes on a red screen, you are missing <code class="language-plaintext highlighter-rouge">usm.bin</code> from the root of your SD card</li>
+    </ul>
+  </li>
 </ol>
 
-<h4 id="section-v---installing-boot9strap">Section V - Installing boot9strap</h4>
+<h4 id="section-vi---installing-boot9strap">Section VI - Installing boot9strap</h4>
 
 <p>In this section, you will install custom firmware onto your device.</p>
 
@@ -654,7 +683,7 @@ window.cookieconsent.initialise({
   <li>On the next page, you will install useful homebrew applications to complete your setup.</li>
 </ul>
 
-<h4 id="section-vi---restoring-wifi-configuration-profiles">Section VI - Restoring WiFi Configuration Profiles</h4>
+<h4 id="section-vii---restoring-wifi-configuration-profiles">Section VII - Restoring WiFi Configuration Profiles</h4>
 
 <p>In this section, you will enter the Homebrew Launcher (using custom firmware) so that you can restore the Wi-Fi connection slots that were overwritten in Section I.</p>
 

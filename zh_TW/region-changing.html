@@ -330,6 +330,14 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="homebrew-launcher-(super-skaterhax)"><a href='/zh_TW/homebrew-launcher-(super-skaterhax)'>Homebrew Launcher (super-skaterhax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="dumping-movable-(nimhax)"><a href='/zh_TW/dumping-movable-(nimhax)'>Dumping Movable (nimhax)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="multiple-options"><i>(Multiple Options)</i></li>
           
         
@@ -347,10 +355,6 @@ window.cookieconsent.initialise({
         
           
             <li style="display: none;" data-name="flashing-ntrboot-(nds)"><a href='/zh_TW/flashing-ntrboot-(nds)'>Flashing ntrboot (NDS)</a></li>
-          
-        
-          
-            <li style="display: none;" data-name="homebrew-launcher-(pichaxx)"><a href='/zh_TW/homebrew-launcher-(pichaxx)'>Homebrew Launcher (PicHaxx)</a></li>
           
         
           
@@ -374,6 +378,10 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="installing-boot9strap-(safecerthax)"><a href='/zh_TW/installing-boot9strap-(safecerthax)'>Installing boot9strap (safecerthax)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="installing-boot9strap-(ssloth-browser)"><a href='/zh_TW/installing-boot9strap-(ssloth-browser)'>Installing boot9strap (SSLoth-Browser)</a></li>
           
         
@@ -390,7 +398,7 @@ window.cookieconsent.initialise({
           
         
           
-            <li style="display: none;" data-name="installing-boot9strap-(hbl-usm)"><a href='/zh_TW/installing-boot9strap-(hbl-usm)'>Installing boot9strap (HBL-USM)</a></li>
+            <li style="display: none;" data-name="installing-boot9strap-(frogtool)"><a href='/zh_TW/installing-boot9strap-(frogtool)'>Installing boot9strap (Frogtool)</a></li>
           
         
           
@@ -452,8 +460,7 @@ window.cookieconsent.initialise({
       <li><a href="#第三節--進行-ctrtransfer" id="markdown-toc-第三節--進行-ctrtransfer">第三節 — 進行 CTRTransfer</a></li>
       <li><a href="#第四節--啟動-fbi-管理器" id="markdown-toc-第四節--啟動-fbi-管理器">第四節 — 啟動 FBI 管理器</a></li>
       <li><a href="#第五節--重新安裝-tickets" id="markdown-toc-第五節--重新安裝-tickets">第五節 — 重新安裝 Tickets</a></li>
-      <li><a href="#第六節--區域設定" id="markdown-toc-第六節--區域設定">第六節 — 區域設定</a></li>
-      <li><a href="#第七節--移除-ctrtransfer-鏡像檔" id="markdown-toc-第七節--移除-ctrtransfer-鏡像檔">第七節 — 移除 CTRTransfer 鏡像檔</a></li>
+      <li><a href="#section-vi---deleting-system-save-data" id="markdown-toc-section-vi---deleting-system-save-data">Section VI - Deleting system save data</a></li>
     </ul>
   </li>
 </ul>
@@ -463,11 +470,13 @@ window.cookieconsent.initialise({
 
 <h3 id="必讀事項">必讀事項</h3>
 
-<p>This is an add-on section for region changing your CFW SysNAND. 這是透過安裝所選區域的 11.15.0 CTRTransfer 鏡像檔達成的。 After installing the image, you can update your device normally to the latest firmware (11.16.0).</p>
+<p>This is an add-on section for region changing your device. 這是透過安裝所選區域的 11.15.0 CTRTransfer 鏡像檔達成的。 After installing the image, you can update your device normally to the latest firmware (11.16.0).</p>
 
-<p><strong>請注意，區碼變更通常是不需要的，因為 Luma3DS 本身就支援跨區遊玩及程式<a href="https://github.com/LumaTeam/Luma3DS/wiki/Optional-features">語碼模擬</a>的功能。</strong> 另外，您也可透過<a href="https://github.com/DS-Homebrew/TWiLightMenu/releases">TWiLight Menu++</a>來運行非支援語系的 NDS 遊戲。</p>
+<p><strong>請注意，區碼變更通常是不需要的，因為 Luma3DS 本身就支援跨區遊玩及程式<a href="https://github.com/LumaTeam/Luma3DS/wiki/Optional-features">語碼模擬</a>的功能。</strong> 另外，您也可透過<a href="https://github.com/DS-Homebrew/TWiLightMenu/releases">TWiLight Menu++</a>來運行非支援語系的 NDS 遊戲。 You should only perform a region change if you wish to have your system UI is in a language that is not available on your console’s current region.</p>
 
-<p>請注意，如果您在 SD 卡中的 <code class="language-plaintext highlighter-rouge">/luma/payloads/</code> 資料夾中放有除了 <code class="language-plaintext highlighter-rouge">GodMode9.firm</code> 的 payload 檔案，在開機時按住『Start』鍵將會顯示一個『加載選單』，從那裏您得透過方向鍵及按鈕『A』選擇『GodMode9』。</p>
+<p class="notice--info">This page assumes that you have already installed Luma3DS and boot9strap. If you followed this website to the end (Finalizing Setup), you have Luma3DS and boot9strap.</p>
+
+<p class="notice--warning">As a part of this process, your system configuration will be reset to its defaults. This includes things such as your username, country, and language. Installed games and their save data will not be affected.</p>
 
 <div class="notice--danger">
 <p>If you change the region of your device:</p>
@@ -477,19 +486,17 @@ window.cookieconsent.initialise({
   <li>You may not be able to access the eShop, even if you <a href="https://en-americas-support.nintendo.com/app/answers/detail/a_id/74/~/how-to-delete-a-nintendo-eshop-account">delete your eShop account</a> beforehand. This is because certain titles tend to remain linked to the 3DS, even after account deletion (especially on New 3DS).
     <ul>
       <li>While purchases can no longer be made on eShop, game updates can still be downloaded. Updates are usually required for online play.</li>
+      <li>This logic extends to system transfers, meaning you would not be able to perform a system transfer from a USA 3DS to a region-changed JPN-to-USA 3DS.</li>
+      <li>That being said, system transfer and game updates are region locked anyway (e.g. Japanese eShop only has Japanese game updates).</li>
     </ul>
   </li>
   <li><strong>You will not be able to uninstall custom firmware without bricking the device!</strong> If you intend to uninstall custom firmware in the future, you <strong>MUST</strong> restore your NAND backup that was created before the region change.</li>
 </ul>
 </div>
 
-<p class="notice--danger">您必須先安裝 Luma3DS 和 boot9strap 才能繼續。</p>
-
-<p class="notice--warning">請注意，在舊 3DS 及 舊 2DS 主機上進行區碼變更，可能會導致需使用擴充記憶體模式的遊戲無法正常運作 (如魔物獵人、超級瑪利歐、精靈寶可夢月亮/太陽)。 若遇到此情形時，您必須重新格式化您的主機以修正此問題 (透過 TinyFormat 或系統設定)。</p>
-
 <h3 id="必備項目">必備項目</h3>
 
-<p class="notice--warning">To use the <a href="https://wikipedia.org/wiki/Magnet_URI_scheme">magnet</a> links on this page, you will need a torrent client like <a href="https://www.qbittorrent.org/download.php">qBittorrent</a> or <a href="http://dev.deluge-torrent.org/wiki/Download">Deluge</a>.</p>
+<p class="notice--warning">To download the CTRTransfer images on this page, you will need a torrent client like <a href="https://www.qbittorrent.org/download.php">qBittorrent</a> or <a href="http://dev.deluge-torrent.org/wiki/Download">Deluge</a>.</p>
 
 <ul>
   <li>最新版的 <a href="https://github.com/d0k3/GodMode9/releases/latest">GodMode9</a> (選擇 GodMode9 <code class="language-plaintext highlighter-rouge">.zip</code> 檔案)</li>
@@ -646,26 +653,41 @@ window.cookieconsent.initialise({
   <li>按下『Home』鍵退出 FBI 管理器</li>
 </ol>
 
-<h4 id="第六節--區域設定">第六節 — 區域設定</h4>
+<h4 id="section-vi---deleting-system-save-data">Section VI - Deleting system save data</h4>
 
 <ol>
-  <li>進入系統設定 (System Settings)</li>
-  <li>進入『其他設定(Other Settings)』、『個人檔案(Profile)』中的『區域設定(Region Settings)』</li>
-  <li>選擇您想改成的國家</li>
-  <li>若提示時，州的部分不必設定</li>
-</ol>
-
-<h4 id="第七節--移除-ctrtransfer-鏡像檔">第七節 — 移除 CTRTransfer 鏡像檔</h4>
-
-<ol>
+  <li>關閉您的主機</li>
   <li>按下並按住「Start」鍵，按住按鈕的同時，將您的主機開機。 這將會啟動 GodMode9</li>
   <li>移動至 <code class="language-plaintext highlighter-rouge">[0:] SDCARD</code> -&gt; <code class="language-plaintext highlighter-rouge">gm9</code></li>
   <li>選擇 CTRTransfer <code class="language-plaintext highlighter-rouge">.bin</code> 鏡像檔，並按『X』刪除</li>
   <li>按 『A』 確認</li>
+  <li>Press (B) a few times to go back to the main menu</li>
+  <li>Navigate to <code class="language-plaintext highlighter-rouge">[1:] SYSNAND CTRNAND</code> -&gt; <code class="language-plaintext highlighter-rouge">data</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID0&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">sysdata</code>
+    <ul>
+      <li>The <code class="language-plaintext highlighter-rouge">&lt;ID0&gt;</code> will be a folder with a 32 character length random-looking name. You may recognize this from Seedminer, if you used that method</li>
+    </ul>
+  </li>
+  <li>Use the D-Pad to highlight <code class="language-plaintext highlighter-rouge">00010017</code></li>
+  <li>Press (Right Shoulder) + (A) to bring up the folder options</li>
+  <li>選擇『Copy to 0:/gm9/out』</li>
+  <li>按『A』 繼續</li>
+  <li>While still highlighting <code class="language-plaintext highlighter-rouge">00010017</code>, press (X) to delete it</li>
+  <li>按 『A』 確認</li>
+  <li>Press (A) to unlock SysNAND (lvl2) writing, then input the key combo given</li>
+  <li>Once the file has been deleted, press (A) to continue</li>
+  <li>如提示時，按下『A』取消檔案寫入鎖定</li>
   <li>按下『Start』鍵重啟您的主機</li>
+  <li>Your device will load into the initial setup menu
+    <ul>
+      <li>This is expected behaviour. You have not lost any of your game data</li>
+    </ul>
+  </li>
+  <li>Complete the initial setup menu by following the prompts on your device’s screen</li>
 </ol>
 
 <hr />
+
+<p class="notice--success">Your 3DS has successfully been region changed!</p>
 
         
       </section>

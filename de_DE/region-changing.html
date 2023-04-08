@@ -330,6 +330,14 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="homebrew-launcher-(super-skaterhax)"><a href='/de_DE/homebrew-launcher-(super-skaterhax)'>Homebrew Launcher (super-skaterhax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="dumping-movable-(nimhax)"><a href='/de_DE/dumping-movable-(nimhax)'>Dumping Movable (nimhax)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="multiple-options"><i>(Multiple Options)</i></li>
           
         
@@ -347,10 +355,6 @@ window.cookieconsent.initialise({
         
           
             <li style="display: none;" data-name="flashing-ntrboot-(nds)"><a href='/de_DE/flashing-ntrboot-(nds)'>Flashing ntrboot (NDS)</a></li>
-          
-        
-          
-            <li style="display: none;" data-name="homebrew-launcher-(pichaxx)"><a href='/de_DE/homebrew-launcher-(pichaxx)'>Homebrew Launcher (PicHaxx)</a></li>
           
         
           
@@ -374,6 +378,10 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="installing-boot9strap-(safecerthax)"><a href='/de_DE/installing-boot9strap-(safecerthax)'>Installing boot9strap (safecerthax)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="installing-boot9strap-(ssloth-browser)"><a href='/de_DE/installing-boot9strap-(ssloth-browser)'>Installing boot9strap (SSLoth-Browser)</a></li>
           
         
@@ -390,7 +398,7 @@ window.cookieconsent.initialise({
           
         
           
-            <li style="display: none;" data-name="installing-boot9strap-(hbl-usm)"><a href='/de_DE/installing-boot9strap-(hbl-usm)'>Installing boot9strap (HBL-USM)</a></li>
+            <li style="display: none;" data-name="installing-boot9strap-(frogtool)"><a href='/de_DE/installing-boot9strap-(frogtool)'>Installing boot9strap (Frogtool)</a></li>
           
         
           
@@ -452,8 +460,7 @@ window.cookieconsent.initialise({
       <li><a href="#section-iii---ctrtransfer" id="markdown-toc-section-iii---ctrtransfer">Section III - CTRTransfer</a></li>
       <li><a href="#section-iv---launching-fbi" id="markdown-toc-section-iv---launching-fbi">Section IV - Launching FBI</a></li>
       <li><a href="#section-v---reinstalling-tickets" id="markdown-toc-section-v---reinstalling-tickets">Section V - Reinstalling Tickets</a></li>
-      <li><a href="#section-vi---region-settings" id="markdown-toc-section-vi---region-settings">Section VI - Region settings</a></li>
-      <li><a href="#section-vii---remove-ctrtransfer-image" id="markdown-toc-section-vii---remove-ctrtransfer-image">Section VII - Remove CTRTransfer image</a></li>
+      <li><a href="#section-vi---deleting-system-save-data" id="markdown-toc-section-vi---deleting-system-save-data">Section VI - Deleting system save data</a></li>
     </ul>
   </li>
 </ul>
@@ -463,11 +470,13 @@ window.cookieconsent.initialise({
 
 <h3 id="lesen-erforderlich">Lesen erforderlich</h3>
 
-<p>This is an add-on section for region changing your CFW SysNAND. This is done by installing the 11.15.0 CTRTransfer image for the region you want to switch to. After installing the image, you can update your device normally to the latest firmware (11.16.0).</p>
+<p>This is an add-on section for region changing your device. This is done by installing the 11.15.0 CTRTransfer image for the region you want to switch to. After installing the image, you can update your device normally to the latest firmware (11.16.0).</p>
 
-<p>Note that region changing is almost completely unnecessary since Luma3DS supports out-of-region games and individual title <a href="https://github.com/LumaTeam/Luma3DS/wiki/Optional-features">Locale Emulation</a>. Additionally, running NDS games with alternative out-of-region languages is supported by <a href="https://github.com/DS-Homebrew/TWiLightMenu/releases">TWiLight Menu++</a>.</p>
+<p>Note that region changing is almost completely unnecessary since Luma3DS supports out-of-region games and individual title <a href="https://github.com/LumaTeam/Luma3DS/wiki/Optional-features">Locale Emulation</a>. Additionally, running NDS games with alternative out-of-region languages is supported by <a href="https://github.com/DS-Homebrew/TWiLightMenu/releases">TWiLight Menu++</a>. You should only perform a region change if you wish to have your system UI is in a language that is not available on your console’s current region.</p>
 
-<p>Beachte: Sollten noch weitere Dateien als nur die<code class="language-plaintext highlighter-rouge">GodMode9.firm</code> Datei im <code class="language-plaintext highlighter-rouge">/luma/payloads/</code> Ordner auf deiner SD-Karte sein, starte das “Chainloader Menu”, indem du beim Starten der Konsole die (Start) Taste gedrückt hältst und in welchem du dann das D-Pad und die (A) Taste verwenden musst um “GodMode9”, für die Anleitung, auszuwählen.</p>
+<p class="notice--info">This page assumes that you have already installed Luma3DS and boot9strap. If you followed this website to the end (Finalizing Setup), you have Luma3DS and boot9strap.</p>
+
+<p class="notice--warning">As a part of this process, your system configuration will be reset to its defaults. This includes things such as your username, country, and language. Installed games and their save data will not be affected.</p>
 
 <div class="notice--danger">
 <p>If you change the region of your device:</p>
@@ -477,19 +486,17 @@ window.cookieconsent.initialise({
   <li>You may not be able to access the eShop, even if you <a href="https://en-americas-support.nintendo.com/app/answers/detail/a_id/74/~/how-to-delete-a-nintendo-eshop-account">delete your eShop account</a> beforehand. This is because certain titles tend to remain linked to the 3DS, even after account deletion (especially on New 3DS).
     <ul>
       <li>While purchases can no longer be made on eShop, game updates can still be downloaded. Updates are usually required for online play.</li>
+      <li>This logic extends to system transfers, meaning you would not be able to perform a system transfer from a USA 3DS to a region-changed JPN-to-USA 3DS.</li>
+      <li>That being said, system transfer and game updates are region locked anyway (e.g. Japanese eShop only has Japanese game updates).</li>
     </ul>
   </li>
   <li><strong>You will not be able to uninstall custom firmware without bricking the device!</strong> If you intend to uninstall custom firmware in the future, you <strong>MUST</strong> restore your NAND backup that was created before the region change.</li>
 </ul>
 </div>
 
-<p class="notice--danger">Du MUSST bereits eine installierte Version von Luma3DS und boot9straps haben, um diese Anleitung benutzen zu können.</p>
-
-<p class="notice--warning">Performing a region change may break extended memory mode games (Monster Hunter, Super Smash Bros, Pokemon Sun/Moon) on Old 3DS/2DS devices. Wenn dies geschieht, musst du die Konsole formatieren (mittels TinyFormat oder Systemeinstellungen), um das Problem zu beheben.</p>
-
 <h3 id="was-du-brauchst">Was du brauchst</h3>
 
-<p class="notice--warning">Um die <a href="https://wikipedia.org/wiki/Magnet_URI_scheme">magnet</a>-Links auf dieser Seite zu verwenden, benötigst du einen Torrent-Client, wie <a href="https://www.qbittorrent.org/download.php">qBittorrent</a> oder <a href="http://dev.deluge-torrent.org/wiki/Download">Deluge</a>.</p>
+<p class="notice--warning">To download the CTRTransfer images on this page, you will need a torrent client like <a href="https://www.qbittorrent.org/download.php">qBittorrent</a> or <a href="http://dev.deluge-torrent.org/wiki/Download">Deluge</a>.</p>
 
 <ul>
   <li>Die neuste Version von GodMode9 (siehe https://github.com/d0k3/GodMode9/releases/latest) (die GodMode9.<code class="language-plaintext highlighter-rouge">zip</code> Datei)</li>
@@ -595,7 +602,7 @@ window.cookieconsent.initialise({
   <li>Wähle “Exit” aus</li>
   <li>Drücke (A), um die Schreibrechte zu deaktivieren, wenn du dazu aufgefordert wirst</li>
   <li>Drücke (Start) um deinen 3DS neu zu starten</li>
-  <li>Aktualisiere deine Konsole indem du zu den Systemeinstellungen wechselst, danach “Allgemeine Einstellungen” auswählst, ganz nach rechts navigierst (letzter Punkt im unteren Bildschirm) und dann das “System-Update” startest
+  <li>Update your device by going to System Settings, then “Other Settings”, then going all the way to the right and using “System Update”
     <ul>
       <li>Updates mit B9S + Luma (welches du hast) sind sicher</li>
       <li>Wenn eine Fehlermeldung auftaucht, musst du in den DNS-Einstellungen die Option “Ja” auswählen, wenn du gefragt wirst, ob die DNS automatisch bezogen werden soll</li>
@@ -646,26 +653,41 @@ window.cookieconsent.initialise({
   <li>Drücke (HOME), um FBI zu verlassen</li>
 </ol>
 
-<h4 id="section-vi---region-settings">Section VI - Region settings</h4>
+<h4 id="section-vi---deleting-system-save-data">Section VI - Deleting system save data</h4>
 
 <ol>
-  <li>Öffne die Systemeinstellungen</li>
-  <li>Gehe zu “Allgemeine Einstellungen”, “Nutzereinstellungen”, dann “Region wählen”</li>
-  <li>Wähle ein Land der Region, zu welcher du gewechselt hast</li>
-  <li>Falls aufgefordert, musst du keinen Staat einstellen</li>
-</ol>
-
-<h4 id="section-vii---remove-ctrtransfer-image">Section VII - Remove CTRTransfer image</h4>
-
-<ol>
+  <li>Schalte deine Konsole aus</li>
   <li>Drücke und halte (Start), und während du (Start) hältst, schalte deinen 3DS an. This will launch GodMode9</li>
   <li>Navigiere zu <code class="language-plaintext highlighter-rouge">[0:] SDCARD</code> -&gt; <code class="language-plaintext highlighter-rouge">gm9</code></li>
   <li>Drücke (X) auf die CTRTransfer-Abbild <code class="language-plaintext highlighter-rouge">.bin</code> um es zu löschen</li>
   <li>Drücke (A) zum bestätigen</li>
+  <li>Press (B) a few times to go back to the main menu</li>
+  <li>Navigate to <code class="language-plaintext highlighter-rouge">[1:] SYSNAND CTRNAND</code> -&gt; <code class="language-plaintext highlighter-rouge">data</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID0&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">sysdata</code>
+    <ul>
+      <li>The <code class="language-plaintext highlighter-rouge">&lt;ID0&gt;</code> will be a folder with a 32 character length random-looking name. You may recognize this from Seedminer, if you used that method</li>
+    </ul>
+  </li>
+  <li>Use the D-Pad to highlight <code class="language-plaintext highlighter-rouge">00010017</code></li>
+  <li>Press (Right Shoulder) + (A) to bring up the folder options</li>
+  <li>Select “Copy to 0:/gm9/out”</li>
+  <li>Drücke (A), um fortzufahren</li>
+  <li>While still highlighting <code class="language-plaintext highlighter-rouge">00010017</code>, press (X) to delete it</li>
+  <li>Drücke (A) zum bestätigen</li>
+  <li>Press (A) to unlock SysNAND (lvl2) writing, then input the key combo given</li>
+  <li>Once the file has been deleted, press (A) to continue</li>
+  <li>Drücke (A), um die Schreibrechte zu deaktivieren, wenn du dazu aufgefordert wirst</li>
   <li>Drücke (Start) um deinen 3DS neu zu starten</li>
+  <li>Your device will load into the initial setup menu
+    <ul>
+      <li>This is expected behaviour. You have not lost any of your game data</li>
+    </ul>
+  </li>
+  <li>Complete the initial setup menu by following the prompts on your device’s screen</li>
 </ol>
 
 <hr />
+
+<p class="notice--success">Your 3DS has successfully been region changed!</p>
 
         
       </section>

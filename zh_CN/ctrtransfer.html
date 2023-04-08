@@ -330,6 +330,14 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="homebrew-launcher-(super-skaterhax)"><a href='/zh_CN/homebrew-launcher-(super-skaterhax)'>Homebrew Launcher (super-skaterhax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="dumping-movable-(nimhax)"><a href='/zh_CN/dumping-movable-(nimhax)'>Dumping Movable (nimhax)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="multiple-options"><i>(Multiple Options)</i></li>
           
         
@@ -347,10 +355,6 @@ window.cookieconsent.initialise({
         
           
             <li style="display: none;" data-name="flashing-ntrboot-(nds)"><a href='/zh_CN/flashing-ntrboot-(nds)'>Flashing ntrboot (NDS)</a></li>
-          
-        
-          
-            <li style="display: none;" data-name="homebrew-launcher-(pichaxx)"><a href='/zh_CN/homebrew-launcher-(pichaxx)'>Homebrew Launcher (PicHaxx)</a></li>
           
         
           
@@ -374,6 +378,10 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="installing-boot9strap-(safecerthax)"><a href='/zh_CN/installing-boot9strap-(safecerthax)'>Installing boot9strap (safecerthax)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="installing-boot9strap-(ssloth-browser)"><a href='/zh_CN/installing-boot9strap-(ssloth-browser)'>Installing boot9strap (SSLoth-Browser)</a></li>
           
         
@@ -390,7 +398,7 @@ window.cookieconsent.initialise({
           
         
           
-            <li style="display: none;" data-name="installing-boot9strap-(hbl-usm)"><a href='/zh_CN/installing-boot9strap-(hbl-usm)'>Installing boot9strap (HBL-USM)</a></li>
+            <li style="display: none;" data-name="installing-boot9strap-(frogtool)"><a href='/zh_CN/installing-boot9strap-(frogtool)'>Installing boot9strap (Frogtool)</a></li>
           
         
           
@@ -452,7 +460,7 @@ window.cookieconsent.initialise({
       <li><a href="#第二步--ctrtransfer" id="markdown-toc-第二步--ctrtransfer">第二步 – CTRTransfer</a></li>
       <li><a href="#第五步--启动-fbi-应用" id="markdown-toc-第五步--启动-fbi-应用">第五步 – 启动 FBI 应用</a></li>
       <li><a href="#第四步--重装tickets" id="markdown-toc-第四步--重装tickets">第四步 – 重装Tickets</a></li>
-      <li><a href="#第五步--删除-ctr转移ctrtransfer-镜像" id="markdown-toc-第五步--删除-ctr转移ctrtransfer-镜像">第五步 – 删除 CTR转移(CTRtransfer) 镜像</a></li>
+      <li><a href="#section-vi---deleting-system-save-data" id="markdown-toc-section-vi---deleting-system-save-data">Section VI - Deleting system save data</a></li>
     </ul>
   </li>
   <li><a href="#继续至完成安装" id="markdown-toc-继续至完成安装">继续至完成安装</a></li>
@@ -465,15 +473,13 @@ window.cookieconsent.initialise({
 
 <p>这是个为主机安装 11.15.0 CTRtransfer 镜像的附加章节。</p>
 
-<p>请注意，如果你的 SD 卡中的 <code class="language-plaintext highlighter-rouge">/luma/payloads/</code> 目录中有 <code class="language-plaintext highlighter-rouge">GodMode9.firm</code> 以外的 <code class="language-plaintext highlighter-rouge">.firm</code> 文件，那么你在按住 “Start” 键开机的时候，你的主机将不会直接进入到 Godmode9，而会进入到一个叫做 “chainloader menu” 的菜单，这个时候你需要通过十字键来移动红色光标至 “Godmode9” 来启动教程需要的文件。</p>
+<p class="notice--info">This page assumes that you have already installed Luma3DS and boot9strap. If you followed this website to the end (Finalizing Setup), you have Luma3DS and boot9strap.</p>
 
-<p class="notice--danger">在开始之前，你必须确认你已装好了 Luma3DS 和 boot9strap。</p>
-
-<p class="notice--warning">做 CTRTransfer 可能会破坏旧版 3DS/2DS 的内存扩展模式（这会导致怪物猎人、任天堂大乱斗和宝可梦日月系列等等游戏无法启动） 如果出现了这个问题，则你得初始化主机（使用 TinyFormat 或者系统设置内的主机初始化）来解决它。</p>
+<p class="notice--warning">As a part of this process, your system configuration will be reset to its defaults. This includes things such as your username, country, and language. Installed games and their save data will not be affected.</p>
 
 <h3 id="你需要准备点啥">你需要准备点啥？</h3>
 
-<p class="notice--warning">你需要一个支持 BT 协议的下载程序，如 <a href="https://www.qbittorrent.org/download.php">qBittorrent</a> 或 <a href="http://dev.deluge-torrent.org/wiki/Download">Deluge</a> 来下载本教程中的<a href="https://zh.wikipedia.org/wiki/%E7%A3%81%E5%8A%9B%E9%93%BE%E6%8E%A5">磁力链接</a> 。</p>
+<p class="notice--warning">To download the CTRTransfer images on this page, you will need a torrent client like <a href="https://www.qbittorrent.org/download.php">qBittorrent</a> or <a href="http://dev.deluge-torrent.org/wiki/Download">Deluge</a>.</p>
 
 <ul>
   <li>最新版本的 <a href="https://github.com/d0k3/GodMode9/releases/latest">GodMode9</a>（下载 GodMode9 <code class="language-plaintext highlighter-rouge">.zip</code> 文件）</li>
@@ -604,14 +610,36 @@ window.cookieconsent.initialise({
   <li>按 “Home” 键退出 FBI</li>
 </ol>
 
-<h4 id="第五步--删除-ctr转移ctrtransfer-镜像">第五步 – 删除 CTR转移(CTRtransfer) 镜像</h4>
+<h4 id="section-vi---deleting-system-save-data">Section VI - Deleting system save data</h4>
 
 <ol>
+  <li>将主机关机</li>
   <li>按住 “START” 键，然后将主机开机。 这会启动 GodMode9</li>
   <li>进入到 <code class="language-plaintext highlighter-rouge">[0:] SDCARD</code> -&gt; <code class="language-plaintext highlighter-rouge">gm9</code></li>
   <li>在 CTRTransfer <code class="language-plaintext highlighter-rouge">.bin</code> 上按 “X” 来删除它</li>
   <li>按下 “A” 键确认</li>
+  <li>Press (B) a few times to go back to the main menu</li>
+  <li>Navigate to <code class="language-plaintext highlighter-rouge">[1:] SYSNAND CTRNAND</code> -&gt; <code class="language-plaintext highlighter-rouge">data</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID0&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">sysdata</code>
+    <ul>
+      <li>The <code class="language-plaintext highlighter-rouge">&lt;ID0&gt;</code> will be a folder with a 32 character length random-looking name. You may recognize this from Seedminer, if you used that method</li>
+    </ul>
+  </li>
+  <li>Use the D-Pad to highlight <code class="language-plaintext highlighter-rouge">00010017</code></li>
+  <li>Press (Right Shoulder) + (A) to bring up the folder options</li>
+  <li>选择 “Copy to 0:/gm9/out”</li>
+  <li>按 “A” 键继续</li>
+  <li>While still highlighting <code class="language-plaintext highlighter-rouge">00010017</code>, press (X) to delete it</li>
+  <li>按下 “A” 键确认</li>
+  <li>Press (A) to unlock SysNAND (lvl2) writing, then input the key combo given</li>
+  <li>Once the file has been deleted, press (A) to continue</li>
+  <li>如果提示重新锁定写入权限，按下 “A” 键来确认</li>
   <li>按 “Start” 键重启你的主机</li>
+  <li>Your device will load into the initial setup menu
+    <ul>
+      <li>This is expected behaviour. You have not lost any of your game data</li>
+    </ul>
+  </li>
+  <li>Complete the initial setup menu by following the prompts on your device’s screen</li>
 </ol>
 
 <hr />

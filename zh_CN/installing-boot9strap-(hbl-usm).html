@@ -330,6 +330,14 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="homebrew-launcher-(super-skaterhax)"><a href='/zh_CN/homebrew-launcher-(super-skaterhax)'>Homebrew Launcher (super-skaterhax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="dumping-movable-(nimhax)"><a href='/zh_CN/dumping-movable-(nimhax)'>Dumping Movable (nimhax)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="multiple-options"><i>(Multiple Options)</i></li>
           
         
@@ -347,10 +355,6 @@ window.cookieconsent.initialise({
         
           
             <li style="display: none;" data-name="flashing-ntrboot-(nds)"><a href='/zh_CN/flashing-ntrboot-(nds)'>Flashing ntrboot (NDS)</a></li>
-          
-        
-          
-            <li style="display: none;" data-name="homebrew-launcher-(pichaxx)"><a href='/zh_CN/homebrew-launcher-(pichaxx)'>Homebrew Launcher (PicHaxx)</a></li>
           
         
           
@@ -374,6 +378,10 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="installing-boot9strap-(safecerthax)"><a href='/zh_CN/installing-boot9strap-(safecerthax)'>Installing boot9strap (safecerthax)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="installing-boot9strap-(ssloth-browser)"><a href='/zh_CN/installing-boot9strap-(ssloth-browser)'>Installing boot9strap (SSLoth-Browser)</a></li>
           
         
@@ -390,7 +398,7 @@ window.cookieconsent.initialise({
           
         
           
-            <li style="display: none;" data-name="installing-boot9strap-(hbl-usm)"><a href='/zh_CN/installing-boot9strap-(hbl-usm)'>Installing boot9strap (HBL-USM)</a></li>
+            <li style="display: none;" data-name="installing-boot9strap-(frogtool)"><a href='/zh_CN/installing-boot9strap-(frogtool)'>Installing boot9strap (Frogtool)</a></li>
           
         
           
@@ -493,11 +501,8 @@ window.cookieconsent.initialise({
 <p>在本节中，你将会使用 Homebrew Launcher 来启动 slotTool，它将会把带有漏洞的数据覆盖到你主机的 Wi-Fi 连接点槽中。 然后，你需要把触发 unSAFE_MODE 漏洞所需的文件复制到设备的 SD 卡上。 你自己设置的 Wi-Fi 链接点将在这个过程中被暂时覆盖。</p>
 
 <ol>
-  <li>你的主机现在应该在本教程的前一部分打开了 Homebrew Launcher 了
-    <ul>
-      <li>如果没有，则请开机然后通过先前使用的一种方法进入它（比如通过《宝可梦：绘图方块》）</li>
-    </ul>
-  </li>
+  <li>启动你的主机</li>
+  <li>Open the Homebrew Launcher through your method of choice (likely the Internet Browser)</li>
   <li>从自制程序列表中找到并启动 slotTool
     <ul>
       <li>如果你的主机卡在了红屏，请长按住电源键来强制关机，然后重试本步骤</li>
@@ -528,7 +533,6 @@ window.cookieconsent.initialise({
   <li>将你的主机置于关机状态，按住 L + R + ↑ + A 四个按键，然后按下电源键
     <ul>
       <li>按住这几个键，直到主机进入安全模式（一个“系统更新”菜单）</li>
-      <li>If you’re unable to get into Safe Mode after multiple attempts, one of your buttons may be failing or broken. If this is the case, join <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew on Discord</a> and ask, in English, for help.</li>
     </ul>
   </li>
   <li>Press “OK” to accept the update
@@ -540,7 +544,12 @@ window.cookieconsent.initialise({
   <li>The update will eventually fail, with the error code <code class="language-plaintext highlighter-rouge">003-1099</code>. This is intended behaviour</li>
   <li>When asked “Would you like to configure Internet settings?”, select “Yes”</li>
   <li>On the following menu, navigate to <code class="language-plaintext highlighter-rouge">Connection 1</code> -&gt; <code class="language-plaintext highlighter-rouge">Change Settings</code> -&gt; <code class="language-plaintext highlighter-rouge">Next Page (right arrow)</code> -&gt; <code class="language-plaintext highlighter-rouge">Proxy Settings</code> -&gt; <code class="language-plaintext highlighter-rouge">Detailed Setup</code> (<a href="/images/screenshots/usm/safemode_highlighted.png">image</a>)</li>
-  <li>If the exploit was successful, your device will have booted into SafeB9SInstaller</li>
+  <li>If the exploit was successful, your device will have booted into SafeB9SInstaller
+    <ul>
+      <li>If your device instead freezes on a white screen, hold the POWER button until it turns off, then retry this section</li>
+      <li>If your device instead freezes on a red screen, you are missing <code class="language-plaintext highlighter-rouge">usm.bin</code> from the root of your SD card</li>
+    </ul>
+  </li>
 </ol>
 
 <h4 id="第三步--安装-boot9strap">第三步 – 安装 boot9strap</h4>

@@ -330,6 +330,14 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="homebrew-launcher-(super-skaterhax)"><a href='/fr_FR/homebrew-launcher-(super-skaterhax)'>Homebrew Launcher (super-skaterhax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="dumping-movable-(nimhax)"><a href='/fr_FR/dumping-movable-(nimhax)'>Dumping Movable (nimhax)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="multiple-options"><i>(Multiple Options)</i></li>
           
         
@@ -347,10 +355,6 @@ window.cookieconsent.initialise({
         
           
             <li style="display: none;" data-name="flashing-ntrboot-(nds)"><a href='/fr_FR/flashing-ntrboot-(nds)'>Flashing ntrboot (NDS)</a></li>
-          
-        
-          
-            <li style="display: none;" data-name="homebrew-launcher-(pichaxx)"><a href='/fr_FR/homebrew-launcher-(pichaxx)'>Homebrew Launcher (PicHaxx)</a></li>
           
         
           
@@ -374,6 +378,10 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="installing-boot9strap-(safecerthax)"><a href='/fr_FR/installing-boot9strap-(safecerthax)'>Installing boot9strap (safecerthax)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="installing-boot9strap-(ssloth-browser)"><a href='/fr_FR/installing-boot9strap-(ssloth-browser)'>Installing boot9strap (SSLoth-Browser)</a></li>
           
         
@@ -390,7 +398,7 @@ window.cookieconsent.initialise({
           
         
           
-            <li style="display: none;" data-name="installing-boot9strap-(hbl-usm)"><a href='/fr_FR/installing-boot9strap-(hbl-usm)'>Installing boot9strap (HBL-USM)</a></li>
+            <li style="display: none;" data-name="installing-boot9strap-(frogtool)"><a href='/fr_FR/installing-boot9strap-(frogtool)'>Installing boot9strap (Frogtool)</a></li>
           
         
           
@@ -450,7 +458,7 @@ window.cookieconsent.initialise({
           <li><a href="#section-ii---ctrtransfer" id="markdown-toc-section-ii---ctrtransfer">Section II - CTRTransfer</a></li>
           <li><a href="#section-iii---lancez-fbi" id="markdown-toc-section-iii---lancez-fbi">Section III - Lancez FBI</a></li>
           <li><a href="#section-iv---réinstallation-des-tickets" id="markdown-toc-section-iv---réinstallation-des-tickets">Section IV - Réinstallation des Tickets</a></li>
-          <li><a href="#section-v---suppression-de-limage-ctrtransfer" id="markdown-toc-section-v---suppression-de-limage-ctrtransfer">Section V - Suppression de l’image CTRTransfer</a></li>
+          <li><a href="#section-vi---deleting-system-save-data" id="markdown-toc-section-vi---deleting-system-save-data">Section VI - Deleting system save data</a></li>
         </ul>
       </li>
       <li><a href="#continuer-vers-finalisation-de-linstallation" id="markdown-toc-continuer-vers-finalisation-de-linstallation">Continuer vers Finalisation de l’installation</a></li>
@@ -465,15 +473,13 @@ window.cookieconsent.initialise({
 
 <p>Ceci est une section complémentaire pour installer une image CTRTransfer 11.15.0 sur votre console.</p>
 
-<p>Notez que si vous avez n’importe quel autre payload que <code class="language-plaintext highlighter-rouge">GodMode9.firm</code> dans le dossier <code class="language-plaintext highlighter-rouge">/luma/payloads/</code> sur votre carte SD, appuyer sur (Start) au démarrage affiche un “chainloader menu” où vous devrez utiliser le D-Pad et le bouton (A) pour sélectionner “GodMode9” .</p>
+<p class="notice--info">This page assumes that you have already installed Luma3DS and boot9strap. If you followed this website to the end (Finalizing Setup), you have Luma3DS and boot9strap.</p>
 
-<p class="notice--danger">Vous DEVEZ avoir déjà installé Luma3DS et boot9strap pour utiliser ceci.</p>
-
-<p class="notice--warning">Effectuer un CTRTransfer peut empêcher le bon fonctionnement des jeux en mode mémoire étendue (Monster Hunter, Super Smash Bros., Pokémon Soleil/Lune) sur les anciennes 3DS/2DS. Si cela se produit, vous devrez formater l’appareil (en utilisant TinyFormat ou les Paramètres de la console) pour résoudre le problème.</p>
+<p class="notice--warning">As a part of this process, your system configuration will be reset to its defaults. This includes things such as your username, country, and language. Installed games and their save data will not be affected.</p>
 
 <h2 id="ce-dont-vous-avez-besoin">Ce dont vous avez besoin</h2>
 
-<p class="notice--warning">Pour utiliser les liens <a href="https://wikipedia.org/wiki/Magnet_URI_scheme">magnet</a> sur cette page, vous aurez besoin d’un client torrent comme <a href="https://www.qbittorrent.org/download.php">qBittorrent</a> ou <a href="http://dev.deluge-torrent.org/wiki/Download">Deluge</a>.</p>
+<p class="notice--warning">To download the CTRTransfer images on this page, you will need a torrent client like <a href="https://www.qbittorrent.org/download.php">qBittorrent</a> or <a href="http://dev.deluge-torrent.org/wiki/Download">Deluge</a>.</p>
 
 <ul>
   <li>La dernière version de [GodMode9]
@@ -598,14 +604,36 @@ window.cookieconsent.initialise({
   <li>Appuyez sur (Home) pour quitter FBI</li>
 </ol>
 
-<h4 id="section-v---suppression-de-limage-ctrtransfer">Section V - Suppression de l’image CTRTransfer</h4>
+<h4 id="section-vi---deleting-system-save-data">Section VI - Deleting system save data</h4>
 
 <ol>
+  <li>Éteignez votre 3DS</li>
   <li>Appuyez sur le bouton (START) et maintenez le enfoncé tout en allumant votre console. Ceci lancera GodMode9</li>
   <li>Naviguez vers <code class="language-plaintext highlighter-rouge">[0:] SDCARD</code> -&gt; <code class="language-plaintext highlighter-rouge">gm9</code></li>
   <li>Pressez (X) sur le <code class="language-plaintext highlighter-rouge">.bin</code> de l’image CTRTransfer pour le supprimer</li>
   <li>Appuyez sur (A) pour confirmer</li>
+  <li>Press (B) a few times to go back to the main menu</li>
+  <li>Navigate to <code class="language-plaintext highlighter-rouge">[1:] SYSNAND CTRNAND</code> -&gt; <code class="language-plaintext highlighter-rouge">data</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID0&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">sysdata</code>
+    <ul>
+      <li>The <code class="language-plaintext highlighter-rouge">&lt;ID0&gt;</code> will be a folder with a 32 character length random-looking name. You may recognize this from Seedminer, if you used that method</li>
+    </ul>
+  </li>
+  <li>Use the D-Pad to highlight <code class="language-plaintext highlighter-rouge">00010017</code></li>
+  <li>Press (Right Shoulder) + (A) to bring up the folder options</li>
+  <li>Sélectionnez “Copy to 0:/gm9/out”</li>
+  <li>Appuyez sur (A) pour continuer</li>
+  <li>While still highlighting <code class="language-plaintext highlighter-rouge">00010017</code>, press (X) to delete it</li>
+  <li>Appuyez sur (A) pour confirmer</li>
+  <li>Press (A) to unlock SysNAND (lvl2) writing, then input the key combo given</li>
+  <li>Once the file has been deleted, press (A) to continue</li>
+  <li>Appuyez (A) pour reverrouiller autorisations en écriture si vous êtes invité</li>
   <li>Appuyez sur (Start) pour redémarrer votre système</li>
+  <li>Your device will load into the initial setup menu
+    <ul>
+      <li>This is expected behaviour. You have not lost any of your game data</li>
+    </ul>
+  </li>
+  <li>Complete the initial setup menu by following the prompts on your device’s screen</li>
 </ol>
 
 <hr />

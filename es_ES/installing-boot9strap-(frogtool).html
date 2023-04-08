@@ -1,0 +1,697 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<!-- for guide purposes all caching is removed and is separately built. -->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Installing boot9strap (Frogtool) - 3DS Hacks Guide</title>
+<meta name="description" content="A complete guide to 3DS custom firmware">
+
+
+  <meta name="author" content="Nintendo Homebrew">
+  
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="3DS Hacks Guide">
+<meta property="og:title" content="Installing boot9strap (Frogtool)">
+<meta property="og:url" content="https://3ds.hacks.guide/es_ES/installing-boot9strap-(frogtool).html">
+
+
+  <meta property="og:description" content="A complete guide to 3DS custom firmware">
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://3ds.hacks.guide/es_ES/installing-boot9strap-(frogtool).html">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Nintendo Homebrew",
+      "url": "https://3ds.hacks.guide/"
+    
+  }
+</script>
+
+
+  <meta name="google-site-verification" content="jVXoPK_-qzKJp4SScnZYpOIX3yDXfGnAoTBJYixUOwg" />
+
+
+  <meta name="msvalidate.01" content="F3532011519E308583A0A2CAF2DD69E8">
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="3DS Hacks Guide Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=PYEmwKvQAx">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png?v=PYEmwKvQAx" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-194x194.png?v=PYEmwKvQAx" sizes="194x194">
+<link rel="icon" type="image/png" href="/images/android-chrome-192x192.png?v=PYEmwKvQAx" sizes="192x192">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png?v=PYEmwKvQAx" sizes="16x16">
+<link rel="manifest" href="/images/manifest.json?v=PYEmwKvQAx">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg?v=PYEmwKvQAx" color="#2E3440">
+<link rel="shortcut icon" href="/images/favicon.ico?v=PYEmwKvQAx">
+<meta name="apple-mobile-web-app-title" content="Guide">
+<meta name="application-name" content="Guide">
+<meta name="msapplication-TileColor" content="#2E3440">
+<meta name="msapplication-TileImage" content="/images/mstile-144x144.png?v=PYEmwKvQAx">
+<meta name="msapplication-config" content="/images/browserconfig.xml?v=PYEmwKvQAx">
+<meta name="theme-color" content="#2E3440">
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.css" integrity="sha512-LQ97camar/lOliT/MqjcQs5kWgy6Qz/cCRzzRzUCfv0fotsCTC9ZHXaPQmJV8Xu/PVALfJZ7BDezl5lW3/qBxg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js" integrity="sha512-yXXqOFjdjHNH1GND+1EO0jbvvebABpzGKD66djnUfiKlYME5HGMUJHoCaeE4D5PTG2YsSJf6dwqyUUvQvS0vaA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#2e3440"
+    },
+    "button": {
+      "background": "#60818f"
+    }
+  },
+  "theme": "edgeless",
+  "position": "top",
+  "static": true,
+  "content": {
+    "message": "Este sitio web utiliza cookies para mostrar el progreso actual de la guía en la barra lateral y hacer mejor el sitio de otras maneras."
+  }
+})});
+</script>
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <!-- <a class="site-title" href="/">
+          3DS Hacks Guide
+          
+        </a>
+      -->
+        <ul class="visible-links">
+          <!-- modified to use multilang, guide-specific -->
+          
+          
+          
+          
+          
+          
+            
+              <li class="masthead__menu-item masthead__menu-item--lg"><a href="/es_ES/">Inicio</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/es_ES/faq">FAQ</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/es_ES/troubleshooting">Resolución de Problemas</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/es_ES/checking-for-cfw">Comprobación de CFW</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/es_ES/godmode9-usage">Uso de GodMode9</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/es_ES/contribute">Contribuir</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/es_ES/region-changing">Cambio de región</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/es_ES/uninstall-cfw">Desinstalar CFW</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/es_ES/credits">Créditos</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/es_ES/site-navigation">Navegación del sitio</a></li>
+            
+          
+          <!-- end guide specific -->
+        </ul>
+        
+        <!-- completely redo hidden links for multilang, guide-specific -->
+        <ul class="hidden-links links-menu hidden"></ul>
+        <ul class="hidden-links lang-menu hidden">
+          
+          
+          
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/installing-boot9strap-(frogtool).html">English</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/es_ES/installing-boot9strap-(frogtool).html">Español</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/de_DE/installing-boot9strap-(frogtool).html">Deutsch</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/fr_FR/installing-boot9strap-(frogtool).html">Français</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/it_IT/installing-boot9strap-(frogtool).html">Italiano</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/nl_NL/installing-boot9strap-(frogtool).html">Nederlands</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/pt_BR/installing-boot9strap-(frogtool).html">Português do Brasil</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/pt_PT/installing-boot9strap-(frogtool).html">Português (Portugal)</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ru_RU/installing-boot9strap-(frogtool).html">Русский</a></li> -->
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/zh_CN/installing-boot9strap-(frogtool).html">简体中文</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/zh_TW/installing-boot9strap-(frogtool).html">繁體中文</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/pl_PL/installing-boot9strap-(frogtool).html">Polski</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/tr_TR/installing-boot9strap-(frogtool).html">Türkçe</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/vi_VN/installing-boot9strap-(frogtool).html">Tiếng Việt</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ca_ES/installing-boot9strap-(frogtool).html">Català</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/el_GR/installing-boot9strap-(frogtool).html">Ελληνικά</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/he_IL/installing-boot9strap-(frogtool).html">עברית‎</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/sv_SE/installing-boot9strap-(frogtool).html">Svenska</a></li> -->
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ko_KR/installing-boot9strap-(frogtool).html">한국어</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/no_NO/installing-boot9strap-(frogtool).html">Norsk</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ja_JP/installing-boot9strap-(frogtool).html">日本語</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ar_SA/installing-boot9strap-(frogtool).html">اللغة العربية</a></li> -->
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/hu_HU/installing-boot9strap-(frogtool).html">Magyar</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ro_RO/installing-boot9strap-(frogtool).html">Română</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/sr_SP/installing-boot9strap-(frogtool).html">Српски</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/af_ZA/installing-boot9strap-(frogtool).html">Afrikaans</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ms_MY/installing-boot9strap-(frogtool).html">Bahasa Melayu</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/fi_FI/installing-boot9strap-(frogtool).html">Suomi</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/da_DK/installing-boot9strap-(frogtool).html">Dansk</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/uk_UA/installing-boot9strap-(frogtool).html">Українська</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/cs_CZ/installing-boot9strap-(frogtool).html">Čeština</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/en_PT/installing-boot9strap-(frogtool).html">Pirate English</a></li> -->
+        </ul>
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <button class="greedy-nav__toggle_lang"><div class="langicon"><i class="fa fa-language fa-lg" aria-hidden="true"></i></div></button>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  <!-- 
+  <div class="sidebar sticky">
+  
+  
+    
+    
+  
+  </div>
+
+-->
+
+
+
+<div class="sidebar sticky" style="display: none;">
+  
+
+
+
+
+
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    <li>
+      <span class="nav__sub-title">Progreso total</span>
+      <ol>
+        
+          
+            <li style="display: none;" data-name="home"><a href='/es_ES/'>Inicio</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="key-information"><a href='/es_ES/key-information'>Key Information</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="get-started"><a href='/es_ES/get-started'>Get Started</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="ntrboot"><a href='/es_ES/ntrboot'>ntrboot</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer"><a href='/es_ES/seedminer'>Seedminer</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(twn)"><a href='/es_ES/seedminer-(twn)'>Seedminer (TWN)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="bannerbomb3"><a href='/es_ES/bannerbomb3'>BannerBomb3</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(super-skaterhax)"><a href='/es_ES/homebrew-launcher-(super-skaterhax)'>Homebrew Launcher (super-skaterhax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="dumping-movable-(nimhax)"><a href='/es_ES/dumping-movable-(nimhax)'>Dumping Movable (nimhax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="multiple-options"><i>(Multiple Options)</i></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(3ds-single-system)"><a href='/es_ES/flashing-ntrboot-(3ds-single-system)'>Flashing ntrboot (3DS Single System)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(3ds-multi-system)"><a href='/es_ES/flashing-ntrboot-(3ds-multi-system)'>Flashing ntrboot (3DS Multi System)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(dsi)"><a href='/es_ES/flashing-ntrboot-(dsi)'>Flashing ntrboot (DSi)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(nds)"><a href='/es_ES/flashing-ntrboot-(nds)'>Flashing ntrboot (NDS)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="bannerbomb3-fredtool-(twn)"><a href='/es_ES/bannerbomb3-fredtool-(twn)'>BannerBomb3 + Fredtool (TWN)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(hardmod)"><a href='/es_ES/installing-boot9strap-(hardmod)'>Installing boot9strap (Hardmod)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(hbl-usm)"><a href='/es_ES/installing-boot9strap-(hbl-usm)'>Installing boot9strap (HBL-USM)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(ntrboot)"><a href='/es_ES/installing-boot9strap-(ntrboot)'>Installing boot9strap (ntrboot)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(soundhax)"><a href='/es_ES/installing-boot9strap-(soundhax)'>Installing boot9strap (Soundhax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(safecerthax)"><a href='/es_ES/installing-boot9strap-(safecerthax)'>Installing boot9strap (safecerthax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(ssloth-browser)"><a href='/es_ES/installing-boot9strap-(ssloth-browser)'>Installing boot9strap (SSLoth-Browser)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(fredtool)"><a href='/es_ES/installing-boot9strap-(fredtool)'>Installing boot9strap (Fredtool)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(usm)"><a href='/es_ES/installing-boot9strap-(usm)'>Installing boot9strap (USM)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(kartdlphax)"><a href='/es_ES/installing-boot9strap-(kartdlphax)'>Installing boot9strap (kartdlphax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(frogtool)"><a href='/es_ES/installing-boot9strap-(frogtool)'>Installing boot9strap (Frogtool)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="finalizing-setup"><a href='/es_ES/finalizing-setup'>Finalizing Setup</a></li>
+          
+        
+      </ol>
+    </li>
+  </ul>
+</nav>
+</div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Installing boot9strap (Frogtool)">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Installing boot9strap (Frogtool)
+</h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+
+        <hr>
+
+        
+        
+
+        
+          
+          <div class ="notice"><b>Para soporte en inglés, pide ayuda en el <a href="https://discord.gg/MWxPgEp">Discord de Nintendo Homebrew</a>.</b></div>
+        
+          
+          <div class ="notice"><b>Si te gustó esta guía, aceptamos <a href="contribute#donations">Donaciones</a>.</b></div>
+        
+
+        <hr>
+
+        <aside class="sidebar__right">
+<nav class="toc">
+    <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Tabla de contenidos</h4></header>
+<ul class="toc__menu" id="markdown-toc">
+  <li><a href="#qué-necesitas" id="markdown-toc-qué-necesitas">Qué necesitas</a>    <ul>
+      <li><a href="#sección-i---verificación-de-cfw" id="markdown-toc-sección-i---verificación-de-cfw">Sección I - Verificación de CFW</a></li>
+      <li><a href="#sección-ii---preparativos" id="markdown-toc-sección-ii---preparativos">Sección II - Preparativos</a></li>
+      <li><a href="#section-iii---patching-ds-download-play" id="markdown-toc-section-iii---patching-ds-download-play">Section III - Patching DS Download Play</a></li>
+      <li><a href="#section-iv---flipnote-exploit" id="markdown-toc-section-iv---flipnote-exploit">Section IV - Flipnote Exploit</a></li>
+      <li><a href="#section-vi---luma3ds-configuration" id="markdown-toc-section-vi---luma3ds-configuration">Section VI - Luma3DS Configuration</a></li>
+      <li><a href="#section-vii---restoring-ds-connection-settings" id="markdown-toc-section-vii---restoring-ds-connection-settings">Section VII - Restoring DS Connection Settings</a></li>
+    </ul>
+  </li>
+  <li><a href="#continúa-en-finalizar-instalación" id="markdown-toc-continúa-en-finalizar-instalación">Continúa en Finalizar instalación</a></li>
+</ul>
+
+  </nav>
+</aside>
+
+<details class="notice--info">
+<summary><em>Technical Details (optional)</em></summary>
+<p>For technical details on the exploits that you will be using on this page, see “DSiWare_Exports CTCert verification” and “FIRM partitions known-plaintext” <a href="https://www.3dbrew.org/wiki/3DS_System_Flaws">here</a>.</p>
+
+</details>
+
+<p class="notice--warning">To use the <a href="https://wikipedia.org/wiki/Magnet_URI_scheme">magnet</a> link for <code class="language-plaintext highlighter-rouge">frogcert.bin</code> on this page, you will need a torrent client like <a href="https://www.qbittorrent.org/download.php">qBittorrent</a> or <a href="http://dev.deluge-torrent.org/wiki/Download">Deluge</a>. <br />
+If you are unable to install one, follow <a href="bannerbomb3">Bannerbomb3</a> instead.</p>
+
+<h3 id="qué-necesitas">Qué necesitas</h3>
+
+<ul>
+  <li>Your <code class="language-plaintext highlighter-rouge">movable.sed</code> file from completing Seedminer or nimhax on the root of your SD card</li>
+  <li><i class="fa fa-magnet" aria-hidden="true" title="Este es un enlace magnético. Use a torrent client to download the file."></i> <a href="magnet:?xt=urn:btih:d12278ea50bb3574f1fbd327f3d0e2292c70941f&amp;dn=frogcert.bin&amp;tr=https%3a%2f%2ftracker.fastdownload.xyz%3a443%2fannounce&amp;tr=https%3a%2f%2fopentracker.xyz%3a443%2fannounce&amp;tr=http%3a%2f%2fopen.trackerlist.xyz%3a80%2fannounce&amp;tr=http%3a%2f%2ft.nyaatracker.com%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2fopen.demonii.si%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.port443.xyz%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.vanitycore.co%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2fretracker.lanta-net.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fthetracker.org%3a80%2fannounce&amp;tr=http%3a%2f%2ftorrent.nwps.ws%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.iamhansen.xyz%3a2000%2fannounce&amp;tr=udp%3a%2f%2fbt.xxx-tracker.com%3a2710%2fannounce&amp;tr=http%3a%2f%2f0d.kebhana.mx%3a443%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker4.itzmx.com%3a2710%2fannounce&amp;tr=udp%3a%2f%2ftracker.justseed.it%3a1337%2fannounce&amp;tr=http%3a%2f%2ftherightsize.net%3a1337%2fannounce&amp;tr=udp%3a%2f%2fretracker.hotplug.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2ftracker.internetwarriors.net%3a1337%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2800%2fannounce&amp;tr=https%3a%2f%2f2.track.ga%3a443%2fannounce&amp;tr=udp%3a%2f%2fbigfoot1942.sektori.org%3a6969%2fannounce">frogcert.bin</a> (magnet link)</li>
+  <li>The latest release of <a href="https://github.com/zoogie/Frogtool/releases/latest">Frogtool</a></li>
+  <li>The latest release of <a href="https://github.com/zoogie/b9sTool/releases/latest">b9sTool</a></li>
+</ul>
+
+<h4 id="sección-i---verificación-de-cfw">Sección I - Verificación de CFW</h4>
+
+<p>As an additional safety measure, we will perform an additional check for custom firmware. This is because using this method when custom firmware is already installed has a risk of bricking the console (rendering it unusable without recovery methods like <a href="ntrboot">ntrboot</a>).</p>
+
+<ol>
+  <li>Apaga tu consola</li>
+  <li>Mantén pulsado el botón (Select)</li>
+  <li>Enciende la consola mientras mantienes presionado (Select)</li>
+  <li>If the check was successful, you will boot to the HOME Menu and you may proceed with this guide</li>
+  <li>Apaga tu consola</li>
+</ol>
+
+<p class="notice--danger">If you see a configuration menu or the console immediately powers off, you already have CFW, and continuing with these instructions may BRICK your device! Follow <a href="checking-for-cfw">Checking for CFW</a> to upgrade your existing CFW.</p>
+
+<h4 id="sección-ii---preparativos">Sección II - Preparativos</h4>
+
+<ol>
+  <li>Apaga tu consola</li>
+  <li>Inserta tu tarjeta SD en tu computadora</li>
+  <li>Copia los archivos <code class="language-plaintext highlighter-rouge">boot.firm</code> y <code class="language-plaintext highlighter-rouge">boot.3dsx</code> desde el <code class="language-plaintext highlighter-rouge">.zip</code> de Luma3DS a la raíz de tu tarjeta SD</li>
+  <li>Copy <code class="language-plaintext highlighter-rouge">boot.nds</code> (b9sTool) from the b9sTool release <code class="language-plaintext highlighter-rouge">.zip</code> to the root of your SD card</li>
+  <li>Copy <code class="language-plaintext highlighter-rouge">Frogtool.3dsx</code> to the <code class="language-plaintext highlighter-rouge">/3ds/</code> folder on your SD card</li>
+  <li>Copy <code class="language-plaintext highlighter-rouge">frogcert.bin</code> to the root of your SD card</li>
+  <li>Reinserta tu tarjeta SD en tu consola</li>
+  <li>Enciende tu consola</li>
+</ol>
+
+<h4 id="section-iii---patching-ds-download-play">Section III - Patching DS Download Play</h4>
+
+<ol>
+  <li>Open the Homebrew Launcher through your method of choice (likely the Internet Browser)</li>
+  <li>Launch Frogtool from the list of homebrew</li>
+  <li>Select the “INJECT patched DS Download Play” option</li>
+  <li>Frogtool will automatically run and inject the JPN version of Flipnote Studio into your DS Download Play</li>
+  <li>Once this operation has finished, read the screens and check if the process was successful</li>
+  <li>Tap the touch screen, then select “BOOT patched DS Download Play”</li>
+  <li>Si el exploit fue exitoso, tu consola habrá cargado la versión japonesa de Flipnote Studio
+    <ul>
+      <li>If you get stuck on a black screen, follow <a href="https://wiki.hacks.guide/wiki/3DS:TWLFix#Homebrew_Launcher-0">this</a> page, then try again</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="section-iv---flipnote-exploit">Section IV - Flipnote Exploit</h4>
+
+<p class="notice--info">If you would prefer a visual guide to this section, one is available <a href="https://zoogie.github.io/web/flipnote_directions/">here</a>.</p>
+
+<p>In this section, you will perform a series of very specific steps within Flipnote Studio that, when performed correctly, will launch the boot9strap (custom firmware) installer.</p>
+
+<ol>
+  <li>Complete the initial setup process for the launched game until you reach the main menu
+    <ul>
+      <li>Select the left option whenever prompted during the setup process</li>
+    </ul>
+  </li>
+  <li>Using the touch-screen, select the large left box, then select the box with an SD card icon</li>
+  <li>Once the menu loads, select the face icon, then the bottom right icon to continue</li>
+  <li>Press (X) or (UP) on the D-Pad depending on which is shown on the top screen</li>
+  <li>Select the second button along the top with a film-reel icon</li>
+  <li>Scroll right until reel “3/3” is selected</li>
+  <li>Tap the third box with the letter “A” in it</li>
+  <li>Scroll left until reel “1/3” is selected</li>
+  <li>Tap the fourth box with the letter “A” in it</li>
+  <li>If the exploit was successful, your device will have loaded b9sTool</li>
+  <li>Using the D-Pad, move to “Install boot9strap”
+    <ul>
+      <li>If you miss this step, the system will exit to HOME Menu instead of installing boot9strap and you will need to open Nintendo DS Connections and start over from the beginning of this section</li>
+    </ul>
+  </li>
+  <li>Press (A), then press START and SELECT at the same time to begin the process</li>
+  <li>Once completed and the bottom screen says “done.”, exit b9sTool, then power off your device
+    <ul>
+      <li>You may have to force power off by holding the power button</li>
+      <li>If your device shuts down when you try to power it on, ensure that you have copied <code class="language-plaintext highlighter-rouge">boot.firm</code> from the Luma3DS <code class="language-plaintext highlighter-rouge">.zip</code> to the root of your SD card</li>
+      <li>If you see the Luma Configuration screen, power off your device and continue to the next section</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="section-vi---luma3ds-configuration">Section VI - Luma3DS Configuration</h4>
+
+<ol>
+  <li>Your device should have booted into the Luma3DS configuration menu
+    <ul>
+      <li>Luma3DS configuration menu are settings for the Luma3DS custom firmware. Many of these settings may be useful for customization or debugging</li>
+      <li>For the purpose of this guide, <strong>leave these options on the default settings</strong> (do not check or uncheck anything)</li>
+      <li>If your device shuts down when you try to power it on, ensure that you have copied <code class="language-plaintext highlighter-rouge">boot.firm</code> from the Luma3DS <code class="language-plaintext highlighter-rouge">.zip</code> to the root of your SD card</li>
+    </ul>
+  </li>
+  <li>Presiona (Start) para guardar y reiniciar</li>
+</ol>
+
+<p>At this point, your console will boot to Luma3DS by default.</p>
+<ul>
+  <li>Luma3DS does not look any different from the normal HOME Menu. If your console has booted into the HOME Menu, it is running custom firmware.</li>
+  <li>On the next page, you will install useful homebrew applications to complete your setup.</li>
+</ul>
+
+<h4 id="section-vii---restoring-ds-connection-settings">Section VII - Restoring DS Connection Settings</h4>
+
+<ol>
+  <li>Inicia la aplicación de Modo Descarga</li>
+  <li>Espera hasta que veas los dos botones
+    <ul>
+      <li>Do not press either of the buttons</li>
+    </ul>
+  </li>
+  <li>Presiona (Left Shoulder) + (Abajo) + (Select) a la vez para abrir el menú de Rosalina</li>
+  <li>Selecciona “Miscellaneous options”</li>
+  <li>Selecciona “Switch the hb. title to the current app.”</li>
+  <li>Presiona (B) para continuar</li>
+  <li>Presiona (B) para regresar al menú principal de Rosalina</li>
+  <li>Presiona (B) para salir del menú de Rosalina</li>
+  <li>Presiona (Home), luego cierra la aplicación de Modo Descarga</li>
+  <li>Relaunch the Download Play application</li>
+  <li>Tu consola debería cargar el Homebrew Launcher</li>
+  <li>Launch Frogtool from the list of homebrew</li>
+  <li>Select the “RESTORE patched DS Download Play” option</li>
+  <li>Once this operation has finished, read the screens and check if the process was successful
+    <ul>
+      <li>If there are any errors or missing files, correct the problem and try again</li>
+    </ul>
+  </li>
+  <li>If the process was successful, tap the touch screen, then press START to exit</li>
+  <li>Apaga tu consola</li>
+</ol>
+
+<hr />
+
+<h3 class="notice--primary" id="continúa-en-finalizar-instalación">Continúa en <a href="finalizing-setup">Finalizar instalación</a></h3>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://github.com/hacks-guide/Guide_3DS" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+<!--
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+    </ul>
+  -->
+</div>
+
+<!-- custom footer, guide specific -->
+
+
+
+<div class="page__footer-copyright">&copy; 2023 Nintendo Homebrew. - <a href="site-navigation">Navegación del sitio</a> - <a href="privacy-policy">Política de Privacidad</a> <!-- Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.--></div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+<!-- for guide purposes all caching is removed and is separately built. -->
+
+
+
+
+
+
+
+
+  </body>
+</html>
