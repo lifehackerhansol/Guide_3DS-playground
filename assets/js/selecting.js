@@ -1,3 +1,4 @@
+// CVer:NVer map for U/E/J regions
 function sslothable(s, n) {
     if
         (
@@ -19,6 +20,8 @@ function sslothable(s, n) {
     }
 }
 
+// CVer:NVer map for KOR region
+// CHN/TWN isn't validated for now as those cannot exploit atm
 function sslothablekor(s, n) {
     if
         (
@@ -39,6 +42,27 @@ function sslothablekor(s, n) {
     }
 }
 
+/*
+    Redirects page based on input from user.
+    Input:
+        - System version
+        - O3DS/N3DS
+
+    General exploits are as follows:
+    - 1.0 - 11.3
+        - Soundhax, compatible in all regions
+    - 11.4 - 11.13 with matching NVer for each version:
+        - SSLoth-Browser, doesn't work on cart-updated FW
+    - O3DS & 11.4 - 11.14 & any cart-updated FW between said version:
+        - safecerthax, compatible in all regions, O3DS only
+        - This way O3DS still gets an easy way to install something if browser isn't functional
+    - 11.15 - 11.16:
+        - Seedminer
+        - N3DS has a somewhat better page below
+    - N3DS & 11.16:
+        - super-skaterhax, compatible with 11.15 - 11.16 but browser itself doesn't work on 11.15
+        - This way N3DS users don't have to think too much about the slightly long Seedminer steps
+*/
 function redirect() {
     var major = document.getElementById("major");
     var minor = document.getElementById("minor");
@@ -55,29 +79,38 @@ function redirect() {
     else if (major.value == 0) {
         document.getElementById("result_invalidVersion").style.display = "block";
     }
-    else { //only do things if major isnt 0, which would be invalid
-        if (["U", "E", "J"].includes(region.value)) { // USA/EUR/JPN things
-            if (major.value < 11 || minor.value < 4) { //soundhax works on all consoles for 1.0-11.3
+    // only do things if major isnt 0, which would be invalid
+    else {
+        // USA/EUR/JPN things
+        if (["U", "E", "J"].includes(region.value)) {
+            // soundhax works on all consoles for 1.0-11.3
+            if (major.value < 11 || minor.value < 4) {
                 window.location.href = "installing-boot9strap-(soundhax)";
             }
-            else if (sslothable(minor.value, nver.value)) { //check for versions that are not cartupdated, cartupdated consoles cannot access the browser, see troubleshooting for solution
+            // check for versions that are not cartupdated, cartupdated consoles cannot access the browser, see troubleshooting for solution
+            else if (sslothable(minor.value, nver.value)) {
                 window.location.href = "installing-boot9strap-(ssloth-browser)";
             }
             else if (minor.value < 15 && isO3DS) {
                 window.location.href = "installing-boot9strap-(safecerthax)";
             }
+            // new browserhax for latest version
             else if (isN3DS) {
-                window.location.href = "homebrew-launcher-(super-skaterhax)"; //new browserhax for latest version
+                window.location.href = "homebrew-launcher-(super-skaterhax)";
             }
-            else { //seedminer does still work for the latest version on E/U/J/K/T/C, but can only be chained on E/U/J/K/T
+            // seedminer does still work for the latest version on E/U/J/K/T/C, but can only be chained on E/U/J/K/T
+            else {
                 window.location.href = "seedminer";
             }
         }
-        else if (region.value === "K") { //korea stuff
-            if (major.value < 11 || minor.value < 4) { //soundhax works on all consoles for 1.0-11.3
+        //korea stuff
+        else if (region.value === "K") {
+            // soundhax works on all consoles for 1.0-11.3
+            if (major.value < 11 || minor.value < 4) {
                 window.location.href = "installing-boot9strap-(soundhax)";
             }
-            else if (sslothablekor(minor.value, nver.value)) { //check for versions that are not cartupdated, cartupdated consoles cannot access the browser, see troubleshooting for solution
+            // check for versions that are not cartupdated, cartupdated consoles cannot access the browser, see troubleshooting for solution
+            else if (sslothablekor(minor.value, nver.value)) {
                 window.location.href = "installing-boot9strap-(ssloth-browser)";
             }
             else if (minor.value < 15 && isO3DS) {
@@ -86,17 +119,24 @@ function redirect() {
             else if (isN3DS) {
                 window.location.href = "homebrew-launcher-(super-skaterhax)";
             }
-            else { //seedminer does still work for the latest version on E/U/J/K/T/C, but can only be chained on E/U/J/K/T
+            // seedminer does still work for the latest version on E/U/J/K/T/C, but can only be chained on E/U/J/K/T
+            else {
                 window.location.href = "seedminer";
             }
         }
-        else if (region.value === "T") { //taiwan stuff
-            if (major.value < 11 || minor.value < 4) { //soundhax works on all consoles for 1.0-11.3
+        //taiwan stuff
+        else if (region.value === "T") {
+            // soundhax works on all consoles for 1.0-11.3
+            if (major.value < 11 || minor.value < 4) {
                 window.location.href = "installing-boot9strap-(soundhax)";
             }
-            //else if (sslothable(minor.value, nver.value)) { //check for versions that are not cartupdated, cartupdated consoles cannot access the browser, see troubleshooting for solution
-            //    window.location.href = "installing-boot9strap-(ssloth-browser)"; //OTHERAPP BROKEN FOR TWN/CHN 11.4+ ATM
-            //}
+            // check for versions that are not cartupdated, cartupdated consoles cannot access the browser, see troubleshooting for solution
+            // OTHERAPP BROKEN FOR TWN/CHN 11.4+ ATM
+            /*
+            else if (sslothable(minor.value, nver.value)) {
+                window.location.href = "installing-boot9strap-(ssloth-browser)";
+            }
+            */
             else if (minor < 15 && isO3DS) {
                 window.location.href = "installing-boot9strap-(safecerthax)";
             }
@@ -104,17 +144,25 @@ function redirect() {
                 window.location.href = "seedminer-(twn)";
             }
         }
-        else if (region.value === "C") { //chn stuff
-            if (major.value < 11 || minor.value < 4) { //soundhax works on all consoles for 1.0-11.3
+        // chn stuff
+        else if (region.value === "C") {
+            // soundhax works on all consoles for 1.0-11.3
+            if (major.value < 11 || minor.value < 4) {
                 window.location.href = "installing-boot9strap-(soundhax)";
             }
-            //else if (sslothable(minor.value, nver.value)) { //check for versions that are not cartupdated, cartupdated consoles cannot access the browser, see troubleshooting for solution
-            //    window.location.href = "installing-boot9strap-(ssloth-browser)"; //OTHERAPP BROKEN FOR TWN/CHN 11.4+ ATM
-            //}
+            // check for versions that are not cartupdated, cartupdated consoles cannot access the browser, see troubleshooting for solution
+            // OTHERAPP BROKEN FOR TWN/CHN 11.4+ ATM
+            /*
+            else if (sslothable(minor.value, nver.value)) {
+                window.location.href = "installing-boot9strap-(ssloth-browser)";
+            }
+            */
             else if (minor < 15 && isO3DS) {
                 window.location.href = "installing-boot9strap-(safecerthax)";
             }
-            else { //seedminer does still work for the latest version on E/U/J/K/T/C, but can only be chained on E/U/J/K/T, so CHN cannot be modded atm without additional hardware
+            // seedminer itself works on CHN. But no exploit *chain* supports CHN
+            // so at this point there is no supported method
+            else {
                 document.getElementById("result_methodUnavailable").style.display = "block";
             }
         }
