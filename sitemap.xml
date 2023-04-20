@@ -166,9 +166,6 @@
 <loc>https://3ds.hacks.guide/ko_KR/contribute.html</loc>
 </url>
 <url>
-<loc>https://3ds.hacks.guide/credits.html</loc>
-</url>
-<url>
 <loc>https://3ds.hacks.guide/zh_CN/credits.html</loc>
 </url>
 <url>
@@ -188,6 +185,9 @@
 </url>
 <url>
 <loc>https://3ds.hacks.guide/nl_NL/credits.html</loc>
+</url>
+<url>
+<loc>https://3ds.hacks.guide/credits.html</loc>
 </url>
 <url>
 <loc>https://3ds.hacks.guide/fr_FR/credits.html</loc>
@@ -232,6 +232,9 @@
 <loc>https://3ds.hacks.guide/ko_KR/ctrtransfer.html</loc>
 </url>
 <url>
+<loc>https://3ds.hacks.guide/donations.html</loc>
+</url>
+<url>
 <loc>https://3ds.hacks.guide/zh_CN/donations.html</loc>
 </url>
 <url>
@@ -251,9 +254,6 @@
 </url>
 <url>
 <loc>https://3ds.hacks.guide/nl_NL/donations.html</loc>
-</url>
-<url>
-<loc>https://3ds.hacks.guide/donations.html</loc>
 </url>
 <url>
 <loc>https://3ds.hacks.guide/fr_FR/donations.html</loc>

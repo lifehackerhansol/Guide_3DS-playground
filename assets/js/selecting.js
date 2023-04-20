@@ -1,3 +1,10 @@
+/*
+    Copyright (C) 2023 Gruetzig
+    Copyright (C) 2023 Nintendo Homebrew
+
+    SPDX-License-Identifier: MIT
+*/
+
 // CVer:NVer map for U/E/J regions
 function sslothable(s, n) {
     if
@@ -95,9 +102,11 @@ function redirect() {
                 window.location.href = "installing-boot9strap-(safecerthax)";
             }
             // new browserhax for latest version
+            /*
             else if (isN3DS) {
                 window.location.href = "homebrew-launcher-(super-skaterhax)";
             }
+            */
             // seedminer does still work for the latest version on E/U/J/K/T/C, but can only be chained on E/U/J/K/T
             else {
                 window.location.href = "seedminer";
@@ -116,9 +125,12 @@ function redirect() {
             else if (minor.value < 15 && isO3DS) {
                 window.location.href = "installing-boot9strap-(safecerthax)";
             }
+            // new browserhax for latest version
+            /*
             else if (isN3DS) {
                 window.location.href = "homebrew-launcher-(super-skaterhax)";
             }
+            */
             // seedminer does still work for the latest version on E/U/J/K/T/C, but can only be chained on E/U/J/K/T
             else {
                 window.location.href = "seedminer";
