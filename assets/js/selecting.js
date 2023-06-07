@@ -8,6 +8,14 @@
 const DEVICE_N3DS = 1;
 const DEVICE_O3DS = 0;
 
+function actually_finish_redirect(){ Error.apply(this, arguments); this.name = "actually_finish_redirect"; }
+actually_finish_redirect.prototype = Object.create(Error.prototype);
+
+function byebye(redirect) {
+    window.location.href = redirect;
+    throw new actually_finish_redirect("redirecting...");
+}
+
 // Soundhax
 // 1.0-11.3, all regions, all consoles
 function can_soundhax(major, minor, native, region, model) {
@@ -16,8 +24,7 @@ function can_soundhax(major, minor, native, region, model) {
     else if(major == 11 && minor <= 3) do_redirect = true;
 
     if(do_redirect) {
-        window.location.href = "installing-boot9strap-(soundhax)";
-        return true;
+        byebye("installing-boot9strap-(soundhax)");
     }
     return false;
 }
@@ -64,8 +71,7 @@ function can_ssloth(major, minor, native, region, model) {
     }
 
     if(do_redirect) {
-        window.location.href = "installing-boot9strap-(ssloth-browser)";
-        return true;
+        byebye("installing-boot9strap-(ssloth-browser)");
     }
     return false;
 }
@@ -82,8 +88,7 @@ function can_safecerthax(major, minor, native, region, model) {
     }
 
     if(do_redirect) {
-        window.location.href = "installing-boot9strap-(safecerthax)";
-        return true;
+        byebye("installing-boot9strap-(safecerthax)");
     }
     return false;
 }
@@ -114,12 +119,10 @@ function can_superskaterhax(major, minor, native, region, model) {
     }
 
     if (do_redirect_sysupdate) {
-        window.location.href = "updating-firmware-(new-3ds)";
-        return true;
+        byebye("updating-firmware-(new-3ds)");
     }
     else if (do_redirect) {
-        window.location.href = "homebrew-launcher-(super-skaterhax)";
-        return true;
+        byebye("homebrew-launcher-(super-skaterhax)");
     }
     return false;
 }
@@ -139,8 +142,7 @@ function can_miimine(major, minor, native, region, model) {
     }
 
     if (do_redirect) {
-        window.location.href = "seedminer-(mii)";
-        return true;
+        byebye("seedminer-(mii)");
     }
 }
 
@@ -162,20 +164,16 @@ function can_seedminer(major, minor, native, region, model) {
     else if (region == "T") do_redirect_sysupdate_twn = true;
 
     if (do_redirect_sysupdate_twn) {
-        window.location.href = "updating-firmware-(twn)";
-        return true;
+        byebye("updating-firmware-(twn)");
     }
     if (do_redirect_sysupdate_kor) {
-        window.location.href = "updating-firmware-(kor)";
-        return true;
+        byebye("updating-firmware-(kor)");
     }
     else if (do_redirect_twn) {
-        window.location.href = "seedminer-(twn)";
-        return true;
+        byebye("seedminer-(twn)");
     }
     else if (do_redirect) {
-        window.location.href = "seedminer";
-        return true;
+        byebye("seedminer");
     }
     return false;
 }
@@ -189,8 +187,7 @@ function is_o3ds_1117(major, minor, native, region, model) {
         }
     }
     if (do_redirect) {
-        window.location.href = "alternate-exploits"
-        return true;
+        byebye("alternate-exploits");
     }
     return false;
 }
@@ -258,9 +255,8 @@ function redirect() {
       can_superskaterhax,
       is_o3ds_1117
     ].some(func => func(major.value, minor.value, nver.value, region.value, model));
-    if (redirected) return true;
 
     // if it actually got to this point, there is no exploit available.
     document.getElementById("result_methodUnavailable").style.display = "block";
-    return false;
+    return;
 }
