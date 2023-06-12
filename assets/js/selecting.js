@@ -240,6 +240,11 @@ function redirect() {
     if(isO3DS) model = DEVICE_O3DS
     else if(isN3DS) model = DEVICE_N3DS;
 
+    if (model == DEVICE_N3DS && ["C", "T"].includes(region.value)) {
+        document.getElementById("result_invalidVersion").style.display = "block";
+        return;
+    }
+
     let redirected = [
       can_soundhax,
       can_ssloth,
