@@ -314,11 +314,35 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="updating-firmware-(new-3ds)"><a href='/fr_FR/updating-firmware-(new-3ds)'>Mise à jour du logiciel système (New 3DS)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="updating-firmware-(kor)"><a href='/fr_FR/updating-firmware-(kor)'>Mise à jour du logiciel système (KOR)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="updating-firmware-(twn)"><a href='/fr_FR/updating-firmware-(twn)'>Mise à jour du logiciel système (TWN)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="ntrboot"><a href='/fr_FR/ntrboot'>ntrboot</a></li>
           
         
           
+            <li style="display: none;" data-name="alternate-exploits"><a href='/fr_FR/alternate-exploits'>Alternate Exploits</a></li>
+          
+        
+          
             <li style="display: none;" data-name="seedminer"><a href='/fr_FR/seedminer'>Seedminer</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(alternate)"><a href='/fr_FR/seedminer-(alternate)'>Seedminer (Alternate)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(mii)"><a href='/fr_FR/seedminer-(mii)'>Seedminer (Mii)</a></li>
           
         
           
@@ -330,7 +354,31 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="bannerbomb3-(legacy)"><a href='/fr_FR/bannerbomb3-(legacy)'>BannerBomb3 (Legacy)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(ninjhax2-dx)"><a href='/fr_FR/homebrew-launcher-(ninjhax2-dx)'>Homebrew Launcher (ninjhax2-dx)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(pichaxx)"><a href='/fr_FR/homebrew-launcher-(pichaxx)'>Homebrew Launcher (PicHaxx)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(smilehax-iie)"><a href='/fr_FR/homebrew-launcher-(smilehax-iie)'>Homebrew Launcher (smilehax-IIe)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(steelhax)"><a href='/fr_FR/homebrew-launcher-(steelhax)'>Homebrew Launcher (Steelhax)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="homebrew-launcher-(super-skaterhax)"><a href='/fr_FR/homebrew-launcher-(super-skaterhax)'>Homebrew Launcher (super-skaterhax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="dumping-eshop-dsiware"><a href='/fr_FR/dumping-eshop-dsiware'>Dumping eShop DSiWare</a></li>
           
         
           
@@ -387,6 +435,14 @@ window.cookieconsent.initialise({
         
           
             <li style="display: none;" data-name="installing-boot9strap-(fredtool)"><a href='/fr_FR/installing-boot9strap-(fredtool)'>Installing boot9strap (Fredtool)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(fredtool-inject)"><a href='/fr_FR/installing-boot9strap-(fredtool-inject)'>Installing boot9strap (Fredtool-Inject)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(fredtool-legacy)"><a href='/fr_FR/installing-boot9strap-(fredtool-legacy)'>Installing boot9strap (Fredtool, Legacy)</a></li>
           
         
           
@@ -462,7 +518,7 @@ window.cookieconsent.initialise({
         </ul>
       </li>
       <li><a href="#continuer-vers-finalisation-de-linstallation" id="markdown-toc-continuer-vers-finalisation-de-linstallation">Continuer vers Finalisation de l’installation</a>        <ul>
-          <li><a href="#section-v---retirez-ntrboot" id="markdown-toc-section-v---retirez-ntrboot">Section V - Retirez ntrboot</a>            <ul>
+          <li><a href="#section-v---désinstallation-de-ntrboot" id="markdown-toc-section-v---désinstallation-de-ntrboot">Section V - Désinstallation de ntrboot</a>            <ul>
               <li><a href="#ce-dont-vous-avez-besoin-1" id="markdown-toc-ce-dont-vous-avez-besoin-1">Ce dont vous avez besoin</a></li>
               <li><a href="#instructions-1" id="markdown-toc-instructions-1">Instructions</a></li>
             </ul>
@@ -483,7 +539,7 @@ window.cookieconsent.initialise({
 <h2 id="ce-dont-vous-avez-besoin">Ce dont vous avez besoin</h2>
 
 <ul>
-  <li>Un aimant qui déclenche le mode veille de votre console (si vous avez une console pliable)</li>
+  <li>A magnet that triggers the sleep mode of your console (if using a folding style console)</li>
   <li>Votre linker DS</li>
   <li>La dernière version de <a href="https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip">SafeB9SInstaller</a> (téléchargement direct)</li>
   <li>La dernière version de <a href="https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip">boot9strap</a> (téléchargement direct)</li>
@@ -495,13 +551,13 @@ window.cookieconsent.initialise({
 <h4 id="section-i---préparatifs">Section I - Préparatifs</h4>
 
 <ol>
-  <li>Éteignez votre 3DS</li>
+  <li>Éteignez votre console</li>
   <li>Insérez la carte SD de votre console dans votre ordinateur
     <ul>
       <li>Ceci signifie la carte SD de votre 3DS, et <em>non</em> la carte SD de votre linker</li>
     </ul>
   </li>
-  <li>Copiez <code class="language-plaintext highlighter-rouge">SafeB9SInstaller.firm</code> de l’archive <code class="language-plaintext highlighter-rouge">.zip</code> de SafeB9SInstaller vers la racine de votre carte SD, et renommez-le en <code class="language-plaintext highlighter-rouge">boot.firm</code>
+  <li>Copiez <code class="language-plaintext highlighter-rouge">SafeB9SInstaller.firm</code> depuis le fichier <code class="language-plaintext highlighter-rouge">.zip</code> de SafeB9SInstaller vers la racine de votre carte SD, et renommez-le en <code class="language-plaintext highlighter-rouge">boot.firm</code>
     <ul>
       <li>La racine de la carte SD représente le répertoire initial de la carte SD où vous pouvez voir le dossier Nintendo 3DS, mais ce n’est pas à l’intérieur de ce dernier</li>
     </ul>
@@ -514,20 +570,20 @@ window.cookieconsent.initialise({
     <p class="notice--info"><img src="https://3ds.hacks.guide/images/screenshots/boot9strap-ntrboot-file-layout.png" alt="" /></p>
   </li>
   <li>Réinsérez la carte SD dans votre 3DS</li>
-  <li>Allumez votre console</li>
+  <li>Power on your console</li>
 </ol>
 
 <h4 id="section-ii---ntrboot">Section II - ntrboot</h4>
 
 <ol>
-  <li>Utilisez l’aimant pour repérer l’emplacement sur votre appareil où la sonde de sommeil est déclenchée
+  <li>Use the magnet to find the spot on your console where the sleep sensor is triggered
     <ul>
       <li>Cette étape n’est pas nécessaire sur les vieilles 2DS</li>
     </ul>
   </li>
-  <li>Éteignez votre 3DS</li>
-  <li>Insérez votre linker dans votre console</li>
-  <li>Placer l’aimant sur votre appareil pour déclencher le détecteur de sommeil
+  <li>Éteignez votre console</li>
+  <li>Insert your flashcart into your console</li>
+  <li>Place the magnet on your console to trigger the sleep sensor
     <ul>
       <li>Sur vieux 2DS, vous devez plutôt activer le commutateur de mode de sommeil</li>
     </ul>
@@ -538,7 +594,7 @@ window.cookieconsent.initialise({
     </ul>
   </li>
   <li>Si l’exploit a réussit, vous devriez avoir démarré dans SafeB9SInstaller</li>
-  <li>Retirez l’aimant de votre appareil
+  <li>Remove the magnet from your console
     <ul>
       <li>Sur vieille 2DS, vous devez plutôt désactiver le commutateur de mode de sommeil</li>
     </ul>
@@ -547,13 +603,17 @@ window.cookieconsent.initialise({
 
 <h4 id="section-iii---installation-de-boot9strap">Section III - Installation de boot9strap</h4>
 
-<p>Dans cette section, vous installerez un custom firmware sur votre console.</p>
+<p>In this section, you will install custom firmware onto your console.</p>
 
 <ol>
-  <li>Lorsque vous y êtes invité, entrez la combinaison de touches indiquée sur l’écran supérieur pour installer boot9strap</li>
-  <li>Une fois terminé, forcez votre console à s’éteindre en maintenant le bouton Power enfoncé
+  <li>Lorsque vous y êtes invité, entrez la combinaison de touches indiquée sur l’écran supérieur pour installer boot9strap
     <ul>
-      <li>Votre console ne démarrera que sur l’écran de SafeB9SInstaller tant que la section suivante n’aura pas été complétée</li>
+      <li>Si une étape sur l’écran du bas a du texte rouge, et que vous n’êtes pas invité à entrer une combinaison de touches, <a href="troubleshooting#issues-with-safeb9sinstaller">suivez ce guide de dépannage</a></li>
+    </ul>
+  </li>
+  <li>Once it is completed, force your console to power off by holding down the power button
+    <ul>
+      <li>Your console will only boot to the SafeB9SInstaller screen until the next section is completed</li>
     </ul>
   </li>
 </ol>
@@ -564,12 +624,12 @@ window.cookieconsent.initialise({
   <li>Insérez votre carte SD dans votre ordinateur</li>
   <li>Supprimez le fichier <code class="language-plaintext highlighter-rouge">boot.firm</code> de la racine de votre carte SD s’il existe</li>
   <li>Copiez <code class="language-plaintext highlighter-rouge">boot.firm</code> du fichier <code class="language-plaintext highlighter-rouge">.zip</code> de Luma3DS vers la racine de votre carte SD</li>
-  <li>Retirez la carte SD de votre ordinateur et réinsérez-là dans votre 3DS</li>
-  <li>Allumez votre console1. Your device should have booted into the Luma3DS configuration menu
+  <li>Réinsérez votre carte SD dans votre console</li>
+  <li>Power on your console1. Your console should have booted into the Luma3DS configuration menu
     <ul>
       <li>Le menu de configuration de Luma3DS sert à régler les paramètres du custom firmware Luma3DS. Beaucoup de ces paramètres peuvent être utiles pour la personnalisation ou le débogage</li>
-      <li>For the purpose of this guide, <strong>leave these options on the default settings</strong> (do not check or uncheck anything)</li>
-      <li>Si votre console s’éteint lorsque vous essayez de l’allumer, assurez-vous d’avoir copié le fichier <code class="language-plaintext highlighter-rouge">boot.firm</code> depuis l’archive <code class="language-plaintext highlighter-rouge">.zip</code> de Luma3DS à la racine de votre carte SD</li>
+      <li>Pour les besoins de ce guide, <strong>laissez ces options sur les paramètres par défaut</strong> (ne cochez ni ne décochez rien)</li>
+      <li>If your console shuts down when you try to power it on, ensure that you have copied <code class="language-plaintext highlighter-rouge">boot.firm</code> from the Luma3DS <code class="language-plaintext highlighter-rouge">.zip</code> to the root of your SD card</li>
     </ul>
   </li>
   <li>Appuyez sur (Start) pour enregistrer les modifications et redémarrer</li>
@@ -593,17 +653,17 @@ window.cookieconsent.initialise({
 
 <p>Ne faites pas ceci , tant que vous n’avez pas fini les instructions de cette page .</p>
 
-<h4 id="section-v---retirez-ntrboot">Section V - Retirez ntrboot</h4>
+<h4 id="section-v---désinstallation-de-ntrboot">Section V - Désinstallation de ntrboot</h4>
 
 <h5 id="ce-dont-vous-avez-besoin-1">Ce dont vous avez besoin</h5>
 
 <ul>
-  <li>The latest release of <a href="https://github.com/ntrteam/ntrboot_flasher/releases/latest">ntrboot_flasher</a> (<code class="language-plaintext highlighter-rouge">ntrboot_flasher.firm</code>)</li>
+  <li>La dernière version de <a href="https://github.com/ntrteam/ntrboot_flasher/releases/latest">ntrboot_flasher</a> (<code class="language-plaintext highlighter-rouge">ntrboot_flasher.firm</code>)</li>
   <li>La sauvegarde flashrom correspondant à votre linker
-Notez que si vous avez suivi <a href="flashing-ntrboot-(3ds-multi-system)">Flash de ntrboot (plusieurs 3DS)</a>, la sauvegarde de la flashrom existe déjà à l’emplacement correct et n’a pas besoin d’être téléchargée
     <ul>
-      <li>Notez que si vous avez suivi <a href="flashing-ntrboot-(3ds-single-system)">Flash de ntrboot (une seule 3DS)</a> ou <a href="flashing-ntrboot-(nds)">Flash de ntrboot (NDS)</a>, la sauvegarde de la flashrom existe déjà sur la carte SD de votre linker et doit être copiée à l’emplacement précisé ci-dessous
-Si vous ne savez pas quelle révision HW vous avez, essayez toutes celles possibles pour votre cartouche. Only the correct one will allow your flashcart to launch properly from the HOME Menu, but flashing the wrong one will not brick the cart</li>
+      <li>Notez que si vous avez suivi <a href="flashing-ntrboot-(3ds-multi-system)">Flash de ntrboot (plusieurs 3DS)</a>, la sauvegarde de la flashrom existe déjà à l’emplacement correct et n’a pas besoin d’être téléchargée</li>
+      <li>Notez que si vous avez suivi <a href="flashing-ntrboot-(3ds-single-system)">Flash de ntrboot (une seule 3DS)</a> ou <a href="flashing-ntrboot-(nds)">Flash de ntrboot (NDS)</a>, la sauvegarde de la flashrom existe déjà sur la carte SD de votre linker et doit être copiée à l’emplacement précisé ci-dessous.</li>
+      <li>Si vous ne savez pas quelle révision HW vous avez, essayez toutes celles possibles pour votre cartouche. Seul le bon flashrom permettra à votre linker de se lancer correctement depuis le Menu HOME, mais flasher le mauvais flashrom ne brickera pas le linker</li>
     </ul>
   </li>
 </ul>
@@ -625,12 +685,12 @@ Si vous ne savez pas quelle révision HW vous avez, essayez toutes celles possib
     <tr>
       <td><strong>Acekard 2i</strong></td>
       <td style="text-align: center">HW 81</td>
-      <td style="text-align: center"><i class="fa fa-magnet" aria-hidden="true" title="Ceci est un lien magnet. Use a torrent client to download the file."></i> - <a href="magnet:?xt=urn:btih:71ce385a1d65e28719c419fe58d171a4873501ff&amp;dn=Acekard_2i_(HW_81)-Flashrom.zip&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.lelux.fi%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.loadbt.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.monitorit4.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.ololosh.space%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.srv00.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.theoks.net%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.zerobytes.xyz%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker1.bt.moack.co.kr%3a80%2fannounce&amp;tr=udp%3a%2f%2fvibe.sleepyinternetfun.xyz%3a1738%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=http%3a%2f%2fopenbittorrent.com%3a80%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce">Acekard_2i_(HW_81)-Flashrom.zip</a></td>
+      <td style="text-align: center"><i class="fa fa-magnet" aria-hidden="true" title="Ceci est un lien magnet. Utilisez un client torrent pour télécharger le fichier."></i> - <a href="magnet:?xt=urn:btih:71ce385a1d65e28719c419fe58d171a4873501ff&amp;dn=Acekard_2i_(HW_81)-Flashrom.zip&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.lelux.fi%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.loadbt.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.monitorit4.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.ololosh.space%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.srv00.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.theoks.net%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.zerobytes.xyz%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker1.bt.moack.co.kr%3a80%2fannounce&amp;tr=udp%3a%2f%2fvibe.sleepyinternetfun.xyz%3a1738%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=http%3a%2f%2fopenbittorrent.com%3a80%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce">Acekard_2i_(HW_81)-Flashrom.zip</a></td>
     </tr>
     <tr>
       <td><strong>Acekard 2i</strong></td>
       <td style="text-align: center">HW 44</td>
-      <td style="text-align: center"><i class="fa fa-magnet" aria-hidden="true" title="Ceci est un lien magnet. Use a torrent client to download the file."></i> - <a href="magnet:?xt=urn:btih:d04bd19e15bf8600ccef6540bdbd043846888132&amp;dn=Acekard_2i_(HW_44)-Flashrom.zip&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.lelux.fi%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.loadbt.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.monitorit4.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.ololosh.space%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.srv00.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.theoks.net%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.zerobytes.xyz%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker1.bt.moack.co.kr%3a80%2fannounce&amp;tr=udp%3a%2f%2fvibe.sleepyinternetfun.xyz%3a1738%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=http%3a%2f%2fopenbittorrent.com%3a80%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce">Acekard_2i_(HW_44)-Flashrom.zip</a></td>
+      <td style="text-align: center"><i class="fa fa-magnet" aria-hidden="true" title="Ceci est un lien magnet. Utilisez un client torrent pour télécharger le fichier."></i> - <a href="magnet:?xt=urn:btih:d04bd19e15bf8600ccef6540bdbd043846888132&amp;dn=Acekard_2i_(HW_44)-Flashrom.zip&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.lelux.fi%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.loadbt.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.monitorit4.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.ololosh.space%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.srv00.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.theoks.net%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.zerobytes.xyz%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker1.bt.moack.co.kr%3a80%2fannounce&amp;tr=udp%3a%2f%2fvibe.sleepyinternetfun.xyz%3a1738%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=http%3a%2f%2fopenbittorrent.com%3a80%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce">Acekard_2i_(HW_44)-Flashrom.zip</a></td>
     </tr>
     <tr>
       <td><strong>DSTT</strong></td>
@@ -640,12 +700,12 @@ Si vous ne savez pas quelle révision HW vous avez, essayez toutes celles possib
     <tr>
       <td><strong>Infinity 3 R4i</strong></td>
       <td style="text-align: center">HW A5</td>
-      <td style="text-align: center"><i class="fa fa-magnet" aria-hidden="true" title="Ceci est un lien magnet. Use a torrent client to download the file."></i> - <a href="magnet:?xt=urn:btih:c6dee8cc9535d58284ccb8430c9af4682c3e1efc&amp;dn=R4i_Gold_3DS_(HW_A5)-Flashrom.zip&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.lelux.fi%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.monitorit4.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.ololosh.space%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.srv00.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.theoks.net%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2ftracker.zerobytes.xyz%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker1.bt.moack.co.kr%3a80%2fannounce&amp;tr=udp%3a%2f%2fvibe.sleepyinternetfun.xyz%3a1738%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.loadbt.com%3a6969%2fannounce&amp;tr=http%3a%2f%2fopenbittorrent.com%3a80%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce">R4i_Gold_3DS_(HW_A5)-Flashrom.zip</a></td>
+      <td style="text-align: center"><i class="fa fa-magnet" aria-hidden="true" title="Ceci est un lien magnet. Utilisez un client torrent pour télécharger le fichier."></i> - <a href="magnet:?xt=urn:btih:c6dee8cc9535d58284ccb8430c9af4682c3e1efc&amp;dn=R4i_Gold_3DS_(HW_A5)-Flashrom.zip&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.lelux.fi%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.monitorit4.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.ololosh.space%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.srv00.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.theoks.net%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2ftracker.zerobytes.xyz%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker1.bt.moack.co.kr%3a80%2fannounce&amp;tr=udp%3a%2f%2fvibe.sleepyinternetfun.xyz%3a1738%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.loadbt.com%3a6969%2fannounce&amp;tr=http%3a%2f%2fopenbittorrent.com%3a80%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce">R4i_Gold_3DS_(HW_A5)-Flashrom.zip</a></td>
     </tr>
     <tr>
       <td><strong>R4 3D Revolution</strong></td>
       <td style="text-align: center">HW A6</td>
-      <td style="text-align: center"><i class="fa fa-magnet" aria-hidden="true" title="Ceci est un lien magnet. Use a torrent client to download the file."></i> - <a href="magnet:?xt=urn:btih:e1675722834b870ea64ddf1ef9ca77d78db2be00&amp;dn=R4i_Gold_3DS_(HW_A6)-Flashrom.zip&amp;tr=udp%3a%2f%2ftracker1.bt.moack.co.kr%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.monitorit4.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.ololosh.space%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.srv00.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.theoks.net%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.zerobytes.xyz%3a1337%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2fvibe.sleepyinternetfun.xyz%3a1738%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.lelux.fi%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.loadbt.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&amp;tr=http%3a%2f%2fopenbittorrent.com%3a80%2fannounce">R4i_Gold_3DS_(HW_A6)-Flashrom.zip</a></td>
+      <td style="text-align: center"><i class="fa fa-magnet" aria-hidden="true" title="Ceci est un lien magnet. Utilisez un client torrent pour télécharger le fichier."></i> - <a href="magnet:?xt=urn:btih:e1675722834b870ea64ddf1ef9ca77d78db2be00&amp;dn=R4i_Gold_3DS_(HW_A6)-Flashrom.zip&amp;tr=udp%3a%2f%2ftracker1.bt.moack.co.kr%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.monitorit4.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.ololosh.space%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.srv00.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.theoks.net%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.zerobytes.xyz%3a1337%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2fvibe.sleepyinternetfun.xyz%3a1738%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.lelux.fi%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.loadbt.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&amp;tr=http%3a%2f%2fopenbittorrent.com%3a80%2fannounce">R4i_Gold_3DS_(HW_A6)-Flashrom.zip</a></td>
     </tr>
     <tr>
       <td><strong>R4i Gold 3DS Deluxe “Starter”</strong></td>
@@ -655,7 +715,7 @@ Si vous ne savez pas quelle révision HW vous avez, essayez toutes celles possib
     <tr>
       <td><strong>R4i Gold 3DS</strong></td>
       <td style="text-align: center">HW 4</td>
-      <td style="text-align: center"><i class="fa fa-magnet" aria-hidden="true" title="Ceci est un lien magnet. Use a torrent client to download the file."></i> - <a href="magnet:?xt=urn:btih:a742778ade94b4a0b877cc481ba0f1a4120262da&amp;dn=R4i_Gold_3DS_(HW_4)-Flashrom.zip&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.lelux.fi%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.loadbt.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.monitorit4.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.ololosh.space%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.srv00.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.theoks.net%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2ftracker.zerobytes.xyz%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker1.bt.moack.co.kr%3a80%2fannounce&amp;tr=udp%3a%2f%2fvibe.sleepyinternetfun.xyz%3a1738%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=http%3a%2f%2fopenbittorrent.com%3a80%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce">R4i_Gold_3DS_(HW_4)-Flashrom.zip</a></td>
+      <td style="text-align: center"><i class="fa fa-magnet" aria-hidden="true" title="Ceci est un lien magnet. Utilisez un client torrent pour télécharger le fichier."></i> - <a href="magnet:?xt=urn:btih:a742778ade94b4a0b877cc481ba0f1a4120262da&amp;dn=R4i_Gold_3DS_(HW_4)-Flashrom.zip&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.lelux.fi%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.loadbt.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.monitorit4.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.ololosh.space%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.srv00.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.theoks.net%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2ftracker.zerobytes.xyz%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker1.bt.moack.co.kr%3a80%2fannounce&amp;tr=udp%3a%2f%2fvibe.sleepyinternetfun.xyz%3a1738%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=http%3a%2f%2fopenbittorrent.com%3a80%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce">R4i_Gold_3DS_(HW_4)-Flashrom.zip</a></td>
     </tr>
     <tr>
       <td><strong>R4i Gold 3DS</strong></td>
@@ -675,12 +735,12 @@ Si vous ne savez pas quelle révision HW vous avez, essayez toutes celles possib
     <tr>
       <td><strong>R4i Gold 3DS</strong></td>
       <td style="text-align: center">HW 8</td>
-      <td style="text-align: center"><i class="fa fa-magnet" aria-hidden="true" title="This is a magnet link. Use a torrent client to download the file."></i> - <a href="magnet:?xt=urn:btih:e56429289034529f05023b3d4722ed66f6270338&amp;xt=urn:btmh:122088bafa255809c2cd458edfce96e3dd463ce819ce05c9d335db1dafd54c254195&amp;dn=R4i_Gold_3DS_(HW_8)-Flashrom.zip&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.dler.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.bitsearch.to%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker-udp.gbitt.info%3a80%2fannounce&amp;tr=udp%3a%2f%2fretracker.netbynet.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fretracker.lanta-net.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopentor.org%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopen.stealth.si%3a80%2fannounce&amp;tr=udp%3a%2f%2fmts.tvbit.co%3a6969%2fannounce&amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2fbt2.archive.org%3a6969%2fannounce">R4i_Gold_3DS_(HW_8)-Flashrom.zip</a></td>
+      <td style="text-align: center"><i class="fa fa-magnet" aria-hidden="true" title="Ceci est un lien magnet. Utilisez un client torrent pour télécharger le fichier."></i> - <a href="magnet:?xt=urn:btih:e56429289034529f05023b3d4722ed66f6270338&amp;xt=urn:btmh:122088bafa255809c2cd458edfce96e3dd463ce819ce05c9d335db1dafd54c254195&amp;dn=R4i_Gold_3DS_(HW_8)-Flashrom.zip&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.dler.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.bitsearch.to%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker-udp.gbitt.info%3a80%2fannounce&amp;tr=udp%3a%2f%2fretracker.netbynet.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fretracker.lanta-net.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopentor.org%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopen.stealth.si%3a80%2fannounce&amp;tr=udp%3a%2f%2fmts.tvbit.co%3a6969%2fannounce&amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2fbt2.archive.org%3a6969%2fannounce">R4i_Gold_3DS_(HW_8)-Flashrom.zip</a></td>
     </tr>
     <tr>
       <td><strong>R4i Gold 3DS</strong></td>
       <td style="text-align: center">HW D</td>
-      <td style="text-align: center"><i class="fa fa-magnet" aria-hidden="true" title="Ceci est un lien magnet. Use a torrent client to download the file."></i> - <a href="magnet:?xt=urn:btih:0a074dd475a26166d90ae26e313dcbc6d51cfa12&amp;dn=R4i_Gold_3DS_(HW_D)-Flashrom.zip&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.lelux.fi%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.loadbt.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.monitorit4.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.ololosh.space%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.srv00.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.theoks.net%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2ftracker.zerobytes.xyz%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker1.bt.moack.co.kr%3a80%2fannounce&amp;tr=udp%3a%2f%2fvibe.sleepyinternetfun.xyz%3a1738%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=http%3a%2f%2fopenbittorrent.com%3a80%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce">R4i_Gold_3DS_(HW_D)-Flashrom.zip</a></td>
+      <td style="text-align: center"><i class="fa fa-magnet" aria-hidden="true" title="Ceci est un lien magnet. Utilisez un client torrent pour télécharger le fichier."></i> - <a href="magnet:?xt=urn:btih:0a074dd475a26166d90ae26e313dcbc6d51cfa12&amp;dn=R4i_Gold_3DS_(HW_D)-Flashrom.zip&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.lelux.fi%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.loadbt.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.monitorit4.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.ololosh.space%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.srv00.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.theoks.net%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2ftracker.zerobytes.xyz%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker1.bt.moack.co.kr%3a80%2fannounce&amp;tr=udp%3a%2f%2fvibe.sleepyinternetfun.xyz%3a1738%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=http%3a%2f%2fopenbittorrent.com%3a80%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce">R4i_Gold_3DS_(HW_D)-Flashrom.zip</a></td>
     </tr>
     <tr>
       <td><strong>R4i Gold 3DS Plus</strong></td>
@@ -690,47 +750,47 @@ Si vous ne savez pas quelle révision HW vous avez, essayez toutes celles possib
     <tr>
       <td><strong>R4i Gold 3DS RTS</strong></td>
       <td style="text-align: center">HW A5</td>
-      <td style="text-align: center"><i class="fa fa-magnet" aria-hidden="true" title="Ceci est un lien magnet. Use a torrent client to download the file."></i> - <a href="magnet:?xt=urn:btih:c6dee8cc9535d58284ccb8430c9af4682c3e1efc&amp;dn=R4i_Gold_3DS_(HW_A5)-Flashrom.zip&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.lelux.fi%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.monitorit4.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.ololosh.space%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.srv00.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.theoks.net%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2ftracker.zerobytes.xyz%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker1.bt.moack.co.kr%3a80%2fannounce&amp;tr=udp%3a%2f%2fvibe.sleepyinternetfun.xyz%3a1738%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.loadbt.com%3a6969%2fannounce&amp;tr=http%3a%2f%2fopenbittorrent.com%3a80%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce">R4i_Gold_3DS_(HW_A5)-Flashrom.zip</a></td>
+      <td style="text-align: center"><i class="fa fa-magnet" aria-hidden="true" title="Ceci est un lien magnet. Utilisez un client torrent pour télécharger le fichier."></i> - <a href="magnet:?xt=urn:btih:c6dee8cc9535d58284ccb8430c9af4682c3e1efc&amp;dn=R4i_Gold_3DS_(HW_A5)-Flashrom.zip&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.lelux.fi%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.monitorit4.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.ololosh.space%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.srv00.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.theoks.net%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2ftracker.zerobytes.xyz%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker1.bt.moack.co.kr%3a80%2fannounce&amp;tr=udp%3a%2f%2fvibe.sleepyinternetfun.xyz%3a1738%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.loadbt.com%3a6969%2fannounce&amp;tr=http%3a%2f%2fopenbittorrent.com%3a80%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce">R4i_Gold_3DS_(HW_A5)-Flashrom.zip</a></td>
     </tr>
     <tr>
       <td><strong>R4i Gold 3DS RTS</strong></td>
       <td style="text-align: center">HW A6</td>
-      <td style="text-align: center"><i class="fa fa-magnet" aria-hidden="true" title="Ceci est un lien magnet. Use a torrent client to download the file."></i> - <a href="magnet:?xt=urn:btih:e1675722834b870ea64ddf1ef9ca77d78db2be00&amp;dn=R4i_Gold_3DS_(HW_A6)-Flashrom.zip&amp;tr=udp%3a%2f%2ftracker1.bt.moack.co.kr%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.monitorit4.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.ololosh.space%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.srv00.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.theoks.net%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.zerobytes.xyz%3a1337%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2fvibe.sleepyinternetfun.xyz%3a1738%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.lelux.fi%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.loadbt.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&amp;tr=http%3a%2f%2fopenbittorrent.com%3a80%2fannounce">R4i_Gold_3DS_(HW_A6)-Flashrom.zip</a></td>
+      <td style="text-align: center"><i class="fa fa-magnet" aria-hidden="true" title="Ceci est un lien magnet. Utilisez un client torrent pour télécharger le fichier."></i> - <a href="magnet:?xt=urn:btih:e1675722834b870ea64ddf1ef9ca77d78db2be00&amp;dn=R4i_Gold_3DS_(HW_A6)-Flashrom.zip&amp;tr=udp%3a%2f%2ftracker1.bt.moack.co.kr%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.monitorit4.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.ololosh.space%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.srv00.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.theoks.net%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.zerobytes.xyz%3a1337%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2fvibe.sleepyinternetfun.xyz%3a1738%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.lelux.fi%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.loadbt.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&amp;tr=http%3a%2f%2fopenbittorrent.com%3a80%2fannounce">R4i_Gold_3DS_(HW_A6)-Flashrom.zip</a></td>
     </tr>
     <tr>
       <td><strong>R4i Gold 3DS RTS</strong></td>
       <td style="text-align: center">HW A7</td>
-      <td style="text-align: center"><i class="fa fa-magnet" aria-hidden="true" title="Ceci est un lien magnet. Use a torrent client to download the file."></i> - <a href="magnet:?xt=urn:btih:d780a1fbcb83d0d3c99748c87534f77957da98ce&amp;dn=R4i_Gold_3DS_(HW_A7)-Flashrom.zip&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.lelux.fi%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.loadbt.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.monitorit4.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.ololosh.space%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.srv00.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.theoks.net%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2ftracker.zerobytes.xyz%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker1.bt.moack.co.kr%3a80%2fannounce&amp;tr=udp%3a%2f%2fvibe.sleepyinternetfun.xyz%3a1738%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&amp;tr=http%3a%2f%2fopenbittorrent.com%3a80%2fannounce">R4i_Gold_3DS_(HW_A7)-Flashrom.zip</a></td>
+      <td style="text-align: center"><i class="fa fa-magnet" aria-hidden="true" title="Ceci est un lien magnet. Utilisez un client torrent pour télécharger le fichier."></i> - <a href="magnet:?xt=urn:btih:d780a1fbcb83d0d3c99748c87534f77957da98ce&amp;dn=R4i_Gold_3DS_(HW_A7)-Flashrom.zip&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.lelux.fi%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.loadbt.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.monitorit4.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.ololosh.space%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.srv00.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.theoks.net%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2ftracker.zerobytes.xyz%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker1.bt.moack.co.kr%3a80%2fannounce&amp;tr=udp%3a%2f%2fvibe.sleepyinternetfun.xyz%3a1738%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&amp;tr=http%3a%2f%2fopenbittorrent.com%3a80%2fannounce">R4i_Gold_3DS_(HW_A7)-Flashrom.zip</a></td>
     </tr>
     <tr>
       <td><strong>R4i Ultra</strong></td>
       <td style="text-align: center"> </td>
-      <td style="text-align: center"><i class="fa fa-magnet" aria-hidden="true" title="Ceci est un lien magnet. Use a torrent client to download the file."></i> - <a href="magnet:?xt=urn:btih:e2a080eb70b92d3127ffea2a5be6bbdb1928a438&amp;dn=R4i_Ultra-Flashrom.zip&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.lelux.fi%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.loadbt.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.monitorit4.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.ololosh.space%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.srv00.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.theoks.net%3a6969%2fannounce&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.zerobytes.xyz%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker1.bt.moack.co.kr%3a80%2fannounce&amp;tr=udp%3a%2f%2fvibe.sleepyinternetfun.xyz%3a1738%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&amp;tr=http%3a%2f%2fopenbittorrent.com%3a80%2fannounce">R4i_Ultra-Flashrom.zip</a></td>
+      <td style="text-align: center"><i class="fa fa-magnet" aria-hidden="true" title="Ceci est un lien magnet. Utilisez un client torrent pour télécharger le fichier."></i> - <a href="magnet:?xt=urn:btih:e2a080eb70b92d3127ffea2a5be6bbdb1928a438&amp;dn=R4i_Ultra-Flashrom.zip&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.lelux.fi%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.loadbt.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.monitorit4.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.ololosh.space%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.srv00.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.theoks.net%3a6969%2fannounce&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.zerobytes.xyz%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker1.bt.moack.co.kr%3a80%2fannounce&amp;tr=udp%3a%2f%2fvibe.sleepyinternetfun.xyz%3a1738%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&amp;tr=http%3a%2f%2fopenbittorrent.com%3a80%2fannounce">R4i_Ultra-Flashrom.zip</a></td>
     </tr>
     <tr>
       <td><strong>R4i-SDHC 3DS RTS</strong></td>
       <td style="text-align: center"> </td>
-      <td style="text-align: center"><i class="fa fa-magnet" aria-hidden="true" title="Ceci est un lien magnet. Use a torrent client to download the file."></i> - <a href="magnet:?xt=urn:btih:dc5aeeb4bfffd09d10f1d9f20179df3e74223fd1&amp;dn=R4i-SDHC_3DS_RTS_B9S-Flashrom.zip&amp;tr=udp%3a%2f%2fbt2.archive.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2fvibe.sleepyinternetfun.xyz%3a1738%2fannounce&amp;tr=udp%3a%2f%2ftracker1.bt.moack.co.kr%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.zerobytes.xyz%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.theoks.net%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.srv00.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.ololosh.space%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.monitorit4.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.loadbt.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.lelux.fi%3a6969%2fannounce&amp;tr=http%3a%2f%2fopenbittorrent.com%3a80%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2fopen.stealth.si%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.bitsearch.to%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.dler.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker-udp.gbitt.info%3a80%2fannounce&amp;tr=udp%3a%2f%2fretracker.netbynet.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fretracker.lanta-net.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopentor.org%3a2710%2fannounce&amp;tr=udp%3a%2f%2fmts.tvbit.co%3a6969%2fannounce&amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce">R4i-SDHC_3DS_RTS_B9S-Flashrom.zip</a></td>
+      <td style="text-align: center"><i class="fa fa-magnet" aria-hidden="true" title="Ceci est un lien magnet. Utilisez un client torrent pour télécharger le fichier."></i> - <a href="magnet:?xt=urn:btih:dc5aeeb4bfffd09d10f1d9f20179df3e74223fd1&amp;dn=R4i-SDHC_3DS_RTS_B9S-Flashrom.zip&amp;tr=udp%3a%2f%2fbt2.archive.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2fvibe.sleepyinternetfun.xyz%3a1738%2fannounce&amp;tr=udp%3a%2f%2ftracker1.bt.moack.co.kr%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.zerobytes.xyz%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.theoks.net%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.srv00.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.ololosh.space%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.monitorit4.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.loadbt.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.lelux.fi%3a6969%2fannounce&amp;tr=http%3a%2f%2fopenbittorrent.com%3a80%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2fopen.stealth.si%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.bitsearch.to%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.dler.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker-udp.gbitt.info%3a80%2fannounce&amp;tr=udp%3a%2f%2fretracker.netbynet.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fretracker.lanta-net.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopentor.org%3a2710%2fannounce&amp;tr=udp%3a%2f%2fmts.tvbit.co%3a6969%2fannounce&amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce">R4i-SDHC_3DS_RTS_B9S-Flashrom.zip</a></td>
     </tr>
     <tr>
       <td><strong>R4i-SDHC B9S</strong></td>
       <td style="text-align: center"> </td>
-      <td style="text-align: center"><i class="fa fa-magnet" aria-hidden="true" title="Ceci est un lien magnet. Use a torrent client to download the file."></i> - <a href="magnet:?xt=urn:btih:dc5aeeb4bfffd09d10f1d9f20179df3e74223fd1&amp;dn=R4i-SDHC_3DS_RTS_B9S-Flashrom.zip&amp;tr=udp%3a%2f%2fbt2.archive.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2fvibe.sleepyinternetfun.xyz%3a1738%2fannounce&amp;tr=udp%3a%2f%2ftracker1.bt.moack.co.kr%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.zerobytes.xyz%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.theoks.net%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.srv00.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.ololosh.space%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.monitorit4.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.loadbt.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.lelux.fi%3a6969%2fannounce&amp;tr=http%3a%2f%2fopenbittorrent.com%3a80%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2fopen.stealth.si%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.bitsearch.to%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.dler.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker-udp.gbitt.info%3a80%2fannounce&amp;tr=udp%3a%2f%2fretracker.netbynet.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fretracker.lanta-net.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopentor.org%3a2710%2fannounce&amp;tr=udp%3a%2f%2fmts.tvbit.co%3a6969%2fannounce&amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce">R4i-SDHC_3DS_RTS_B9S-Flashrom.zip</a></td>
+      <td style="text-align: center"><i class="fa fa-magnet" aria-hidden="true" title="Ceci est un lien magnet. Utilisez un client torrent pour télécharger le fichier."></i> - <a href="magnet:?xt=urn:btih:dc5aeeb4bfffd09d10f1d9f20179df3e74223fd1&amp;dn=R4i-SDHC_3DS_RTS_B9S-Flashrom.zip&amp;tr=udp%3a%2f%2fbt2.archive.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2fvibe.sleepyinternetfun.xyz%3a1738%2fannounce&amp;tr=udp%3a%2f%2ftracker1.bt.moack.co.kr%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.zerobytes.xyz%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.theoks.net%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.srv00.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.ololosh.space%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.monitorit4.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.loadbt.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.lelux.fi%3a6969%2fannounce&amp;tr=http%3a%2f%2fopenbittorrent.com%3a80%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2fopen.stealth.si%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.bitsearch.to%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.dler.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker-udp.gbitt.info%3a80%2fannounce&amp;tr=udp%3a%2f%2fretracker.netbynet.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fretracker.lanta-net.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopentor.org%3a2710%2fannounce&amp;tr=udp%3a%2f%2fmts.tvbit.co%3a6969%2fannounce&amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce">R4i-SDHC_3DS_RTS_B9S-Flashrom.zip</a></td>
     </tr>
     <tr>
       <td><strong>R4iSDHC GOLD Pro 20XX</strong> de r4isdhc <strong>.com</strong></td>
       <td style="text-align: center"> </td>
-      <td style="text-align: center"><i class="fa fa-magnet" aria-hidden="true" title="Ceci est un lien magnet. Use a torrent client to download the file."></i> - <a href="magnet:?xt=urn:btih:d16817f7fdd0eac18d71d2ebd73d51315389d90e&amp;dn=R4iSDHC.com_20XX-Flashrom.zip&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.lelux.fi%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.loadbt.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.monitorit4.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.ololosh.space%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.srv00.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.theoks.net%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.zerobytes.xyz%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker1.bt.moack.co.kr%3a80%2fannounce&amp;tr=udp%3a%2f%2fvibe.sleepyinternetfun.xyz%3a1738%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&amp;tr=http%3a%2f%2fopenbittorrent.com%3a80%2fannounce">R4iSDHC.com_20XX-Flashrom.zip</a></td>
+      <td style="text-align: center"><i class="fa fa-magnet" aria-hidden="true" title="Ceci est un lien magnet. Utilisez un client torrent pour télécharger le fichier."></i> - <a href="magnet:?xt=urn:btih:d16817f7fdd0eac18d71d2ebd73d51315389d90e&amp;dn=R4iSDHC.com_20XX-Flashrom.zip&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.lelux.fi%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.loadbt.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.monitorit4.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.ololosh.space%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.srv00.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.theoks.net%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.zerobytes.xyz%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker1.bt.moack.co.kr%3a80%2fannounce&amp;tr=udp%3a%2f%2fvibe.sleepyinternetfun.xyz%3a1738%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&amp;tr=http%3a%2f%2fopenbittorrent.com%3a80%2fannounce">R4iSDHC.com_20XX-Flashrom.zip</a></td>
     </tr>
     <tr>
       <td><strong>R4iSDHC RTS LITE 20XX</strong> de r4isdhc <strong>.com</strong></td>
       <td style="text-align: center"> </td>
-      <td style="text-align: center"><i class="fa fa-magnet" aria-hidden="true" title="Ceci est un lien magnet. Use a torrent client to download the file."></i> - <a href="magnet:?xt=urn:btih:d16817f7fdd0eac18d71d2ebd73d51315389d90e&amp;dn=R4iSDHC.com_20XX-Flashrom.zip&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.lelux.fi%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.loadbt.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.monitorit4.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.ololosh.space%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.srv00.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.theoks.net%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.zerobytes.xyz%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker1.bt.moack.co.kr%3a80%2fannounce&amp;tr=udp%3a%2f%2fvibe.sleepyinternetfun.xyz%3a1738%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&amp;tr=http%3a%2f%2fopenbittorrent.com%3a80%2fannounce">R4iSDHC.com_20XX-Flashrom.zip</a></td>
+      <td style="text-align: center"><i class="fa fa-magnet" aria-hidden="true" title="Ceci est un lien magnet. Utilisez un client torrent pour télécharger le fichier."></i> - <a href="magnet:?xt=urn:btih:d16817f7fdd0eac18d71d2ebd73d51315389d90e&amp;dn=R4iSDHC.com_20XX-Flashrom.zip&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.lelux.fi%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.loadbt.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.monitorit4.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.ololosh.space%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.srv00.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.theoks.net%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.zerobytes.xyz%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker1.bt.moack.co.kr%3a80%2fannounce&amp;tr=udp%3a%2f%2fvibe.sleepyinternetfun.xyz%3a1738%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&amp;tr=http%3a%2f%2fopenbittorrent.com%3a80%2fannounce">R4iSDHC.com_20XX-Flashrom.zip</a></td>
     </tr>
     <tr>
       <td><strong>R4iSDHC Dual-Core 20XX</strong> de r4isdhc <strong>.com</strong></td>
       <td style="text-align: center"> </td>
-      <td style="text-align: center"><i class="fa fa-magnet" aria-hidden="true" title="Ceci est un lien magnet. Use a torrent client to download the file."></i> - <a href="magnet:?xt=urn:btih:d16817f7fdd0eac18d71d2ebd73d51315389d90e&amp;dn=R4iSDHC.com_20XX-Flashrom.zip&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.lelux.fi%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.loadbt.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.monitorit4.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.ololosh.space%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.srv00.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.theoks.net%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.zerobytes.xyz%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker1.bt.moack.co.kr%3a80%2fannounce&amp;tr=udp%3a%2f%2fvibe.sleepyinternetfun.xyz%3a1738%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&amp;tr=http%3a%2f%2fopenbittorrent.com%3a80%2fannounce">R4iSDHC.com_20XX-Flashrom.zip</a></td>
+      <td style="text-align: center"><i class="fa fa-magnet" aria-hidden="true" title="Ceci est un lien magnet. Utilisez un client torrent pour télécharger le fichier."></i> - <a href="magnet:?xt=urn:btih:d16817f7fdd0eac18d71d2ebd73d51315389d90e&amp;dn=R4iSDHC.com_20XX-Flashrom.zip&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.lelux.fi%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.loadbt.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.monitorit4.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.ololosh.space%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.srv00.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.theoks.net%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.zerobytes.xyz%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker1.bt.moack.co.kr%3a80%2fannounce&amp;tr=udp%3a%2f%2fvibe.sleepyinternetfun.xyz%3a1738%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&amp;tr=http%3a%2f%2fopenbittorrent.com%3a80%2fannounce">R4iSDHC.com_20XX-Flashrom.zip</a></td>
     </tr>
   </tbody>
 </table>
@@ -738,7 +798,7 @@ Si vous ne savez pas quelle révision HW vous avez, essayez toutes celles possib
 <h5 id="instructions-1">Instructions</h5>
 
 <ol>
-  <li>Éteignez votre 3DS</li>
+  <li>Éteignez votre console</li>
   <li>Insérez votre carte SD dans votre ordinateur
     <ul>
       <li>Ceci signifie la carte SD de votre 3DS, et <em>non</em> la carte SD de votre linker</li>
@@ -748,8 +808,8 @@ Si vous ne savez pas quelle révision HW vous avez, essayez toutes celles possib
   <li>Copiez le fichier <code class="language-plaintext highlighter-rouge">.bin</code> venant du fichier <code class="language-plaintext highlighter-rouge">.zip</code> de votre sauvegarde flashrom dans le dossier <code class="language-plaintext highlighter-rouge">/ntrboot/</code> à la racine de votre carte SD</li>
   <li>Créez un dossier appelé <code class="language-plaintext highlighter-rouge">payloads</code> dans le répertoire « luma » sur votre carte SD</li>
   <li>Copiez <code class="language-plaintext highlighter-rouge">ntrboot_flasher.firm</code> dans le dossier <code class="language-plaintext highlighter-rouge">/luma/payloads/</code> sur votre carte SD</li>
-  <li>Retirez la carte SD de votre ordinateur et réinsérez-là dans votre 3DS</li>
-  <li>Insérez votre linker DS dans votre console</li>
+  <li>Réinsérez votre carte SD dans votre console</li>
+  <li>Insert your ntrboot compatible DS / DSi flashcart into your console</li>
   <li>Lancez ntrboot_flasher en maintenant (Start) lors du démarrage</li>
   <li>Lisez l’avertissement de l’écran rouge</li>
   <li>Appuyez sur (A) pour continuer</li>
@@ -759,7 +819,7 @@ Si vous ne savez pas quelle révision HW vous avez, essayez toutes celles possib
   <li>Appuyer (A) pour continuer</li>
   <li>Attendez que le processus soit terminé</li>
   <li>Appuyez sur (A) pour revenir au menu principal</li>
-  <li>Appuyez sur (B) pour éteindre votre console</li>
+  <li>Press (B) to power off your console</li>
 </ol>
 
         

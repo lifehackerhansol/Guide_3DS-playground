@@ -314,11 +314,35 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="updating-firmware-(new-3ds)"><a href='/nl_NL/updating-firmware-(new-3ds)'>Updating Firmware (New 3DS)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="updating-firmware-(kor)"><a href='/nl_NL/updating-firmware-(kor)'>Updating Firmware (KOR)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="updating-firmware-(twn)"><a href='/nl_NL/updating-firmware-(twn)'>Updating Firmware (TWN)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="ntrboot"><a href='/nl_NL/ntrboot'>ntrboot</a></li>
           
         
           
+            <li style="display: none;" data-name="alternate-exploits"><a href='/nl_NL/alternate-exploits'>Alternate Exploits</a></li>
+          
+        
+          
             <li style="display: none;" data-name="seedminer"><a href='/nl_NL/seedminer'>Seedminer</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(alternate)"><a href='/nl_NL/seedminer-(alternate)'>Seedminer (Alternate)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(mii)"><a href='/nl_NL/seedminer-(mii)'>Seedminer (Mii)</a></li>
           
         
           
@@ -330,7 +354,31 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="bannerbomb3-(legacy)"><a href='/nl_NL/bannerbomb3-(legacy)'>BannerBomb3 (Legacy)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(ninjhax2-dx)"><a href='/nl_NL/homebrew-launcher-(ninjhax2-dx)'>Homebrew Launcher (ninjhax2-dx)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(pichaxx)"><a href='/nl_NL/homebrew-launcher-(pichaxx)'>Homebrew Launcher (PicHaxx)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(smilehax-iie)"><a href='/nl_NL/homebrew-launcher-(smilehax-iie)'>Homebrew Launcher (smilehax-IIe)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(steelhax)"><a href='/nl_NL/homebrew-launcher-(steelhax)'>Homebrew Launcher (Steelhax)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="homebrew-launcher-(super-skaterhax)"><a href='/nl_NL/homebrew-launcher-(super-skaterhax)'>Homebrew Launcher (super-skaterhax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="dumping-eshop-dsiware"><a href='/nl_NL/dumping-eshop-dsiware'>Dumping eShop DSiWare</a></li>
           
         
           
@@ -387,6 +435,14 @@ window.cookieconsent.initialise({
         
           
             <li style="display: none;" data-name="installing-boot9strap-(fredtool)"><a href='/nl_NL/installing-boot9strap-(fredtool)'>Installing boot9strap (Fredtool)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(fredtool-inject)"><a href='/nl_NL/installing-boot9strap-(fredtool-inject)'>Installing boot9strap (Fredtool-Inject)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(fredtool-legacy)"><a href='/nl_NL/installing-boot9strap-(fredtool-legacy)'>Installing boot9strap (Fredtool, Legacy)</a></li>
           
         
           
@@ -458,11 +514,7 @@ window.cookieconsent.initialise({
       <li><a href="#section-ii---nimhax" id="markdown-toc-section-ii---nimhax">Section II - nimhax</a></li>
     </ul>
   </li>
-  <li><a href="#next-step-choose-an-exploit" id="markdown-toc-next-step-choose-an-exploit">Next step: Choose an exploit</a>    <ul>
-      <li><a href="#bannerbomb3-recommended" id="markdown-toc-bannerbomb3-recommended">Bannerbomb3 (recommended)</a></li>
-      <li><a href="#frogtool" id="markdown-toc-frogtool">Frogtool</a></li>
-    </ul>
-  </li>
+  <li><a href="#next-step-frogtool" id="markdown-toc-next-step-frogtool">Next step: Frogtool</a></li>
 </ul>
 
   </nav>
@@ -471,7 +523,7 @@ window.cookieconsent.initialise({
 <details class="notice--info">
 <summary><em>Technical Details (optional)</em></summary>
 
-<p>To install boot9strap on your device, we derive your device’s unique encryption key. To accomplish this, we use the Homebrew Launcher to launch nimhax and dump the data encryption key (movable.sed) from your device.</p>
+<p>To install boot9strap on your console, we derive your console’s unique encryption key. To accomplish this, we use the Homebrew Launcher to launch nimhax and dump the data encryption key (movable.sed) from your console.</p>
 
 <p>For a more technical explanation, see <a href="https://github.com/luigoalma/nimhax/">here</a> for information about the nimhax exploit.</p>
 
@@ -488,12 +540,14 @@ window.cookieconsent.initialise({
 <h4 id="deel-i---voorbereiding">Deel I - Voorbereiding</h4>
 
 <ol>
-  <li>Schakel je 3DS uit</li>
+  <li>Power off your console</li>
   <li>Plaats je SD kaart in je computer</li>
   <li>Copy the <code class="language-plaintext highlighter-rouge">nimhax</code> folder from the nimhax <code class="language-plaintext highlighter-rouge">.zip</code> to the <code class="language-plaintext highlighter-rouge">/3ds/</code> folder on your SD card</li>
-  <li>Stop je SD kaart terug in je 3DS</li>
-  <li>Zet je 3DS aan</li>
+  <li>Reinsert your SD card into your console</li>
+  <li>Power on your console</li>
 </ol>
+
+<p class="notice--info"><img src="https://3ds.hacks.guide/images/screenshots/nimhax-location.png" alt="" /></p>
 
 <h4 id="section-ii---nimhax">Section II - nimhax</h4>
 
@@ -503,20 +557,12 @@ window.cookieconsent.initialise({
   <li>If the exploit was successful, a <code class="language-plaintext highlighter-rouge">movable.sed</code> file will appear on the root of your SD card</li>
 </ol>
 
-<h3 id="next-step-choose-an-exploit">Next step: Choose an exploit</h3>
+<h3 id="next-step-frogtool">Next step: Frogtool</h3>
 
-<h4 id="bannerbomb3-recommended">Bannerbomb3 (recommended)</h4>
-
-<p>Once you have your device’s encryption key (<code class="language-plaintext highlighter-rouge">movable.sed</code>), you can use it in conjunction with BannerBomb3, which uses your <code class="language-plaintext highlighter-rouge">movable.sed</code> file to take advantage of exploits in the System Settings application.</p>
-
-<p class="notice--info">Continue to <a href="bannerbomb3">BannerBomb3</a></p>
-
-<h4 id="frogtool">Frogtool</h4>
-
-<p>Once you have your device’s encryption key (<code class="language-plaintext highlighter-rouge">movable.sed</code>), you can use it in conjunction with Frogtool, which uses your <code class="language-plaintext highlighter-rouge">movable.sed</code> file to inject and take advantage of JPN Flipnote Studio. <br />
+<p>Once you have your console’s encryption key (<code class="language-plaintext highlighter-rouge">movable.sed</code>), you can use it in conjunction with Frogtool, which uses your <code class="language-plaintext highlighter-rouge">movable.sed</code> file to inject and take advantage of JPN Flipnote Studio. <br />
 While this method is faster, it requires downloading a file with a torrent client. Do not follow this method if you’re unable to use a torrent client.</p>
 
-<p class="notice--warning">Continue to <a href="installing-boot9strap-(frogtool)">Installing boot9strap (Frogtool)</a></p>
+<p class="notice--primary">Continue to <a href="installing-boot9strap-(frogtool)">Installing boot9strap (Frogtool)</a></p>
 
         
       </section>

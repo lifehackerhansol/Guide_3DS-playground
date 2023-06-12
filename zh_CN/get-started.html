@@ -314,11 +314,35 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="updating-firmware-(new-3ds)"><a href='/zh_CN/updating-firmware-(new-3ds)'>Updating Firmware (New 3DS)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="updating-firmware-(kor)"><a href='/zh_CN/updating-firmware-(kor)'>Updating Firmware (KOR)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="updating-firmware-(twn)"><a href='/zh_CN/updating-firmware-(twn)'>Updating Firmware (TWN)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="ntrboot"><a href='/zh_CN/ntrboot'>ntrboot</a></li>
           
         
           
+            <li style="display: none;" data-name="alternate-exploits"><a href='/zh_CN/alternate-exploits'>Alternate Exploits</a></li>
+          
+        
+          
             <li style="display: none;" data-name="seedminer"><a href='/zh_CN/seedminer'>Seedminer</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(alternate)"><a href='/zh_CN/seedminer-(alternate)'>Seedminer (Alternate)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(mii)"><a href='/zh_CN/seedminer-(mii)'>Seedminer (Mii)</a></li>
           
         
           
@@ -330,7 +354,31 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="bannerbomb3-(legacy)"><a href='/zh_CN/bannerbomb3-(legacy)'>BannerBomb3 (Legacy)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(ninjhax2-dx)"><a href='/zh_CN/homebrew-launcher-(ninjhax2-dx)'>Homebrew Launcher (ninjhax2-dx)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(pichaxx)"><a href='/zh_CN/homebrew-launcher-(pichaxx)'>Homebrew Launcher (PicHaxx)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(smilehax-iie)"><a href='/zh_CN/homebrew-launcher-(smilehax-iie)'>Homebrew Launcher (smilehax-IIe)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(steelhax)"><a href='/zh_CN/homebrew-launcher-(steelhax)'>Homebrew Launcher (Steelhax)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="homebrew-launcher-(super-skaterhax)"><a href='/zh_CN/homebrew-launcher-(super-skaterhax)'>Homebrew Launcher (super-skaterhax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="dumping-eshop-dsiware"><a href='/zh_CN/dumping-eshop-dsiware'>Dumping eShop DSiWare</a></li>
           
         
           
@@ -387,6 +435,14 @@ window.cookieconsent.initialise({
         
           
             <li style="display: none;" data-name="installing-boot9strap-(fredtool)"><a href='/zh_CN/installing-boot9strap-(fredtool)'>Installing boot9strap (Fredtool)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(fredtool-inject)"><a href='/zh_CN/installing-boot9strap-(fredtool-inject)'>Installing boot9strap (Fredtool-Inject)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(fredtool-legacy)"><a href='/zh_CN/installing-boot9strap-(fredtool-legacy)'>Installing boot9strap (Fredtool, Legacy)</a></li>
           
         
           
@@ -462,14 +518,14 @@ window.cookieconsent.initialise({
   </nav>
 </aside>
 
-<p>在开始教程之前，我们需要先看看你的主机是否已经安装过了自制固件，然后再检查一下主机当前的系统版本。</p>
+<p>Before starting this guide, we will see if custom firmware is already installed and check the current system version of your console.</p>
 
 <h4 id="第一步--检查自制固件">第一步 – 检查自制固件</h4>
 
 <ol>
-  <li>将主机关机</li>
+  <li>Power off your console</li>
   <li>按住 “Select” 键</li>
-  <li>在按住 “Select” 键的同时按下电源键开机</li>
+  <li>Power on your console while still holding the (Select) button</li>
   <li>如果主机没有进入到一个奇怪的菜单（例如 写着 “Luma3DS Configuration” 的黑底白字菜单）而直接开机了，那么你就可以去做下一步了</li>
 </ol>
 
@@ -478,13 +534,13 @@ window.cookieconsent.initialise({
 <h4 id="第二步--检查系统版本">第二步 — 检查系统版本</h4>
 
 <ol>
-  <li>打开系统设置（本体設定 / System Settings）</li>
-  <li>你主机当前的系统版本将会显示在上屏的右下角（例如 “Ver. 11.16.0-49U”）</li>
+  <li>Launch System Settings on your console</li>
+  <li>你主机当前的系统版本将会显示在上屏的右下角（例如 “Ver. 11.17.0-50U”)</li>
 </ol>
 
 <h4 id="第三步--选一个方法">第三步 – 选一个方法</h4>
 
-<p>To find the correct method for your device, please enter the system version you found in Section II.</p>
+<p>To find the correct method for your console, please enter the system version you found in Section II.</p>
 
 <table id="modeltable" class="modeltable" style="display:none">
   <thead>
@@ -529,6 +585,7 @@ window.cookieconsent.initialise({
         <option>14</option>
         <option>15</option>
         <option>16</option>
+        <option>17</option>
     </select>.<select id="whydidnintendodecidetodothingslikethis">
       <option>0</option>
     </select>-<select id="nver">
@@ -582,6 +639,7 @@ window.cookieconsent.initialise({
         <option>47</option>
         <option>48</option>
         <option>49</option>
+        <option>50</option>
     </select><select id="region">
       <option>E</option>
       <option>U</option>
@@ -606,7 +664,7 @@ System model is required.
 This doesn't seem to be a valid system version.
 </p>
 <p id="result_methodUnavailable" style="display:none">
-You currently cannot hack your 3DS on this version using the main methods. If you want to hack your console, you have to use ntrboot.
+You currently cannot hack your 3DS on this version using the main methods. If you want to hack your console, you may have to use ntrboot.
 </p>
 
 <script src="/assets/js/selecting.js"></script>

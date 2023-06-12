@@ -314,11 +314,35 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="updating-firmware-(new-3ds)"><a href='/updating-firmware-(new-3ds)'>Updating Firmware (New 3DS)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="updating-firmware-(kor)"><a href='/updating-firmware-(kor)'>Updating Firmware (KOR)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="updating-firmware-(twn)"><a href='/updating-firmware-(twn)'>Updating Firmware (TWN)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="ntrboot"><a href='/ntrboot'>ntrboot</a></li>
           
         
           
+            <li style="display: none;" data-name="alternate-exploits"><a href='/alternate-exploits'>Alternate Exploits</a></li>
+          
+        
+          
             <li style="display: none;" data-name="seedminer"><a href='/seedminer'>Seedminer</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(alternate)"><a href='/seedminer-(alternate)'>Seedminer (Alternate)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(mii)"><a href='/seedminer-(mii)'>Seedminer (Mii)</a></li>
           
         
           
@@ -330,7 +354,31 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="bannerbomb3-(legacy)"><a href='/bannerbomb3-(legacy)'>BannerBomb3 (Legacy)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(ninjhax2-dx)"><a href='/homebrew-launcher-(ninjhax2-dx)'>Homebrew Launcher (ninjhax2-dx)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(pichaxx)"><a href='/homebrew-launcher-(pichaxx)'>Homebrew Launcher (PicHaxx)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(smilehax-iie)"><a href='/homebrew-launcher-(smilehax-iie)'>Homebrew Launcher (smilehax-IIe)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(steelhax)"><a href='/homebrew-launcher-(steelhax)'>Homebrew Launcher (Steelhax)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="homebrew-launcher-(super-skaterhax)"><a href='/homebrew-launcher-(super-skaterhax)'>Homebrew Launcher (super-skaterhax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="dumping-eshop-dsiware"><a href='/dumping-eshop-dsiware'>Dumping eShop DSiWare</a></li>
           
         
           
@@ -387,6 +435,14 @@ window.cookieconsent.initialise({
         
           
             <li style="display: none;" data-name="installing-boot9strap-(fredtool)"><a href='/installing-boot9strap-(fredtool)'>Installing boot9strap (Fredtool)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(fredtool-inject)"><a href='/installing-boot9strap-(fredtool-inject)'>Installing boot9strap (Fredtool-Inject)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(fredtool-legacy)"><a href='/installing-boot9strap-(fredtool-legacy)'>Installing boot9strap (Fredtool, Legacy)</a></li>
           
         
           
@@ -492,11 +548,11 @@ window.cookieconsent.initialise({
 <h4 id="section-i---prep-work">Section I - Prep Work</h4>
 
 <ol>
-  <li>Power off your device</li>
+  <li>Power off your console</li>
   <li>Insert your SD card into your computer</li>
   <li>Copy <code class="language-plaintext highlighter-rouge">GodMode9.firm</code> from the GodMode9 <code class="language-plaintext highlighter-rouge">.zip</code> to the <code class="language-plaintext highlighter-rouge">/luma/payloads/</code> folder on your SD card</li>
   <li>Copy the <code class="language-plaintext highlighter-rouge">gm9</code> folder from the GodMode9 <code class="language-plaintext highlighter-rouge">.zip</code> to the root of your SD card</li>
-  <li>Reinsert your SD card into your device</li>
+  <li>Reinsert your SD card into your console</li>
 </ol>
 
 <h4 id="section-ii---backup-sysnand-dsiware-saves">Section II - Backup SysNAND DSiWare Saves</h4>
@@ -504,7 +560,7 @@ window.cookieconsent.initialise({
 <p class="notice--info">If you do not have any DSiWare games or saves that you care about, skip this section.</p>
 
 <ol>
-  <li>Press and hold (Start), and while holding (Start), power on your device. This will launch GodMode9</li>
+  <li>Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9</li>
   <li>If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it is completed</li>
   <li>If you are prompted to fix the RTC date&amp;time, press (A) to do so, then set the date and time, then press (A) to continue
     <ul>
@@ -528,21 +584,21 @@ window.cookieconsent.initialise({
 
 <p class="notice--info">The game will be outputted to the <code class="language-plaintext highlighter-rouge">/gm9/out/</code> folder on your SD card with the name <code class="language-plaintext highlighter-rouge">&lt;TitleID&gt;.gbavc.sav</code>.</p>
 
-<p class="notice--info">To identify a <code class="language-plaintext highlighter-rouge">&lt;TitleID&gt;.gbavc.sav</code> file’s Title ID, you can get a listing of all games on the system and their corresponding Title IDs by hovering over <code class="language-plaintext highlighter-rouge">[A:] SYSNAND SD</code>, holding (R) and pressing (A) at the same time, then selecting “Search for titles”.</p>
+<p class="notice--info">To identify a <code class="language-plaintext highlighter-rouge">&lt;TitleID&gt;.gbavc.sav</code> file’s Title ID, you can get a listing of all games on the system and their corresponding Title IDs by pressing (Home) to bring up the action menu, selecting <code class="language-plaintext highlighter-rouge">Title manager</code>, and selecting <code class="language-plaintext highlighter-rouge">[A:] SD CARD</code>.</p>
 
 <ol>
   <li>Do the following process for each GBA VC game that you want to back up the save for:
     <ul>
       <li>Launch the GBA VC game</li>
       <li>Exit the GBA VC game</li>
-      <li>Boot your device while holding (Start) to launch the Luma3DS chainloader menu</li>
+      <li>Boot your console while holding (Start) to launch the Luma3DS chainloader menu</li>
       <li>Launch GodMode9 by pressing (A)</li>
       <li>Navigate to <code class="language-plaintext highlighter-rouge">[S:] SYSNAND VIRTUAL</code></li>
       <li>Press (A) on <code class="language-plaintext highlighter-rouge">agbsave.bin</code> to select it</li>
       <li>Select “AGBSAVE options…”</li>
       <li>Select “Dump GBA VC save”</li>
       <li>Press (A) to continue</li>
-      <li>Press (Start) to reboot your device</li>
+      <li>Press (Start) to reboot your console</li>
     </ul>
   </li>
 </ol>
@@ -550,7 +606,7 @@ window.cookieconsent.initialise({
 <h4 id="section-iv---copy-emunand-to-sysnand">Section IV - Copy EmuNAND to SysNAND</h4>
 
 <ol>
-  <li>Press and hold (Start), and while holding (Start), power on your device. This will launch GodMode9</li>
+  <li>Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9</li>
   <li>Navigate to <code class="language-plaintext highlighter-rouge">[E:] EMUNAND VIRTUAL</code></li>
   <li>Press (A) on <code class="language-plaintext highlighter-rouge">nand.bin</code> to select it, then select “NAND image options…”, then select “Restore SysNAND (safe)”</li>
   <li>Press (A) to unlock SysNAND overwriting, then input the key combo given
@@ -593,16 +649,16 @@ window.cookieconsent.initialise({
 
 <p class="notice--info">If you did not backup GBA VC Saves earlier, skip this section.</p>
 
-<p class="notice--info">To identify a <code class="language-plaintext highlighter-rouge">&lt;TitleID&gt;.gbavc.sav</code> file’s Title ID, you can get a listing of all games on the system and their corresponding Title IDs by holding (R) and pressing (A) on the GodeMode9 main menu, then selecting “Search for titles”.</p>
+<p class="notice--info">To identify a <code class="language-plaintext highlighter-rouge">&lt;TitleID&gt;.gbavc.sav</code> file’s Title ID, you can get a listing of all games on the system and their corresponding Title IDs by pressing (Home) to bring up the action menu, selecting <code class="language-plaintext highlighter-rouge">Title manager</code>, and selecting <code class="language-plaintext highlighter-rouge">[A:] SD CARD</code>.</p>
 
 <ol>
-  <li>Hold (R) and press (Start) at the same time to power off your device</li>
-  <li>Power on your device into SysNAND</li>
+  <li>Hold (R) and press (Start) at the same time to power off your console</li>
+  <li>Power on your console into SysNAND</li>
   <li>Do the following process for each GBA VC game that you want to restore the save for:
     <ul>
       <li>Launch the GBA VC game</li>
       <li>Exit the GBA VC game</li>
-      <li>Boot your device while holding (Start) to launch the Luma3DS chainloader menu</li>
+      <li>Boot your console while holding (Start) to launch the Luma3DS chainloader menu</li>
       <li>Launch GodMode9 by pressing (A)</li>
       <li>Navigate to <code class="language-plaintext highlighter-rouge">[0:] SDCARD</code> -&gt; <code class="language-plaintext highlighter-rouge">gm9</code></li>
       <li>Press (Y) on the <code class="language-plaintext highlighter-rouge">&lt;TitleID&gt;.gbavc.sav</code> file you wish to restore to copy it</li>
@@ -612,7 +668,7 @@ window.cookieconsent.initialise({
       <li>Select “AGBSAVE options…”</li>
       <li>Select “Inject GBA VC save”</li>
       <li>Press (A) to continue</li>
-      <li>Press (Start) to reboot your device</li>
+      <li>Press (Start) to reboot your console</li>
       <li>Launch the GBA VC game</li>
       <li>Exit the GBA VC game</li>
     </ul>
@@ -622,7 +678,7 @@ window.cookieconsent.initialise({
 <h4 id="section-vii---backup-sysnand">Section VII - Backup SysNAND</h4>
 
 <ol>
-  <li>Press and hold (Start), and while holding (Start), power on your device. This will launch GodMode9</li>
+  <li>Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9</li>
   <li>Press (Home) to bring up the action menu</li>
   <li>Select “Scripts…”</li>
   <li>Select “GM9Megascript”</li>
@@ -638,7 +694,7 @@ window.cookieconsent.initialise({
   <li>Press (B) to return to the main menu</li>
   <li>Select “Exit”</li>
   <li>Press (A) to relock write permissions if prompted</li>
-  <li>Hold (R) and press (Start) at the same time to power off your device</li>
+  <li>Hold (R) and press (Start) at the same time to power off your console</li>
   <li>Insert your SD card into your computer</li>
   <li>Copy <code class="language-plaintext highlighter-rouge">&lt;date&gt;_&lt;serialnumber&gt;_sysnand_##.bin</code> and <code class="language-plaintext highlighter-rouge">essential.exefs</code> from the <code class="language-plaintext highlighter-rouge">/gm9/out/</code> folder on your SD card to a safe location on your computer
     <ul>
@@ -647,14 +703,14 @@ window.cookieconsent.initialise({
     </ul>
   </li>
   <li>Delete <code class="language-plaintext highlighter-rouge">&lt;date&gt;_&lt;serialnumber&gt;_sysnand_##.bin</code> and <code class="language-plaintext highlighter-rouge">&lt;date&gt;_&lt;serialnumber&gt;_sysnand_##.bin.sha</code> from the <code class="language-plaintext highlighter-rouge">/gm9/out/</code> folder on your SD card after copying it</li>
-  <li>Reinsert your SD card into your device</li>
+  <li>Reinsert your SD card into your console</li>
   <li><strong>Backup every file on your SD card to a folder on your computer; all files will be deleted in the following steps</strong></li>
 </ol>
 
 <h4 id="section-viii---format-sd-card">Section VIII - Format SD card</h4>
 
 <ol>
-  <li>Press and hold (Start), and while holding (Start), power on your device. This will launch GodMode9</li>
+  <li>Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9</li>
   <li>Press (Home) to bring up the action menu</li>
   <li>Select “More…”</li>
   <li>Select “SD format menu”</li>
@@ -673,7 +729,7 @@ window.cookieconsent.initialise({
       <li>Ensure you replace the <code class="language-plaintext highlighter-rouge">boot.firm</code> file on your SD card with the one from your backup</li>
     </ul>
   </li>
-  <li>Reinsert your SD card into your device</li>
+  <li>Reinsert your SD card into your console</li>
   <li>Press (A) to remount your SD card</li>
   <li>Press (Start) to reboot</li>
 </ol>

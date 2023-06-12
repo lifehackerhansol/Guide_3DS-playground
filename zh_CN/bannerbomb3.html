@@ -314,11 +314,35 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="updating-firmware-(new-3ds)"><a href='/zh_CN/updating-firmware-(new-3ds)'>Updating Firmware (New 3DS)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="updating-firmware-(kor)"><a href='/zh_CN/updating-firmware-(kor)'>Updating Firmware (KOR)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="updating-firmware-(twn)"><a href='/zh_CN/updating-firmware-(twn)'>Updating Firmware (TWN)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="ntrboot"><a href='/zh_CN/ntrboot'>ntrboot</a></li>
           
         
           
+            <li style="display: none;" data-name="alternate-exploits"><a href='/zh_CN/alternate-exploits'>Alternate Exploits</a></li>
+          
+        
+          
             <li style="display: none;" data-name="seedminer"><a href='/zh_CN/seedminer'>Seedminer</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(alternate)"><a href='/zh_CN/seedminer-(alternate)'>Seedminer (Alternate)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(mii)"><a href='/zh_CN/seedminer-(mii)'>Seedminer (Mii)</a></li>
           
         
           
@@ -330,7 +354,31 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="bannerbomb3-(legacy)"><a href='/zh_CN/bannerbomb3-(legacy)'>BannerBomb3 (Legacy)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(ninjhax2-dx)"><a href='/zh_CN/homebrew-launcher-(ninjhax2-dx)'>Homebrew Launcher (ninjhax2-dx)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(pichaxx)"><a href='/zh_CN/homebrew-launcher-(pichaxx)'>Homebrew Launcher (PicHaxx)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(smilehax-iie)"><a href='/zh_CN/homebrew-launcher-(smilehax-iie)'>Homebrew Launcher (smilehax-IIe)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(steelhax)"><a href='/zh_CN/homebrew-launcher-(steelhax)'>Homebrew Launcher (Steelhax)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="homebrew-launcher-(super-skaterhax)"><a href='/zh_CN/homebrew-launcher-(super-skaterhax)'>Homebrew Launcher (super-skaterhax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="dumping-eshop-dsiware"><a href='/zh_CN/dumping-eshop-dsiware'>Dumping eShop DSiWare</a></li>
           
         
           
@@ -387,6 +435,14 @@ window.cookieconsent.initialise({
         
           
             <li style="display: none;" data-name="installing-boot9strap-(fredtool)"><a href='/zh_CN/installing-boot9strap-(fredtool)'>Installing boot9strap (Fredtool)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(fredtool-inject)"><a href='/zh_CN/installing-boot9strap-(fredtool-inject)'>Installing boot9strap (Fredtool-Inject)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(fredtool-legacy)"><a href='/zh_CN/installing-boot9strap-(fredtool-legacy)'>Installing boot9strap (Fredtool, Legacy)</a></li>
           
         
           
@@ -489,19 +545,19 @@ window.cookieconsent.initialise({
 
 <h4 id="第一步--准备工作">第一步 – 准备工作</h4>
 
-<p>本节中，你需要把触发 BannerBomb3 漏洞所需的文件复制到主机的 SD 卡上。</p>
+<p>In this section, you will copy the files needed to trigger the BannerBomb3 exploit onto your console’s SD card.</p>
 
 <ol>
-  <li>将主机关机</li>
+  <li>Power off your console</li>
   <li>将你的 SD 卡插入到电脑</li>
-  <li>在你的电脑上打开 <a href="http://3dstools.nhnarwhal.com/#/bb3gen">Bannerbomb3 Injector</a></li>
+  <li>Open <a href="http://3dstools.nhnarwhal.com/#/bb3gen">Bannerbomb3 Injector</a> on your computer</li>
   <li>点击 “选择文件” 选项，然后选择你的 movable.sed 上传</li>
   <li>点击 “Build and Download”
     <ul>
-      <li>这将下载一个包含名为 <code class="language-plaintext highlighter-rouge">F00D43D5.bin</code> 的 DSiWare 漏洞文件和一个名为 <code class="language-plaintext highlighter-rouge">bb3.bin</code> 的 zip 文件（<code class="language-plaintext highlighter-rouge">DSIWARE_EXPLOIT.zip</code>）到你的电脑上</li>
+      <li>This will download an exploit DSiWare called <code class="language-plaintext highlighter-rouge">F00D43D5.bin</code> and a payload called <code class="language-plaintext highlighter-rouge">bb3.bin</code> inside of a zip archive (<code class="language-plaintext highlighter-rouge">DSIWARE_EXPLOIT.zip</code>)</li>
     </ul>
   </li>
-  <li>从 <code class="language-plaintext highlighter-rouge">DSIWARE_EXPLOIT.zip</code> 中，将 <code class="language-plaintext highlighter-rouge">bb3.bin</code> 解压到你的 SD 卡根目录
+  <li>Copy <code class="language-plaintext highlighter-rouge">bb3.bin</code> from <code class="language-plaintext highlighter-rouge">DSIWARE_EXPLOIT.zip</code> to the root of your SD card
     <ul>
       <li>根目录指的是你点进 SD 卡看到的目录，你可以在这个目录下看到 Nintendo 3DS 文件夹，但请不要点进去</li>
       <li>This file does not need to be opened or extracted
@@ -510,8 +566,8 @@ window.cookieconsent.initialise({
   </li>
   <li>打开内存卡的 <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID0&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID1&gt;</code> 文件夹
     <ul>
-      <li><code class="language-plaintext highlighter-rouge">&lt;ID0&gt;</code> 是你在 <a href="seedminer">Seedminer</a> 部分中复制的 32 位字母长的文件夹名称</li>
-      <li><code class="language-plaintext highlighter-rouge">&lt;ID1&gt;</code> 是一个在 <code class="language-plaintext highlighter-rouge">&lt;ID0&gt;</code> 文件夹内，另一个 32 位字母长的文件夹</li>
+      <li><code class="language-plaintext highlighter-rouge">&lt;ID0&gt;</code> is the 32-letter folder name that you copied in <a href="seedminer">Seedminer</a></li>
+      <li><code class="language-plaintext highlighter-rouge">&lt;ID1&gt;</code> is a 32-letter folder inside of the <code class="language-plaintext highlighter-rouge">&lt;ID0&gt;</code></li>
       <li>If you have multiple <code class="language-plaintext highlighter-rouge">&lt;ID1&gt;</code> folders, follow the instructions <a href="troubleshooting#bannerbomb3">here</a>
   <img src="https://3ds.hacks.guide/images/screenshots/bb3/dsiware-location-1.png" alt="" class="notice--info" /></li>
     </ul>
@@ -521,38 +577,38 @@ window.cookieconsent.initialise({
       <li>如果这个位置已经存在了这个文件夹，<strong>且</strong>有一些名为 <code class="language-plaintext highlighter-rouge">&lt;8位ID&gt;.bin</code> 文件（DSiWare 备份文件）在里面，请将它们备份到电脑上，然后从 SD 卡中移除这些文件</li>
     </ul>
   </li>
-  <li>从 <code class="language-plaintext highlighter-rouge">DSIWARE_EXPLOIT.zip</code> 压缩文件中解压 <code class="language-plaintext highlighter-rouge">F00D43D5.bin</code> 到 <code class="language-plaintext highlighter-rouge">Nintendo DSiWare</code> 文件夹下</li>
+  <li>Copy the <code class="language-plaintext highlighter-rouge">F00D43D5.bin</code> file from <code class="language-plaintext highlighter-rouge">DSIWARE_EXPLOIT.zip</code> to the <code class="language-plaintext highlighter-rouge">Nintendo DSiWare</code> folder</li>
 </ol>
 
 <p class="notice--info"><img src="https://3ds.hacks.guide/images/screenshots/bb3/dsiware-location-2.png" alt="" /></p>
 
 <h4 id="第二步--按键检查">第二步 – 按键检查</h4>
 
-<p>In this section, you will see whether you can access Safe Mode on your device. This will determine which method you will follow on the next page.</p>
+<p>In this section, you will see whether you can access Safe Mode on your console. This will determine which method you will follow on the next page.</p>
+
+<p>Your SD card should remain in your computer while you perform this check.</p>
+
+<p>In this section, you will see whether your shoulder buttons are working on your console. This will determine which method you will follow on the next page.</p>
 
 <ol>
-  <li>将你的主机置于关机状态，按住 L + R + ↑ + A 四个按键，然后按下电源键
+  <li>Power on your console</li>
+  <li>Once you see the HOME Menu, press the (Left Shoulder) and (Right Shoulder) buttons at the same time
     <ul>
-      <li>Keep holding the buttons until the device boots to a system update screen (this is Safe Mode)</li>
+      <li>The camera applet should appear</li>
     </ul>
   </li>
-  <li>If you see the system update screen, press Cancel
-    <ul>
-      <li>主机将关机</li>
-      <li>如果主机启动到了主菜单，则请关机</li>
-    </ul>
-  </li>
+  <li>Power off your console</li>
 </ol>
 
 <hr />
 
 <h3 id="下一步选择漏洞">下一步：选择漏洞</h3>
 
-<p>If you saw the system update screen in the previous section, Safe Mode is working on your device.</p>
+<p>If the camera appeared in the previous section, Safe Mode is likely to be working on your console.</p>
 
-<p class="notice--primary">如果你的主机正确启动到了安全模式，请使用<a href="installing-boot9strap-(usm)">安装 boot9strap（通过 USM）</a></p>
+<p class="notice--primary">If the camera appeared, continue to <a href="installing-boot9strap-(usm)">Installing boot9strap (USM)</a></p>
 
-<p class="notice--info">如果你的主机<strong>没有</strong>正常启动到安全模式，请使用<a href="installing-boot9strap-(fredtool)">安装 boot9strap（通过 Fredtool）</a>。</p>
+<p class="notice--info">If the camera did NOT appear, continue to <a href="installing-boot9strap-(fredtool)">Installing boot9strap (Fredtool)</a></p>
 
         
       </section>

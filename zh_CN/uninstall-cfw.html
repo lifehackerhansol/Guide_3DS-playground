@@ -314,11 +314,35 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="updating-firmware-(new-3ds)"><a href='/zh_CN/updating-firmware-(new-3ds)'>Updating Firmware (New 3DS)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="updating-firmware-(kor)"><a href='/zh_CN/updating-firmware-(kor)'>Updating Firmware (KOR)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="updating-firmware-(twn)"><a href='/zh_CN/updating-firmware-(twn)'>Updating Firmware (TWN)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="ntrboot"><a href='/zh_CN/ntrboot'>ntrboot</a></li>
           
         
           
+            <li style="display: none;" data-name="alternate-exploits"><a href='/zh_CN/alternate-exploits'>Alternate Exploits</a></li>
+          
+        
+          
             <li style="display: none;" data-name="seedminer"><a href='/zh_CN/seedminer'>Seedminer</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(alternate)"><a href='/zh_CN/seedminer-(alternate)'>Seedminer (Alternate)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(mii)"><a href='/zh_CN/seedminer-(mii)'>Seedminer (Mii)</a></li>
           
         
           
@@ -330,7 +354,31 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="bannerbomb3-(legacy)"><a href='/zh_CN/bannerbomb3-(legacy)'>BannerBomb3 (Legacy)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(ninjhax2-dx)"><a href='/zh_CN/homebrew-launcher-(ninjhax2-dx)'>Homebrew Launcher (ninjhax2-dx)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(pichaxx)"><a href='/zh_CN/homebrew-launcher-(pichaxx)'>Homebrew Launcher (PicHaxx)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(smilehax-iie)"><a href='/zh_CN/homebrew-launcher-(smilehax-iie)'>Homebrew Launcher (smilehax-IIe)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(steelhax)"><a href='/zh_CN/homebrew-launcher-(steelhax)'>Homebrew Launcher (Steelhax)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="homebrew-launcher-(super-skaterhax)"><a href='/zh_CN/homebrew-launcher-(super-skaterhax)'>Homebrew Launcher (super-skaterhax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="dumping-eshop-dsiware"><a href='/zh_CN/dumping-eshop-dsiware'>Dumping eShop DSiWare</a></li>
           
         
           
@@ -387,6 +435,14 @@ window.cookieconsent.initialise({
         
           
             <li style="display: none;" data-name="installing-boot9strap-(fredtool)"><a href='/zh_CN/installing-boot9strap-(fredtool)'>Installing boot9strap (Fredtool)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(fredtool-inject)"><a href='/zh_CN/installing-boot9strap-(fredtool-inject)'>Installing boot9strap (Fredtool-Inject)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(fredtool-legacy)"><a href='/zh_CN/installing-boot9strap-(fredtool-legacy)'>Installing boot9strap (Fredtool, Legacy)</a></li>
           
         
           
@@ -476,7 +532,7 @@ window.cookieconsent.initialise({
 
 <h3 id="重要事项">重要事项</h3>
 
-<p>本章节将会教你如何完全把自制固件从你的主机完全移除，为了完全恢复原厂系统，所有的自制固件将被卸载，包括 B9S 和 Luma3DS。</p>
+<p>This will completely remove CFW from your console, including boot9strap and Luma3DS, for the purpose of restoring the console to stock.</p>
 
 <p>任何未签名（盗版）游戏都将被标记为不可用，并将在此过程中被删除。 你可以使用一个<a href="https://github.com/FlagBrew/Checkpoint/releases/latest">存档管理器</a>来备份你想要保留的游戏存档。</p>
 
@@ -506,7 +562,7 @@ window.cookieconsent.initialise({
 <p>如果你干过以上的任何一件事，卸载自制固件将<u><strong>直接导致主机砖机</strong></u>。 如果你确实做了，但是你仍然想要卸载自制固件，请<a href="godmode9-usage#restoring-a-nand-backup">还原一份干净的 NAND 备份</a>，然后再继续。</p>
 </div>
 
-<p class="notice--warning">这些步骤仅适用于 Luma3DS 版本在 8.0 或以上的主机。 如果你的主机 Luma 版本比要求的旧，则你必须先升级版本再做这些操作。 请参考<a href="checking-for-cfw">这个页面</a>来找到适合你主机的升级操作。</p>
+<p class="notice--warning">These instructions will only work on consoles with a Luma3DS version of 8.0 or higher. 如果你的主机 Luma 版本比要求的旧，则你必须先升级版本再做这些操作。 请参考<a href="checking-for-cfw">这个页面</a>来找到适合你主机的升级操作。</p>
 
 <h3 id="你需要准备点啥">你需要准备点啥？</h3>
 
@@ -521,14 +577,14 @@ window.cookieconsent.initialise({
 
 <h4 id="第一步--准备工作">第一步 – 准备工作</h4>
 <ol>
-  <li>将主机关机</li>
+  <li>Power off your console</li>
   <li>将你的 SD 卡插入到电脑</li>
   <li>解压 Luma3DS <code class="language-plaintext highlighter-rouge">.zip</code> 里的 <code class="language-plaintext highlighter-rouge">boot.firm</code> 和 <code class="language-plaintext highlighter-rouge">boot.3dsx</code> 到你 SD 卡的根目录</li>
   <li>将 GodMode9 <code class="language-plaintext highlighter-rouge">.zip</code> 中的 <code class="language-plaintext highlighter-rouge">GodMode9.firm</code> 复制到你 SD 卡的 <code class="language-plaintext highlighter-rouge">/luma/payloads/</code> 文件夹中</li>
   <li>将 GodMode9 <code class="language-plaintext highlighter-rouge">.zip</code> 中的整个 <code class="language-plaintext highlighter-rouge">gm9</code> 文件夹复制到 SD 卡的根目录下</li>
   <li>复制 <code class="language-plaintext highlighter-rouge">DSiWareUninstaller.3dsx</code>  到你 SD 卡的 <code class="language-plaintext highlighter-rouge">/3ds/</code> 文件夹</li>
   <li>复制 <code class="language-plaintext highlighter-rouge">safety_test.gm9</code> 到 SD 卡的<code class="language-plaintext highlighter-rouge">/gm9/scripts/</code>目录下</li>
-  <li>将 SD 卡重新插入你的主机</li>
+  <li>Reinsert your SD card into your console</li>
 </ol>
 
 <h4 id="第二步--ds-模式测试">第二步 – DS 模式测试</h4>
@@ -536,37 +592,37 @@ window.cookieconsent.initialise({
 
 <h5 id="ds-连接设置测试">DS 连接设置测试</h5>
 <ol>
-  <li>启动你的主机</li>
-  <li>打开系统设置（本体設定 / System Settings）</li>
+  <li>Power on your console</li>
+  <li>Launch System Settings on your console</li>
   <li>移动到 <code class="language-plaintext highlighter-rouge">网络设置（Internet Settings）</code> -&gt; <code class="language-plaintext highlighter-rouge">任天堂 DS 连接（Nintendo DS Connections）</code>，然后选择 “OK”</li>
   <li>你的主机应该会正常启动到任天堂 DS 连接设置菜单
     <ul>
       <li>如果你的主机显示了日版的 Flipnote Studio 或黑屏亦或出现报错，则代表测试失败。</li>
     </ul>
   </li>
-  <li>将主机关机</li>
+  <li>Power off your console</li>
 </ol>
 
 <h5 id="ds-下载通信测试">DS 下载通信测试</h5>
 <ol>
-  <li>启动你的主机</li>
+  <li>Power on your console</li>
   <li>启动“下载通信(Download Play)”程序 (<img src="https://3ds.hacks.guide/images/download-play-icon.png" alt="" height="24px" width="24px" />)</li>
   <li>选择 “Nintendo DS”</li>
-  <li>如果你的主机正常进入了 DS “下载通信（Download Play）” 程序，那么测试成功。
+  <li>If your console loads into a “Download software via DS Download Play” menu, the test was successful
     <ul>
       <li>如果你的主机显示了日版的 Flipnote Studio 或黑屏亦或出现报错，则代表测试失败。</li>
     </ul>
   </li>
-  <li>将主机关机</li>
+  <li>Power off your console</li>
 </ol>
 
-<p class="notice--warning">如果以上其一测试失败了，则 DS 模式、DS 下载通信和/或 DS 连接设定可能会在卸载自制固件后无法正常使用！ You should <a href="troubleshooting#software-issues-on-devices-with-custom-firmware">fix DS mode</a> before continuing.</p>
+<p class="notice--warning">如果以上其一测试失败了，则 DS 模式、DS 下载通信和/或 DS 连接设定可能会在卸载自制固件后无法正常使用！ You should <a href="troubleshooting#software-issues-on-consoles-with-custom-firmware">fix DS mode</a> before continuing.</p>
 
 <h4 id="第三步--安全性测试">第三步 – 安全性测试</h4>
-<p>本步骤的目的是为了检查主机是否能在卸载自制固件后正常开机，以及核心系统组件（如系统设置和键盘）是否能够正常运作。 <strong>如果你跳过此部分，主机可能会变砖！</strong></p>
+<p>本步骤的目的是为了检查主机是否能在卸载自制固件后正常开机，以及核心系统组件（如系统设置和键盘）是否能够正常运作。 <strong>If you skip this section, you may BRICK your console!</strong></p>
 
 <ol>
-  <li>按住 “START” 键，然后将主机开机。 这会启动 GodMode9</li>
+  <li>Press and hold (Start), and while holding (Start), power on your console. 这会启动 GodMode9</li>
   <li>如果工具提示是否需要创建重要文件备份，请按下 “A” 键确认。完成后再次按下 “A” 键来继续。</li>
   <li>如果出现修复 RTC 日期与时间的提示，按 “A” 键执行修复，然后设置好日期和时间，并按 “A” 继续
     <ul>
@@ -579,10 +635,10 @@ window.cookieconsent.initialise({
   <li>阅读屏幕上的文本，然后按下 “A” 键继续</li>
   <li>主机应该会自动进入到正常的 3DS 主菜单（有没有自制主题无关）。 如果是这样，那么继续下面的操作
     <ul>
-      <li>如果主机没有进入到正常的 3DS 主菜单（发生黑屏、报错等），卸载自制固件<strong>将会把主机变砖</strong>！</li>
+      <li>If you do not boot into the regular 3DS HOME Menu (black screen, error screen, etc.), uninstalling CFW <strong>WILL BRICK YOUR CONSOLE!</strong></li>
     </ul>
   </li>
-  <li>打开系统设置（本体設定 / System Settings）
+  <li>Launch System Settings on your console
     <ul>
       <li>如果主机此时崩溃，则测试失败</li>
     </ul>
@@ -595,7 +651,7 @@ window.cookieconsent.initialise({
       <li>如果键盘没有出现且主机死机或崩溃了，则测试失败</li>
     </ul>
   </li>
-  <li>将主机关机</li>
+  <li>Power off your console</li>
 </ol>
 
 <p class="notice--danger">如果没有进入到正常的 3DS 主菜单或系统设置/键盘不可用，则<strong>请不要再继续做下面的步骤了！</strong> 请加入 <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew Discord 服务器</a> 并说英文来请求支持。</p>
@@ -603,7 +659,7 @@ window.cookieconsent.initialise({
 <h4 id="第四步--备份-nand">第四步 – 备份 NAND</h4>
 
 <ol>
-  <li>按住 “START” 键，然后将主机开机。 这会启动 GodMode9</li>
+  <li>Press and hold (Start), and while holding (Start), power on your console. 这会启动 GodMode9</li>
   <li>按下 “Home” 键来打开功能菜单</li>
   <li>选择 “Scripts…”</li>
   <li>选择 “GM9Megascript”</li>
@@ -618,22 +674,22 @@ window.cookieconsent.initialise({
   <li>按下 “B” 键返回到主菜单</li>
   <li>选择 “退出（Exit）”</li>
   <li>按下 “Home” 键来打开功能菜单</li>
-  <li>选择 “Poweroff system” 来将主机关机</li>
+  <li>Select “Poweroff system” to power off your console</li>
 </ol>
 
 <h4 id="第五步--移除非法内容">第五步 – 移除非法内容</h4>
 <p class="notice--warning">本步骤将会删除非法内容，例如自制程序、导出的程序（安装 CIA 格式的应用得来的）。 如果你有还想要的存档，请在继续前使用一个存档工具将它导出来后再继续！</p>
 
 <ol>
-  <li>启动你的主机</li>
-  <li>打开系统设置（本体設定 / System Settings）</li>
+  <li>Power on your console</li>
+  <li>Launch System Settings on your console</li>
   <li>进入到 “数据管理（Data Management）” &gt; “Nintendo 3DS” &gt; “软件（Software）”</li>
   <li>在此列表中，删除你在使用自制系统时安装的任何非来自任天堂的自制程序。
     <ul>
       <li>这其中包括常见的自制程序如 FBI、Anemone3DS、Luma Updater、Homebrew Launcher、Checkpoint 等等…和任何非通过 eShop 安装的游戏</li>
     </ul>
   </li>
-  <li>进入到“数据管理（Data Management）” &gt; “DSiWare”</li>
+  <li>进入到 <code class="language-plaintext highlighter-rouge">資料管理</code> -&gt; <code class="language-plaintext highlighter-rouge">DSiWare</code></li>
   <li>在此列表中，删除你在使用自制系统时安装的任何非来自任天堂的自制程序。
     <ul>
       <li>这包括诸如 TWiLightMenu++ 之类的软件，和你<strong>非</strong>从 eShop 安装的任何游戏程序</li>
@@ -651,18 +707,18 @@ window.cookieconsent.initialise({
   <li>按 “B” 键退出 Rosalina 菜单</li>
   <li>按下 “Home” 键，然后关闭“下载通信(Download Play)”</li>
   <li>运行“下载通信（Download Play）”程序</li>
-  <li>此时你的主机应该会启动 Homebrew Launcher了</li>
+  <li>Your console should load the Homebrew Launcher</li>
   <li>从自制程序列表中运行 DSiWare Uninstaller</li>
   <li>阅读提示并允许程序卸载</li>
-  <li>一旦完成后，退出 Homebrew Launcher 然后关机</li>
+  <li>Once the process has succeeded, exit the Homebrew Launcher and power off your console</li>
 </ol>
 
 <h4 id="第六步--初始化主机">第六步 – 初始化主机</h4>
 <p>本步骤将会把所有的非法 ticket 从主机中移除，使 eShop 能够正常工作。 这会移除 3DS 中的所有内容，并登出 NNID。 这会重新生成你的主机解密密钥，意味着你先前的所有数据将会全部不可用，即使你把它们从 SD 卡中备份出来也是如此。</p>
 
 <ol>
-  <li>启动你的主机</li>
-  <li>打开系统设置（本体設定 / System Settings）</li>
+  <li>Power on your console</li>
+  <li>Launch System Settings on your console</li>
   <li>进入“其他设置（Other Settings）” -&gt; 右箭头（直到最后一页）-&gt; “初始化系统（Format System Memory）”</li>
   <li>按照提示步骤重置你的 3DS</li>
 </ol>
@@ -671,7 +727,7 @@ window.cookieconsent.initialise({
 <p class="notice--warning">这是你核验所有安全检查步骤是否已正确遵循的最后一次机会！ 请确保你已经做完了本页面先前的所有步骤，<strong>特别是</strong> <code class="language-plaintext highlighter-rouge">第三步</code>。</p>
 
 <ol>
-  <li>按住 “START” 键，然后将主机开机。 这会启动 GodMode9
+  <li>Press and hold (Start), and while holding (Start), power on your console. 这会启动 GodMode9
     <ul>
       <li>如果你看到了 Luma3DS chainloader 菜单，则请使用十字键移动到 Godmode9 然后按 A 进入</li>
     </ul>
@@ -687,12 +743,12 @@ window.cookieconsent.initialise({
   <li>按下 “B” 键返回到主菜单</li>
   <li>选择 “Exit”</li>
   <li>如果提示重新锁定写入权限，按下 “A” 键来确认</li>
-  <li>按 “Start” 键重启你的主机</li>
+  <li>Press (Start) to reboot your console</li>
 </ol>
 
 <hr />
 
-<p class="notice--success">所有自制固件都已经被卸载了。</p>
+<p class="notice--success">All custom firmware has been removed from your console.</p>
 
 <p class="notice--info">你可以将<strong>除了</strong> “Nintendo 3DS” 和 “DCIM” 还有 “private” 以外的文件、文件夹从 SD 卡根目录删除。</p>
 

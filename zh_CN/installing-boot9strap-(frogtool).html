@@ -314,11 +314,35 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="updating-firmware-(new-3ds)"><a href='/zh_CN/updating-firmware-(new-3ds)'>Updating Firmware (New 3DS)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="updating-firmware-(kor)"><a href='/zh_CN/updating-firmware-(kor)'>Updating Firmware (KOR)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="updating-firmware-(twn)"><a href='/zh_CN/updating-firmware-(twn)'>Updating Firmware (TWN)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="ntrboot"><a href='/zh_CN/ntrboot'>ntrboot</a></li>
           
         
           
+            <li style="display: none;" data-name="alternate-exploits"><a href='/zh_CN/alternate-exploits'>Alternate Exploits</a></li>
+          
+        
+          
             <li style="display: none;" data-name="seedminer"><a href='/zh_CN/seedminer'>Seedminer</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(alternate)"><a href='/zh_CN/seedminer-(alternate)'>Seedminer (Alternate)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(mii)"><a href='/zh_CN/seedminer-(mii)'>Seedminer (Mii)</a></li>
           
         
           
@@ -330,7 +354,31 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="bannerbomb3-(legacy)"><a href='/zh_CN/bannerbomb3-(legacy)'>BannerBomb3 (Legacy)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(ninjhax2-dx)"><a href='/zh_CN/homebrew-launcher-(ninjhax2-dx)'>Homebrew Launcher (ninjhax2-dx)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(pichaxx)"><a href='/zh_CN/homebrew-launcher-(pichaxx)'>Homebrew Launcher (PicHaxx)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(smilehax-iie)"><a href='/zh_CN/homebrew-launcher-(smilehax-iie)'>Homebrew Launcher (smilehax-IIe)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(steelhax)"><a href='/zh_CN/homebrew-launcher-(steelhax)'>Homebrew Launcher (Steelhax)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="homebrew-launcher-(super-skaterhax)"><a href='/zh_CN/homebrew-launcher-(super-skaterhax)'>Homebrew Launcher (super-skaterhax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="dumping-eshop-dsiware"><a href='/zh_CN/dumping-eshop-dsiware'>Dumping eShop DSiWare</a></li>
           
         
           
@@ -387,6 +435,14 @@ window.cookieconsent.initialise({
         
           
             <li style="display: none;" data-name="installing-boot9strap-(fredtool)"><a href='/zh_CN/installing-boot9strap-(fredtool)'>Installing boot9strap (Fredtool)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(fredtool-inject)"><a href='/zh_CN/installing-boot9strap-(fredtool-inject)'>Installing boot9strap (Fredtool-Inject)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(fredtool-legacy)"><a href='/zh_CN/installing-boot9strap-(fredtool-legacy)'>Installing boot9strap (Fredtool, Legacy)</a></li>
           
         
           
@@ -491,26 +547,26 @@ If you are unable to install one, follow <a href="bannerbomb3">Bannerbomb3</a> i
 <p>As an additional safety measure, we will perform an additional check for custom firmware. This is because using this method when custom firmware is already installed has a risk of bricking the console (rendering it unusable without recovery methods like <a href="ntrboot">ntrboot</a>).</p>
 
 <ol>
-  <li>将主机关机</li>
+  <li>Power off your console</li>
   <li>按住 “Select” 键</li>
-  <li>在按住 “Select” 键的同时按下电源键开机</li>
+  <li>Power on your console while still holding the (Select) button</li>
   <li>If the check was successful, you will boot to the HOME Menu and you may proceed with this guide</li>
-  <li>将主机关机</li>
+  <li>Power off your console</li>
 </ol>
 
-<p class="notice--danger">If you see a configuration menu or the console immediately powers off, you already have CFW, and continuing with these instructions may BRICK your device! Follow <a href="checking-for-cfw">Checking for CFW</a> to upgrade your existing CFW.</p>
+<p class="notice--danger">If you see a configuration menu or the console immediately powers off, you already have CFW, and continuing with these instructions may BRICK your console! Follow <a href="checking-for-cfw">Checking for CFW</a> to upgrade your existing CFW.</p>
 
 <h4 id="第二步--准备工作">第二步 – 准备工作</h4>
 
 <ol>
-  <li>将主机关机</li>
+  <li>Power off your console</li>
   <li>将你的 SD 卡插入到电脑</li>
   <li>解压 Luma3DS <code class="language-plaintext highlighter-rouge">.zip</code> 里的 <code class="language-plaintext highlighter-rouge">boot.firm</code> 和 <code class="language-plaintext highlighter-rouge">boot.3dsx</code> 到你 SD 卡的根目录</li>
   <li>Copy <code class="language-plaintext highlighter-rouge">boot.nds</code> (b9sTool) from the b9sTool release <code class="language-plaintext highlighter-rouge">.zip</code> to the root of your SD card</li>
   <li>Copy <code class="language-plaintext highlighter-rouge">Frogtool.3dsx</code> to the <code class="language-plaintext highlighter-rouge">/3ds/</code> folder on your SD card</li>
   <li>Copy <code class="language-plaintext highlighter-rouge">frogcert.bin</code> to the root of your SD card</li>
-  <li>将 SD 卡重新插入你的主机</li>
-  <li>启动你的主机</li>
+  <li>Reinsert your SD card into your console</li>
+  <li>Power on your console</li>
 </ol>
 
 <h4 id="section-iii---patching-ds-download-play">Section III - Patching DS Download Play</h4>
@@ -522,7 +578,7 @@ If you are unable to install one, follow <a href="bannerbomb3">Bannerbomb3</a> i
   <li>Frogtool will automatically run and inject the JPN version of Flipnote Studio into your DS Download Play</li>
   <li>Once this operation has finished, read the screens and check if the process was successful</li>
   <li>Tap the touch screen, then select “BOOT patched DS Download Play”</li>
-  <li>如果漏洞执行成功，你的主机将进入到日版的“うごくメモ帳 (Flipnote Studio)”
+  <li>If the exploit was successful, your console will have loaded the JPN version of Flipnote Studio
     <ul>
       <li>If you get stuck on a black screen, follow <a href="https://wiki.hacks.guide/wiki/3DS:TWLFix#Homebrew_Launcher-0">this</a> page, then try again</li>
     </ul>
@@ -533,12 +589,13 @@ If you are unable to install one, follow <a href="bannerbomb3">Bannerbomb3</a> i
 
 <p class="notice--info">If you would prefer a visual guide to this section, one is available <a href="https://zoogie.github.io/web/flipnote_directions/">here</a>.</p>
 
-<p>In this section, you will perform a series of very specific steps within Flipnote Studio that, when performed correctly, will launch the boot9strap (custom firmware) installer.</p>
+<p>In this section, you will perform a series of very specific steps within Flipnote Studio that, when performed correctly, will launch b9sTool, the boot9strap (custom firmware) installer.</p>
 
 <ol>
   <li>Complete the initial setup process for the launched game until you reach the main menu
     <ul>
       <li>Select the left option whenever prompted during the setup process</li>
+      <li>If you encounter an issue while doing this section, <a href="troubleshooting#installing-boot9strap-fredtool">check this troubleshooting guide</a> for your issue</li>
     </ul>
   </li>
   <li>Using the touch-screen, select the large left box, then select the box with an SD card icon</li>
@@ -549,18 +606,18 @@ If you are unable to install one, follow <a href="bannerbomb3">Bannerbomb3</a> i
   <li>Tap the third box with the letter “A” in it</li>
   <li>Scroll left until reel “1/3” is selected</li>
   <li>Tap the fourth box with the letter “A” in it</li>
-  <li>If the exploit was successful, your device will have loaded b9sTool</li>
+  <li>If the exploit was successful, your console will have loaded b9sTool</li>
   <li>Using the D-Pad, move to “Install boot9strap”
     <ul>
-      <li>If you miss this step, the system will exit to HOME Menu instead of installing boot9strap and you will need to open Nintendo DS Connections and start over from the beginning of this section</li>
+      <li>If you miss this step, the system will exit to HOME Menu instead of installing boot9strap and you will need to open DS Download Play and start over from the beginning of this section</li>
     </ul>
   </li>
   <li>Press (A), then press START and SELECT at the same time to begin the process</li>
-  <li>Once completed and the bottom screen says “done.”, exit b9sTool, then power off your device
+  <li>Once completed and the bottom screen says “done.”, exit b9sTool, then power off your console
     <ul>
       <li>You may have to force power off by holding the power button</li>
-      <li>If your device shuts down when you try to power it on, ensure that you have copied <code class="language-plaintext highlighter-rouge">boot.firm</code> from the Luma3DS <code class="language-plaintext highlighter-rouge">.zip</code> to the root of your SD card</li>
-      <li>If you see the Luma Configuration screen, power off your device and continue to the next section</li>
+      <li>If your console shuts down when you try to power it on, ensure that you have copied <code class="language-plaintext highlighter-rouge">boot.firm</code> from the Luma3DS <code class="language-plaintext highlighter-rouge">.zip</code> to the root of your SD card</li>
+      <li>If you see the Luma Configuration screen, power off your console and continue to the next section</li>
     </ul>
   </li>
 </ol>
@@ -568,11 +625,12 @@ If you are unable to install one, follow <a href="bannerbomb3">Bannerbomb3</a> i
 <h4 id="第四部分--配置-luma3ds">第四部分 — 配置 Luma3DS</h4>
 
 <ol>
-  <li>Your device should have booted into the Luma3DS configuration menu
+  <li>Press and hold (Select), and while holding (Select), power on your console</li>
+  <li>Your console should have booted into the Luma3DS configuration menu
     <ul>
       <li>Luma3DS 配置菜单用于设置 Luma3DS 自制固件的可选功能 其中有许多功能可用于个性化或调试</li>
       <li>For the purpose of this guide, <strong>leave these options on the default settings</strong> (do not check or uncheck anything)</li>
-      <li>If your device shuts down when you try to power it on, ensure that you have copied <code class="language-plaintext highlighter-rouge">boot.firm</code> from the Luma3DS <code class="language-plaintext highlighter-rouge">.zip</code> to the root of your SD card</li>
+      <li>If your console shuts down when you try to power it on, ensure that you have copied <code class="language-plaintext highlighter-rouge">boot.firm</code> from the Luma3DS <code class="language-plaintext highlighter-rouge">.zip</code> to the root of your SD card</li>
     </ul>
   </li>
   <li>按下 “Start” 键保存设置并重启</li>
@@ -601,7 +659,7 @@ If you are unable to install one, follow <a href="bannerbomb3">Bannerbomb3</a> i
   <li>按 “B” 键退出 Rosalina 菜单</li>
   <li>按下 “Home” 键，然后关闭“下载通信(Download Play)”</li>
   <li>Relaunch the Download Play application</li>
-  <li>此时你的主机应该会启动 Homebrew Launcher了</li>
+  <li>Your console should load the Homebrew Launcher</li>
   <li>Launch Frogtool from the list of homebrew</li>
   <li>Select the “RESTORE patched DS Download Play” option</li>
   <li>Once this operation has finished, read the screens and check if the process was successful
@@ -610,7 +668,7 @@ If you are unable to install one, follow <a href="bannerbomb3">Bannerbomb3</a> i
     </ul>
   </li>
   <li>If the process was successful, tap the touch screen, then press START to exit</li>
-  <li>将主机关机</li>
+  <li>Power off your console</li>
 </ol>
 
 <hr />

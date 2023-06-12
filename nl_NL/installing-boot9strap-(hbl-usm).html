@@ -314,11 +314,35 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="updating-firmware-(new-3ds)"><a href='/nl_NL/updating-firmware-(new-3ds)'>Updating Firmware (New 3DS)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="updating-firmware-(kor)"><a href='/nl_NL/updating-firmware-(kor)'>Updating Firmware (KOR)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="updating-firmware-(twn)"><a href='/nl_NL/updating-firmware-(twn)'>Updating Firmware (TWN)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="ntrboot"><a href='/nl_NL/ntrboot'>ntrboot</a></li>
           
         
           
+            <li style="display: none;" data-name="alternate-exploits"><a href='/nl_NL/alternate-exploits'>Alternate Exploits</a></li>
+          
+        
+          
             <li style="display: none;" data-name="seedminer"><a href='/nl_NL/seedminer'>Seedminer</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(alternate)"><a href='/nl_NL/seedminer-(alternate)'>Seedminer (Alternate)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(mii)"><a href='/nl_NL/seedminer-(mii)'>Seedminer (Mii)</a></li>
           
         
           
@@ -330,7 +354,31 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="bannerbomb3-(legacy)"><a href='/nl_NL/bannerbomb3-(legacy)'>BannerBomb3 (Legacy)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(ninjhax2-dx)"><a href='/nl_NL/homebrew-launcher-(ninjhax2-dx)'>Homebrew Launcher (ninjhax2-dx)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(pichaxx)"><a href='/nl_NL/homebrew-launcher-(pichaxx)'>Homebrew Launcher (PicHaxx)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(smilehax-iie)"><a href='/nl_NL/homebrew-launcher-(smilehax-iie)'>Homebrew Launcher (smilehax-IIe)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(steelhax)"><a href='/nl_NL/homebrew-launcher-(steelhax)'>Homebrew Launcher (Steelhax)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="homebrew-launcher-(super-skaterhax)"><a href='/nl_NL/homebrew-launcher-(super-skaterhax)'>Homebrew Launcher (super-skaterhax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="dumping-eshop-dsiware"><a href='/nl_NL/dumping-eshop-dsiware'>Dumping eShop DSiWare</a></li>
           
         
           
@@ -387,6 +435,14 @@ window.cookieconsent.initialise({
         
           
             <li style="display: none;" data-name="installing-boot9strap-(fredtool)"><a href='/nl_NL/installing-boot9strap-(fredtool)'>Installing boot9strap (Fredtool)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(fredtool-inject)"><a href='/nl_NL/installing-boot9strap-(fredtool-inject)'>Installing boot9strap (Fredtool-Inject)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(fredtool-legacy)"><a href='/nl_NL/installing-boot9strap-(fredtool-legacy)'>Installing boot9strap (Fredtool, Legacy)</a></li>
           
         
           
@@ -487,20 +543,27 @@ window.cookieconsent.initialise({
 
 <ul>
   <li>De nieuwste versie van <a href="https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip">SafeB9SInstaller</a> (directe download)</li>
-  <li>De nieuwste versie van <a href="https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip">boot9strap</a> (directe download)</li>
-  <li>The latest release of <a href="https://github.com/zoogie/unSAFE_MODE/releases/latest">unSAFE_MODE</a>
-    <ul>
-      <li>You may already have this from a prior section of the guide</li>
-    </ul>
-  </li>
+  <li>The latest release of <a href="https://github.com/zoogie/unSAFE_MODE/releases/download/v1.3/RELEASE_v1.3.zip">unSAFE_MODE</a> (direct download)</li>
 </ul>
 
 <h4 id="deel-i---voorbereiding">Deel I - Voorbereiding</h4>
 
-<p>In this section, you will use Homebrew Launcher to launch slotTool, which will overwrite your Wi-Fi slots with hacked data. Then, you will copy the files needed to trigger the unSAFE_MODE exploit onto your device’s SD card. Your Wi-Fi connection settings will be temporarily overwritten while the exploit is active.</p>
+<p>In this section, you will copy the files needed to trigger the unSAFE_MODE exploit onto your console’s SD card. Then, you will use Homebrew Launcher to launch slotTool, which will overwrite your Wi-Fi slots with hacked data. Your Wi-Fi connection settings will be temporarily overwritten while the exploit is active.</p>
 
 <ol>
-  <li>Zet je 3DS aan</li>
+  <li>Plaats je SD kaart in je computer</li>
+  <li>Maak een map genaamd <code class="language-plaintext highlighter-rouge">boot9strap</code> op de hoofdmap van je SD-kaart</li>
+  <li>Copy <code class="language-plaintext highlighter-rouge">boot9strap.firm</code> and <code class="language-plaintext highlighter-rouge">boot9strap.firm.sha</code> from the RELEASE <code class="language-plaintext highlighter-rouge">.zip</code> to the <code class="language-plaintext highlighter-rouge">/boot9strap/</code> folder on your SD card</li>
+  <li>Maak een map genaamd “3ds” op de hoofdmap van je SD-kaart als die nog niet bestaat
+    <ul>
+      <li>This folder stores homebrew applications and data; it is different from the <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> folder that the console automatically generates</li>
+    </ul>
+  </li>
+  <li>Copy the <code class="language-plaintext highlighter-rouge">slotTool</code> folder from the RELEASE <code class="language-plaintext highlighter-rouge">.zip</code> to the <code class="language-plaintext highlighter-rouge">/3ds/</code> folder on your SD card</li>
+  <li>Copy <code class="language-plaintext highlighter-rouge">usm.bin</code> from the RELEASE <code class="language-plaintext highlighter-rouge">.zip</code> to the root folder on your SD card</li>
+  <li>Kopieer <code class="language-plaintext highlighter-rouge">SafeB9SInstaller.bin</code> van de SafeB9SInstaller <code class="language-plaintext highlighter-rouge">.zip</code> naar de hoofdmap van je SD-kaart</li>
+  <li>Reinsert your SD card into your console</li>
+  <li>Power on your console</li>
   <li>Open the Homebrew Launcher through your method of choice (likely the Internet Browser)</li>
   <li>Launch slotTool from the list of homebrew
     <ul>
@@ -512,12 +575,6 @@ window.cookieconsent.initialise({
       <li>You will see some on-screen text and then your system will shut down</li>
     </ul>
   </li>
-  <li>Remove your SD card from your console and connect it to your computer</li>
-  <li>Maak een map genaamd <code class="language-plaintext highlighter-rouge">boot9strap</code> op de hoofdmap van je SD-kaart</li>
-  <li>Kopieer <code class="language-plaintext highlighter-rouge">boot9strap.firm</code> en <code class="language-plaintext highlighter-rouge">boot9strap.firm.sha</code> van de boot9strap <code class="language-plaintext highlighter-rouge">.zip</code> naar de <code class="language-plaintext highlighter-rouge">/boot9strap/</code> map op je SD-kaart</li>
-  <li>Kopieer <code class="language-plaintext highlighter-rouge">SafeB9SInstaller.bin</code> van de SafeB9SInstaller <code class="language-plaintext highlighter-rouge">.zip</code> naar de hoofdmap van je SD-kaart</li>
-  <li>Copy <code class="language-plaintext highlighter-rouge">usm.bin</code> from the unSAFE_MODE <code class="language-plaintext highlighter-rouge">.zip</code> to the root of your SD card</li>
-  <li>Put your SD card back into your console</li>
 </ol>
 
 <p class="notice--info"><img src="https://3ds.hacks.guide/images/screenshots/hblusm-root-layout.png" alt="" /></p>
@@ -526,12 +583,12 @@ window.cookieconsent.initialise({
 
 <h4 id="section-ii---unsafe_mode">Section II - unSAFE_MODE</h4>
 
-<p>In this section, you will enter Safe Mode (a feature available on all 3DS family devices) and navigate to a menu where unSAFE_MODE will be triggered, which will launch you into the boot9strap (custom firmware) installer.</p>
+<p>In this section, you will enter Safe Mode (a feature available on all 3DS family consoles) and navigate to a menu where unSAFE_MODE will be triggered, which will launch you into the boot9strap (custom firmware) installer.</p>
 
 <ol>
-  <li>With your device still powered off, hold the following buttons: (Left Shoulder) + (Right Shoulder) + (D-Pad Up) + (A), and while holding these buttons together, power on your device
+  <li>With your console still powered off, hold the following buttons: (Left Shoulder) + (Right Shoulder) + (D-Pad Up) + (A), and while holding these buttons together, power on your console
     <ul>
-      <li>Keep holding the buttons until the device boots into Safe Mode (a “system update” menu)</li>
+      <li>Keep holding the buttons until the console boots into Safe Mode (a “system update” menu)</li>
     </ul>
   </li>
   <li>Press “OK” to accept the update
@@ -543,26 +600,31 @@ window.cookieconsent.initialise({
   <li>The update will eventually fail, with the error code <code class="language-plaintext highlighter-rouge">003-1099</code>. This is intended behaviour</li>
   <li>When asked “Would you like to configure Internet settings?”, select “Yes”</li>
   <li>On the following menu, navigate to <code class="language-plaintext highlighter-rouge">Connection 1</code> -&gt; <code class="language-plaintext highlighter-rouge">Change Settings</code> -&gt; <code class="language-plaintext highlighter-rouge">Next Page (right arrow)</code> -&gt; <code class="language-plaintext highlighter-rouge">Proxy Settings</code> -&gt; <code class="language-plaintext highlighter-rouge">Detailed Setup</code> (<a href="/images/screenshots/usm/safemode_highlighted.png">image</a>)</li>
-  <li>If the exploit was successful, your device will have booted into SafeB9SInstaller
+  <li>If the exploit was successful, your console will have booted into SafeB9SInstaller
     <ul>
-      <li>If your device instead freezes on a white screen, hold the POWER button until it turns off, then retry this section</li>
-      <li>If your device instead freezes on a red screen, you are missing <code class="language-plaintext highlighter-rouge">usm.bin</code> from the root of your SD card</li>
+      <li>If your console instead freezes on a white screen, hold the POWER button until it turns off, then retry this section</li>
+      <li>If your console instead freezes on a red screen, you are missing <code class="language-plaintext highlighter-rouge">usm.bin</code> from the root of your SD card</li>
+      <li>If you get a different error, <a href="troubleshooting#installing-boot9strap-usm">follow this troubleshooting guide</a></li>
     </ul>
   </li>
 </ol>
 
 <h4 id="deel-iii---boot9strap-installeren">Deel III - Boot9strap installeren</h4>
 
-<p>In this section, you will install custom firmware onto your device.</p>
+<p>In this section, you will install custom firmware onto your console.</p>
 
 <ol>
-  <li>When prompted, input the key combo given on the top screen to install boot9strap</li>
-  <li>Once it is complete, press (A) to reboot your device</li>
-  <li>Your device should have booted into the Luma3DS configuration menu
+  <li>When prompted, input the key combo given on the top screen to install boot9strap
+    <ul>
+      <li>If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, <a href="troubleshooting#issues-with-safeb9sinstaller">follow this troubleshooting guide</a></li>
+    </ul>
+  </li>
+  <li>Once it is complete, press (A) to reboot your console</li>
+  <li>Your console should have booted into the Luma3DS configuration menu
     <ul>
       <li>Luma3DS configuration menu are settings for the Luma3DS custom firmware. Many of these settings may be useful for customization or debugging</li>
       <li>For the purpose of this guide, <strong>leave these options on the default settings</strong> (do not check or uncheck anything)</li>
-      <li>If your device shuts down when you try to power it on, ensure that you have copied <code class="language-plaintext highlighter-rouge">boot.firm</code> from the Luma3DS <code class="language-plaintext highlighter-rouge">.zip</code> to the root of your SD card</li>
+      <li>If your console shuts down when you try to power it on, ensure that you have copied <code class="language-plaintext highlighter-rouge">boot.firm</code> from the Luma3DS <code class="language-plaintext highlighter-rouge">.zip</code> to the root of your SD card</li>
     </ul>
   </li>
   <li>Druk op (Start) om op te slaan en opnieuw op te starten</li>
@@ -593,10 +655,10 @@ window.cookieconsent.initialise({
   <li>Druk op (B) om het Rosalina menu af te sluiten</li>
   <li>Druk op (Home), en sluit dan Download Play af</li>
   <li>Relaunch the Download Play application</li>
-  <li>Nu zou je console de Homebrew Launcher moeten openen</li>
+  <li>Your console should load the Homebrew Launcher</li>
   <li>Launch slotTool from the list of homebrew</li>
   <li>Select “RESTORE original wifi slots 1,2,3”</li>
-  <li>Your device will then reboot</li>
+  <li>Your console will then reboot</li>
 </ol>
 
 <hr />

@@ -314,11 +314,35 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="updating-firmware-(new-3ds)"><a href='/zh_CN/updating-firmware-(new-3ds)'>Updating Firmware (New 3DS)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="updating-firmware-(kor)"><a href='/zh_CN/updating-firmware-(kor)'>Updating Firmware (KOR)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="updating-firmware-(twn)"><a href='/zh_CN/updating-firmware-(twn)'>Updating Firmware (TWN)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="ntrboot"><a href='/zh_CN/ntrboot'>ntrboot</a></li>
           
         
           
+            <li style="display: none;" data-name="alternate-exploits"><a href='/zh_CN/alternate-exploits'>Alternate Exploits</a></li>
+          
+        
+          
             <li style="display: none;" data-name="seedminer"><a href='/zh_CN/seedminer'>Seedminer</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(alternate)"><a href='/zh_CN/seedminer-(alternate)'>Seedminer (Alternate)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(mii)"><a href='/zh_CN/seedminer-(mii)'>Seedminer (Mii)</a></li>
           
         
           
@@ -330,7 +354,31 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="bannerbomb3-(legacy)"><a href='/zh_CN/bannerbomb3-(legacy)'>BannerBomb3 (Legacy)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(ninjhax2-dx)"><a href='/zh_CN/homebrew-launcher-(ninjhax2-dx)'>Homebrew Launcher (ninjhax2-dx)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(pichaxx)"><a href='/zh_CN/homebrew-launcher-(pichaxx)'>Homebrew Launcher (PicHaxx)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(smilehax-iie)"><a href='/zh_CN/homebrew-launcher-(smilehax-iie)'>Homebrew Launcher (smilehax-IIe)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(steelhax)"><a href='/zh_CN/homebrew-launcher-(steelhax)'>Homebrew Launcher (Steelhax)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="homebrew-launcher-(super-skaterhax)"><a href='/zh_CN/homebrew-launcher-(super-skaterhax)'>Homebrew Launcher (super-skaterhax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="dumping-eshop-dsiware"><a href='/zh_CN/dumping-eshop-dsiware'>Dumping eShop DSiWare</a></li>
           
         
           
@@ -387,6 +435,14 @@ window.cookieconsent.initialise({
         
           
             <li style="display: none;" data-name="installing-boot9strap-(fredtool)"><a href='/zh_CN/installing-boot9strap-(fredtool)'>Installing boot9strap (Fredtool)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(fredtool-inject)"><a href='/zh_CN/installing-boot9strap-(fredtool-inject)'>Installing boot9strap (Fredtool-Inject)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(fredtool-legacy)"><a href='/zh_CN/installing-boot9strap-(fredtool-legacy)'>Installing boot9strap (Fredtool, Legacy)</a></li>
           
         
           
@@ -478,9 +534,9 @@ window.cookieconsent.initialise({
 
 <h3 id="兼容性注意">兼容性注意</h3>
 
-<p>safecerthax is compatible with all Old 3DS and Old 2DS devices in all regions on system versions 1.0.0 through 11.14.0.</p>
+<p>safecerthax is compatible with all Old 3DS and Old 2DS consoles in all regions on system versions 1.0.0 through 11.14.0.</p>
 
-<p class="notice--info">This exploit will not work on the New 3DS, New 3DS XL, or New 2DS XL. Please ensure that the device you are modding is an Old 3DS, Old 3DS XL, or Old 2DS before continuing.</p>
+<p class="notice--info">This exploit will not work on the New 3DS, New 3DS XL, or New 2DS XL. Please ensure that the console you are modding is an Old 3DS, Old 3DS XL, or Old 2DS before continuing.</p>
 
 <h3 id="你需要准备点啥">你需要准备点啥？</h3>
 
@@ -494,21 +550,19 @@ window.cookieconsent.initialise({
 
 <h4 id="section-i---hardware-button-check">Section I - Hardware Button Check</h4>
 
+<p>In this section, you will see whether your shoulder buttons are working on your console. This will determine which method you will follow on the next page.</p>
+
 <ol>
-  <li>将你的主机置于关机状态，按住 L + R + ↑ + A 四个按键，然后按下电源键
+  <li>Power on your console</li>
+  <li>Once you see the HOME Menu, press the (Left Shoulder) and (Right Shoulder) buttons at the same time
     <ul>
-      <li>Keep holding the buttons until the device boots to a system update screen (this is Safe Mode)</li>
+      <li>The camera applet should appear</li>
     </ul>
   </li>
-  <li>If you see the system update screen, press Cancel
-    <ul>
-      <li>主机将关机</li>
-      <li>如果主机启动到了主菜单，则请关机</li>
-    </ul>
-  </li>
+  <li>Power off your console</li>
 </ol>
 
-<p class="notice--warning">If you do not boot into Safe Mode, the system update menu after multiple attempts, you cannot follow this method. If this is the case, use <a href="seedminer">Seedminer</a> instead.</p>
+<p class="notice--warning">If the camera did NOT appear, you cannot follow this method. If this is the case, stay on your current firmware and ask <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew on Discord</a> for help.</p>
 
 <h4 id="第二步--准备工作">第二步 – 准备工作</h4>
 
@@ -524,13 +578,13 @@ window.cookieconsent.initialise({
   <li>在 SD 卡根目录创建一个名为 <code class="language-plaintext highlighter-rouge">boot9strap</code> 的文件夹</li>
   <li>从boot9strap <code class="language-plaintext highlighter-rouge">.zip</code> 文件中复制 <code class="language-plaintext highlighter-rouge">boot9strap.firm</code> 和 <code class="language-plaintext highlighter-rouge">boot9strap.firm.sha</code> 到你SD卡的 <code class="language-plaintext highlighter-rouge">/boot9strap/</code> 文件夹中</li>
   <li>从 SafeB9SInstaller <code class="language-plaintext highlighter-rouge">.zip</code> 压缩包中复制 <code class="language-plaintext highlighter-rouge">SafeB9SInstaller.bin</code> 到 SD 卡根目录下</li>
-  <li>将 SD 卡重新插入你的主机</li>
-  <li>启动你的主机</li>
+  <li>Reinsert your SD card into your console</li>
+  <li>Power on your console</li>
 </ol>
 
 <h4 id="section-iii---safecerthax-proxy">Section III - safecerthax proxy</h4>
 
-<p>In this section, you will change your Internet connection settings to use a proxy network designed to exploit the System Update feature of your device.</p>
+<p>In this section, you will change your Internet connection settings to use a proxy network designed to exploit the System Update feature of your console.</p>
 
 <p class="notice--info">If you haven’t already, make sure you have a working Internet connection set up on your console.</p>
 
@@ -539,7 +593,7 @@ window.cookieconsent.initialise({
   <li>进入到 <code class="language-plaintext highlighter-rouge">互联网设置（インターネット設定 / Internet Settings）</code> -&gt; <code class="language-plaintext highlighter-rouge">连接设置（インターネット接続設定 / Connection Settings）</code></li>
   <li>点击你目前在用的连接点槽位，然后进入到 <code class="language-plaintext highlighter-rouge">设置变更（設定変更 / Change Settings）</code> -&gt; <code class="language-plaintext highlighter-rouge">下一页（右箭头）</code> -&gt; <code class="language-plaintext highlighter-rouge">代理设置（Proxy）</code></li>
   <li>设置“代理服务器 （Proxy）”为“是（する / Yes）”，然后点击<code class="language-plaintext highlighter-rouge">详细设置（詳細設定 / Detailed Setup）</code></li>
-  <li>设置代理服务器为 <code class="language-plaintext highlighter-rouge">192.9.234.11</code>，端口为 <code class="language-plaintext highlighter-rouge">8080</code></li>
+  <li>Set the Proxy Server to <code class="language-plaintext highlighter-rouge">ssloth.nintendohomebrew.com</code>, and the Port to <code class="language-plaintext highlighter-rouge">8080</code></li>
   <li>点击 OK，然后点击保存（保存する / Save）</li>
   <li>当提示时，点击“测试（テスト / Test）”进行连接测试
     <ul>
@@ -549,17 +603,17 @@ window.cookieconsent.initialise({
   <li>
     <p>点击 “OK” 继续</p>
   </li>
-  <li>将主机关机</li>
+  <li>Power off your console</li>
 </ol>
 
 <h4 id="section-iv---safecerthax">Section IV - safecerthax</h4>
 
-<p>In this section, you will enter Safe Mode (a feature available on all 3DS family devices) where safecerthax will be triggered, which will launch you into the boot9strap (custom firmware) installer.</p>
+<p>In this section, you will enter Safe Mode (a feature available on all 3DS family consoles) where safecerthax will be triggered, which will launch you into the boot9strap (custom firmware) installer.</p>
 
 <ol>
-  <li>将你的主机置于关机状态，按住 L + R + ↑ + A 四个按键，然后按下电源键
+  <li>With your console still powered off, hold the following buttons: (Left Shoulder) + (Right Shoulder) + (D-Pad Up) + (A), and while holding these buttons together, power on your console
     <ul>
-      <li>按住这几个键，直到主机进入安全模式（一个“系统更新”菜单）</li>
+      <li>Keep holding the buttons until the console boots into Safe Mode (a “system update” menu)</li>
     </ul>
   </li>
   <li>Press “OK” to accept the update
@@ -572,23 +626,27 @@ window.cookieconsent.initialise({
   <li>Press “OK” to close the error message</li>
   <li>如果一切成功的话，你将自动进入 SafeB9SInstaller
     <ul>
-      <li>If the device freezes or crashes, force power off the device, then retry this section</li>
+      <li>If the console freezes or crashes, force power off the console, then retry this section</li>
     </ul>
   </li>
 </ol>
 
 <h4 id="第五步--安装-boot9strap">第五步 – 安装 boot9strap</h4>
 
-<p>In this section, you will install custom firmware onto your device.</p>
+<p>In this section, you will install custom firmware onto your console.</p>
 
 <ol>
-  <li>When prompted, input the key combo given on the top screen to install boot9strap</li>
-  <li>Once it is complete, press (A) to reboot your device</li>
-  <li>Your device should have booted into the Luma3DS configuration menu
+  <li>When prompted, input the key combo given on the top screen to install boot9strap
+    <ul>
+      <li>If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, <a href="troubleshooting#issues-with-safeb9sinstaller">follow this troubleshooting guide</a></li>
+    </ul>
+  </li>
+  <li>Once it is complete, press (A) to reboot your console</li>
+  <li>Your console should have booted into the Luma3DS configuration menu
     <ul>
       <li>Luma3DS 配置菜单用于设置 Luma3DS 自制固件的可选功能 其中有许多功能可用于个性化或调试</li>
       <li>For the purpose of this guide, <strong>leave these options on the default settings</strong> (do not check or uncheck anything)</li>
-      <li>If your device shuts down when you try to power it on, ensure that you have copied <code class="language-plaintext highlighter-rouge">boot.firm</code> from the Luma3DS <code class="language-plaintext highlighter-rouge">.zip</code> to the root of your SD card</li>
+      <li>If your console shuts down when you try to power it on, ensure that you have copied <code class="language-plaintext highlighter-rouge">boot.firm</code> from the Luma3DS <code class="language-plaintext highlighter-rouge">.zip</code> to the root of your SD card</li>
     </ul>
   </li>
   <li>按下 “Start” 键保存设置并重启</li>
@@ -615,7 +673,7 @@ window.cookieconsent.initialise({
       <li>测试应该会成功</li>
     </ul>
   </li>
-  <li>将主机关机</li>
+  <li>Power off your console</li>
 </ol>
 
 <hr />

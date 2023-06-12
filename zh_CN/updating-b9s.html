@@ -314,11 +314,35 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="updating-firmware-(new-3ds)"><a href='/zh_CN/updating-firmware-(new-3ds)'>Updating Firmware (New 3DS)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="updating-firmware-(kor)"><a href='/zh_CN/updating-firmware-(kor)'>Updating Firmware (KOR)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="updating-firmware-(twn)"><a href='/zh_CN/updating-firmware-(twn)'>Updating Firmware (TWN)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="ntrboot"><a href='/zh_CN/ntrboot'>ntrboot</a></li>
           
         
           
+            <li style="display: none;" data-name="alternate-exploits"><a href='/zh_CN/alternate-exploits'>Alternate Exploits</a></li>
+          
+        
+          
             <li style="display: none;" data-name="seedminer"><a href='/zh_CN/seedminer'>Seedminer</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(alternate)"><a href='/zh_CN/seedminer-(alternate)'>Seedminer (Alternate)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(mii)"><a href='/zh_CN/seedminer-(mii)'>Seedminer (Mii)</a></li>
           
         
           
@@ -330,7 +354,31 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="bannerbomb3-(legacy)"><a href='/zh_CN/bannerbomb3-(legacy)'>BannerBomb3 (Legacy)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(ninjhax2-dx)"><a href='/zh_CN/homebrew-launcher-(ninjhax2-dx)'>Homebrew Launcher (ninjhax2-dx)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(pichaxx)"><a href='/zh_CN/homebrew-launcher-(pichaxx)'>Homebrew Launcher (PicHaxx)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(smilehax-iie)"><a href='/zh_CN/homebrew-launcher-(smilehax-iie)'>Homebrew Launcher (smilehax-IIe)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(steelhax)"><a href='/zh_CN/homebrew-launcher-(steelhax)'>Homebrew Launcher (Steelhax)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="homebrew-launcher-(super-skaterhax)"><a href='/zh_CN/homebrew-launcher-(super-skaterhax)'>Homebrew Launcher (super-skaterhax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="dumping-eshop-dsiware"><a href='/zh_CN/dumping-eshop-dsiware'>Dumping eShop DSiWare</a></li>
           
         
           
@@ -387,6 +435,14 @@ window.cookieconsent.initialise({
         
           
             <li style="display: none;" data-name="installing-boot9strap-(fredtool)"><a href='/zh_CN/installing-boot9strap-(fredtool)'>Installing boot9strap (Fredtool)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(fredtool-inject)"><a href='/zh_CN/installing-boot9strap-(fredtool-inject)'>Installing boot9strap (Fredtool-Inject)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(fredtool-legacy)"><a href='/zh_CN/installing-boot9strap-(fredtool-legacy)'>Installing boot9strap (Fredtool, Legacy)</a></li>
           
         
           
@@ -497,7 +553,7 @@ window.cookieconsent.initialise({
     </ul>
   </li>
   <li>
-    <p>将 SD 卡重新插入你的主机</p>
+    <p>Reinsert your SD card into your console</p>
 
     <p class="notice--info"><img src="https://3ds.hacks.guide/images/screenshots/updateb9s-root-layout.png" alt="" /></p>
   </li>
@@ -506,15 +562,19 @@ window.cookieconsent.initialise({
 <h4 id="第二步--安装-boot9strap">第二步 – 安装 boot9strap</h4>
 
 <ol>
-  <li>启动你的主机
+  <li>Power on your console
     <ul>
       <li>你的主机应该会自动进入到 SafeB9SInstaller</li>
     </ul>
   </li>
-  <li>When prompted, input the key combo given on the top screen to install boot9strap</li>
-  <li>Once it is completed, force your device to power off by holding down the power button
+  <li>When prompted, input the key combo given on the top screen to install boot9strap
     <ul>
-      <li>Your device will only boot to the SafeB9SInstaller screen until the next section is completed</li>
+      <li>If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, <a href="troubleshooting#issues-with-safeb9sinstaller">follow this troubleshooting guide</a></li>
+    </ul>
+  </li>
+  <li>Once it is completed, force your console to power off by holding down the power button
+    <ul>
+      <li>Your console will only boot to the SafeB9SInstaller screen until the next section is completed</li>
     </ul>
   </li>
 </ol>
@@ -522,11 +582,11 @@ window.cookieconsent.initialise({
 <h4 id="第三步--升级-luma3ds">第三步 – 升级 Luma3DS</h4>
 
 <ol>
-  <li>将你的 SD 卡插入到电脑</li>
+  <li>将 SD 卡插入电脑</li>
   <li>解压 Luma3DS <code class="language-plaintext highlighter-rouge">.zip</code> 内的 <code class="language-plaintext highlighter-rouge">boot.firm</code> 和 <code class="language-plaintext highlighter-rouge">boot.3dsx</code> 到你 SD 卡的根目录，覆盖已有文件</li>
-  <li>将 SD 卡重新插入你的主机</li>
-  <li>启动你的主机</li>
-  <li>如果你的主机开机后进入了 Luma3DS 的配置菜单，请直接按下 START 键保存并启动系统
+  <li>Reinsert your SD card into your console</li>
+  <li>Power on your console</li>
+  <li>If your console has booted into the Luma3DS configuration menu, press (Start) to save and reboot
     <ul>
       <li>Luma3DS 配置菜单用于设置 Luma3DS 自制固件的可选功能 其中有许多功能可用于个性化或调试</li>
       <li>由于配合本手册的用途，我们将直接按照默认配置保存</li>

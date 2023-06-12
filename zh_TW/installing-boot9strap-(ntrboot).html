@@ -314,11 +314,35 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="updating-firmware-(new-3ds)"><a href='/zh_TW/updating-firmware-(new-3ds)'>Updating Firmware (New 3DS)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="updating-firmware-(kor)"><a href='/zh_TW/updating-firmware-(kor)'>Updating Firmware (KOR)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="updating-firmware-(twn)"><a href='/zh_TW/updating-firmware-(twn)'>Updating Firmware (TWN)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="ntrboot"><a href='/zh_TW/ntrboot'>ntrboot</a></li>
           
         
           
+            <li style="display: none;" data-name="alternate-exploits"><a href='/zh_TW/alternate-exploits'>Alternate Exploits</a></li>
+          
+        
+          
             <li style="display: none;" data-name="seedminer"><a href='/zh_TW/seedminer'>Seedminer</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(alternate)"><a href='/zh_TW/seedminer-(alternate)'>Seedminer (Alternate)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(mii)"><a href='/zh_TW/seedminer-(mii)'>Seedminer (Mii)</a></li>
           
         
           
@@ -330,7 +354,31 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="bannerbomb3-(legacy)"><a href='/zh_TW/bannerbomb3-(legacy)'>BannerBomb3 (Legacy)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(ninjhax2-dx)"><a href='/zh_TW/homebrew-launcher-(ninjhax2-dx)'>Homebrew Launcher (ninjhax2-dx)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(pichaxx)"><a href='/zh_TW/homebrew-launcher-(pichaxx)'>Homebrew Launcher (PicHaxx)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(smilehax-iie)"><a href='/zh_TW/homebrew-launcher-(smilehax-iie)'>Homebrew Launcher (smilehax-IIe)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(steelhax)"><a href='/zh_TW/homebrew-launcher-(steelhax)'>Homebrew Launcher (Steelhax)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="homebrew-launcher-(super-skaterhax)"><a href='/zh_TW/homebrew-launcher-(super-skaterhax)'>Homebrew Launcher (super-skaterhax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="dumping-eshop-dsiware"><a href='/zh_TW/dumping-eshop-dsiware'>Dumping eShop DSiWare</a></li>
           
         
           
@@ -387,6 +435,14 @@ window.cookieconsent.initialise({
         
           
             <li style="display: none;" data-name="installing-boot9strap-(fredtool)"><a href='/zh_TW/installing-boot9strap-(fredtool)'>Installing boot9strap (Fredtool)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(fredtool-inject)"><a href='/zh_TW/installing-boot9strap-(fredtool-inject)'>Installing boot9strap (Fredtool-Inject)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(fredtool-legacy)"><a href='/zh_TW/installing-boot9strap-(fredtool-legacy)'>Installing boot9strap (Fredtool, Legacy)</a></li>
           
         
           
@@ -481,7 +537,7 @@ window.cookieconsent.initialise({
 <h3 id="必備項目">必備項目</h3>
 
 <ul>
-  <li>一塊能使您主機進入睡眠模式的磁鐵 (僅適用於折疊式主機)</li>
+  <li>A magnet that triggers the sleep mode of your console (if using a folding style console)</li>
   <li>一張已寫入 ntrboot 漏洞的燒錄卡</li>
   <li>The latest release of <a href="https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip">SafeB9SInstaller</a> (direct download)</li>
   <li>The latest release of <a href="https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip">boot9strap</a> (direct download)</li>
@@ -493,7 +549,7 @@ window.cookieconsent.initialise({
 <h4 id="第一節--準備工作">第一節 — 準備工作</h4>
 
 <ol>
-  <li>關閉您的主機</li>
+  <li>Power off your console</li>
   <li>將您主機的 SD 卡插入至電腦中
     <ul>
       <li>這指的是 3DS 的 SD 卡，<em>非</em>燒錄卡中的 SD 卡</li>
@@ -512,20 +568,20 @@ window.cookieconsent.initialise({
     <p class="notice--info"><img src="https://3ds.hacks.guide/images/screenshots/boot9strap-ntrboot-file-layout.png" alt="" /></p>
   </li>
   <li>將 SD 卡插回 3DS 中</li>
-  <li>啟動您的主機</li>
+  <li>Power on your console</li>
 </ol>
 
 <h4 id="第二節--ntrboot">第二節 — ntrboot</h4>
 
 <ol>
-  <li>透過先前準備的磁鐵來找到能啟動睡眠模式的感應器
+  <li>Use the magnet to find the spot on your console where the sleep sensor is triggered
     <ul>
       <li>舊型 2DS 可跳過本步驟</li>
     </ul>
   </li>
-  <li>關閉您的主機</li>
-  <li>將燒錄卡插回主機中</li>
-  <li>將磁鐵放在主機的睡眠感應器上
+  <li>Power off your console</li>
+  <li>Insert your flashcart into your console</li>
+  <li>Place the magnet on your console to trigger the sleep sensor
     <ul>
       <li>舊型 2DS 可直接開啟睡眠模式開關</li>
     </ul>
@@ -536,7 +592,7 @@ window.cookieconsent.initialise({
     </ul>
   </li>
   <li>如果一切成功的話，您將自動進入 SafeB9SInstaller</li>
-  <li>從您的主機上移開磁鐵
+  <li>Remove the magnet from your console
     <ul>
       <li>舊型 2DS 可直接關閉睡眠模式開關</li>
     </ul>
@@ -545,13 +601,17 @@ window.cookieconsent.initialise({
 
 <h4 id="第三節--安裝-boot9strap">第三節 — 安裝 boot9strap</h4>
 
-<p>In this section, you will install custom firmware onto your device.</p>
+<p>In this section, you will install custom firmware onto your console.</p>
 
 <ol>
-  <li>When prompted, input the key combo given on the top screen to install boot9strap</li>
-  <li>Once it is completed, force your device to power off by holding down the power button
+  <li>When prompted, input the key combo given on the top screen to install boot9strap
     <ul>
-      <li>Your device will only boot to the SafeB9SInstaller screen until the next section is completed</li>
+      <li>If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, <a href="troubleshooting#issues-with-safeb9sinstaller">follow this troubleshooting guide</a></li>
+    </ul>
+  </li>
+  <li>Once it is completed, force your console to power off by holding down the power button
+    <ul>
+      <li>Your console will only boot to the SafeB9SInstaller screen until the next section is completed</li>
     </ul>
   </li>
 </ol>
@@ -562,12 +622,12 @@ window.cookieconsent.initialise({
   <li>將 SD 卡插入至電腦中</li>
   <li>將 SD 卡根目錄中的 <code class="language-plaintext highlighter-rouge">boot.firm</code> 檔案刪除</li>
   <li>解壓 Luma3DS <code class="language-plaintext highlighter-rouge">.zip</code> 內的 <code class="language-plaintext highlighter-rouge">boot.firm</code> 到 SD 卡的根目錄底下</li>
-  <li>將 SD 卡插回主機中</li>
-  <li>啟動您的主機1. Your device should have booted into the Luma3DS configuration menu
+  <li>Reinsert your SD card into your console</li>
+  <li>Power on your console1. Your console should have booted into the Luma3DS configuration menu
     <ul>
       <li>Luma3DS configuration menu are settings for the Luma3DS custom firmware. Many of these settings may be useful for customization or debugging</li>
       <li>For the purpose of this guide, <strong>leave these options on the default settings</strong> (do not check or uncheck anything)</li>
-      <li>If your device shuts down when you try to power it on, ensure that you have copied <code class="language-plaintext highlighter-rouge">boot.firm</code> from the Luma3DS <code class="language-plaintext highlighter-rouge">.zip</code> to the root of your SD card</li>
+      <li>If your console shuts down when you try to power it on, ensure that you have copied <code class="language-plaintext highlighter-rouge">boot.firm</code> from the Luma3DS <code class="language-plaintext highlighter-rouge">.zip</code> to the root of your SD card</li>
     </ul>
   </li>
   <li>按『Start』鍵以存檔並重新啟動系統</li>
@@ -736,7 +796,7 @@ window.cookieconsent.initialise({
 <h5 id="操作說明-1">操作說明</h5>
 
 <ol>
-  <li>關閉您的主機</li>
+  <li>Power off your console</li>
   <li>將 SD 卡插入至電腦中
     <ul>
       <li>這指的是 3DS 的 SD 卡，<em>非</em>燒錄卡中的 SD 卡</li>
@@ -746,8 +806,8 @@ window.cookieconsent.initialise({
   <li>從您的燒錄卡備份 <code class="language-plaintext highlighter-rouge">.zip</code> 壓縮檔中解壓 <code class="language-plaintext highlighter-rouge">.bin</code> 檔案至 SD 卡中的 <code class="language-plaintext highlighter-rouge">/ntrboot/</code> 資料夾中</li>
   <li>在 SD 卡的 <code class="language-plaintext highlighter-rouge">luma</code> 資料夾中建立一個新的資料夾叫做 <code class="language-plaintext highlighter-rouge">payloads</code></li>
   <li>複製 <code class="language-plaintext highlighter-rouge">ntrboot_flasher.firm</code> 至 SD 卡中的 <code class="language-plaintext highlighter-rouge">/luma/payloads/</code> 資料夾中</li>
-  <li>將 SD 卡插回主機中</li>
-  <li>將相容於 ntrboot 的 DS / DSi 燒錄卡插入於您的主機中</li>
+  <li>Reinsert your SD card into your console</li>
+  <li>Insert your ntrboot compatible DS / DSi flashcart into your console</li>
   <li>開機時按住『Start』鍵啟動 ntrboot_flasher</li>
   <li>請仔細閱讀警告</li>
   <li>按『A』 繼續</li>
@@ -760,7 +820,7 @@ window.cookieconsent.initialise({
   <li>按『A』繼續</li>
   <li>等到檢查完畢為止。</li>
   <li>按『A』回到主選單</li>
-  <li>按『B』關機</li>
+  <li>Press (B) to power off your console</li>
 </ol>
 
         

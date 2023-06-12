@@ -314,11 +314,35 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="updating-firmware-(new-3ds)"><a href='/zh_CN/updating-firmware-(new-3ds)'>Updating Firmware (New 3DS)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="updating-firmware-(kor)"><a href='/zh_CN/updating-firmware-(kor)'>Updating Firmware (KOR)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="updating-firmware-(twn)"><a href='/zh_CN/updating-firmware-(twn)'>Updating Firmware (TWN)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="ntrboot"><a href='/zh_CN/ntrboot'>ntrboot</a></li>
           
         
           
+            <li style="display: none;" data-name="alternate-exploits"><a href='/zh_CN/alternate-exploits'>Alternate Exploits</a></li>
+          
+        
+          
             <li style="display: none;" data-name="seedminer"><a href='/zh_CN/seedminer'>Seedminer</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(alternate)"><a href='/zh_CN/seedminer-(alternate)'>Seedminer (Alternate)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(mii)"><a href='/zh_CN/seedminer-(mii)'>Seedminer (Mii)</a></li>
           
         
           
@@ -330,7 +354,31 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="bannerbomb3-(legacy)"><a href='/zh_CN/bannerbomb3-(legacy)'>BannerBomb3 (Legacy)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(ninjhax2-dx)"><a href='/zh_CN/homebrew-launcher-(ninjhax2-dx)'>Homebrew Launcher (ninjhax2-dx)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(pichaxx)"><a href='/zh_CN/homebrew-launcher-(pichaxx)'>Homebrew Launcher (PicHaxx)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(smilehax-iie)"><a href='/zh_CN/homebrew-launcher-(smilehax-iie)'>Homebrew Launcher (smilehax-IIe)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(steelhax)"><a href='/zh_CN/homebrew-launcher-(steelhax)'>Homebrew Launcher (Steelhax)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="homebrew-launcher-(super-skaterhax)"><a href='/zh_CN/homebrew-launcher-(super-skaterhax)'>Homebrew Launcher (super-skaterhax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="dumping-eshop-dsiware"><a href='/zh_CN/dumping-eshop-dsiware'>Dumping eShop DSiWare</a></li>
           
         
           
@@ -387,6 +435,14 @@ window.cookieconsent.initialise({
         
           
             <li style="display: none;" data-name="installing-boot9strap-(fredtool)"><a href='/zh_CN/installing-boot9strap-(fredtool)'>Installing boot9strap (Fredtool)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(fredtool-inject)"><a href='/zh_CN/installing-boot9strap-(fredtool-inject)'>Installing boot9strap (Fredtool-Inject)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(fredtool-legacy)"><a href='/zh_CN/installing-boot9strap-(fredtool-legacy)'>Installing boot9strap (Fredtool, Legacy)</a></li>
           
         
           
@@ -488,20 +544,27 @@ window.cookieconsent.initialise({
 
 <ul>
   <li>最新版本的 <a href="https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip">SafeB9SInstaller</a>（直链）</li>
-  <li>最新版本的 <a href="https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip">boot9strap</a>（直链）</li>
-  <li>最新版 <a href="https://github.com/zoogie/unSAFE_MODE/releases/latest">unSAFE_MODE</a>
-    <ul>
-      <li>你可能在前一页的教程中已经下载了这个东西</li>
-    </ul>
-  </li>
+  <li>The latest release of <a href="https://github.com/zoogie/unSAFE_MODE/releases/download/v1.3/RELEASE_v1.3.zip">unSAFE_MODE</a> (direct download)</li>
 </ul>
 
 <h4 id="第一步--准备工作">第一步 – 准备工作</h4>
 
-<p>在本节中，你将会使用 Homebrew Launcher 来启动 slotTool，它将会把带有漏洞的数据覆盖到你主机的 Wi-Fi 连接点槽中。 然后，你需要把触发 unSAFE_MODE 漏洞所需的文件复制到设备的 SD 卡上。 你自己设置的 Wi-Fi 链接点将在这个过程中被暂时覆盖。</p>
+<p>In this section, you will copy the files needed to trigger the unSAFE_MODE exploit onto your console’s SD card. Then, you will use Homebrew Launcher to launch slotTool, which will overwrite your Wi-Fi slots with hacked data. 你自己设置的 Wi-Fi 链接点将在这个过程中被暂时覆盖。</p>
 
 <ol>
-  <li>启动你的主机</li>
+  <li>将你的 SD 卡插入到电脑</li>
+  <li>在 SD 卡根目录创建一个名为 <code class="language-plaintext highlighter-rouge">boot9strap</code> 的文件夹</li>
+  <li>Copy <code class="language-plaintext highlighter-rouge">boot9strap.firm</code> and <code class="language-plaintext highlighter-rouge">boot9strap.firm.sha</code> from the RELEASE <code class="language-plaintext highlighter-rouge">.zip</code> to the <code class="language-plaintext highlighter-rouge">/boot9strap/</code> folder on your SD card</li>
+  <li>检查 SD 卡的根目录是否存在一个名为 <code class="language-plaintext highlighter-rouge">3ds</code> 的文件夹，如果没有则手动新建一个
+    <ul>
+      <li>This folder stores homebrew applications and data; it is different from the <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> folder that the console automatically generates</li>
+    </ul>
+  </li>
+  <li>Copy the <code class="language-plaintext highlighter-rouge">slotTool</code> folder from the RELEASE <code class="language-plaintext highlighter-rouge">.zip</code> to the <code class="language-plaintext highlighter-rouge">/3ds/</code> folder on your SD card</li>
+  <li>Copy <code class="language-plaintext highlighter-rouge">usm.bin</code> from the RELEASE <code class="language-plaintext highlighter-rouge">.zip</code> to the root folder on your SD card</li>
+  <li>从 SafeB9SInstaller <code class="language-plaintext highlighter-rouge">.zip</code> 压缩包中复制 <code class="language-plaintext highlighter-rouge">SafeB9SInstaller.bin</code> 到 SD 卡根目录下</li>
+  <li>Reinsert your SD card into your console</li>
+  <li>Power on your console</li>
   <li>Open the Homebrew Launcher through your method of choice (likely the Internet Browser)</li>
   <li>从自制程序列表中找到并启动 slotTool
     <ul>
@@ -513,12 +576,6 @@ window.cookieconsent.initialise({
       <li>你应该会看到屏幕上出现了一些文字，然后你的主机就关机了</li>
     </ul>
   </li>
-  <li>从主机拔出 SD 卡，然后将其插入电脑</li>
-  <li>在 SD 卡根目录创建一个名为 <code class="language-plaintext highlighter-rouge">boot9strap</code> 的文件夹</li>
-  <li>从boot9strap <code class="language-plaintext highlighter-rouge">.zip</code> 文件中复制 <code class="language-plaintext highlighter-rouge">boot9strap.firm</code> 和 <code class="language-plaintext highlighter-rouge">boot9strap.firm.sha</code> 到你SD卡的 <code class="language-plaintext highlighter-rouge">/boot9strap/</code> 文件夹中</li>
-  <li>从 SafeB9SInstaller <code class="language-plaintext highlighter-rouge">.zip</code> 压缩包中复制 <code class="language-plaintext highlighter-rouge">SafeB9SInstaller.bin</code> 到 SD 卡根目录下</li>
-  <li>从 unSAFE_MODE <code class="language-plaintext highlighter-rouge">.zip</code> 复制 <code class="language-plaintext highlighter-rouge">usm.bin</code> 到 SD 卡的根目录</li>
-  <li>将 SD 卡插回主机</li>
 </ol>
 
 <p class="notice--info"><img src="https://3ds.hacks.guide/images/screenshots/hblusm-root-layout.png" alt="" /></p>
@@ -527,12 +584,12 @@ window.cookieconsent.initialise({
 
 <h4 id="第二步--unsafe_mode">第二步 – unSAFE_MODE</h4>
 
-<p>In this section, you will enter Safe Mode (a feature available on all 3DS family devices) and navigate to a menu where unSAFE_MODE will be triggered, which will launch you into the boot9strap (custom firmware) installer.</p>
+<p>In this section, you will enter Safe Mode (a feature available on all 3DS family consoles) and navigate to a menu where unSAFE_MODE will be triggered, which will launch you into the boot9strap (custom firmware) installer.</p>
 
 <ol>
-  <li>将你的主机置于关机状态，按住 L + R + ↑ + A 四个按键，然后按下电源键
+  <li>With your console still powered off, hold the following buttons: (Left Shoulder) + (Right Shoulder) + (D-Pad Up) + (A), and while holding these buttons together, power on your console
     <ul>
-      <li>按住这几个键，直到主机进入安全模式（一个“系统更新”菜单）</li>
+      <li>Keep holding the buttons until the console boots into Safe Mode (a “system update” menu)</li>
     </ul>
   </li>
   <li>Press “OK” to accept the update
@@ -544,26 +601,31 @@ window.cookieconsent.initialise({
   <li>The update will eventually fail, with the error code <code class="language-plaintext highlighter-rouge">003-1099</code>. This is intended behaviour</li>
   <li>When asked “Would you like to configure Internet settings?”, select “Yes”</li>
   <li>On the following menu, navigate to <code class="language-plaintext highlighter-rouge">Connection 1</code> -&gt; <code class="language-plaintext highlighter-rouge">Change Settings</code> -&gt; <code class="language-plaintext highlighter-rouge">Next Page (right arrow)</code> -&gt; <code class="language-plaintext highlighter-rouge">Proxy Settings</code> -&gt; <code class="language-plaintext highlighter-rouge">Detailed Setup</code> (<a href="/images/screenshots/usm/safemode_highlighted.png">image</a>)</li>
-  <li>If the exploit was successful, your device will have booted into SafeB9SInstaller
+  <li>If the exploit was successful, your console will have booted into SafeB9SInstaller
     <ul>
-      <li>If your device instead freezes on a white screen, hold the POWER button until it turns off, then retry this section</li>
-      <li>If your device instead freezes on a red screen, you are missing <code class="language-plaintext highlighter-rouge">usm.bin</code> from the root of your SD card</li>
+      <li>If your console instead freezes on a white screen, hold the POWER button until it turns off, then retry this section</li>
+      <li>If your console instead freezes on a red screen, you are missing <code class="language-plaintext highlighter-rouge">usm.bin</code> from the root of your SD card</li>
+      <li>If you get a different error, <a href="troubleshooting#installing-boot9strap-usm">follow this troubleshooting guide</a></li>
     </ul>
   </li>
 </ol>
 
 <h4 id="第三步--安装-boot9strap">第三步 – 安装 boot9strap</h4>
 
-<p>In this section, you will install custom firmware onto your device.</p>
+<p>In this section, you will install custom firmware onto your console.</p>
 
 <ol>
-  <li>When prompted, input the key combo given on the top screen to install boot9strap</li>
-  <li>Once it is complete, press (A) to reboot your device</li>
-  <li>Your device should have booted into the Luma3DS configuration menu
+  <li>When prompted, input the key combo given on the top screen to install boot9strap
+    <ul>
+      <li>If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, <a href="troubleshooting#issues-with-safeb9sinstaller">follow this troubleshooting guide</a></li>
+    </ul>
+  </li>
+  <li>Once it is complete, press (A) to reboot your console</li>
+  <li>Your console should have booted into the Luma3DS configuration menu
     <ul>
       <li>Luma3DS 配置菜单用于设置 Luma3DS 自制固件的可选功能 其中有许多功能可用于个性化或调试</li>
       <li>For the purpose of this guide, <strong>leave these options on the default settings</strong> (do not check or uncheck anything)</li>
-      <li>If your device shuts down when you try to power it on, ensure that you have copied <code class="language-plaintext highlighter-rouge">boot.firm</code> from the Luma3DS <code class="language-plaintext highlighter-rouge">.zip</code> to the root of your SD card</li>
+      <li>If your console shuts down when you try to power it on, ensure that you have copied <code class="language-plaintext highlighter-rouge">boot.firm</code> from the Luma3DS <code class="language-plaintext highlighter-rouge">.zip</code> to the root of your SD card</li>
     </ul>
   </li>
   <li>按下 “Start” 键保存设置并重启</li>
@@ -594,10 +656,10 @@ window.cookieconsent.initialise({
   <li>按 “B” 键退出 Rosalina 菜单</li>
   <li>按下 “Home” 键，然后关闭“下载通信(Download Play)”</li>
   <li>Relaunch the Download Play application</li>
-  <li>此时你的主机应该会启动 Homebrew Launcher了</li>
+  <li>Your console should load the Homebrew Launcher</li>
   <li>从自制程序列表中找到并启动 slotTool</li>
   <li>Select “RESTORE original wifi slots 1,2,3”</li>
-  <li>Your device will then reboot</li>
+  <li>Your console will then reboot</li>
 </ol>
 
 <hr />

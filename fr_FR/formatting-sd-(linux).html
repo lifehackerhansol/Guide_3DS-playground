@@ -314,11 +314,35 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="updating-firmware-(new-3ds)"><a href='/fr_FR/updating-firmware-(new-3ds)'>Mise à jour du logiciel système (New 3DS)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="updating-firmware-(kor)"><a href='/fr_FR/updating-firmware-(kor)'>Mise à jour du logiciel système (KOR)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="updating-firmware-(twn)"><a href='/fr_FR/updating-firmware-(twn)'>Mise à jour du logiciel système (TWN)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="ntrboot"><a href='/fr_FR/ntrboot'>ntrboot</a></li>
           
         
           
+            <li style="display: none;" data-name="alternate-exploits"><a href='/fr_FR/alternate-exploits'>Alternate Exploits</a></li>
+          
+        
+          
             <li style="display: none;" data-name="seedminer"><a href='/fr_FR/seedminer'>Seedminer</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(alternate)"><a href='/fr_FR/seedminer-(alternate)'>Seedminer (Alternate)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(mii)"><a href='/fr_FR/seedminer-(mii)'>Seedminer (Mii)</a></li>
           
         
           
@@ -330,7 +354,31 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="bannerbomb3-(legacy)"><a href='/fr_FR/bannerbomb3-(legacy)'>BannerBomb3 (Legacy)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(ninjhax2-dx)"><a href='/fr_FR/homebrew-launcher-(ninjhax2-dx)'>Homebrew Launcher (ninjhax2-dx)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(pichaxx)"><a href='/fr_FR/homebrew-launcher-(pichaxx)'>Homebrew Launcher (PicHaxx)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(smilehax-iie)"><a href='/fr_FR/homebrew-launcher-(smilehax-iie)'>Homebrew Launcher (smilehax-IIe)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(steelhax)"><a href='/fr_FR/homebrew-launcher-(steelhax)'>Homebrew Launcher (Steelhax)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="homebrew-launcher-(super-skaterhax)"><a href='/fr_FR/homebrew-launcher-(super-skaterhax)'>Homebrew Launcher (super-skaterhax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="dumping-eshop-dsiware"><a href='/fr_FR/dumping-eshop-dsiware'>Dumping eShop DSiWare</a></li>
           
         
           
@@ -387,6 +435,14 @@ window.cookieconsent.initialise({
         
           
             <li style="display: none;" data-name="installing-boot9strap-(fredtool)"><a href='/fr_FR/installing-boot9strap-(fredtool)'>Installing boot9strap (Fredtool)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(fredtool-inject)"><a href='/fr_FR/installing-boot9strap-(fredtool-inject)'>Installing boot9strap (Fredtool-Inject)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(fredtool-legacy)"><a href='/fr_FR/installing-boot9strap-(fredtool-legacy)'>Installing boot9strap (Fredtool, Legacy)</a></li>
           
         
           
@@ -480,7 +536,7 @@ mmcblk0     179:0    0   3,8G  0 disk
 └─mmcblk0p1 179:1    0   3,7G  0 part /run/media/user/FFFF-FFFF
 </code></pre></div>    </div>
   </li>
-  <li>Take note of the device name. In our example above, it was <code class="language-plaintext highlighter-rouge">mmcblk0p1</code>
+  <li>Prenez note du nom de l’appareil. Dans notre exemple ci-dessus, c’était <code class="language-plaintext highlighter-rouge">mmcblk0p1</code>
     <ul>
       <li>Si <code class="language-plaintext highlighter-rouge">RO</code> vaut 1, assurez-vous que le bouton de verrouillage ne soit pas glissé vers le bas</li>
     </ul>
@@ -488,17 +544,17 @@ mmcblk0     179:0    0   3,8G  0 disk
   <li>Appuyez sur CTRL + C pour quitter le menu</li>
   <li>Tapez ce qui suit en fonction de votre carte SD :
     <ul>
-      <li>2GB or lower: <code class="language-plaintext highlighter-rouge">sudo mkfs.fat /dev/(device name from above) -s 64 -F 16</code>
+      <li>En dessous de 2 Go : <code class="language-plaintext highlighter-rouge">sudo mkfs.fat /dev/(nom de l'appareil vu précédemment) -s 64 -F 16</code>
         <ul>
           <li>Ceci crée une seule partition FAT16 avec une taille de cluster de 32 Ko sur la carte SD</li>
         </ul>
       </li>
-      <li>4GB - 128GB: <code class="language-plaintext highlighter-rouge">sudo mkfs.fat /dev/(device name from above) -s 64 -F 32</code>
+      <li>De 4 à 128 Go : <code class="language-plaintext highlighter-rouge">sudo mkfs.fat /dev/(nom de l'appareil vu précédemment) -s 64 -F 32</code>
         <ul>
           <li>Ceci crée une seule partition FAT32 avec une taille de cluster de 32 Ko sur la carte SD</li>
         </ul>
       </li>
-      <li>128GB or higher: <code class="language-plaintext highlighter-rouge">sudo mkfs.fat /dev/(device name from above) -s 128 -F 32</code>
+      <li>Au dessus de 128Go: <code class="language-plaintext highlighter-rouge">sudo mkfs.fat /dev/(nom de l'appareil vu précédemment) -s 128 -F 32</code>
         <ul>
           <li>Ceci crée une seule partition FAT32 avec une taille de cluster de 64 Ko sur la carte SD</li>
         </ul>

@@ -314,11 +314,35 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="updating-firmware-(new-3ds)"><a href='/es_ES/updating-firmware-(new-3ds)'>Updating Firmware (New 3DS)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="updating-firmware-(kor)"><a href='/es_ES/updating-firmware-(kor)'>Updating Firmware (KOR)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="updating-firmware-(twn)"><a href='/es_ES/updating-firmware-(twn)'>Updating Firmware (TWN)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="ntrboot"><a href='/es_ES/ntrboot'>ntrboot</a></li>
           
         
           
+            <li style="display: none;" data-name="alternate-exploits"><a href='/es_ES/alternate-exploits'>Alternate Exploits</a></li>
+          
+        
+          
             <li style="display: none;" data-name="seedminer"><a href='/es_ES/seedminer'>Seedminer</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(alternate)"><a href='/es_ES/seedminer-(alternate)'>Seedminer (Alternate)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(mii)"><a href='/es_ES/seedminer-(mii)'>Seedminer (Mii)</a></li>
           
         
           
@@ -330,7 +354,31 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="bannerbomb3-(legacy)"><a href='/es_ES/bannerbomb3-(legacy)'>BannerBomb3 (Legacy)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(ninjhax2-dx)"><a href='/es_ES/homebrew-launcher-(ninjhax2-dx)'>Homebrew Launcher (ninjhax2-dx)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(pichaxx)"><a href='/es_ES/homebrew-launcher-(pichaxx)'>Homebrew Launcher (PicHaxx)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(smilehax-iie)"><a href='/es_ES/homebrew-launcher-(smilehax-iie)'>Homebrew Launcher (smilehax-IIe)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(steelhax)"><a href='/es_ES/homebrew-launcher-(steelhax)'>Homebrew Launcher (Steelhax)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="homebrew-launcher-(super-skaterhax)"><a href='/es_ES/homebrew-launcher-(super-skaterhax)'>Homebrew Launcher (super-skaterhax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="dumping-eshop-dsiware"><a href='/es_ES/dumping-eshop-dsiware'>Dumping eShop DSiWare</a></li>
           
         
           
@@ -387,6 +435,14 @@ window.cookieconsent.initialise({
         
           
             <li style="display: none;" data-name="installing-boot9strap-(fredtool)"><a href='/es_ES/installing-boot9strap-(fredtool)'>Installing boot9strap (Fredtool)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(fredtool-inject)"><a href='/es_ES/installing-boot9strap-(fredtool-inject)'>Installing boot9strap (Fredtool-Inject)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(fredtool-legacy)"><a href='/es_ES/installing-boot9strap-(fredtool-legacy)'>Installing boot9strap (Fredtool, Legacy)</a></li>
           
         
           
@@ -467,7 +523,7 @@ window.cookieconsent.initialise({
 
 <h3 id="lectura-requerida">Lectura requerida</h3>
 
-<p>Esta página es para los usuarios actuales de arm9loaderhax que deseen actualizar sus consolas a boot9strap.</p>
+<p>This page is for existing arm9loaderhax users to update their consoles to boot9strap.</p>
 
 <p>Todas las versiones futuras de Luma3DS serán sólo en formato <code class="language-plaintext highlighter-rouge">.firm</code>, el cual será únicamente compatible con boot9strap y sighax. Esto significa que para continuar recibiendo las últimas actualizaciones de Luma3DS, deberás utilizar esta página para continuar con tu instalación.</p>
 
@@ -496,7 +552,7 @@ window.cookieconsent.initialise({
 <p class="notice--info">Para todos los pasos en esta sección, sobreescribe cualquier archivo repetido en tu tarjeta SD.</p>
 
 <ol>
-  <li>Apaga tu consola</li>
+  <li>Power off your console</li>
   <li>Inserta tu tarjeta SD en tu computadora</li>
   <li>Copia los archivos <code class="language-plaintext highlighter-rouge">boot.firm</code> y <code class="language-plaintext highlighter-rouge">boot.3dsx</code> desde el <code class="language-plaintext highlighter-rouge">.zip</code> 
  de la <em>última versión</em> de Luma3DS a la raíz de tu tarjeta SD
@@ -518,13 +574,13 @@ window.cookieconsent.initialise({
 
     <p class="notice--info"><img src="https://3ds.hacks.guide/images/screenshots/a9lh-to-b9s-root-layout.png" alt="" /></p>
   </li>
-  <li>Reinserta tu tarjeta SD en tu consola</li>
+  <li>Reinsert your SD card into your console</li>
 </ol>
 
 <h4 id="sección-ii---instalar-boot9strap">Sección II - Instalar boot9strap</h4>
 
 <ol>
-  <li>Enciende tu consola manteniendo (Start) presionado para iniciar SafeB9SInstaller
+  <li>Boot your console while holding (Start) to launch SafeB9SInstaller
     <ul>
       <li>If you see the luma configuration screen instead of SafeB9SInstaller, simply press (Start), then shut down your 3DS and try again</li>
       <li>If this gives you an error, try either using a new SD card or formatting your current SD card (backup existing files first)</li>
@@ -535,13 +591,17 @@ window.cookieconsent.initialise({
       <li>Si tienes el error “OTP Crypto Fail”, descarga <i class="fa fa-magnet" aria-hidden="true" title="Esto es un enlace magnético. Use a torrent client to download the file."></i> - <a href="magnet:?xt=urn:btih:d25dab06a7e127922d70ddaa4fe896709dc99a1e&amp;dn=aeskeydb.bin&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.lelux.fi%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.loadbt.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.monitorit4.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.ololosh.space%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.srv00.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.theoks.net%3a6969%2fannounce&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.zerobytes.xyz%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker1.bt.moack.co.kr%3a80%2fannounce&amp;tr=udp%3a%2f%2fvibe.sleepyinternetfun.xyz%3a1738%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=http%3a%2f%2fopenbittorrent.com%3a80%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce">aeskeydb.bin</a>, then put it in the <code class="language-plaintext highlighter-rouge">/boot9strap/</code> folder on your SD card and try again</li>
     </ul>
   </li>
-  <li>When prompted, input the key combo given on the top screen to install boot9strap</li>
-  <li>Once it is complete, press (A) to reboot your device</li>
-  <li>Tu consola debería haber reiniciado en el menú de configuración de Luma3DS
+  <li>When prompted, input the key combo given on the top screen to install boot9strap
+    <ul>
+      <li>If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, <a href="troubleshooting#issues-with-safeb9sinstaller">follow this troubleshooting guide</a></li>
+    </ul>
+  </li>
+  <li>Once it is complete, press (A) to reboot your console</li>
+  <li>Your console should have rebooted into the Luma3DS configuration menu
     <ul>
       <li>Luma3DS configuration menu are settings for the Luma3DS custom firmware. Many of these settings may be useful for customization or debugging</li>
       <li>For the purpose of this guide, these settings will be left on default settings</li>
-      <li>If you get a black screen, <a href="troubleshooting#boot-issues-on-devices-with-custom-firmware">follow this troubleshooting guide</a></li>
+      <li>If you get a black screen, <a href="troubleshooting#boot-issues-on-consoles-with-custom-firmware">follow this troubleshooting guide</a></li>
     </ul>
   </li>
   <li>Presiona (Start) para guardar y reiniciar</li>

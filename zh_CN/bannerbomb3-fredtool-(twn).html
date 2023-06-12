@@ -314,11 +314,35 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="updating-firmware-(new-3ds)"><a href='/zh_CN/updating-firmware-(new-3ds)'>Updating Firmware (New 3DS)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="updating-firmware-(kor)"><a href='/zh_CN/updating-firmware-(kor)'>Updating Firmware (KOR)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="updating-firmware-(twn)"><a href='/zh_CN/updating-firmware-(twn)'>Updating Firmware (TWN)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="ntrboot"><a href='/zh_CN/ntrboot'>ntrboot</a></li>
           
         
           
+            <li style="display: none;" data-name="alternate-exploits"><a href='/zh_CN/alternate-exploits'>Alternate Exploits</a></li>
+          
+        
+          
             <li style="display: none;" data-name="seedminer"><a href='/zh_CN/seedminer'>Seedminer</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(alternate)"><a href='/zh_CN/seedminer-(alternate)'>Seedminer (Alternate)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(mii)"><a href='/zh_CN/seedminer-(mii)'>Seedminer (Mii)</a></li>
           
         
           
@@ -330,7 +354,31 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="bannerbomb3-(legacy)"><a href='/zh_CN/bannerbomb3-(legacy)'>BannerBomb3 (Legacy)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(ninjhax2-dx)"><a href='/zh_CN/homebrew-launcher-(ninjhax2-dx)'>Homebrew Launcher (ninjhax2-dx)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(pichaxx)"><a href='/zh_CN/homebrew-launcher-(pichaxx)'>Homebrew Launcher (PicHaxx)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(smilehax-iie)"><a href='/zh_CN/homebrew-launcher-(smilehax-iie)'>Homebrew Launcher (smilehax-IIe)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(steelhax)"><a href='/zh_CN/homebrew-launcher-(steelhax)'>Homebrew Launcher (Steelhax)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="homebrew-launcher-(super-skaterhax)"><a href='/zh_CN/homebrew-launcher-(super-skaterhax)'>Homebrew Launcher (super-skaterhax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="dumping-eshop-dsiware"><a href='/zh_CN/dumping-eshop-dsiware'>Dumping eShop DSiWare</a></li>
           
         
           
@@ -387,6 +435,14 @@ window.cookieconsent.initialise({
         
           
             <li style="display: none;" data-name="installing-boot9strap-(fredtool)"><a href='/zh_CN/installing-boot9strap-(fredtool)'>Installing boot9strap (Fredtool)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(fredtool-inject)"><a href='/zh_CN/installing-boot9strap-(fredtool-inject)'>Installing boot9strap (Fredtool-Inject)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(fredtool-legacy)"><a href='/zh_CN/installing-boot9strap-(fredtool-legacy)'>Installing boot9strap (Fredtool, Legacy)</a></li>
           
         
           
@@ -494,19 +550,19 @@ window.cookieconsent.initialise({
 <p>As an additional safety measure, we will perform an additional check for custom firmware. This is because using this method when custom firmware is already installed has a risk of bricking the console (rendering it unusable without recovery methods like <a href="ntrboot">ntrboot</a>).</p>
 
 <ol>
-  <li>将主机关机</li>
+  <li>Power off your console</li>
   <li>按住 “Select” 键</li>
-  <li>在按住 “Select” 键的同时按下电源键开机</li>
+  <li>Power on your console while still holding the (Select) button</li>
   <li>If the check was successful, you will boot to the HOME Menu and you may proceed with this guide</li>
-  <li>将主机关机</li>
+  <li>Power off your console</li>
 </ol>
 
-<p class="notice--danger">If you see a configuration menu or the console immediately powers off, you already have CFW, and continuing with these instructions may BRICK your device! Follow <a href="checking-for-cfw">Checking for CFW</a> to upgrade your existing CFW.</p>
+<p class="notice--danger">If you see a configuration menu or the console immediately powers off, you already have CFW, and continuing with these instructions may BRICK your console! Follow <a href="checking-for-cfw">Checking for CFW</a> to upgrade your existing CFW.</p>
 
 <h4 id="第二步--准备工作">第二步 – 准备工作</h4>
 
 <ol>
-  <li>将主机关机</li>
+  <li>Power off your console</li>
   <li>将你的 SD 卡插入到电脑</li>
   <li>解压 Luma3DS <code class="language-plaintext highlighter-rouge">.zip</code> 里的 <code class="language-plaintext highlighter-rouge">boot.firm</code> 和 <code class="language-plaintext highlighter-rouge">boot.3dsx</code> 到你 SD 卡的根目录
     <ul>
@@ -540,8 +596,9 @@ window.cookieconsent.initialise({
   <li>点击 “output_(<你的名字>).zip" 的链接</你的名字></li>
   <li>打开内存卡的 <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID0&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID1&gt;</code> 文件夹
     <ul>
-      <li>这个 <code class="language-plaintext highlighter-rouge">&lt;ID0&gt;</code> 和你在 <a href="seedminer">Seedminer</a> 章节中打开的一样</li>
-      <li><code class="language-plaintext highlighter-rouge">&lt;ID1&gt;</code> 是一个在 <code class="language-plaintext highlighter-rouge">&lt;ID0&gt;</code> 文件夹内，另一个 32 位字符长的文件夹</li>
+      <li><code class="language-plaintext highlighter-rouge">&lt;ID0&gt;</code> is the 32-letter folder name that you copied in <a href="seedminer">Seedminer</a></li>
+      <li><code class="language-plaintext highlighter-rouge">&lt;ID1&gt;</code> is a 32-letter folder inside of the <code class="language-plaintext highlighter-rouge">&lt;ID0&gt;</code></li>
+      <li>If you have multiple <code class="language-plaintext highlighter-rouge">&lt;ID1&gt;</code> folders, follow the instructions <a href="troubleshooting#bannerbomb3">here</a></li>
     </ul>
   </li>
   <li>在 <code class="language-plaintext highlighter-rouge">&lt;ID1&gt;</code> 文件夹内创建一个名为 <code class="language-plaintext highlighter-rouge">Nintendo DSiWare</code> 的文件夹
@@ -551,22 +608,22 @@ window.cookieconsent.initialise({
   </li>
   <li>打开 output_(<你的名字>) `.zip`，然后进入到 `China_Taiwan` -&gt; `output_setup`</你的名字></li>
   <li>将六个 <code class="language-plaintext highlighter-rouge">.bin</code> 文件复制到 <code class="language-plaintext highlighter-rouge">Nintendo DSiWare</code> 文件夹中</li>
-  <li>将 SD 卡重新插入你的主机</li>
-  <li>启动你的主机</li>
-  <li>启动你主机上的 “主機設定”</li>
+  <li>Reinsert your SD card into your console</li>
+  <li>Power on your console</li>
+  <li>Launch System Settings on your console</li>
   <li>进入至 <code class="language-plaintext highlighter-rouge">資料管理</code> -&gt; <code class="language-plaintext highlighter-rouge">DSiWare</code> -&gt; <code class="language-plaintext highlighter-rouge">SD 卡</code> -&gt; （第二页）</li>
   <li>注意第二页列出的 DSiWare 应用上的标号（在 1 和 6 之间）</li>
-  <li>将主机关机</li>
+  <li>Power off your console</li>
   <li>将你的 SD 卡插入到电脑</li>
   <li>打开内存卡的 <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID0&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID1&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">Nintendo DSiWare</code> 文件夹</li>
   <li>打开 output_(<你的名字>) `.zip`，然后进入到 `China_Taiwan` -&gt; `output_hax`</你的名字></li>
   <li>从中复制出你在 DSiWare 数据管理第二页中看到的与标号相同的文件，然后复制到 <code class="language-plaintext highlighter-rouge">Nintendo DSiWare</code> 文件夹。如有提示请选覆盖。</li>
-  <li>启动你的主机</li>
-  <li>启动你主机上的 “主機設定”</li>
-  <li>进入至 <code class="language-plaintext highlighter-rouge">資料管理</code> -&gt; <code class="language-plaintext highlighter-rouge">DSiWare</code> -&gt; <code class="language-plaintext highlighter-rouge">SD 卡</code></li>
+  <li>Power on your console</li>
+  <li>Launch System Settings on your console</li>
+  <li>Navigate to <code class="language-plaintext highlighter-rouge">Data Management</code> -&gt; <code class="language-plaintext highlighter-rouge">DSiWare</code> -&gt; <code class="language-plaintext highlighter-rouge">SD Card</code> (<a href="/images/screenshots/bb3/dsiware-management.png">image</a>)</li>
   <li>稍等一下
     <ul>
-      <li>这时应该会发生以下情况：闪过一段进度，随后主机卡住，下屏变紫，音乐自动停止，然后主机会显示一条错误信息并要求重启</li>
+      <li>The following should happen, in this order: A progress swirl, a short freeze, the bottom screen turning purple, the music stopping, then the console showing an error message and rebooting</li>
       <li>如果下屏没有变紫，则代表之前的步骤可能做错了</li>
     </ul>
   </li>
@@ -601,14 +658,14 @@ window.cookieconsent.initialise({
   <li>点击 “output_(<你的名字>).zip" 的链接</你的名字></li>
   <li>打开内存卡的 <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID0&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID1&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">Nintendo DSiWare</code> 文件夹</li>
   <li>从下载的 DSiWare 压缩包 （<code class="language-plaintext highlighter-rouge">output_(&lt;你的名字&gt;).zip</code>） 里的 <code class="language-plaintext highlighter-rouge">hax</code> 文件夹复制 <code class="language-plaintext highlighter-rouge">484E4441.bin</code> 到 <code class="language-plaintext highlighter-rouge">Nintendo DSiWare</code> 文件夹</li>
-  <li>将 SD 卡重新插入你的主机</li>
-  <li>启动你的主机</li>
-  <li>启动你主机上的 “主機設定”</li>
+  <li>Reinsert your SD card into your console</li>
+  <li>Power on your console</li>
+  <li>Launch System Settings on your console</li>
   <li>进入到 <code class="language-plaintext highlighter-rouge">資料管理</code> -&gt; <code class="language-plaintext highlighter-rouge">DSiWare</code></li>
   <li>在 “SD 卡” 一栏，选择 “Haxxxxxxxxx!”</li>
   <li>选择 “复制” ，然后选择 “OK”</li>
   <li>退出系统设置</li>
-  <li>打开你主机上的下载通信程序（一个橙黄色的 3DS 图标）</li>
+  <li>Launch Download Play on your console (the orange icon with a 3DS on it)</li>
   <li>选择 “Nintendo DS”</li>
   <li>如果漏洞执行成功，你的主机将进入到日版的“うごくメモ帳（Flipnote Studio）”</li>
 </ol>
@@ -617,12 +674,13 @@ window.cookieconsent.initialise({
 
 <p class="notice--info">If you would prefer a visual guide to this section, one is available <a href="https://zoogie.github.io/web/flipnote_directions/">here</a>.</p>
 
-<p>In this section, you will perform a series of very specific steps within Flipnote Studio that, when performed correctly, will launch the boot9strap (custom firmware) installer.</p>
+<p>In this section, you will perform a series of very specific steps within Flipnote Studio that, when performed correctly, will launch b9sTool, the boot9strap (custom firmware) installer.</p>
 
 <ol>
   <li>Complete the initial setup process for the launched game until you reach the main menu
     <ul>
       <li>Select the left option whenever prompted during the setup process</li>
+      <li>If you encounter an issue while doing this section, <a href="troubleshooting#installing-boot9strap-fredtool">check this troubleshooting guide</a> for your issue</li>
     </ul>
   </li>
   <li>Using the touch-screen, select the large left box, then select the box with an SD card icon</li>
@@ -633,18 +691,18 @@ window.cookieconsent.initialise({
   <li>Tap the third box with the letter “A” in it</li>
   <li>Scroll left until reel “1/3” is selected</li>
   <li>Tap the fourth box with the letter “A” in it</li>
-  <li>If the exploit was successful, your device will have loaded b9sTool</li>
+  <li>If the exploit was successful, your console will have loaded b9sTool</li>
   <li>Using the D-Pad, move to “Install boot9strap”
     <ul>
       <li>If you miss this step, the system will exit to HOME Menu instead of installing boot9strap and you will need to open DS Download Play and start over from the beginning of this section</li>
     </ul>
   </li>
   <li>Press (A), then press START and SELECT at the same time to begin the process</li>
-  <li>Once completed and the bottom screen says “done.”, exit b9sTool, then power off your device
+  <li>Once completed and the bottom screen says “done.”, exit b9sTool, then power off your console
     <ul>
       <li>You may have to force power off by holding the power button</li>
-      <li>If your device shuts down when you try to power it on, ensure that you have copied <code class="language-plaintext highlighter-rouge">boot.firm</code> from the Luma3DS <code class="language-plaintext highlighter-rouge">.zip</code> to the root of your SD card</li>
-      <li>If you see the Luma Configuration screen, power off your device and continue to the next section</li>
+      <li>If your console shuts down when you try to power it on, ensure that you have copied <code class="language-plaintext highlighter-rouge">boot.firm</code> from the Luma3DS <code class="language-plaintext highlighter-rouge">.zip</code> to the root of your SD card</li>
+      <li>If you see the Luma Configuration screen, power off your console and continue to the next section</li>
     </ul>
   </li>
 </ol>
@@ -652,11 +710,12 @@ window.cookieconsent.initialise({
 <h4 id="第四部分--配置-luma3ds">第四部分 — 配置 Luma3DS</h4>
 
 <ol>
-  <li>按住 “SELECT” 键，然后按下电源键开机。 这将会启动 Luma3DS 配置菜单
+  <li>Press and hold (Select), and while holding (Select), power on your console</li>
+  <li>Your console should have booted into the Luma3DS configuration menu
     <ul>
       <li>Luma3DS 配置菜单用于设置 Luma3DS 自制固件的可选功能 其中有许多功能可用于个性化或调试</li>
-      <li>由于配合本手册的用途，我们将直接按照默认配置保存</li>
-      <li>如果你的主机直接启动到了主菜单，则请<a href="https://github.com/zoogie/b9sTool/blob/master/TROUBLESHOOTING.md">参见此故障排查手册</a></li>
+      <li>For the purpose of this guide, <strong>leave these options on the default settings</strong> (do not check or uncheck anything)</li>
+      <li>If your console shuts down when you try to power it on, ensure that you have copied <code class="language-plaintext highlighter-rouge">boot.firm</code> from the Luma3DS <code class="language-plaintext highlighter-rouge">.zip</code> to the root of your SD card</li>
     </ul>
   </li>
   <li>按下 “Start” 键保存设置并重启</li>
@@ -667,14 +726,14 @@ window.cookieconsent.initialise({
 <ol>
   <li>打开内存卡的 <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID0&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID1&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">Nintendo DSiWare</code> 文件夹</li>
   <li>下载的 DSiWare 压缩包 （<code class="language-plaintext highlighter-rouge">fredtool.zip</code>） 里的 <code class="language-plaintext highlighter-rouge">clean</code> 文件夹复制 <code class="language-plaintext highlighter-rouge">484E4441.bin</code> 到 <code class="language-plaintext highlighter-rouge">Nintendo DSiWare</code> 文件夹</li>
-  <li>将 SD 卡重新插入你的主机</li>
-  <li>启动你的主机</li>
-  <li>启动你主机上的 “主機設定”</li>
+  <li>Reinsert your SD card into your console</li>
+  <li>Power on your console</li>
+  <li>Launch System Settings on your console</li>
   <li>进入到 <code class="language-plaintext highlighter-rouge">資料管理</code> -&gt; <code class="language-plaintext highlighter-rouge">DSiWare</code></li>
   <li>在 “SD 卡” 一栏，选择 “Haxxxxxxxxx!”</li>
   <li>选择 “复制” ，然后选择 “OK”</li>
   <li>退出系统设置</li>
-  <li>将主机关机</li>
+  <li>Power off your console</li>
 </ol>
 
 <hr />

@@ -314,11 +314,35 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="updating-firmware-(new-3ds)"><a href='/zh_CN/updating-firmware-(new-3ds)'>Updating Firmware (New 3DS)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="updating-firmware-(kor)"><a href='/zh_CN/updating-firmware-(kor)'>Updating Firmware (KOR)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="updating-firmware-(twn)"><a href='/zh_CN/updating-firmware-(twn)'>Updating Firmware (TWN)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="ntrboot"><a href='/zh_CN/ntrboot'>ntrboot</a></li>
           
         
           
+            <li style="display: none;" data-name="alternate-exploits"><a href='/zh_CN/alternate-exploits'>Alternate Exploits</a></li>
+          
+        
+          
             <li style="display: none;" data-name="seedminer"><a href='/zh_CN/seedminer'>Seedminer</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(alternate)"><a href='/zh_CN/seedminer-(alternate)'>Seedminer (Alternate)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(mii)"><a href='/zh_CN/seedminer-(mii)'>Seedminer (Mii)</a></li>
           
         
           
@@ -330,7 +354,31 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="bannerbomb3-(legacy)"><a href='/zh_CN/bannerbomb3-(legacy)'>BannerBomb3 (Legacy)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(ninjhax2-dx)"><a href='/zh_CN/homebrew-launcher-(ninjhax2-dx)'>Homebrew Launcher (ninjhax2-dx)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(pichaxx)"><a href='/zh_CN/homebrew-launcher-(pichaxx)'>Homebrew Launcher (PicHaxx)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(smilehax-iie)"><a href='/zh_CN/homebrew-launcher-(smilehax-iie)'>Homebrew Launcher (smilehax-IIe)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(steelhax)"><a href='/zh_CN/homebrew-launcher-(steelhax)'>Homebrew Launcher (Steelhax)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="homebrew-launcher-(super-skaterhax)"><a href='/zh_CN/homebrew-launcher-(super-skaterhax)'>Homebrew Launcher (super-skaterhax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="dumping-eshop-dsiware"><a href='/zh_CN/dumping-eshop-dsiware'>Dumping eShop DSiWare</a></li>
           
         
           
@@ -387,6 +435,14 @@ window.cookieconsent.initialise({
         
           
             <li style="display: none;" data-name="installing-boot9strap-(fredtool)"><a href='/zh_CN/installing-boot9strap-(fredtool)'>Installing boot9strap (Fredtool)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(fredtool-inject)"><a href='/zh_CN/installing-boot9strap-(fredtool-inject)'>Installing boot9strap (Fredtool-Inject)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(fredtool-legacy)"><a href='/zh_CN/installing-boot9strap-(fredtool-legacy)'>Installing boot9strap (Fredtool, Legacy)</a></li>
           
         
           
@@ -471,7 +527,7 @@ window.cookieconsent.initialise({
 
 <h3 id="重要事项">重要事项</h3>
 
-<p>This is an add-on section for region changing your device. 这是通过安装你想要切换到的地区的 11.15.0 CTRTransfer 镜像而达成的。 安装完镜像后，你可以正常更新主机到最新的系统版本（11.16.0）。</p>
+<p>This is an add-on section for region changing your console. 这是通过安装你想要切换到的地区的 11.15.0 CTRTransfer 镜像而达成的。 After installing the image, you can update your console normally to the latest firmware (11.17.0).</p>
 
 <p>注意，Luma3DS 本身就自带了<a href="https://github.com/LumaTeam/Luma3DS/wiki/Optional-features">区域模拟</a>的功能，这使得变更区域几乎是不必要的。 顺带一提，你可以使用 <a href="https://github.com/DS-Homebrew/TWiLightMenu/releases">TWiLight Menu++</a> 来运行其他区域的 NDS 游戏。 You should only perform a region change if you wish to have your system UI is in a language that is not available on your console’s current region.</p>
 
@@ -480,7 +536,7 @@ window.cookieconsent.initialise({
 <p class="notice--warning">As a part of this process, your system configuration will be reset to its defaults. This includes things such as your username, country, and language. Installed games and their save data will not be affected.</p>
 
 <div class="notice--danger">
-<p>如果你选择变更主机的区域：</p>
+<p>If you change the region of your console:</p>
 
 <ul>
   <li>如果你登录了一个 NNID，操作后将无法继续使用此 NNID。 NNID 在创建时即被锁定在它的创建区域。</li>
@@ -491,7 +547,7 @@ window.cookieconsent.initialise({
       <li>That being said, system transfer and game updates are region locked anyway (e.g. Japanese eShop only has Japanese game updates).</li>
     </ul>
   </li>
-  <li>如果你以后打算卸载自制固件，则你<strong>必须</strong>还原你在变更前的 NAND 备份。<strong>区域变更后的主机无法卸载自制固件，否则主机会变砖！</strong></li>
+  <li><strong>You will not be able to uninstall custom firmware without bricking the console!</strong> If you intend to uninstall custom firmware in the future, you <strong>MUST</strong> restore your NAND backup that was created before the region change.</li>
 </ul>
 </div>
 
@@ -502,19 +558,19 @@ window.cookieconsent.initialise({
 <ul>
   <li>最新版本的 <a href="https://github.com/d0k3/GodMode9/releases/latest">GodMode9</a>（下载 GodMode9 <code class="language-plaintext highlighter-rouge">.zip</code> 文件）</li>
   <li>最新版本的 <a href="https://github.com/Steveice10/FBI/releases/latest">FBI</a> <strong>（下载 <code class="language-plaintext highlighter-rouge">.3dsx</code> 文件）</strong></li>
-  <li>一份你想转到目标区域的 11.15.0 的 CTRTransfer 镜像（例如：如果你想将一台 New 3DS 转移到美版，就下载 New 3DS 或 2DS - 美版）
+  <li>The 11.15.0 CTRTransfer image for your console type of the region that you want to change to (e.g. Download “New 3DS or 2DS - USA” if you have a New 3DS and want to change your region to USA)
     <ul>
-      <li><i class="fa fa-magnet" aria-hidden="true" title="这是一个磁力链接。 使用 BT 下载客户端下载文件。"></i> - <a href="magnet:?xt=urn:btih:2a39586a0a10d1f0a9470b082ef1453e502b2425&amp;xt=urn:btmh:12205090f0a43a956bd7449658ee0580949d15ae112c80007fb2ef42e3265b6c5f6c&amp;dn=11.15.0-47E_ctrtransfer_n3ds.zip&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.dler.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.bitsearch.to%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker-udp.gbitt.info%3a80%2fannounce&amp;tr=udp%3a%2f%2fretracker.netbynet.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fretracker.lanta-net.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopentor.org%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopen.stealth.si%3a80%2fannounce&amp;tr=udp%3a%2f%2fmts.tvbit.co%3a6969%2fannounce&amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2fbt2.archive.org%3a6969%2fannounce">New 3DS 或 2DS - 11.15.0 - 欧版 - CTRTransfer</a></li>
-      <li><i class="fa fa-magnet" aria-hidden="true" title="这是一个磁力链接。 使用 BT 下载客户端下载文件。"></i> - <a href="magnet:?xt=urn:btih:986b454cab2d9f27daa63d4291f61aed039871d2&amp;xt=urn:btmh:1220c8c96bd76b6fef041aada9ce4e3cf06ef141f3c4558310b9c3a00e39bccc43a1&amp;dn=11.15.0-47J_ctrtransfer_n3ds.zip&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.dler.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.bitsearch.to%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker-udp.gbitt.info%3a80%2fannounce&amp;tr=udp%3a%2f%2fretracker.netbynet.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fretracker.lanta-net.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopentor.org%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopen.stealth.si%3a80%2fannounce&amp;tr=udp%3a%2f%2fmts.tvbit.co%3a6969%2fannounce&amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2fbt2.archive.org%3a6969%2fannounce">New 3DS 或 2DS - 11.15.0 - 日版 - CTRTransfer</a></li>
-      <li><i class="fa fa-magnet" aria-hidden="true" title="这是一个磁力链接。 使用 BT 下载客户端下载文件。"></i> - <a href="magnet:?xt=urn:btih:e247b21e1f81f76acf6d3140da45da858e76f1f6&amp;xt=urn:btmh:122008168a003666c14783998d1dd82ac02d1b3be902efa75cf5a03ee47da1fecd73&amp;dn=11.15.0-41K_ctrtransfer_n3ds.zip&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.dler.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.bitsearch.to%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker-udp.gbitt.info%3a80%2fannounce&amp;tr=udp%3a%2f%2fretracker.netbynet.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fretracker.lanta-net.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopentor.org%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopen.stealth.si%3a80%2fannounce&amp;tr=udp%3a%2f%2fmts.tvbit.co%3a6969%2fannounce&amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2fbt2.archive.org%3a6969%2fannounce">New 3DS 或 2DS - 11.15.0 - 韩版 - CTRTransfer</a></li>
-      <li><i class="fa fa-magnet" aria-hidden="true" title="这是一个磁力链接。 使用 BT 下载客户端下载文件。"></i> - <a href="magnet:?xt=urn:btih:8ae25de1ab01c9304eece9785d5db6cdd6728214&amp;xt=urn:btmh:1220ab284cc822f3170305723e9920e1bb4d7649fdf528c3ea04aada31e09bfbbe57&amp;dn=11.15.0-47U_ctrtransfer_n3ds.zip&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.dler.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.bitsearch.to%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker-udp.gbitt.info%3a80%2fannounce&amp;tr=udp%3a%2f%2fretracker.netbynet.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fretracker.lanta-net.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopentor.org%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopen.stealth.si%3a80%2fannounce&amp;tr=udp%3a%2f%2fmts.tvbit.co%3a6969%2fannounce&amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2fbt2.archive.org%3a6969%2fannounce">New 3DS 或 2DS - 11.15.0 - 美版 - CTRTransfer</a>  <br />
+      <li><i class="fa fa-magnet" aria-hidden="true" title="This is a magnet link. Use a torrent client to download the file."></i> - <a href="magnet:?xt=urn:btih:2a39586a0a10d1f0a9470b082ef1453e502b2425&amp;xt=urn:btmh:12205090f0a43a956bd7449658ee0580949d15ae112c80007fb2ef42e3265b6c5f6c&amp;dn=11.15.0-47E_ctrtransfer_n3ds.zip&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.dler.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.bitsearch.to%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker-udp.gbitt.info%3a80%2fannounce&amp;tr=udp%3a%2f%2fretracker.netbynet.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fretracker.lanta-net.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopentor.org%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopen.stealth.si%3a80%2fannounce&amp;tr=udp%3a%2f%2fmts.tvbit.co%3a6969%2fannounce&amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2fbt2.archive.org%3a6969%2fannounce">New 3DS or 2DS - 11.15.0 - EUR - CTRTransfer</a></li>
+      <li><i class="fa fa-magnet" aria-hidden="true" title="This is a magnet link. Use a torrent client to download the file."></i> - <a href="magnet:?xt=urn:btih:986b454cab2d9f27daa63d4291f61aed039871d2&amp;xt=urn:btmh:1220c8c96bd76b6fef041aada9ce4e3cf06ef141f3c4558310b9c3a00e39bccc43a1&amp;dn=11.15.0-47J_ctrtransfer_n3ds.zip&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.dler.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.bitsearch.to%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker-udp.gbitt.info%3a80%2fannounce&amp;tr=udp%3a%2f%2fretracker.netbynet.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fretracker.lanta-net.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopentor.org%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopen.stealth.si%3a80%2fannounce&amp;tr=udp%3a%2f%2fmts.tvbit.co%3a6969%2fannounce&amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2fbt2.archive.org%3a6969%2fannounce">New 3DS or 2DS - 11.15.0 - JPN - CTRTransfer</a></li>
+      <li><i class="fa fa-magnet" aria-hidden="true" title="This is a magnet link. Use a torrent client to download the file."></i> - <a href="magnet:?xt=urn:btih:e247b21e1f81f76acf6d3140da45da858e76f1f6&amp;xt=urn:btmh:122008168a003666c14783998d1dd82ac02d1b3be902efa75cf5a03ee47da1fecd73&amp;dn=11.15.0-41K_ctrtransfer_n3ds.zip&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.dler.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.bitsearch.to%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker-udp.gbitt.info%3a80%2fannounce&amp;tr=udp%3a%2f%2fretracker.netbynet.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fretracker.lanta-net.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopentor.org%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopen.stealth.si%3a80%2fannounce&amp;tr=udp%3a%2f%2fmts.tvbit.co%3a6969%2fannounce&amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2fbt2.archive.org%3a6969%2fannounce">New 3DS or 2DS - 11.15.0 - KOR - CTRTransfer</a></li>
+      <li><i class="fa fa-magnet" aria-hidden="true" title="This is a magnet link. Use a torrent client to download the file."></i> - <a href="magnet:?xt=urn:btih:8ae25de1ab01c9304eece9785d5db6cdd6728214&amp;xt=urn:btmh:1220ab284cc822f3170305723e9920e1bb4d7649fdf528c3ea04aada31e09bfbbe57&amp;dn=11.15.0-47U_ctrtransfer_n3ds.zip&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.dler.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.bitsearch.to%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker-udp.gbitt.info%3a80%2fannounce&amp;tr=udp%3a%2f%2fretracker.netbynet.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fretracker.lanta-net.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopentor.org%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopen.stealth.si%3a80%2fannounce&amp;tr=udp%3a%2f%2fmts.tvbit.co%3a6969%2fannounce&amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2fbt2.archive.org%3a6969%2fannounce">New 3DS or 2DS - 11.15.0 - USA - CTRTransfer</a>  <br />
 ~</li>
-      <li><i class="fa fa-magnet" aria-hidden="true" title="这是一个磁力链接。 使用 BT 下载客户端下载文件。"></i> - <a href="magnet:?xt=urn:btih:f71d2379e577db22d7f14a656bca7bf2eb5243f8&amp;xt=urn:btmh:12200c6ee93f63deef8ce9023b8214ca36cd29c37d2726acf7a15594256409f6629b&amp;dn=11.15.0-4C_ctrtransfer_o3ds.zip&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.dler.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.bitsearch.to%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker-udp.gbitt.info%3a80%2fannounce&amp;tr=udp%3a%2f%2fretracker.netbynet.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fretracker.lanta-net.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopentor.org%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopen.stealth.si%3a80%2fannounce&amp;tr=udp%3a%2f%2fmts.tvbit.co%3a6969%2fannounce&amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2fbt2.archive.org%3a6969%2fannounce">旧版 3DS 或 2DS - 11.15.0 - 神游版 - CTRTransfer</a></li>
-      <li><i class="fa fa-magnet" aria-hidden="true" title="这是一个磁力链接。 使用 BT 下载客户端下载文件。"></i> - <a href="magnet:?xt=urn:btih:fc71540a99c884ab8a4211192d3af92c7ffb9372&amp;xt=urn:btmh:12203c317846d43110fd3a35cedf427cb5fdd58ac764316f4d0634181efbb762ee92&amp;dn=11.15.0-47E_ctrtransfer_o3ds.zip&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.dler.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.bitsearch.to%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker-udp.gbitt.info%3a80%2fannounce&amp;tr=udp%3a%2f%2fretracker.netbynet.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fretracker.lanta-net.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopentor.org%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopen.stealth.si%3a80%2fannounce&amp;tr=udp%3a%2f%2fmts.tvbit.co%3a6969%2fannounce&amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2fbt2.archive.org%3a6969%2fannounce">旧版 3DS 或 2DS - 11.15.0 - 欧版 - CTRTransfer</a></li>
-      <li><i class="fa fa-magnet" aria-hidden="true" title="这是一个磁力链接。 使用 BT 下载客户端下载文件。"></i> - <a href="magnet:?xt=urn:btih:7b88adf3f47d036bcdee987f6597770eaafdd8dd&amp;xt=urn:btmh:1220f39be6c14438b07ebdf120161215088d56c59608d5f34f0744d972c7a0cf7ca2&amp;dn=11.15.0-47J_ctrtransfer_o3ds.zip&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.dler.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.bitsearch.to%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker-udp.gbitt.info%3a80%2fannounce&amp;tr=udp%3a%2f%2fretracker.netbynet.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fretracker.lanta-net.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopentor.org%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopen.stealth.si%3a80%2fannounce&amp;tr=udp%3a%2f%2fmts.tvbit.co%3a6969%2fannounce&amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2fbt2.archive.org%3a6969%2fannounce">旧版 3DS 或 2DS - 11.15.0 - 日版 - CTRTransfer</a></li>
-      <li><i class="fa fa-magnet" aria-hidden="true" title="这是一个磁力链。 使用 BT 下载客户端下载文件。"></i> - <a href="magnet:?xt=urn:btih:90d6689106751b057616d32445442fc1b7370e38&amp;xt=urn:btmh:1220a08fe569ac1596f6a113730de3cc7aa0dfd6858d40830cc0f0cee07bf585fd93&amp;dn=11.15.0-41K_ctrtransfer_o3ds.zip&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.dler.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.bitsearch.to%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker-udp.gbitt.info%3a80%2fannounce&amp;tr=udp%3a%2f%2fretracker.netbynet.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fretracker.lanta-net.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopentor.org%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopen.stealth.si%3a80%2fannounce&amp;tr=udp%3a%2f%2fmts.tvbit.co%3a6969%2fannounce&amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2fbt2.archive.org%3a6969%2fannounce">旧版 3DS 或 2DS - 11.15.0 - 韩版 - CTRTransfer</a></li>
-      <li><i class="fa fa-magnet" aria-hidden="true" title="这是一个磁力链。 使用 BT 下载客户端下载文件。"></i> - <a href="magnet:?xt=urn:btih:19f978d42b0d9590bc742d7598efa45091567cee&amp;xt=urn:btmh:12204429bc94456825530a2dff233ed399a292e1004a64b65fa4b451a69e116cad2a&amp;dn=11.15.0-39T_ctrtransfer_o3ds.zip&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.dler.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.bitsearch.to%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker-udp.gbitt.info%3a80%2fannounce&amp;tr=udp%3a%2f%2fretracker.netbynet.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fretracker.lanta-net.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopentor.org%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopen.stealth.si%3a80%2fannounce&amp;tr=udp%3a%2f%2fmts.tvbit.co%3a6969%2fannounce&amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2fbt2.archive.org%3a6969%2fannounce">旧版 3DS 或 2DS - 11.15.0 - 港台版 - CTRTransfer</a></li>
-      <li><i class="fa fa-magnet" aria-hidden="true" title="这是一个磁力链。 使用 BT 下载客户端下载文件。"></i> - <a href="magnet:?xt=urn:btih:fd39778d4116a210c3116c014521120f0e7b9e1d&amp;xt=urn:btmh:12203a51aca201f0635eecb15645cd4598bd49b1ad354e1ea81c24eb488760f3bd2b&amp;dn=11.15.0-47U_ctrtransfer_o3ds.zip&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.dler.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.bitsearch.to%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker-udp.gbitt.info%3a80%2fannounce&amp;tr=udp%3a%2f%2fretracker.netbynet.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fretracker.lanta-net.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopentor.org%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopen.stealth.si%3a80%2fannounce&amp;tr=udp%3a%2f%2fmts.tvbit.co%3a6969%2fannounce&amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2fbt2.archive.org%3a6969%2fannounce">旧版 3DS 或 2DS - 11.15.0 - 美版 - CTRTransfer</a></li>
+      <li><i class="fa fa-magnet" aria-hidden="true" title="This is a magnet link. Use a torrent client to download the file."></i> - <a href="magnet:?xt=urn:btih:f71d2379e577db22d7f14a656bca7bf2eb5243f8&amp;xt=urn:btmh:12200c6ee93f63deef8ce9023b8214ca36cd29c37d2726acf7a15594256409f6629b&amp;dn=11.15.0-4C_ctrtransfer_o3ds.zip&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.dler.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.bitsearch.to%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker-udp.gbitt.info%3a80%2fannounce&amp;tr=udp%3a%2f%2fretracker.netbynet.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fretracker.lanta-net.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopentor.org%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopen.stealth.si%3a80%2fannounce&amp;tr=udp%3a%2f%2fmts.tvbit.co%3a6969%2fannounce&amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2fbt2.archive.org%3a6969%2fannounce">Old 3DS or 2DS - 11.15.0 - CHN - CTRTransfer</a></li>
+      <li><i class="fa fa-magnet" aria-hidden="true" title="This is a magnet link. Use a torrent client to download the file."></i> - <a href="magnet:?xt=urn:btih:fc71540a99c884ab8a4211192d3af92c7ffb9372&amp;xt=urn:btmh:12203c317846d43110fd3a35cedf427cb5fdd58ac764316f4d0634181efbb762ee92&amp;dn=11.15.0-47E_ctrtransfer_o3ds.zip&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.dler.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.bitsearch.to%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker-udp.gbitt.info%3a80%2fannounce&amp;tr=udp%3a%2f%2fretracker.netbynet.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fretracker.lanta-net.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopentor.org%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopen.stealth.si%3a80%2fannounce&amp;tr=udp%3a%2f%2fmts.tvbit.co%3a6969%2fannounce&amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2fbt2.archive.org%3a6969%2fannounce">Old 3DS or 2DS - 11.15.0 - EUR - CTRTransfer</a></li>
+      <li><i class="fa fa-magnet" aria-hidden="true" title="This is a magnet link. Use a torrent client to download the file."></i> - <a href="magnet:?xt=urn:btih:7b88adf3f47d036bcdee987f6597770eaafdd8dd&amp;xt=urn:btmh:1220f39be6c14438b07ebdf120161215088d56c59608d5f34f0744d972c7a0cf7ca2&amp;dn=11.15.0-47J_ctrtransfer_o3ds.zip&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.dler.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.bitsearch.to%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker-udp.gbitt.info%3a80%2fannounce&amp;tr=udp%3a%2f%2fretracker.netbynet.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fretracker.lanta-net.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopentor.org%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopen.stealth.si%3a80%2fannounce&amp;tr=udp%3a%2f%2fmts.tvbit.co%3a6969%2fannounce&amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2fbt2.archive.org%3a6969%2fannounce">Old 3DS or 2DS - 11.15.0 - JPN - CTRTransfer</a></li>
+      <li><i class="fa fa-magnet" aria-hidden="true" title="This is a magnet link. Use a torrent client to download the file."></i> - <a href="magnet:?xt=urn:btih:90d6689106751b057616d32445442fc1b7370e38&amp;xt=urn:btmh:1220a08fe569ac1596f6a113730de3cc7aa0dfd6858d40830cc0f0cee07bf585fd93&amp;dn=11.15.0-41K_ctrtransfer_o3ds.zip&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.dler.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.bitsearch.to%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker-udp.gbitt.info%3a80%2fannounce&amp;tr=udp%3a%2f%2fretracker.netbynet.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fretracker.lanta-net.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopentor.org%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopen.stealth.si%3a80%2fannounce&amp;tr=udp%3a%2f%2fmts.tvbit.co%3a6969%2fannounce&amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2fbt2.archive.org%3a6969%2fannounce">Old 3DS or 2DS - 11.15.0 - KOR - CTRTransfer</a></li>
+      <li><i class="fa fa-magnet" aria-hidden="true" title="This is a magnet link. Use a torrent client to download the file."></i> - <a href="magnet:?xt=urn:btih:19f978d42b0d9590bc742d7598efa45091567cee&amp;xt=urn:btmh:12204429bc94456825530a2dff233ed399a292e1004a64b65fa4b451a69e116cad2a&amp;dn=11.15.0-39T_ctrtransfer_o3ds.zip&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.dler.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.bitsearch.to%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker-udp.gbitt.info%3a80%2fannounce&amp;tr=udp%3a%2f%2fretracker.netbynet.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fretracker.lanta-net.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopentor.org%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopen.stealth.si%3a80%2fannounce&amp;tr=udp%3a%2f%2fmts.tvbit.co%3a6969%2fannounce&amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2fbt2.archive.org%3a6969%2fannounce">Old 3DS or 2DS - 11.15.0 - TWN - CTRTransfer</a></li>
+      <li><i class="fa fa-magnet" aria-hidden="true" title="This is a magnet link. Use a torrent client to download the file."></i> - <a href="magnet:?xt=urn:btih:fd39778d4116a210c3116c014521120f0e7b9e1d&amp;xt=urn:btmh:12203a51aca201f0635eecb15645cd4598bd49b1ad354e1ea81c24eb488760f3bd2b&amp;dn=11.15.0-47U_ctrtransfer_o3ds.zip&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.dler.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.bitsearch.to%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker-udp.gbitt.info%3a80%2fannounce&amp;tr=udp%3a%2f%2fretracker.netbynet.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fretracker.lanta-net.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopentor.org%3a2710%2fannounce&amp;tr=udp%3a%2f%2fopen.stealth.si%3a80%2fannounce&amp;tr=udp%3a%2f%2fmts.tvbit.co%3a6969%2fannounce&amp;tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce&amp;tr=udp%3a%2f%2fbt2.archive.org%3a6969%2fannounce">Old 3DS or 2DS - 11.15.0 - USA - CTRTransfer</a></li>
     </ul>
   </li>
 </ul>
@@ -524,20 +580,20 @@ window.cookieconsent.initialise({
 <h4 id="第一步--准备工作">第一步 – 准备工作</h4>
 
 <ol>
-  <li>将主机关机</li>
+  <li>Power off your console</li>
   <li>将你的 SD 卡插入到电脑</li>
   <li>检查 SD 卡的根目录是否存在一个名为 <code class="language-plaintext highlighter-rouge">3ds</code> 的文件夹，如果没有则手动新建一个</li>
   <li>将 GodMode9 <code class="language-plaintext highlighter-rouge">.zip</code> 中的 <code class="language-plaintext highlighter-rouge">GodMode9.firm</code> 复制到你 SD 卡的 <code class="language-plaintext highlighter-rouge">/luma/payloads/</code> 文件夹中</li>
   <li>将 GodMode9 <code class="language-plaintext highlighter-rouge">.zip</code> 中的整个 <code class="language-plaintext highlighter-rouge">gm9</code> 文件夹复制到 SD 卡的根目录下</li>
   <li>从 CTRTransfer <code class="language-plaintext highlighter-rouge">.zip</code> 中复制 11.15.0 CTRTransfer <code class="language-plaintext highlighter-rouge">.bin</code> 到 SD 卡的 <code class="language-plaintext highlighter-rouge">/gm9/</code> 目录下</li>
   <li>复制 <code class="language-plaintext highlighter-rouge">FBI.3dsx</code> 到 SD 卡的 <code class="language-plaintext highlighter-rouge">/3ds/</code> 目录下</li>
-  <li>将 SD 卡重新插入你的主机</li>
+  <li>Reinsert your SD card into your console</li>
 </ol>
 
 <h4 id="第二步--备份-nand">第二步 – 备份 NAND</h4>
 
 <ol>
-  <li>按住 “START” 键，然后将主机开机。 这会启动 GodMode9</li>
+  <li>Press and hold (Start), and while holding (Start), power on your console. 这会启动 GodMode9</li>
   <li>按下 “Home” 键来打开功能菜单</li>
   <li>选择 “Scripts…”</li>
   <li>选择 “GM9Megascript”</li>
@@ -553,7 +609,7 @@ window.cookieconsent.initialise({
   <li>按下 “B” 键返回到主菜单</li>
   <li>选择 “Exit”</li>
   <li>如果提示重新锁定写入权限，按下 “A” 键来确认</li>
-  <li>同时按下 “R” + “Start” 键关机</li>
+  <li>Hold (R) and press (Start) at the same time to power off your console</li>
   <li>将你的 SD 卡插入到电脑</li>
   <li>Copy <code class="language-plaintext highlighter-rouge">&lt;date&gt;_&lt;serialnumber&gt;_sysnand_##.bin</code> and <code class="language-plaintext highlighter-rouge">essential.exefs</code> from the <code class="language-plaintext highlighter-rouge">/gm9/out/</code> folder on your SD card to a safe location on your computer
     <ul>
@@ -562,13 +618,13 @@ window.cookieconsent.initialise({
     </ul>
   </li>
   <li>Delete <code class="language-plaintext highlighter-rouge">&lt;date&gt;_&lt;serialnumber&gt;_sysnand_##.bin</code> and <code class="language-plaintext highlighter-rouge">&lt;date&gt;_&lt;serialnumber&gt;_sysnand_##.bin.sha</code> from the <code class="language-plaintext highlighter-rouge">/gm9/out/</code> folder on your SD card after copying it</li>
-  <li>将 SD 卡重新插入你的主机</li>
+  <li>Reinsert your SD card into your console</li>
 </ol>
 
 <h4 id="第三步--ctrtransfer">第三步 – CTRTransfer</h4>
 
 <ol>
-  <li>按住 “START” 键，然后将主机开机。 这会启动 GodMode9</li>
+  <li>Press and hold (Start), and while holding (Start), power on your console. 这会启动 GodMode9</li>
   <li>如果工具提示是否需要创建重要文件备份，请按下 “A” 键确认。完成后再次按下 “A” 键来继续。</li>
   <li>如果出现修复 RTC 日期与时间的提示，按 “A” 键执行修复，然后设置好日期和时间，并按 “A” 继续
     <ul>
@@ -606,8 +662,8 @@ window.cookieconsent.initialise({
   <li>按下 “B” 键返回到主菜单</li>
   <li>选择 “Exit”</li>
   <li>如果提示重新锁定写入权限，按下 “A” 键来确认</li>
-  <li>按 “Start” 键重启你的主机</li>
-  <li>进入 “系统设置(System Settings)”，接着点击“其他设置(Other Settings)”，然后移动到最右边，点击“系统升级(System Update)”来升级你的主机
+  <li>Press (Start) to reboot your console</li>
+  <li>Update your console by going to System Settings, then “Other Settings”, then going all the way to the right and using “System Update”
     <ul>
       <li>你使用 B9S 和 Luma 时升级系统是安全的</li>
       <li>如果在更新中途出错，请将主机的 DNS 设置改为 “自动(auto)”</li>
@@ -626,11 +682,12 @@ window.cookieconsent.initialise({
   <li>按 “B” 键继续</li>
   <li>按 “B” 键返回 Rosalina 主菜单</li>
   <li>按 “B” 键退出 Rosalina 菜单</li>
-  <li>按下 “Home” 键，然后关闭“下载通信(Download Play)”</li>
-  <li>运行“下载通信（Download Play）”程序</li>
-  <li>此时你的主机应该会启动 Homebrew Launcher了
+  <li>Press (Home) to suspend Download Play</li>
+  <li>Press the “Close” button on the bottom screen to close Download Play</li>
+  <li>Re-launch the Download Play application</li>
+  <li>Your console should load the Homebrew Launcher
     <ul>
-      <li>If your device is stuck on the loading splash screen, you are missing <code class="language-plaintext highlighter-rouge">boot.3dsx</code> from the root of your SD card</li>
+      <li>If your console is stuck on the loading splash screen, you are missing <code class="language-plaintext highlighter-rouge">boot.3dsx</code> from the root of your SD card</li>
     </ul>
   </li>
 </ol>
@@ -660,11 +717,11 @@ window.cookieconsent.initialise({
 
 <h4 id="section-vi---deleting-system-save-data">Section VI - Deleting system save data</h4>
 
-<p>This section will reset your system configuration to its defaults. Installed games and their save data will not be affected. This is necessary to prevent known issues relating to extended memory mode and applets on some devices.</p>
+<p>This section will reset your system configuration to its defaults. Installed games and their save data will not be affected. This is necessary to prevent known issues relating to extended memory mode and applets on some consoles.</p>
 
 <ol>
-  <li>将主机关机</li>
-  <li>按住 “START” 键，然后将主机开机。 这会启动 GodMode9</li>
+  <li>Power off your console</li>
+  <li>Press and hold (Start), and while holding (Start), power on your console. 这会启动 GodMode9</li>
   <li>进入到 <code class="language-plaintext highlighter-rouge">[0:] SDCARD</code> -&gt; <code class="language-plaintext highlighter-rouge">gm9</code></li>
   <li>在 CTRTransfer <code class="language-plaintext highlighter-rouge">.bin</code> 上按 “X” 来删除它</li>
   <li>按下 “A” 键确认</li>
@@ -683,13 +740,13 @@ window.cookieconsent.initialise({
   <li>Press (A) to unlock SysNAND (lvl2) writing, then input the key combo given</li>
   <li>Once the file has been deleted, press (A) to continue</li>
   <li>如果提示重新锁定写入权限，按下 “A” 键来确认</li>
-  <li>按 “Start” 键重启你的主机</li>
-  <li>Your device will load into the initial setup menu
+  <li>Press (Start) to reboot your console</li>
+  <li>Your console will load into the initial setup menu
     <ul>
       <li>This is expected behaviour. You have not lost any of your game data</li>
     </ul>
   </li>
-  <li>Complete the initial setup menu by following the prompts on your device’s screen</li>
+  <li>Complete the initial setup menu by following the prompts on your console’s screen</li>
 </ol>
 
 <hr />

@@ -12,7 +12,7 @@
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>Guide Hacks 3DS - 3DS Hacks Guide</title>
-<meta name="description" content="A complete guide to 3DS (and 2DS) custom firmware,  from stock to boot9strap.">
+<meta name="description" content="Un guide complet pour l’installation d’un custom firmware sur 3DS (et 2DS)  depuis le firmware original vers boot9strap.">
 
 
   <meta name="author" content="Nintendo Homebrew">
@@ -26,7 +26,7 @@
 <meta property="og:url" content="https://3ds.hacks.guide/fr_FR/">
 
 
-  <meta property="og:description" content="A complete guide to 3DS (and 2DS) custom firmware,  from stock to boot9strap.">
+  <meta property="og:description" content="Un guide complet pour l’installation d’un custom firmware sur 3DS (et 2DS)  depuis le firmware original vers boot9strap.">
 
 
 
@@ -289,14 +289,14 @@ window.cookieconsent.initialise({
         
       </h1>
       
-        <p class="page__lead">A complete guide to 3DS (and 2DS) custom firmware, <br /> from stock to boot9strap.<br />
+        <p class="page__lead">Un guide complet pour l’installation d’un custom firmware sur 3DS (et 2DS) <br /> depuis le firmware original vers boot9strap.<br />
 </p>
       
       
 
 
       
-        <p><a href="/key-information" class="btn btn--light-outline btn--large">Get Started</a></p>
+        <p><a href="/key-information" class="btn btn--light-outline btn--large">Bien Démarrer</a></p>
       
       
     </div>
@@ -309,7 +309,7 @@ window.cookieconsent.initialise({
 <div id="main" role="main">
   <article class="splash" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="Guide Hacks 3DS">
-    <meta itemprop="description" content="A complete guide to 3DS (and 2DS) custom firmware,  from stock to boot9strap.">
+    <meta itemprop="description" content="Un guide complet pour l’installation d’un custom firmware sur 3DS (et 2DS)  depuis le firmware original vers boot9strap.">
     
     
 
@@ -330,6 +330,18 @@ window.cookieconsent.initialise({
       <hr>
       <p class="notice--info">Lisez attentivement toutes les pages d’introduction (y compris celle-ci !) avant de continuer.</p>
 
+<div class="notice--danger">
+<p><strong>Le logiciel système version 11.17.0 de la 3DS est sorti récemment</strong>. Voici ce que vous devriez savoir :</p>
+
+<ul>
+  <li>If your console is running <em>Luma 10.2.1 or higher</em>, it is <em>100% safe</em> to update. You can check your Luma version by holding (Select) while booting your console.</li>
+  <li>If your console is on an older Luma version, you should <a href="checking-for-cfw">update Luma</a> before you update your console to 11.17.0.</li>
+  <li>If your console does not yet have custom firmware, <strong>do NOT update to the latest version</strong>, as installation methods may be more difficult.</li>
+  <li>If your unmodified console is ALREADY on 11.17.0, this guide has been updated accordingly. Specifically, New3DS-family consoles have a <a href="homebrew-launcher-(super-skaterhax)">free software method</a>, while Old3DS-family consoles will need to use <a href="alternate-exploits">alternate exploits</a> that rely on external hardware or software.</li>
+</ul>
+
+</div>
+
 <h2 id="quest-ce-quun-custom-firmware-">Qu’est-ce qu’un custom firmware ?</h2>
 
 <p>Un <strong>custom firmware</strong> (“CFW”) est une modification complète du logiciel système de votre 3DS, comparable à “l’accès administrateur” sur un ordinateur. Il vous permet de faire tout ce que la 3DS est physiquement capable de faire, plutôt que d’être limité par tout ce que Nintendo vous permet de faire.</p>
@@ -339,7 +351,7 @@ window.cookieconsent.initialise({
 <ul>
   <li>Exécution de logiciels homebrew et de jeux conçus pour ou portés sur la Nintendo 3DS</li>
   <li>Outrepasser le verrouillage de la région, vous permettant de jouer à des jeux d’autres régions</li>
-  <li>HOME Menu customization, using community-created <a href="https://themeplaza.art">themes and badges</a></li>
+  <li>Personnalisation du menu HOME, à l’aide de <a href="https://themeplaza.art">thèmes et badges</a> créés par la communauté</li>
   <li>Modification de jeux (“ROMs hacks”) via <a href="https://github.com/knight-ryu12/godmode9-layeredfs-usage/wiki/Using-Luma3DS'-layeredfs-(Unily-version-8.0-and-higher)">LayeredFS</a></li>
   <li>Modification des données de sauvegarde, sauvegarde et restauration de celles-ci</li>
   <li>Émulation d’anciennes consoles, ainsi que la lecture native des jeux DS et GBA</li>
@@ -350,7 +362,7 @@ window.cookieconsent.initialise({
 
 <p>Ce guide va :</p>
 <ul>
-  <li>Installer <strong>boot9strap</strong> et le <strong>custom firmware Luma3DS</strong> sur des consoles 3DS/2DS non modifiées
+  <li>Install <strong>boot9strap</strong> and <strong>Luma3DS custom firmware</strong> on unmodified retail 3DS/2DS consoles
     <ul>
       <li>Luma3DS supprimera automatiquement le verrouillage régional et vous permettra d’exécuter des logiciels non signés</li>
     </ul>
@@ -361,7 +373,7 @@ window.cookieconsent.initialise({
 
 <hr />
 
-<h3 class="notice--primary" id="continue-to-key-information">Continue to <a href="key-information">Key Information</a></h3>
+<h3 class="notice--primary" id="continuer-vers-informations-importantes">Continuer vers <a href="key-information">Informations importantes</a></h3>
 
     </section>
   </article>

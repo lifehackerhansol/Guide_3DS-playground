@@ -314,11 +314,35 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="updating-firmware-(new-3ds)"><a href='/nl_NL/updating-firmware-(new-3ds)'>Updating Firmware (New 3DS)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="updating-firmware-(kor)"><a href='/nl_NL/updating-firmware-(kor)'>Updating Firmware (KOR)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="updating-firmware-(twn)"><a href='/nl_NL/updating-firmware-(twn)'>Updating Firmware (TWN)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="ntrboot"><a href='/nl_NL/ntrboot'>ntrboot</a></li>
           
         
           
+            <li style="display: none;" data-name="alternate-exploits"><a href='/nl_NL/alternate-exploits'>Alternate Exploits</a></li>
+          
+        
+          
             <li style="display: none;" data-name="seedminer"><a href='/nl_NL/seedminer'>Seedminer</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(alternate)"><a href='/nl_NL/seedminer-(alternate)'>Seedminer (Alternate)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(mii)"><a href='/nl_NL/seedminer-(mii)'>Seedminer (Mii)</a></li>
           
         
           
@@ -330,7 +354,31 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="bannerbomb3-(legacy)"><a href='/nl_NL/bannerbomb3-(legacy)'>BannerBomb3 (Legacy)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(ninjhax2-dx)"><a href='/nl_NL/homebrew-launcher-(ninjhax2-dx)'>Homebrew Launcher (ninjhax2-dx)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(pichaxx)"><a href='/nl_NL/homebrew-launcher-(pichaxx)'>Homebrew Launcher (PicHaxx)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(smilehax-iie)"><a href='/nl_NL/homebrew-launcher-(smilehax-iie)'>Homebrew Launcher (smilehax-IIe)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(steelhax)"><a href='/nl_NL/homebrew-launcher-(steelhax)'>Homebrew Launcher (Steelhax)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="homebrew-launcher-(super-skaterhax)"><a href='/nl_NL/homebrew-launcher-(super-skaterhax)'>Homebrew Launcher (super-skaterhax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="dumping-eshop-dsiware"><a href='/nl_NL/dumping-eshop-dsiware'>Dumping eShop DSiWare</a></li>
           
         
           
@@ -387,6 +435,14 @@ window.cookieconsent.initialise({
         
           
             <li style="display: none;" data-name="installing-boot9strap-(fredtool)"><a href='/nl_NL/installing-boot9strap-(fredtool)'>Installing boot9strap (Fredtool)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(fredtool-inject)"><a href='/nl_NL/installing-boot9strap-(fredtool-inject)'>Installing boot9strap (Fredtool-Inject)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(fredtool-legacy)"><a href='/nl_NL/installing-boot9strap-(fredtool-legacy)'>Installing boot9strap (Fredtool, Legacy)</a></li>
           
         
           
@@ -499,7 +555,7 @@ window.cookieconsent.initialise({
 
 <h4 id="deel-i---voorbereiding">Deel I - Voorbereiding</h4>
 
-<p>In this section, you will copy the files needed to trigger the unSAFE_MODE exploit onto your device’s SD card.</p>
+<p>In this section, you will copy the files needed to trigger the unSAFE_MODE exploit onto your console’s SD card.</p>
 
 <ol>
   <li>Your SD card should be inserted in your computer</li>
@@ -523,31 +579,41 @@ window.cookieconsent.initialise({
 <p>In this section, you will trigger the BannerBomb3 exploit using the DSiWare Management menu, which can be used to overwrite your Wi-Fi slots with hacked data. Your Wi-Fi connection settings will be temporarily overwritten while the exploit is active.</p>
 
 <ol>
-  <li>Stop je SD-kaart terug in je 3DS</li>
-  <li>Zet je 3DS aan</li>
-  <li>Open Systeeminstellingen op je apparaat</li>
-  <li>Navigate to <code class="language-plaintext highlighter-rouge">Data Management</code> -&gt; <code class="language-plaintext highlighter-rouge">DSiWare</code>-&gt; <code class="language-plaintext highlighter-rouge">SD Card</code> (<a href="/images/screenshots/bb3/dsiware-management.png">image</a>)
+  <li>Reinsert your SD card into your console</li>
+  <li>Power on your console</li>
+  <li>Launch System Settings on your console</li>
+  <li>Navigate to <code class="language-plaintext highlighter-rouge">Data Management</code> -&gt; <code class="language-plaintext highlighter-rouge">DSiWare</code> -&gt; <code class="language-plaintext highlighter-rouge">SD Card</code> (<a href="/images/screenshots/bb3/dsiware-management.png">image</a>)
     <ul>
-      <li>Your device should show the BB3 multihax menu</li>
-      <li>If this step causes your device to crash, <a href="troubleshooting#bannerbomb3">follow this troubleshooting guide</a></li>
+      <li>Your console should show the BB3 multihax menu</li>
+      <li>If the BB3 multihax menu doesn’t open, <a href="troubleshooting#bannerbomb3">follow this troubleshooting guide</a></li>
       <li>If the BB3 multihax menu says “cfw installed already”, you already have custom firmware and should continue from <a href="checking-for-cfw">here</a></li>
     </ul>
   </li>
   <li>Use the D-Pad to navigate and press the (A) button to select “Install unSAFE_MODE”
     <ul>
-      <li>Je apparaat zal automatisch uitschakelen</li>
+      <li>Your console will automatically power off</li>
     </ul>
   </li>
+  <li>Power on your console</li>
+  <li>Launch System Settings on your console</li>
+  <li>Navigate to <code class="language-plaintext highlighter-rouge">Internet Settings</code> -&gt; <code class="language-plaintext highlighter-rouge">Connection Settings</code></li>
+  <li>Ensure that all three connections are named “Haaaaaaaxxxxxxxxx…”
+    <ul>
+      <li>Do NOT change these settings!</li>
+      <li>If all three connections are NOT all named “Haaaaaaaxxxxxxxxx…”, STOP! Something went wrong in this section and MUST be fixed before you can continue</li>
+    </ul>
+  </li>
+  <li>Power off your console</li>
 </ol>
 
 <h4 id="deel-iii---unsafe_mode">Deel III - unSAFE_MODE</h4>
 
-<p>In this section, you will enter Safe Mode (a feature available on all 3DS family devices) and navigate to a menu where unSAFE_MODE will be triggered, which will launch you into the boot9strap (custom firmware) installer.</p>
+<p>In this section, you will enter Safe Mode (a feature available on all 3DS family consoles) and navigate to a menu where unSAFE_MODE will be triggered, which will launch you into the boot9strap (custom firmware) installer.</p>
 
 <ol>
-  <li>With your device still powered off, hold the following buttons: (Left Shoulder) + (Right Shoulder) + (D-Pad Up) + (A), and while holding these buttons together, power on your device
+  <li>With your console still powered off, hold the following buttons: (Left Shoulder) + (Right Shoulder) + (D-Pad Up) + (A), and while holding these buttons together, power on your console
     <ul>
-      <li>Keep holding the buttons until the device boots into Safe Mode (a “system update” menu)</li>
+      <li>Keep holding the buttons until the console boots into Safe Mode (a “system update” menu)</li>
     </ul>
   </li>
   <li>Press “OK” to accept the update
@@ -559,26 +625,31 @@ window.cookieconsent.initialise({
   <li>The update will eventually fail, with the error code <code class="language-plaintext highlighter-rouge">003-1099</code>. This is intended behaviour</li>
   <li>When asked “Would you like to configure Internet settings?”, select “Yes”</li>
   <li>On the following menu, navigate to <code class="language-plaintext highlighter-rouge">Connection 1</code> -&gt; <code class="language-plaintext highlighter-rouge">Change Settings</code> -&gt; <code class="language-plaintext highlighter-rouge">Next Page (right arrow)</code> -&gt; <code class="language-plaintext highlighter-rouge">Proxy Settings</code> -&gt; <code class="language-plaintext highlighter-rouge">Detailed Setup</code> (<a href="/images/screenshots/usm/safemode_highlighted.png">image</a>)</li>
-  <li>If the exploit was successful, your device will have booted into SafeB9SInstaller
+  <li>If the exploit was successful, your console will have booted into SafeB9SInstaller
     <ul>
-      <li>If your device instead freezes on a white screen, hold the POWER button until it turns off, then retry this section</li>
-      <li>If your device instead freezes on a red screen, you are missing <code class="language-plaintext highlighter-rouge">usm.bin</code> from the root of your SD card</li>
+      <li>If your console instead freezes on a white screen, hold the POWER button until it turns off, then retry this section</li>
+      <li>If your console instead freezes on a red screen, you are missing <code class="language-plaintext highlighter-rouge">usm.bin</code> from the root of your SD card</li>
+      <li>If you get a different error, <a href="troubleshooting#installing-boot9strap-usm">follow this troubleshooting guide</a></li>
     </ul>
   </li>
 </ol>
 
 <h4 id="deel-iv---boot9strap-installeren">Deel IV - Boot9strap installeren</h4>
 
-<p>In this section, you will install custom firmware onto your device.</p>
+<p>In this section, you will install custom firmware onto your console.</p>
 
 <ol>
-  <li>When prompted, input the key combo given on the top screen to install boot9strap</li>
-  <li>Once it is complete, press (A) to reboot your device</li>
-  <li>Your device should have booted into the Luma3DS configuration menu
+  <li>When prompted, input the key combo given on the top screen to install boot9strap
+    <ul>
+      <li>If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, <a href="troubleshooting#issues-with-safeb9sinstaller">follow this troubleshooting guide</a></li>
+    </ul>
+  </li>
+  <li>Once it is complete, press (A) to reboot your console</li>
+  <li>Your console should have booted into the Luma3DS configuration menu
     <ul>
       <li>Luma3DS configuration menu are settings for the Luma3DS custom firmware. Many of these settings may be useful for customization or debugging</li>
       <li>For the purpose of this guide, <strong>leave these options on the default settings</strong> (do not check or uncheck anything)</li>
-      <li>If your device shuts down when you try to power it on, ensure that you have copied <code class="language-plaintext highlighter-rouge">boot.firm</code> from the Luma3DS <code class="language-plaintext highlighter-rouge">.zip</code> to the root of your SD card</li>
+      <li>If your console shuts down when you try to power it on, ensure that you have copied <code class="language-plaintext highlighter-rouge">boot.firm</code> from the Luma3DS <code class="language-plaintext highlighter-rouge">.zip</code> to the root of your SD card</li>
     </ul>
   </li>
   <li>Druk op (Start) om op te slaan en opnieuw op te starten</li>
@@ -595,14 +666,14 @@ window.cookieconsent.initialise({
 <p>In this section, you will trigger the BannerBomb3 exploit a second time so that you can restore the Wi-Fi connection slots that were overwritten in Section II.</p>
 
 <ol>
-  <li>Open System Settings op je apparaat</li>
-  <li>Navigate to <code class="language-plaintext highlighter-rouge">Data Management</code> -&gt; <code class="language-plaintext highlighter-rouge">DSiWare</code>-&gt; <code class="language-plaintext highlighter-rouge">SD Card</code> (<a href="/images/screenshots/bb3/dsiware-management.png">image</a>)</li>
+  <li>Launch System Settings on your console</li>
+  <li>Navigate to <code class="language-plaintext highlighter-rouge">Data Management</code> -&gt; <code class="language-plaintext highlighter-rouge">DSiWare</code> -&gt; <code class="language-plaintext highlighter-rouge">SD Card</code> (<a href="/images/screenshots/bb3/dsiware-management.png">image</a>)</li>
   <li>Use the D-Pad to navigate and press the (A) button to select “Uninstall unSAFE_MODE”
     <ul>
-      <li>Your device will automatically reboot</li>
+      <li>Your console will automatically reboot</li>
     </ul>
   </li>
-  <li>Schakel je 3DS uit</li>
+  <li>Power off your console</li>
   <li>Plaats je SD kaart in je computer</li>
   <li>Navigeer naar <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID0&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID1&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">Nintendo DSiWare</code> op je SD-kaart</li>
   <li>Delete <code class="language-plaintext highlighter-rouge">F00D43D5.bin</code> from your Nintendo DSiWare folder and from your computer. Dit bestand is niet meer nodig</li>

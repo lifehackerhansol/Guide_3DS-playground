@@ -314,11 +314,35 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="updating-firmware-(new-3ds)"><a href='/zh_CN/updating-firmware-(new-3ds)'>Updating Firmware (New 3DS)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="updating-firmware-(kor)"><a href='/zh_CN/updating-firmware-(kor)'>Updating Firmware (KOR)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="updating-firmware-(twn)"><a href='/zh_CN/updating-firmware-(twn)'>Updating Firmware (TWN)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="ntrboot"><a href='/zh_CN/ntrboot'>ntrboot</a></li>
           
         
           
+            <li style="display: none;" data-name="alternate-exploits"><a href='/zh_CN/alternate-exploits'>Alternate Exploits</a></li>
+          
+        
+          
             <li style="display: none;" data-name="seedminer"><a href='/zh_CN/seedminer'>Seedminer</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(alternate)"><a href='/zh_CN/seedminer-(alternate)'>Seedminer (Alternate)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(mii)"><a href='/zh_CN/seedminer-(mii)'>Seedminer (Mii)</a></li>
           
         
           
@@ -330,7 +354,31 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="bannerbomb3-(legacy)"><a href='/zh_CN/bannerbomb3-(legacy)'>BannerBomb3 (Legacy)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(ninjhax2-dx)"><a href='/zh_CN/homebrew-launcher-(ninjhax2-dx)'>Homebrew Launcher (ninjhax2-dx)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(pichaxx)"><a href='/zh_CN/homebrew-launcher-(pichaxx)'>Homebrew Launcher (PicHaxx)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(smilehax-iie)"><a href='/zh_CN/homebrew-launcher-(smilehax-iie)'>Homebrew Launcher (smilehax-IIe)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(steelhax)"><a href='/zh_CN/homebrew-launcher-(steelhax)'>Homebrew Launcher (Steelhax)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="homebrew-launcher-(super-skaterhax)"><a href='/zh_CN/homebrew-launcher-(super-skaterhax)'>Homebrew Launcher (super-skaterhax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="dumping-eshop-dsiware"><a href='/zh_CN/dumping-eshop-dsiware'>Dumping eShop DSiWare</a></li>
           
         
           
@@ -387,6 +435,14 @@ window.cookieconsent.initialise({
         
           
             <li style="display: none;" data-name="installing-boot9strap-(fredtool)"><a href='/zh_CN/installing-boot9strap-(fredtool)'>Installing boot9strap (Fredtool)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(fredtool-inject)"><a href='/zh_CN/installing-boot9strap-(fredtool-inject)'>Installing boot9strap (Fredtool-Inject)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(fredtool-legacy)"><a href='/zh_CN/installing-boot9strap-(fredtool-legacy)'>Installing boot9strap (Fredtool, Legacy)</a></li>
           
         
           
@@ -500,7 +556,7 @@ window.cookieconsent.initialise({
 
 <h4 id="第一步--准备工作">第一步 – 准备工作</h4>
 
-<p>在这一步，你需要把触发 unSAFE_MODE 漏洞所需的文件复制到设备的 SD 卡上。</p>
+<p>In this section, you will copy the files needed to trigger the unSAFE_MODE exploit onto your console’s SD card.</p>
 
 <ol>
   <li>将你的 SD 卡插入电脑</li>
@@ -524,31 +580,41 @@ window.cookieconsent.initialise({
 <p>本节中，你将使用 DSiWare 数据管理菜单触发 BannerBomb3 漏洞，以便向你的 Wi-Fi 设置槽中写入带有漏洞的数据。 你自己设置的 Wi-Fi 链接点将在这个过程中被暂时覆盖。</p>
 
 <ol>
-  <li>将 SD 卡重新插入你的主机</li>
-  <li>启动你的主机</li>
-  <li>启动你主机上的 “系统设置(System settings)”</li>
-  <li>依次点击 <code class="language-plaintext highlighter-rouge">数据管理（データ管理/Data Management）</code> -&gt; <code class="language-plaintext highlighter-rouge">DSiWare 数据管理（DSiWareデータ管理/DSiWare）</code> -&gt; <code class="language-plaintext highlighter-rouge">SD卡（micro SDカード/SDカード/SD/microSD）</code>（<a href="/images/screenshots/bb3/dsiware-management.png">例图</a>）
+  <li>Reinsert your SD card into your console</li>
+  <li>Power on your console</li>
+  <li>Launch System Settings on your console</li>
+  <li>Navigate to <code class="language-plaintext highlighter-rouge">Data Management</code> -&gt; <code class="language-plaintext highlighter-rouge">DSiWare</code> -&gt; <code class="language-plaintext highlighter-rouge">SD Card</code> (<a href="/images/screenshots/bb3/dsiware-management.png">image</a>)
     <ul>
-      <li>你的主机将会打开 BB3 multihax 菜单</li>
-      <li>If this step causes your device to crash, <a href="troubleshooting#bannerbomb3">follow this troubleshooting guide</a></li>
+      <li>Your console should show the BB3 multihax menu</li>
+      <li>If the BB3 multihax menu doesn’t open, <a href="troubleshooting#bannerbomb3">follow this troubleshooting guide</a></li>
       <li>If the BB3 multihax menu says “cfw installed already”, you already have custom firmware and should continue from <a href="checking-for-cfw">here</a></li>
     </ul>
   </li>
   <li>使用十字键移动至 “Install unSAFE_MODE” ，然后按下 A 键
     <ul>
-      <li>主机将会自动关机</li>
+      <li>Your console will automatically power off</li>
     </ul>
   </li>
+  <li>Power on your console</li>
+  <li>Launch System Settings on your console</li>
+  <li>进入到 <code class="language-plaintext highlighter-rouge">互联网设置（インターネット設定 / Internet Settings）</code> -&gt; <code class="language-plaintext highlighter-rouge">连接设置（インターネット接続設定 / Connection Settings）</code></li>
+  <li>Ensure that all three connections are named “Haaaaaaaxxxxxxxxx…”
+    <ul>
+      <li>Do NOT change these settings!</li>
+      <li>If all three connections are NOT all named “Haaaaaaaxxxxxxxxx…”, STOP! Something went wrong in this section and MUST be fixed before you can continue</li>
+    </ul>
+  </li>
+  <li>Power off your console</li>
 </ol>
 
 <h4 id="第三步--unsafe_mode">第三步 – unSAFE_MODE</h4>
 
-<p>In this section, you will enter Safe Mode (a feature available on all 3DS family devices) and navigate to a menu where unSAFE_MODE will be triggered, which will launch you into the boot9strap (custom firmware) installer.</p>
+<p>In this section, you will enter Safe Mode (a feature available on all 3DS family consoles) and navigate to a menu where unSAFE_MODE will be triggered, which will launch you into the boot9strap (custom firmware) installer.</p>
 
 <ol>
-  <li>将你的主机置于关机状态，按住 L + R + ↑ + A 四个按键，然后按下电源键
+  <li>With your console still powered off, hold the following buttons: (Left Shoulder) + (Right Shoulder) + (D-Pad Up) + (A), and while holding these buttons together, power on your console
     <ul>
-      <li>按住这几个键，直到主机进入安全模式（一个“系统更新”菜单）</li>
+      <li>Keep holding the buttons until the console boots into Safe Mode (a “system update” menu)</li>
     </ul>
   </li>
   <li>Press “OK” to accept the update
@@ -560,26 +626,31 @@ window.cookieconsent.initialise({
   <li>The update will eventually fail, with the error code <code class="language-plaintext highlighter-rouge">003-1099</code>. This is intended behaviour</li>
   <li>When asked “Would you like to configure Internet settings?”, select “Yes”</li>
   <li>On the following menu, navigate to <code class="language-plaintext highlighter-rouge">Connection 1</code> -&gt; <code class="language-plaintext highlighter-rouge">Change Settings</code> -&gt; <code class="language-plaintext highlighter-rouge">Next Page (right arrow)</code> -&gt; <code class="language-plaintext highlighter-rouge">Proxy Settings</code> -&gt; <code class="language-plaintext highlighter-rouge">Detailed Setup</code> (<a href="/images/screenshots/usm/safemode_highlighted.png">image</a>)</li>
-  <li>If the exploit was successful, your device will have booted into SafeB9SInstaller
+  <li>If the exploit was successful, your console will have booted into SafeB9SInstaller
     <ul>
-      <li>If your device instead freezes on a white screen, hold the POWER button until it turns off, then retry this section</li>
-      <li>If your device instead freezes on a red screen, you are missing <code class="language-plaintext highlighter-rouge">usm.bin</code> from the root of your SD card</li>
+      <li>If your console instead freezes on a white screen, hold the POWER button until it turns off, then retry this section</li>
+      <li>If your console instead freezes on a red screen, you are missing <code class="language-plaintext highlighter-rouge">usm.bin</code> from the root of your SD card</li>
+      <li>If you get a different error, <a href="troubleshooting#installing-boot9strap-usm">follow this troubleshooting guide</a></li>
     </ul>
   </li>
 </ol>
 
 <h4 id="第四步--安装-boot9strap">第四步 – 安装 boot9strap</h4>
 
-<p>In this section, you will install custom firmware onto your device.</p>
+<p>In this section, you will install custom firmware onto your console.</p>
 
 <ol>
-  <li>When prompted, input the key combo given on the top screen to install boot9strap</li>
-  <li>Once it is complete, press (A) to reboot your device</li>
-  <li>Your device should have booted into the Luma3DS configuration menu
+  <li>When prompted, input the key combo given on the top screen to install boot9strap
+    <ul>
+      <li>If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, <a href="troubleshooting#issues-with-safeb9sinstaller">follow this troubleshooting guide</a></li>
+    </ul>
+  </li>
+  <li>Once it is complete, press (A) to reboot your console</li>
+  <li>Your console should have booted into the Luma3DS configuration menu
     <ul>
       <li>Luma3DS 配置菜单用于设置 Luma3DS 自制固件的可选功能 其中有许多功能可用于个性化或调试</li>
       <li>For the purpose of this guide, <strong>leave these options on the default settings</strong> (do not check or uncheck anything)</li>
-      <li>If your device shuts down when you try to power it on, ensure that you have copied <code class="language-plaintext highlighter-rouge">boot.firm</code> from the Luma3DS <code class="language-plaintext highlighter-rouge">.zip</code> to the root of your SD card</li>
+      <li>If your console shuts down when you try to power it on, ensure that you have copied <code class="language-plaintext highlighter-rouge">boot.firm</code> from the Luma3DS <code class="language-plaintext highlighter-rouge">.zip</code> to the root of your SD card</li>
     </ul>
   </li>
   <li>按下 “Start” 键保存设置并重启</li>
@@ -596,14 +667,14 @@ window.cookieconsent.initialise({
 <p>本节中，你将会再次触发 BannerBomb3 漏洞，以便还原第二步中被覆盖的 Wi-Fi 设置。</p>
 
 <ol>
-  <li>启动你主机上的 “系统设置(System settings)”</li>
-  <li>依次点击 <code class="language-plaintext highlighter-rouge">数据管理（データ管理/Data Management）</code> -&gt; <code class="language-plaintext highlighter-rouge">DSiWare 数据管理（DSiWareデータ管理/DSiWare）</code> -&gt; <code class="language-plaintext highlighter-rouge">SD卡（micro SDカード/SDカード/SD/microSD）</code>（<a href="/images/screenshots/bb3/dsiware-management.png">例图</a>）</li>
+  <li>Launch System Settings on your console</li>
+  <li>Navigate to <code class="language-plaintext highlighter-rouge">Data Management</code> -&gt; <code class="language-plaintext highlighter-rouge">DSiWare</code> -&gt; <code class="language-plaintext highlighter-rouge">SD Card</code> (<a href="/images/screenshots/bb3/dsiware-management.png">image</a>)</li>
   <li>使用十字键移动至 “Uninstall unSAFE_MODE”，然后按下 A 键
     <ul>
-      <li>主机将会自动重启</li>
+      <li>Your console will automatically reboot</li>
     </ul>
   </li>
-  <li>将主机关机</li>
+  <li>Power off your console</li>
   <li>将你的 SD 卡插入到电脑</li>
   <li>打开内存卡的 <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID0&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID1&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">Nintendo DSiWare</code> 文件夹</li>
   <li>从 Nintento DSiWare 文件夹和电脑中删除 <code class="language-plaintext highlighter-rouge">F00D43D5.bin</code>。 此文件之后不再需要使用</li>

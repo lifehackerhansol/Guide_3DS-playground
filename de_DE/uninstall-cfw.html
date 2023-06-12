@@ -314,11 +314,35 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="updating-firmware-(new-3ds)"><a href='/de_DE/updating-firmware-(new-3ds)'>Updating Firmware (New 3DS)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="updating-firmware-(kor)"><a href='/de_DE/updating-firmware-(kor)'>Updating Firmware (KOR)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="updating-firmware-(twn)"><a href='/de_DE/updating-firmware-(twn)'>Updating Firmware (TWN)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="ntrboot"><a href='/de_DE/ntrboot'>ntrboot</a></li>
           
         
           
+            <li style="display: none;" data-name="alternate-exploits"><a href='/de_DE/alternate-exploits'>Alternate Exploits</a></li>
+          
+        
+          
             <li style="display: none;" data-name="seedminer"><a href='/de_DE/seedminer'>Seedminer</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(alternate)"><a href='/de_DE/seedminer-(alternate)'>Seedminer (Alternate)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(mii)"><a href='/de_DE/seedminer-(mii)'>Seedminer (Mii)</a></li>
           
         
           
@@ -330,7 +354,31 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="bannerbomb3-(legacy)"><a href='/de_DE/bannerbomb3-(legacy)'>BannerBomb3 (Legacy)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(ninjhax2-dx)"><a href='/de_DE/homebrew-launcher-(ninjhax2-dx)'>Homebrew Launcher (ninjhax2-dx)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(pichaxx)"><a href='/de_DE/homebrew-launcher-(pichaxx)'>Homebrew Launcher (PicHaxx)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(smilehax-iie)"><a href='/de_DE/homebrew-launcher-(smilehax-iie)'>Homebrew Launcher (smilehax-IIe)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(steelhax)"><a href='/de_DE/homebrew-launcher-(steelhax)'>Homebrew Launcher (Steelhax)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="homebrew-launcher-(super-skaterhax)"><a href='/de_DE/homebrew-launcher-(super-skaterhax)'>Homebrew Launcher (super-skaterhax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="dumping-eshop-dsiware"><a href='/de_DE/dumping-eshop-dsiware'>Dumping eShop DSiWare</a></li>
           
         
           
@@ -387,6 +435,14 @@ window.cookieconsent.initialise({
         
           
             <li style="display: none;" data-name="installing-boot9strap-(fredtool)"><a href='/de_DE/installing-boot9strap-(fredtool)'>Installing boot9strap (Fredtool)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(fredtool-inject)"><a href='/de_DE/installing-boot9strap-(fredtool-inject)'>Installing boot9strap (Fredtool-Inject)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(fredtool-legacy)"><a href='/de_DE/installing-boot9strap-(fredtool-legacy)'>Installing boot9strap (Fredtool, Legacy)</a></li>
           
         
           
@@ -475,7 +531,7 @@ window.cookieconsent.initialise({
 
 <h3 id="lesen-erforderlich">Lesen erforderlich</h3>
 
-<p>This will completely remove CFW from your device, including boot9strap and Luma3DS, for the purpose of restoring the device to stock.</p>
+<p>This will completely remove CFW from your console, including boot9strap and Luma3DS, for the purpose of restoring the console to stock.</p>
 
 <p>Any unsigned (illegitimate) games will be rendered unusable and will be removed during this process. Use a <a href="https://github.com/FlagBrew/Checkpoint/releases/latest">save manager</a> to back up any saves that you care about.</p>
 
@@ -505,7 +561,7 @@ window.cookieconsent.initialise({
 <p>then uninstalling CFW <u><strong>WILL BRICK YOUR CONSOLE</strong></u>. If this applies to you, <a href="godmode9-usage#restoring-a-nand-backup">restore a clean NAND backup</a> before continuing.</p>
 </div>
 
-<p class="notice--warning">These instructions will only work on devices with a Luma3DS version of 8.0 or higher. If you have an older version of Luma, you must upgrade your setup before following these instructions. Follow <a href="checking-for-cfw">this page</a> to find your upgrade instructions.</p>
+<p class="notice--warning">These instructions will only work on consoles with a Luma3DS version of 8.0 or higher. If you have an older version of Luma, you must upgrade your setup before following these instructions. Follow <a href="checking-for-cfw">this page</a> to find your upgrade instructions.</p>
 
 <h3 id="was-du-brauchst">Was du brauchst</h3>
 
@@ -520,14 +576,14 @@ window.cookieconsent.initialise({
 
 <h4 id="abschnitt-i---vorbereitungen">Abschnitt I - Vorbereitungen</h4>
 <ol>
-  <li>Schalte deine Konsole aus</li>
+  <li>Power off your console</li>
   <li>Stecke deine SD-Karte in deinen Computer</li>
   <li>Copy <code class="language-plaintext highlighter-rouge">boot.firm</code> and <code class="language-plaintext highlighter-rouge">boot.3dsx</code> from the Luma3DS <code class="language-plaintext highlighter-rouge">.zip</code> to the root of your SD card</li>
   <li>Kopiere <code class="language-plaintext highlighter-rouge">GodMode9.firm</code>von der <code class="language-plaintext highlighter-rouge">GodMode9.zip</code>-Datei nach /luma/payloads/ auf deiner SD-Karte</li>
   <li>Kopiere den Ordner <code class="language-plaintext highlighter-rouge">gm9</code> aus der GodMode9 <code class="language-plaintext highlighter-rouge">.zip</code> in das Stammverzeichnis deiner SD-Karte</li>
   <li>Copy <code class="language-plaintext highlighter-rouge">DSiWareUninstaller.3dsx</code> to the <code class="language-plaintext highlighter-rouge">/3ds/</code> folder on your SD card</li>
   <li>Copy <code class="language-plaintext highlighter-rouge">safety_test.gm9</code> to the <code class="language-plaintext highlighter-rouge">/gm9/scripts/</code> folder on your SD card</li>
-  <li>Stecke deine SD-Karte nun wieder in deinen 3DS</li>
+  <li>Reinsert your SD card into your console</li>
 </ol>
 
 <h4 id="section-ii---ds-mode-tests">Section II - DS Mode Tests</h4>
@@ -535,37 +591,37 @@ window.cookieconsent.initialise({
 
 <h5 id="ds-connection-settings-test">DS Connection Settings Test</h5>
 <ol>
-  <li>Schalte deine Konsole an</li>
-  <li>Launch the System Settings Application</li>
+  <li>Power on your console</li>
+  <li>Launch System Settings on your console</li>
   <li>Navigate to <code class="language-plaintext highlighter-rouge">Internet Settings</code> -&gt; <code class="language-plaintext highlighter-rouge">Nintendo DS Connection Settings</code>, then click OK</li>
   <li>You should boot into the Nintendo DS Connection Setup menu
     <ul>
       <li>If your console displays the Japanese version of Flipnote Studio, a black screen, or an error message, the test has failed</li>
     </ul>
   </li>
-  <li>Schalte deine Konsole aus</li>
+  <li>Power off your console</li>
 </ol>
 
 <h5 id="ds-download-play-test">DS Download Play Test</h5>
 <ol>
-  <li>Schalte deine Konsole an</li>
+  <li>Power on your console</li>
   <li>Launch the Download Play application (<img src="https://3ds.hacks.guide/images/download-play-icon.png" alt="" height="24px" width="24px" />)</li>
   <li>Wähle “Nintendo DS” aus</li>
-  <li>If your device loads into a “Download software via DS Download Play” menu, the test was successful
+  <li>If your console loads into a “Download software via DS Download Play” menu, the test was successful
     <ul>
       <li>If your console displays the Japanese version of Flipnote Studio, a black screen, or an error message, the test has failed</li>
     </ul>
   </li>
-  <li>Schalte deine Konsole aus</li>
+  <li>Power off your console</li>
 </ol>
 
-<p class="notice--warning">If either of these tests has failed, DS mode, DS Download Play, and/or DS Connection Settings may be inaccessible once CFW is uninstalled! You should <a href="troubleshooting#software-issues-on-devices-with-custom-firmware">fix DS mode</a> before continuing.</p>
+<p class="notice--warning">If either of these tests has failed, DS mode, DS Download Play, and/or DS Connection Settings may be inaccessible once CFW is uninstalled! You should <a href="troubleshooting#software-issues-on-consoles-with-custom-firmware">fix DS mode</a> before continuing.</p>
 
 <h4 id="section-iii---safety-test">Section III - Safety Test</h4>
-<p>The purpose of this section is to verify that the console will boot and that critical system functions, like System Settings and the keyboard, will work once CFW is uninstalled. <strong>If you skip this section, you may BRICK your device!</strong></p>
+<p>The purpose of this section is to verify that the console will boot and that critical system functions, like System Settings and the keyboard, will work once CFW is uninstalled. <strong>If you skip this section, you may BRICK your console!</strong></p>
 
 <ol>
-  <li>Drücke und halte (Start), und während du (Start) hältst, schalte deinen 3DS an. This will launch GodMode9</li>
+  <li>Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9</li>
   <li>If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it is complete</li>
   <li>Wenn du aufgefordert wirst Datum und Uhrzeit der “RTC” (Real Time Clock, Echtzeituhr) zu korrigieren, drücke (A), stelle Datum und Uhrzeit ein und drücke (A) um fortzufahren
     <ul>
@@ -578,10 +634,10 @@ window.cookieconsent.initialise({
   <li>Read the text on-screen and press (A) to continue</li>
   <li>You should boot into the regular 3DS HOME Menu (any custom theme is irrelevant). If you do, continue these instructions
     <ul>
-      <li>If you do not boot into the regular 3DS HOME Menu (black screen, error screen, etc.), uninstalling CFW <strong>WILL BRICK YOUR DEVICE!</strong></li>
+      <li>If you do not boot into the regular 3DS HOME Menu (black screen, error screen, etc.), uninstalling CFW <strong>WILL BRICK YOUR CONSOLE!</strong></li>
     </ul>
   </li>
-  <li>Launch the System Settings Application
+  <li>Launch System Settings on your console
     <ul>
       <li>If the console crashes at this point, the test has failed</li>
     </ul>
@@ -594,7 +650,7 @@ window.cookieconsent.initialise({
       <li>If the keyboard does not appear, the screen freezes, or the console crashes, the test has failed</li>
     </ul>
   </li>
-  <li>Schalte deine Konsole aus</li>
+  <li>Power off your console</li>
 </ol>
 
 <p class="notice--danger">If you do NOT boot into the regular 3DS HOME Menu, or System Settings / your keyboard is inaccessible, <strong>DO NOT continue with these instructions</strong>! Join <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew on Discord</a> and ask (in English) for someone there to assist you.</p>
@@ -602,7 +658,7 @@ window.cookieconsent.initialise({
 <h4 id="section-iv---nand-backup">Section IV - NAND Backup</h4>
 
 <ol>
-  <li>Drücke und halte (Start), und während du (Start) hältst, schalte deinen 3DS an. This will launch GodMode9</li>
+  <li>Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9</li>
   <li>Drücke (Home), um das Aktionsmenü aufzurufen</li>
   <li>Wähle “Scripts”</li>
   <li>Wähle “GM9Megascript” aus</li>
@@ -617,22 +673,22 @@ window.cookieconsent.initialise({
   <li>Drücke (B), um zum Hauptmenü zurückzukehren</li>
   <li>Select “Exit”</li>
   <li>Drücke (Home), um das Aktionsmenü aufzurufen</li>
-  <li>Select “Poweroff system” to power off your device</li>
+  <li>Select “Poweroff system” to power off your console</li>
 </ol>
 
 <h4 id="section-v---removing-illegitimate-content">Section V - Removing illegitimate content</h4>
 <p class="notice--warning">This section will remove illegitimate content, like homebrew and dumped cartridges. If you have save data that you care about, back it up with a save manager before continuing!</p>
 
 <ol>
-  <li>Schalte deine Konsole an</li>
-  <li>Öffne die Systemeinstellungen</li>
+  <li>Power on your console</li>
+  <li>Launch System Settings on your console</li>
   <li>Navigate to Data Management &gt; Nintendo 3DS &gt; Software</li>
   <li>In this list of software, delete any non-Nintendo content you installed while using CFW
     <ul>
       <li>This includes common system software such as FBI, Anemone3DS, Luma Updater, Homebrew Launcher, Checkpoint, and others, along with any games and titles that you did <em>not</em> install from the eShop</li>
     </ul>
   </li>
-  <li>Navigate to Data Management &gt; DSiWare</li>
+  <li>Navigiere zu “Data Management” -&gt; “DSiWare”</li>
   <li>In this list of software, delete any non-Nintendo content you installed while using CFW
     <ul>
       <li>This includes software such as TWiLightMenu++, along with any games and titles that you did <em>not</em> install from the eShop</li>
@@ -650,18 +706,18 @@ window.cookieconsent.initialise({
   <li>Drücke (B), um das Rosalina-Menü zu schließen</li>
   <li>Drücke (Home) und schließe die Download-Spiel Anwendung</li>
   <li>Starte die Download-Spiel Anwendung</li>
-  <li>Deine Konsole sollte den Homebrew Launcher laden</li>
+  <li>Your console should load the Homebrew Launcher</li>
   <li>Launch DSiWare Uninstaller from the list of homebrew</li>
   <li>Follow the prompts and allow the program to uninstall</li>
-  <li>Once the process has succeeded, exit the Homebrew Launcher and power off your device</li>
+  <li>Once the process has succeeded, exit the Homebrew Launcher and power off your console</li>
 </ol>
 
 <h4 id="section-vi---system-format">Section VI - System Format</h4>
 <p>This section will ensure that all illegitimate tickets are removed, allowing eShop to work normally. This will remove all content from the 3DS and log you out of your NNID. Keep in mind that your console’s encryption key will be shuffled, meaning that any old data will be rendered inaccessible, even if you have a backup of your SD contents.</p>
 
 <ol>
-  <li>Schalte deine Konsole an</li>
-  <li>Öffne die Systemeinstellungen</li>
+  <li>Power on your console</li>
+  <li>Launch System Settings on your console</li>
   <li>Navigate to Other Settings -&gt; Next Page (until the final page) -&gt; Format System Memory</li>
   <li>Follow the prompts to format your 3DS</li>
 </ol>
@@ -670,7 +726,7 @@ window.cookieconsent.initialise({
 <p class="notice--warning">This is your final opportunity to verify that all safety steps above have been followed! Please ensure that you have followed all sections on this page, <strong>especially</strong> <code class="language-plaintext highlighter-rouge">Section III - Safety Test</code>, before continuing.</p>
 
 <ol>
-  <li>Drücke und halte (Start), und während du (Start) hältst, schalte deinen 3DS an. This will launch GodMode9
+  <li>Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
     <ul>
       <li>If you instead see the Luma3DS chainloader, use the D-Pad and the (A) button to select GodMode9</li>
     </ul>
@@ -686,12 +742,12 @@ window.cookieconsent.initialise({
   <li>Drücke (B), um zum Hauptmenü zurückzukehren</li>
   <li>Wähle “Exit” aus</li>
   <li>Drücke (A), um die Schreibrechte zu deaktivieren, wenn du dazu aufgefordert wirst</li>
-  <li>Drücke (Start) um deinen 3DS neu zu starten</li>
+  <li>Press (Start) to reboot your console</li>
 </ol>
 
 <hr />
 
-<p class="notice--success">Die gesamte Custom Firmware ist von deinem Gerät entfernt worden.</p>
+<p class="notice--success">All custom firmware has been removed from your console.</p>
 
 <p class="notice--info">You can now remove any extra files and folders from the root of your SD card that are <em>not</em> the <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code>, <code class="language-plaintext highlighter-rouge">DCIM</code>, or <code class="language-plaintext highlighter-rouge">private</code> folders.</p>
 

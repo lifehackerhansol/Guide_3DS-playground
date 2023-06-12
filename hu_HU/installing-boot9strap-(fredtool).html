@@ -314,11 +314,35 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="updating-firmware-(new-3ds)"><a href='/hu_HU/updating-firmware-(new-3ds)'>Firmware frissítése (New 3DS)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="updating-firmware-(kor)"><a href='/hu_HU/updating-firmware-(kor)'>Firmware frissítése (KOR)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="updating-firmware-(twn)"><a href='/hu_HU/updating-firmware-(twn)'>Firmware frissítése (TWN)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="ntrboot"><a href='/hu_HU/ntrboot'>ntrboot</a></li>
           
         
           
+            <li style="display: none;" data-name="alternate-exploits"><a href='/hu_HU/alternate-exploits'>Alternatív exploitok</a></li>
+          
+        
+          
             <li style="display: none;" data-name="seedminer"><a href='/hu_HU/seedminer'>Seedminer</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(alternate)"><a href='/hu_HU/seedminer-(alternate)'>Seedminer (Alternatív)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(mii)"><a href='/hu_HU/seedminer-(mii)'>Seedminer (Mii)</a></li>
           
         
           
@@ -330,7 +354,31 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="bannerbomb3-(legacy)"><a href='/hu_HU/bannerbomb3-(legacy)'>title: "BannerBomb3 (régi verziók)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(ninjhax2-dx)"><a href='/hu_HU/homebrew-launcher-(ninjhax2-dx)'>Homebrew Launcher (ninjhax2-dx)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(pichaxx)"><a href='/hu_HU/homebrew-launcher-(pichaxx)'>Homebrew Launcher (PicHaxx)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(smilehax-iie)"><a href='/hu_HU/homebrew-launcher-(smilehax-iie)'>Homebrew Launcher (smilehax-IIe)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(steelhax)"><a href='/hu_HU/homebrew-launcher-(steelhax)'>Homebrew Launcher (Steelhax)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="homebrew-launcher-(super-skaterhax)"><a href='/hu_HU/homebrew-launcher-(super-skaterhax)'>Homebrew Launcher (super-skaterhax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="dumping-eshop-dsiware"><a href='/hu_HU/dumping-eshop-dsiware'>eShop DSiWare dumpolása</a></li>
           
         
           
@@ -370,11 +418,11 @@ window.cookieconsent.initialise({
           
         
           
-            <li style="display: none;" data-name="installing-boot9strap-(ntrboot)"><a href='/hu_HU/installing-boot9strap-(ntrboot)'>boot9strap telepítése (ntrboot)</a></li>
+            <li style="display: none;" data-name="installing-boot9strap-(ntrboot)"><a href='/hu_HU/installing-boot9strap-(ntrboot)'>Boot9strap (ntrboot) telepítése</a></li>
           
         
           
-            <li style="display: none;" data-name="installing-boot9strap-(soundhax)"><a href='/hu_HU/installing-boot9strap-(soundhax)'>boot9strap telepítése (Soundhax)</a></li>
+            <li style="display: none;" data-name="installing-boot9strap-(soundhax)"><a href='/hu_HU/installing-boot9strap-(soundhax)'>Boot9strap telepítése (Soundhax)</a></li>
           
         
           
@@ -387,6 +435,14 @@ window.cookieconsent.initialise({
         
           
             <li style="display: none;" data-name="installing-boot9strap-(fredtool)"><a href='/hu_HU/installing-boot9strap-(fredtool)'>Boot9strap telepítése (Fredtool)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(fredtool-inject)"><a href='/hu_HU/installing-boot9strap-(fredtool-inject)'>Installing-boot9strap-(fredtool-inject)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(fredtool-legacy)"><a href='/hu_HU/installing-boot9strap-(fredtool-legacy)'>Boot9strap telepítése (Fredtool, régi verziók)</a></li>
           
         
           
@@ -477,12 +533,14 @@ window.cookieconsent.initialise({
 
 </details>
 
+<p class="notice--warning">Csak akkor szabad erre az oldalra jutnod, ha 11.16.0 verziót futtatsz. Ha más firmware-en vagy mint 11.17.0 vagy 11.16.0, akkor ÁLLJ MEG, ez az útmutató BRICKELNI FOG más firmware-en!!</p>
+
 <h3 id="amire-szükséged-lesz">Amire szükséged lesz</h3>
 
 <ul>
   <li>A <code class="language-plaintext highlighter-rouge">movable.sed</code> fájlodra a <a href="seedminer">Seedminer</a>-ből</li>
   <li>A [Frogminer_save] legújabb kiadása (https://github.com/zoogie/Frogminer/releases/latest) (<code class="language-plaintext highlighter-rouge">Frogminer_save.zip</code>)</li>
-  <li>A <a href="https://github.com/zoogie/b9sTool/releases/download/v6.1.1/release_6.1.1.zip">b9sTool</a> legfrissebb verziója (közvetlen letöltés)</li>
+  <li><strong>11.16.0 vagy 11.17.0 használók</strong>: A <a href="https://github.com/zoogie/b9sTool/releases/download/v6.1.1/release_6.1.1.zip">b9sTool</a> v6.1.1 verziója (közvetlen letöltés)</li>
   <li>A <a href="https://github.com/LumaTeam/Luma3DS/releases/latest">Luma3DS</a> legújabb kiadása (a Luma3DS <code class="language-plaintext highlighter-rouge">.zip</code> fájl)</li>
 </ul>
 
@@ -491,35 +549,35 @@ window.cookieconsent.initialise({
 <p>További biztonsági lépésként további ellenőrzést végzünk egyedi firmware-re. Ez azért szükséges, mert ha ezt a metódust használjuk már telepített egyedi firmware esetén, meg van a kockázata, hogy brickeljük a konzolt (ami használhatatlanna teszi helyreállítási metódusok nélkül, mint az <a href="ntrboot">ntrboot</a>).</p>
 
 <ol>
-  <li>Kapcsold ki a készüléked</li>
+  <li>Kapcsold ki a konzolod</li>
   <li>Nyomd le és tartsd nyomva (Select) gombot</li>
-  <li>Kapcsold be az eszközöd, miközben nyomva tartod a (Select) gombot</li>
+  <li>Power on your console while still holding the (Select) button</li>
   <li>Ha az ellenőrzés sikeres volt, be fogsz bootolni a HOME Menübe és végrehajthatod ezt az útmutatót</li>
-  <li>Kapcsold ki a készüléked</li>
+  <li>Kapcsold ki a konzolod</li>
 </ol>
 
-<p class="notice--danger">Ha a konfigurációs menüt látod vagy a konzolod azonnal kikapcsol, már van CFW-d és az útmutató folyatása BRICKELHETI az eszközödet! Kövesd a <a href="checking-for-cfw">CFW ellenőrzését</a> a már meglévő CFW-d frissítéséhez.</p>
+<p class="notice--danger">If you see a configuration menu or the console immediately powers off, you already have CFW, and continuing with these instructions may BRICK your console! Kövesd a <a href="checking-for-cfw">CFW ellenőrzését</a> a már meglévő CFW-d frissítéséhez.</p>
 
 <h4 id="ii-rész---bannerbomb3">II. rész - BannerBomb3</h4>
 
 <p>Ebben a fejezetben elő fogod idézni a BannerBomb3 exploit-ot a DSIWare Management menü használatával és lemásolni az eredmény dump fájlt a számítógépedre, hogy fel tudd használni a következő fejezetben.</p>
 
 <ol>
-  <li>Tedd vissza az SD kártyád a készülékedbe</li>
-  <li>Kapcsold be a készülékedet</li>
-  <li>Lépj be a System Settings-be a készülékeden</li>
+  <li>Tedd vissza az SD kártyád a konzoldba</li>
+  <li>Power on your console</li>
+  <li>Launch System Settings on your console</li>
   <li>Navigálj ide: <code class="language-plaintext highlighter-rouge">Data Management</code> -&gt; <code class="language-plaintext highlighter-rouge">DSiWare</code> -&gt; <code class="language-plaintext highlighter-rouge">SD Card</code> (<a href="/images/screenshots/bb3/dsiware-management.png">kép</a>)
     <ul>
-      <li>Az eszközödnek a BB3 multihax menüt kell mutatnia</li>
-      <li>Ha összeomlik a rendszered ebben a lépésben, <a href="troubleshooting#installing-boot9strap-fredtool">kövesd ezt a hibaelhárítási útmutatót</a></li>
+      <li>Your console should show the BB3 multihax menu</li>
+      <li>If this step causes your console to crash, <a href="troubleshooting#installing-boot9strap-fredtool">follow this troubleshooting guide</a></li>
     </ul>
   </li>
   <li>Használd a D-Pad-et a navigáláshoz, és nyomd meg az (A) gombot a “Dump DSiWare” kiválasztásához
     <ul>
-      <li>Az eszközöd automatikusan újra fog indulni</li>
+      <li>Your console will automatically reboot</li>
     </ul>
   </li>
-  <li>Kapcsold ki a készüléked</li>
+  <li>Kapcsold ki a konzolod</li>
 </ol>
 
 <h4 id="iii-rész---előkészületek">III. rész - Előkészületek</h4>
@@ -530,7 +588,7 @@ window.cookieconsent.initialise({
   <li>Helyezd az SD kártyád a számítógépbe</li>
   <li>Nyisd meg a <a href="https://jenkins.nelthorya.net/job/DSIHaxInjector_new/build?delay=0sec/">DSIHaxInjector_new</a> oldalt a számítógépeden</li>
   <li>A “Username” mező alatt adj meg egy tetszőleges alfanumerikus nevet (nem lehet benne szóköz vagy speciális karakter)</li>
-  <li>A “DSiBin” mező alatt töltsd fel a <code class="language-plaintext highlighter-rouge">42383841.bin</code> fájlodat az SD kártyád gyökeréről az első “Browse…” opció használatával</li>
+  <li>A “DSiBin” mező alatt töltsd fel a DSiWare mentés fájlodat (pl.: 42383841.bin) az SD kártyád gyökeréről az első “Browse…” opció használatával</li>
   <li>A “MovableSed” mező alatt töltsd fel a <code class="language-plaintext highlighter-rouge">movable.sed</code> fájlod a második “Browse…” opció használatával</li>
   <li>Az “InjectionTarget” mező alatt válaszd ki az injection target-et <code class="language-plaintext highlighter-rouge">DSinternet</code>-re (NEM memorypit)</li>
   <li>Kattints a “Build”-re
@@ -559,11 +617,11 @@ window.cookieconsent.initialise({
       <li>Az SD kártya gyökere a kezdőkönyvtárt jelenti az SD kártyán, ahol látható a Nintendo 3DS könyvtár, de nem vagyunk benne</li>
     </ul>
   </li>
-  <li>Copy <code class="language-plaintext highlighter-rouge">boot.nds</code> (B9STool) from the release <code class="language-plaintext highlighter-rouge">.zip</code> to the root of your SD card</li>
+  <li>Másold át a <code class="language-plaintext highlighter-rouge">boot.nds</code>-t (B9STool) a release <code class="language-plaintext highlighter-rouge">.zip</code>-ből az SD kártyád gyökerébe</li>
   <li>Másold át a <code class="language-plaintext highlighter-rouge">private</code> mappát a Frogminer_save <code class="language-plaintext highlighter-rouge">.zip</code>-ből az SD kártyád gyökerébe</li>
-  <li>Tedd vissza az SD kártyád a készülékedbe</li>
+  <li>Tedd vissza az SD kártyád a konzoldba</li>
   <li>
-    <p>Kapcsold be a készülékedet</p>
+    <p>Power on your console</p>
 
     <p class="notice--info"><img src="https://3ds.hacks.guide/images/screenshots/fredtool/fredtool-root-layout.png" alt="" /></p>
   </li>
@@ -574,13 +632,21 @@ window.cookieconsent.initialise({
 <p>Ebben a fejezetben másolni fogod a hackelt DS Connection Settings DSiWare-t a belső memóriába, ami átmenetileg lecseréli azt a Flipnote Studio-val.</p>
 
 <ol>
-  <li>Lépj be a System Settings-be a készülékeden</li>
+  <li>Launch System Settings on your console</li>
   <li>Navigálj ide: <code class="language-plaintext highlighter-rouge">Data Management</code> -&gt; <code class="language-plaintext highlighter-rouge">DSiWare</code> -&gt; <code class="language-plaintext highlighter-rouge">SD Card</code> (<a href="/images/screenshots/bb3/dsiware-management.png">kép</a>)</li>
-  <li>Válaszd a “Haxxxxxxxxx!” címet</li>
+  <li>Válaszd a “Haxxxxxxxxx!” címet
+    <ul>
+      <li>Ha nem tudod kiválasztani a “Haxxxxxxxxx” címet, <a href="troubleshooting#installing-boot9strap-fredtool">kövesd ezt a hibaelhárítási útmutatót</a></li>
+    </ul>
+  </li>
   <li>Válaszd a “Copy”-t, majd az “OK”-t</li>
   <li>Térj vissza a System Settings főmenüjébe</li>
   <li>Navigálj az <code class="language-plaintext highlighter-rouge">Internet Settings</code> -&gt; <code class="language-plaintext highlighter-rouge">Nintendo DS Connections</code> opcióhoz, majd válaszd az “OK”-t (<a href="/images/screenshots/fredtool/dsconnection.png">kép</a>)</li>
-  <li>Ha az exploit sikeres volt, a készülékednek ezt követően be kell töltenie a JPN verzióját a Flipnote Studio-nak</li>
+  <li>If the exploit was successful, your console will have loaded the JPN version of Flipnote Studio
+    <ul>
+      <li>If your console does not load the JPN version of Flipnote Studio, <a href="troubleshooting#installing-boot9strap-fredtool">follow this troubleshooting guide</a></li>
+    </ul>
+  </li>
 </ol>
 
 <h4 id="v-rész---flipnote-exploit">V. rész - Flipnote Exploit</h4>
@@ -593,6 +659,7 @@ window.cookieconsent.initialise({
   <li>Fejezd be a kezdeti telepítését az elindított játéknak, amíg el nem éri a fő menüt
     <ul>
       <li>Válaszd a bal opciót, ha kérdezi a telepítési folyamat során</li>
+      <li>Ha problémába futsz ebben a fejezetben, <a href="troubleshooting#installing-boot9strap-fredtool">kövesd ezt a hibaelhárítási útmutatót</a> a problémáddal</li>
     </ul>
   </li>
   <li>Az érintőképernyőt használva válaszd ki a bal nagy dobozt, majd válaszd a dobozt az SD kártya ikonnal</li>
@@ -603,18 +670,18 @@ window.cookieconsent.initialise({
   <li>Nyomd meg a harmadik dobozt benne az “A” betűvel</li>
   <li>Görgess balra, amíg a 1/3 filmtekercs kiválasztásra kerül</li>
   <li>Nyomd meg a negyedik dobozt benne az “A” betűvel</li>
-  <li>Ha az exploit sikeres volt, a készülékednek ezt követően be kell töltenie a b9sTool-t</li>
+  <li>If the exploit was successful, your console will have loaded b9sTool</li>
   <li>A D-Pad-dal menj az “Install boot9strap” opcióra
     <ul>
       <li>Ha kihagytad ezt a lépést a rendszer a HOME Menübe kerülsz a boot9strap telepítése helyett, és meg kell nyitnod a Nintendo DS Connections-t és elölről kell kezdened ennek a résznek az elejétől</li>
     </ul>
   </li>
   <li>Nyomj (A)-t majd ezt követően START-ot és SELECT-et egyszerre a folyamat elkezdéséhez</li>
-  <li>Ha végzett és az alsó képernyő azt mondja “done.” lépj ki a b9sTool-ból, majd kapcsold ki eszközöd
+  <li>Once completed and the bottom screen says “done.”, exit b9sTool, then power off your console
     <ul>
       <li>Elképzelhető, hogy kényszerítened kell a leállást a bekapcsológomb lenyomva tartásával</li>
-      <li>Ha a készüléked kikapcsol amikor bekapcsolod, bizonyosodj meg róla, hogy átmásoltad-e a <code class="language-plaintext highlighter-rouge">boot.firm</code> fájlt a Luma3DS <code class="language-plaintext highlighter-rouge">.zip</code> fájlból az SD kártya gyökerébe</li>
-      <li>Ha a Luma konfigurációs képernyőjét látod, kapcsold ki az eszközöd, majd folytasd a következő résszel</li>
+      <li>If your console shuts down when you try to power it on, ensure that you have copied <code class="language-plaintext highlighter-rouge">boot.firm</code> from the Luma3DS <code class="language-plaintext highlighter-rouge">.zip</code> to the root of your SD card</li>
+      <li>If you see the Luma Configuration screen, power off your console and continue to the next section</li>
     </ul>
   </li>
 </ol>
@@ -622,12 +689,12 @@ window.cookieconsent.initialise({
 <h4 id="vi-rész---luma3ds-beállítás">VI. rész - Luma3DS beállítás</h4>
 
 <ol>
-  <li>Nyomd le és tartsd nyomva a (Select) gombot, és a (Select) nyomva tartása mellett kapcsold be az eszközödet. Ez el fogja indítani a Luma3DS beállításokat</li>
-  <li>A készülékednek az előzőekben a Luma3DS-be kellett bootolnia
+  <li>Press and hold (Select), and while holding (Select), power on your console</li>
+  <li>Your console should have booted into the Luma3DS configuration menu
     <ul>
       <li>A Luma3DS konfigurációs menü a beállítások a Luma3DS egyedi firmverhez. Sok ezek közül a beállítások közül hasznos az egyedivé tételhez vagy a debuggoláshoz</li>
       <li>Az útmutató céljainak megfelelően <strong>hagyd ezeket a beállításokat alapértelmezetten</strong> (ne vegyél ki vagy rakj be pipát)</li>
-      <li>Ha a készüléked kikapcsol amikor bekapcsolod, bizonyosodj meg róla, hogy átmásoltad-e a <code class="language-plaintext highlighter-rouge">boot.firm</code> fájlt a Luma3DS <code class="language-plaintext highlighter-rouge">.zip</code> fájlból az SD kártya gyökerébe</li>
+      <li>If your console shuts down when you try to power it on, ensure that you have copied <code class="language-plaintext highlighter-rouge">boot.firm</code> from the Luma3DS <code class="language-plaintext highlighter-rouge">.zip</code> to the root of your SD card</li>
     </ul>
   </li>
   <li>Mentéshez és újraindításhoz nyomd meg a (Start) gombot</li>
@@ -641,14 +708,14 @@ window.cookieconsent.initialise({
 
 <h4 id="vii-rész---a-ds-connection-settings-visszaállítása">VII. rész - A DS Connection Settings visszaállítása</h4>
 
-<p>Ebben a fejezetben vissza fogod állítano a DS Connection Settings-et az az előtti állapotára, mielőtt lecserélésre került a Flipnote Studio-ra a IV. részben.</p>
+<p>Ebben a fejezetben vissza fogod állítani a DS Connection Settings-et az az előtti állapotára, mielőtt lecserélésre került a Flipnote Studio-ra egy korábbi szakaszban.</p>
 
 <ol>
   <li>Navigálj a <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID0&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID1&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">Nintendo DSiWare</code> mappába az SD kártyán</li>
   <li>Másold a <code class="language-plaintext highlighter-rouge">42383841.bin</code> fájlt az <code class="language-plaintext highlighter-rouge">clean</code> mappájából a letöltött DSiWare csomagból (output_(name).zip) a <code class="language-plaintext highlighter-rouge">Nintendo DSiWare</code> mappába, felülírva az ott találhatót</li>
-  <li>Tedd vissza az SD kártyád a készülékedbe</li>
-  <li>Kapcsold be a készülékedet</li>
-  <li>Lépj be a System Settings-be a készülékeden</li>
+  <li>Tedd vissza az SD kártyád a konzoldba</li>
+  <li>Power on your console</li>
+  <li>Launch System Settings on your console</li>
   <li>Navigálj ide: <code class="language-plaintext highlighter-rouge">Data Management</code> -&gt; <code class="language-plaintext highlighter-rouge">DSiWare</code> -&gt; <code class="language-plaintext highlighter-rouge">SD Card</code> (<a href="/images/screenshots/bb3/dsiware-management.png">kép</a>)</li>
   <li>Válaszd “Nintendo DSi™” címet</li>
   <li>Válaszd a “Copy”-t, majd az “OK”-t</li>

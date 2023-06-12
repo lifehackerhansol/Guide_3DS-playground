@@ -11,7 +11,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Installing boot9strap (Frogtool) - 3DS Hacks Guide</title>
+<!-- begin _includes/seo.html --><title>Installer boot9strap (Frogtool) - 3DS Hacks Guide</title>
 <meta name="description" content="A complete guide to 3DS custom firmware">
 
 
@@ -22,7 +22,7 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="3DS Hacks Guide">
-<meta property="og:title" content="Installing boot9strap (Frogtool)">
+<meta property="og:title" content="Installer boot9strap (Frogtool)">
 <meta property="og:url" content="https://3ds.hacks.guide/fr_FR/installing-boot9strap-(frogtool).html">
 
 
@@ -314,11 +314,35 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="updating-firmware-(new-3ds)"><a href='/fr_FR/updating-firmware-(new-3ds)'>Mise à jour du logiciel système (New 3DS)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="updating-firmware-(kor)"><a href='/fr_FR/updating-firmware-(kor)'>Mise à jour du logiciel système (KOR)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="updating-firmware-(twn)"><a href='/fr_FR/updating-firmware-(twn)'>Mise à jour du logiciel système (TWN)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="ntrboot"><a href='/fr_FR/ntrboot'>ntrboot</a></li>
           
         
           
+            <li style="display: none;" data-name="alternate-exploits"><a href='/fr_FR/alternate-exploits'>Alternate Exploits</a></li>
+          
+        
+          
             <li style="display: none;" data-name="seedminer"><a href='/fr_FR/seedminer'>Seedminer</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(alternate)"><a href='/fr_FR/seedminer-(alternate)'>Seedminer (Alternate)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(mii)"><a href='/fr_FR/seedminer-(mii)'>Seedminer (Mii)</a></li>
           
         
           
@@ -330,7 +354,31 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="bannerbomb3-(legacy)"><a href='/fr_FR/bannerbomb3-(legacy)'>BannerBomb3 (Legacy)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(ninjhax2-dx)"><a href='/fr_FR/homebrew-launcher-(ninjhax2-dx)'>Homebrew Launcher (ninjhax2-dx)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(pichaxx)"><a href='/fr_FR/homebrew-launcher-(pichaxx)'>Homebrew Launcher (PicHaxx)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(smilehax-iie)"><a href='/fr_FR/homebrew-launcher-(smilehax-iie)'>Homebrew Launcher (smilehax-IIe)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(steelhax)"><a href='/fr_FR/homebrew-launcher-(steelhax)'>Homebrew Launcher (Steelhax)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="homebrew-launcher-(super-skaterhax)"><a href='/fr_FR/homebrew-launcher-(super-skaterhax)'>Homebrew Launcher (super-skaterhax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="dumping-eshop-dsiware"><a href='/fr_FR/dumping-eshop-dsiware'>Dumping eShop DSiWare</a></li>
           
         
           
@@ -390,6 +438,14 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="installing-boot9strap-(fredtool-inject)"><a href='/fr_FR/installing-boot9strap-(fredtool-inject)'>Installing boot9strap (Fredtool-Inject)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(fredtool-legacy)"><a href='/fr_FR/installing-boot9strap-(fredtool-legacy)'>Installing boot9strap (Fredtool, Legacy)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="installing-boot9strap-(usm)"><a href='/fr_FR/installing-boot9strap-(usm)'>Installing boot9strap (USM)</a></li>
           
         
@@ -414,7 +470,7 @@ window.cookieconsent.initialise({
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Installing boot9strap (Frogtool)">
+    <meta itemprop="headline" content="Installer boot9strap (Frogtool)">
     
     
     
@@ -422,7 +478,7 @@ window.cookieconsent.initialise({
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">Installing boot9strap (Frogtool)
+          <h1 id="page-title" class="page__title" itemprop="headline">Installer boot9strap (Frogtool)
 </h1>
           
 
@@ -455,10 +511,10 @@ window.cookieconsent.initialise({
   <li><a href="#ce-dont-vous-avez-besoin" id="markdown-toc-ce-dont-vous-avez-besoin">Ce dont vous avez besoin</a>    <ul>
       <li><a href="#section-i---vérification-de-la-présence-dun-cfw" id="markdown-toc-section-i---vérification-de-la-présence-dun-cfw">Section I - Vérification de la présence d’un CFW</a></li>
       <li><a href="#section-ii---préparatifs" id="markdown-toc-section-ii---préparatifs">Section II - Préparatifs</a></li>
-      <li><a href="#section-iii---patching-ds-download-play" id="markdown-toc-section-iii---patching-ds-download-play">Section III - Patching DS Download Play</a></li>
-      <li><a href="#section-iv---flipnote-exploit" id="markdown-toc-section-iv---flipnote-exploit">Section IV - Flipnote Exploit</a></li>
-      <li><a href="#section-vi---luma3ds-configuration" id="markdown-toc-section-vi---luma3ds-configuration">Section VI - Luma3DS Configuration</a></li>
-      <li><a href="#section-vii---restoring-ds-connection-settings" id="markdown-toc-section-vii---restoring-ds-connection-settings">Section VII - Restoring DS Connection Settings</a></li>
+      <li><a href="#section-iii---patchage-de-mode-téléchargement" id="markdown-toc-section-iii---patchage-de-mode-téléchargement">Section III - Patchage de Mode téléchargement</a></li>
+      <li><a href="#section-iv---exploit-flipnote" id="markdown-toc-section-iv---exploit-flipnote">Section IV - Exploit Flipnote</a></li>
+      <li><a href="#section-vi---configuration-de-luma3ds" id="markdown-toc-section-vi---configuration-de-luma3ds">Section VI - Configuration de Luma3DS</a></li>
+      <li><a href="#section-vii---restauration-des-paramètres-de-connexions-nintendo-ds" id="markdown-toc-section-vii---restauration-des-paramètres-de-connexions-nintendo-ds">Section VII - Restauration des paramètres de Connexions Nintendo DS</a></li>
       <li><a href="#continuer-vers-finalisation-de-linstallation" id="markdown-toc-continuer-vers-finalisation-de-linstallation">Continuer vers Finalisation de l’installation</a></li>
     </ul>
   </li>
@@ -469,20 +525,20 @@ window.cookieconsent.initialise({
 
 <details class="notice--info">
 <summary><em>Détails techniques (facultatif)</em></summary>
-<p>For technical details on the exploits that you will be using on this page, see “DSiWare_Exports CTCert verification” and “FIRM partitions known-plaintext” <a href="https://www.3dbrew.org/wiki/3DS_System_Flaws">here</a>.</p>
+<p>Pour des détails techniques sur les exploits que vous utiliserez sur cette page, voir “Vérification CTCert DSiWare_Exports” et “FIRM partitions known-plaintext” <a href="https://www.3dbrew.org/wiki/3DS_System_Flaws">ici</a>.</p>
 
 </details>
 
-<p class="notice--warning">To use the <a href="https://wikipedia.org/wiki/Magnet_URI_scheme">magnet</a> link for <code class="language-plaintext highlighter-rouge">frogcert.bin</code> on this page, you will need a torrent client like <a href="https://www.qbittorrent.org/download.php">qBittorrent</a> or <a href="http://dev.deluge-torrent.org/wiki/Download">Deluge</a>. <br />
-If you are unable to install one, follow <a href="bannerbomb3">Bannerbomb3</a> instead.</p>
+<p class="notice--warning">Pour utiliser le lien <a href="https://fr.wikipedia.org/wiki/Magnet_(standard)">magnet</a> pour <code class="language-plaintext highlighter-rouge">frogcert.bin</code> sur cette page, vous aurez besoin d’un client torrent comme <a href="https://www.qbittorrent.org/download.php">qBittorrent</a> ou <a href="http://dev.deluge-torrent.org/wiki/Download">Deluge</a>. <br />
+Si vous ne pouvez pas en installer un, suivez <a href="bannerbomb3">Bannerbomb3</a> à la place.</p>
 
 <h2 id="ce-dont-vous-avez-besoin">Ce dont vous avez besoin</h2>
 
 <ul>
-  <li>Your <code class="language-plaintext highlighter-rouge">movable.sed</code> file from completing Seedminer or nimhax on the root of your SD card</li>
-  <li><i class="fa fa-magnet" aria-hidden="true" title="Ceci est un lien magnet. Use a torrent client to download the file."></i> <a href="magnet:?xt=urn:btih:d12278ea50bb3574f1fbd327f3d0e2292c70941f&amp;dn=frogcert.bin&amp;tr=https%3a%2f%2ftracker.fastdownload.xyz%3a443%2fannounce&amp;tr=https%3a%2f%2fopentracker.xyz%3a443%2fannounce&amp;tr=http%3a%2f%2fopen.trackerlist.xyz%3a80%2fannounce&amp;tr=http%3a%2f%2ft.nyaatracker.com%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2fopen.demonii.si%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.port443.xyz%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.vanitycore.co%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2fretracker.lanta-net.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fthetracker.org%3a80%2fannounce&amp;tr=http%3a%2f%2ftorrent.nwps.ws%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.iamhansen.xyz%3a2000%2fannounce&amp;tr=udp%3a%2f%2fbt.xxx-tracker.com%3a2710%2fannounce&amp;tr=http%3a%2f%2f0d.kebhana.mx%3a443%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker4.itzmx.com%3a2710%2fannounce&amp;tr=udp%3a%2f%2ftracker.justseed.it%3a1337%2fannounce&amp;tr=http%3a%2f%2ftherightsize.net%3a1337%2fannounce&amp;tr=udp%3a%2f%2fretracker.hotplug.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2ftracker.internetwarriors.net%3a1337%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2800%2fannounce&amp;tr=https%3a%2f%2f2.track.ga%3a443%2fannounce&amp;tr=udp%3a%2f%2fbigfoot1942.sektori.org%3a6969%2fannounce">frogcert.bin</a> (magnet link)</li>
-  <li>The latest release of <a href="https://github.com/zoogie/Frogtool/releases/latest">Frogtool</a></li>
-  <li>The latest release of <a href="https://github.com/zoogie/b9sTool/releases/latest">b9sTool</a></li>
+  <li>Votre fichier <code class="language-plaintext highlighter-rouge">movable.sed</code> obtenu grâce à Seedminer ou nimhax, à la racine de votre carte SD</li>
+  <li><i class="fa fa-magnet" aria-hidden="true" title="Ceci est un lien magnet. Utilisez un client torrent pour télécharger le fichier."></i> <a href="magnet:?xt=urn:btih:d12278ea50bb3574f1fbd327f3d0e2292c70941f&amp;dn=frogcert.bin&amp;tr=https%3a%2f%2ftracker.fastdownload.xyz%3a443%2fannounce&amp;tr=https%3a%2f%2fopentracker.xyz%3a443%2fannounce&amp;tr=http%3a%2f%2fopen.trackerlist.xyz%3a80%2fannounce&amp;tr=http%3a%2f%2ft.nyaatracker.com%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2fopen.demonii.si%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.port443.xyz%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.vanitycore.co%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2fretracker.lanta-net.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2fthetracker.org%3a80%2fannounce&amp;tr=http%3a%2f%2ftorrent.nwps.ws%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.iamhansen.xyz%3a2000%2fannounce&amp;tr=udp%3a%2f%2fbt.xxx-tracker.com%3a2710%2fannounce&amp;tr=http%3a%2f%2f0d.kebhana.mx%3a443%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker4.itzmx.com%3a2710%2fannounce&amp;tr=udp%3a%2f%2ftracker.justseed.it%3a1337%2fannounce&amp;tr=http%3a%2f%2ftherightsize.net%3a1337%2fannounce&amp;tr=udp%3a%2f%2fretracker.hotplug.ru%3a2710%2fannounce&amp;tr=udp%3a%2f%2ftracker.internetwarriors.net%3a1337%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2800%2fannounce&amp;tr=https%3a%2f%2f2.track.ga%3a443%2fannounce&amp;tr=udp%3a%2f%2fbigfoot1942.sektori.org%3a6969%2fannounce">frogcert.bin</a> (lien magnet)</li>
+  <li>La dernière version de <a href="https://github.com/zoogie/Frogtool/releases/latest">Frogtool</a></li>
+  <li>La dernière version de <a href="https://github.com/zoogie/b9sTool/releases/latest">b9sTool</a></li>
 </ul>
 
 <h4 id="section-i---vérification-de-la-présence-dun-cfw">Section I - Vérification de la présence d’un CFW</h4>
@@ -490,54 +546,55 @@ If you are unable to install one, follow <a href="bannerbomb3">Bannerbomb3</a> i
 <p>Comme mesure de sécurité supplémentaire, nous effectuerons une vérification supplémentaire de la présence d’un custom firmware. Ceci est dû au fait que l’utilisation de cette méthode lorsqu’un custom firmware est déjà installé à un risque de bricker la console (ce qui la rendrait inutilisable sans méthodes de récupération comme <a href="ntrboot">ntrboot</a>).</p>
 
 <ol>
-  <li>Éteignez votre 3DS</li>
+  <li>Éteignez votre console</li>
   <li>Maintenez le bouton (Select) enfoncé</li>
-  <li>Allumez votre console tout en maintenant le bouton (Select) enfoncé</li>
+  <li>Power on your console while still holding the (Select) button</li>
   <li>Si la vérification a réussi, vous démarrerez sur le menu HOME et vous pourrez continuer avec ce guide</li>
-  <li>Éteignez votre 3DS</li>
+  <li>Éteignez votre console</li>
 </ol>
 
-<p class="notice--danger">Si vous voyez un menu de configuration ou si la console s’éteint immédiatement, vous avez déjà CFW, et continuer avec ces instructions peut BRICKER votre console ! Suivez <a href="checking-for-cfw">Vérification de la présence d’un CFW</a> pour mettre à jour votre CFW existant.</p>
+<p class="notice--danger">If you see a configuration menu or the console immediately powers off, you already have CFW, and continuing with these instructions may BRICK your console! Suivez <a href="checking-for-cfw">Vérification de la présence d’un CFW</a> pour mettre à jour votre CFW existant.</p>
 
 <h4 id="section-ii---préparatifs">Section II - Préparatifs</h4>
 
 <ol>
-  <li>Éteignez votre 3DS</li>
+  <li>Éteignez votre console</li>
   <li>Insérez votre carte SD dans votre ordinateur</li>
   <li>Copiez <code class="language-plaintext highlighter-rouge">boot.firm</code> et <code class="language-plaintext highlighter-rouge">boot.3dsx</code> depuis Luma3DS <code class="language-plaintext highlighter-rouge">.zip</code>vers la racine de votre carte SD</li>
-  <li>Copy <code class="language-plaintext highlighter-rouge">boot.nds</code> (b9sTool) from the b9sTool release <code class="language-plaintext highlighter-rouge">.zip</code> to the root of your SD card</li>
-  <li>Copy <code class="language-plaintext highlighter-rouge">Frogtool.3dsx</code> to the <code class="language-plaintext highlighter-rouge">/3ds/</code> folder on your SD card</li>
-  <li>Copy <code class="language-plaintext highlighter-rouge">frogcert.bin</code> to the root of your SD card</li>
-  <li>Retirez la carte SD de votre ordinateur et réinsérez-là dans votre 3DS</li>
-  <li>Allumez votre console</li>
+  <li>Copiez <code class="language-plaintext highlighter-rouge">boot.nds</code> (b9sTool) depuis le fichier <code class="language-plaintext highlighter-rouge">.zip</code> de b9sTool vers la racine de votre carte SD</li>
+  <li>Copiez <code class="language-plaintext highlighter-rouge">Frogtool.3dsx</code> dans le dossier <code class="language-plaintext highlighter-rouge">/3ds/</code> de votre carte SD</li>
+  <li>Copiez <code class="language-plaintext highlighter-rouge">frogcert.bin</code> à la racine de votre carte SD</li>
+  <li>Réinsérez votre carte SD dans votre console</li>
+  <li>Power on your console</li>
 </ol>
 
-<h4 id="section-iii---patching-ds-download-play">Section III - Patching DS Download Play</h4>
+<h4 id="section-iii---patchage-de-mode-téléchargement">Section III - Patchage de Mode téléchargement</h4>
 
 <ol>
-  <li>Open the Homebrew Launcher through your method of choice (likely the Internet Browser)</li>
-  <li>Launch Frogtool from the list of homebrew</li>
-  <li>Select the “INJECT patched DS Download Play” option</li>
-  <li>Frogtool will automatically run and inject the JPN version of Flipnote Studio into your DS Download Play</li>
-  <li>Once this operation has finished, read the screens and check if the process was successful</li>
-  <li>Tap the touch screen, then select “BOOT patched DS Download Play”</li>
-  <li>Si l’exploit a réussi, votre console devrait avoir démarré la version japonaise de Flipnote Studio
+  <li>Ouvrez l’Homebrew Launcher par la méthode de votre choix (probablement le Navigateur Internet)</li>
+  <li>Lancez Frogtool depuis la liste des homebrews</li>
+  <li>Sélectionnez l’option “INJECT patched DS Download Play”</li>
+  <li>Frogtool va se lancer automatiquement et injecter la version JPN de Flipnote Studio dans l’application Mode téléchargement</li>
+  <li>Une fois cette opération terminée, lisez les écrans et vérifiez si le processus a réussi</li>
+  <li>Appuyez sur l’écran tactile, puis sélectionnez “BOOT patched DS Download Play”</li>
+  <li>If the exploit was successful, your console will have loaded the JPN version of Flipnote Studio
     <ul>
-      <li>If you get stuck on a black screen, follow <a href="https://wiki.hacks.guide/wiki/3DS:TWLFix#Homebrew_Launcher-0">this</a> page, then try again</li>
+      <li>Si vous êtes coincé sur un écran noir, suivez <a href="https://wiki.hacks.guide/wiki/3DS:TWLFix#Homebrew_Launcher-0">ceci</a> page, puis réessayez</li>
     </ul>
   </li>
 </ol>
 
-<h4 id="section-iv---flipnote-exploit">Section IV - Flipnote Exploit</h4>
+<h4 id="section-iv---exploit-flipnote">Section IV - Exploit Flipnote</h4>
 
 <p class="notice--info">Si vous préférez un guide visuel pour cette section, un tel guide est disponible <a href="https://zoogie.github.io/web/flipnote_directions/">ici</a>.</p>
 
-<p>Dans cette section, vous allez effectuer une série d’étapes très spécifiques dans Flipnote Studio qui, une fois effectuées correctement, déclencheront le lancement l’installateur de boot9strap (custom firmware).</p>
+<p>Dans cette section, vous allez effectuer une série d’étapes très spécifiques dans Flipnote Studio qui, une fois effectuées correctement, déclencheront le lancement de b9sTool, l’installateur de boot9strap (custom firmware).</p>
 
 <ol>
   <li>Terminez le processus de configuration initial de Flipnote Studio jusqu’à ce que vous atteigniez le menu principal
     <ul>
       <li>Sélectionnez l’option de gauche chaque fois que vous y êtes invité durant le processus de configuration</li>
+      <li>Si vous rencontrez un problème pendant que vous faites cette section, <a href="troubleshooting#installing-boot9strap-fredtool">consultez ce guide de dépannage</a></li>
     </ul>
   </li>
   <li>En utilisant l’écran tactile, sélectionnez la grande case à gauche, puis sélectionnez la boîte avec une icône de carte SD</li>
@@ -548,30 +605,31 @@ If you are unable to install one, follow <a href="bannerbomb3">Bannerbomb3</a> i
   <li>Touchez la troisième case contenant la lettre “A”</li>
   <li>Défilez vers la gauche jusqu’à ce que la bobine “1/3” soit sélectionnée</li>
   <li>Touchez la quatrième case contenant la lettre “A”</li>
-  <li>Si l’exploit a réussi, votre console devrait avoir démarré b9sTool</li>
+  <li>If the exploit was successful, your console will have loaded b9sTool</li>
   <li>Séléctionnez “Install boot9strap” en utilisant la croix directionnelle
     <ul>
-      <li>Si vous manquez cette étape, la console retournera au menu HOME au lieu d’installer boot9strap et vous devrez ouvrir Connexions Nintendo DS et recommencer à partir du début de cette section</li>
+      <li>Si vous manquez cette étape, la console retournera au menu HOME au lieu d’installer boot9strap et vous devrez ouvrir Mode téléchargement et recommencer depuis le début de cette section</li>
     </ul>
   </li>
   <li>Appuyez sur (A), puis appuyez sur START et SELECT en même temps pour démarrer l’installation</li>
-  <li>Une fois que l’installation est terminée et que vous voyez le message “done.” s’afficher sur l’écran du bas, quittez b9sTool, puis éteignez votre console
+  <li>Once completed and the bottom screen says “done.”, exit b9sTool, then power off your console
     <ul>
       <li>Vous devrez peut-être forcer l’arrêt de la console en maintenant le bouton Power enfoncé</li>
-      <li>Si votre console s’éteint lorsque vous essayez de l’allumer, assurez-vous d’avoir copié le fichier <code class="language-plaintext highlighter-rouge">boot.firm</code> depuis l’archive <code class="language-plaintext highlighter-rouge">.zip</code> de Luma3DS à la racine de votre carte SD</li>
-      <li>Si vous voyez l’écran de configuration de Luma, éteignez votre console et passez à la section suivante</li>
+      <li>If your console shuts down when you try to power it on, ensure that you have copied <code class="language-plaintext highlighter-rouge">boot.firm</code> from the Luma3DS <code class="language-plaintext highlighter-rouge">.zip</code> to the root of your SD card</li>
+      <li>If you see the Luma Configuration screen, power off your console and continue to the next section</li>
     </ul>
   </li>
 </ol>
 
-<h4 id="section-vi---luma3ds-configuration">Section VI - Luma3DS Configuration</h4>
+<h4 id="section-vi---configuration-de-luma3ds">Section VI - Configuration de Luma3DS</h4>
 
 <ol>
-  <li>Your device should have booted into the Luma3DS configuration menu
+  <li>Press and hold (Select), and while holding (Select), power on your console</li>
+  <li>Your console should have booted into the Luma3DS configuration menu
     <ul>
       <li>Le menu de configuration de Luma3DS sert à régler les paramètres du custom firmware Luma3DS. Beaucoup de ces paramètres peuvent être utiles pour la personnalisation ou le débogage</li>
-      <li>For the purpose of this guide, <strong>leave these options on the default settings</strong> (do not check or uncheck anything)</li>
-      <li>Si votre console s’éteint lorsque vous essayez de l’allumer, assurez-vous d’avoir copié le fichier <code class="language-plaintext highlighter-rouge">boot.firm</code> depuis l’archive <code class="language-plaintext highlighter-rouge">.zip</code> de Luma3DS à la racine de votre carte SD</li>
+      <li>Pour les besoins de ce guide, <strong>laissez ces options sur les paramètres par défaut</strong> (ne cochez ni ne décochez rien)</li>
+      <li>If your console shuts down when you try to power it on, ensure that you have copied <code class="language-plaintext highlighter-rouge">boot.firm</code> from the Luma3DS <code class="language-plaintext highlighter-rouge">.zip</code> to the root of your SD card</li>
     </ul>
   </li>
   <li>Appuyez sur (Start) pour enregistrer les modifications et redémarrer</li>
@@ -583,7 +641,7 @@ If you are unable to install one, follow <a href="bannerbomb3">Bannerbomb3</a> i
   <li>Sur la page suivante, vous installerez des applications homebrew utiles pour compléter votre configuration.</li>
 </ul>
 
-<h4 id="section-vii---restoring-ds-connection-settings">Section VII - Restoring DS Connection Settings</h4>
+<h4 id="section-vii---restauration-des-paramètres-de-connexions-nintendo-ds">Section VII - Restauration des paramètres de Connexions Nintendo DS</h4>
 
 <ol>
   <li>Lancez l’application Mode téléchargement</li>
@@ -600,16 +658,16 @@ If you are unable to install one, follow <a href="bannerbomb3">Bannerbomb3</a> i
   <li>Appuyez sur (B) pour quitter le menu Rosalina</li>
   <li>Appuyez sur (Home), puis fermez Mode téléchargement</li>
   <li>Relancez l’application Mode téléchargement</li>
-  <li>Votre console devrait maintenant charger le Homebrew Launcher</li>
-  <li>Launch Frogtool from the list of homebrew</li>
-  <li>Select the “RESTORE patched DS Download Play” option</li>
-  <li>Once this operation has finished, read the screens and check if the process was successful
+  <li>Your console should load the Homebrew Launcher</li>
+  <li>Lancez Frogtool depuis la liste des homebrews</li>
+  <li>Sélectionnez l’option “RESTORE patched DS Download Play”</li>
+  <li>Une fois cette opération terminée, lisez les écrans et vérifiez si le processus a réussi
     <ul>
-      <li>If there are any errors or missing files, correct the problem and try again</li>
+      <li>S’il y a des erreurs ou des fichiers manquants, corrigez le problème et réessayez</li>
     </ul>
   </li>
-  <li>If the process was successful, tap the touch screen, then press START to exit</li>
-  <li>Éteignez votre 3DS</li>
+  <li>Si le processus a réussi, appuyez sur l’écran tactile, puis appuyez sur START pour quitter</li>
+  <li>Éteignez votre console</li>
 </ol>
 
 <hr />

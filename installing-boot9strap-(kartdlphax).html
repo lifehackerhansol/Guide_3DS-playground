@@ -314,11 +314,35 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="updating-firmware-(new-3ds)"><a href='/updating-firmware-(new-3ds)'>Updating Firmware (New 3DS)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="updating-firmware-(kor)"><a href='/updating-firmware-(kor)'>Updating Firmware (KOR)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="updating-firmware-(twn)"><a href='/updating-firmware-(twn)'>Updating Firmware (TWN)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="ntrboot"><a href='/ntrboot'>ntrboot</a></li>
           
         
           
+            <li style="display: none;" data-name="alternate-exploits"><a href='/alternate-exploits'>Alternate Exploits</a></li>
+          
+        
+          
             <li style="display: none;" data-name="seedminer"><a href='/seedminer'>Seedminer</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(alternate)"><a href='/seedminer-(alternate)'>Seedminer (Alternate)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(mii)"><a href='/seedminer-(mii)'>Seedminer (Mii)</a></li>
           
         
           
@@ -330,7 +354,31 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="bannerbomb3-(legacy)"><a href='/bannerbomb3-(legacy)'>BannerBomb3 (Legacy)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(ninjhax2-dx)"><a href='/homebrew-launcher-(ninjhax2-dx)'>Homebrew Launcher (ninjhax2-dx)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(pichaxx)"><a href='/homebrew-launcher-(pichaxx)'>Homebrew Launcher (PicHaxx)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(smilehax-iie)"><a href='/homebrew-launcher-(smilehax-iie)'>Homebrew Launcher (smilehax-IIe)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(steelhax)"><a href='/homebrew-launcher-(steelhax)'>Homebrew Launcher (Steelhax)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="homebrew-launcher-(super-skaterhax)"><a href='/homebrew-launcher-(super-skaterhax)'>Homebrew Launcher (super-skaterhax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="dumping-eshop-dsiware"><a href='/dumping-eshop-dsiware'>Dumping eShop DSiWare</a></li>
           
         
           
@@ -387,6 +435,14 @@ window.cookieconsent.initialise({
         
           
             <li style="display: none;" data-name="installing-boot9strap-(fredtool)"><a href='/installing-boot9strap-(fredtool)'>Installing boot9strap (Fredtool)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(fredtool-inject)"><a href='/installing-boot9strap-(fredtool-inject)'>Installing boot9strap (Fredtool-Inject)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(fredtool-legacy)"><a href='/installing-boot9strap-(fredtool-legacy)'>Installing boot9strap (Fredtool, Legacy)</a></li>
           
         
           
@@ -495,7 +551,7 @@ window.cookieconsent.initialise({
     </ul>
   </li>
   <li>A physical or digital copy of Mario Kart 7 that is the same region as both consoles</li>
-  <li>An SD card for both devices</li>
+  <li>An SD card for both consoles</li>
 </ul>
 
 <h3 id="what-you-need">What You Need</h3>
@@ -518,21 +574,19 @@ window.cookieconsent.initialise({
 
 <h4 id="section-i---hardware-button-check-target-3ds">Section I - Hardware Button Check (target 3DS)</h4>
 
+<p>In this section, you will see whether your shoulder buttons are working on your console. This will determine which method you will follow on the next page.</p>
+
 <ol>
-  <li>With your device still powered off, hold the following buttons: (Left Shoulder) + (Right Shoulder) + (D-Pad Up) + (A), and while holding these buttons together, power on your device
+  <li>Power on your console</li>
+  <li>Once you see the HOME Menu, press the (Left Shoulder) and (Right Shoulder) buttons at the same time
     <ul>
-      <li>Keep holding the buttons until the device boots to a system update screen (this is Safe Mode)</li>
+      <li>The camera applet should appear</li>
     </ul>
   </li>
-  <li>If you see the system update screen, press Cancel
-    <ul>
-      <li>Your device will power off</li>
-      <li>If the device boots to the HOME Menu, just power off your device</li>
-    </ul>
-  </li>
+  <li>Power off your console</li>
 </ol>
 
-<p class="notice--warning">If you do not boot into Safe Mode, the system update menu after multiple attempts, you cannot follow this method. If this is the case, join <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew on Discord</a> and ask, in English, for help.</p>
+<p class="notice--warning">If the camera does not open, you cannot follow this method. If this is the case, join <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew on Discord</a> and ask, in English, for help.</p>
 
 <h4 id="section-ii---prep-work-source-3ds">Section II - Prep Work (source 3DS)</h4>
 
@@ -592,12 +646,17 @@ window.cookieconsent.initialise({
   </li>
   <li>Navigate to <code class="language-plaintext highlighter-rouge">Local Multiplayer</code>. A menu should pop up
     <ul>
-      <li>If the screen freezes, hold the power button for fifteen seconds to force power off your device, then try again</li>
+      <li>If the screen freezes, hold the power button for fifteen seconds to force power off your console, then try again</li>
       <li>If you have launched kartdlphax previously, the last selected settings will be loaded. If they are correct, select <code class="language-plaintext highlighter-rouge">Use settings</code> and skip the next 3 steps. If they are incorrect, select <code class="language-plaintext highlighter-rouge">Change settings</code> and proceed.</li>
     </ul>
   </li>
-  <li>Select your <strong>target 3DS</strong> device type (Old 3DS family or New 3DS family)</li>
-  <li>Select the exploit type <code class="language-plaintext highlighter-rouge">3DS ROP xPloit Injector</code></li>
+  <li>Select your <strong>target 3DS</strong> console type (Old 3DS family or New 3DS family)</li>
+  <li>Select the following exploit type depending on your system version:
+    <ul>
+      <li>11.16.0: select <code class="language-plaintext highlighter-rouge">xPloitInjector (11.16)</code></li>
+      <li>11.17.0: select <code class="language-plaintext highlighter-rouge">xPloitInjector (11.17)</code></li>
+    </ul>
+  </li>
   <li>A confirmation menu will show up. If the settings shown on the top screen are correct, select <code class="language-plaintext highlighter-rouge">Use settings</code>
     <ul>
       <li>If the settings are not correct, press <code class="language-plaintext highlighter-rouge">Change settings</code> and modify them accordingly</li>
@@ -635,12 +694,12 @@ window.cookieconsent.initialise({
 
 <h4 id="section-v---unsafe_mode">Section V - unSAFE_MODE</h4>
 
-<p>In this section, you will enter Safe Mode (a feature available on all 3DS family devices) and navigate to a menu where unSAFE_MODE will be triggered, which will launch you into the boot9strap (custom firmware) installer.</p>
+<p>In this section, you will enter Safe Mode (a feature available on all 3DS family consoles) and navigate to a menu where unSAFE_MODE will be triggered, which will launch you into the boot9strap (custom firmware) installer.</p>
 
 <ol>
-  <li>With your device still powered off, hold the following buttons: (Left Shoulder) + (Right Shoulder) + (D-Pad Up) + (A), and while holding these buttons together, power on your device
+  <li>With your console still powered off, hold the following buttons: (Left Shoulder) + (Right Shoulder) + (D-Pad Up) + (A), and while holding these buttons together, power on your console
     <ul>
-      <li>Keep holding the buttons until the device boots into Safe Mode (a “system update” menu)</li>
+      <li>Keep holding the buttons until the console boots into Safe Mode (a “system update” menu)</li>
     </ul>
   </li>
   <li>Press “OK” to accept the update
@@ -652,26 +711,31 @@ window.cookieconsent.initialise({
   <li>The update will eventually fail, with the error code <code class="language-plaintext highlighter-rouge">003-1099</code>. This is intended behaviour</li>
   <li>When asked “Would you like to configure Internet settings?”, select “Yes”</li>
   <li>On the following menu, navigate to <code class="language-plaintext highlighter-rouge">Connection 1</code> -&gt; <code class="language-plaintext highlighter-rouge">Change Settings</code> -&gt; <code class="language-plaintext highlighter-rouge">Next Page (right arrow)</code> -&gt; <code class="language-plaintext highlighter-rouge">Proxy Settings</code> -&gt; <code class="language-plaintext highlighter-rouge">Detailed Setup</code> (<a href="/images/screenshots/usm/safemode_highlighted.png">image</a>)</li>
-  <li>If the exploit was successful, your device will have booted into SafeB9SInstaller
+  <li>If the exploit was successful, your console will have booted into SafeB9SInstaller
     <ul>
-      <li>If your device instead freezes on a white screen, hold the POWER button until it turns off, then retry this section</li>
-      <li>If your device instead freezes on a red screen, you are missing <code class="language-plaintext highlighter-rouge">usm.bin</code> from the root of your SD card</li>
+      <li>If your console instead freezes on a white screen, hold the POWER button until it turns off, then retry this section</li>
+      <li>If your console instead freezes on a red screen, you are missing <code class="language-plaintext highlighter-rouge">usm.bin</code> from the root of your SD card</li>
+      <li>If you get a different error, <a href="troubleshooting#installing-boot9strap-usm">follow this troubleshooting guide</a></li>
     </ul>
   </li>
 </ol>
 
 <h4 id="section-vi---installing-boot9strap">Section VI - Installing boot9strap</h4>
 
-<p>In this section, you will install custom firmware onto your device.</p>
+<p>In this section, you will install custom firmware onto your console.</p>
 
 <ol>
-  <li>When prompted, input the key combo given on the top screen to install boot9strap</li>
-  <li>Once it is complete, press (A) to reboot your device</li>
-  <li>Your device should have booted into the Luma3DS configuration menu
+  <li>When prompted, input the key combo given on the top screen to install boot9strap
+    <ul>
+      <li>If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, <a href="troubleshooting#issues-with-safeb9sinstaller">follow this troubleshooting guide</a></li>
+    </ul>
+  </li>
+  <li>Once it is complete, press (A) to reboot your console</li>
+  <li>Your console should have booted into the Luma3DS configuration menu
     <ul>
       <li>Luma3DS configuration menu are settings for the Luma3DS custom firmware. Many of these settings may be useful for customization or debugging</li>
       <li>For the purpose of this guide, <strong>leave these options on the default settings</strong> (do not check or uncheck anything)</li>
-      <li>If your device shuts down when you try to power it on, ensure that you have copied <code class="language-plaintext highlighter-rouge">boot.firm</code> from the Luma3DS <code class="language-plaintext highlighter-rouge">.zip</code> to the root of your SD card</li>
+      <li>If your console shuts down when you try to power it on, ensure that you have copied <code class="language-plaintext highlighter-rouge">boot.firm</code> from the Luma3DS <code class="language-plaintext highlighter-rouge">.zip</code> to the root of your SD card</li>
     </ul>
   </li>
   <li>Press (Start) to save and reboot</li>
@@ -702,10 +766,10 @@ window.cookieconsent.initialise({
   <li>Press (B) to exit the Rosalina menu</li>
   <li>Press (Home), then close Download Play</li>
   <li>Relaunch the Download Play application</li>
-  <li>Your device should load the Homebrew Launcher</li>
+  <li>Your console should load the Homebrew Launcher</li>
   <li>Launch slotTool from the list of homebrew</li>
   <li>Select “RESTORE original wifi slots 1,2,3”</li>
-  <li>Your device will then reboot</li>
+  <li>Your console will then reboot</li>
 </ol>
 
 <hr />

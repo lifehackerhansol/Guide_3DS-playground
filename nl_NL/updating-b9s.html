@@ -314,11 +314,35 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="updating-firmware-(new-3ds)"><a href='/nl_NL/updating-firmware-(new-3ds)'>Updating Firmware (New 3DS)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="updating-firmware-(kor)"><a href='/nl_NL/updating-firmware-(kor)'>Updating Firmware (KOR)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="updating-firmware-(twn)"><a href='/nl_NL/updating-firmware-(twn)'>Updating Firmware (TWN)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="ntrboot"><a href='/nl_NL/ntrboot'>ntrboot</a></li>
           
         
           
+            <li style="display: none;" data-name="alternate-exploits"><a href='/nl_NL/alternate-exploits'>Alternate Exploits</a></li>
+          
+        
+          
             <li style="display: none;" data-name="seedminer"><a href='/nl_NL/seedminer'>Seedminer</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(alternate)"><a href='/nl_NL/seedminer-(alternate)'>Seedminer (Alternate)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(mii)"><a href='/nl_NL/seedminer-(mii)'>Seedminer (Mii)</a></li>
           
         
           
@@ -330,7 +354,31 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="bannerbomb3-(legacy)"><a href='/nl_NL/bannerbomb3-(legacy)'>BannerBomb3 (Legacy)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(ninjhax2-dx)"><a href='/nl_NL/homebrew-launcher-(ninjhax2-dx)'>Homebrew Launcher (ninjhax2-dx)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(pichaxx)"><a href='/nl_NL/homebrew-launcher-(pichaxx)'>Homebrew Launcher (PicHaxx)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(smilehax-iie)"><a href='/nl_NL/homebrew-launcher-(smilehax-iie)'>Homebrew Launcher (smilehax-IIe)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(steelhax)"><a href='/nl_NL/homebrew-launcher-(steelhax)'>Homebrew Launcher (Steelhax)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="homebrew-launcher-(super-skaterhax)"><a href='/nl_NL/homebrew-launcher-(super-skaterhax)'>Homebrew Launcher (super-skaterhax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="dumping-eshop-dsiware"><a href='/nl_NL/dumping-eshop-dsiware'>Dumping eShop DSiWare</a></li>
           
         
           
@@ -387,6 +435,14 @@ window.cookieconsent.initialise({
         
           
             <li style="display: none;" data-name="installing-boot9strap-(fredtool)"><a href='/nl_NL/installing-boot9strap-(fredtool)'>Installing boot9strap (Fredtool)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(fredtool-inject)"><a href='/nl_NL/installing-boot9strap-(fredtool-inject)'>Installing boot9strap (Fredtool-Inject)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(fredtool-legacy)"><a href='/nl_NL/installing-boot9strap-(fredtool-legacy)'>Installing boot9strap (Fredtool, Legacy)</a></li>
           
         
           
@@ -496,7 +552,7 @@ window.cookieconsent.initialise({
     </ul>
   </li>
   <li>
-    <p>Stop je SD-kaart terug in je 3DS</p>
+    <p>Reinsert your SD card into your console</p>
 
     <p class="notice--info"><img src="https://3ds.hacks.guide/images/screenshots/updateb9s-root-layout.png" alt="" /></p>
   </li>
@@ -505,15 +561,19 @@ window.cookieconsent.initialise({
 <h4 id="deel-ii---boot9strap-installeren">Deel II - Boot9strap installeren</h4>
 
 <ol>
-  <li>Zet je 3DS aan
+  <li>Power on your console
     <ul>
       <li>Dit zou SafeB9SInstaller automatisch moeten starten</li>
     </ul>
   </li>
-  <li>When prompted, input the key combo given on the top screen to install boot9strap</li>
-  <li>Once it is completed, force your device to power off by holding down the power button
+  <li>When prompted, input the key combo given on the top screen to install boot9strap
     <ul>
-      <li>Your device will only boot to the SafeB9SInstaller screen until the next section is completed</li>
+      <li>If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, <a href="troubleshooting#issues-with-safeb9sinstaller">follow this troubleshooting guide</a></li>
+    </ul>
+  </li>
+  <li>Once it is completed, force your console to power off by holding down the power button
+    <ul>
+      <li>Your console will only boot to the SafeB9SInstaller screen until the next section is completed</li>
     </ul>
   </li>
 </ol>
@@ -523,9 +583,9 @@ window.cookieconsent.initialise({
 <ol>
   <li>Plaats je SD kaart in je computer</li>
   <li>Kopieer <code class="language-plaintext highlighter-rouge">boot.firm</code> en <code class="language-plaintext highlighter-rouge">boot.3dsx</code> van de Luma3DS <code class="language-plaintext highlighter-rouge">.zip</code> naar de hoofdmap van je SD-kaart en vervang het bestaande bestand</li>
-  <li>Stop je SD kaart terug in je 3DS</li>
-  <li>Zet je 3DS aan</li>
-  <li>Als je apparaat het Luma3DS configuratiemenu heeft opgestart, druk op (Start) om op te slaan en te herstarten
+  <li>Reinsert your SD card into your console</li>
+  <li>Power on your console</li>
+  <li>If your console has booted into the Luma3DS configuration menu, press (Start) to save and reboot
     <ul>
       <li>Luma3DS configuration menu are settings for the Luma3DS custom firmware. Many of these settings may be useful for customization or debugging</li>
       <li>For the purpose of this guide, these settings will be left on default settings</li>

@@ -314,11 +314,35 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="updating-firmware-(new-3ds)"><a href='/zh_TW/updating-firmware-(new-3ds)'>Updating Firmware (New 3DS)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="updating-firmware-(kor)"><a href='/zh_TW/updating-firmware-(kor)'>Updating Firmware (KOR)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="updating-firmware-(twn)"><a href='/zh_TW/updating-firmware-(twn)'>Updating Firmware (TWN)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="ntrboot"><a href='/zh_TW/ntrboot'>ntrboot</a></li>
           
         
           
+            <li style="display: none;" data-name="alternate-exploits"><a href='/zh_TW/alternate-exploits'>Alternate Exploits</a></li>
+          
+        
+          
             <li style="display: none;" data-name="seedminer"><a href='/zh_TW/seedminer'>Seedminer</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(alternate)"><a href='/zh_TW/seedminer-(alternate)'>Seedminer (Alternate)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(mii)"><a href='/zh_TW/seedminer-(mii)'>Seedminer (Mii)</a></li>
           
         
           
@@ -330,7 +354,31 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="bannerbomb3-(legacy)"><a href='/zh_TW/bannerbomb3-(legacy)'>BannerBomb3 (Legacy)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(ninjhax2-dx)"><a href='/zh_TW/homebrew-launcher-(ninjhax2-dx)'>Homebrew Launcher (ninjhax2-dx)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(pichaxx)"><a href='/zh_TW/homebrew-launcher-(pichaxx)'>Homebrew Launcher (PicHaxx)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(smilehax-iie)"><a href='/zh_TW/homebrew-launcher-(smilehax-iie)'>Homebrew Launcher (smilehax-IIe)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(steelhax)"><a href='/zh_TW/homebrew-launcher-(steelhax)'>Homebrew Launcher (Steelhax)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="homebrew-launcher-(super-skaterhax)"><a href='/zh_TW/homebrew-launcher-(super-skaterhax)'>Homebrew Launcher (super-skaterhax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="dumping-eshop-dsiware"><a href='/zh_TW/dumping-eshop-dsiware'>Dumping eShop DSiWare</a></li>
           
         
           
@@ -387,6 +435,14 @@ window.cookieconsent.initialise({
         
           
             <li style="display: none;" data-name="installing-boot9strap-(fredtool)"><a href='/zh_TW/installing-boot9strap-(fredtool)'>Installing boot9strap (Fredtool)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(fredtool-inject)"><a href='/zh_TW/installing-boot9strap-(fredtool-inject)'>Installing boot9strap (Fredtool-Inject)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(fredtool-legacy)"><a href='/zh_TW/installing-boot9strap-(fredtool-legacy)'>Installing boot9strap (Fredtool, Legacy)</a></li>
           
         
           
@@ -460,35 +516,39 @@ window.cookieconsent.initialise({
   </nav>
 </aside>
 
-<p class="notice--info"><strong>Yes</strong>, you can still install custom firmware on your 3DS, even after the closure of eShop.</p>
-
-<div class="notice--info">
-<p>**最新版的 3DS 韌體為 11.16.0 **。 以下是你該知道的：</p>
+<div class="notice--danger">
+<p><strong>3DS firmware 11.17.0 was recently released</strong>. 以下是你該知道的：</p>
 
 <ul>
-  <li>If your device is running <em>Luma 11.0</em> or newer, it is <em>100% safe</em> to update. 您可以在啟動主機時按住「Select」鍵來檢查您的 Luma 版本。</li>
-  <li>如果你的主機運行的 Luma 低於此版本，則你應該在更新系統到 11.16.0 前先<a href="checking-for-cfw">更新 Luma</a>。</li>
+  <li>If your console is running <em>Luma 10.2.1 or higher</em>, it is <em>100% safe</em> to update. You can check your Luma version by holding (Select) while booting your console.</li>
+  <li>If your console is on an older Luma version, you should <a href="checking-for-cfw">update Luma</a> before you update your console to 11.17.0.</li>
+  <li>If your console does not yet have custom firmware, <strong>do NOT update to the latest version</strong>, as installation methods may be more difficult.</li>
+  <li>If your unmodified console is ALREADY on 11.17.0, this guide has been updated accordingly. Specifically, New3DS-family consoles have a <a href="homebrew-launcher-(super-skaterhax)">free software method</a>, while Old3DS-family consoles will need to use <a href="alternate-exploits">alternate exploits</a> that rely on external hardware or software.</li>
 </ul>
+
 </div>
+
+<p class="notice--info"><strong>Yes</strong>, you can still install custom firmware on your 3DS, even after the closure of eShop.</p>
 
 <h2 id="安裝前的常見問題">安裝前的常見問題</h2>
 
 <details>
-<summary><u>我目前裝的系統為最新版本。 是否可以在不使用任何外部設備的情況下進行破解？</u></summary>
+<summary><u>我目前裝的系統為最新版本。 Is my console hackable without any external hardware/prerequisites?</u></summary>
 
-<p>可以的! 最新的系統韌體(11.16.0) 有 <a href="seedminer">Seedminer</a> 方法可以用來破解。</p>
+<p>It depends on your console model. At the moment, New 3DS / New 3DS XL / New 2DS XL is able to be modded on 11.17.0 without any prerequisites (e.g. eShop titles, physical items), while 3DS / 3DS XL / 2DS is not.</p>
+
 </details>
 
 <details>
-<summary><u>本手冊與哪些主機相容？</u></summary>
+<summary><u>What consoles is this guide compatible with?</u></summary>
 
-<p>目前所有已零售的 3DS、3DS XL/LL、2DS、New 3DS、New 3DS XL/LL 和 New 2DS XL/LL 皆可正常破解。 如果你主機的系統版本顯示為「0.0.0-0」，您的主機可能是開發專用主機，不適用本手冊。</p>
+<p>The instructions are the same for all retail 3DS, 3DS XL, 2DS, New 3DS, New 3DS XL, and New 2DS XL consoles. 如果你主機的系統版本顯示為「0.0.0-0」，您的主機可能是開發專用主機，不適用本手冊。</p>
 </details>
 
 <details>
 <summary><u>破解我主機的風險有多大？</u></summary>
 
-<p>除非你故意想弄壞你的主機，不然變磚的可能性是幾乎為零的。</p>
+<p>Bricks are now effectively impossible unless you are purposely trying to brick your console.</p>
 </details>
 
 <details>
@@ -500,19 +560,19 @@ window.cookieconsent.initialise({
 <details>
 <summary><u>我能玩其他區的遊戲嗎？</u></summary>
 
-<p>可以的！Luma3DS 會自動跳過遊戲卡帶及安裝後的遊戲中的區碼檢查。 但是某些遊戲可能仍然需要使用 Luma 的<a href="https://github.com/LumaTeam/Luma3DS/wiki/Optional-features">區域模擬</a>功能來使其能夠正常啟動。</p>
+<p>可以的！Luma3DS 會自動跳過遊戲卡帶及安裝後的遊戲中的區碼檢查。 Some games may need to make use of Luma’s <a href="https://github.com/LumaTeam/Luma3DS/wiki/Optional-features">locale emulation feature</a> in order to work properly on out-of-region consoles.</p>
 </details>
 
 <details>
 <summary><u>如果安裝自製韌體，我會失去任何功能嗎？</u></summary>
 
-<p>不會的。 Devices with custom firmware can still play online and run physical cartridges as any other 3DS can.</p>
+<p>不會的。 Consoles with custom firmware can still play online and run physical cartridges as any other 3DS can.</p>
 </details>
 
 <details>
 <summary><u>我可以保留我的 NNID 嗎？</u></summary>
 
-<p>您的 NNID(如果您有 NNID 帳號的話) 不會受本手冊的影響。 韓版、台版及中國版主機本身就沒有 NNID 功能，所以也不會受到影響。</p>
+<p>您的 NNID(如果您有 NNID 帳號的話) 不會受本手冊的影響。 Consoles with a region of KOR, CHN, or TWN do not have NNID functionality to begin with and are thus unaffected.</p>
 </details>
 
 <details>
@@ -553,7 +613,7 @@ window.cookieconsent.initialise({
 <details>
 <summary><u>在自製韌體環境中安裝最新的官方更新是否安全？</u></summary>
 
-<p>如果你正在使用 Luma3DS，你的自製韌體加載器（boot9strap）<strong>永遠不會</strong>因為更新系統而被移除。 過去曾有更新導致 Luma3DS 在啟動時當機，因此建議您過幾個小時後再更新，以確保不會暫時導致主機在 Luma3DS 更新之前無法使用。 System updates can be performed the same way as they are on a stock 3DS: through System Settings, Safe Mode, or the update prompt when the update is automatically downloaded.</p>
+<p>如果你正在使用 Luma3DS，你的自製韌體加載器（boot9strap）<strong>永遠不會</strong>因為更新系統而被移除。 There have been updates in the past that have resulted in Luma3DS crashing on boot, so it is a good idea to wait a couple of hours to ensure that the latest update will not temporarily render the console unusable until Luma3DS is updated. System updates can be performed the same way as they are on an unmodified 3DS: through System Settings, Safe Mode, or the update prompt when the update is automatically downloaded.</p>
 </details>
 
 <details>
@@ -565,13 +625,13 @@ window.cookieconsent.initialise({
 <details>
 <summary><u>Can I system transfer with CFW?</u></summary>
 
-<p>Yes, system transfers can be performed through the official System Transfer function to other consoles with CFW (inconsistencies may occur if the target console is stock). Tickets for illegitimate titles (homebrew) will not transfer, but the titles can be made to reappear with <a href="https://github.com/ihaveamac/faketik/releases/latest">faketik</a>. Make sure that you do not perform a wireless transfer, as this will delete illegitimate titles. CFW will remain on both consoles.</p>
+<p>Yes, system transfers can be performed through the official System Transfer function to other consoles with CFW (inconsistencies may occur if the target console is unmodified). Tickets for illegitimate titles (homebrew) will not transfer, but the titles can be made to reappear with <a href="https://github.com/ihaveamac/faketik/releases/latest">faketik</a>. Make sure that you do not perform a wireless transfer, as this will delete illegitimate titles. CFW will remain on both consoles.</p>
 </details>
 
 <details>
 <summary><u>How do I change the system language of a Japanese 3DS?</u></summary>
 
-<p>The only way to change the system language of a Japanese 3DS to a language other than Japanese is to perform a <a href="region-changing">region change</a>. 請注意，這很可能會造成您主機無法正常使用 eShop，這也代表您將無法更新您的遊戲，無論它們是在主機區域內還是在區域外。</p>
+<p>The only way to change the system language of a Japanese 3DS to a language other than Japanese is to perform a <a href="region-changing">region change</a>. Note that this is very likely to break the Nintendo eShop on your console, which means you will be unable to update your games whether they are in-region or out-of-region.</p>
 
 </details>
 
@@ -598,13 +658,13 @@ window.cookieconsent.initialise({
 <details>
 <summary><u>救命！ Something bad happened and my 3DS won't boot to HOME Menu...</u></summary>
 
-<p>Please look at the <a href="troubleshooting#boot-issues-on-devices-with-custom-firmware">troubleshooting guide</a>. <strong>Uninstalling CFW when your device is in an unbootable state is not recommended, as it is very likely to lead to a brick</strong>.</p>
+<p>Please look at the <a href="troubleshooting#boot-issues-on-consoles-with-custom-firmware">troubleshooting guide</a>. <strong>Uninstalling CFW when your console is in an unbootable state is not recommended, as it is very likely to lead to a brick</strong>.</p>
 </details>
 
 <h2 id="menuhax--a9lh--gateway-faq">menuhax / A9LH / Gateway FAQ</h2>
 
 <details>
-<summary><u>I modded my device (x) years ago, so it already has some sort of homebrew. What should I do?</u></summary>
+<summary><u>I modded my console (x) years ago, so it already has some sort of homebrew. What should I do?</u></summary>
 
 <p>It is recommended that you upgrade your setup to a modern, boot9strap-based one. Follow the <a href="checking-for-cfw">Checking for CFW</a> guide to see how to upgrade your setup.</p>
 </details>

@@ -314,11 +314,35 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="updating-firmware-(new-3ds)"><a href='/fr_FR/updating-firmware-(new-3ds)'>Mise à jour du logiciel système (New 3DS)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="updating-firmware-(kor)"><a href='/fr_FR/updating-firmware-(kor)'>Mise à jour du logiciel système (KOR)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="updating-firmware-(twn)"><a href='/fr_FR/updating-firmware-(twn)'>Mise à jour du logiciel système (TWN)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="ntrboot"><a href='/fr_FR/ntrboot'>ntrboot</a></li>
           
         
           
+            <li style="display: none;" data-name="alternate-exploits"><a href='/fr_FR/alternate-exploits'>Alternate Exploits</a></li>
+          
+        
+          
             <li style="display: none;" data-name="seedminer"><a href='/fr_FR/seedminer'>Seedminer</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(alternate)"><a href='/fr_FR/seedminer-(alternate)'>Seedminer (Alternate)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(mii)"><a href='/fr_FR/seedminer-(mii)'>Seedminer (Mii)</a></li>
           
         
           
@@ -330,7 +354,31 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="bannerbomb3-(legacy)"><a href='/fr_FR/bannerbomb3-(legacy)'>BannerBomb3 (Legacy)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(ninjhax2-dx)"><a href='/fr_FR/homebrew-launcher-(ninjhax2-dx)'>Homebrew Launcher (ninjhax2-dx)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(pichaxx)"><a href='/fr_FR/homebrew-launcher-(pichaxx)'>Homebrew Launcher (PicHaxx)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(smilehax-iie)"><a href='/fr_FR/homebrew-launcher-(smilehax-iie)'>Homebrew Launcher (smilehax-IIe)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(steelhax)"><a href='/fr_FR/homebrew-launcher-(steelhax)'>Homebrew Launcher (Steelhax)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="homebrew-launcher-(super-skaterhax)"><a href='/fr_FR/homebrew-launcher-(super-skaterhax)'>Homebrew Launcher (super-skaterhax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="dumping-eshop-dsiware"><a href='/fr_FR/dumping-eshop-dsiware'>Dumping eShop DSiWare</a></li>
           
         
           
@@ -387,6 +435,14 @@ window.cookieconsent.initialise({
         
           
             <li style="display: none;" data-name="installing-boot9strap-(fredtool)"><a href='/fr_FR/installing-boot9strap-(fredtool)'>Installing boot9strap (Fredtool)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(fredtool-inject)"><a href='/fr_FR/installing-boot9strap-(fredtool-inject)'>Installing boot9strap (Fredtool-Inject)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(fredtool-legacy)"><a href='/fr_FR/installing-boot9strap-(fredtool-legacy)'>Installing boot9strap (Fredtool, Legacy)</a></li>
           
         
           
@@ -483,12 +539,12 @@ window.cookieconsent.initialise({
 <h3 id="ce-dont-vous-avez-besoin">Ce dont vous avez besoin</h3>
 
 <ul>
-  <li>Your <code class="language-plaintext highlighter-rouge">movable.sed</code> file from completing Seedminer or nimhax</li>
+  <li>Votre fichier <code class="language-plaintext highlighter-rouge">movable.sed</code> obetnu grâce à Seedminer ou nimhax</li>
 </ul>
 
 <h4 id="section-i---préparatifs">Section I - Préparatifs</h4>
 
-<p>Dans cette section, vous allez copier les fichiers nécessaires pour déclencher l’exploit BannerBomb3 sur la carte SD de votre console.</p>
+<p>In this section, you will copy the files needed to trigger the BannerBomb3 exploit onto your console’s SD card.</p>
 
 <ol>
   <li>Éteignez votre console</li>
@@ -500,10 +556,10 @@ window.cookieconsent.initialise({
       <li>Ceci va télécharger un exploit DSiWare appelé <code class="language-plaintext highlighter-rouge">F00D43D5.bin</code> et un payload appelé <code class="language-plaintext highlighter-rouge">bb3.bin</code> à l’intérieur d’une archive zip (<code class="language-plaintext highlighter-rouge">DSIWARE_EXPLOIT.zip</code>)</li>
     </ul>
   </li>
-  <li>Copiez <code class="language-plaintext highlighter-rouge">bb3.bin</code> de <code class="language-plaintext highlighter-rouge">DSIWARE_EXPLOIT.zip</code> à la racine de votre carte SD
+  <li>Copiez <code class="language-plaintext highlighter-rouge">bb3.bin</code> depuis l’archive <code class="language-plaintext highlighter-rouge">DSIWARE_EXPLOIT.zip</code> vers la racine de votre carte SD
     <ul>
       <li>La racine de la carte SD représente le répertoire initial de la carte SD où vous pouvez voir le dossier Nintendo 3DS, mais ce n’est pas à l’intérieur de ce dernier</li>
-      <li>This file does not need to be opened or extracted
+      <li>Ce fichier n’a pas besoin d’être ouvert ou extrait
   <img src="https://3ds.hacks.guide/images/screenshots/bb3/bb3-root-layout.png" alt="" class="notice--info" /></li>
     </ul>
   </li>
@@ -511,13 +567,13 @@ window.cookieconsent.initialise({
     <ul>
       <li><code class="language-plaintext highlighter-rouge">&lt;ID0&gt;</code> est le nom du dossier à 32 lettres que vous avez copié dans <a href="seedminer">Seedminer</a></li>
       <li><code class="language-plaintext highlighter-rouge">&lt;ID1&gt;</code> est un dossier de 32 caractères à l’intérieur de <code class="language-plaintext highlighter-rouge">&lt;ID0&gt;</code></li>
-      <li>If you have multiple <code class="language-plaintext highlighter-rouge">&lt;ID1&gt;</code> folders, follow the instructions <a href="troubleshooting#bannerbomb3">here</a>
+      <li>Si vous avez plusieurs dossiers <code class="language-plaintext highlighter-rouge">&lt;ID1&gt;</code>, suivez les instructions <a href="troubleshooting#bannerbomb3">ici</a>
   <img src="https://3ds.hacks.guide/images/screenshots/bb3/dsiware-location-1.png" alt="" class="notice--info" /></li>
     </ul>
   </li>
   <li>Créez un dossier nommé <code class="language-plaintext highlighter-rouge">Nintendo DSiWare</code> à l’intérieur de <code class="language-plaintext highlighter-rouge">&lt;ID1&gt;</code>
     <ul>
-      <li>Si vous aviez déjà le dossier <em>et</em> qu’il y a des fichiers de sauvegarde DSiWare existants (<code class="language-plaintext highlighter-rouge">&lt;8-character-id&gt;.bin</code>) à l’intérieur, copiez-les sur votre PC et retirez-les de votre carte SD</li>
+      <li>Si vous aviez déjà le dossier <em>et</em> qu’il y a des fichiers de sauvegarde DSiWare existants (<code class="language-plaintext highlighter-rouge">&lt;8-character-id&gt;. in</code>) à l’intérieur, copiez-les sur votre PC et retirez-les de votre carte SD</li>
     </ul>
   </li>
   <li>Copiez le fichier <code class="language-plaintext highlighter-rouge">F00D43D5.bin</code> depuis <code class="language-plaintext highlighter-rouge">DSIWARE_EXPLOIT.zip</code> vers le dossier <code class="language-plaintext highlighter-rouge">Nintendo DSiWare</code></li>
@@ -527,31 +583,31 @@ window.cookieconsent.initialise({
 
 <h4 id="section-ii---contrôle-du-bon-fonctionnement-des-boutons">Section II - Contrôle du bon fonctionnement des boutons</h4>
 
-<p>In this section, you will see whether you can access Safe Mode on your device. This will determine which method you will follow on the next page.</p>
+<p>In this section, you will see whether you can access Safe Mode on your console. Cela déterminera la méthode que vous allez suivre sur la page suivante.</p>
+
+<p>Votre carte SD doit rester dans votre ordinateur pendant que vous effectuez cette vérification.</p>
+
+<p>In this section, you will see whether your shoulder buttons are working on your console. Cela déterminera la méthode que vous allez suivre sur la page suivante.</p>
 
 <ol>
-  <li>Lorsque votre console encore éteinte, maintenez enfoncés les boutons suivants : (L) + (R) + (Haut sur la croix directionnelle) + (A), et tout en maintenant ces boutons enfoncés, allumez votre console
+  <li>Power on your console</li>
+  <li>Une fois arrivé sur le Menu HOME, appuyez sur les boutons (L) et (R) en même temps
     <ul>
-      <li>Keep holding the buttons until the device boots to a system update screen (this is Safe Mode)</li>
+      <li>L’applet de l’appareil photo numérique devrait apparaître</li>
     </ul>
   </li>
-  <li>If you see the system update screen, press Cancel
-    <ul>
-      <li>Votre console va s’éteindre</li>
-      <li>Si la console démarre à partir du menu HOME, éteignez simplement votre console</li>
-    </ul>
-  </li>
+  <li>Éteignez votre console</li>
 </ol>
 
 <hr />
 
 <h3 id="étape-suivante--choisissez-un-exploit">Étape suivante : Choisissez un exploit</h3>
 
-<p>If you saw the system update screen in the previous section, Safe Mode is working on your device.</p>
+<p>If the camera appeared in the previous section, Safe Mode is likely to be working on your console.</p>
 
-<p class="notice--primary">Si votre console a démarré en mode sans échec, continuez vers <a href="installing-boot9strap-(usm)">Installer boot9strap (USM)</a></p>
+<p class="notice--primary">Si l’appareil photo numérique est apparu, continuez vers <a href="installing-boot9strap-(usm)">Installation de boot9strap (USM)</a></p>
 
-<p class="notice--info">Si votre console n’a PAS démarré en mode sans échec, continuez vers <a href="installing-boot9strap-(fredtool)">Installer boot9strap (Fredtool)</a></p>
+<p class="notice--info">Si l’appareil photo numérique n’est PAS apparu, continuez vers <a href="installing-boot9strap-(fredtool)">Installation de boot9strap (Fredtool)</a></p>
 
         
       </section>

@@ -314,11 +314,35 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="updating-firmware-(new-3ds)"><a href='/fr_FR/updating-firmware-(new-3ds)'>Mise à jour du logiciel système (New 3DS)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="updating-firmware-(kor)"><a href='/fr_FR/updating-firmware-(kor)'>Mise à jour du logiciel système (KOR)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="updating-firmware-(twn)"><a href='/fr_FR/updating-firmware-(twn)'>Mise à jour du logiciel système (TWN)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="ntrboot"><a href='/fr_FR/ntrboot'>ntrboot</a></li>
           
         
           
+            <li style="display: none;" data-name="alternate-exploits"><a href='/fr_FR/alternate-exploits'>Alternate Exploits</a></li>
+          
+        
+          
             <li style="display: none;" data-name="seedminer"><a href='/fr_FR/seedminer'>Seedminer</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(alternate)"><a href='/fr_FR/seedminer-(alternate)'>Seedminer (Alternate)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(mii)"><a href='/fr_FR/seedminer-(mii)'>Seedminer (Mii)</a></li>
           
         
           
@@ -330,7 +354,31 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="bannerbomb3-(legacy)"><a href='/fr_FR/bannerbomb3-(legacy)'>BannerBomb3 (Legacy)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(ninjhax2-dx)"><a href='/fr_FR/homebrew-launcher-(ninjhax2-dx)'>Homebrew Launcher (ninjhax2-dx)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(pichaxx)"><a href='/fr_FR/homebrew-launcher-(pichaxx)'>Homebrew Launcher (PicHaxx)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(smilehax-iie)"><a href='/fr_FR/homebrew-launcher-(smilehax-iie)'>Homebrew Launcher (smilehax-IIe)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(steelhax)"><a href='/fr_FR/homebrew-launcher-(steelhax)'>Homebrew Launcher (Steelhax)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="homebrew-launcher-(super-skaterhax)"><a href='/fr_FR/homebrew-launcher-(super-skaterhax)'>Homebrew Launcher (super-skaterhax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="dumping-eshop-dsiware"><a href='/fr_FR/dumping-eshop-dsiware'>Dumping eShop DSiWare</a></li>
           
         
           
@@ -387,6 +435,14 @@ window.cookieconsent.initialise({
         
           
             <li style="display: none;" data-name="installing-boot9strap-(fredtool)"><a href='/fr_FR/installing-boot9strap-(fredtool)'>Installing boot9strap (Fredtool)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(fredtool-inject)"><a href='/fr_FR/installing-boot9strap-(fredtool-inject)'>Installing boot9strap (Fredtool-Inject)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(fredtool-legacy)"><a href='/fr_FR/installing-boot9strap-(fredtool-legacy)'>Installing boot9strap (Fredtool, Legacy)</a></li>
           
         
           
@@ -448,447 +504,476 @@ window.cookieconsent.initialise({
 
         <hr>
 
-        <p>This page offers troubleshooting advice for commonly encountered issues. If you are unable to solve your issue with the advice on this page, please join <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew on Discord</a> and describe your issue, including what you have already tried.</p>
+        <p>Cette page offre des conseils de dépannage pour les problèmes rencontrés couramment. Si les conseils donnés sur cette page ne vous permettent pas de résoudre votre problème, nous vous invitons à rejoindre <a href="https://discord.gg/MWxPgEp">notre serveur Discord Nintendo Homebrew</a> et à y décrire votre problème et ce que vous avez déjà essayé.</p>
 
 <details class="notice--info">
-<summary>Table of Contents</summary>
+<summary>Table des matières</summary>
 
-<p>Used on multiple pages:</p>
+<p>Utilisé sur plusieurs pages :</p>
 <ul>
   <li><a href="#issues-with-safeb9sinstaller">SafeB9SInstaller</a></li>
 </ul>
 
-<p>Guide pages:</p>
+<p>Pages du guide :</p>
 <ul>
   <li><a href="#seedminer">Seedminer</a>
     <ul>
       <li><a href="#bannerbomb3">BannerBomb3</a></li>
-      <li><a href="#installing-boot9strap-usm">Installing boot9strap (USM)</a></li>
-      <li><a href="#installing-boot9strap-fredtool">Installing boot9strap (Fredtool)</a></li>
+      <li><a href="#installing-boot9strap-usm">Installation de boot9strap (USM)</a></li>
+      <li><a href="#installing-boot9strap-fredtool">Installation de boot9strap (Fredtool)</a></li>
+      <li><a href="#homebrew-launcher-pichaxx">Homebrew Launcher (PicHaxx)</a></li>
     </ul>
   </li>
-  <li><a href="#installing-boot9strap-soundhax">Installing boot9strap (Soundhax)</a></li>
-  <li><a href="#installing-boot9strap-ssloth-browser">Installing boot9strap (SSLoth-Browser)</a></li>
+  <li><a href="#installing-boot9strap-soundhax">Installation de boot9strap (Soundhax)</a></li>
+  <li><a href="#installing-boot9strap-ssloth-browser">Installation de boot9strap (SSLoth-Browser)</a></li>
   <li>
     <p><a href="#homebrew-launcher-super-skaterhax">Homebrew Launcher (super-skaterhax)</a></p>
   </li>
-  <li><a href="#finalizing-setup">Finalizing Setup</a></li>
+  <li><a href="#finalizing-setup">Finalisation de l’installation</a></li>
 </ul>
 
-<p>Issues after installation:</p>
+<p>Problèmes après l’installation :</p>
 <ul>
-  <li><a href="#boot-issues-on-devices-with-custom-firmware">Boot issues</a></li>
-  <li><a href="#software-issues-on-devices-with-custom-firmware">Software issues</a></li>
+  <li><a href="#boot-issues-on-consoles-with-custom-firmware">Boot issues</a></li>
+  <li><a href="#software-issues-on-consoles-with-custom-firmware">Software issues</a></li>
 </ul>
 
 </details>
 
-<h2 id="issues-with-safeb9sinstaller">Issues with SafeB9SInstaller</h2>
+<h2 id="problèmes-avec-safeb9sinstaller">Problèmes avec SafeB9SInstaller</h2>
 
 <h3 id="sighaxed-firm-was-not-installed-check-lower-screen-for-more-info">SigHaxed FIRM was not installed! Check lower screen for more info.</h3>
 
 <details>
 <summary><u>SigHaxed FIRM - File not found</u></summary>
 
-<p>You are missing <code class="language-plaintext highlighter-rouge">boot9strap.firm</code> and <code class="language-plaintext highlighter-rouge">boot9strap.firm.sha</code> from the <code class="language-plaintext highlighter-rouge">boot9strap</code> folder, or the <code class="language-plaintext highlighter-rouge">boot9strap</code> folder is misnamed. Download the latest release of <a href="https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip">boot9strap</a>, and place <code class="language-plaintext highlighter-rouge">boot9strap.firm</code> and <code class="language-plaintext highlighter-rouge">boot9strap.firm.sha</code> in the <code class="language-plaintext highlighter-rouge">boot9strap</code> folder.</p>
+<p>Les fichiers <code class="language-plaintext highlighter-rouge">boot9strap.firm</code> et <code class="language-plaintext highlighter-rouge">boot9strap.firm.sha</code> sont absents du dossier <code class="language-plaintext highlighter-rouge">boot9strap</code>, ou le dossier <code class="language-plaintext highlighter-rouge">boot9strap</code> est mal nommé. Téléchargez la dernière version de <a href="https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip">boot9strap</a>, et placez <code class="language-plaintext highlighter-rouge">boot9strap.firm</code> et <code class="language-plaintext highlighter-rouge">boot9strap.firm.sha</code> dans le dossier <code class="language-plaintext highlighter-rouge">boot9strap</code>.</p>
 </details>
 
 <details>
 <summary><u>SigHaxed FIRM - invalid FIRM</u></summary>
 
-<p>There is an issue with your <code class="language-plaintext highlighter-rouge">boot9strap.firm</code> and <code class="language-plaintext highlighter-rouge">boot9strap.firm.sha</code> files. Re-download the latest release of <a href="https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip">boot9strap</a>, and place <code class="language-plaintext highlighter-rouge">boot9strap.firm</code> and <code class="language-plaintext highlighter-rouge">boot9strap.firm.sha</code> in the <code class="language-plaintext highlighter-rouge">boot9strap</code> folder.</p>
+<p>Il y a un problème avec vos fichiers <code class="language-plaintext highlighter-rouge">boot9strap.firm</code> et <code class="language-plaintext highlighter-rouge">boot9strap.firm.sha</code>. Re-téléchargez la dernière version de <a href="https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip">boot9strap</a>, et placez <code class="language-plaintext highlighter-rouge">boot9strap.firm</code> et <code class="language-plaintext highlighter-rouge">boot9strap.firm.sha</code> dans le dossier <code class="language-plaintext highlighter-rouge">boot9strap</code>.</p>
 </details>
 
 <details>
 <summary><u>Secret Sector - File not found</u></summary>
 
-<p>You are missing <code class="language-plaintext highlighter-rouge">secret_sector.bin</code> from the <code class="language-plaintext highlighter-rouge">boot9strap</code> folder, or the <code class="language-plaintext highlighter-rouge">boot9strap</code> folder is misnamed. Download <a href="magnet:?xt=urn:btih:15a3c97acf17d67af98ae8657cc66820cc58f655&amp;dn=secret_sector.bin&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.lelux.fi%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.loadbt.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.monitorit4.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.ololosh.space%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.srv00.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.theoks.net%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.zerobytes.xyz%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker1.bt.moack.co.kr%3a80%2fannounce&amp;tr=udp%3a%2f%2fvibe.sleepyinternetfun.xyz%3a1738%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&amp;tr=http%3a%2f%2fopenbittorrent.com%3a80%2fannounce">secret_sector.bin</a> using a torrent client, and place it in the <code class="language-plaintext highlighter-rouge">boot9strap</code> folder.</p>
+<p>Le fichier <code class="language-plaintext highlighter-rouge">secret_sector.bin</code> est absent du <code class="language-plaintext highlighter-rouge">boot9strap</code>, ou le dossier <code class="language-plaintext highlighter-rouge">boot9strap</code> est mal nommé. Téléchargez <a href="magnet:?xt=urn:btih:15a3c97acf17d67af98ae8657cc66820cc58f655&amp;dn=secret_sector.bin&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.lelux.fi%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.loadbt.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.monitorit4.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.ololosh.space%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.srv00.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.theoks.net%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.zerobytes.xyz%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker1.bt.moack.co.kr%3a80%2fannounce&amp;tr=udp%3a%2f%2fvibe.sleepyinternetfun.xyz%3a1738%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&amp;tr=http%3a%2f%2fopenbittorrent.com%3a80%2fannounce">secret_sector.bin</a> à l’aide d’un client torrent et placez-le dans le dossier “boot9strap”.</p>
 </details>
 
 <details>
-<summary><u>Something else</u></summary>
+<summary><u>Autre chose</u></summary>
 
-<p>Join <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew on Discord</a> for assistance, and describe the message that you see.</p>
+<p>Rejoignez <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew sur Discord</a> pour obtenir de l’aide et décrivez le message que vous voyez.</p>
 </details>
 
 <h2 id="seedminer">Seedminer</h2>
 
 <details>
-<summary><u>Multiple long folder names in Nintendo 3DS folder</u></summary>
+<summary><u>Présence de plusieurs dossiers ayant un long nom dans le dossier Nintendo 3DS</u></summary>
 
 <p class="notice--info"><img src="https://3ds.hacks.guide/images/screenshots/multiple-id0.png" alt="" /></p>
 
-<p>This occurs when you use your SD card in multiple 3DS devices and is intended to prevent inadvertently merging data that would not be valid on other devices. To figure out which long folder name is correct for your 3DS, follow these instructions:</p>
+<p>This occurs when you use your SD card in multiple 3DS consoles and is intended to prevent inadvertently merging data that would not be valid on other consoles. Pour déterminer quel nom de dossier long correspond à votre 3DS, suivez ces instructions :</p>
 
 <ol>
-  <li>Rename the <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> folder to <code class="language-plaintext highlighter-rouge">BACKUP_Nintendo 3DS</code></li>
-  <li>Reinsert your SD card into your device and power on your device</li>
-  <li>Wait for the device to generate the SD card data
+  <li>Renommez le dossier <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> en <code class="language-plaintext highlighter-rouge">BACKUP_Nintendo 3DS</code></li>
+  <li>Reinsert your SD card into your console and power on your console</li>
+  <li>Wait for the console to generate the SD card data
     <ul>
-      <li>Your applications will have disappeared. This is normal and will be resolved shortly</li>
+      <li>Vos applications auront disparu. Ceci est normal et sera résolu plus tard</li>
     </ul>
   </li>
-  <li>Power off your device and reinsert your SD card into your computer</li>
+  <li>Power off your console and reinsert your SD card into your computer</li>
   <li>Naviguez vers le dossier <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> de votre carte SD</li>
-  <li>Copy the 32 character long name of the folder you see
+  <li>Copiez le nom du dossier qui fait 32 caractères de long que vous voyez
     <ul>
-      <li>This is your true ID0 that you will use in <a href="seedminer#section-ii---seedminer">Section II of Seedminer</a></li>
+      <li>Ceci est votre véritable ID0 que vous utiliserez dans <a href="seedminer#section-ii---seedminer">Section II de Seedminer</a></li>
     </ul>
   </li>
-  <li>Delete the <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> folder</li>
-  <li>Rename the <code class="language-plaintext highlighter-rouge">BACKUP_Nintendo 3DS</code> folder to <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code></li>
+  <li>Supprimez le dossier “Nintendo 3DS”</li>
+  <li>Renommez le dossier <code class="language-plaintext highlighter-rouge">BACKUP_Nintendo 3DS</code> en `Nintendo 3DS</li>
 </ol>
 </details>
 
 <details>
-<summary><u>Bruteforce Movable skips to step 4</u></summary>
+<summary><u>Bruteforce Movable passe à l'étape 4</u></summary>
 
-<p>The website has already mined your <code class="language-plaintext highlighter-rouge">movable.sed</code> using your friend code and ID0 combination. You can use the <code class="language-plaintext highlighter-rouge">movable.sed</code> that it provides you.</p>
+<p>Le site Web a déjà extrait votre <code class="language-plaintext highlighter-rouge">movable.sed</code> en utilisant la combinaison de votre code ami et de votre ID0. Vous pouvez utiliser le <code class="language-plaintext highlighter-rouge">movable.sed</code> qu’il vous fournit.</p>
 </details>
 
 <details>
 <summary><u>Important! You have been locked out of the automated part1 dumper system...</u></summary>
 
-<p>Your friend code was blocked from using the friend code bot because your 3DS did not successfully friend the bot. Ensure your 3DS is properly connected to the Internet, then join <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew on Discord</a> and ask to be unlocked.</p>
+<p>Votre code ami a été bloqué par le bot car votre 3DS n’a pas réussi à ajouter le bot en ami. Assurez-vous que votre 3DS est correctement connectée à Internet, puis rejoignez <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew sur Discord</a> et demandez à ce que votre code ami soit dé-banni.</p>
 </details>
 
 <details>
 <summary><u>We were unable to successfully complete your bruteforce request. :`(</u></summary>
 
-<p>The website has determined that your <code class="language-plaintext highlighter-rouge">movable.sed</code> cannot be brute-forced. Ensure that you gave the correct ID0 to the website. If your ID0 is correct, then you will be unable to use Seedminer and you will have to use an alternate method.</p>
+<p>Le site Web a déterminé que votre <code class="language-plaintext highlighter-rouge">movable.sed</code> ne peut pas être forcé. Assurez-vous que vous avez donné le bon ID0 au site Web. Si votre ID0 est correct, vous ne pourrez pas utiliser Seedminer et vous devrez utiliser une autre méthode.</p>
 
-<p>If you have a New 3DS / New 3DS XL / New 2DS XL (as indicated by the four shoulder buttons on the back and the C-Stick on the right), you can follow <a href="homebrew-launcher-(super-skaterhax)">Homebrew Launcher (super-skaterhax)</a>. Otherwise, you will need to follow a method that requires additional games or hardware.</p>
+<p>Si vous possédez une New 3DS / New 3DS XL / New 2DS XL (comme indiqué par les quatre boutons gâchettes à l’arrière et le stick C à droite), vous pouvez suivre <a href="homebrew-launcher-(super-skaterhax)">Homebrew Launcher (super-skaterhax)</a>. Sinon, vous devrez suivre une méthode qui nécessite des jeux ou du matériel supplémentaires.</p>
 
 </details>
 
 <h2 id="bannerbomb3">BannerBomb3</h2>
 
 <details>
-<summary><u>Multiple ID1 folders inside of ID0</u></summary>
+<summary><u>Présence de plusieurs dossiers ID1 à l'intérieur de ID0</u></summary>
 
 <p><img src="https://3ds.hacks.guide/images/screenshots/multiple-id1.png" alt="" /></p>
 
-<p>This can occur if you’ve used multiple SD cards on a 3DS and then merged the contents of the SD cards together. This is done to prevent conflicting, valid data from being merged together.</p>
+<p>Cela peut se produire si vous avez utilisé plusieurs cartes SD sur une 3DS et que vous avez ensuite fusionné le contenu des cartes SD ensemble. Ceci est fait pour éviter que des données conflictuelles et valides ne soient fusionnées entre elles.</p>
 
-<p>To fix this, you will need to determine which folder contains your data. Usually, this will be the larger (or largest) of the folders. Backup and delete the smaller one(s), then create a <code class="language-plaintext highlighter-rouge">Nintendo DSiWare</code> folder in the one that remains and move <code class="language-plaintext highlighter-rouge">F00D43D5.bin</code> to that location.</p>
+<p>Pour résoudre ce problème, vous devrez déterminer quel dossier contient vos données. Habituellement, ce sera le plus grand des dossiers. Sauvegardez et supprimez le ou les petits dossiers, puis créez un dossier <code class="language-plaintext highlighter-rouge">Nintendo DSiWare</code> dans celui qui reste et déplacez <code class="language-plaintext highlighter-rouge">F00D43D5.bin</code> dans le dossier que vous venez de créer.</p>
 
 </details>
 
 <details>
-<summary><u>DSiWare Management menu crashes without showing BB3 multihax menu</u></summary>
-<p>Ensure that <code class="language-plaintext highlighter-rouge">F00D43D5.bin</code> is the only file in <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID0&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID1&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">Nintendo DSiWare</code>. If it is, then re-create it with the <a href="http://3dstools.nhnarwhal.com/#/bb3gen">Bannerbomb3 Injector</a>.</p>
+<summary><u>Le menu de Gestion des Nintendo DSiWare plante sans afficher le menu multihax BB3</u></summary>
+<p>Assurez-vous que <code class="language-plaintext highlighter-rouge">F00D43D5.bin</code> est le seul fichier dans <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID0&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID1&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">Nintendo DSiWare</code>. Si c’est le cas, recréez le avec l’injecteur <a href="http://3dstools.nhnarwhal.com/#/bb3gen">Bannerbomb3</a>.</p>
 
-<p>Also, ensure that <code class="language-plaintext highlighter-rouge">bb3.bin</code> is on the root of the SD card. If it is missing, then download the latest release of <a href="https://github.com/lifehackerhansol/Bannerbomb3/releases/download/v3.0-lhs1/bb3.bin">Bannerbomb3</a> (direct download), and copy the <code class="language-plaintext highlighter-rouge">bb3.bin</code> file to the root of your SD card.</p>
+<p>Assurez-vous également que <code class="language-plaintext highlighter-rouge">bb3.bin</code> est à la racine de la carte SD. S’il est absent, téléchargez la dernière version de <a href="https://github.com/lifehackerhansol/Bannerbomb3/releases/download/v3. -lhs1/bb3.bin">Bannerbomb3</a> (téléchargement direct) et copiez le fichier <code class="language-plaintext highlighter-rouge">bb3.bin</code> vers la racine de votre carte SD.</p>
 
-<p>If neither of these solutions fixes this problem, then custom firmware may have been uninstalled on this device in a way that makes this method impossible to perform. Si c’est le cas, rejoignez <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew sur Discord</a> et demandez de l’aide, en anglais.</p>
+<p>If neither of these solutions fixes this problem, then custom firmware may have been uninstalled on this console in a way that makes this method impossible to perform. Si c’est le cas, rejoignez <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew sur Discord</a> et demandez de l’aide, en anglais.</p>
 </details>
 
 <details>
-<summary><u>DSiWare Management menu displays "No accessible software data."</u></summary>
+<summary><u>Le menu de Gestion des Nintendo DSiWare affiche "Aucune donnée."</u></summary>
 
-<p><code class="language-plaintext highlighter-rouge">F00D43D5.bin</code> is missing from <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID0&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID1&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">Nintendo DSiWare</code>. Make sure that <code class="language-plaintext highlighter-rouge">Nintendo DSiWare</code> is correctly spelled and spaced. Uppercase/lowercase does not matter.</p>
+<p><code class="language-plaintext highlighter-rouge">F00D43D5.bin</code> est absent dans <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID0&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID1&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">Nintendo DSiWare</code>. Assurez-vous que <code class="language-plaintext highlighter-rouge">Nintendo DSiWare</code> est correctement orthographié et espacé. Les majuscules/minuscules n’ont pas d’importance.</p>
 </details>
 
 <details>
-<summary><u>DSiWare Management shows a question mark</u></summary>
+<summary><u>Le menu de Gestion des Nintnedo DSiWare affiche un point d'interrogation</u></summary>
 
-<p>There may be an issue with your <code class="language-plaintext highlighter-rouge">F00D43D5.bin</code> file (it may be corrupted or intended for the wrong 3DS). Re-create your <code class="language-plaintext highlighter-rouge">F00D43D5.bin</code> file with the <a href="http://3dstools.nhnarwhal.com/#/bb3gen">Bannerbomb3 Injector</a>, ensuring that you use the <code class="language-plaintext highlighter-rouge">movable.sed</code> file for your console.</p>
+<p>Il y a peut-être un problème avec votre fichier <code class="language-plaintext highlighter-rouge">F00D43D5.bin</code> (il peut être corrompu ou destiné à la mauvaise 3DS). Re-créez votre fichier <code class="language-plaintext highlighter-rouge">F00D43D5.bin</code> avec l’injecteur <a href="http://3dstools.nhnarwhal.com/#/bb3gen">Bannerbomb3 Injector</a>, en vous assurant d’utiliser le fichier <code class="language-plaintext highlighter-rouge">movable.sed</code> pour votre console.</p>
 </details>
 
-<h2 id="installing-boot9strap-usm">Installing boot9strap (USM)</h2>
+<h2 id="installation-de-boot9strap-usm">Installation de boot9strap (USM)</h2>
 
 <details>
-<summary><u>Safe Mode system update succeeds instead of giving error 003-1099</u></summary>
+<summary><u>La mise à jour de la console en mode sans échec s'exécute correctement au lieu de donner l'erreur 003-1099</u></summary>
 
-<p>unSAFE_MODE is not installed. <a href="installing-boot9strap-(usm)">Follow the instructions</a> to install it.</p>
-</details>
-
-<details>
-<summary><u>Red screen after selecting "Detailed Setup"</u></summary>
-
-<p>The file <code class="language-plaintext highlighter-rouge">usm.bin</code> is missing or misplaced. Download the latest release of <a href="https://github.com/zoogie/unSAFE_MODE/releases/download/v1.3/usm.bin">unSAFE_MODE</a> and place <code class="language-plaintext highlighter-rouge">usm.bin</code> on the root of your SD card. Do not add the <code class="language-plaintext highlighter-rouge">.bin</code> extension if you do not already see it.</p>
-
-<p>There is also a possibility that the console isn’t reading your SD card. Make sure it is inserted and formatted correctly.</p>
+<p>unSAFE_MODE n’est pas installé. <a href="installing-boot9strap-(usm)">Suivez les instructions</a> pour l’installer.</p>
 </details>
 
 <details>
-<summary><u>Failed to open SafeB9SInstaller.bin</u></summary>
+<summary><u>Écran rouge après avoir sélectionné "Paramètres avancés"</u></summary>
 
-<p>The file <code class="language-plaintext highlighter-rouge">SafeB9SInstaller.bin</code> is missing or misplaced. Download the latest release of <a href="https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip">SafeB9SInstaller</a>, extract it, and place <code class="language-plaintext highlighter-rouge">SafeB9SInstaller.bin</code> on the root of your SD card. Do not add the <code class="language-plaintext highlighter-rouge">.bin</code> extension if you do not already see it.</p>
-</details>
+<p>Le fichier <code class="language-plaintext highlighter-rouge">usm.bin</code> est absent ou mal placé. Téléchargez la dernière version de <a href="https://github.com/zoogie/unSAFE_MODE/releases/download/v1.3/usm.bin">unSAFE_MODE</a> et placez <code class="language-plaintext highlighter-rouge">usm.bin</code> à la racine de votre carte SD. N’ajoutez pas l’extension <code class="language-plaintext highlighter-rouge">.bin</code> si vous ne la voyez pas déjà.</p>
 
-<details>
-<summary><u>Failed to mount the SD card!</u></summary>
-
-<p>Back up your data and reformat your SD card as FAT32 with the recommended tool depending on your operating system (<a href="formatting-sd-(windows)">Windows</a>, <a href="formatting-sd-(mac)">macOS</a>, <a href="formatting-sd-(linux)">Linux</a>). MiniTool Partition Wizard and the HP formatting tool (HPUSBDisk) are known to cause issues with 3DS SD cards.</p>
-
-<p>If this is unsuccessful, try using another SD card.</p>
-</details>
-
-<h2 id="installing-boot9strap-fredtool">Installing boot9strap (Fredtool)</h2>
-
-<details>
-<summary><u>Error on Fredtool Injector page</u></summary>
-
-<p>Ensure that your <code class="language-plaintext highlighter-rouge">movable.sed</code> and DSiWare backup come from the same console. A mismatch will result in an error.</p>
-</details>
-
-<details>
-<summary><u>Unable to select "Haxxxxxxxxx!" because the BB3 multihax menu appears</u></summary>
-
-<p>You forgot to delete <code class="language-plaintext highlighter-rouge">F00D43D5.bin</code> from the SD card. Navigate to <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID0&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID1&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">Nintendo DSiWare</code> on your SD card and delete the <code class="language-plaintext highlighter-rouge">F00D43D5.bin</code> file.</p>
-</details>
-
-<details>
-<summary><u>"Haxxxxxxxxx!" does not appear</u></summary>
-
-<p>There is an issue with your <code class="language-plaintext highlighter-rouge">42383821.bin</code> file (it is incorrect, missing, misplaced, or corrupted). Re-create your files with the <a href="https://jenkins.nelthorya.net/job/DSIHaxInjector_new/build?delay=0sec">DSIHaxInjector_new</a> website and ensure that you place the <code class="language-plaintext highlighter-rouge">42383821.bin</code> file from <code class="language-plaintext highlighter-rouge">output.zip</code> -&gt; <code class="language-plaintext highlighter-rouge">hax</code> in <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID0&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID1&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">Nintendo DSiWare</code>.</p>
-</details>
-
-<details>
-<summary><u>DS Connection Settings launches normally</u></summary>
-
-<p><code class="language-plaintext highlighter-rouge">Haxxxxxxxxx!</code> was not copied from your SD card to your system memory.</p>
-</details>
-
-<details>
-<summary><u>Black screen when launching DS Connection Settings</u></summary>
-
-<p>Your DS Connection Settings application is broken, and you will need Homebrew Launcher access to fix this issue. Join <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew on Discord</a> for assistance.</p>
-</details>
-
-<details>
-<summary><u>SD card is grayed out in Flipnote</u></summary>
-
-<p>Flipnote may take a long time to index your card if you have a large SD card. Let it sit for a few minutes.</p>
-</details>
-
-<details>
-<summary><u>Lenny face does not appear in SD card section</u></summary>
-
-<p>You did not copy the <code class="language-plaintext highlighter-rouge">private</code> folder from the Frogminer_save <code class="language-plaintext highlighter-rouge">.zip</code> to the root of your SD card.</p>
-</details>
-
-<details>
-<summary><u>Flipnote freezes</u></summary>
-
-<p>You may have accidentally touched the touch screen while in the modified Flipnote. Re-enter DS Connection Settings and try again, ensuring that you don’t accidentally use the touchscreen.</p>
-</details>
-
-<details>
-<summary><u>Green screen after pasting</u></summary>
-
-<p>The file <code class="language-plaintext highlighter-rouge">boot.nds</code> is missing or misplaced. Download the latest release of <a href="https://github.com/zoogie/b9sTool/releases/latest">b9stool</a> and place <code class="language-plaintext highlighter-rouge">boot.nds</code> on the root of your SD card, replacing the existing one.</p>
-</details>
-
-<details>
-<summary><u>White screen after pasting</u></summary>
-<p>There is an issue with your <code class="language-plaintext highlighter-rouge">boot.nds</code> file. Re-download the latest release of <a href="https://github.com/zoogie/b9sTool/releases/latest">b9stool</a> and place <code class="language-plaintext highlighter-rouge">boot.nds</code> on the root of your SD card, replacing the existing one.</p>
-</details>
-
-<details>
-<summary><u>Unable to open Luma3DS configuration menu after running B9STool</u></summary>
-
-<p>Join <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew on Discord</a> and explain what has happened.</p>
-</details>
-
-<h2 id="installing-boot9strap-soundhax">Installing boot9strap (Soundhax)</h2>
-
-<details>
-<summary><u>Red/purple/pink and white screen after running Soundhax</u></summary>
-
-<p>If your device is on system version 9.4.0, 9.5.0, or 9.6.0, you may be encountering a bug with an old version of universal-otherapp. Download the latest version from <a href="https://github.com/TuxSH/universal-otherapp/releases/latest">here</a>.</p>
-
-<p>If your device is not on those firmwares, it likely indicates that you already have custom firmware. You should <a href="checking-for-cfw">check for CFW</a>.</p>
-</details>
-
-<details>
-<summary><u>"An error has occurred, forcing the software to close..." (white message box)</u></summary>
-
-<p>There is an issue with your <code class="language-plaintext highlighter-rouge">otherapp.bin</code> file (it is missing, misplaced, or corrupted). Download the latest release of <a href="https://github.com/TuxSH/universal-otherapp/releases/latest">universal-otherapp</a> and place it on the root of your SD card.</p>
-</details>
-
-<details>
-<summary><u>"Could not play"</u></summary>
-
-<p>You have the wrong Soundhax file for your device and region, or your device is incompatible with Soundhax. In the latter case, you should update your device to the latest version and follow <a href="seedminer">Seedminer</a>.</p>
+<p>Il est également possible que la console ne lise pas votre carte SD. Assurez-vous qu’elle est bien insérée et formatée correctement.</p>
 </details>
 
 <details>
 <summary><u>Failed to open SafeB9SInstaller.bin</u></summary>
 
-<p>The file <code class="language-plaintext highlighter-rouge">SafeB9SInstaller.bin</code> is missing or misplaced. Download the latest release of <a href="https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip">SafeB9SInstaller</a>, extract it, and place <code class="language-plaintext highlighter-rouge">SafeB9SInstaller.bin</code> on the root of your SD card. Do not add the <code class="language-plaintext highlighter-rouge">.bin</code> extension if you do not already see it.</p>
+<p>Le fichier <code class="language-plaintext highlighter-rouge">SafeB9SInstaller.bin</code> est absent ou mal placé. Téléchargez la dernière version de <a href="https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip">SafeB9SInstaller</a>, extrayez-le et placez <code class="language-plaintext highlighter-rouge">SafeB9SInstaller.bin</code> à la racine de votre carte SD. N’ajoutez pas l’extension <code class="language-plaintext highlighter-rouge">.bin</code> si vous ne la voyez pas déjà.</p>
 </details>
 
 <details>
 <summary><u>Failed to mount the SD card!</u></summary>
-<p>Back up your data and reformat your SD card as FAT32 with the recommended tool depending on your operating system (<a href="formatting-sd-(windows)">Windows</a>, <a href="formatting-sd-(mac)">macOS</a>, <a href="formatting-sd-(linux)">Linux</a>). MiniTool Partition Wizard and the HP formatting tool (HPUSBDisk) are known to cause issues with 3DS SD cards.</p>
 
-<p>If this is unsuccessful, try using another SD card.</p>
+<p>Sauvegardez vos données et reformatez votre carte SD en FAT32 avec l’outil recommandé en fonction de votre système d’exploitation (<a href="formatting-sd-(windows)">Windows</a>, <a href="formatting-sd-(mac)">macOS</a>, <a href="formatting-sd-(linux)">Linux</a>). MiniTool Partition Wizard et l’outil de formatage d’HP (HPUSBDisk) sont connus pour causer des problèmes avec les cartes SD des 3DS.</p>
+
+<p>Si cela échoue, essayez d’utiliser une autre carte SD.</p>
 </details>
 
-<h2 id="installing-boot9strap-ssloth-browser">Installing boot9strap (SSLoth-Browser)</h2>
+<h2 id="installation-de-boot9strap-fredtool">Installation de boot9strap (Fredtool)</h2>
 
 <details>
-<summary><u>Red/purple/pink and white screen after running Browserhax</u></summary>
+<summary><u>Erreur sur la page de l'injecteur de Fredtool</u></summary>
 
-<p>This likely indicates that you already have custom firmware. You should <a href="checking-for-cfw">check for CFW</a>.</p>
-</details>
-
-<details>
-<summary><u>"An error has occurred. Hold down the POWER button to turn off the power..." (black screen with text)</u></summary>
-
-<p>The file <code class="language-plaintext highlighter-rouge">arm11code.bin</code> is missing or misplaced. Download the latest release of <a href="https://github.com/TuxSH/universal-otherapp/releases/latest">universal-otherapp</a>, place <code class="language-plaintext highlighter-rouge">otherapp.bin</code> on the root of your SD card and rename it to <code class="language-plaintext highlighter-rouge">arm11code.bin</code>. Do not add the <code class="language-plaintext highlighter-rouge">.bin</code> extension if you do not already see it.</p>
+<p>Assurez-vous que votre <code class="language-plaintext highlighter-rouge">movable.sed</code> et votre sauvegarde de DSiWare proviennent de la même console. Une incohérence entraînera une erreur.</p>
 </details>
 
 <details>
-<summary><u>"An error has occurred, forcing the software to close..." (white message box)</u></summary>
+<summary><u>Impossible de sélectionner "Haxxxxxxxxx!" car le menu multihax BB3 apparaît</u></summary>
 
-<p>There is an issue with your <code class="language-plaintext highlighter-rouge">arm11code.bin</code> file. Download the latest release of <a href="https://github.com/TuxSH/universal-otherapp/releases/latest">universal-otherapp</a>, place <code class="language-plaintext highlighter-rouge">otherapp.bin</code> on the root of your SD card and rename it to <code class="language-plaintext highlighter-rouge">arm11code.bin</code>. Do not add the <code class="language-plaintext highlighter-rouge">.bin</code> extension if you do not already see it.</p>
+<p>Vous avez oublié de supprimer <code class="language-plaintext highlighter-rouge">F00D43D5.bin</code> de la carte SD. Naviguez vers <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID0&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID1&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">Nintendo DSiWare</code> sur votre carte SD et supprimez le fichier <code class="language-plaintext highlighter-rouge">F00D43D5.bin</code>.</p>
 </details>
 
 <details>
-<summary><u>Opening the browserhax QR code or URL crashes</u></summary>
+<summary><u>"Haxxxxxxxxx!" n'apparaît pas</u></summary>
 
-<p>Browser based exploits (such as this one) are often unstable and crash frequently, but they can sometimes be fixed by doing the following steps.</p>
+<p>Il y a un problème avec votre fichier <code class="language-plaintext highlighter-rouge">42383821.bin</code> (il est incorrect, manquant, mal placé ou corrompu). Recréez vos fichiers avec le site web <a href="https://jenkins.nelthorya.net/job/DSIHaxInjector_new/build?delay=0sec">DSIHaxInjector_new</a> et assurez-vous de placer le fichier <code class="language-plaintext highlighter-rouge">42383821.bin</code> depuis <code class="language-plaintext highlighter-rouge">output.zip</code> -&gt; <code class="language-plaintext highlighter-rouge">hax</code> dans <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID0&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID1&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">Nintendo DSiWare</code>.</p>
+</details>
+
+<details>
+<summary><u>Les paramètres de Connexions Nintendo DS s'exécutent normalement</u></summary>
+
+<p><code class="language-plaintext highlighter-rouge">Haxxxxxxxxx!</code> n’a pas été copié depuis votre carte SD vers la mémoire de votre console.</p>
+</details>
+
+<details>
+<summary><u>Écran noir lors du lancement des paramètres de Connexions Nintendo DS</u></summary>
+
+<p>Votre application Connexions Nintendo DS est endommagée et vous aurez besoin d’un accès à l’Homebrew Launcher pour résoudre ce problème. Rejoignez <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew sur Discord</a> pour obtenir de l’aide.</p>
+</details>
+
+<details>
+<summary><u>La carte SD est grisée dans Flipnote</u></summary>
+
+<p>Flipnote peut prendre beaucoup de temps pour indexer votre carte si vous avez une grande carte SD. Attendez quelques minutes.</p>
+</details>
+
+<details>
+<summary><u>La Lenny face n'apparaît pas dans la section carte SD</u></summary>
+
+<p>Vous n’avez pas copié le dossier <code class="language-plaintext highlighter-rouge">private</code> du fichier <code class="language-plaintext highlighter-rouge">.zip</code> de Frogminer_save vers la racine de votre carte SD.</p>
+</details>
+
+<details>
+<summary><u>Flipnote plante</u></summary>
+
+<p>Vous avez peut-être accidentellement touché l’écran tactile alors que vous étiez dans le Flipnote modifiée. Entrez à nouveau les paramètres de Connexions Nintendo DS et réessayez, en vous assurant de ne pas toucher accidentellement l’écran tactile.</p>
+</details>
+
+<details>
+<summary><u>Écran vert après avoir collé</u></summary>
+
+<p>Le fichier <code class="language-plaintext highlighter-rouge">boot.nds</code> est absent ou mal placé. Téléchargez la dernière version de <a href="https://github.com/zoogie/b9sTool/releases/latest">b9stool</a> et placez <code class="language-plaintext highlighter-rouge">boot.nds</code> à la racine de votre carte SD, en remplaçant l’ancien.</p>
+</details>
+
+<details>
+<summary><u>Écran blanc après avoir collé</u></summary>
+<p>Il y a un problème avec votre fichier <code class="language-plaintext highlighter-rouge">boot.nds</code>. Re-téléchargez la dernière version de <a href="https://github.com/zoogie/b9sTool/releases/latest">b9stool</a> et placez <code class="language-plaintext highlighter-rouge">boot.nds</code> à la racine de votre carte SD, en remplaçant l’ancien.</p>
+</details>
+
+<details>
+<summary><u>Impossible d'ouvrir le menu de configuration de Luma3DS après avoir exécuté B9STool</u></summary>
+
+<p>Rejoignez <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew sur Discord</a> et expliquez ce qu’il s’est passé.</p>
+</details>
+
+<h2 id="homebrew-launcher-pichaxx">Homebrew Launcher (PicHaxx)</h2>
+
+<details>
+<summary><u>"Une erreur est survenue. Maintenez le bouton POWER enfoncé pour éteindre la console..." (écran noir avec texte)</u></summary>
+
+<p>Your <code class="language-plaintext highlighter-rouge">00000001.sav</code> and/or <code class="language-plaintext highlighter-rouge">otherapp.bin</code> files may be misplaced. Ensure that <code class="language-plaintext highlighter-rouge">00000001.sav</code> is in <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID0&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID1&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">title</code> -&gt; <code class="language-plaintext highlighter-rouge">00040000</code> -&gt; <code class="language-plaintext highlighter-rouge">0017c100</code> -&gt; <code class="language-plaintext highlighter-rouge">data</code> and that <code class="language-plaintext highlighter-rouge">otherapp.bin</code> is on the root of your SD card.</p>
+
+<p>If your files are in the correct locations, re-create the save using the <a href="https://3dstools.nhnarwhal.com/#/pichaxx">PicHaxx Save Tool</a>, then place it in <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID0&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID1&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">title</code> -&gt; <code class="language-plaintext highlighter-rouge">00040000</code> -&gt; <code class="language-plaintext highlighter-rouge">0017c100</code> -&gt; <code class="language-plaintext highlighter-rouge">data</code>. Ensure that the file is named exactly <code class="language-plaintext highlighter-rouge">00000001.sav</code> and that you used your console’s <code class="language-plaintext highlighter-rouge">movable.sed</code> to create it. Re-download <a href="/assets/otherapps.zip">otherapps.zip</a>, place the <code class="language-plaintext highlighter-rouge">.bin</code> file relevant to your console to the root of your SD card, and rename it to <code class="language-plaintext highlighter-rouge">otherapp.bin</code>. N’ajoutez pas l’extension <code class="language-plaintext highlighter-rouge">.bin</code> si vous ne la voyez pas déjà.</p>
+</details>
+
+<details>
+<summary><u>"An exception occurred" or Errdisp when opening Picross</u></summary>
+
+<p>Your console already has custom firmware. Vous devriez <a href="checking-for-cfw">vérifier la présence d’un CFW</a>.</p>
+</details>
+
+<details>
+<summary><u>"Le logiciel a été arrêté car une erreur est survenue. La console va redémarrer." (boîte de message blanche)</u></summary>
+
+<p>There is an issue with your <code class="language-plaintext highlighter-rouge">otherapp.bin</code> file. Download <a href="/assets/otherapps.zip">otherapps.zip</a>, place the <code class="language-plaintext highlighter-rouge">.bin</code> file relevant to your console to the root of your SD card, and rename it to <code class="language-plaintext highlighter-rouge">otherapp.bin</code>. N’ajoutez pas l’extension <code class="language-plaintext highlighter-rouge">.bin</code> si vous ne la voyez pas déjà.</p>
+</details>
+
+<details>
+<summary><u>Game starts normally</u></summary>
+
+<p>Your modified <code class="language-plaintext highlighter-rouge">00000001.sav</code> file may be misplaced, or you may have used the wrong <code class="language-plaintext highlighter-rouge">movable.sed</code> when creating it. Re-generate your <code class="language-plaintext highlighter-rouge">movable.sed</code> from <a href="https://seedminer.hacks.guide">Bruteforce Movable</a>, then re-create the save using the <a href="https://3dstools.nhnarwhal.com/#/pichaxx">PicHaxx Save Tool</a> and place the resulting file (<code class="language-plaintext highlighter-rouge">00000001.sav</code>) in <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID0&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID1&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">title</code> -&gt; <code class="language-plaintext highlighter-rouge">00040000</code> -&gt; <code class="language-plaintext highlighter-rouge">0017c100</code> -&gt; <code class="language-plaintext highlighter-rouge">data</code>.</p>
+</details>
+
+<h2 id="installation-de-boot9strap-soundhax">Installation de boot9strap (Soundhax)</h2>
+
+<details>
+<summary><u>Écran rouge/violet/rose et blanc après avoir exécuté Soundhax</u></summary>
+
+<p>If your console is on system version 9.4.0, 9.5.0, or 9.6.0, you may be encountering a bug with an old version of universal-otherapp. Download the latest version from <a href="https://github.com/TuxSH/universal-otherapp/releases/latest">here</a>.</p>
+
+<p>If your console is not on those firmwares, it likely indicates that you already have custom firmware. Vous devriez <a href="checking-for-cfw">vérifier la présence d’un CFW</a>.</p>
+</details>
+
+<details>
+<summary><u>"Le logiciel a été arrêté car une erreur est survenue. La console va redémarrer." (boîte de message blanche)</u></summary>
+
+<p>Il y a un problème avec votre fichier <code class="language-plaintext highlighter-rouge">otherapp.bin</code> (il est absent, mal placé ou corrompu). Téléchargez la dernière version de <a href="https://github.com/TuxSH/universal-otherapp/releases/latest">universal-otherapp</a> et placez le fichier à la racine de votre carte SD.</p>
+</details>
+
+<details>
+<summary><u>"Lecture impossible."</u></summary>
+
+<p>You have the wrong Soundhax file for your console and region, or your console is incompatible with Soundhax. In the latter case, you should update your console to the latest version and follow <a href="seedminer">Seedminer</a>.</p>
+</details>
+
+<details>
+<summary><u>Failed to open SafeB9SInstaller.bin</u></summary>
+
+<p>Le fichier <code class="language-plaintext highlighter-rouge">SafeB9SInstaller.bin</code> est absent ou mal placé. Téléchargez la dernière version de <a href="https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip">SafeB9SInstaller</a>, extrayez-le et placez <code class="language-plaintext highlighter-rouge">SafeB9SInstaller.bin</code> à la racine de votre carte SD. N’ajoutez pas l’extension <code class="language-plaintext highlighter-rouge">.bin</code> si vous ne la voyez pas déjà.</p>
+</details>
+
+<details>
+<summary><u>Failed to mount the SD card!</u></summary>
+<p>Sauvegardez vos données et reformatez votre carte SD en FAT32 avec l’outil recommandé en fonction de votre système d’exploitation (<a href="formatting-sd-(windows)">Windows</a>, <a href="formatting-sd-(mac)">macOS</a>, <a href="formatting-sd-(linux)">Linux</a>). MiniTool Partition Wizard et l’outil de formatage d’HP (HPUSBDisk) sont connus pour causer des problèmes avec les cartes SD des 3DS.</p>
+
+<p>Si cela échoue, essayez d’utiliser une autre carte SD.</p>
+</details>
+
+<h2 id="installation-de-boot9strap-ssloth-browser">Installation de boot9strap (SSLoth-Browser)</h2>
+
+<details>
+<summary><u>Écran rouge/violet/rose et blanc après avoir exécuté Browserhax</u></summary>
+
+<p>Cela indique que vous avez probablement déjà un custom firmware. Vous devriez <a href="checking-for-cfw">vérifier la présence d’un CFW</a>.</p>
+</details>
+
+<details>
+<summary><u>"Une erreur est survenue. Maintenez le bouton POWER enfoncé pour éteindre la console..." (écran noir avec texte)</u></summary>
+
+<p>Le fichier <code class="language-plaintext highlighter-rouge">arm11code.bin</code> est absent ou mal placé. Téléchargez la dernière version de <a href="https://github.com/TuxSH/universal-otherapp/releases/latest">universal-otherapp</a>, placez <code class="language-plaintext highlighter-rouge">otherapp.bin</code> à la racine de votre carte SD et renommez-le en <code class="language-plaintext highlighter-rouge">arm11code.bin</code>. N’ajoutez pas l’extension <code class="language-plaintext highlighter-rouge">.bin</code> si vous ne la voyez pas déjà.</p>
+</details>
+
+<details>
+<summary><u>"Le logiciel a été arrêté car une erreur est survenue. La console va redémarrer." (boîte de message blanche)</u></summary>
+
+<p>Il y a un problème avec votre fichier <code class="language-plaintext highlighter-rouge">arm11code.bin</code>. Téléchargez la dernière version de <a href="https://github.com/TuxSH/universal-otherapp/releases/latest">universal-otherapp</a>, placez <code class="language-plaintext highlighter-rouge">otherapp.bin</code> à la racine de votre carte SD et renommez-le en <code class="language-plaintext highlighter-rouge">arm11code.bin</code>. N’ajoutez pas l’extension <code class="language-plaintext highlighter-rouge">.bin</code> si vous ne la voyez pas déjà.</p>
+</details>
+
+<details>
+<summary><u>L'ouverture du QR code ou de l'URL de browserhax plante</u></summary>
+
+<p>Les exploits basés sur le Navigateur Internet (comme celui-ci) sont souvent instables et plantent fréquemment, mais ils peuvent parfois être corrigés en effectuant les étapes suivantes.</p>
 
 <ol>
-  <li>Launch the browser, then launch the browser settings</li>
-  <li>Scroll to the bottom and Initialize Savedata (it also may be called Clear All Save Data)</li>
-  <li>Try the exploit again</li>
+  <li>Lancez le Navigateur Internet, puis accédez aux paramètres du navigateur</li>
+  <li>Faites défiler tout en bas et sélectionnez “Effacer données de sauvegarde”</li>
+  <li>Retentez l’exploit</li>
 </ol>
 </details>
 
 <details>
-<summary><u>System Update prompt when opening browser</u></summary>
+<summary><u>Demande de mise à jour de la console lors de l'ouverture du Navigateur Internet</u></summary>
 
-<p>The SSLoth proxy was incorrectly configured. Re-do the SSLoth section on the page.</p>
+<p>Le proxy SSLoth a été mal configuré. Refaites la section SSLoth de la page.</p>
 </details>
 
 <details>
-<summary><u>Error 032-0420 when opening browser</u></summary>
+<summary><u>Erreur 032-0420 lors de l'ouverture du Navigateur Internet</u></summary>
 
-<p>Follow these steps in order:</p>
+<p>Suivez ces étapes dans l’ordre :</p>
 
 <ol>
-  <li>Launch the System Settings application</li>
-  <li>Navigate to <code class="language-plaintext highlighter-rouge">Internet Settings</code> -&gt; <code class="language-plaintext highlighter-rouge">Connection Settings</code></li>
-  <li>Click on your network connection slot and navigate to <code class="language-plaintext highlighter-rouge">Change Settings</code> -&gt; <code class="language-plaintext highlighter-rouge">Next Page (right arrow)</code> -&gt; <code class="language-plaintext highlighter-rouge">Proxy Settings</code></li>
-  <li>Set “Proxy Settings” to “No”</li>
-  <li>Click OK, then click Save</li>
-  <li>When prompted, click “Test” to perform the connection test
+  <li>Launch System Settings on your console</li>
+  <li>Naviguez vers <code class="language-plaintext highlighter-rouge">Paramètres Internet</code> -&gt; <code class="language-plaintext highlighter-rouge">Paramètres de connexion</code></li>
+  <li>Cliquez sur votre emplacement de connexion réseau et allez dans <code class="language-plaintext highlighter-rouge">Modifier</code> -&gt; <code class="language-plaintext highlighter-rouge">Page suivante (flèche à droite)</code> -&gt; `Serveur proxy”</li>
+  <li>Réglez “Serveur proxy” sur “Non”</li>
+  <li>Cliquez sur OK, puis sur Sauvegarder</li>
+  <li>Lorsque vous y êtes invité, cliquez sur “Tester” pour effectuer le test de connexion
     <ul>
-      <li>The test should succeed</li>
+      <li>Le test devrait réussir</li>
     </ul>
   </li>
-  <li>Click “OK” to continue</li>
-  <li>Press “Back” twice, then “Close” to go back to the HOME Menu</li>
-  <li>Open the Internet Browser once</li>
-  <li>If prompted about a system update, press OK
+  <li>Cliquez sur “OK” pour continuer</li>
+  <li>Appuyez deux fois sur « Retour », puis « Fermer » pour revenir au Menu HOME</li>
+  <li>Ouvrez le Navigateur Internet une fois</li>
+  <li>Si vous êtes invité à mettre à jour votre console, appuyez sur OK
     <ul>
-      <li>This won’t actually update the system</li>
+      <li>Cela ne mettra pas à jour la console</li>
     </ul>
   </li>
-  <li>Start again from <a href="installing-boot9strap-(ssloth-browser).html#section-ii---ssloth">Section II</a></li>
+  <li>Recommencez à partir de la <a href="installing-boot9strap-(ssloth-browser).html#section-i---ssloth">Section II</a></li>
 </ol>
 </details>
 
 <details>
-<summary><u>"To use the Internet Browser, please update your system using the System Update option in the System Settings."</u></summary>
+<summary><u>"Vous devez mettre la console à jour pour utiliser le Navigateur Internet. Accédez aux paramètres de la console, puis sélectionnez Autres paramètres ⇒ Mise à jour."</u></summary>
 
-<p>First, make sure you entered the correct proxy for the connection you’re using. If not, go back to <a href="installing-boot9strap-(ssloth-browser).html#section-ii---ssloth">Section II</a>. If the proxy is correct, then your device has been cart-updated, which means an alternate exploit will need to be used.</p>
+<p>Tout d’abord, assurez-vous d’avoir entré le bon proxy pour la connexion que vous utilisez. Sinon, revenez à la <a href="installing-boot9strap-(ssloth-browser).html#section-ii---ssloth">Section II</a>. If the proxy is correct, then your console has been cart-updated, which means an alternate exploit will need to be used.</p>
 
-<p><u>Method 1</u><br />
-If the two numbers before the region in the system version string is equal to or less than 36 (e.g. Ver. 11.14.0-<strong>36</strong>U), you can follow <a href="installing-boot9strap-(soundhax)">Soundhax</a>. When prompted to select a firmware to generate the sound file, use:</p>
+<p><u>Méthode 1</u><br />
+Si les deux nombres avant la région dans la chaîne de version du système sont égaux ou inférieurs à 36 (par exemple, Ver. 11.14.0-<strong>36</strong>U), vous pouvez suivre <a href="installing-boot9strap-(soundhax)">Soundhax</a>. Quand vous êtes invité à sélectionner un firmware pour générer le fichier son, sélectionnez :</p>
 
 <ul>
-  <li>1.x - 2.1 if the number is between 0 and 2</li>
-  <li>2.1 - 2.2 if the number is between 3 and 4</li>
-  <li>3.x - 4.x if the number is between 5 and 10</li>
-  <li>5.x - 11.3 if the number is between 11 and 36</li>
+  <li>1.x - 2.1 si le nombre est compris entre 0 et 2</li>
+  <li>2.1 - 2.2 si le nombre est compris entre 3 et 4</li>
+  <li>3.x - 4.x si le nombre est compris entre 5 et 10</li>
+  <li>5.x - 11.3 si le nombre est compris entre 11 et 36</li>
 </ul>
 
-<p><u>Method 2 (Old 3DS only)</u><br />
-If you have an Old 3DS / Old 3DS XL / 2DS, you can try a Safe Mode update, which will trigger an alternate exploit:</p>
+<p><u>Méthode 2 (Old 3DS seulement)</u><br />
+Si vous avez une Old 3DS / Old 3DS XL / 2DS, vous pouvez essayer de faire une mise à jour de la console depuis le mode sans échec, ce qui déclenchera un exploit alternatif :</p>
 
 <ol>
-  <li>Ensure that the proxy that you used for SSLoth is still actively applied to your internet connection</li>
-  <li>With your device powered off, hold the following buttons: (Left Shoulder) + (Right Shoulder) + (D-Pad Up) + (A), and while holding these buttons together, power on your device
+  <li>Assurez-vous que le proxy que vous avez utilisé pour SSLoth est toujours activement appliqué à votre connexion internet</li>
+  <li>With your console powered off, hold the following buttons: (Left Shoulder) + (Right Shoulder) + (D-Pad Up) + (A), and while holding these buttons together, power on your console
     <ul>
-      <li>Maintenez les boutons enfoncés jusqu’à ce que la console démarre en mode sans échec (menu “Mise à jour”)</li>
+      <li>Keep holding the buttons until the console boots into Safe Mode (a “system update” menu)</li>
     </ul>
   </li>
   <li>Appuyez sur “OK” pour accepter la mise à jour</li>
-  <li>If everything worked correctly, the update will fail and the 3DS will boot into SafeB9SInstaller. If it did, then continue from <a href="installing-boot9strap-(ssloth-browser)#section-iv---installing-boot9strap">Section IV</a>.</li>
+  <li>Si tout a fonctionné correctement, la mise à jour échouera et la 3DS lancera SafeB9SInstaller. Si c’est le cas, continuez depuis la <a href="installing-boot9strap-(ssloth-browser)#section-iv---installing-boot9strap">Section IV</a>.</li>
 </ol>
 
 <hr />
 
-<p>If these methods didn’t work (or do not apply to you), update your device to the latest version and follow <a href="seedminer">Seedminer</a>.</p>
+<p>If these methods didn’t work (or do not apply to you), update your console to the latest version and follow <a href="seedminer">Seedminer</a>.</p>
 
 </details>
 
 <details>
 <summary><u>Failed to open SafeB9SInstaller.bin</u></summary>
 
-<p>The file <code class="language-plaintext highlighter-rouge">SafeB9SInstaller.bin</code> is missing or misplaced. Download the latest release of <a href="https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip">SafeB9SInstaller</a>, extract it, and place <code class="language-plaintext highlighter-rouge">SafeB9SInstaller.bin</code> on the root of your SD card. Do not add the <code class="language-plaintext highlighter-rouge">.bin</code> extension if you do not already see it.</p>
+<p>Le fichier <code class="language-plaintext highlighter-rouge">SafeB9SInstaller.bin</code> est absent ou mal placé. Téléchargez la dernière version de <a href="https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip">SafeB9SInstaller</a>, extrayez-le et placez <code class="language-plaintext highlighter-rouge">SafeB9SInstaller.bin</code> à la racine de votre carte SD. N’ajoutez pas l’extension <code class="language-plaintext highlighter-rouge">.bin</code> si vous ne la voyez pas déjà.</p>
 </details>
 
 <details>
-<summary><u>Frozen on "Doing agbhax..."</u></summary>
-<p>There may be an issue with your <code class="language-plaintext highlighter-rouge">arm11code.bin</code> file. Re-download the latest release of <a href="https://github.com/TuxSH/universal-otherapp/releases/latest">universal-otherapp</a>, place it on the root of your SD card, and rename it to <code class="language-plaintext highlighter-rouge">arm11code.bin</code>. Do not add the <code class="language-plaintext highlighter-rouge">.bin</code> extension if you do not already see it.</p>
+<summary><u>Plantage sur "Doing agbhax..."</u></summary>
+<p>Il y a peut-être un problème avec votre fichier <code class="language-plaintext highlighter-rouge">arm11code.bin</code>. Re-téléchargez la dernière version de <a href="https://github.com/TuxSH/universal-otherapp/releases/latest">universal-otherapp</a>, placez le fichier à la racine de votre carte SD et renommez-le en <code class="language-plaintext highlighter-rouge">arm11code.bin</code>. N’ajoutez pas l’extension <code class="language-plaintext highlighter-rouge">.bin</code> si vous ne la voyez pas déjà.</p>
 
-<p>If you have a Taiwanese unit (with a T in the version string, ie. 11.3.0-##T), you will not be able to follow these instructions, and you will need to update your console and follow <a href="seedminer">Seedminer</a> instead.</p>
+<p>Si vous avez une console taïwanaise (avec un T dans la chaîne de version, c’est-à-dire 11.3. -##T), vous ne serez pas en mesure de suivre ces instructions et vous devrez mettre à jour votre console et suivre <a href="seedminer">Seedminer</a> à la place.</p>
 
-<p>If you have a Mainland Chinese unit (with a C in the version string, ie. 11.3.0-##C), join <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew on Discord</a> for assistance.</p>
+<p>Si vous avez une console chinoise (avec un C dans la chaîne de version, c’est-à-dire 11.3.0-##C), rejoignez <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew sur Discord</a> pour obtenir de l’aide.</p>
 </details>
 
 <details>
 <summary><u>"PrepareArm9ForTwl returned error c8804631!"</u></summary>
 
-<p>Join <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew on Discord</a> for assistance.</p>
+<p>Rejoignez <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew sur Discord</a> pour obtenir de l’aide.</p>
 </details>
 
 <details>
 <summary><u>Failed to mount the SD card!</u></summary>
 
-<p>Back up your data and reformat your SD card as FAT32 with the recommended tool depending on your operating system (<a href="formatting-sd-(windows)">Windows</a>, <a href="formatting-sd-(mac)">macOS</a>, <a href="formatting-sd-(linux)">Linux</a>). MiniTool Partition Wizard and the HP formatting tool (HPUSBDisk) are known to cause issues with 3DS SD cards.</p>
+<p>Sauvegardez vos données et reformatez votre carte SD en FAT32 avec l’outil recommandé en fonction de votre système d’exploitation (<a href="formatting-sd-(windows)">Windows</a>, <a href="formatting-sd-(mac)">macOS</a>, <a href="formatting-sd-(linux)">Linux</a>). MiniTool Partition Wizard et l’outil de formatage d’HP (HPUSBDisk) sont connus pour causer des problèmes avec les cartes SD des 3DS.</p>
 
-<p>If this is unsuccessful, try using another SD card.</p>
+<p>Si cela échoue, essayez d’utiliser une autre carte SD.</p>
 </details>
 
 <h2 id="homebrew-launcher-super-skaterhax">Homebrew Launcher (super-skaterhax)</h2>
 
 <details>
-<summary><u>"An error has occured. Please save your data in any software currently in use, then restart the system."</u></summary>
+<summary><u>"Une erreur est survenue. Veuillez sauvegarder les données de tout logiciel en cours d'utilisation et redémarrer la console."</u></summary>
 
-<p>The date is set incorrectly. To set it correctly, follow these steps:</p>
+<p>La date n’est pas correctement configurée. Pour la configurer correctement, suivez ces étapes :</p>
 
 <ol>
-  <li>Select the System Settings icon on the HOME Menu, and tap Open.</li>
-  <li>Tap Other Settings.</li>
-  <li>Tap Date &amp; Time.</li>
-  <li>Tap Today’s date.</li>
-  <li>Tap Up/Down Arrows to set the correct Day, Month and Year.</li>
-  <li>Select OK to confirm.</li>
+  <li>Ouvrez les Paramètres de la console depuis le Menu HOME.</li>
+  <li>Allez dans Autres paramètres.</li>
+  <li>Puis Date et heure.</li>
+  <li>Appuyez sur Date.</li>
+  <li>Appuyez sur les flèches Haut/Bas pour définir le jour, le mois et l’année.</li>
+  <li>Appuyez sur OK pour confirmer.</li>
 </ol>
 
-<p>If the problem persists and you have a system version ending in E, and the language set to English, change the language to any other language <strong>temporarily</strong>. You can revert this change when you reach Finalizing Setup.</p>
+<p>Si le problème persiste et que vous avez une version du logiciel système se terminant par E, et que la langue est réglée sur l’anglais, changez la langue dans n’importe quelle autre langue <strong>temporairement</strong>. Vous pouvez annuler cette modification lorsque vous atteindrez la Finalisation de l’installation.</p>
 </details>
 
 <details>
-<summary><u>An exception occured or ErrDisp when pressing GO! GO!</u></summary>
+<summary><u>An exception occured ou ErrDisp en appuyant sur GO! GO!</u></summary>
 
-<p>This likely indicates that you already have custom firmware. You should <a href="checking-for-cfw">check for CFW</a>.</p>
+<p>Cela indique que vous avez probablement déjà un custom firmware. Vous devriez <a href="checking-for-cfw">vérifier la présence d’un CFW</a>.</p>
 
 </details>
 
-<h2 id="finalizing-setup">Finalizing Setup</h2>
+<h2 id="finalisation-de-linstallation">Finalisation de l’installation</h2>
 
 <details>
-<summary><u>Unable to update device</u></summary>
+<summary><u>Unable to update console</u></summary>
 
-<p>The steps below can be attempted in any order, but are listed from easiest to hardest to perform.</p>
+<p>Les étapes ci-dessous peuvent être tentées dans n’importe quel ordre, mais sont répertoriées de la plus facile à la plus difficile à exécuter.</p>
 
 <ol>
   <li>Réglez le paramètre “Obtention automatique d’un DNS” sur “Oui”</li>
@@ -899,86 +984,84 @@ If you have an Old 3DS / Old 3DS XL / 2DS, you can try a Safe Mode update, which
   <li>Connectez-vous à un point d’accès Wi-Fi différent, comme un point d’accès mobile</li>
   <li>Les serveurs de Nintendo sont peut-être en panne ; Réessayez plus tard</li>
   <li>Si vous recevez toujours un message d’erreur, <a href="ctrtransfer">suivez CTRTransfer</a>, puis réessayez</li>
-  <li>For further support (in English), join <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew on Discord</a></li>
+  <li>Pour plus d’assistance (en anglais), rejoignez <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew sur Discord</a></li>
 </ol>
 </details>
 
 <details>
-<summary><u>Unable to enter Rosalina menu due to broken Left Shoulder / Down D-Pad / Select button(s)</u></summary>
+<summary><u>Impossible d'entrer dans le menu Rosalina en raison des boutons (L) / Bas sur la croix directionnelle / Select cassés</u></summary>
 
-<p>Download this <a href="assets/config.ini">alternate config.ini</a> and place it in <code class="language-plaintext highlighter-rouge">/luma/</code>. This will change the Rosalina key combination to (X) + (Y).</p>
+<p>Téléchargez ce <a href="assets/config.ini">config.ini alternatif</a> et placez-le dans <code class="language-plaintext highlighter-rouge">/luma/</code>. Ceci changera la combinaison de touches du menu Rosalina en (X) + (Y).</p>
 </details>
 
 <details>
-<summary><u>"An exception occurred" or infinite "Nintendo 3DS" screen after trying to launch Homebrew Launcher from Download Play</u></summary>
+<summary><u>"Une erreur s'est produite" ou l'écran "Nintendo 3DS" tourne en boucle après avoir essayé de lancer l'Homebrew Launcher à partir du Mode téléchargement</u></summary>
 
-<p>There is an issue with your <code class="language-plaintext highlighter-rouge">boot.3dsx</code> file (it is missing, misplaced, or corrupted). Download the latest release of <a href="https://github.com/devkitPro/3ds-hbmenu/releases/latest">the Homebrew Launcher</a> and place <code class="language-plaintext highlighter-rouge">boot.3dsx</code> on the root of your SD card, replacing any existing file.</p>
+<p>Il y a un problème avec votre fichier <code class="language-plaintext highlighter-rouge">boot.3dsx</code> (il est absent, mal placé ou corrompu). Téléchargez la dernière version du <a href="https://github.com/devkitPro/3ds-hbmenu/releases/latest">Homebrew Launcher</a> et placez le fichier <code class="language-plaintext highlighter-rouge">boot.3dsx</code> à la racine de votre carte SD, en remplaçant tout fichier existant.</p>
 </details>
 
 <details>
-<summary><u>"Scripts directory not found" in GodMode9</u></summary>
+<summary><u>"Scripts directory not found" dans GodMode9</u></summary>
 
-<p>You did not copy the <code class="language-plaintext highlighter-rouge">gm9</code> folder from the GodMode9 <code class="language-plaintext highlighter-rouge">.zip</code> to the root of your SD card. Download the latest release of <a href="https://github.com/d0k3/GodMode9/releases/latest">GodMode9</a> and place the <code class="language-plaintext highlighter-rouge">gm9</code> folder on the root of your SD card, merging it with the existing one.</p>
+<p>Vous n’avez pas copié le dossier <code class="language-plaintext highlighter-rouge">gm9</code> de l’archive <code class="language-plaintext highlighter-rouge">.zip</code> de GodMode9 vers la racine de votre carte SD. Téléchargez la dernière version de <a href="https://github.com/d0k3/GodMode9/releases/latest">GodMode9</a> et placez le dossier <code class="language-plaintext highlighter-rouge">gm9</code> à la racine de votre carte SD, en le fusionnant avec celui existant.</p>
 </details>
 
 <details>
-<summary><u>"Backup failed" or "Error: Could not open directory" when attempting a NAND backup</u></summary>
-<p>Make sure you have at least 1.3GB available in your SD card. If you don’t have enough space, follow these steps:</p>
+<summary><u>"Backup failed" ou "Error: Could not open directory" lorsque vous essayez de créer une sauvegarde de la NAND</u></summary>
+<p>Assurez-vous d’avoir au moins 1,3 Go d’espace disponible sur votre carte SD. Si vous n’avez pas assez d’espace, suivez ces étapes :</p>
 <ol>
-  <li>Power off your console</li>
-  <li>Remove the SD card and insert it into your computer</li>
-  <li>Copy the <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> folder from the root of your SD card to your computer</li>
-  <li>Delete the Nintendo 3DS folder from the SD card</li>
-  <li>Reinsert your SD card into your console</li>
-  <li>Power off your console, hold START and power on still holding START to boot on GodMode9</li>
-  <li>Perform a <a href="godmode9-usage#creating-a-nand-backup">NAND Backup</a></li>
-  <li>Copy the files in <code class="language-plaintext highlighter-rouge">gm9/out</code> on your SD to a safe location on your computer</li>
-  <li>Delete the <code class="language-plaintext highlighter-rouge">&lt;date&gt;_&lt;serialnumber&gt;_sysnand_##.bin</code> and <code class="language-plaintext highlighter-rouge">&lt;date&gt;_&lt;serialnumber&gt;_sysnand_##.bin.sha</code> files from the SD card, keeping essential.exefs in <code class="language-plaintext highlighter-rouge">/gm9/out/</code></li>
-  <li>Copy the <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> folder from your computer to the root of your SD card</li>
-  <li>Delete the <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> folder from your computer</li>
+  <li>Éteignez votre console</li>
+  <li>Retirez la carte SD et insérez-la dans votre ordinateur</li>
+  <li>Copiez le dossier <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> depuis la racine de votre carte SD vers votre ordinateur</li>
+  <li>Supprimez le dossier Nintendo 3DS de votre carte SD</li>
+  <li>Réinsérez votre carte SD dans votre console</li>
+  <li>Éteignez votre console, maintenez START et allumez la console tout en continuant à maintenir START appuyé pour lancer GodMode9</li>
+  <li>Effectuer une <a href="godmode9-usage#creating-a-nand-backup">sauvegarde de la NAND</a></li>
+  <li>Copiez les fichiers du dossier <code class="language-plaintext highlighter-rouge">gm9/out</code> de votre carte SD vers un endroit sûr sur votre ordinateur</li>
+  <li>Supprimez les fichiers <code class="language-plaintext highlighter-rouge">&lt;date&gt;_&lt;serialnumber&gt;_sysnand_##.bin</code> et <code class="language-plaintext highlighter-rouge">&lt;date&gt;_&lt;serialnumber&gt;_sysnand_##.bin.sha</code> de votre carte SD, en gardant essential.exefs dans <code class="language-plaintext highlighter-rouge">/gm9/out/</code></li>
+  <li>Copiez le dossier <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> de votre ordinateur vers la racine de votre carte SD</li>
+  <li>Supprimez le dossier <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> de votre ordinateur</li>
 </ol>
 
-<p>If you have enough space on your SD card, your SD might be corrupted or faulty. Check your SD card for any errors by following the guide according to your computer’s operating system: <a href="h2testw-(windows)">Windows</a>, <a href="f3-(linux)">Linux</a>, <a href="f3xswift-(mac)">macOS</a>.</p>
+<p>Si vous avez assez d’espace sur votre carte SD, votre carte SD pourrait être corrompue ou défectueuse. Vérifiez si votre carte SD est corrompue ou défectueuse en suivant le guide correspondant au système d’exploitation de votre ordinateur : <a href="h2testw-(windows)">Windows</a>, <a href="f3-(linux)">Linux</a>, <a href="f3xswift-(mac)">macOS</a>.</p>
 </details>
 
 <hr />
 
-<h2 id="boot-issues-on-devices-with-custom-firmware">Boot issues on devices with custom firmware</h2>
+<h2 id="boot-issues-on-consoles-with-custom-firmware">Boot issues on consoles with custom firmware</h2>
 
-<p class="notice--info">The steps detailed here generally assume that your device has a modern custom firmware setup (boot9strap + Luma3DS 8.0 or greater). If your console is running an older homebrew setup (for example, something based on arm9loaderhax or menuhax), you should update your setup before trying these instructions.</p>
+<p class="notice--info">The steps detailed here generally assume that your console has a modern custom firmware setup (boot9strap + Luma3DS 8.0 or greater). Si votre console exécute une ancienne configuration homebrew (par exemple, quelque chose basé sur arm9loaderhax ou menuhax), vous devez mettre à jour votre configuration avant d’essayer ces instructions.</p>
 
-<h3 id="powernotification-light-indicators">Power/notification light indicators</h3>
+<h3 id="leds-dalimentationde-notification">LEDs d’alimentation/de notification</h3>
 
 <details>
-<summary><u>My device powers off when I try to turn it on, and/or the notification LED shows a color on boot</u></summary>
+<summary><u>My console powers off when I try to turn it on, and/or the notification LED shows a color on boot</u></summary>
 
-<p>There is an issue with your <code class="language-plaintext highlighter-rouge">boot.firm</code> file. If you’re running <a href="https://github.com/SciresM/boot9strap/releases/tag/1.4">boot9strap 1.4</a>, your 3DS notification LED may flash a certain color. This color is used to diagnose issues involving your <code class="language-plaintext highlighter-rouge">boot.firm</code> file on SD card or internal memory. On older versions of boot9strap, the blue light will power off almost immediately when trying to turn on the device.</p>
+<p>Il y a un problème avec votre fichier <code class="language-plaintext highlighter-rouge">boot.firm</code>. Si vous utilisez <a href="https://github.com/SciresM/boot9strap/releases/tag/1.4">boot9strap 1.4</a>, votre LED de notification devrait clignoter d’une certaine couleur. Cette couleur est utilisée pour diagnostiquer des problèmes concernant votre fichier <code class="language-plaintext highlighter-rouge">boot.firm</code> sur la carte SD ou la mémoire interne. On older versions of boot9strap, the blue light will power off almost immediately when trying to turn on the console.</p>
 
-<p>If the notification LED flashes:</p>
+<p>Si la LED de notification clignote :</p>
 
-<ul>
-  <li><strong>White</strong>: Your 3DS was not able to find <code class="language-plaintext highlighter-rouge">boot.firm</code> on your SD card or on internal memory.</li>
-  <li><strong>Magenta</strong>: Your 3DS was not able to find <code class="language-plaintext highlighter-rouge">boot.firm</code> on your SD card. It was able to find <code class="language-plaintext highlighter-rouge">boot.firm</code> on internal memory, but the file is corrupted.</li>
-  <li><strong>Red</strong>: Your 3DS was able to find <code class="language-plaintext highlighter-rouge">boot.firm</code> on both your SD card and on internal memory, but both files are corrupted.</li>
-</ul>
+<p>-<strong>Blanc</strong> : Votre 3DS n’a pas pu trouver le fichier <code class="language-plaintext highlighter-rouge">boot.firm</code> sur votre carte SD ou sur la mémoire interne.
+-<strong>Magenta</strong> : Votre 3DS n’a pas pu trouver le fichier <code class="language-plaintext highlighter-rouge">boot.firm</code> sur votre carte SD. Elle a pu trouver le fichier <code class="language-plaintext highlighter-rouge">boot.firm</code> sur la mémoire interne, mais le fichier est corrompu.
+-<strong>Rouge</strong> : Votre 3DS a trouvé le fichier <code class="language-plaintext highlighter-rouge">boot.firm</code> sur votre carte SD et sur la mémoire interne, mais les deux fichiers sont corrompus.</p>
 
-<p>You can get a new <code class="language-plaintext highlighter-rouge">boot.firm</code> file by downloading the <a href="https://github.com/LumaTeam/Luma3DS/releases/latest">latest release of Luma3DS</a>, extracting it, and placing <code class="language-plaintext highlighter-rouge">boot.firm</code> on the root of your SD card. If your <code class="language-plaintext highlighter-rouge">boot.firm</code> file is consistently being detected as corrupted, you may want to check your SD card for errors (<a href="h2testw-(windows)">Windows</a>, <a href="f3-(linux)">Linux</a>, or <a href="f3xswift-(mac)">macOS</a>). Also, note that the 3DS tends to have issues with files extracted using WinRAR.</p>
+<p>Vous pouvez obtenir un nouveau fichier <code class="language-plaintext highlighter-rouge">boot.firm</code> en téléchargeant la <a href="https://github.com/LumaTeam/Luma3DS/releases/latest">dernière version de Luma3DS</a>, extrayez l’archive et placez le fichier <code class="language-plaintext highlighter-rouge">boot.firm</code> à la racine de votre carte SD. Si votre fichier <code class="language-plaintext highlighter-rouge">boot.firm</code> est constamment détecté comme corrompu, vous devriez vérifier si votre carte SD est corrompue (<a href="h2testw-(windows)">Windows</a>, <a href="f3-(linux)">Linux</a>, ou <a href="f3xswift-(mac)">macOS</a>). Notez également que la 3DS a tendance à avoir des problèmes avec les fichiers extraits à l’aide de WinRAR.</p>
 
-<p>If you hear a “popping sound”, potentially accompanied with the backlight turning on for a split second, there is a hardware issue with your device (such as a disconnected backlight cable). You may be able to get your device to boot by holding it at certain angles.</p>
+<p>If you hear a “popping sound”, potentially accompanied with the backlight turning on for a split second, there is a hardware issue with your console (such as a disconnected backlight cable). You may be able to get your console to boot by holding it at certain angles.</p>
 </details>
 
 <details>
-<summary><u>My device gets stuck on a black screen with blue power light staying on</u></summary>
+<summary><u>My console gets stuck on a black screen with blue power light staying on</u></summary>
 
-<p>The steps below can be attempted in any order, but are listed from least to most time-consuming.</p>
+<p>Les étapes ci-dessous peuvent être tentées dans n’importe quel ordre, mais sont répertoriées de la moins longue à la plus longue.</p>
 
 <ol>
-  <li>Power off your device, remove the SD card, re-insert it, then power on your device.</li>
-  <li>Power off your device, eject the game cartridge if inserted, power on your device, then wait up to ten minutes. If your device boots within ten minutes, the issue has been fixed and is unlikely to reoccur</li>
-  <li>Rename the <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> folder on your SD card to <code class="language-plaintext highlighter-rouge">Nintendo 3DS_BACKUP</code>, then attempt to boot. If your device successfully boots, there is some issue within your <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> folder. Try clearing HOME Menu extdata:
+  <li>Power off your console, remove the SD card, re-insert it, then power on your console.</li>
+  <li>Power off your console, eject the game cartridge if inserted, power on your console, then wait up to ten minutes. If your console boots within ten minutes, the issue has been fixed and is unlikely to reoccur</li>
+  <li>Renommez le dossier <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> sur votre carte SD en <code class="language-plaintext highlighter-rouge">Nintendo 3DS_BACKUP</code>, puis essayez de démarrer. If your console successfully boots, there is some issue within your <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> folder. Essayez d’effacer les données “extdata” du Menu HOME :
     <ul>
-      <li>Navigate to <code class="language-plaintext highlighter-rouge">/Nintendo 3DS/&lt;ID0&gt;/&lt;ID1&gt;/extdata/00000000/</code>
-      + Delete the corresponding folder for your 3DS region:
+      <li>Naviguez vers <code class="language-plaintext highlighter-rouge">/Nintendo 3DS/&lt;ID0&gt;/&lt;ID1&gt;/extdata/00000000/</code>
+      + Supprimez le dossier correspondant à la région de votre 3DS :
         <ul>
           <li><strong>Région EUR</strong> : <code class="language-plaintext highlighter-rouge">00000098</code></li>
           <li><strong>Région JPN</strong> : <code class="language-plaintext highlighter-rouge">00000082</code></li>
@@ -990,129 +1073,129 @@ If you have an Old 3DS / Old 3DS XL / 2DS, you can try a Safe Mode update, which
       </li>
     </ul>
   </li>
-  <li>Try booting into recovery mode and updating your system:
+  <li>Essayez de démarrer en mode de récupération et de mettre à jour votre console :
     <ul>
-      <li>Éteignez votre console</li>
-      <li>Hold (Left Shoulder) + (Right Shoulder) + (D-Pad Up) + (A)</li>
-      <li>Power on your device</li>
-      <li>If you were successful, the device will boot to an “update your system” screen</li>
+      <li>Power off your console</li>
+      <li>Maintenez (L) + (R) + (Haut sur la croix directionnelle) + (A)</li>
+      <li>Power on your console</li>
+      <li>If you were successful, the console will boot to an “update your system” screen</li>
     </ul>
   </li>
-  <li>Follow the <a href="ctrtransfer">CTRTransfer</a> guide</li>
-  <li>For further support, ask for help at <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew on Discord</a></li>
+  <li>Suivez le guide <a href="ctrtransfer">CTRTransfer</a></li>
+  <li>Pour plus d’assistance, demandez de l’aide sur <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew sur Discord</a></li>
 </ol>
 </details>
 
-<h3 id="error-message-on-boot">Error message on boot</h3>
+<h3 id="message-derreur-au-démarrage">Message d’erreur au démarrage</h3>
 
 <details>
-<summary><u>"An error has occurred: Failed to apply 1 FIRM patch(es)" or "An exception has occurred -- Current process: pm"</u></summary>
+<summary><u>"An error has occurred: Failed to apply 1 FIRM patch(es)" ou "An exception has occurred -- Current process: pm"</u></summary>
 
-<p>Your Luma3DS version is outdated. Download the latest release of <a href="https://github.com/LumaTeam/Luma3DS/releases/latest">Luma3DS</a> and place <code class="language-plaintext highlighter-rouge">boot.firm</code> on the root of your SD card, replacing any existing file. Make sure you are extracting the ZIP file with any tool other than WinRAR, as it is known to cause issues with 3DS-related files.</p>
+<p>Votre version de Luma3DS est obsolète. Téléchargez la dernière version de <a href="https://github.com/LumaTeam/Luma3DS/releases/latest">Luma3DS</a> et placez le fichier <code class="language-plaintext highlighter-rouge">boot.firm</code> à la racine de votre carte SD, en remplaçant tout fichier existant. Assurez-vous d’extraire le fichier ZIP avec un outil autre que WinRAR, car il est connu pour causer des problèmes avec les fichiers liés à 3DS.</p>
 </details>
 
 <details>
 <summary><u>"Unable to mount CTRNAND or load the CTRNAND FIRM. Please use an external one."</u></summary>
-<p>There are a number of reasons as to why this could be happening. In any case, this error can usually be fixed by following the <a href="ctrtransfer">CTRTransfer</a> guide.</p>
+<p>Plusieurs raisons peuvent expliquer pourquoi cela pourrait se produire. Dans tous les cas, cette erreur peut généralement être corrigée en suivant le guide <a href="ctrtransfer">CTRTransfer</a>.</p>
 </details>
 
 <details>
-<summary><u>"An error has occurred. Hold down the POWER button to turn off the power..."</u></summary>
+<summary><u>"Une erreur est survenue. Maintenez le bouton POWER enfoncé pour éteindre la console..."</u></summary>
 
-<p>ARM11 exception handlers are disabled, or custom firmware is not installed. Try enabling ARM11 exception handlers:</p>
+<p>Les gestionnaires d’exceptions ARM11 sont désactivés ou le custom firmware n’est pas installé. Essayez d’activer le gestionnaire d’exceptions ARM11 :</p>
 <ul>
-  <li>Éteignez votre console</li>
-  <li>Hold (Select)</li>
-  <li>Power on your device, while still holding (Select)</li>
-  <li>If the “Disable ARM11 exception handlers” box is checked, uncheck it</li>
+  <li>Power off your console</li>
+  <li>Maintenez (Select) appuyé</li>
+  <li>Power on your console, while still holding (Select)</li>
+  <li>Si la case “Disable ARM11 exception handlers” est cochée, décochez-la</li>
 </ul>
 </details>
 
 <details>
-<summary><u>HOME Menu is missing installed applications</u></summary>
+<summary><u>Le Menu HOME ne contient pas les applications installées</u></summary>
 
-<p>This could be caused by various reasons, but most likely because your SD card is not being read by the system.
-You can check if your SD is being read by holding SELECT on boot and checking the yellow text on the bottom screen; if it says “Booted from CTRNAND via B9S”, then your device is booting from the internal memory and not from the SD card.
-If this is the case, attempt the steps below, which are listed from easiest to hardest:</p>
+<p>Cela peut être causé par diverses raisons, mais probablement parce que votre carte SD n’est pas lue par la console.
+You can check if your SD is being read by holding SELECT on boot and checking the yellow text on the bottom screen; if it says “Booted from CTRNAND via B9S”, then your console is booting from the internal memory and not from the SD card.
+Si c’est le cas, essayez les étapes ci-dessous, qui sont listées du plus simple au plus difficile :</p>
 <ol>
-  <li>Power off your device, remove the SD card, re-insert it, then power on your device</li>
-  <li>Power off your device, remove the SD card, insert it on your PC, download the latest release of <a href="https://github.com/LumaTeam/Luma3DS/releases/latest">Luma3DS</a>, extract <code class="language-plaintext highlighter-rouge">boot.firm</code> from the <code class="language-plaintext highlighter-rouge">Luma3DS.zip</code> and place it on the root of your SD card (replacing any existing file)</li>
-  <li>Power off your device, remove the SD card, insert it on your PC and reformat your SD card according to your computer’s operating system: <a href="formatting-sd-(windows)">Windows</a>, <a href="formatting-sd-(mac)">macOS</a>, <a href="formatting-sd-(linux)">Linux</a> <em>(this will wipe your SD card data)</em></li>
-  <li>Test your SD card for errors by following the guide according to your computer’s operating system: <a href="h2testw-(windows)">Windows</a>, <a href="f3-(linux)">Linux</a>, <a href="f3xswift-(mac)">macOS</a>. If your SD card is marked as faulty, then you will have to replace your SD card</li>
-  <li>Your SD card slot may be broken. Join <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew on Discord</a> for further assistance</li>
+  <li>Power off your console, remove the SD card, re-insert it, then power on your console</li>
+  <li>Power off your console, remove the SD card, insert it on your PC, download the latest release of <a href="https://github.com/LumaTeam/Luma3DS/releases/latest">Luma3DS</a>, extract <code class="language-plaintext highlighter-rouge">boot.firm</code> from the <code class="language-plaintext highlighter-rouge">Luma3DS.zip</code> and place it on the root of your SD card (replacing any existing file)</li>
+  <li>Power off your console, remove the SD card, insert it on your PC and reformat your SD card according to your computer’s operating system: <a href="formatting-sd-(windows)">Windows</a>, <a href="formatting-sd-(mac)">macOS</a>, <a href="formatting-sd-(linux)">Linux</a> <em>(this will wipe your SD card data)</em></li>
+  <li>Testez votre carte SD en suivant le guide correspondant au système d’exploitation de votre ordinateur : <a href="h2testw-(windows)">Windows</a>, <a href="f3-(linux)">Linux</a>, <a href="f3xswift-(mac)">macOS</a>. Si votre carte SD est marquée comme défectueuse, vous devrez remplacer votre carte SD</li>
+  <li>Il est possible que votre port carte SD soit cassé. Rejoignez <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew sur Discord</a> pour obtenir une aide approfondie</li>
 </ol>
 </details>
 
 <details>
-<summary><u>Blue "BOOTROM ERROR" screen</u></summary>
+<summary><u>Écran bleu "BOOTROM ERROR"</u></summary>
 
-<p>Your device is likely hard-bricked. You will need to buy an ntrboot flashcart to reinstall boot9strap in order to attempt to fix your device. This may also indicate a hardware issue that cannot be fixed. In any case, join <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew on Discord</a> for assistance.</p>
+<p>Your console is likely hard-bricked. You will need to buy an ntrboot flashcart to reinstall boot9strap in order to attempt to fix your console. Cela peut également indiquer un problème matériel qui ne peut pas être résolu. Dans tous les cas, rejoignez <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew sur Discord</a> pour obtenir de l’aide.</p>
 <ul>
-  <li>It is also possible that someone has set a boot-time splash screen that just looks like a brick. Try leaving your device powered on, waiting on the blue screen, for five minutes.</li>
+  <li>Il est également possible que quelqu’un ait défini un écran de démarrage qui ressemble à un brick. Try leaving your console powered on, waiting on the blue screen, for five minutes.</li>
 </ul>
 </details>
 
 <details>
-<summary><u>Some other error</u></summary>
+<summary><u>Autres erreurs</u></summary>
 
-<p>Please take a photo of the error and join <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew on Discord</a> for assistance.</p>
+<p>Veuillez prendre une photo de l’erreur et rejoindre <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew sur Discord</a> pour obtenir de l’aide.</p>
 </details>
 
-<h2 id="software-issues-on-devices-with-custom-firmware">Software issues on devices with custom firmware</h2>
+<h2 id="software-issues-on-consoles-with-custom-firmware">Software issues on consoles with custom firmware</h2>
 
 <details>
-<summary><u>DSi / DS functionality is broken or has been replaced with Flipnote Studio</u></summary>
+<summary><u>La fonctionnalité DSi / DS est cassée ou a été remplacée par Flipnote Studio</u></summary>
 
 <ol>
-  <li>Download the latest release of <a href="https://github.com/MechanicalDragon0687/TWLFix-CFW/releases/latest">TWLFix-CFW</a> (the <code class="language-plaintext highlighter-rouge">.3dsx</code> file)</li>
-  <li>Éteignez votre 3DS</li>
+  <li>Téléchargez la dernière version de <a href="https://github.com/MechanicalDragon0687/TWLFix-CFW/releases/latest">TWLFix-CFW</a> (le fichier <code class="language-plaintext highlighter-rouge">.3dsx</code>)</li>
+  <li>Éteignez votre console</li>
   <li>Créez un dossier nommé <code class="language-plaintext highlighter-rouge">3ds</code> à la racine de votre carte SD si celui ci n’existe pas</li>
   <li>Copiez <code class="language-plaintext highlighter-rouge">TWLFix-CFW.3dsx</code> dans le dossier <code class="language-plaintext highlighter-rouge">/3ds/</code> de votre carte SD</li>
-  <li>Retirez la carte SD de votre ordinateur et réinsérez-là dans votre 3DS</li>
+  <li>Réinsérez votre carte SD dans votre console</li>
   <li>Ouvrez le Homebrew Launcher</li>
   <li>Lancez TWLFix-CFW que vous trouverez dans la liste des homebrews</li>
   <li>Appuyez sur (A) pour désinstaller les titres TWL corrompus</li>
-  <li>Appuyez sur (Start) pour redémarrer la console</li>
+  <li>Press (Start) to reboot the console</li>
   <li>Effectuez une Mise à jour du Système en vous rendant dans les Paramètres de la console, puis “Autres paramètres”, puis tout à droite sur l’option “Mise à jour du Système”
     <ul>
       <li>Le processus de mise à jour verra que les titres TWL essentiels ont été désinstallés, et va les re-télécharger et les réinstaller</li>
     </ul>
   </li>
-  <li>Une fois la mise à jour terminée, appuyez sur “OK” pour redémarrer la console</li>
+  <li>Once the update is complete, tap “OK” to reboot the console</li>
 </ol>
 </details>
 
 <details>
-<summary><u>GBA Virtual Console and/or Safe Mode functionality is broken</u></summary>
+<summary><u>La fonctionnalité Console Virtuelle GBA et/ou mode sans échec est cassée</u></summary>
 
-<p>Your device is running Luma3DS 6.6 or older, likely via arm9loaderhax. You should follow <a href="a9lh-to-b9s">A9LH to B9S</a> to update your device to a modern custom firmware environment.</p>
+<p>Your console is running Luma3DS 6.6 or older, likely via arm9loaderhax. You should follow <a href="a9lh-to-b9s">A9LH to B9S</a> to update your console to a modern custom firmware environment.</p>
 </details>
 
 <details>
-<summary><u>Extended memory mode games (Pokemon Sun/Moon, Smash, etc.) don't work</u></summary>
+<summary><u>Les jeux en mode mémoire étendue (Pokémon Soleil/Lune, Smash, etc.) ne fonctionnent pas</u></summary>
 
-<p>This can occur after a CTRTransfer or region change on Old 3DS / 2DS. You will need to system format your device to fix this issue.</p>
+<p>Cela peut se produire après un CTRTransfer ou un changement de région sur Old 3DS / 2DS. You will need to system format your console to fix this issue.</p>
 </details>
 
 <details>
-<summary><u>Exception screen when booting/loading an application</u></summary>
+<summary><u>Message d'erreur lors du démarrage/chargement d'une application</u></summary>
 
-<p>Look for your exception screen in <a href="https://wiki.hacks.guide/wiki/3DS:Error_screens/Luma3DS_exception_screen">this page</a>.
-If you weren’t able to find your error or the instructions didn’t work, join <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew on Discord</a> for further assistance.</p>
+<p>Recherchez votre message d’erreur sur <a href="https://wiki.hacks.guide/wiki/3DS:Error_screens/Luma3DS_exception_screen">cette page</a>.
+Si vous n’avez pas pu trouver votre message erreur ou si les instructions n’ont pas fonctionné, rejoignez <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew sur Discord</a> pour obtenir de l’aide.</p>
 </details>
 
 <hr />
 
-<h2 id="other-troubleshooting">Other troubleshooting</h2>
+<h2 id="autres-dépannages">Autres dépannages</h2>
 
 <details>
-<summary><u>Clear HOME Menu extdata</u></summary>
+<summary><u>Effacer les "extdata" du Menu HOME</u></summary>
 
 <ol>
-  <li>Éteignez votre 3DS</li>
+  <li>Éteignez votre console</li>
   <li>Insérez votre carte SD dans votre ordinateur</li>
-  <li>Navigate to the <code class="language-plaintext highlighter-rouge">/Nintendo 3DS/&lt;ID0&gt;/&lt;ID1&gt;/extdata/00000000/</code> folder on your SD card</li>
-  <li>Delete the corresponding folder for your 3DS region:
+  <li>Naviguez vers le dossier <code class="language-plaintext highlighter-rouge">/Nintendo 3DS/&lt;ID0&gt;/&lt;ID1&gt;/extdata/00000000/</code> sur votre carte SD</li>
+  <li>Supprimez le dossier correspondant à la région de votre 3DS :
     <ul>
       <li><strong>Région EUR</strong> : <code class="language-plaintext highlighter-rouge">00000098</code></li>
       <li><strong>Région JPN</strong> : <code class="language-plaintext highlighter-rouge">00000082</code></li>
@@ -1122,44 +1205,44 @@ If you weren’t able to find your error or the instructions didn’t work, join
       <li><strong>Région TWN</strong> : <code class="language-plaintext highlighter-rouge">000000B1</code></li>
     </ul>
   </li>
-  <li>Retirez la carte SD de votre ordinateur et réinsérez-là dans votre 3DS</li>
+  <li>Réinsérez votre carte SD dans votre console</li>
 </ol>
 </details>
 
 <details>
-<summary><u>Clear HOME Menu theme data</u></summary>
+<summary><u>Effacer les données de thème du Menu HOME</u></summary>
 
 <ol>
-  <li>Éteignez votre 3DS</li>
+  <li>Éteignez votre console</li>
   <li>Insérez votre carte SD dans votre ordinateur</li>
-  <li>Navigate to the <code class="language-plaintext highlighter-rouge">/Nintendo 3DS/&lt;ID0&gt;/&lt;ID1&gt;/extdata/00000000/</code> folder on your SD card</li>
-  <li>Delete the corresponding folder for your 3DS region:
+  <li>Naviguez vers le dossier <code class="language-plaintext highlighter-rouge">/Nintendo 3DS/&lt;ID0&gt;/&lt;ID1&gt;/extdata/00000000/</code> sur votre carte SD</li>
+  <li>Supprimez le dossier correspondant à la région de votre 3DS :
     <ul>
-      <li><strong>EUR Region</strong>: <code class="language-plaintext highlighter-rouge">000002ce</code></li>
-      <li><strong>JPN Region</strong>: <code class="language-plaintext highlighter-rouge">000002cc</code></li>
-      <li><strong>USA Region</strong>: <code class="language-plaintext highlighter-rouge">000002cd</code></li>
+      <li><strong>Région EUR</strong> : <code class="language-plaintext highlighter-rouge">000002ce</code></li>
+      <li><strong>Région JPN</strong> : <code class="language-plaintext highlighter-rouge">000002cc</code></li>
+      <li><strong>Région USA</strong> : <code class="language-plaintext highlighter-rouge">000002cd</code></li>
     </ul>
   </li>
-  <li>Retirez la carte SD de votre ordinateur et réinsérez-là dans votre 3DS</li>
+  <li>Réinsérez votre carte SD dans votre console</li>
 </ol>
 </details>
 
 <details>
-<summary><u>Turning off Parental Controls</u></summary>
+<summary><u>Désactivation du Contrôle parental</u></summary>
 
-<p>You can disable the Parental Controls feature by going to System Settings -&gt; Parental Controls and inserting the PIN, then pressing “Clear Settings”, then “Delete” to remove it.
-However, if you do not know the PIN and therefore cannot access the device’s settings, you will need to disable it. In order to do this, you need to obtain your device’s master key (mkey):</p>
+<p>Vous pouvez désactiver la fonction Contrôle parental en allant dans Paramètres de la console -&gt; Contrôle parental et en insérant le PIN, puis appuyez sur “Effacer les paramètres”, puis “Effacer” pour le désactiver.
+However, if you do not know the PIN and therefore cannot access the console’s settings, you will need to disable it. In order to do this, you need to obtain your console’s master key (mkey):</p>
 <ol>
-  <li>Go to <a href="https://mkey.eiphax.tech/">this website</a></li>
-  <li>Fill the following boxes with the information:
+  <li>Allez sur <a href="https://mkey.eiphax.tech/">ce site web</a></li>
+  <li>Remplissez les champs avec les informations suivantes :
     <ul>
-      <li>Device Type: Select “3DS” (the same applies if you are using a 2DS, New 3DS (XL/LL) or New 2DS (XL/LL))</li>
-      <li>System Date: The day and month your console’s clock is set to</li>
-      <li>Inquiry Number: Can be obtained by pressing “Forgot PIN” then “I Forgot” in the Parental Controls screen</li>
+      <li>Console Type: Select “3DS” (the same applies if you are using a 2DS, New 3DS (XL/LL) or New 2DS (XL/LL))</li>
+      <li>System date : Le jour et le mois de l’horloge sur laquelle votre console est réglée</li>
+      <li>Inquiry number : (Code d’assistance) Peut être obtenu en appuyant sur “Code PIN oublié” puis “J’ai oublié” dans l’écran du Contrôle parental</li>
     </ul>
   </li>
-  <li>After you have obtained your mkey, press OK on the screen you have obtained your Inquiry Number, then input the master key</li>
-  <li>Press “Clear Settings”, then “Delete” to remove all Parental Controls data</li>
+  <li>Une fois que vous avez obtenu votre code général, appuyez sur OK sur l’écran sur lequel vous avez obtenu votre code d’assistance, puis saisissez le code général</li>
+  <li>Appuyez sur “Effacer les paramètres”, puis “Effacer” pour supprimer toutes les données du Contrôle parental</li>
 </ol>
 </details>
 

@@ -314,11 +314,35 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="updating-firmware-(new-3ds)"><a href='/nl_NL/updating-firmware-(new-3ds)'>Updating Firmware (New 3DS)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="updating-firmware-(kor)"><a href='/nl_NL/updating-firmware-(kor)'>Updating Firmware (KOR)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="updating-firmware-(twn)"><a href='/nl_NL/updating-firmware-(twn)'>Updating Firmware (TWN)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="ntrboot"><a href='/nl_NL/ntrboot'>ntrboot</a></li>
           
         
           
+            <li style="display: none;" data-name="alternate-exploits"><a href='/nl_NL/alternate-exploits'>Alternate Exploits</a></li>
+          
+        
+          
             <li style="display: none;" data-name="seedminer"><a href='/nl_NL/seedminer'>Seedminer</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(alternate)"><a href='/nl_NL/seedminer-(alternate)'>Seedminer (Alternate)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(mii)"><a href='/nl_NL/seedminer-(mii)'>Seedminer (Mii)</a></li>
           
         
           
@@ -330,7 +354,31 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="bannerbomb3-(legacy)"><a href='/nl_NL/bannerbomb3-(legacy)'>BannerBomb3 (Legacy)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(ninjhax2-dx)"><a href='/nl_NL/homebrew-launcher-(ninjhax2-dx)'>Homebrew Launcher (ninjhax2-dx)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(pichaxx)"><a href='/nl_NL/homebrew-launcher-(pichaxx)'>Homebrew Launcher (PicHaxx)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(smilehax-iie)"><a href='/nl_NL/homebrew-launcher-(smilehax-iie)'>Homebrew Launcher (smilehax-IIe)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(steelhax)"><a href='/nl_NL/homebrew-launcher-(steelhax)'>Homebrew Launcher (Steelhax)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="homebrew-launcher-(super-skaterhax)"><a href='/nl_NL/homebrew-launcher-(super-skaterhax)'>Homebrew Launcher (super-skaterhax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="dumping-eshop-dsiware"><a href='/nl_NL/dumping-eshop-dsiware'>Dumping eShop DSiWare</a></li>
           
         
           
@@ -387,6 +435,14 @@ window.cookieconsent.initialise({
         
           
             <li style="display: none;" data-name="installing-boot9strap-(fredtool)"><a href='/nl_NL/installing-boot9strap-(fredtool)'>Installing boot9strap (Fredtool)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(fredtool-inject)"><a href='/nl_NL/installing-boot9strap-(fredtool-inject)'>Installing boot9strap (Fredtool-Inject)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(fredtool-legacy)"><a href='/nl_NL/installing-boot9strap-(fredtool-legacy)'>Installing boot9strap (Fredtool, Legacy)</a></li>
           
         
           
@@ -461,14 +517,14 @@ window.cookieconsent.initialise({
   </nav>
 </aside>
 
-<p>Voordat we deze handleiding starten, zullen we zien of custom firmware al geïnstalleerd is en de huidige systeemversie van je apparaat controleren.</p>
+<p>Before starting this guide, we will see if custom firmware is already installed and check the current system version of your console.</p>
 
 <h4 id="deel-i---cfw-controle">Deel I - CFW Controle</h4>
 
 <ol>
-  <li>Schakel je 3DS uit</li>
+  <li>Power off your console</li>
   <li>Houd de (Select) knop ingedrukt</li>
-  <li>Zet je 3DS aan terwijl je de (Select) knop ingedrukt houdt</li>
+  <li>Power on your console while still holding the (Select) button</li>
   <li>Als je geen ongewoon menu ziet (bijv. “Luma3DS Configuration”), kan je naar het volgende gedeelte gaan</li>
 </ol>
 
@@ -477,13 +533,13 @@ window.cookieconsent.initialise({
 <h4 id="deel-ii---systeemversie-controle">Deel II - Systeemversie controle</h4>
 
 <ol>
-  <li>Open de System Settings app</li>
-  <li>Je systeemversie wordt rechtsonder op het bovenste scherm weergegeven (bijv. “Ver. 11.16.0-49U”)</li>
+  <li>Launch System Settings on your console</li>
+  <li>Je systeemversie wordt rechtsonder op het bovenste scherm weergegeven (bijv. “Ver. 11.17.0-50U”)</li>
 </ol>
 
 <h4 id="deel-iii---selecteer-een-methode">Deel III - Selecteer een methode</h4>
 
-<p>To find the correct method for your device, please enter the system version you found in Section II.</p>
+<p>To find the correct method for your console, please enter the system version you found in Section II.</p>
 
 <table id="modeltable" class="modeltable" style="display:none">
   <thead>
@@ -528,6 +584,7 @@ window.cookieconsent.initialise({
         <option>14</option>
         <option>15</option>
         <option>16</option>
+        <option>17</option>
     </select>.<select id="whydidnintendodecidetodothingslikethis">
       <option>0</option>
     </select>-<select id="nver">
@@ -581,6 +638,7 @@ window.cookieconsent.initialise({
         <option>47</option>
         <option>48</option>
         <option>49</option>
+        <option>50</option>
     </select><select id="region">
       <option>E</option>
       <option>U</option>
@@ -605,7 +663,7 @@ System model is required.
 This doesn't seem to be a valid system version.
 </p>
 <p id="result_methodUnavailable" style="display:none">
-You currently cannot hack your 3DS on this version using the main methods. If you want to hack your console, you have to use ntrboot.
+You currently cannot hack your 3DS on this version using the main methods. If you want to hack your console, you may have to use ntrboot.
 </p>
 
 <script src="/assets/js/selecting.js"></script>

@@ -314,11 +314,35 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="updating-firmware-(new-3ds)"><a href='/fr_FR/updating-firmware-(new-3ds)'>Mise à jour du logiciel système (New 3DS)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="updating-firmware-(kor)"><a href='/fr_FR/updating-firmware-(kor)'>Mise à jour du logiciel système (KOR)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="updating-firmware-(twn)"><a href='/fr_FR/updating-firmware-(twn)'>Mise à jour du logiciel système (TWN)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="ntrboot"><a href='/fr_FR/ntrboot'>ntrboot</a></li>
           
         
           
+            <li style="display: none;" data-name="alternate-exploits"><a href='/fr_FR/alternate-exploits'>Alternate Exploits</a></li>
+          
+        
+          
             <li style="display: none;" data-name="seedminer"><a href='/fr_FR/seedminer'>Seedminer</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(alternate)"><a href='/fr_FR/seedminer-(alternate)'>Seedminer (Alternate)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(mii)"><a href='/fr_FR/seedminer-(mii)'>Seedminer (Mii)</a></li>
           
         
           
@@ -330,7 +354,31 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="bannerbomb3-(legacy)"><a href='/fr_FR/bannerbomb3-(legacy)'>BannerBomb3 (Legacy)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(ninjhax2-dx)"><a href='/fr_FR/homebrew-launcher-(ninjhax2-dx)'>Homebrew Launcher (ninjhax2-dx)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(pichaxx)"><a href='/fr_FR/homebrew-launcher-(pichaxx)'>Homebrew Launcher (PicHaxx)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(smilehax-iie)"><a href='/fr_FR/homebrew-launcher-(smilehax-iie)'>Homebrew Launcher (smilehax-IIe)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(steelhax)"><a href='/fr_FR/homebrew-launcher-(steelhax)'>Homebrew Launcher (Steelhax)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="homebrew-launcher-(super-skaterhax)"><a href='/fr_FR/homebrew-launcher-(super-skaterhax)'>Homebrew Launcher (super-skaterhax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="dumping-eshop-dsiware"><a href='/fr_FR/dumping-eshop-dsiware'>Dumping eShop DSiWare</a></li>
           
         
           
@@ -387,6 +435,14 @@ window.cookieconsent.initialise({
         
           
             <li style="display: none;" data-name="installing-boot9strap-(fredtool)"><a href='/fr_FR/installing-boot9strap-(fredtool)'>Installing boot9strap (Fredtool)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(fredtool-inject)"><a href='/fr_FR/installing-boot9strap-(fredtool-inject)'>Installing boot9strap (Fredtool-Inject)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(fredtool-legacy)"><a href='/fr_FR/installing-boot9strap-(fredtool-legacy)'>Installing boot9strap (Fredtool, Legacy)</a></li>
           
         
           
@@ -473,19 +529,19 @@ window.cookieconsent.initialise({
 
 <p>Cette méthode nécessite un accès temporaire à une Nintendo DSI qui soit compatible avec votre linker. Cette méthode utilise le linker pour lancer le flasheur ntrboot contenu dans le fichier <code class="language-plaintext highlighter-rouge">.nds</code> sur votre DSi. Cela signifie que votre linker doit pouvoir lancer des fichiers <code class="language-plaintext highlighter-rouge">.nds</code> sur votre DSi. Consultez le tableau des linkers sur <a href="ntrboot">ntrboot</a> pour plus d’informations.</p>
 
-<p class="notice--danger">Notez qu’il est possible que pendant le flash sur un clone celui-ci devienne <strong>inutilisable</strong>. This is unlikely, but nevertheless, only original listed flashcarts are supported. Pour réduire les chances de recevoir un linker contrefait, il est recommandé d’utiliser un site réputé pour acheter votre linker (comme <a href="http://www.nds-card.net/">NDS Card</a>)</p>
+<p class="notice--danger">Notez que dans de rares circonstances, il est possible que le processus de flash sur un linker contrefait le <strong>brique</strong> et le rende inutilisable de manière permanente. C’est peu probable, mais néanmoins, seuls les linkers originaux listés sont pris en charge. Pour réduire les chances de recevoir un linker contrefait, il est recommandé d’utiliser un site réputé pour acheter votre linker (comme <a href="http://www.nds-card.net/">NDS Card</a>)</p>
 
 <h2 id="ce-dont-vous-avez-besoin">Ce dont vous avez besoin</h2>
 
 <ul>
   <li>Votre linker compatible ntrboot</li>
-  <li>Deux consoles
+  <li>Two consoles
     <ul>
       <li><strong>La DSI source</strong> : la Nintendo DSi qui est compatible avec votre linker</li>
-      <li><strong>La 3DS cible</strong> : la 3DS sur un firmware original non modifié</li>
+      <li><strong>The target 3DS</strong>: the 3DS family console on stock firmware</li>
     </ul>
   </li>
-  <li>The latest release of <a href="https://github.com/ntrteam/ds_ntrboot_flasher/releases/latest">ds_ntrboot_flasher</a> (<code class="language-plaintext highlighter-rouge">ds_ntrboot_flasher_dsi.nds</code>)</li>
+  <li>La dernière version de <a href="https://github.com/ntrteam/ds_ntrboot_flasher/releases/latest">ds_ntrboot_flasher</a> (<code class="language-plaintext highlighter-rouge">ds_ntrboot_flasher_dsi.nds</code>)</li>
 </ul>
 
 <h3 id="instructions">Instructions</h3>

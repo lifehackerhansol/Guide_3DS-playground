@@ -314,11 +314,35 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="updating-firmware-(new-3ds)"><a href='/fr_FR/updating-firmware-(new-3ds)'>Mise à jour du logiciel système (New 3DS)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="updating-firmware-(kor)"><a href='/fr_FR/updating-firmware-(kor)'>Mise à jour du logiciel système (KOR)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="updating-firmware-(twn)"><a href='/fr_FR/updating-firmware-(twn)'>Mise à jour du logiciel système (TWN)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="ntrboot"><a href='/fr_FR/ntrboot'>ntrboot</a></li>
           
         
           
+            <li style="display: none;" data-name="alternate-exploits"><a href='/fr_FR/alternate-exploits'>Alternate Exploits</a></li>
+          
+        
+          
             <li style="display: none;" data-name="seedminer"><a href='/fr_FR/seedminer'>Seedminer</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(alternate)"><a href='/fr_FR/seedminer-(alternate)'>Seedminer (Alternate)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(mii)"><a href='/fr_FR/seedminer-(mii)'>Seedminer (Mii)</a></li>
           
         
           
@@ -330,7 +354,31 @@ window.cookieconsent.initialise({
           
         
           
+            <li style="display: none;" data-name="bannerbomb3-(legacy)"><a href='/fr_FR/bannerbomb3-(legacy)'>BannerBomb3 (Legacy)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(ninjhax2-dx)"><a href='/fr_FR/homebrew-launcher-(ninjhax2-dx)'>Homebrew Launcher (ninjhax2-dx)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(pichaxx)"><a href='/fr_FR/homebrew-launcher-(pichaxx)'>Homebrew Launcher (PicHaxx)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(smilehax-iie)"><a href='/fr_FR/homebrew-launcher-(smilehax-iie)'>Homebrew Launcher (smilehax-IIe)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="homebrew-launcher-(steelhax)"><a href='/fr_FR/homebrew-launcher-(steelhax)'>Homebrew Launcher (Steelhax)</a></li>
+          
+        
+          
             <li style="display: none;" data-name="homebrew-launcher-(super-skaterhax)"><a href='/fr_FR/homebrew-launcher-(super-skaterhax)'>Homebrew Launcher (super-skaterhax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="dumping-eshop-dsiware"><a href='/fr_FR/dumping-eshop-dsiware'>Dumping eShop DSiWare</a></li>
           
         
           
@@ -387,6 +435,14 @@ window.cookieconsent.initialise({
         
           
             <li style="display: none;" data-name="installing-boot9strap-(fredtool)"><a href='/fr_FR/installing-boot9strap-(fredtool)'>Installing boot9strap (Fredtool)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(fredtool-inject)"><a href='/fr_FR/installing-boot9strap-(fredtool-inject)'>Installing boot9strap (Fredtool-Inject)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(fredtool-legacy)"><a href='/fr_FR/installing-boot9strap-(fredtool-legacy)'>Installing boot9strap (Fredtool, Legacy)</a></li>
           
         
           
@@ -452,10 +508,9 @@ window.cookieconsent.initialise({
 <nav class="toc">
     <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Table des matières</h4></header>
 <ul class="toc__menu" id="markdown-toc">
-  <li><a href="#section-i---updating-the-system" id="markdown-toc-section-i---updating-the-system">Section I - Updating the System</a></li>
-  <li><a href="#section-ii---prep-work" id="markdown-toc-section-ii---prep-work">Section II - Prep Work</a></li>
-  <li><a href="#section-iii---seedminer" id="markdown-toc-section-iii---seedminer">Section III - Seedminer</a></li>
-  <li><a href="#next-step-bannerbomb3" id="markdown-toc-next-step-bannerbomb3">Next step: BannerBomb3</a></li>
+  <li><a href="#section-i---préparatifs" id="markdown-toc-section-i---préparatifs">Section I - Préparatifs</a></li>
+  <li><a href="#section-ii---seedminer" id="markdown-toc-section-ii---seedminer">Section II - Seedminer</a></li>
+  <li><a href="#étape-suivante--bannerbomb3" id="markdown-toc-étape-suivante--bannerbomb3">Étape suivante : BannerBomb3</a></li>
 </ul>
 
   </nav>
@@ -463,122 +518,108 @@ window.cookieconsent.initialise({
 <details class="notice--info">
 <summary><em>Détails techniques (facultatif)</em></summary>
 
-<p>To install boot9strap on your device, we derive your device’s unique encryption key. To accomplish this, we use a tool called Seedminer to calculate the data encryption key (movable.sed) for your device.</p>
+<p>To install boot9strap on your console, we derive your console’s unique encryption key. To accomplish this, we use a tool called Seedminer to calculate the data encryption key (movable.sed) for your console.</p>
 
-<p>For information on how Seedminer works, see <a href="https://zoogie.github.io/web/34⅕c3">this presentation</a>.</p>
+<p>Pour plus d’informations sur le fonctionnement de Seedminer, regardez <a href="https://zoogie.github.io/web/34⅕c3">cette présentation</a>.</p>
 
-<p>This method uses a powerful graphics card to perform the calculations needed. A volunteer-run website is used for the purpose of assisting you with this method.</p>
+<p>Cette méthode utilise une carte graphique puissante pour effectuer les calculs nécessaires. Un site Web géré par des bénévoles est utilisé pour vous aider à utiliser cette méthode.</p>
 
 </details>
 
-<h3 id="section-i---updating-the-system">Section I - Updating the System</h3>
+<h3 id="section-i---préparatifs">Section I - Préparatifs</h3>
 
-<p>In this section, you will update your system to the latest version, which is necessary for Seedminer.</p>
+<p>In this section, you will get the necessary details from your 3DS that are required to figure out your console’s encryption key.</p>
 
-<ol>
-  <li>Mettez à jour votre console en vous rendant dans les Paramètres de la console, puis “Autres paramètres”, puis tout à droite sur l’option “Mise à jour”
-    <ul>
-      <li>La console peut afficher un message disant “Aucune mise à jour nécessaire” au lieu de faire une mise à jour. This is normal if you are already up to date; continue to the next section</li>
-      <li>If this gives you an error, set both your DNS settings and Proxy settings to “Auto”</li>
-    </ul>
-  </li>
-</ol>
-
-<h3 id="section-ii---prep-work">Section II - Prep Work</h3>
-
-<p>In this section, you will get the necessary details from your 3DS that are required to figure out your device’s encryption key.</p>
-
-<p>Before following this section:</p>
-<ul class="notice--info">
-  <li>Ensure that you have turned on your console with the SD card inserted at least once to generate the necessary data</li>
-  <li>Ensure that your console is connected to the Internet (you should see a blue “Internet” indicator on the top-left corner of the HOME screen)</li>
+<div class="notice--info">
+<p>Avant de suivre cette section :</p>
+<ul>
+  <li>Assurez-vous d’avoir allumé votre console avec la carte SD insérée au moins une fois pour générer les données nécessaires</li>
+  <li>Assurez-vous que votre console est connectée à Internet (vous devriez voir un indicateur bleu « Internet » dans le coin supérieur gauche du Menu HOME)</li>
 </ul>
+</div>
 
 <ol>
-  <li>Éteignez votre 3DS</li>
+  <li>Éteignez votre console</li>
   <li>Insérez votre carte SD dans votre ordinateur</li>
   <li>Naviguez vers le dossier <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> de votre carte SD</li>
-  <li>Copy the name of the 32-letter folder you see directly inside Nintendo 3DS
+  <li>Copiez le nom du dossier de 32 lettres que vous voyez directement à l’intérieur du dossier Nintendo 3DS
     <ul>
-      <li>This 32-letter name is system-specific and will be different for each console</li>
-      <li>If you see multiple 32-letter folders, follow <a href="troubleshooting#seedminer">these instructions</a></li>
-      <li>Vous pouvez ignorer le dossier <code class="language-plaintext highlighter-rouge">private</code> si vous l’avez</li>
+      <li>Ce nom de 32 lettres est propre à votre console et sera différent pour chaque console</li>
+      <li>Si vous voyez plusieurs dossiers de 32 lettres, suivez <a href="troubleshooting#seedminer">ces instructions</a></li>
+      <li>Vous pouvez ignorer le dossier <code class="language-plaintext highlighter-rouge">private</code> si vous en avez un</li>
     </ul>
 
     <p class="notice--info"><img src="https://3ds.hacks.guide/images/screenshots/seedminer/id0-example.png" alt="" /></p>
   </li>
-  <li>Paste your 32-letter folder name into <a href="/images/screenshots/seedminer/text-document.png">a document</a> you can reference later
+  <li>Collez votre nom de dossier de 32 lettres dans <a href="/images/screenshots/seedminer/text-document.png">un document</a> auquel vous pourrez vous référer ultérieurement
     <ul>
-      <li>This folder is known as your “ID0”. Take note of this as this guide will refer to it as such later</li>
+      <li>Ce dossier représente votre “ID0”. Prenez note de cela car ce guide y fera référence plus tard</li>
     </ul>
   </li>
-  <li>Allumez votre console
+  <li>Power on your console
     <ul>
       <li>Votre carte SD n’a pas besoin d’être insérée à ce stade</li>
     </ul>
   </li>
   <li>Accédez à votre Liste d’amis (l’<a href="https://3ds.hacks.guide/images/friend-list-icon.png">icône avec un visage orange</a> dans la rangée du haut de votre Menu HOME)
     <ul>
-      <li>Si vous obtenez une erreur et que vous êtes renvoyé vers le Menu HOME, vous devez soit créer un nouveau Mii, soit votre console ne peut pas se connecter aux serveurs de Nintendo (en raison d’un bannissement ou de problèmes de connexion)</li>
+      <li>If you receive an error and are kicked out of the menu, you either must create a new Mii or your console cannot connect to Nintendo’s servers (due to a ban or connection issues)</li>
     </ul>
   </li>
   <li>Trouvez le profil de votre Mii, puis trouvez le champ “Code ami” sur l’écran supérieur</li>
 </ol>
 
-<h3 id="section-iii---seedminer">Section III - Seedminer</h3>
+<h3 id="section-ii---seedminer">Section II - Seedminer</h3>
 
-<p>In this section, you will use the Bruteforce Movable website to retrieve your device’s encryption key in the form of <code class="language-plaintext highlighter-rouge">movable.sed</code>.</p>
+<p>In this section, you will use the Bruteforce Movable website to retrieve your console’s encryption key in the form of <code class="language-plaintext highlighter-rouge">movable.sed</code>.</p>
 
 <ol>
-  <li>Open <a href="https://seedminer.hacks.guide/">Bruteforce Movable</a> on your computer
+  <li>Ouvrez <a href="https://seedminer.hacks.guide/">Bruteforce Movable</a> sur votre ordinateur
     <ul>
-      <li>If the site isn’t working, join <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew on Discord</a> and ask (in English) for someone there to assist you</li>
+      <li>Si le site ne fonctionne pas, rejoignez <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew sur Discord</a> et demandez (en anglais) que quelqu’un vous aide</li>
     </ul>
   </li>
-  <li>Enter your device’s Friend Code (with no spaces or dashes) into the “Your friend code” field</li>
-  <li>Paste your device’s 32 character long folder name into the “Your ID0” field
+  <li>Enter your console’s Friend Code (with no spaces or dashes) into the “Your friend code” field</li>
+  <li>Paste your console’s 32 character long folder name into the “Your ID0” field
     <ul>
-      <li>Do not attempt to enter the ID0 manually, as it is easy to make a mistake. Ensure the ID0 is entered correctly by copying and pasting it from where you saved it in the previous section</li>
+      <li>N’essayez pas d’entrer manuellement l’ID0, car il est facile de faire une erreur. Assurez-vous que l’ID0 est correctement entré en le copiant et en le collant depuis l’endroit où vous l’avez enregistré dans la section précédente</li>
     </ul>
   </li>
-  <li>Select “Go”
+  <li>Sélectionnez “Go”
     <ul>
-      <li>If the site immediately goes to step 4, the website has already correctly processed your bruteforce request. You can download your <code class="language-plaintext highlighter-rouge">movable.sed</code> file and continue to the next section. You do not need to (re-)add the bot</li>
+      <li>Si le site va immédiatement à l’étape 4, le site Web a déjà traité correctement votre demande de force brute. Vous pouvez télécharger votre fichier <code class="language-plaintext highlighter-rouge">movable.sed</code> et continuer vers la section suivante. Vous n’avez pas besoin de rajouter le bot</li>
     </ul>
   </li>
-  <li>Use the <a href="/images/screenshots/seedminer/register-friend.png">“Register Friend” button</a> on your device to add the bot’s friend code as given by the website
+  <li>Use the <a href="/images/screenshots/seedminer/register-friend.png">“Register Friend” button</a> on your console to add the bot’s friend code as given by the website
     <ul>
-      <li>If prompted, the name that you give to the friend does not matter</li>
+      <li>Si vous y êtes invité, le nom que vous donnez à l’ami n’a pas d’importance</li>
     </ul>
   </li>
-  <li>Wait for the site to update
+  <li>Attendez que le site se mette à jour
     <ul>
-      <li>If it does not, wait a few minutes before refreshing the page once</li>
+      <li>Si il ne se met pas à jour, attendez quelques minutes avant de rafraîchir la page une fois</li>
     </ul>
   </li>
-  <li>Once the site processes your information, the site will continue to <code class="language-plaintext highlighter-rouge">Step 2: Bruteforce</code> automatically</li>
-  <li>Wait for the remainder of the process to complete
+  <li>Une fois que le site a fini de traiter vos informations, le site continuera à <code class="language-plaintext highlighter-rouge">Step 2: Bruteforce</code> automatiquement</li>
+  <li>Veuillez attendre que le reste du processus soit achevé
     <ul>
-      <li>This is usually fast (1-5 minutes)</li>
-      <li>During this process, the bot you added may not show up on your 3DS. As long as the website updates, this is not an issue</li>
-      <li>If you are still waiting after half an hour, join <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew on Discord</a> and ask (in English) for someone there to assist you</li>
+      <li>Ceci est généralement rapide (1-5 minutes)</li>
+      <li>Au cours de ce processus, le bot que vous avez ajouté peut ne pas apparaître sur votre 3DS. Tant que le site se met à jour, ce n’est pas un problème</li>
+      <li>Si vous êtes toujours en train d’attendre après une demi-heure, veuillez rejoindre <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew sur Discord</a> et demandez (en anglais) à quelqu’un de vous aider</li>
+      <li>Si vous obtenez le message suivant : “We were unable to successfully complete your bruteforce request. :`(“, suivez les <a href="troubleshooting#seedminer">instructions de dépannage sur cette page</a></li>
+      <li>Gardez ce fichier car vous en aurez besoin dans la prochaine page</li>
     </ul>
   </li>
-  <li>When the process is completed, download your <code class="language-plaintext highlighter-rouge">movable.sed</code> file from the site
-    <ul>
-      <li>Keep this file as you will need it in the upcoming page</li>
-    </ul>
-  </li>
-  <li>Éteignez votre 3DS</li>
+  <li>Éteignez votre console</li>
 </ol>
 
 <hr />
 
-<h3 id="next-step-bannerbomb3">Next step: BannerBomb3</h3>
+<h3 id="étape-suivante--bannerbomb3">Étape suivante : BannerBomb3</h3>
 
-<p>Once you have your device’s encryption key (<code class="language-plaintext highlighter-rouge">movable.sed</code>), you can use it in conjunction with BannerBomb3, which uses your <code class="language-plaintext highlighter-rouge">movable.sed</code> file to take advantage of exploits in the System Settings application.</p>
+<p>Once you have your console’s encryption key (<code class="language-plaintext highlighter-rouge">movable.sed</code>), you can use it in conjunction with BannerBomb3, which uses your <code class="language-plaintext highlighter-rouge">movable.sed</code> file to take advantage of exploits in the System Settings application.</p>
 
-<p class="notice--primary">Continue to <a href="bannerbomb3-fredtool-(twn)">BannerBomb3 + Fredtool (TWN)</a></p>
+<p class="notice--primary">Continuer vers <a href="bannerbomb3-fredtool-(twn)">BannerBomb3 + Fredtool (TWN)</a></p>
 
         
       </section>
