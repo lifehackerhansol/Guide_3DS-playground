@@ -135,8 +135,9 @@ function can_miimine(major, minor, native, region, model) {
     if (model == DEVICE_O3DS) {
         if (major == 11 && minor == 15) {
             // KOR and TWN can do normal seedminer
+            // CHN can't do seedminer at all (no valid exploit after doing so)
             // All other O3DS must Mii mine
-            if (region != "K" && region != "T") do_redirect = true;
+            if (!["C", "K", "T"].includes(region)) do_redirect = true;
         }
     }
 
