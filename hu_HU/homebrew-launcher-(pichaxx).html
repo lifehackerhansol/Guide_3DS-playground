@@ -523,25 +523,25 @@ window.cookieconsent.initialise({
 
 <details class="notice--info">
 <summary><em>Technikai részletek (opcionális)</em></summary>
-<p><a href="https://github.com/zoogie/pichaxx">PicHaxx</a> is an exploit for the game Pokémon Picross released by <a href="https://github.com/zoogie">zoogie</a>, originally discovered and <a href="https://twitter.com/mrnbayoh/status/744899681663258624">demonstrated</a> by <a href="https://github.com/MrNbaYoh">MrNbaYoh</a>.</p>
+<p>A <a href="https://github.com/zoogie/pichaxx">PicHaxx</a> egy exploit a Pokémon Picross játékhoz, amit <a href="https://github.com/zoogie">zoogie</a> készített. Eredetileg <a href="https://github.com/MrNbaYoh">MrNbaYoh</a> fedezte fel és <a href="https://twitter.com/mrnbayoh/status/744899681663258624">demonstrálta</a>.</p>
 
-<p>This method of using Seedminer for further exploitation uses your <code class="language-plaintext highlighter-rouge">movable.sed</code> file to write a custom save file for Pokémon Picross, which can then be used to launch the Homebrew Launcher.</p>
+<p>Ez a metódusa Seedminer használatának további exploitolás céljából használja a <code class="language-plaintext highlighter-rouge">movable.sed</code> fájlt, hogy egy egyedi Pokémon Picross mentés fájlt írjon, ami felhasználható a Homebrew Launcher indítására.</p>
 </details>
 
-<p class="notice--warning">This process will overwrite your Pokémon Picross save file, if you have one. If you wish to preserve your Pokémon Picross game data, you should make a backup of your <code class="language-plaintext highlighter-rouge">00000001.sav</code> file before overwriting it.</p>
+<p class="notice--warning">Ennek a folyamatnak a során a Pokémon Picross mentése felülírásra kerül, ha rendelkezel ilyennel. Ha szeretnéd megőrizni a Pokémon Picross játék adatod, készítened kell egy mentést a <code class="language-plaintext highlighter-rouge">00000001.sav</code> fájlról, mielőtt felülírnád.</p>
 
 <h3 id="amire-szükséged-lesz">Amire szükséged lesz</h3>
 
 <ul>
-  <li>The game “Pokémon Picross” installed on your console
+  <li>A “Pokémon Picross” játék telepítve az eszközödre
     <ul>
-      <li>If you have downloaded it before, you can <a href="https://en-americas-support.nintendo.com/app/answers/detail/a_id/607/~/how-to-download-or-redownload-content-in-nintendo-3ds-eshop">redownload it</a></li>
-      <li>Your SD card must be inserted in your console to install Pokémon Picross</li>
+      <li>Ha korábban letöltötted, <a href="https://en-americas-support.nintendo.com/app/answers/detail/a_id/607/~/how-to-download-or-redownload-content-in-nintendo-3ds-eshop">letöltheted újra</a></li>
+      <li>Az SD kártyád be kell legyen helyezve a konzolodba a Pokémon Picross telepítéséhez</li>
     </ul>
   </li>
-  <li>Your <code class="language-plaintext highlighter-rouge">movable.sed</code> file from completing <a href="seedminer">Seedminer</a></li>
-  <li>The latest release of <a href="https://github.com/LumaTeam/Luma3DS/releases/latest">Luma3DS</a> (the Luma3DS <code class="language-plaintext highlighter-rouge">.zip</code> file)</li>
-  <li><a href="/assets/otherapps.zip">otherapps.zip</a> (direct download)</li>
+  <li>A <code class="language-plaintext highlighter-rouge">movable.sed</code> fájlodra a <a href="seedminer">Seedminer</a> eredményéből</li>
+  <li>A <a href="https://github.com/LumaTeam/Luma3DS/releases/latest">Luma3DS</a> legújabb kiadása (a Luma3DS <code class="language-plaintext highlighter-rouge">.zip</code> fájl)</li>
+  <li><a href="/assets/otherapps.zip">otherapps.zip</a> (közvetlen letöltés)</li>
 </ul>
 
 <h3 id="lépések">Lépések</h3>
@@ -568,11 +568,9 @@ window.cookieconsent.initialise({
 
 <p class="notice--info"><img src="https://3ds.hacks.guide/images/screenshots/hblpichaxx-root-layout.png" alt="" /></p>
 
-<p class="notice--info"><img src="https://3ds.hacks.guide/images/screenshots/slottool-folder.png" alt="" /></p>
-
 <h4 id="ii-rész---pichaxx">II. rész - PicHaxx</h4>
 
-<p>In this section, you will create a hacked Pokémon Picross save file that, when loaded, will run the Homebrew Launcher on your console.</p>
+<p>Ebben a fejezetben létre fogsz hozni egy hackelt Pokémon Picross mentés fájlt, ami használatakor betölti a Homebrew Launcher-t a konzolodon.</p>
 
 <ol>
   <li>Nyisd meg <a href="https://3dstools.nhnarwhal.com/#/pichaxx">a PicHaxx Injector weboldalát</a> a számítógépen</li>
@@ -593,9 +591,9 @@ window.cookieconsent.initialise({
     <p class="notice--info"><img src="https://3ds.hacks.guide/images/screenshots/pichaxx-save-location.png" alt="" /></p>
   </li>
   <li>Tedd vissza az SD kártyád a konzoldba</li>
-  <li>Power on your console</li>
+  <li>Kapcsold be a konzolod</li>
   <li>Indítsd el a “Pokémon Picross”-t</li>
-  <li>If the exploit was successful, your console will have booted into the Homebrew Launcher
+  <li>Ha az exploit sikeres volt, a konzolodnak ezt követően be kell bootolnia a Homebrew Launcherbe
     <ul>
       <li>Ha hiba üzenetet kapsz, <a href="troubleshooting#homebrew-launcher-pichaxx">nézd át ezt a hibaelhárítási útmutatót</a></li>
     </ul>
@@ -605,12 +603,12 @@ window.cookieconsent.initialise({
 
 <h4 id="iii-rész---fizikai-gombok-ellenőrzése">III. rész - Fizikai gombok ellenőrzése</h4>
 
-<p>In this section, you will see whether you can access Safe Mode on your console. Ez meghatározza, hogy melyik metódust kell követned a következő oldalon.</p>
+<p>Ebben a fejezetben tesztelni fogod azt, hogy egyáltalán eléred-e a SAFE_MODE funkcióját a konzolodnak. Ez meghatározza, hogy melyik metódust kell követned a következő oldalon.</p>
 
-<p>In this section, you will see whether your shoulder buttons are working on your console. Ez meghatározza, hogy melyik metódust kell követned a következő oldalon.</p>
+<p>Ebben a fejezetben tesztelni fogod azt, hogy működnek-e a váll gombok a konzolodon. Ez meghatározza, hogy melyik metódust kell követned a következő oldalon.</p>
 
 <ol>
-  <li>Power on your console</li>
+  <li>Kapcsold be a konzolod</li>
   <li>Mikor meglátod a Home menüt, nyomd meg az (Bal váll) és (Jobb váll) gombokat egyszerre
     <ul>
       <li>A kamera applettnek kell megjelennie</li>
@@ -623,7 +621,7 @@ window.cookieconsent.initialise({
 
 <h3 id="következő-lépés-válassz-egy-exploit-ot">Következő lépés: Válassz egy exploit-ot</h3>
 
-<p>If the camera appeared in the previous section, Safe Mode is likely to be working on your console.</p>
+<p>Ha a kamera megjelent az előző szakaszban, a Safe Mode valószínűleg működik a konzolodon.</p>
 
 <p class="notice--primary">Ha a kamera megjelent, folytasd a <a href="installing-boot9strap-(hbl-usm)">boot9strap telepítésével (HBL-USM)</a></p>
 

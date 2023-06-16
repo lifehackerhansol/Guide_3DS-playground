@@ -520,10 +520,10 @@ window.cookieconsent.initialise({
 <p><strong>3DS firmware 11.17.0 nemrég került kiadásra</strong>. Amit érdemes tudnod:</p>
 
 <ul>
-  <li>If your console is running <em>Luma 10.2.1 or higher</em>, it is <em>100% safe</em> to update. You can check your Luma version by holding (Select) while booting your console.</li>
-  <li>If your console is on an older Luma version, you should <a href="checking-for-cfw">update Luma</a> before you update your console to 11.17.0.</li>
-  <li>If your console does not yet have custom firmware, <strong>do NOT update to the latest version</strong>, as installation methods may be more difficult.</li>
-  <li>If your unmodified console is ALREADY on 11.17.0, this guide has been updated accordingly. Specifically, New3DS-family consoles have a <a href="homebrew-launcher-(super-skaterhax)">free software method</a>, while Old3DS-family consoles will need to use <a href="alternate-exploits">alternate exploits</a> that rely on external hardware or software.</li>
+  <li>Ha a konzolod <em>Luma 10.2.1</em> -et vagy újabbat futtat, <em>100% biztonságos</em> a frissítés. Ellenőrizheted a Luma verziódat a (Select) lenyomva tartásával a konzolod elindítása közben.</li>
+  <li>Ha a konzolod régebbi Luma verziót futtat, <a href="checking-for-cfw">frissítened kell a Luma-t</a> mielőtt az eszközöd 11.17.0 verzióra frissíted.</li>
+  <li>If your console does not yet have custom firmware, <strong>do NOT update to the latest version</strong> unless this guide instructs you to.</li>
+  <li>Ha a módosítatlan konzolod MÁR 11.17.0 verzióval fut, ez az oldal annak megfelelően frissül. Egészen pontosan a New3DS-család konzolainak egy <a href="homebrew-launcher-(super-skaterhax)">ingyenes szoftver metódust</a>, míg az Old3DS-család konzolainak <a href="alternate-exploits">alternatív exploitokat</a> kell használniuk, aminek külső hardver vagy szoftver függősége van.</li>
 </ul>
 
 </div>
@@ -533,22 +533,22 @@ window.cookieconsent.initialise({
 <h2 id="telepítés-előtti-gyik">Telepítés előtti GYIK</h2>
 
 <details>
-<summary><u>A legújabb verziójú rendszeren vagyok. Is my console hackable without any external hardware/prerequisites?</u></summary>
+<summary><u>A legújabb verziójú rendszeren vagyok. Feltörhetem a konzolomat külső hardver vagy előfeltételek nélkül?</u></summary>
 
 <p>A válasz a konzol típusától függően változik. Jelenleg a New 3DS / New 3DS XL / New 2DS XL moddolható a 11.17.0 verzión előfeltételek nélkül (pl. eShop címek, fizikai tételek), míg a 3DS / 3DS XL / 2DS nem.</p>
 
 </details>
 
 <details>
-<summary><u>What consoles is this guide compatible with?</u></summary>
+<summary><u>Milyen konzolokkal kompatibilis ez az útmutató?</u></summary>
 
-<p>The instructions are the same for all retail 3DS, 3DS XL, 2DS, New 3DS, New 3DS XL, and New 2DS XL consoles. Ha a rendszered verziója “0.0.0-0”, akkor fejlesztői rendszered van.</p>
+<p>A lépések azonosak minden kereskedelmi 3DS, 3DS XL, 2DS, New 3DS, New 3DS XL, és New 2DS XL konzolhoz. Ha a rendszered verziója “0.0.0-0”, akkor fejlesztői rendszered van.</p>
 </details>
 
 <details>
 <summary><u>Mennyire kockázatos a konzolom meghackelése?</u></summary>
 
-<p>Bricks are now effectively impossible unless you are purposely trying to brick your console.</p>
+<p>A brickelés ma már alapvetően lehetetlen, kivéve, ha szándékosan szeretnéd brickelni a konzolodat.</p>
 </details>
 
 <details>
@@ -560,19 +560,19 @@ window.cookieconsent.initialise({
 <details>
 <summary><u>Használhatom ezt arra, hogy más régióból származó játékokkal tudjak játszani?</u></summary>
 
-<p>Igen; a Luma3DS automatikusan figyelmen kívül hagyja a régió ellenőrzést a cartridge-ek és a telepített címek esetében. Some games may need to make use of Luma’s <a href="https://github.com/LumaTeam/Luma3DS/wiki/Optional-features">locale emulation feature</a> in order to work properly on out-of-region consoles.</p>
+<p>Igen; a Luma3DS automatikusan figyelmen kívül hagyja a régió ellenőrzést a cartridge-ek és a telepített címek esetében. Néhány játék igényli a Luma’s <a href="https://github.com/LumaTeam/Luma3DS/wiki/Optional-features">nyelvi emulációs funkcióját</a> a működéshez, ha régión kívüli konzolokon fut.</p>
 </details>
 
 <details>
 <summary><u>El fogok veszteni bármilyen szolgáltatást, ha CFW-t telepítek?</u></summary>
 
-<p>Nem. Consoles with custom firmware can still play online and run physical cartridges as any other 3DS can.</p>
+<p>Nem. Egyedi firmware-rel ellátott konzolokkal ugyanúgy játszhatsz online és futtathatsz fizikai cartridge-eket, amiket minden más 3DS futtatni tud.</p>
 </details>
 
 <details>
 <summary><u>Megtarthatom az NNID azonosítóm?</u></summary>
 
-<p>Az NNID-et (ha van) nem befolyásolja az útmutató végrehajtása. Consoles with a region of KOR, CHN, or TWN do not have NNID functionality to begin with and are thus unaffected.</p>
+<p>Az NNID-et (ha van) nem befolyásolja az útmutató végrehajtása. A KOR, CHN vagy TWN régiós eszközök nem rendelkeznek alaphelyzetben NNID funkcionalitással, így ezek a konzolok nem érintettek.</p>
 </details>
 
 <details>
@@ -613,7 +613,7 @@ window.cookieconsent.initialise({
 <details>
 <summary><u>Biztonságos frissíteni a legutolsó verzióra a CFW-vel ellátott 3DS-em?</u></summary>
 
-<p>Ha Luma3DS-t használsz, az egyedi firmware loader (boot9strap) <em>soha</em> nem kerül eltávolításra egy rendszer frissítés során. There have been updates in the past that have resulted in Luma3DS crashing on boot, so it is a good idea to wait a couple of hours to ensure that the latest update will not temporarily render the console unusable until Luma3DS is updated. A rendszer frissítések úgy történnek, mint egy alap 3DS-en: a System Settings-en, Safe Mode-on vagy a felugró frissítési üzeneten keresztül, amikor a frissítések automatikusan letöltődtek.</p>
+<p>Ha Luma3DS-t használsz, az egyedi firmware loader (boot9strap) <em>soha</em> nem kerül eltávolításra egy rendszer frissítés során. A múltban voltak olyan frissítések amelyek miatt a Luma3DS rendszerindításkor összeomlott, így néhány órát várni a frissítés előtt bölcs döntés mivel ez biztosítja hogy a konzol nem válik átmenetileg használhatatlanná a Luma3DS frissítéséig. A rendszer frissítések úgy történnek, mint egy alap 3DS-en: a System Settings-en, Safe Mode-on vagy a felugró frissítési üzeneten keresztül, amikor a frissítések automatikusan letöltődtek.</p>
 </details>
 
 <details>
@@ -631,7 +631,7 @@ window.cookieconsent.initialise({
 <details>
 <summary><u>Hogyan módosíthatom a rendszer nyelvét egy japán 3DS-nek?</u></summary>
 
-<p>Az egyetlen módja a rendszer nyelv módosításának egy japán 3DS esetében más nyelvre a <a href="region-changing">régió csere</a>. Note that this is very likely to break the Nintendo eShop on your console, which means you will be unable to update your games whether they are in-region or out-of-region.</p>
+<p>Az egyetlen módja a rendszer nyelv módosításának egy japán 3DS esetében más nyelvre a <a href="region-changing">régió csere</a>. Fontos megjegyezni, hogy ez erősen valószínű, hogy elrontja a Nintendo eShop-ot a konzolodon, így nem fogsz tudni frissíteni játékokat, függetlenül attól, hogy régión belüli vagy kívüli.</p>
 
 </details>
 
@@ -658,13 +658,14 @@ window.cookieconsent.initialise({
 <details>
 <summary><u>Segítség! Valami rossz dolog történt és a 3DS-em nem bootol a HOME menübe...</u></summary>
 
-<p>Please look at the <a href="troubleshooting#boot-issues-on-consoles-with-custom-firmware">troubleshooting guide</a>. <strong>Uninstalling CFW when your console is in an unbootable state is not recommended, as it is very likely to lead to a brick</strong>.</p>
+<p>Please look at the <a href="troubleshooting#boot-issues-on-consoles-with-custom-firmware">troubleshooting guide</a>. <strong>A CFW eltávolítása, amikor a konzolod nem bootolható nem ajánlott, mert nagyon 
+ valószínű, hogy brickeli az eszközödet</strong>.</p>
 </details>
 
 <h2 id="menuhax--a9lh--gateway-gyik">menuhax / A9LH / Gateway GYIK</h2>
 
 <details>
-<summary><u>I modded my console (x) years ago, so it already has some sort of homebrew. Mit kell tennem?</u></summary>
+<summary><u>Moddoltam a konzolomat (x) évvel ezelőtt, így már van valamilyen homebrew hozzáférésem. Mit kell tennem?</u></summary>
 
 <p>Ajánlott, hogy frissítsd egy modern, boot9strap alapúra. Kövesd a <a href="checking-for-cfw">CFW ellenőrzését</a>, hogy megtudd, hogyan frissítheted.</p>
 </details>
@@ -684,7 +685,7 @@ window.cookieconsent.initialise({
 <details>
 <summary><u>Hogyan mozgathatom át a mentéseimet egy létező Gateway konfigurációról egy modern konfigurációra?</u></summary>
 
-<p><strong>V:</strong> Nézd meg <a href="https://gbatemp.net/threads/425743/">ezt az üzenetszálat</a>.</p>
+<p>Nézd meg <a href="https://gbatemp.net/threads/425743/">ezt az üzenetszálat</a>.</p>
 </details>
 
         

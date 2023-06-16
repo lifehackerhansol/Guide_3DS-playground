@@ -579,13 +579,15 @@ window.cookieconsent.initialise({
 
 <ol>
   <li>Rename the <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> folder to <code class="language-plaintext highlighter-rouge">BACKUP_Nintendo 3DS</code></li>
-  <li>Reinsert your SD card into your console and power on your console</li>
+  <li>Reinsert your SD card into your console</li>
+  <li>Power on your console</li>
   <li>Wait for the console to generate the SD card data
     <ul>
       <li>Your applications will have disappeared. This is normal and will be resolved shortly</li>
     </ul>
   </li>
-  <li>Power off your console and reinsert your SD card into your computer</li>
+  <li>Power off your console</li>
+  <li>Inserta tu tarjeta SD en tu computadora</li>
   <li>Ve a la carpeta <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> en tu tarjeta SD</li>
   <li>Copy the 32 character long name of the folder you see
     <ul>
@@ -879,41 +881,6 @@ window.cookieconsent.initialise({
 </details>
 
 <details>
-<summary><u>"To use the Internet Browser, please update your system using the System Update option in the System Settings."</u></summary>
-
-<p>First, make sure you entered the correct proxy for the connection you’re using. If not, go back to <a href="installing-boot9strap-(ssloth-browser).html#section-ii---ssloth">Section II</a>. If the proxy is correct, then your console has been cart-updated, which means an alternate exploit will need to be used.</p>
-
-<p><u>Method 1</u><br />
-If the two numbers before the region in the system version string is equal to or less than 36 (e.g. Ver. 11.14.0-<strong>36</strong>U), you can follow <a href="installing-boot9strap-(soundhax)">Soundhax</a>. When prompted to select a firmware to generate the sound file, use:</p>
-
-<ul>
-  <li>1.x - 2.1 if the number is between 0 and 2</li>
-  <li>2.1 - 2.2 if the number is between 3 and 4</li>
-  <li>3.x - 4.x if the number is between 5 and 10</li>
-  <li>5.x - 11.3 if the number is between 11 and 36</li>
-</ul>
-
-<p><u>Method 2 (Old 3DS only)</u><br />
-If you have an Old 3DS / Old 3DS XL / 2DS, you can try a Safe Mode update, which will trigger an alternate exploit:</p>
-
-<ol>
-  <li>Ensure that the proxy that you used for SSLoth is still actively applied to your internet connection</li>
-  <li>With your console powered off, hold the following buttons: (Left Shoulder) + (Right Shoulder) + (D-Pad Up) + (A), and while holding these buttons together, power on your console
-    <ul>
-      <li>Keep holding the buttons until the console boots into Safe Mode (a “system update” menu)</li>
-    </ul>
-  </li>
-  <li>Press “OK” to accept the update</li>
-  <li>If everything worked correctly, the update will fail and the 3DS will boot into SafeB9SInstaller. If it did, then continue from <a href="installing-boot9strap-(ssloth-browser)#section-iv---installing-boot9strap">Section IV</a>.</li>
-</ol>
-
-<hr />
-
-<p>If these methods didn’t work (or do not apply to you), update your console to the latest version and follow <a href="seedminer">Seedminer</a>.</p>
-
-</details>
-
-<details>
 <summary><u>Failed to open SafeB9SInstaller.bin</u></summary>
 
 <p>Falta el archivo <code class="language-plaintext highlighter-rouge">SafeB9SInstaller.bin</code> o está fuera de lugar. Download the latest release of <a href="https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip">SafeB9SInstaller</a>, extract it, and place <code class="language-plaintext highlighter-rouge">SafeB9SInstaller.bin</code> on the root of your SD card. No añadas manualmente la extensión <code class="language-plaintext highlighter-rouge">.bin</code> al archivo si ves que no la tiene.</p>
@@ -945,7 +912,7 @@ If you have an Old 3DS / Old 3DS XL / 2DS, you can try a Safe Mode update, which
 <h2 id="homebrew-launcher-super-skaterhax">Homebrew Launcher (super-skaterhax)</h2>
 
 <details>
-<summary><u>"An error has occured. Please save your data in any software currently in use, then restart the system."</u></summary>
+<summary><u>"An error has occurred. Please save your data in any software currently in use, then restart the system."</u></summary>
 
 <p>The date is set incorrectly. To set it correctly, follow these steps:</p>
 
@@ -991,7 +958,7 @@ If you have an Old 3DS / Old 3DS XL / 2DS, you can try a Safe Mode update, which
 <details>
 <summary><u>Unable to enter Rosalina menu due to broken Left Shoulder / Down D-Pad / Select button(s)</u></summary>
 
-<p>Download this <a href="assets/config.ini">alternate config.ini</a> and place it in <code class="language-plaintext highlighter-rouge">/luma/</code>. This will change the Rosalina key combination to (X) + (Y).</p>
+<p>Download this <a href="/assets/config.ini">alternate config.ini</a> and place it in <code class="language-plaintext highlighter-rouge">/luma/</code>. This will change the Rosalina key combination to (X) + (Y).</p>
 </details>
 
 <details>
@@ -1158,7 +1125,7 @@ If this is the case, attempt the steps below, which are listed from easiest to h
   <li>Inicia TWLFix-CFW desde la lista de homebrew</li>
   <li>Presiona (A) para desinstalar los títulos TWL dañados</li>
   <li>Press (Start) to reboot the console</li>
-  <li>Realiza una Actualización de sistema dirigiéndote a la Configuración de la consola, después a “Otras opciones”, luego ve al último menú de la derecha y pulsa en “Actualización”
+  <li>Update your console by going to System Settings, then “Other Settings”, then going all the way to the right and using “System Update”
     <ul>
       <li>La actualización verá que los títulos TWL esenciales han sido desinstalados, y los volverá a descargar e instalar</li>
     </ul>
@@ -1238,7 +1205,7 @@ However, if you do not know the PIN and therefore cannot access the console’s 
   <li>Go to <a href="https://mkey.eiphax.tech/">this website</a></li>
   <li>Fill the following boxes with the information:
     <ul>
-      <li>Console Type: Select “3DS” (the same applies if you are using a 2DS, New 3DS (XL/LL) or New 2DS (XL/LL))</li>
+      <li>Device Type: Select “3DS” (the same applies if you are using a 2DS, New 3DS (XL/LL) or New 2DS (XL/LL))</li>
       <li>System Date: The day and month your console’s clock is set to</li>
       <li>Inquiry Number: Can be obtained by pressing “Forgot PIN” then “I Forgot” in the Parental Controls screen</li>
     </ul>

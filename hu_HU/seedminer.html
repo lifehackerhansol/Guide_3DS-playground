@@ -519,7 +519,7 @@ window.cookieconsent.initialise({
 <details class="notice--info">
 <summary><em>Technikai részletek (opcionális)</em></summary>
 
-<p>To install boot9strap on your console, we derive your console’s unique encryption key. To accomplish this, we use a tool called Seedminer to calculate the data encryption key (movable.sed) for your console.</p>
+<p>A boot9strap telepítéséhez a konzolodra, megfejtjük az eszköz egyedi titkosító kulcsát. Ennek eléréséhez egy Seedminer nevű eszközt fogunk használni, hogy kiszámítsuk a konzolod adat titkosítási kulcsát (movable.sed).</p>
 
 <p>További információért arról, hogyan működik a Seedminer, nézd meg <a href="https://zoogie.github.io/web/34⅕c3">ezt a prezentációt</a>.</p>
 
@@ -529,7 +529,7 @@ window.cookieconsent.initialise({
 
 <h3 id="i-rész---előkészületek">I. rész - Előkészületek</h3>
 
-<p>In this section, you will get the necessary details from your 3DS that are required to figure out your console’s encryption key.</p>
+<p>Ebben a fejezetben összeszedjük a szükséges információkat a 3DS-edről, ami ahhoz kell, hogy kitaláljuk a a konzolod titkosító kulcsát.</p>
 
 <div class="notice--info">
 <p>Mielőtt követnéd ezt a fejezetet:</p>
@@ -557,14 +557,14 @@ window.cookieconsent.initialise({
       <li>Ez a mappa a te “ID0” mappád. Jegyezd fel ezt, mert az útmutató később hivatkozni fog rá</li>
     </ul>
   </li>
-  <li>Power on your console
+  <li>Kapcsold be a konzolod
     <ul>
       <li>Az SD kártyádnak nem kell behelyzve lennie ennél a pontnál</li>
     </ul>
   </li>
   <li>Válaszd a Friend List opciót (a <a href="https://3ds.hacks.guide/images/friend-list-icon.png">narancsszínű fej ikon</a> a HOME Menü felső sávján)
     <ul>
-      <li>If you receive an error and are kicked out of the menu, you either must create a new Mii or your console cannot connect to Nintendo’s servers (due to a ban or connection issues)</li>
+      <li>Ha hibaüzenetet kapsz, és visszadob a menübe, vagy új Mii-t kell csinálnod, vagy a konzolod nem tud csatlakozni a Nintendo szervereihez (kitiltás vagy kapcsolódási hiba miatt)</li>
     </ul>
   </li>
   <li>Keresd meg a Mii profilodat, ott találod a “Friend Code” mezőt a felső képernyőn</li>
@@ -572,7 +572,7 @@ window.cookieconsent.initialise({
 
 <h3 id="ii-rész---seedminer">II. rész - Seedminer</h3>
 
-<p>In this section, you will use the Bruteforce Movable website to retrieve your console’s encryption key in the form of <code class="language-plaintext highlighter-rouge">movable.sed</code>.</p>
+<p>Ebben a fejezetben a Bruteforce Movable weboldalt fogod használni, hogy megszerezd a a konzolod titkosító kulcsát <code class="language-plaintext highlighter-rouge">movable.sed</code> formában.</p>
 
 <ol>
   <li>Nyisd meg a <a href="https://seedminer.hacks.guide/">Bruteforce Movable</a> oldalt a számítógépeden
@@ -580,8 +580,8 @@ window.cookieconsent.initialise({
       <li>Ha az oldal nem működik, csatlakozz a <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew Discord-on</a> csatornához, és kérj segítséget (angol nyelven) valakitől</li>
     </ul>
   </li>
-  <li>Enter your console’s Friend Code (with no spaces or dashes) into the “Your friend code” field</li>
-  <li>Paste your console’s 32 character long folder name into the “Your ID0” field
+  <li>Írd be a konzolod Friend Code-ját (szóközök és kötőjelek nélkül) a “Your friend code” mezőbe</li>
+  <li>Illeszd be a a konzolod 32 karakter hosszú mappanevét a “Your ID0” mezőbe
     <ul>
       <li>Ne próbáld meg kézzel beadni az ID0 kódot, mert könnyű hibázni. Legyél biztos abban, hogy az ID0 helyes, azzal, hogy másolod és beilleszted onnan, ahova az előző részben elmentetted</li>
     </ul>
@@ -591,7 +591,7 @@ window.cookieconsent.initialise({
       <li>Ha az oldal azonnal a 4. lépésre ugrik, a weboldal már feldolgozta helyesen a bruteforce kérésedet. Letöltheted a <code class="language-plaintext highlighter-rouge">movable.sed</code> fájlod és folytathatod a következő fejezettel. Nem szükséges (újra) hozzáadnod a bot-ot</li>
     </ul>
   </li>
-  <li>Use the <a href="/images/screenshots/seedminer/register-friend.png">“Register Friend” button</a> on your console to add the bot’s friend code as given by the website
+  <li>Használd a <a href="/images/screenshots/seedminer/register-friend.png">“Register Friend” button</a> gombot a konzolodon és add hozzá a bot weboldalon megadott Friend Code-ját
     <ul>
       <li>Ha kérdezi a rendszer, a név amit megadsz a barátnak, az nem számít</li>
     </ul>
@@ -618,11 +618,9 @@ window.cookieconsent.initialise({
 
 <h3 id="következő-lépés-bannerbomb3">Következő lépés: BannerBomb3</h3>
 
-<p>Once you have your console’s encryption key (<code class="language-plaintext highlighter-rouge">movable.sed</code>), you can use it in conjunction with BannerBomb3, which uses your <code class="language-plaintext highlighter-rouge">movable.sed</code> file to take advantage of exploits in the System Settings application.</p>
+<p>Ha meg van a konzolod titkosítási kulcsa (<code class="language-plaintext highlighter-rouge">movable.sed</code>) a Bannerbomb3-mal együtt használhatod, ami a <code class="language-plaintext highlighter-rouge">movable.sed</code> fájlodat használja, hogy a System Settings-ben megtalálható exploitokat kihasználja.</p>
 
-<ul class="notice--primary">
-  <li>Folytatás a <a href="bannerbomb3">BannerBomb3</a>-mal</li>
-</ul>
+<p class="notice--primary">Folytatás a <a href="bannerbomb3">BannerBomb3</a>-mal</p>
 
         
       </section>

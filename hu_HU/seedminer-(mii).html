@@ -520,7 +520,7 @@ window.cookieconsent.initialise({
 </aside>
 
 <div class="notice--warning">
-<p>This method requires a reasonably powerful GPU (any dedicated graphics card made in the last few years) and the ability to use a command line. If you don’t know what those are or do not have the hardware necessary, you can ask someone to do this for you at <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew on Discord</a>. You will need to have the following information ready:</p>
+<p>Ez a metódus egy ésszerűen erős GPU-t igényel (bármilyen dedikált grafikus kártya, amit az elmúlt években készítettek) és a parancssor használatának képességét. Ha nem tudod, mik ezek, vagy nem rendelkezel a szükséges hardverrel, kérj meg valakit a <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew Discord szerverén</a>, hogy csinálja ezt meg neked. A következő információkkal kell már rendelkezz:</p>
 <ul>
   <li>Your Mii QR code, uploaded directly to Discord (do not take a screenshot or a photo of the image, just send the HNI_XXXX.JPG image itself)</li>
   <li>Your console’s ID0 (the name of the 32-character folder directly inside of Nintendo 3DS - see <a href="https://3ds.hacks.guide/troubleshooting#seedminer">this troubleshooting section</a> if you have multiple)</li>
@@ -532,7 +532,7 @@ window.cookieconsent.initialise({
 <details class="notice--info">
 <summary><em>Technikai részletek (opcionális)</em></summary>
 
-<p>To install boot9strap on your console, we derive your console’s unique encryption key. To accomplish this, we use a tool called Seedminer to calculate the data encryption key (movable.sed) for your console.</p>
+<p>A boot9strap telepítéséhez a konzolodra, megfejtjük az eszköz egyedi titkosító kulcsát. Ennek eléréséhez egy Seedminer nevű eszközt fogunk használni, hogy kiszámítsuk a konzolod adat titkosítási kulcsát (movable.sed).</p>
 
 <p>Mivel nincs hzzáférésünk a Friends List-hez, ezért a <code class="language-plaintext highlighter-rouge">movable.sed</code> első felét a egy Mii QR code használatával határozzuk meg a kétirányű barát adatcsere helyett.</p>
 
@@ -557,44 +557,58 @@ window.cookieconsent.initialise({
 
 <h3 id="i-rész---előkészületek">I. rész - Előkészületek</h3>
 
-<p>In this section, you will set up Seedminer and obtain your console’s files that are needed for mining.</p>
+<p>Ebben a fejezetben a telepíteni fogjuk a Seedminer-t és beszerezzük a konzolod azon fájljait, amik a bányászáshoz szükségesek.</p>
 
 <ol>
-  <li>Extract the contents of the Seedminer <code class="language-plaintext highlighter-rouge">.zip</code> and move the folder with your operating systeem’s name to anywhere on your PC
+  <li>Csomagold ki a Seedminer <code class="language-plaintext highlighter-rouge">.zip</code> tartalmát és mozgassd ebből az operációs rendszereddel egyező nevű mappát bárhova a PC-dre
     <ul>
-      <li>Keep this location handy, as this Seedminer folder will be where multiple other files are placed</li>
+      <li>Legyen ez a hely kéznél, mert ebbe a Seedminer mappába további fájlok kerülnek</li>
     </ul>
   </li>
-  <li>In the Seedminer folder, hold SHIFT and right-click anywhere in the folder’s empty space, then click the option that opens Terminal, PowerShell, or Command Prompt</li>
-  <li>In the command line window, type <code class="language-plaintext highlighter-rouge">py -3 -mpip install pycryptodomex</code>, hit ENTER, and allow it to install
+  <li>A Seedminer mappában tartsd lenyomva a SHIFT gombot, majd jobb gombbal kattints bárhova a mappában, ahol üres hely van, és válaszd azt az opciót, ami megnyitja a Terminal-t, PowerShell-t vagy a parancssort (Command Prompt-ot)</li>
+  <li>A parancssori ablakba írd be a <code class="language-plaintext highlighter-rouge">py -3 -m pip install pycryptodomex</code> parancsot, majd nyomj ENTER-t és engedélyezd (allow) a telepítését
     <ul>
-      <li>If this command fails with the error <code class="language-plaintext highlighter-rouge">No module named pip</code>, you must manually install pip. The methods to do this can be found on <a href="https://pip.pypa.io/en/stable/installation/">this page</a>.</li>
+      <li>Ha ez a parancs hibára fut a <code class="language-plaintext highlighter-rouge">No module named pip</code> hibaüzenettel, akkor kézzel kell telepítened a pip-et. Ennek a módja megtalálható <a href="https://pip.pypa.io/en/stable/installation/">ezen az oldalon</a>.</li>
     </ul>
   </li>
-  <li>Turn your console on while the SD card is inserted</li>
+  <li>
+    <ul>
+      <li>Kapcsold be a konzolod, miközben az SD kártya be van helyezve</li>
+    </ul>
+  </li>
   <li>Nyisd meg a Mii készítő (Mii Maker) alkalmazást</li>
   <li>Érintsd meg a “QR Code/Image Options” gombot</li>
-  <li>Tap “Save Mii as QR Code”</li>
-  <li>Select any Mii Character (make a new one first if you don’t have any), and press “OK”</li>
-  <li>Turn the console off</li>
-  <li>Put the console’s SD card into your computer, navigate to the <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> folder on the SD, and copy the name of the 32-character-long folder directly inside
+  <li>Érintsd meg a “Save Mii as QR Code” opciót</li>
+  <li>Válassz egy tetszőleges Mii Character-t (készíts egy újat, ha még nem lenne egy sem) és nyomj “OK”-ét</li>
+  <li>Kapcsold ki a konzolod</li>
+  <li>Helyezd az SD kártyád a számítógépbe</li>
+  <li>Lépj be az SD kártyád <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> könyvtárába</li>
+  <li>Másold le a 32 karakter hosszú nevét annak a mappának, amit látsz a Nintendo 3DS mappán belül
     <ul>
-      <li>This folder, known as the ID0, is system-specific. Only one should be present. Ha többet látsz, kövesd <a href="troubleshooting#seedminer">ezeket a lépéseket</a></li>
-      <li>Once you have the ID0, paste it into a document so you can reference it later</li>
+      <li>Ez a 32 karakter hosszú név rendszer specifikus és eltérő minden konzolnál</li>
+      <li>Ha több 32 karakter hosszú nevű mappát látsz, kövesd <a href="troubleshooting#seedminer">ezeket a lépéseket</a></li>
+      <li>Figyelmen kívül hagyhatod a <code class="language-plaintext highlighter-rouge">private</code> mappát, ha rendelkezel vele</li>
+    </ul>
+
+    <p class="notice--info"><img src="https://3ds.hacks.guide/images/screenshots/seedminer/id0-example.png" alt="" /></p>
+  </li>
+  <li>Illesztd be a te 32-karakteres mappa neved <a href="/images/screenshots/seedminer/text-document.png">egy dokumentumba</a> amit megtalálsz később
+    <ul>
+      <li>Ez a mappa a te “ID0” mappád. Jegyezd fel ezt, mert az útmutató később hivatkozni fog rá</li>
     </ul>
   </li>
-  <li>Navigate to the <code class="language-plaintext highlighter-rouge">DCIM</code> folder on the SD card</li>
-  <li>Look for the QR Code, which will be a <code class="language-plaintext highlighter-rouge">.JPG</code> file starting with <code class="language-plaintext highlighter-rouge">HNI</code>
+  <li>Lépj be az SD kártyád <code class="language-plaintext highlighter-rouge">DCIM</code> könyvtárába</li>
+  <li>Keresd meg a QR kódot, ami egy <code class="language-plaintext highlighter-rouge">.JPG</code> fájl lesz, aminek a neve <code class="language-plaintext highlighter-rouge">HNI</code>-vel kezdődik
     <ul>
-      <li>You may have many other files in here already if you use the Nintendo 3DS Camera app</li>
+      <li>Lehet, hogy még más fájlokat is talász itt ha használod a Nintendo 3DS Camera appot</li>
     </ul>
   </li>
-  <li>Copy this file to the Seedminer folder on your PC</li>
+  <li>Másold át ezt a fájlt a Seedminer mappába a PC-den</li>
 </ol>
 
 <h3 id="ii-rész---a-mii-qr-feldolgozásáa-és-bányászat">II. rész - A Mii QR feldolgozásáa és bányászat</h3>
 
-<p>In this section, you will turn the Mii QR code into a usable file and mine <code class="language-plaintext highlighter-rouge">movable.sed</code> with it.</p>
+<p>Ebben a fejezetben a Mii QR kódodból egy használható fájl amivel kibányászod a <code class="language-plaintext highlighter-rouge">movable.sed</code> fájlt.</p>
 
 <ol>
   <li>Nyisd meg a <a href="https://zoogie.github.io/web/miiqr/">editMii</a> weboldalt a számítógépeden</li>
@@ -610,6 +624,7 @@ window.cookieconsent.initialise({
     <ul>
       <li>Helyettesítsd az <code class="language-plaintext highlighter-rouge">&lt;id0&gt;</code>-t az ID0+val amit a dokumentumba másoltál</li>
       <li>Ne legyenek benne a kacsacsőrök</li>
+      <li>Ne próbáld meg kézzel beadni az ID0 kódot, mert könnyű hibázni. Legyél biztos abban, hogy az ID0 helyes, azzal, hogy másolod és beilleszted onnan, ahova az előző részben elmentetted</li>
     </ul>
   </li>
   <li>Ha végzett írd be a <code class="language-plaintext highlighter-rouge">py -3 seedminer_launcher3.py mii &lt;model&gt; &lt;year&gt;</code> parancsot

@@ -579,13 +579,15 @@ window.cookieconsent.initialise({
 
 <ol>
   <li>Renommez le dossier <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> en <code class="language-plaintext highlighter-rouge">BACKUP_Nintendo 3DS</code></li>
-  <li>Reinsert your SD card into your console and power on your console</li>
+  <li>Réinsérez votre carte SD dans votre console</li>
+  <li>Power on your console</li>
   <li>Wait for the console to generate the SD card data
     <ul>
       <li>Vos applications auront disparu. Ceci est normal et sera résolu plus tard</li>
     </ul>
   </li>
-  <li>Power off your console and reinsert your SD card into your computer</li>
+  <li>Éteignez votre console</li>
+  <li>Insérez votre carte SD dans votre ordinateur</li>
   <li>Naviguez vers le dossier <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> de votre carte SD</li>
   <li>Copiez le nom du dossier qui fait 32 caractères de long que vous voyez
     <ul>
@@ -879,41 +881,6 @@ window.cookieconsent.initialise({
 </details>
 
 <details>
-<summary><u>"Vous devez mettre la console à jour pour utiliser le Navigateur Internet. Accédez aux paramètres de la console, puis sélectionnez Autres paramètres ⇒ Mise à jour."</u></summary>
-
-<p>Tout d’abord, assurez-vous d’avoir entré le bon proxy pour la connexion que vous utilisez. Sinon, revenez à la <a href="installing-boot9strap-(ssloth-browser).html#section-ii---ssloth">Section II</a>. If the proxy is correct, then your console has been cart-updated, which means an alternate exploit will need to be used.</p>
-
-<p><u>Méthode 1</u><br />
-Si les deux nombres avant la région dans la chaîne de version du système sont égaux ou inférieurs à 36 (par exemple, Ver. 11.14.0-<strong>36</strong>U), vous pouvez suivre <a href="installing-boot9strap-(soundhax)">Soundhax</a>. Quand vous êtes invité à sélectionner un firmware pour générer le fichier son, sélectionnez :</p>
-
-<ul>
-  <li>1.x - 2.1 si le nombre est compris entre 0 et 2</li>
-  <li>2.1 - 2.2 si le nombre est compris entre 3 et 4</li>
-  <li>3.x - 4.x si le nombre est compris entre 5 et 10</li>
-  <li>5.x - 11.3 si le nombre est compris entre 11 et 36</li>
-</ul>
-
-<p><u>Méthode 2 (Old 3DS seulement)</u><br />
-Si vous avez une Old 3DS / Old 3DS XL / 2DS, vous pouvez essayer de faire une mise à jour de la console depuis le mode sans échec, ce qui déclenchera un exploit alternatif :</p>
-
-<ol>
-  <li>Assurez-vous que le proxy que vous avez utilisé pour SSLoth est toujours activement appliqué à votre connexion internet</li>
-  <li>With your console powered off, hold the following buttons: (Left Shoulder) + (Right Shoulder) + (D-Pad Up) + (A), and while holding these buttons together, power on your console
-    <ul>
-      <li>Keep holding the buttons until the console boots into Safe Mode (a “system update” menu)</li>
-    </ul>
-  </li>
-  <li>Appuyez sur “OK” pour accepter la mise à jour</li>
-  <li>Si tout a fonctionné correctement, la mise à jour échouera et la 3DS lancera SafeB9SInstaller. Si c’est le cas, continuez depuis la <a href="installing-boot9strap-(ssloth-browser)#section-iv---installing-boot9strap">Section IV</a>.</li>
-</ol>
-
-<hr />
-
-<p>If these methods didn’t work (or do not apply to you), update your console to the latest version and follow <a href="seedminer">Seedminer</a>.</p>
-
-</details>
-
-<details>
 <summary><u>Failed to open SafeB9SInstaller.bin</u></summary>
 
 <p>Le fichier <code class="language-plaintext highlighter-rouge">SafeB9SInstaller.bin</code> est absent ou mal placé. Téléchargez la dernière version de <a href="https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip">SafeB9SInstaller</a>, extrayez-le et placez <code class="language-plaintext highlighter-rouge">SafeB9SInstaller.bin</code> à la racine de votre carte SD. N’ajoutez pas l’extension <code class="language-plaintext highlighter-rouge">.bin</code> si vous ne la voyez pas déjà.</p>
@@ -991,7 +958,7 @@ Si vous avez une Old 3DS / Old 3DS XL / 2DS, vous pouvez essayer de faire une mi
 <details>
 <summary><u>Impossible d'entrer dans le menu Rosalina en raison des boutons (L) / Bas sur la croix directionnelle / Select cassés</u></summary>
 
-<p>Téléchargez ce <a href="assets/config.ini">config.ini alternatif</a> et placez-le dans <code class="language-plaintext highlighter-rouge">/luma/</code>. Ceci changera la combinaison de touches du menu Rosalina en (X) + (Y).</p>
+<p>Download this <a href="/assets/config.ini">alternate config.ini</a> and place it in <code class="language-plaintext highlighter-rouge">/luma/</code>. Ceci changera la combinaison de touches du menu Rosalina en (X) + (Y).</p>
 </details>
 
 <details>
@@ -1156,7 +1123,7 @@ Si c’est le cas, essayez les étapes ci-dessous, qui sont listées du plus sim
   <li>Lancez TWLFix-CFW que vous trouverez dans la liste des homebrews</li>
   <li>Appuyez sur (A) pour désinstaller les titres TWL corrompus</li>
   <li>Press (Start) to reboot the console</li>
-  <li>Effectuez une Mise à jour du Système en vous rendant dans les Paramètres de la console, puis “Autres paramètres”, puis tout à droite sur l’option “Mise à jour du Système”
+  <li>Update your console by going to System Settings, then “Other Settings”, then going all the way to the right and using “System Update”
     <ul>
       <li>Le processus de mise à jour verra que les titres TWL essentiels ont été désinstallés, et va les re-télécharger et les réinstaller</li>
     </ul>
@@ -1236,7 +1203,7 @@ However, if you do not know the PIN and therefore cannot access the console’s 
   <li>Allez sur <a href="https://mkey.eiphax.tech/">ce site web</a></li>
   <li>Remplissez les champs avec les informations suivantes :
     <ul>
-      <li>Console Type: Select “3DS” (the same applies if you are using a 2DS, New 3DS (XL/LL) or New 2DS (XL/LL))</li>
+      <li>Device Type: Select “3DS” (the same applies if you are using a 2DS, New 3DS (XL/LL) or New 2DS (XL/LL))</li>
       <li>System date : Le jour et le mois de l’horloge sur laquelle votre console est réglée</li>
       <li>Inquiry number : (Code d’assistance) Peut être obtenu en appuyant sur “Code PIN oublié” puis “J’ai oublié” dans l’écran du Contrôle parental</li>
     </ul>

@@ -566,21 +566,31 @@ window.cookieconsent.initialise({
     </ul>
   </li>
   <li>Na pasta Seedminer, segure SHIFT e o botão direito do mouse em qualquer lugar vazio da pasta e, em seguida, clique na opção que abre o Terminal, PowerShell ou Prompt de Comando</li>
-  <li>Na janela da linha de comando, digite <code class="language-plaintext highlighter-rouge">py -3 -mpip install pycryptodomex</code>, pressione ENTER, e permita a instalação
+  <li>In the command line window, type <code class="language-plaintext highlighter-rouge">py -3 -m pip install pycryptodomex</code>, hit ENTER, and allow it to install
     <ul>
       <li>Se este comando falhar com o erro <code class="language-plaintext highlighter-rouge">No module named pip</code>, você precisa instalar manualmente o pip. Os métodos para fazer isso podem ser encontrados <a href="https://pip.pypa.io/en/stable/installation/">nesta página</a>.</li>
     </ul>
   </li>
-  <li>Ligue o seu console enquanto o cartão SD estiver inserido</li>
+  <li>Power on your console while the SD card is inserted</li>
   <li>Abrir o aplicativo do Mii Maker</li>
   <li>Toque no botão “QR Code/Opções de Imagem”</li>
   <li>Toque em “Salvar Mii como QR Code”</li>
   <li>Selecione qualquer personagem Mii (faça um novo se você não tem algum) e pressione “OK”</li>
-  <li>Desligue o console</li>
-  <li>Coloque o cartão SD do console no seu computador, navegue até a pasta <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> no SD, e copie o nome da pasta de 32 caracteres diretamente dentro
+  <li>Desligue seu console</li>
+  <li>Insira o cartão SD no seu computador</li>
+  <li>Vá até a pasta <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> no seu cartão SD</li>
+  <li>Copie o nome da pasta de 32 letras que você vê diretamente dentro de Nintendo 3DS
     <ul>
-      <li>Esta pasta, conhecida como ID0, é específica do sistema. Só um deve estar presente. Se você ver vários, siga <a href="troubleshooting#seedminer">estas instruções</a></li>
-      <li>Uma vez com o ID0, cole-o em um documento para que você possa referenciá-lo mais tarde</li>
+      <li>Este nome de 32 letras é específico do sistema e será diferente para cada console</li>
+      <li>Se você ver várias pastas de 32 letras, siga <a href="troubleshooting#seedminer">estas instruções</a></li>
+      <li>Você pode ignorar a pasta <code class="language-plaintext highlighter-rouge">private</code> se ela está presente</li>
+    </ul>
+
+    <p class="notice--info"><img src="https://3ds.hacks.guide/images/screenshots/seedminer/id0-example.png" alt="" /></p>
+  </li>
+  <li>Cole o nome da sua pasta de 32 letras em um <a href="/images/screenshots/seedminer/text-document.png">documento</a> que você possa referenciar mais tarde
+    <ul>
+      <li>Esta pasta é conhecida como seu “ID0”. Tome nota disso já que este guia irá referir-se a ele como tal mais tarde</li>
     </ul>
   </li>
   <li>Navegue até a pasta <code class="language-plaintext highlighter-rouge">DCIM</code> no cartão SD</li>
@@ -610,6 +620,7 @@ window.cookieconsent.initialise({
     <ul>
       <li>Substitua <code class="language-plaintext highlighter-rouge">&lt;id0&gt;</code> pelo ID0 que você copiou para um documento</li>
       <li>Não inclua os parênteses angulares</li>
+      <li>Não tente inserir o ID0 manualmente, já que é fácil cometer um erro. Assegure-se de que o seu ID0 esteja inserido corretamente copiando-o e colando-o de onde você o salvou na seção anterior</li>
     </ul>
   </li>
   <li>Quando concluído, digite o comando <code class="language-plaintext highlighter-rouge">py -3 seedminer_launcher3.py mii &lt;modelo&gt; &lt;ano&gt;</code>
