@@ -1,0 +1,816 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Instalando boot9strap (Kartminer7) - 3DS Hacks Guide</title>
+<meta name="description" content="A complete guide to 3DS custom firmware">
+
+
+  <meta name="author" content="Nintendo Homebrew">
+  
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="3DS Hacks Guide">
+<meta property="og:title" content="Instalando boot9strap (Kartminer7)">
+<meta property="og:url" content="https://3ds.hacks.guide/pt_BR/installing-boot9strap-(kartminer7).html">
+
+
+  <meta property="og:description" content="A complete guide to 3DS custom firmware">
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://3ds.hacks.guide/pt_BR/installing-boot9strap-(kartminer7).html">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Nintendo Homebrew",
+      "url": "https://3ds.hacks.guide/"
+    
+  }
+</script>
+
+
+  <meta name="google-site-verification" content="jVXoPK_-qzKJp4SScnZYpOIX3yDXfGnAoTBJYixUOwg" />
+
+
+  <meta name="msvalidate.01" content="F3532011519E308583A0A2CAF2DD69E8">
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="3DS Hacks Guide Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<!-- hacks-guide change start: cookie consent, favicon, locales -->
+
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=PYEmwKvQAx">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png?v=PYEmwKvQAx" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-194x194.png?v=PYEmwKvQAx" sizes="194x194">
+<link rel="icon" type="image/png" href="/images/android-chrome-192x192.png?v=PYEmwKvQAx" sizes="192x192">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png?v=PYEmwKvQAx" sizes="16x16">
+<link rel="manifest" href="/images/manifest.json?v=PYEmwKvQAx">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg?v=PYEmwKvQAx" color="#2E3440">
+<link rel="shortcut icon" href="/images/favicon.ico?v=PYEmwKvQAx">
+<meta name="apple-mobile-web-app-title" content="Guide">
+<meta name="application-name" content="Guide">
+<meta name="msapplication-TileColor" content="#2E3440">
+<meta name="msapplication-TileImage" content="/images/mstile-144x144.png?v=PYEmwKvQAx">
+<meta name="msapplication-config" content="/images/browserconfig.xml?v=PYEmwKvQAx">
+<meta name="theme-color" content="#2E3440">
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.css" integrity="sha512-LQ97camar/lOliT/MqjcQs5kWgy6Qz/cCRzzRzUCfv0fotsCTC9ZHXaPQmJV8Xu/PVALfJZ7BDezl5lW3/qBxg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js" integrity="sha512-yXXqOFjdjHNH1GND+1EO0jbvvebABpzGKD66djnUfiKlYME5HGMUJHoCaeE4D5PTG2YsSJf6dwqyUUvQvS0vaA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#2e3440"
+    },
+    "button": {
+      "background": "#60818f"
+    }
+  },
+  "theme": "edgeless",
+  "position": "top",
+  "static": true,
+  "content": {
+    "message": "Esta página usa cookies para mostrar o atual progresso da guia na barra lateral e, desta forma melhorar o site."
+  }
+})});
+</script>
+<!-- hacks-guide change end -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+<!-- hacks-guide change start: Disable caching -->
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+<!-- hacks-guide change start: disable default masthead title -->
+      <!--
+        <a class="site-title" href="/">
+          3DS Hacks Guide
+          
+        </a>
+      -->
+<!-- hacks-guide change end -->
+        <ul class="visible-links">
+<!-- hacks-guide change start: multi-language configuration -->
+          
+          
+          
+          
+          
+          
+            
+              <li class="masthead__menu-item masthead__menu-item--lg"><a href="/pt_BR/">Página Inicial</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/pt_BR/faq">FAQ</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/pt_BR/troubleshooting">Troubleshooting</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/pt_BR/checking-for-cfw">Checando por CFW</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/pt_BR/godmode9-usage">Utilização do GodMode9</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/pt_BR/contribute">Contribuir</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/pt_BR/region-changing">Mudança de Região</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/pt_BR/uninstall-cfw">Desinstalar CFW</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/pt_BR/credits">Créditos</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/pt_BR/site-navigation">Navegação do Site</a></li>
+            
+          
+<!-- hacks-guide change end -->
+        </ul>
+        
+<!-- hacks-guide change start: Add language selector -->
+        <ul class="hidden-links links-menu hidden"></ul>
+        <ul class="hidden-links lang-menu hidden">
+          
+          
+          
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/installing-boot9strap-(kartminer7).html">English</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/es_ES/installing-boot9strap-(kartminer7).html">Español</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/de_DE/installing-boot9strap-(kartminer7).html">Deutsch</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/fr_FR/installing-boot9strap-(kartminer7).html">Français</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/it_IT/installing-boot9strap-(kartminer7).html">Italiano</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/nl_NL/installing-boot9strap-(kartminer7).html">Nederlands</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/pt_BR/installing-boot9strap-(kartminer7).html">Português do Brasil</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/pt_PT/installing-boot9strap-(kartminer7).html">Português (Portugal)</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ru_RU/installing-boot9strap-(kartminer7).html">Русский</a></li> -->
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/zh_CN/installing-boot9strap-(kartminer7).html">简体中文</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/zh_TW/installing-boot9strap-(kartminer7).html">繁體中文</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/pl_PL/installing-boot9strap-(kartminer7).html">Polski</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/tr_TR/installing-boot9strap-(kartminer7).html">Türkçe</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/vi_VN/installing-boot9strap-(kartminer7).html">Tiếng Việt</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ca_ES/installing-boot9strap-(kartminer7).html">Català</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/el_GR/installing-boot9strap-(kartminer7).html">Ελληνικά</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/he_IL/installing-boot9strap-(kartminer7).html">עברית‎</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/sv_SE/installing-boot9strap-(kartminer7).html">Svenska</a></li> -->
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ko_KR/installing-boot9strap-(kartminer7).html">한국어</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/no_NO/installing-boot9strap-(kartminer7).html">Norsk</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ja_JP/installing-boot9strap-(kartminer7).html">日本語</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ar_SA/installing-boot9strap-(kartminer7).html">اللغة العربية</a></li> -->
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/hu_HU/installing-boot9strap-(kartminer7).html">Magyar</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ro_RO/installing-boot9strap-(kartminer7).html">Română</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/sr_SP/installing-boot9strap-(kartminer7).html">Српски</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/af_ZA/installing-boot9strap-(kartminer7).html">Afrikaans</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ms_MY/installing-boot9strap-(kartminer7).html">Bahasa Melayu</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/fi_FI/installing-boot9strap-(kartminer7).html">Suomi</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/da_DK/installing-boot9strap-(kartminer7).html">Dansk</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/uk_UA/installing-boot9strap-(kartminer7).html">Українська</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/cs_CZ/installing-boot9strap-(kartminer7).html">Čeština</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/en_PT/installing-boot9strap-(kartminer7).html">Pirate English</a></li> -->
+        </ul>
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <button class="greedy-nav__toggle_lang"><div class="langicon"><i class="fa fa-language fa-lg" aria-hidden="true"></i></div></button>
+<!-- hacks-guide change end -->
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  <!-- hacks-guide change start: Implement progress table, replace existing sidebar -->
+<!--
+
+  <div class="sidebar sticky">
+  
+  
+    
+    
+  
+  </div>
+
+-->
+
+
+
+<div class="sidebar sticky" style="display: none;">
+  <!-- hacks-guide change start: Refactor entire subsection to allow using translations -->
+
+
+
+
+
+
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    <li>
+      <span class="nav__sub-title">Progresso Geral</span>
+      <ol>
+        
+          
+            <li style="display: none;" data-name="home"><a href='/pt_BR/'>Página Inicial</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="key-information"><a href='/pt_BR/key-information'>Informação Importante</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="get-started"><a href='/pt_BR/get-started'>Começando</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="updating-firmware-(new-3ds)"><a href='/pt_BR/updating-firmware-(new-3ds)'>Atualizando o Firmware (New 3DS)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="updating-firmware-(kor)"><a href='/pt_BR/updating-firmware-(kor)'>Atualizando o Firmware (KOR)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="updating-firmware-(twn)"><a href='/pt_BR/updating-firmware-(twn)'>Atualizando o Firmware (TWN)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="ntrboot"><a href='/pt_BR/ntrboot'>ntrboot</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="alternate-exploits"><a href='/pt_BR/alternate-exploits'>Exploits Alternativos</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer"><a href='/pt_BR/seedminer'>Seedminer</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(alternate)"><a href='/pt_BR/seedminer-(alternate)'>Seedminer (Alternativo)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(mii)"><a href='/pt_BR/seedminer-(mii)'>Seedminer (Mii)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(twn)"><a href='/pt_BR/seedminer-(twn)'>Seedminer (TWN)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="bannerbomb3"><a href='/pt_BR/bannerbomb3'>BannerBomb3</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(ninjhax2-dx)"><a href='/pt_BR/installing-boot9strap-(ninjhax2-dx)'>Instalando boot9strap (ninjhax2-dx)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(pichaxx)"><a href='/pt_BR/installing-boot9strap-(pichaxx)'>Installing boot9strap (PicHaxx)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(smilehax-iie)"><a href='/pt_BR/installing-boot9strap-(smilehax-iie)'>Instalando boot9strap (smilehax-IIe)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(steelhax)"><a href='/pt_BR/installing-boot9strap-(steelhax)'>Instalando boot9strap (Steelhax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(super-skaterhax)"><a href='/pt_BR/installing-boot9strap-(super-skaterhax)'>Instalando boot9strap (superskaterhax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(petit-compwner)"><a href='/pt_BR/installing-boot9strap-(petit-compwner)'>Instalando boot9strap (petit-compwner)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="dumping-eshop-dsiware"><a href='/pt_BR/dumping-eshop-dsiware'>Fazendo dump de DSiWare da eShop</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="multiple-options"><i>(Múltiplas Opções)</i></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(3ds-single-system)"><a href='/pt_BR/flashing-ntrboot-(3ds-single-system)'>Flashing ntrboot (Único 3DS)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(3ds-multi-system)"><a href='/pt_BR/flashing-ntrboot-(3ds-multi-system)'>Flashing ntrboot (Vários 3DS)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(dsi)"><a href='/pt_BR/flashing-ntrboot-(dsi)'>Flashing ntrboot (DSi)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(nds)"><a href='/pt_BR/flashing-ntrboot-(nds)'>Flashing ntrboot (NDS)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="bannerbomb3-fredtool-(twn)"><a href='/pt_BR/bannerbomb3-fredtool-(twn)'>BannerBomb3 + Fredtool (TWN)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(hardmod)"><a href='/pt_BR/installing-boot9strap-(hardmod)'>Instalando boot9strap (Hardmod)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(ntrboot)"><a href='/pt_BR/installing-boot9strap-(ntrboot)'>Instalando boot9strap (ntrboot)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(soundhax)"><a href='/pt_BR/installing-boot9strap-(soundhax)'>Instalando boot9strap (Soundhax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(safecerthax)"><a href='/pt_BR/installing-boot9strap-(safecerthax)'>Instalando boot9strap (safecerthax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(ssloth-browser)"><a href='/pt_BR/installing-boot9strap-(ssloth-browser)'>Instalando boot9strap (SSLoth-Browser)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(fredtool-inject)"><a href='/pt_BR/installing-boot9strap-(fredtool-inject)'>Instalando boot9strap (Fredtool-Inject)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(menuhax)"><a href='/pt_BR/installing-boot9strap-(menuhax)'>Instalando boot9strap (menuhax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(kartdlphax)"><a href='/pt_BR/installing-boot9strap-(kartdlphax)'>Instalando boot9strap (kartdlphax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="finalizing-setup"><a href='/pt_BR/finalizing-setup'>Finalizando a Instalação</a></li>
+          
+        
+      </ol>
+    </li>
+  </ul>
+</nav>
+<!-- hacks-guide change end -->
+
+</div>
+
+
+<!-- hacks-guide change end-->
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Instalando boot9strap (Kartminer7)">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Instalando boot9strap (Kartminer7)
+</h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+
+<!-- hacks-guide change start -->
+        <hr>
+
+        
+        
+
+        
+          
+          <div class ="notice"><b>Para suporte em Inglês, peça ajuda no <a href="https://discord.gg/MWxPgEp">Discord do Nintendo Homebrew</a>.</b></div>
+        
+          
+          <div class ="notice"><b>Se você gostou deste guia, nós aceitamos <a href="contribute#donations">Doações</a>.</b></div>
+        
+
+        <hr>
+<!-- hacks-guide change end -->
+
+        <aside class="sidebar__right">
+<nav class="toc">
+    <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Tabela de Conteúdo</h4></header>
+<ul class="toc__menu" id="markdown-toc">
+  <li><a href="#o-que-é-necessário" id="markdown-toc-o-que-é-necessário">O que é necessário</a>    <ul>
+      <li><a href="#seção-i---preparando-os-dados-do-mario-kart-7" id="markdown-toc-seção-i---preparando-os-dados-do-mario-kart-7">Seção I - Preparando os dados do Mario Kart 7</a></li>
+      <li><a href="#seção-ii---preparação-do-cartão-sd" id="markdown-toc-seção-ii---preparação-do-cartão-sd">Seção II - Preparação do Cartão SD</a></li>
+      <li><a href="#seção-iii---instalando-kartminer7" id="markdown-toc-seção-iii---instalando-kartminer7">Seção III - Instalando Kartminer7</a></li>
+      <li><a href="#seção-iv---kartminer7" id="markdown-toc-seção-iv---kartminer7">Seção IV - Kartminer7</a></li>
+      <li><a href="#seção-v---instalando-menuhax67" id="markdown-toc-seção-v---instalando-menuhax67">Seção V - Instalando menuhax67</a></li>
+      <li><a href="#seção-vi---instalando-o-boot9strap" id="markdown-toc-seção-vi---instalando-o-boot9strap">Seção VI - Instalando o boot9strap</a></li>
+      <li><a href="#seção-vii---removendo-menuhax67" id="markdown-toc-seção-vii---removendo-menuhax67">Seção VII - Removendo menuhax67</a></li>
+    </ul>
+  </li>
+</ul>
+
+  </nav>
+</aside>
+
+<details class="notice--info">
+<summary><em>Detalhes técnicos (opcional)</em></summary>
+
+<p>Para instalar o boot9strap no seu console, nós derivamos a chave de criptografia exclusiva do seu console. Para fazer isso, usamos uma ferramenta chamada Seedminer para calcular a chave de criptografia de dados (movable.sed) para o seu console.</p>
+
+<p>Uma vez que temos <code class="language-plaintext highlighter-rouge">movable.sed</code>, podemos editar os dados do cartão SD do jogo Mario Kart 7 para instalar menuhax67, que nos permitirá ter acesso ao Homebrew Launcher.</p>
+
+<p>Assim que tivermos acesso ao Homebrew Launcher, podemos executar o nimdsphax para instalar o boot9strap.</p>
+
+<p>Veja <a href="https://github.com/zoogie/kartminer7">aqui</a> para informações sobre Kartminer7, <a href="https://github.com/zoogie/menuhax67">aqui</a> para informações sobre menuhax67 e <a href="https://github.com/luigoalma/nimdsphax">aqui</a> para informações sobre o nimdsphax.</p>
+
+</details>
+
+<h3 id="o-que-é-necessário">O que é necessário</h3>
+
+<ul>
+  <li>Uma cópia física ou digital de Mario Kart 7 atualizada para a versão mais recente (v1.2)
+    <ul>
+      <li>Você pode atualizar Mario Kart 7 a partir do eShop ou seguindo a mensagem de atualização quando você abrir o jogo</li>
+    </ul>
+  </li>
+  <li>Um computador Windows</li>
+  <li>Seu arquivo <code class="language-plaintext highlighter-rouge">movable.sed</code> de completar Seedminer</li>
+  <li>A versão mais recente do <a href="https://github.com/zoogie/Kartminer7/releases/latest">Kartminer7</a></li>
+  <li>A versão mais recente do <a href="https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip">boot9strap</a> (download direto)</li>
+  <li>A versão mais recente do <a href="https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip">SafeB9SInstaller</a> (download direto)</li>
+  <li>A versão mais recente do <a href="https://github.com/luigoalma/nimdsphax/releases/download/v1.0/nimdsphax_v1.0.zip">nimdsphax</a> (download direto)</li>
+  <li>A versão mais recente do <a href="https://github.com/zoogie/menuhax67/releases/latest">menuhax67</a></li>
+  <li>A versão mais recente do <a href="https://github.com/LumaTeam/Luma3DS/releases/latest">Luma3DS</a> (o arquivo <code class="language-plaintext highlighter-rouge">.zip</code> do Luma3DS)</li>
+</ul>
+
+<h4 id="seção-i---preparando-os-dados-do-mario-kart-7">Seção I - Preparando os dados do Mario Kart 7</h4>
+
+<p>Nesta seção, você fará com que o 3DS gere alguns dados no Mario Kart 7 que serão usados para instalar o exploit em uma seção posterior.</p>
+
+<ol>
+  <li>Reinsira o cartão SD no seu console</li>
+  <li>Inicie o Mario Kart 7</li>
+  <li>Toque no botão “Mario Kart Channel” na parte inferior</li>
+  <li>Se você for solicitado, aperte “Next” e “OK” para todos os alertas que você ver</li>
+  <li>Toque no botão “StreetPass List” na parte inferior da tela, no meio</li>
+  <li>Aperte o botão (Home) para suspender o Mario Kart 7</li>
+  <li>Desative as conexões sem fio desligando o interruptor wireless do lado do console ou navegando para as Configurações do Menu HOME (canto superior esquerdo) -&gt; Comunicação sem fio -&gt; OFF</li>
+  <li>Desligue seu console</li>
+</ol>
+
+<h4 id="seção-ii---preparação-do-cartão-sd">Seção II - Preparação do Cartão SD</h4>
+
+<ol>
+  <li>Insira o cartão SD no seu computador</li>
+  <li>Copie <code class="language-plaintext highlighter-rouge">boot.firm</code> e <code class="language-plaintext highlighter-rouge">boot.3dsx</code> do <code class="language-plaintext highlighter-rouge">.zip</code> do Luma3DS para a raiz do seu cartão SD
+    <ul>
+      <li>A raiz do cartão SD refere-se ao diretório inicial no seu cartão SD onde você pode ver a pasta Nintendo 3DS, mas não está dentro dela</li>
+    </ul>
+  </li>
+  <li>Crie uma pasta chamada <code class="language-plaintext highlighter-rouge">boot9strap</code> na raiz do seu cartão SD</li>
+  <li>Copie o <code class="language-plaintext highlighter-rouge">boot9strap.firm</code> e o <code class="language-plaintext highlighter-rouge">boot9strap.firm.sha</code> do <code class="language-plaintext highlighter-rouge">.zip</code> do boot9strap para a pasta <code class="language-plaintext highlighter-rouge">/boot9strap/</code> no seu cartão SD</li>
+  <li>Copie <code class="language-plaintext highlighter-rouge">SafeB9SInstaller.bin</code> para a raiz do seu cartão SD</li>
+  <li>Crie uma pasta chamada <code class="language-plaintext highlighter-rouge">3ds</code> na raiz do seu cartão SD se ela ainda não existir
+    <ul>
+      <li>Esta pasta armazena aplicativos homebrew e dados; é diferente da pasta <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> que o console gera automaticamente</li>
+    </ul>
+  </li>
+  <li>Copie a pasta <code class="language-plaintext highlighter-rouge">nimdsphax</code> do nimdsphax <code class="language-plaintext highlighter-rouge">.zip</code> para a pasta <code class="language-plaintext highlighter-rouge">/3ds/</code> no seu cartão SD</li>
+  <li>Copie <code class="language-plaintext highlighter-rouge">menuhax67_installer.3dsx</code> do <code class="language-plaintext highlighter-rouge">.zip</code> menuhax para a pasta <code class="language-plaintext highlighter-rouge">/3ds/</code> no seu cartão SD</li>
+  <li>Copie o Launcher.dat da pasta para seu modelo e região dentro do <code class="language-plaintext highlighter-rouge">.zip</code> do menuhax para a raiz do seu cartão SD</li>
+  <li>Mantenha seu cartão SD inserido no seu computador, como ainda é necessário na próxima seção</li>
+</ol>
+
+<p class="notice--info"><img src="https://3ds.hacks.guide/images/screenshots/kart-root-layout.png" alt="" /></p>
+
+<p class="notice--info"><img src="https://3ds.hacks.guide/images/screenshots/kart-3ds-layout.png" alt="" /></p>
+
+<h4 id="seção-iii---instalando-kartminer7">Seção III - Instalando Kartminer7</h4>
+
+<ol>
+  <li>Extraia o <code class="language-plaintext highlighter-rouge">.zip</code> do Release_BETA_mk7 para <strong>algum lugar no seu computador</strong> (por exemplo, sua área de trabalho)</li>
+  <li>Copie seu arquivo <code class="language-plaintext highlighter-rouge">movable.sed</code> para a pasta <code class="language-plaintext highlighter-rouge">resources</code> da pasta Release_BETA_mk7
+    <ul>
+      <li>Certifique-se de que o arquivo tem o nome exato de <code class="language-plaintext highlighter-rouge">movable.sed</code></li>
+    </ul>
+  </li>
+  <li>Abra a pasta <code class="language-plaintext highlighter-rouge">backup</code> dentro da pasta Release_BETA_mk7</li>
+  <li>Clique duas vezes no arquivo BACKUP <code class="language-plaintext highlighter-rouge">.bat</code> correspondente à região do seu console (por exemplo, backup_USA.bat se você tiver uma cópia EUA de Mario Kart 7)
+    <ul>
+      <li>Se você não tem certeza da região do seu console, você pode verificar nas Configurações do Sistema. U = EUA; E = EUR, J = JPN</li>
+      <li>Se você receber uma mensagem do Windows Defender, clique em “Mais informações”, “Executar mesmo assim” e pressione qualquer tecla para continuar</li>
+      <li>Se o backup foi bem-sucedido, você verá uma nova pasta aparecer</li>
+      <li>Se você deseja restaurar estes dados em outro momento (depois de terminar este guia), insira seu cartão SD e clique duas vezes no arquivo RESTORE <code class="language-plaintext highlighter-rouge">.bat</code> correspondente à região do seu console</li>
+    </ul>
+  </li>
+  <li>Volte para a pasta Release_BETA_mk7, depois clique duas vezes no arquivo <code class="language-plaintext highlighter-rouge">.bat</code> correspondente à região do seu console (por exemplo, USA.bat, se você tiver uma cópia EUA do Mario Kart 7)</li>
+  <li>Reinsira o cartão SD no seu console</li>
+</ol>
+
+<h4 id="seção-iv---kartminer7">Seção IV - Kartminer7</h4>
+
+<ol>
+  <li>Ligue o seu console</li>
+  <li>Inicie o Mario Kart 7</li>
+  <li>Toque no botão “Mario Kart Channel” na parte inferior</li>
+  <li>Toque no botão “StreetPass List” na parte inferior da tela, no meio</li>
+  <li>Aperte (A) várias vezes
+    <ul>
+      <li>Você deve ver eventualmente o prompt “Start Race?”, então as cores na parte inferior da tela devem mudar de vermelho, para azul, para branco</li>
+      <li>Se você ver as telas vermelho/azul/branco mas o 3DS ter um crash, reinicie e tente novamente</li>
+      <li>Se você não vê QUAISQUER cores, mude o idioma do seu sistema (se possível), então tente o exploit novamente</li>
+    </ul>
+  </li>
+  <li>Se o exploit foi bem sucedido, o <strong>3DS de destino</strong> terá sido inicializado no 3DS ROP xPloit Injector</li>
+</ol>
+
+<h4 id="seção-v---instalando-menuhax67">Seção V - Instalando menuhax67</h4>
+
+<ol>
+  <li>Aperte (Y) + (D-Pad para Baixo) para instalar menuhax67
+    <ul>
+      <li>Seu console irá desligar automaticamente</li>
+    </ul>
+  </li>
+  <li>Ligue o seu console</li>
+  <li>Toque no pequeno ícone de configurações do Menu HOME no canto superior esquerdo da tela inferior (<img src="https://3ds.hacks.guide/images/homemenuicon.png" alt="" height="32px" width="52px" />)
+    <ul>
+      <li>Se o console congelar por um tempo e depois acontecer um crash, certifique-se de ter Launcher.dat na raiz do seu cartão SD</li>
+    </ul>
+  </li>
+  <li>Se o exploit foi bem sucedido, seu console irá iniciar no Homebrew Launcher</li>
+  <li>Abra o nimdsphax da lista de homebrews</li>
+  <li>Se o exploit for bem-sucedido, você terá entrado no SafeB9SInstaller
+    <ul>
+      <li>Se o seu console congela numa tela vermelha, segure o botão POWER até que ele desligue, em seguida, tente executar o menuhax novamente ligando seu console e tocando no ícone de configurações do Menu HOME</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="seção-vi---instalando-o-boot9strap">Seção VI - Instalando o boot9strap</h4>
+
+<p>Nesta seção, você instalará custom firmware no seu console.</p>
+
+<ol>
+  <li>Quando solicitado, aperte a sequência de botões fornecida na tela superior para instalar o boot9strap
+    <ul>
+      <li>Se um passo na tela inferior tiver texto de cor vermelha e você não for solicitado a introduzir um combo de botões, <a href="troubleshooting#issues-with-safeb9sinstaller">siga este guia de solução de problemas</a></li>
+    </ul>
+  </li>
+  <li>Quando concluído, aperte (A) para reiniciar o seu console</li>
+  <li>Seu console deve ter inicializado o menu de configuração do Luma3DS
+    <ul>
+      <li>O menu de configuração do Luma3DS são configurações para o custom firmware do Luma3DS. Muitas dessas configurações podem ser úteis para personalização ou depuração</li>
+      <li>Para o propósito deste guia, <strong>deixe essas opções nas configurações padrão</strong> (não marque ou desmarque nada)</li>
+      <li>Se o seu console desligar quando você tentar ligá-lo, certifique-se de que você copiou <code class="language-plaintext highlighter-rouge">boot.firm</code> do <code class="language-plaintext highlighter-rouge">.zip</code> do Luma3DS para a raiz do seu cartão SD</li>
+    </ul>
+  </li>
+  <li>Aperte (Start) para salvar e reiniciar</li>
+</ol>
+
+<p>A partir deste momento, o seu console iniciará no Luma3DS por padrão.</p>
+<ul>
+  <li>O Luma3DS não é diferente do HOME Menu normal. Se seu console foi inicializado no Menu HOME, ele está executando custom firmware.</li>
+  <li>Na próxima página, você irá instalar aplicativos homebrew úteis para concluir sua instalação.</li>
+</ul>
+
+<h4 id="seção-vii---removendo-menuhax67">Seção VII - Removendo menuhax67</h4>
+
+<p>Nesta seção, você usará o Homebrew Launcher para remover o menuhax67, que permitirá que você acesse a opção Configurações do Menu HOME normalmente.</p>
+
+<ol>
+  <li>Abra o aplicativo Download Play (<img src="https://3ds.hacks.guide/images/download-play-icon.png" alt="" height="24px" width="24px" />)</li>
+  <li>Aguarde até ver os botões <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> e <code class="language-plaintext highlighter-rouge">Nintendo DS</code></li>
+  <li>Aperte (Gatilho Esquerdo) + (D-pad pra baixo) + (Select) ao mesmo tempo para abrir o menu Rosalina</li>
+  <li>Selecione “Miscellaneous options”</li>
+  <li>Selecione “Switch the hb. title to the current app.”</li>
+  <li>Aperte (B) para continuar</li>
+  <li>Aperte (B) para retornar para o menu principal do Rosalina</li>
+  <li>Aperte (B) para sair do menu do Rosalina</li>
+  <li>Aperte (Home) para suspender o Download Play</li>
+  <li>Pressione o botão “Fechar” na tela inferior para fechar o Download Play</li>
+  <li>Reinicie o aplicativo Download Play</li>
+  <li>Seu console deve inicializar o Homebrew Launcher
+    <ul>
+      <li>Se o seu console estiver travado na tela de carregamento, você está sem <code class="language-plaintext highlighter-rouge">boot.3dsx</code> na raiz do seu cartão SD</li>
+    </ul>
+  </li>
+  <li>Abra o menuhax67_installer da lista de homebrew</li>
+  <li>Selecione REMOVE menuhax67</li>
+  <li>Quando você ver “done.”, aperte (A), depois aperte (A) em “EXIT to menu”</li>
+</ol>
+
+<p class="notice-info">A partir daqui, você pode reativar a comunicação sem fio.</p>
+
+<hr />
+
+<p class="notice-primary">Continue em <a href="finalizing-setup">Finalizando a instalação</a></p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://github.com/hacks-guide/Guide_3DS" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+<!-- hacks-guide change start: force disable atom feed-->
+<!--
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+    </ul>
+  -->
+<!-- hacks-guide change end -->
+
+</div>
+
+<!-- hacks-guide change start: custom footer -->
+
+
+
+<div class="page__footer-copyright">&copy; 2023 Nintendo Homebrew. - <a href="site-navigation">Navegação do Site</a> - <a href="privacy-policy">Política de Privacidade</a> <!-- Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.--></div>
+<!-- hacks-guide change end -->
+
+      </footer>
+    </div>
+<!-- hacks-guide change end -->
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+<!-- hacks-guide change start: Disable caching -->
+
+<!-- hacks-guide change end -->
+
+
+
+
+  <script>
+  window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+  ga('create','UA-86465881-1','auto');
+  ga('set', 'anonymizeIp', false);
+  ga('send','pageview')
+</script>
+<script src="https://www.google-analytics.com/analytics.js" async></script>
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

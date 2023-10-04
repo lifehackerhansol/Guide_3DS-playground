@@ -1,0 +1,1438 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Hibaelhárítás - 3DS Hacks Guide</title>
+<meta name="description" content="A complete guide to 3DS custom firmware">
+
+
+  <meta name="author" content="Nintendo Homebrew">
+  
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="3DS Hacks Guide">
+<meta property="og:title" content="Hibaelhárítás">
+<meta property="og:url" content="https://3ds.hacks.guide/hu_HU/troubleshooting.html">
+
+
+  <meta property="og:description" content="A complete guide to 3DS custom firmware">
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://3ds.hacks.guide/hu_HU/troubleshooting.html">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Nintendo Homebrew",
+      "url": "https://3ds.hacks.guide/"
+    
+  }
+</script>
+
+
+  <meta name="google-site-verification" content="jVXoPK_-qzKJp4SScnZYpOIX3yDXfGnAoTBJYixUOwg" />
+
+
+  <meta name="msvalidate.01" content="F3532011519E308583A0A2CAF2DD69E8">
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="3DS Hacks Guide Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<!-- hacks-guide change start: cookie consent, favicon, locales -->
+
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=PYEmwKvQAx">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png?v=PYEmwKvQAx" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-194x194.png?v=PYEmwKvQAx" sizes="194x194">
+<link rel="icon" type="image/png" href="/images/android-chrome-192x192.png?v=PYEmwKvQAx" sizes="192x192">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png?v=PYEmwKvQAx" sizes="16x16">
+<link rel="manifest" href="/images/manifest.json?v=PYEmwKvQAx">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg?v=PYEmwKvQAx" color="#2E3440">
+<link rel="shortcut icon" href="/images/favicon.ico?v=PYEmwKvQAx">
+<meta name="apple-mobile-web-app-title" content="Guide">
+<meta name="application-name" content="Guide">
+<meta name="msapplication-TileColor" content="#2E3440">
+<meta name="msapplication-TileImage" content="/images/mstile-144x144.png?v=PYEmwKvQAx">
+<meta name="msapplication-config" content="/images/browserconfig.xml?v=PYEmwKvQAx">
+<meta name="theme-color" content="#2E3440">
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.css" integrity="sha512-LQ97camar/lOliT/MqjcQs5kWgy6Qz/cCRzzRzUCfv0fotsCTC9ZHXaPQmJV8Xu/PVALfJZ7BDezl5lW3/qBxg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js" integrity="sha512-yXXqOFjdjHNH1GND+1EO0jbvvebABpzGKD66djnUfiKlYME5HGMUJHoCaeE4D5PTG2YsSJf6dwqyUUvQvS0vaA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#2e3440"
+    },
+    "button": {
+      "background": "#60818f"
+    }
+  },
+  "theme": "edgeless",
+  "position": "top",
+  "static": true,
+  "content": {
+    "message": "A weboldal "sütiket" használ, hogy nyomon tudd követni a haladásod az oldalsó menüben, és hogy jobbá tegye az oldalt."
+  }
+})});
+</script>
+<!-- hacks-guide change end -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+<!-- hacks-guide change start: Disable caching -->
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+<!-- hacks-guide change start: disable default masthead title -->
+      <!--
+        <a class="site-title" href="/">
+          3DS Hacks Guide
+          
+        </a>
+      -->
+<!-- hacks-guide change end -->
+        <ul class="visible-links">
+<!-- hacks-guide change start: multi-language configuration -->
+          
+          
+          
+          
+          
+          
+            
+              <li class="masthead__menu-item masthead__menu-item--lg"><a href="/hu_HU/">Főoldal</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/hu_HU/faq">GYIK</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/hu_HU/troubleshooting">Hibaelhárítás</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/hu_HU/checking-for-cfw">CFW ellenőrzése</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/hu_HU/godmode9-usage">GodMode9 használata</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/hu_HU/contribute">Közreműködés</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/hu_HU/region-changing">Régió módosítás</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/hu_HU/uninstall-cfw">CFW eltávolítása</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/hu_HU/credits">Készítők</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/hu_HU/site-navigation">Oldaltérkép</a></li>
+            
+          
+<!-- hacks-guide change end -->
+        </ul>
+        
+<!-- hacks-guide change start: Add language selector -->
+        <ul class="hidden-links links-menu hidden"></ul>
+        <ul class="hidden-links lang-menu hidden">
+          
+          
+          
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/troubleshooting.html">English</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/es_ES/troubleshooting.html">Español</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/de_DE/troubleshooting.html">Deutsch</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/fr_FR/troubleshooting.html">Français</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/it_IT/troubleshooting.html">Italiano</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/nl_NL/troubleshooting.html">Nederlands</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/pt_BR/troubleshooting.html">Português do Brasil</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/pt_PT/troubleshooting.html">Português (Portugal)</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ru_RU/troubleshooting.html">Русский</a></li> -->
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/zh_CN/troubleshooting.html">简体中文</a></li>
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/zh_TW/troubleshooting.html">繁體中文</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/pl_PL/troubleshooting.html">Polski</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/tr_TR/troubleshooting.html">Türkçe</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/vi_VN/troubleshooting.html">Tiếng Việt</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ca_ES/troubleshooting.html">Català</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/el_GR/troubleshooting.html">Ελληνικά</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/he_IL/troubleshooting.html">עברית‎</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/sv_SE/troubleshooting.html">Svenska</a></li> -->
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ko_KR/troubleshooting.html">한국어</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/no_NO/troubleshooting.html">Norsk</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ja_JP/troubleshooting.html">日本語</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ar_SA/troubleshooting.html">اللغة العربية</a></li> -->
+          <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/hu_HU/troubleshooting.html">Magyar</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ro_RO/troubleshooting.html">Română</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/sr_SP/troubleshooting.html">Српски</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/af_ZA/troubleshooting.html">Afrikaans</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/ms_MY/troubleshooting.html">Bahasa Melayu</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/fi_FI/troubleshooting.html">Suomi</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/da_DK/troubleshooting.html">Dansk</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/uk_UA/troubleshooting.html">Українська</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/cs_CZ/troubleshooting.html">Čeština</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://3ds.hacks.guide/en_PT/troubleshooting.html">Pirate English</a></li> -->
+        </ul>
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <button class="greedy-nav__toggle_lang"><div class="langicon"><i class="fa fa-language fa-lg" aria-hidden="true"></i></div></button>
+<!-- hacks-guide change end -->
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  <!-- hacks-guide change start: Implement progress table, replace existing sidebar -->
+<!--
+
+  <div class="sidebar sticky">
+  
+  
+    
+    
+  
+  </div>
+
+-->
+
+
+
+<div class="sidebar sticky" style="display: none;">
+  <!-- hacks-guide change start: Refactor entire subsection to allow using translations -->
+
+
+
+
+
+
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    <li>
+      <span class="nav__sub-title">Előrehaladás</span>
+      <ol>
+        
+          
+            <li style="display: none;" data-name="home"><a href='/hu_HU/'>Főoldal</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="key-information"><a href='/hu_HU/key-information'>Alapvető információk</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="get-started"><a href='/hu_HU/get-started'>Kezdeti lépések</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="updating-firmware-(new-3ds)"><a href='/hu_HU/updating-firmware-(new-3ds)'>Firmware frissítése (New 3DS)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="updating-firmware-(kor)"><a href='/hu_HU/updating-firmware-(kor)'>Firmware frissítése (KOR)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="updating-firmware-(twn)"><a href='/hu_HU/updating-firmware-(twn)'>Firmware frissítése (TWN)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="ntrboot"><a href='/hu_HU/ntrboot'>ntrboot</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="alternate-exploits"><a href='/hu_HU/alternate-exploits'>Alternatív exploitok</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer"><a href='/hu_HU/seedminer'>Seedminer</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(alternate)"><a href='/hu_HU/seedminer-(alternate)'>Seedminer (Alternatív)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(mii)"><a href='/hu_HU/seedminer-(mii)'>Seedminer (Mii)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="seedminer-(twn)"><a href='/hu_HU/seedminer-(twn)'>Seedminer (TWN)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="bannerbomb3"><a href='/hu_HU/bannerbomb3'>BannerBomb3</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(ninjhax2-dx)"><a href='/hu_HU/installing-boot9strap-(ninjhax2-dx)'>Boot9strap telepítése (ninjhax2-dx)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(pichaxx)"><a href='/hu_HU/installing-boot9strap-(pichaxx)'>Boot9strap telepítése (PicHaxx)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(smilehax-iie)"><a href='/hu_HU/installing-boot9strap-(smilehax-iie)'>Boot9strap telepítése (smilehax-IIe)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(steelhax)"><a href='/hu_HU/installing-boot9strap-(steelhax)'>Boot9strap telepítése (Steelhax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(super-skaterhax)"><a href='/hu_HU/installing-boot9strap-(super-skaterhax)'>Boot9strap telepítése (super-skaterhax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(petit-compwner)"><a href='/hu_HU/installing-boot9strap-(petit-compwner)'>Boot9strap telepítése (petit-compwner)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="dumping-eshop-dsiware"><a href='/hu_HU/dumping-eshop-dsiware'>eShop DSiWare dumpolása</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="multiple-options"><i>(Több lehetőség)</i></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(3ds-single-system)"><a href='/hu_HU/flashing-ntrboot-(3ds-single-system)'>Ntrboot flashelése (egy 3DS rendszer)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(3ds-multi-system)"><a href='/hu_HU/flashing-ntrboot-(3ds-multi-system)'>Ntrboot flashelése (több 3DS rendszer)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(dsi)"><a href='/hu_HU/flashing-ntrboot-(dsi)'>Ntrboot flashelése (DSi)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="flashing-ntrboot-(nds)"><a href='/hu_HU/flashing-ntrboot-(nds)'>Ntrboot flashelése (NDS)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="bannerbomb3-fredtool-(twn)"><a href='/hu_HU/bannerbomb3-fredtool-(twn)'>BannerBomb3 + Fredtool (TWN)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(hardmod)"><a href='/hu_HU/installing-boot9strap-(hardmod)'>Boot9strap telepítése (Hardmod)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(ntrboot)"><a href='/hu_HU/installing-boot9strap-(ntrboot)'>Boot9strap telepítése (ntrboot)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(soundhax)"><a href='/hu_HU/installing-boot9strap-(soundhax)'>Boot9strap telepítése (Soundhax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(safecerthax)"><a href='/hu_HU/installing-boot9strap-(safecerthax)'>Boot9strap telepítése (safecerthax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(ssloth-browser)"><a href='/hu_HU/installing-boot9strap-(ssloth-browser)'>Boot9strap telepítése (SSLoth-Browser)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(fredtool-inject)"><a href='/hu_HU/installing-boot9strap-(fredtool-inject)'>Boot9strap telepítése (Fredtool-Inject)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(menuhax)"><a href='/hu_HU/installing-boot9strap-(menuhax)'>Boot9strap telepítése (menuhax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="installing-boot9strap-(kartdlphax)"><a href='/hu_HU/installing-boot9strap-(kartdlphax)'>Boot9strap telepítése (kartdlphax)</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="finalizing-setup"><a href='/hu_HU/finalizing-setup'>Telepítés véglegesítése</a></li>
+          
+        
+      </ol>
+    </li>
+  </ul>
+</nav>
+<!-- hacks-guide change end -->
+
+</div>
+
+
+<!-- hacks-guide change end-->
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Hibaelhárítás">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Hibaelhárítás
+</h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+
+<!-- hacks-guide change start -->
+        <hr>
+
+        
+        
+
+        
+          
+          <div class ="notice"><b>Ha segítségre van szükséged (angol nyelven), keresd fel a <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew-t Discord-on</a>.</b></div>
+        
+          
+          <div class ="notice"><b>Amennyiben hasznosnak véled ezt az útmutatót, elfogadunk <a href="contribute#donations">adományokat</a>.</b></div>
+        
+
+        <hr>
+<!-- hacks-guide change end -->
+
+        <p>Ez az oldal hibaelhárítási tanácsokat ad sűrűn előforduló problémákhoz. Ha nem tudod megoldani a problémád az oldal tanácsai alapján, csatlakozz a <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew-hoz Discord-on</a> és írd le a problémádat és azt is hogy mi az amit már próbáltál.</p>
+
+<details class="notice--info">
+<summary>Tartalomjegyzék</summary>
+
+<p>Több oldalon használt:</p>
+<ul>
+  <li><a href="#issues-with-safeb9sinstaller">SafeB9SInstaller</a></li>
+</ul>
+
+<p>Útmutató oldalak:</p>
+<ul>
+  <li><a href="#seedminer">Seedminer</a>
+    <ul>
+      <li><a href="#bannerbomb3">BannerBomb3</a></li>
+      <li><a href="#installing-boot9strap-fredtool-inject">Boot9strap telepítése (Fredtool-Inject)</a></li>
+      <li><a href="#installing-boot9strap-pichaxx">Boot9strap telepítése (PicHaxx)</a></li>
+    </ul>
+  </li>
+  <li><a href="#installing-boot9strap-soundhax">Boot9strap telepítése (Soundhax)</a></li>
+  <li><a href="#installing-boot9strap-ssloth-browser">Boot9strap telepítése (SSLoth-Browser)</a></li>
+  <li>
+    <p><a href="#installing-boot9strap-super-skaterhax">Boot9strap telepítése (super-skaterhax)</a></p>
+  </li>
+  <li><a href="#finalizing-setup">Telepítés véglegesítése</a></li>
+</ul>
+
+<p>Problémák telepítést követően:</p>
+<ul>
+  <li><a href="#boot-issues-on-consoles-with-custom-firmware">Boot problémák</a></li>
+  <li><a href="#software-issues-on-consoles-with-custom-firmware">Szoftver problémák</a></li>
+</ul>
+
+</details>
+
+<h2 id="problémák-a-safeb9sinstaller-rel">Problémák a SafeB9SInstaller-rel</h2>
+
+<h3 id="a-safeb9sinstaller-megnyitása-előtt">A SafeB9SInstaller megnyitása előtt</h3>
+
+<details>
+<summary><u>Failed to open SafeB9SInstaller.bin</u></summary>
+
+<p>A <code class="language-plaintext highlighter-rouge">SafeB9SInstaller.bin</code> fájl hiányzik, vagy rossz helyen van. Töltsd le a legutolsó kiadását az <a href="https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip">SafeB9SInstaller</a>-nek csomagold ki és rakd az SD kártyád gyökerébe. Ne add hozzá a <code class="language-plaintext highlighter-rouge">.bin</code> kiterjesztést, ha nem látod.</p>
+</details>
+
+<h3 id="sighaxed-firm-was-not-installed-tekintsd-meg-az-alsó-képernyőt-részletekért">SigHaxed FIRM was not installed! Tekintsd meg az alsó képernyőt részletekért.</h3>
+
+<details>
+<summary><u>MicroSD Card - init failed</u></summary>
+
+<p>Az SD kártyád furán viselkedik. Próbáld meg újraformázni az SD kártyád (<a href="formatting-sd-(windows)">Windows</a>, <a href="formatting-sd-(mac)">macOS</a>, <a href="formatting-sd-(linux)">Linux</a>). Ha ez nem működik, próbálj egy másik SD kártyát.</p>
+
+</details>
+
+<details>
+<summary><u>SigHaxed FIRM - File not found</u></summary>
+
+<p>Hiányzik a <code class="language-plaintext highlighter-rouge">boot9strap.firm</code> és a <code class="language-plaintext highlighter-rouge">boot9strap.firm.sha</code> fájl a <code class="language-plaintext highlighter-rouge">boot9strap</code> mappából vagy a <code class="language-plaintext highlighter-rouge">boot9strap</code> mappa neve hibás. Töltsd le a <a href="https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip">boot9strap</a>, legutolsó kiadását és rakd a <code class="language-plaintext highlighter-rouge">boot9strap.firm</code> és a <code class="language-plaintext highlighter-rouge">boot9strap.firm.sha</code> fájlt a <code class="language-plaintext highlighter-rouge">boot9strap</code> mappába.</p>
+</details>
+
+<details>
+<summary><u>SigHaxed FIRM - invalid FIRM</u></summary>
+
+<p>Probléma van a <code class="language-plaintext highlighter-rouge">boot9strap.firm</code> és a <code class="language-plaintext highlighter-rouge">boot9strap.firm.sha</code> fájlokkal. Töltsd le újra a <a href="https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip">boot9strap</a>, legutolsó kiadását és rakd a <code class="language-plaintext highlighter-rouge">boot9strap.firm</code> és a <code class="language-plaintext highlighter-rouge">boot9strap.firm.sha</code> fájlt a <code class="language-plaintext highlighter-rouge">boot9strap</code> mappába.</p>
+</details>
+
+<details>
+<summary><u>Secret Sector - File not found</u></summary>
+
+<p>Hiányzik a <code class="language-plaintext highlighter-rouge">secret_sector.bin</code> fájl a <code class="language-plaintext highlighter-rouge">boot9strap</code> mappából vagy a <code class="language-plaintext highlighter-rouge">boot9strap</code> mappa neve hibás. Töltsd le a <a href="magnet:?xt=urn:btih:15a3c97acf17d67af98ae8657cc66820cc58f655&amp;dn=secret_sector.bin&amp;tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.lelux.fi%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.loadbt.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.monitorit4.me%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.ololosh.space%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.srv00.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.theoks.net%3a6969%2fannounce&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker.zerobytes.xyz%3a1337%2fannounce&amp;tr=udp%3a%2f%2ftracker1.bt.moack.co.kr%3a80%2fannounce&amp;tr=udp%3a%2f%2fvibe.sleepyinternetfun.xyz%3a1738%2fannounce&amp;tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&amp;tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&amp;tr=http%3a%2f%2fopenbittorrent.com%3a80%2fannounce">secret_sector.bin</a> fájlt torrent klienssel és rakd a <code class="language-plaintext highlighter-rouge">boot9strap</code> mappába.</p>
+</details>
+
+<details>
+<summary><u>Valami más</u></summary>
+
+<p>Csatlakozz a <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew Discord-on</a> csatornához segítségért és írd le az üzenetet amit láttál.</p>
+</details>
+
+<h2 id="seedminer">Seedminer</h2>
+
+<details>
+<summary><u>Több hosszú mappanév a Nintendo 3DS mappában</u></summary>
+
+<p class="notice--info"><img src="https://3ds.hacks.guide/images/screenshots/multiple-id0.png" alt="" /></p>
+
+<p>Ez akkor fordul elő, ha az SD kártyádat több 3DS konzolban használod, és a célja, hogy megakadályozza a nem szándékos adat egyesítést olyan adattal, ami nem lenne érvényes másik konzolon. Ahhoz, hogy megtaláld melyik hosszú mappa név a helyes a 3DS-edhez, kövesd a következő lépéseket:</p>
+
+<ol>
+  <li>Nevezd át a <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> mappát <code class="language-plaintext highlighter-rouge">BACKUP_Nintendo 3DS</code> névre</li>
+  <li>Tedd vissza az SD kártyád a konzoldba</li>
+  <li>Kapcsold be a konzolod</li>
+  <li>Várd meg, amíg a konzolod legenerálja az SD kártyára az adatokat
+    <ul>
+      <li>Az alkalmazásaidnak el kell tűnniük. Ez normális, hamarosan megoldjuk</li>
+    </ul>
+  </li>
+  <li>Kapcsold ki a konzolod</li>
+  <li>Helyezd az SD kártyád a számítógépbe</li>
+  <li>Lépj be az SD kártyád <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> könyvtárába</li>
+  <li>Másold le a 32 karakter hosszú nevét annak a mappának, amit látsz
+    <ul>
+      <li>Ez a te valódi ID0-d, amit használni fogsz a <a href="seedminer#section-ii---seedminer">II. részben a Seedminer-nél</a></li>
+    </ul>
+  </li>
+  <li>Töröld a <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> mappát</li>
+  <li>
+    <ul>
+      <li>Nevezd át a <code class="language-plaintext highlighter-rouge">BACKUP_Nintendo 3DS</code> mappát <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> névre</li>
+    </ul>
+  </li>
+</ol>
+</details>
+
+<details>
+<summary><u>Bruteforce Movable a 4. lépésre ugrik</u></summary>
+
+<p>A weboldal már kibányászta a <code class="language-plaintext highlighter-rouge">movable.sed</code> fájlod friend code-od és az ID0 kombinációjának használatával. Használhatod a <code class="language-plaintext highlighter-rouge">movable.sed</code>-et amit biztosított számodra.</p>
+</details>
+
+<details>
+<summary><u>Important! You have been locked out of the automated part1 dumper system...</u></summary>
+
+<p>A friend code-od blokkolt friend code bot általi használattól, mert a 3DS-ed nem fogadta el sikeresen a bot friend (barát) kérését. Ellenőrizd, hogy a 3DS-ed megfelelően csatlakozik az internethez, majd csatlakozz a <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew-hoz Discord-on</a> és kérdezd meg, és kérdezz rá az unlockolásra.</p>
+</details>
+
+<details>
+<summary><u>We were unable to successfully complete your bruteforce request. :`(</u></summary>
+
+<p>A weboldal úgy találta, hogy a <code class="language-plaintext highlighter-rouge">movable.sed</code>-ed nem brute-force-olható. Ellenőrizd, hogy helyes ID0-t adtál-e meg a weboldalon. Ha az ID0-d helyes, akkor nem tudod használni a Seedminer-t és egy alternatív metódust kell használnod.</p>
+
+<p>Ha a konzolod New 3DS / New 3DS XL / New 2DS XL (amit a 4 váll gomb hátul és a C-Stick jobb oldalon jelez), követheted a <a href="installing-boot9strap-(super-skaterhax)">Boot9strap telepítése (super-skaterhax)</a> lépéseit. Egyébként egy olyan másik metódust kell használnod ami további játékokat és hardvert igényel.</p>
+
+</details>
+
+<h2 id="bannerbomb3">BannerBomb3</h2>
+
+<details>
+<summary><u>Több ID1 mappa az ID0 mappában</u></summary>
+
+<p><img src="https://3ds.hacks.guide/images/screenshots/multiple-id1.png" alt="" /></p>
+
+<p>Ez akkor fordulhat elő, ha több SD kártyát használtál a 3DS-en és összemásoltad a tartalmát az SD kártyáknak. Ez az ütközések megelőzése érdekében történik, hogy érvényes adat egyesítésre kerüljön.</p>
+
+<p>Ahhoz, hogy javítsd ezt, meg kell határozd, hogy melyik mappa tartalmazza az adataid. Általában ez a nagyobb (vagy legnagyobb) mappa a mappák közül. Mentsd és töröld a kisebb(ek)et, majd hozz létre egy <code class="language-plaintext highlighter-rouge">Nintendo DSiWare</code> mappát a megmaradtban, és mozgasd az <code class="language-plaintext highlighter-rouge">F00D43D5.bin</code> fájlt arra a helyre.</p>
+
+</details>
+
+<details>
+<summary><u>A DSiWare Management menü összeomlik a BB3 multihax menü megjelenése nélkül</u></summary>
+<p>Biztosítsd, hogy az <code class="language-plaintext highlighter-rouge">F00D43D5.bin</code> az egyetlen fájl a <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID0&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID1&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">Nintendo DSiWare</code> mappában. Ha így van, hozd létre újra a <a href="https://zoogie.github.io/web/bb3">BannerBomb3 Injector</a> segítségével.</p>
+
+<p>Továbbá légy biztos abban, hogy a <code class="language-plaintext highlighter-rouge">bb3.bin</code> fájl megtalálható az SD kártyád gyökerében. Ha hiányzik, töltsd le a legutolsó kiadását az <a href="https://github.com/zoogie/Bannerbomb3/releases/download/v3.0/Release_v3.0.zip">Bannerbomb3</a>-nak (közvetlen letöltés), és másold a <code class="language-plaintext highlighter-rouge">bb3.bin</code> fájlt a Release <code class="language-plaintext highlighter-rouge">.zip</code>-ből az SD kártyád gyökerébe.</p>
+
+<p>Ha ezen megoldások egyike sem javítja ezt a problémát, akkor az egyedi firmware eltávolításra kerülhetett erről a konzolról, úgy, hogy az lehetetlenné teszi ennek a metódusnak a végrehajtását. Ebben az esetben csatlakozz a <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew-hoz Discord-on</a> és kérj, támogatást angolul.</p>
+</details>
+
+<details>
+<summary><u>DSiWare Management menü a "No accessible software data." üzenetet jeleníti meg</u></summary>
+
+<p>Az <code class="language-plaintext highlighter-rouge">F00D43D5.bin</code> hiányzik a <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID0&gt;</code> - &gt; <code class="language-plaintext highlighter-rouge">&lt;ID1&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">Nintendo DSiWare</code> mappából. Ellenőrizd, hogy a <code class="language-plaintext highlighter-rouge">Nintendo DSiWare</code> helyesen írt és szóközölt. Nagybetű/kisbetű nem számít.</p>
+</details>
+
+<details>
+<summary><u>A DSiWare Management egy kérdőjelet mutat</u></summary>
+
+<p>Probléma van az <code class="language-plaintext highlighter-rouge">F00D43D5.bin</code> fájloddal (hibás vagy másik 3DS-hez tartozik). Hozd létre újra az <code class="language-plaintext highlighter-rouge">F00D43D5.bin</code> fájlod a <a href="https://zoogie.github.io/web/bb3">BannerBomb3 Injector</a> segítségével, biztosítva azt, hogy a konzolod <code class="language-plaintext highlighter-rouge">movable.sed</code> fájlját használod hozzá.</p>
+</details>
+
+<h2 id="boot9strap-telepítése-fredtool-inject">Boot9strap telepítése (Fredtool-Inject)</h2>
+
+<details>
+<summary><u>Hiba a DSiHaxInjector oldalon</u></summary>
+
+<p>Biztosítsd, hogy a <code class="language-plaintext highlighter-rouge">movable.sed</code> és a DSiWare mentés ugyanarról a konzolról származik. Egy eltérés hibához vezet.</p>
+</details>
+
+<details>
+<summary><u>A "Haxxxxxxxxx!" nem jelenik meg</u></summary>
+
+<p>Probléma van a <code class="language-plaintext highlighter-rouge">42383821.bin</code> fájloddal (nem jó, hiányzik, rossz helyen van vagy sérült). Hozd létre újra a fájljaid a <a href="https://jenkins.nelthorya.net/job/DSIHaxInjector_new/build?delay=0sec">DSIHaxInjector_new</a> weboldallal és rakd a <code class="language-plaintext highlighter-rouge">42383821.bin</code> fájlt <code class="language-plaintext highlighter-rouge">output.zip</code> -&gt; <code class="language-plaintext highlighter-rouge">hax</code>-ból a <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID0&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID1&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">Nintendo DSiWare</code> könyvtárba.</p>
+</details>
+
+<details>
+<summary><u>A DSiWare normálisan indul</u></summary>
+
+<p>A <code class="language-plaintext highlighter-rouge">Haxxxxxxxxx!</code> nem lett átmásolva az SD kártyádról a rendszer memóriába.</p>
+</details>
+
+<details>
+<summary><u>Az SD kártya kiszürkített a Flipnote-ban</u></summary>
+
+<p>A Flipnote-nak hosszú időre lehet szüksége a kártya indexeléséhez, ha nagy méretű SD kártyád van. Várj még néhány percet.</p>
+</details>
+
+<details>
+<summary><u>Lenny arc nem jelenik meg az SD kártya szekcióban</u></summary>
+
+<p>Nem másoltad át a <code class="language-plaintext highlighter-rouge">private</code> mappát a Frogminer_save <code class="language-plaintext highlighter-rouge">.zip</code>-ből az SD kártyád gyökerébe.</p>
+</details>
+
+<details>
+<summary><u>A Flipnote lefagy</u></summary>
+
+<p>Véletlenül hozzáértél az érintőképernyőhöz, miközben bent voltál a módosított Flipnote-ban. Add meg újra DS Connection Settings értékeit és próbáld újra, biztosítva azt hogy véletlenül sem használod az érintőképernyőt.</p>
+</details>
+
+<details>
+<summary><u>Zöld képernyő beillesztés után</u></summary>
+
+<p>A <code class="language-plaintext highlighter-rouge">boot.nds</code> fájl hiányzik, vagy rossz helyen van. Töltsd le a legutolsó kiadását az <a href="https://github.com/zoogie/b9sTool/releases/latest">b9stool</a>-nak és rakd a <code class="language-plaintext highlighter-rouge">boot.nds</code> fájlt az SD kártyád gyökerébe, felülírva a létező fájlt.</p>
+</details>
+
+<details>
+<summary><u>Fehér képernyő beillesztés után</u></summary>
+<p>Probléma van az <code class="language-plaintext highlighter-rouge">boot.nds</code> fájloddal. Töltsd le újra a legutolsó kiadását az <a href="https://github.com/zoogie/b9sTool/releases/latest">b9stool</a>-nak és rakd a <code class="language-plaintext highlighter-rouge">boot.nds</code> fájlt az SD kártyád gyökerébe, felülírva a létező fájlt.</p>
+</details>
+
+<details>
+<summary><u>Nem lehetséges a Luma3DS konfigurációs menü megnyitása B9STool futtatása után</u></summary>
+
+<p>Csatlakozz a <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew-hoz a Discord-on</a> és írd le, hogy mi történt.</p>
+</details>
+
+<h2 id="boot9strap-telepítése-pichaxx">Boot9strap telepítése (PicHaxx)</h2>
+
+<details>
+<summary><u>"An error has occurred. Hold down the POWER button to turn off the power..." (fekete képernyő szöveggel)</u></summary>
+
+<p>A <code class="language-plaintext highlighter-rouge">00000001.sav</code> és/vagy <code class="language-plaintext highlighter-rouge">otherapp.bin</code> fájljaid rossz helyre lehettek rakva. Biztosítsd, hogy a <code class="language-plaintext highlighter-rouge">00000001.sav</code> a <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID0&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID1&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">title</code> -&gt; <code class="language-plaintext highlighter-rouge">00040000</code> -&gt; <code class="language-plaintext highlighter-rouge">0017c100</code> -&gt; <code class="language-plaintext highlighter-rouge">data</code> mappában legyen és az <code class="language-plaintext highlighter-rouge">otherapp.bin</code> pedig az SD kártyád gyökerében.</p>
+
+<p>Ha a fájljaid jó helyen vannak, hozd létre újra a mentéseket a <a href="https://3dstools.nhnarwhal.com/#/pichaxx">PicHaxx Save Tool</a> használatával, majd rakd őket a <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID0&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID1&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">title</code> -&gt; <code class="language-plaintext highlighter-rouge">00040000</code> -&gt; <code class="language-plaintext highlighter-rouge">0017c100</code> -&gt; <code class="language-plaintext highlighter-rouge">data</code> mappába. Ügyelj arra, hogy a fájl pontosan <code class="language-plaintext highlighter-rouge">00000001.sav</code> nevű legyen és hogy a konzolod <code class="language-plaintext highlighter-rouge">movable.sed</code>-jét használd a létrehozáshoz. Töltsd le újra a <a href="https://github.com/zoogie/ninjhax2.x/releases/download/v11.17/otherapps_with_CfgS_11.17.zip">HBL otherappokat</a> és rakd a konzolod SD kártyájára a releváns <code class="language-plaintext highlighter-rouge">.bin</code> fájlt, majd nevezd át <code class="language-plaintext highlighter-rouge">otherapp.bin</code>-re. Ne add hozzá a <code class="language-plaintext highlighter-rouge">.bin</code> kiterjesztést, ha nem látod.</p>
+</details>
+
+<details>
+<summary><u>"An exception occurred" vagy Errdisp a Picross megnyitásakor</u></summary>
+
+<p>A konzolod már rendelkezik egyedi firmware-rel. Érdemes elvégezned a <a href="checking-for-cfw">CFW ellenőrzését</a>.</p>
+</details>
+
+<details>
+<summary><u>"An error has occurred, forcing the software to close..." (fehér üzenet doboz)</u></summary>
+
+<p>Probléma van az <code class="language-plaintext highlighter-rouge">otherapp.bin</code> fájloddal. Töltsd le a <a href="https://github.com/zoogie/ninjhax2.x/releases/download/v11.17/otherapps_with_CfgS_11.17.zip">HBL otherappokat</a> és rakd a konzolod SD kártyájára a releváns <code class="language-plaintext highlighter-rouge">.bin</code> fájlt, majd nevezd át <code class="language-plaintext highlighter-rouge">otherapp.bin</code>-re. Ne add hozzá a <code class="language-plaintext highlighter-rouge">.bin</code> kiterjesztést, ha nem látod.</p>
+</details>
+
+<details>
+<summary><u>A játék normálisan indul</u></summary>
+
+<p>A <code class="language-plaintext highlighter-rouge">00000001.sav</code> fájlod valószínüleg rossz helyen van, vagy nem a jó <code class="language-plaintext highlighter-rouge">movable.sed</code> fájlt használtál a létrehozásához. Generáld újra a <code class="language-plaintext highlighter-rouge">movable.sed</code> állományod a <a href="https://seedminer.hacks.guide">Bruteforce Movable</a>-vel, tmajd hozd létre újra a mentést <a href="https://3dstools.nhnarwhal.com/#/pichaxx">PicHaxx Save Tool</a> eszközzel és rakd az eredmény fájlt (<code class="language-plaintext highlighter-rouge">00000001.sav</code>) a <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID0&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">&lt;ID1&gt;</code> -&gt; <code class="language-plaintext highlighter-rouge">title</code> -&gt; <code class="language-plaintext highlighter-rouge">00040000</code> -&gt; <code class="language-plaintext highlighter-rouge">0017c100</code> -&gt; <code class="language-plaintext highlighter-rouge">data</code> mappába.</p>
+</details>
+
+<h2 id="boot9strap-telepítése-soundhax">Boot9strap telepítése (Soundhax)</h2>
+
+<details>
+<summary><u>Piros/lila/rózsaszín és fehér képernyő a Soundhax futtatása után</u></summary>
+
+<p>Ha a konzol rendszer verziód 9.4.0, 9.5.0, vagy 9.6.0, hibát tapasztalhatsz az universal-otherapp egy régebbi verziójával. Töltsd le a legfrissebb verziót <a href="https://github.com/TuxSH/universal-otherapp/releases/latest">innen</a>.</p>
+
+<p>Ha nem ezeken a firmware verziókon van a konzolod, akkor ez valószínűleg azt jelzi, hogy már van egyedi firmware-ed. Érdemes elvégezned a <a href="checking-for-cfw">CFW ellenőrzését</a>.</p>
+</details>
+
+<details>
+<summary><u>"An error has occurred, forcing the software to close..." (fehér üzenet doboz)</u></summary>
+
+<p>Probléma van a <code class="language-plaintext highlighter-rouge">otherapp.bin</code> fájloddal (nem jó, hiányzik, rossz helyen van vagy sérült). Töltsd le a legutolsó kiadását az <a href="https://github.com/TuxSH/universal-otherapp/releases/latest">universal-otherapp</a>-nak és rakd az SD kártyád gyökerébe.</p>
+</details>
+
+<details>
+<summary><u>"Could not play"</u></summary>
+
+<p>Rossz Soundhax fájlod van a konzolodhoz és a régiódhoz vagy az eszközöd nem kompatibilis a Soundhax-szal. Később, azt, hogy mit kell csinálnod, attól függ, hog milyen verzión van a 3DS-ed jelenleg. Csatlakozz a <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew-hoz a Discord-on</a> segítségért.</p>
+</details>
+
+<details>
+<summary><u>Failed to mount the SD card!</u></summary>
+<p>Mentsd az adataidat, majd formázd újra az SD kártyád FAT32 formátumra, az ajánlott alkalmazással az operációs rendszerednek megfelelően. (<a href="formatting-sd-(windows)">Windows</a>, <a href="formatting-sd-(mac)">macOS</a>, <a href="formatting-sd-(linux)">Linux</a>). A MiniTool Partition Wizard-ról és a HP formázó eszközről (HPUSBDisk) ismert, hogy problémákat okoznak a 3DS SD kártyákkal.</p>
+
+<p>Ha ez sikertelen, próbálkozz egy másik SD kártyával.</p>
+</details>
+
+<h2 id="boot9strap-telepítése-ssloth-browser">Boot9strap telepítése (SSLoth-Browser)</h2>
+
+<details>
+<summary><u>Piros/lila/rózsaszín és fehér képernyő a browserhax futtatása után</u></summary>
+
+<p>Ez valószínűleg azt jelzi, hogy már van egyedi firmware-ed. Érdemes elvégezned a <a href="checking-for-cfw">CFW ellenőrzését</a>.</p>
+</details>
+
+<details>
+<summary><u>"An error has occurred. Hold down the POWER button to turn off the power..." (fekete képernyő szöveggel)</u></summary>
+
+<p>A <code class="language-plaintext highlighter-rouge">arm11code.bin</code> fájl hiányzik, vagy rossz helyen van. Töltsd le a legutolsó kiadását az <a href="https://github.com/TuxSH/universal-otherapp/releases/latest">universal-otherapp</a>-nak és rakd az <code class="language-plaintext highlighter-rouge">otherapp.bin</code> fájlt az SD kártyád gyökerébe, majd nevezd át <code class="language-plaintext highlighter-rouge">arm11code.bin</code>-re. Ne add hozzá a <code class="language-plaintext highlighter-rouge">.bin</code> kiterjesztést, ha nem látod.</p>
+</details>
+
+<details>
+<summary><u>"An error has occurred, forcing the software to close..." (fehér üzenet doboz)</u></summary>
+
+<p>Probléma lehet az arm11code.bin<code class="language-plaintext highlighter-rouge"> fájloddal. Töltsd le a legutolsó kiadását az [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest)-nak és rakd az </code>otherapp.bin<code class="language-plaintext highlighter-rouge"> fájlt az SD kártyád gyökerébe, majd nevezd át </code>arm11code.bin<code class="language-plaintext highlighter-rouge">-re. Ne add hozzá a </code>.bin` kiterjesztést, ha nem látod.</p>
+
+<p>Megpróbálhatod még alaphelyzetbe állítani a böngésző mentés adatot:</p>
+
+<ol>
+  <li>Indítsd el a böngészőt, majd lépj be a beállításokba (browser settings)</li>
+  <li>Görgess a legaljára, majd válaszd a “Reset Save Data” opciót (ami lehet, hogy “Initialize Savedata” vagy “Clear All Save Data” néven fut”)</li>
+  <li>Próbáld meg újra végrehajtani az exploitot</li>
+</ol>
+
+</details>
+
+<details>
+<summary><u>A browserhax QR kód vagy URL megnyitásásakor összeomlik</u></summary>
+
+<p>A böngésző alapú exploitok (mint például ez) gyakran instabilak és sokszor lefagynak, de néha megjavíthatók az alábbi lépések végrehajtásával.</p>
+
+<ol>
+  <li>Indítsd el a böngészőt, majd lépj be a beállításokba (browser settings)</li>
+  <li>Görgess a legaljára, majd válaszd a “Reset Save Data” opciót (ami lehet, hogy “Initialize Savedata” vagy “Clear All Save Data” néven fut”)</li>
+  <li>Próbáld meg újra végrehajtani az exploitot</li>
+</ol>
+</details>
+
+<details>
+<summary><u>Rendszerfrissítés (System Update) ugrik fel, amikor megnyitom a böngészőt</u></summary>
+
+<p>Az SSLoth proxy nem lett megfelelően konfigurálva. Csináld újra az SSLoth fejezetet erről az oldalról.</p>
+</details>
+
+<details>
+<summary><u>Error 032-0420 hiba a böngésző megnyitásakor</u></summary>
+
+<p>Kövesd az alábbi lépéseket:</p>
+
+<ol>
+  <li>Lépj be a “System Settings”-be a konzolodon</li>
+  <li>Navigálj az <code class="language-plaintext highlighter-rouge">Internet Settings</code> -&gt; <code class="language-plaintext highlighter-rouge">Connection Settings</code> opciókhoz</li>
+  <li>Kattints a saját hálózati kapcsolatodra és navigálj a <code class="language-plaintext highlighter-rouge">Change Settings</code> -&gt; <code class="language-plaintext highlighter-rouge">Next Page (jobb nyíl)</code> -&gt; <code class="language-plaintext highlighter-rouge">Proxy Settings</code> opcióhoz</li>
+  <li>Állítsd a “Proxy Settings”-t “No”-ra</li>
+  <li>Kattints az OK-ra, majd kattints a Save-re</li>
+  <li>Amikor kérdezi, kattints a “Test”-re a kapcsolat ellenőrzéséhez
+    <ul>
+      <li>A tesztnek sikeresnek kell lennie</li>
+    </ul>
+  </li>
+  <li>Kattintson az OK gombra a folytatáshoz</li>
+  <li>Nyomj a “Back”-re kétszer, majd a “Close”-ra, hogy visszajuszz a HOME Menübe</li>
+  <li>Nyisd meg az Internet Browser-t egyszer</li>
+  <li>Ha kérdezi a rendszer frissítést, nyomj OK-t
+    <ul>
+      <li>Ez nem fogja frissíteni a rendszert</li>
+    </ul>
+  </li>
+  <li>Kezd előlről a <a href="installing-boot9strap-(ssloth-browser).html#section-ii---ssloth">II. résszel</a></li>
+</ol>
+</details>
+
+<details>
+<summary><u>Lefagyás a "Doing agbhax..." üzenetnél</u></summary>
+<p>Probléma lehet az arm11code.bin<code class="language-plaintext highlighter-rouge"> fájloddal. Töltsd le újra a legutolsó kiadását az [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest)-nak és rakd a fájlt az SD kártyád gyökerébe, majd nevezd át </code>arm11code.bin<code class="language-plaintext highlighter-rouge">-re. Ne add hozzá a </code>.bin` kiterjesztést, ha nem látod.</p>
+</details>
+
+<details>
+<summary><u>"PrepareArm9ForTwl returned error c8804631!"</u></summary>
+
+<p>Csatlakozz a <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew-hoz a Discord-on</a> segítségért.</p>
+</details>
+
+<details>
+<summary><u>Failed to mount the SD card!</u></summary>
+
+<p>Mentsd az adataidat, majd formázd újra az SD kártyád FAT32 formátumra, az ajánlott alkalmazással az operációs rendszerednek megfelelően. (<a href="formatting-sd-(windows)">Windows</a>, <a href="formatting-sd-(mac)">macOS</a>, <a href="formatting-sd-(linux)">Linux</a>). A MiniTool Partition Wizard-ról és a HP formázó eszközről (HPUSBDisk) ismert, hogy problémákat okoznak a 3DS SD kártyákkal.</p>
+
+<p>Ha ez sikertelen, próbálkozz egy másik SD kártyával.</p>
+</details>
+
+<h2 id="installing-boot9strap-super-skaterhax">Installing boot9strap (super-skaterhax)</h2>
+
+<details>
+<summary><u>"An error has occurred. Please save your data in any software currently in use, then restart the system."</u></summary>
+
+<p>A dátum nincs megfelelően beállítva. A helyes beállításokhoz kövesd ezeket a lépéseket:</p>
+
+<ol>
+  <li>Válaszd a System Settings ikont a HOME Menüben és nyomj Open-t.</li>
+  <li>Érintsd meg az Other Settings-t.</li>
+  <li>Érintsd meg a Date &amp; Time-ot.</li>
+  <li>Érintsd me a Today’s date-et.</li>
+  <li>A fel/le nyilakkal állítsd be a helyes napot, hónapot és évet.</li>
+  <li>Nyomj OK-t a jóváhagyáshoz.</li>
+</ol>
+
+<p>Ha a probléma továbbra is fennáll:</p>
+
+<ul>
+  <li>Legyél biztos abban, hogy az <code class="language-plaintext highlighter-rouge">arm11code.bin</code>, <code class="language-plaintext highlighter-rouge">browserhax_hblauncher_ropbin_payload.bin</code>, és a <code class="language-plaintext highlighter-rouge">boot.3dsx</code> fájlok megtalálhatók az SD kártya gyökerében (nem pedig egy mappában)</li>
+  <li>Legyél biztos abban, hogy a régiódnak ÉS a rendszerednek megfelelő payload-ot választottad</li>
+  <li>Legyél biztos abban, hogy a régiós beállításaid <a href="/images/screenshots/skater_lang.png">így néznek ki</a></li>
+  <li>Próbáld meg törölni a böngésző adatot:
+    <ol>
+      <li>Indítsd el a böngészőt, majd lépj be a beállításokba (browser settings)</li>
+      <li>Görgess a legaljára, majd válaszd a “Reset Save Data” opciót (ami lehet, hogy “Initialize Savedata” vagy “Clear All Save Data” néven fut”)</li>
+      <li>Próbáld meg újra végrehajtani az exploitot</li>
+    </ol>
+  </li>
+  <li>Próbáld meg módosítani a rendszer nyelvét valami másra mint az aktuális nyelv</li>
+</ul>
+
+</details>
+
+<details>
+<summary><u>"An error has occurred. Hold down the POWER button to turn off the power..." (fekete képernyő szöveggel)</u></summary>
+
+<p>A <code class="language-plaintext highlighter-rouge">arm11code.bin</code> fájl hiányzik, vagy rossz helyen van. Biztosítsd, hogy <a href="https://github.com/zoogie/super-skaterhax/releases/latest">super-skaterhax legfrissebb verziójából</a> régiódhoz és verziódhoz tartozó fájlokat az SD kártya gyökerébe másold (nem egy mappán belülre).</p>
+
+<p class="notice--info"><img src="https://3ds.hacks.guide/images/screenshots/skater-root-layout.png" alt="" /></p>
+
+</details>
+
+<details>
+<summary><u>Egy exception történik vagy "DLL_HEAP_INFORMATION" a GO! megnyomásakor! GO!</u></summary>
+
+<p>Ez valószínűleg azt jelzi, hogy már van egyedi firmware-ed. Érdemes elvégezned a <a href="checking-for-cfw">CFW ellenőrzését</a>.</p>
+
+</details>
+
+<h2 id="telepítés-véglegesítése">Telepítés véglegesítése</h2>
+
+<details>
+<summary><u>Sikertelen a konzol frissítése</u></summary>
+
+<p>Az alábbi lépések tetszőleges sorrendben hajthatók végre, azonban a lista a legkönnyebbtől a legnehezebben végrehajthatóig van összeállítva.</p>
+
+<ol>
+  <li>Állítsd a DNS beállításokat “Auto”-ra</li>
+  <li>Menj közelebb a WiFi routerhez</li>
+  <li>Frissítsd Safe Mode-ból a konzol kikapcsolásával, nyomva tartva a (Bal Váll) + (Jobb Váll) + (D-Pad Fel) + (A) gombokat bootoláskor, majd kövesd a képernyőn megjelenők lépéseket</li>
+  <li>Töröld a WiFi csatlakozásod, majd csatlakozz újra WiFi-dhez</li>
+  <li>Indítsd újra a WiFi routered</li>
+  <li>Csatlakozz egy másik WiFi-hez, mint például egy hotspot</li>
+  <li>A Nintendo szerverei lehet, hogy nem elérhetők; Próbáld később újra</li>
+  <li>Ha még mindig hibát kapsz, kövesd a <a href="ctrtransfer">CTRTransfer</a> című útmutatót, majd próbáld újra</li>
+  <li>További segítségért (angol nyelven), fordulj ide: <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew a Discord-on</a></li>
+</ol>
+</details>
+
+<details>
+<summary><u>Error #02: Missing essential.exefs</u></summary>
+
+<p>You said ‘No’ to the “Make essential files backup?” prompt in GodMode9. Power off your console, power it on while holding (Start) to re-enter GodMode9, say ‘Yes’ to the prompt, then try again.</p>
+
+</details>
+
+<details>
+<summary><u>Unable to open GodMode9 or Error #03: Missing files</u></summary>
+
+<p>You did not copy everything from <code class="language-plaintext highlighter-rouge">finalize.zip</code> to the root of your SD card. Remember, your SD card should have at least these files:</p>
+
+<p class="notice--info"><img src="https://3ds.hacks.guide/images/screenshots/finalizing-root-layout.png" alt="" /></p>
+
+</details>
+
+<details>
+<summary><u>Error #04: No space</u></summary>
+
+<p>You need at least 1.3GB of free space to perform the NAND backup, which is a part of the script. Ha nincs elég szabad helyed, kövesd ezeket a lépéseket:</p>
+
+<ol>
+  <li>Kapcsold ki a konzolod</li>
+  <li>Helyezd az SD kártyád a számítógépbe</li>
+  <li>Másold a <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> mappát az SD kártya gyökeréből a számítógépedre</li>
+  <li>Töröld a Nintendo 3DS mappát az SD kártyáról</li>
+  <li>Tedd vissza az SD kártyád a konzoldba</li>
+  <li>Nyomd le és tartsd nyomva a (Start) gombot, és a (Start) nyomva tartása mellett kapcsold be a konzolod. Ez elindítja a GodMode9-et</li>
+  <li>Press the (Home) button</li>
+  <li>Válaszd a “Scripts…” opciót</li>
+  <li>Válaszd az “finalize” opciót</li>
+  <li>Press (A) to create a NAND backup
+    <ul>
+      <li>This may take around fifteen minutes</li>
+    </ul>
+  </li>
+  <li>Press (A) again
+    <ul>
+      <li>The console should automatically power off</li>
+    </ul>
+  </li>
+  <li>Helyezd az SD kártyád a számítógépbe</li>
+  <li>Copy the files in <code class="language-plaintext highlighter-rouge">/gm9/backups/</code> on your SD to a safe location on your computer</li>
+  <li>Delete the <code class="language-plaintext highlighter-rouge">&lt;date&gt;_&lt;serialnumber&gt;_sysnand_##.bin</code> and <code class="language-plaintext highlighter-rouge">&lt;date&gt;_&lt;serialnumber&gt;_sysnand_##.bin.sha</code> files from the SD card</li>
+  <li>Másold a <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> mappát a számítógépedről az SD kártyád gyökerébe</li>
+  <li>Töröld a <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> mappát a számítógépedről</li>
+</ol>
+
+<p>Now that you have your NAND backup in a safe place:</p>
+
+<ol>
+  <li>Tedd vissza az SD kártyád a konzoldba</li>
+  <li>Nyomd le és tartsd nyomva a (Start) gombot, és a (Start) nyomva tartása mellett kapcsold be a konzolod. Ez elindítja a GodMode9-et</li>
+  <li>Press the (Home) button</li>
+  <li>Válaszd a “Scripts…” opciót</li>
+  <li>Válaszd az “finalize” opciót</li>
+  <li>Continue the script as normal
+    <ul>
+      <li>The NAND backup will be automatically skipped</li>
+    </ul>
+  </li>
+</ol>
+
+</details>
+
+<details>
+<summary><u>Information #05: No title database</u></summary>
+
+<p>Press (A) to import a title database, unlock SysNAND writing by entering the buttons on-screen, then continue the script as normal.</p>
+
+</details>
+
+<details>
+<summary><u>Error #06 "Backup failed" vagy "Error: Could not open directory" a NAND backup készítésének megpróbálásakor</u></summary>
+
+<p>Győződj meg róla, hogy legalább 1.3 GB szabad hely van az SD kártyádon. Ha nincs elég szabad helyed, kövesd ezeket a lépéseket:</p>
+<ol>
+  <li>Kapcsold ki a konzolod</li>
+  <li>Helyezd az SD kártyád a számítógépbe</li>
+  <li>Másold a <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> mappát az SD kártya gyökeréből a számítógépedre</li>
+  <li>Töröld a Nintendo 3DS mappát az SD kártyáról</li>
+  <li>Tedd vissza az SD kártyád a konzoldba</li>
+  <li>Nyomd le és tartsd nyomva a (Start) gombot, és a (Start) nyomva tartása mellett kapcsold be a konzolod. Ez elindítja a GodMode9-et</li>
+  <li>Hajts végre egy <a href="godmode9-usage#creating-a-nand-backup">NAND Backup</a>-ot</li>
+  <li>Másold a <code class="language-plaintext highlighter-rouge">gm9/out</code> mappát az SD kártyádról egy biztonságos helyre a számítógépeden</li>
+  <li>Töröld a <code class="language-plaintext highlighter-rouge">&lt;date&gt;_&lt;serialnumber&gt;_sysnand_##.bin</code> és a <code class="language-plaintext highlighter-rouge">&lt;date&gt;_&lt;serialnumber&gt;_sysnand_##.bin.sha</code> fájlokat az SD kártyád <code class="language-plaintext highlighter-rouge">/gm9/out/</code> mappájából, megtartva az essential.exefs-t a <code class="language-plaintext highlighter-rouge">/gm9/out/</code> -ban</li>
+  <li>Másold a <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> mappát a számítógépedről az SD kártyád gyökerébe</li>
+  <li>Töröld a <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> mappát a számítógépedről</li>
+</ol>
+
+<p>Ha van elég szabad hely az SD kártyádon, az SD kártya lehet sérült vagy hibás. Ellenőrizd az SD kártyádat hibákra valamelyik programmal az alábbiak közül az operációs rendszerednek megfelelően: <a href="h2testw-(windows)">Windows</a>, <a href="f3-(linux)">Linux</a>, <a href="f3xswift-(mac)">macOS</a>.</p>
+</details>
+
+<details>
+<summary><u>Error #09: Unsupported GodMode9 version</u></summary>
+
+<p>You are somehow running a version of GodMode9 not packaged with the script. Make sure you copied the contents of <code class="language-plaintext highlighter-rouge">finalize.zip</code> to the root of your SD card and that you are holding START while powering on your console.</p>
+
+</details>
+
+<details>
+<summary><u>Error #11: Missing donor database</u></summary>
+
+<p>You did not copy everything from <code class="language-plaintext highlighter-rouge">finalize.zip</code> to the root of your SD card. Remember, your SD card should have at least these files:</p>
+
+<p class="notice--info"><img src="https://3ds.hacks.guide/images/screenshots/finalizing-root-layout.png" alt="" /></p>
+
+</details>
+
+<details>
+<summary><u>Error #12: Copy (file).db fail</u></summary>
+
+<p>Ensure that your SD card is not <a href="/images/sdlock.png">locked</a>. If the SD card is not locked and you continue to get this error, join <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew on Discord</a> for assistance.</p>
+
+</details>
+
+<details>
+<summary><u>Information #17: Duplicate NAND backup</u></summary>
+
+<p>The script has detected that the Nintendo 3DS folder is missing AND that you have already made a NAND backup before. If you intend to install homebrew applications, you should do the following:</p>
+
+<ol>
+  <li>Press (B) to cancel making another NAND backup</li>
+  <li>Az (R) lenyomva tartása közben nyomd meg a (Start) gombot a konzolod kikapcsolásához</li>
+  <li>Copy the contents of <code class="language-plaintext highlighter-rouge">/gm9/backups/</code> to a safe location on your computer</li>
+  <li>Delete <code class="language-plaintext highlighter-rouge">/gm9/backups/</code> from your SD card</li>
+  <li>If you moved your Nintendo 3DS folder off of your SD card to get to this point, copy it back to your SD card
+    <ul>
+      <li>If you do not have a Nintendo 3DS folder, boot into the HOME Menu at least once with the SD card inserted to automatically generate it</li>
+    </ul>
+  </li>
+  <li>Nyomd le és tartsd nyomva a (Start) gombot, és a (Start) nyomva tartása mellett kapcsold be a konzolod. Ez elindítja a GodMode9-et</li>
+  <li>Nyomd meg a (Home) gombot, hogy megjelenjen a műveleti menü</li>
+  <li>Válaszd a “Scripts…” opciót</li>
+  <li>Válaszd az “finalize” opciót</li>
+  <li>Kövesd a script utasításait és válaszolj meg minden kérdést</li>
+</ol>
+
+</details>
+
+<hr />
+
+<h2 id="boot-problémák-egyedi-firmware-rel-rendelkező-konzolokon">Boot problémák egyedi firmware-rel rendelkező konzolokon</h2>
+
+<p class="notice--info">Az itt leírt lépések általában feltételezik, hogy a konzolod modern egyedi firmware telepítéssel rendelkezik (boot9strap + Luma3DS 8.0 vagy nagyobb). Ha a konzolod régebbi homebrew telepítés (például valami ami arm9loaderhax vagy menuhax alapú), frissítened kell a telepítésed, mielőtt kipróbálod ezeket a lépéseket.</p>
+
+<h3 id="tápértesítő-led-fény-indikátorok">Táp/értesítő LED fény indikátorok</h3>
+
+<details>
+<summary><u>A konzolom kikapcsol, ha megpróbálom bekapcsolni és/vagy az értesítő LED egy színt mutat bootoláskor</u></summary>
+
+<p>Probléma van az <code class="language-plaintext highlighter-rouge">boot.firm</code> fájloddal. Ha <a href="https://github.com/SciresM/boot9strap/releases/tag/1.4">boot9strap 1.4</a>-et futtatsz, akkor a 3DS-ed értestő LED-je egy adott sznt villogtat. Ez a szín a <code class="language-plaintext highlighter-rouge">boot.firm</code> problémák diagnosztizálását segíti az SD kártyán vagy a belső memóriában. Régebbi boot9strap verziókon a kék fény azonnal kikapcsol, ha megpróbálod bekapcsolni a konzolt.</p>
+
+<p>Ha az értesítő LED villog:</p>
+
+<ul>
+  <li><strong>Fehér</strong>: A 3DS-ed nem találta a <code class="language-plaintext highlighter-rouge">boot.firm</code>-et sem az SD kártyádon, sem a belső memóriában.</li>
+  <li><strong>Magenta</strong>: A 3DS-ed nem találta a <code class="language-plaintext highlighter-rouge">boot.firm</code>-et az SD kártyádon. Megtalálta a <code class="language-plaintext highlighter-rouge">boot.firm</code>-et a belső memóriában, de az a fájl sérült.</li>
+  <li><strong>Piros</strong>: A 3DS-ed megtalálta a <code class="language-plaintext highlighter-rouge">boot.firm</code>-et az SD kártyádon és a belső memóriában, de mindkét fájl sérült.</li>
+</ul>
+
+<p>Beszerezhetsz <code class="language-plaintext highlighter-rouge">boot.firm</code> fájlt a <a href="https://github.com/LumaTeam/Luma3DS/releases/latest">Luma3DS legfrissebb kiadásának letöltésével</a> és annak kicsomagolásával, majd a <code class="language-plaintext highlighter-rouge">boot.firm</code> fájlnak az SD kártyád gyökerébe helyezésével. Ha a <code class="language-plaintext highlighter-rouge">boot.firm</code> fájlod folyamatosan sérültnek érzékelt, szükség lehet az SD kártyád hibákra ellenőrzésére (<a href="h2testw-(windows)">Windows</a>, <a href="f3-(linux)">Linux</a>, vagy <a href="f3xswift-(mac)">macOS</a>). Azt is vedd figyelembe, hogy a 3DS-nek problémái lehetnek olyan fájlokkal, amit WinRAR-ral csomagoltak ki.</p>
+
+<p>Ha hallod a “pattanó hangot”, ami potenciálisan a háttérvilágítás bekapcsolását kíséri a másodperc egy részéig, akkor hardver problémád van a konzoloddal (mint például lecsatlakozott háttérvilágítás kábel). Lehetséges, hogy be tudod kapcsolni a konzolodat megfelelő szögben tartva.</p>
+</details>
+
+<details>
+<summary><u>A konzolom fekete képernyőn ragad, a kék power led bekapcsolva marad</u></summary>
+
+<p>Az alábbi lépések tetszőleges sorrendben hajthatók végre, azonban a lista a legrövidebbtől a legtöbb időt igénylőig van összeállítva.</p>
+
+<ol>
+  <li>Kapcsold ki a konzolod, vedd ki majd tedd vissz az SD kártyát, majd kapcsold be újra a konzolod.</li>
+  <li>Kapcsold ki a konzolod, vedd ki a játék cartridge-t ha van benne, majd kapcsold be a konzolod és várj tíz percet. Ha a konzolod bebootol tíz percen belül, a probléma elhárult és nem fog valószínűleg újra előfordulni</li>
+  <li>
+    <ul>
+      <li>Nevezd át a <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> mappát az SD kártyádon <code class="language-plaintext highlighter-rouge">Nintendo 3DS_BACKUP</code> névre és próbálj meg bootolni. Ha a konzolod sikeresen bootol, problémák vannak a <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> könyvtáraddal. Próbáld meg kitakarítani a HOME menu extdata-t:</li>
+      <li>Navigálj a <code class="language-plaintext highlighter-rouge">/Nintendo 3DS/&lt;ID0&gt;/&lt;ID1&gt;/extdata/00000000/</code> mappába</li>
+      <li>Töröld a 3DS régiódhoz tartozó mappát:
+        <ul>
+          <li><strong>EUR régió</strong>: <code class="language-plaintext highlighter-rouge">00000098</code></li>
+          <li><strong>JPN régió</strong>: <code class="language-plaintext highlighter-rouge">00000082</code></li>
+          <li><strong>USA régió</strong>: <code class="language-plaintext highlighter-rouge">0000008f</code></li>
+          <li><strong>CHN régió</strong>: <code class="language-plaintext highlighter-rouge">000000A1</code></li>
+          <li><strong>KOR régió</strong>: <code class="language-plaintext highlighter-rouge">000000A9</code></li>
+          <li><strong>TWN régió</strong>: <code class="language-plaintext highlighter-rouge">000000B1</code></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Próbálj meg recovery mode-ba bootolni, majd onnét frissíteni a rendszeredet:
+    <ul>
+      <li>Kapcsold ki a konzolod</li>
+      <li>Tartsd nyomva a (Bal Váll) + (Jobb Váll) + (D-Pad Fel) + (A) gombokat</li>
+      <li>Kapcsold be a konzolod</li>
+      <li>Ha sikeres voltál, a konzolod egy “update your system” képernyőre bootol</li>
+    </ul>
+  </li>
+  <li>Kövesd a <a href="ctrtransfer">CTRTransfer</a> útmutatót</li>
+  <li>További támogatásért kérj segítséget a <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew-tól a Discord-on</a></li>
+</ol>
+</details>
+
+<h3 id="hibaüzenet-bootoláskor">Hibaüzenet bootoláskor</h3>
+
+<details>
+<summary><u> "An error has occurred: Failed to apply 1 FIRM patch(es)" vagy "An exception has occurred -- Current process: pm"</u></summary>
+
+<p>A Luma3DS verziód régi. Töltsd le a legutolsó kiadását az <a href="https://github.com/LumaTeam/Luma3DS/releases/latest">Luma3DS</a>-nak és rakd a <code class="language-plaintext highlighter-rouge">boot.firm</code> fájlt az SD kártyád gyökerébe, felülírva bármilyen létező fájlt. Legyél biztos abban, hogy a ZIP fájlt más eszközzel csomagolod ki, mint a WinRAR, mert ismert, hogy problémái vannak a 3DS-sel kapcsolatos fájlokkal.</p>
+</details>
+
+<details>
+<summary><u>"Unable to mount CTRNAND or load the CTRNAND FIRM. Please use an external one."</u></summary>
+<p>Számos oka lehet, hogy miért történik így. Bármelyik esetben, ez a hiba általában javítható a <a href="ctrtransfer">CTRTransfer</a> útmutató követésével.</p>
+</details>
+
+<details>
+<summary><u>"An error has occurred. Hold down the POWER button to turn off the power..."</u></summary>
+
+<p>Az ARM11 kivételkezelők tiltva, vagy az egyedi firmware nincs telepítve. Próbáld meg engedélyezni az ARM11 kivétel kezelőket:
+    + Kapcsold ki a konzolod
+    + Tartsd nyomva a (Select) gombot
+    + Kapcsold be a konzolod, miközben nyomva tartod a (Select) gombot
+    + Ha a “Disable ARM11 exception handlers” jelölőnégyzet bejelölt, vedd ki a jelölést</p>
+</details>
+
+<details>
+<summary><u>A HOME Menüből hiányoznak telepített alkalmazások</u></summary>
+
+<p>Ez különböző okokból is előfordulhat, de leginkább azért, mert az SD kártyád nem került beolvasásra a rendszer által.
+Ellenőrizheted, hogy az SD kártyád olvasásra kerül-e a SELECT gomb nyomva tartásával bootoláskor, és az alsó képernyőn megjelenő sárga szöveg ellenőrzésével; ha azt mondja, hogy “Booted from CTRNAND via B9S”, akkor a konzolod a belső memóriáról bootolt, nem az SD kártyáról.
+Ha ez a helyzet, próbáld meg a lépéseket alább, ami a legkönnyebbtől a legnehezebbig került felsorolásra:</p>
+<ol>
+  <li>Kapcsold ki a konzolod, vedd ki majd tedd vissz az SD kártyát, majd kapcsold be újra a konzolod</li>
+  <li>Kapcsold ki a konzolod, távolítsd el az SD kártyád, majd csatlakoztasd a PC-dhez. Töltsd le a legutolsó kiadását az <a href="https://github.com/LumaTeam/Luma3DS/releases/latest">Luma3DS</a>-nek és csomagold ki a <code class="language-plaintext highlighter-rouge">Luma3DS.zip</code> fájlból a <code class="language-plaintext highlighter-rouge">boot.firm</code> fájlt, majd rakd az SD kártyád gyökerébe (felülírva bármilyen létező fájlt)</li>
+  <li>Kapcsold ki a konzolod, távolítsd el az SD kártyát, csatlakoztasd a PC-dhez és formázd újra az SD kártyád az operációs rendszerednek megfelelően: <a href="formatting-sd-(windows)">Windows</a>, <a href="formatting-sd-(mac)">macOS</a>, <a href="formatting-sd-(linux)">Linux</a> <em>(ez törölni fogja az SD kártya adatait)</em></li>
+  <li>Teszteld az SD kártyádat hibákra az operációs rendszerednek megfelelő útmutató szerint haladva: <a href="h2testw-(windows)">Windows</a>, <a href="f3-(linux)">Linux</a>, <a href="f3xswift-(mac)">macOS</a>. Ha az SD kártyád hibásnak jelölt, cserélned kell az SD kártyádat</li>
+  <li>Az SD kártya foglalatod is lehet hibás. Csatlakozz a<a href="https://discord.gg/MWxPgEp">Nintendo Homebrew-hoz Discord-on</a> további segítségért</li>
+</ol>
+</details>
+
+<details>
+<summary><u>Kék "BOOTROM ERROR" képernyő</u></summary>
+
+<p>A konzolod valószínüleg hard-brickelve lett. Szükséged van egy ntrboot flashcart vásárlására, hogy újra telepítsd a boot9strap-et, hogy megpróbálhasd megjavítani a konzolod. Ez hardver hibát is jelezhet, ami nem javítható. Bármelyik esetben csatlakozz a <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew-hoz a Discord-on</a> segítségért.
+    + Az is lehetséges még, hogy valaki beállított egy bootoláskori kezdő képernyőt, ami úgy néz ki mint egy brick. Próbáld meg a konzolod bekapcsolva hagyni, várva a kék képernyőre, 5 percig.</p>
+</details>
+
+<details>
+<summary><u>Valami más hiba</u></summary>
+
+<p>Készítsd egy képet a hibáról és csatlakozz a <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew-hoz a Discord-on</a> segítségért.</p>
+</details>
+
+<h2 id="szoftver-problémák-egyedi-firmware-rel-rendelkező-konzolokon">Szoftver problémák egyedi firmware-rel rendelkező konzolokon</h2>
+
+<details>
+<summary><u>DSi / DS funkcionalitás hibás vagy felcserélt a Flipnote Studio-val</u></summary>
+
+<ol>
+  <li>Töltsd le a <a href="https://github.com/MechanicalDragon0687/TWLFix-CFW/releases/latest">TWLFix-CFW</a> legutolsó kiadását (a <code class="language-plaintext highlighter-rouge">.3dsx</code> fájlt)</li>
+  <li>Kapcsold ki a konzolod</li>
+  <li>Hozz létre egy mappát <code class="language-plaintext highlighter-rouge">3ds</code> néven az SD kártyád gyökerében, ha még nem létezik ilyen</li>
+  <li>Másold az <code class="language-plaintext highlighter-rouge">TWLFix-CFW.3dsx</code> fájlt az SD kártyád <code class="language-plaintext highlighter-rouge">/3ds/</code> mappájába</li>
+  <li>Tedd vissza az SD kártyád a konzoldba</li>
+  <li>Nyisd meg a Homebrew Lancher-t</li>
+  <li>Indítsd el a TWLFix-CFW-t a homebrew listából</li>
+  <li>Nyomj (A)-t a törött TWL címek eltávolításához</li>
+  <li>Nyomd meg a (Start) gombot a konzol újraindításához</li>
+  <li>Frissítsd a konzolod következőképp: Lépj be a System Settings-be, majd az “Other settings”-be, ahol addig lépkedj jobbra, amíg a végére nem érsz. Itt válaszd a “System Update” opciót
+    <ul>
+      <li>A frissítés észreveszi, hogy lényeges TWL címek kerültek eltávolításra és le fogja tölteni és újratelepíteni azokat</li>
+    </ul>
+  </li>
+  <li>Ha a frissítés kész, érintsd meg az “OK”-ot a konzol újraindításához</li>
+</ol>
+</details>
+
+<details>
+<summary><u>GBA Virtual Console és/vagy Safe Mode funkcionalitás hibás</u></summary>
+
+<p>A konzolod Luma3DS 6.6 vagy régebbi verziót futtat, valószínűleg arm9loaderhax-szal. Kövesd az <a href="a9lh-to-b9s">A9LH-ről B9S-re</a> lépéseit a konzolod frissítéséhez modern egyedi firmware környezetre.</p>
+</details>
+
+<details>
+<summary><u>Bővített memória módú játékok (Pokemon Sun/Moon, Smash, etc.) nem működnek</u></summary>
+
+<p>Ez egy CTRTransfer vagy régió csere után fordulhat elő Old 3DS / 2DS eszközökön. Rendszer formáznod kell a konzolod a javításhoz.</p>
+</details>
+
+<details>
+<summary><u>Kivétel képernyő egy alkalmazás bootolásakor/betöltésekor</u></summary>
+
+<p>Tekintsd meg a kivétel képernyőt <a href="https://wiki.hacks.guide/wiki/3DS:Error_screens/Luma3DS_exception_screen">ezen az oldalon</a>.
+Ha nem sikerült megtalálni a hibádat, vagy a lépések nem működnek, csatlakozz a <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew-hoz Discord-on</a> további támogatásért.</p>
+</details>
+
+<details>
+<summary><u>Opening the HOME Menu settings crashes the console or loads the Homebrew Launcher</u></summary>
+
+<p>Your console likely still has menuhax67 installed. To uninstall menuhax67, download the latest release of <a href="https://github.com/zoogie/menuhax67/releases/latest">menuhax67</a> (the menuhax <code class="language-plaintext highlighter-rouge">.zip</code>), then follow the <a href="https://wiki.hacks.guide/wiki/3DS:Alternate_Exploits/menuhax67#Uninstall_menuhax67">“Uninstall menuhax67” section</a> here.</p>
+</details>
+
+<hr />
+
+<h2 id="egyéb-hibaelhárítás">Egyéb hibaelhárítás</h2>
+
+<details>
+<summary><u>A HOME Menu extdata takarítása</u></summary>
+
+<ol>
+  <li>Kapcsold ki a konzolod</li>
+  <li>Helyezd az SD kártyád a számítógépbe</li>
+  <li>Navigálj a <code class="language-plaintext highlighter-rouge">/Nintendo 3DS/&lt;ID0&gt;/&lt;ID1&gt;/extdata/00000000/</code> könyvtárba az SD kártyádon</li>
+  <li>Töröld a 3DS régiódhoz tartozó mappát:
+    <ul>
+      <li><strong>EUR régió</strong>: <code class="language-plaintext highlighter-rouge">00000098</code></li>
+      <li><strong>JPN régió</strong>: <code class="language-plaintext highlighter-rouge">00000082</code></li>
+      <li><strong>USA régió</strong>: <code class="language-plaintext highlighter-rouge">0000008f</code></li>
+      <li><strong>CHN régió</strong>: <code class="language-plaintext highlighter-rouge">000000A1</code></li>
+      <li><strong>KOR régió</strong>: <code class="language-plaintext highlighter-rouge">000000A9</code></li>
+      <li><strong>TWN régió</strong>: <code class="language-plaintext highlighter-rouge">000000B1</code></li>
+    </ul>
+  </li>
+  <li>Tedd vissza az SD kártyád a konzoldba</li>
+</ol>
+</details>
+
+<details>
+<summary><u>A HOME Menu téma adat takarítása</u></summary>
+
+<ol>
+  <li>Kapcsold ki a konzolod</li>
+  <li>Helyezd az SD kártyád a számítógépbe</li>
+  <li>Navigálj a <code class="language-plaintext highlighter-rouge">/Nintendo 3DS/&lt;ID0&gt;/&lt;ID1&gt;/extdata/00000000/</code> könyvtárba az SD kártyádon</li>
+  <li>Töröld a 3DS régiódhoz tartozó mappát:
+    <ul>
+      <li><strong>EUR régió</strong>: <code class="language-plaintext highlighter-rouge">000002ce</code></li>
+      <li><strong>JPN régió</strong>: <code class="language-plaintext highlighter-rouge">000002cc</code></li>
+      <li><strong>USA régió</strong>: <code class="language-plaintext highlighter-rouge">000002cd</code></li>
+    </ul>
+  </li>
+  <li>Tedd vissza az SD kártyád a konzoldba</li>
+</ol>
+</details>
+
+<details>
+<summary><u>Manually entering Homebrew Launcher</u></summary>
+
+<p>If you are missing the Homebrew Launcher application from your HOME Menu, you can follow these instructions to manually enter the Homebrew Launcher. (You will need <a href="https://github.com/LumaTeam/Luma3DS/releases/latest">boot.3dsx and boot.firm</a> on the root of your SD card.)</p>
+
+<ol>
+  <li>Indítsd el a Download Play alkalmazást (<img src="https://3ds.hacks.guide/images/download-play-icon.png" alt="" height="24px" width="24px" />)</li>
+  <li>Várj, amíg <code class="language-plaintext highlighter-rouge">Nintendo 3DS</code> és <code class="language-plaintext highlighter-rouge">Nintendo DS</code> gombokat nem látsz</li>
+  <li>Nyomd le az (Bal Váll) + (D-Pad le) + (Select) gombokat egyszerre a Rosalina menü megnyitásához</li>
+  <li>Válaszd ki a “Miscellaneous options”-t</li>
+  <li>Válaszd a “Switch the hb. title to the current app.” opciót</li>
+  <li>Nyomd meg a (B) gombot a folytatáshoz</li>
+  <li>Nyomd meg a (B) gombot, hogy visszakerülj a Rosalina főmenüjébe</li>
+  <li>Nyomd meg a (B) gombot, hogy kilépj a Rosalina menüből</li>
+  <li>Nyomd meg a (Home) gombot hogy felfüggeszd a Download Play-t</li>
+  <li>Nyomd meg a “Close” gombot az alsó képernyőn a Download Play bezárásához</li>
+  <li>Indítsd el újra a Download Play alkalmazást</li>
+  <li>Ekkor a konzolodnak be kell töltenie a Homebrew Launcher-t
+    <ul>
+      <li>Ha a konzolod a betöltő splash képernyőn ragad, akkor hiányzik az <code class="language-plaintext highlighter-rouge">boot.3dsx</code> az SD kártyád gyökeréből</li>
+    </ul>
+  </li>
+</ol>
+
+</details>
+
+<details>
+<summary><u>A szülői felügyelet kikapcsolása</u></summary>
+
+<p>Letilthatod a szülői felügyeletet (Parental Controls) a System Settings -&gt; Parental Controls-hoz navigálással és a PIN megadásával, majd a “Clear Settings” megnyomásával. Ezt követően a “Delete”-tel törölheted azt.
+Azonban, ha nem tudod a PIN-t így nem tudsz hozzáférni az konzol beállításokhoz, akkor le kell tiltanod. Ahhoz hogy megtehesd ezt, meg kell szerezned a konzolod mester kulcsát (mkey):</p>
+<ol>
+  <li>Menj <a href="https://mkey.eiphax.tech/">erre a weboldalra</a></li>
+  <li>Töltsd ki a következő dobozokat az információval:
+    <ul>
+      <li>Device Type: Válaszd a “3DS”-t (ugyanez vonatkozik, ha 2DS, New 3DS (XL/LL) vagy New 2DS (XL/LL) típusod van)</li>
+      <li>System Date: A nap és a hónap a konzolod óráján beállított</li>
+      <li>Inquiry Number: Beszerezhető a “Forgot PIN” majd az “I Forgot” gombbal a Parental Controls képernyőn</li>
+    </ul>
+  </li>
+  <li>Ha megszerezted az mkey-edet, nyomj OK gombot azon a képernyőn, ahol megkaptad az Inquiry Number számod, és add meg a mester kulcsot</li>
+  <li>Nyomj “Clear Settings”-et, majd “Delete”-et a minden Parental Controls adat eltávolításához</li>
+</ol>
+</details>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://github.com/hacks-guide/Guide_3DS" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+<!-- hacks-guide change start: force disable atom feed-->
+<!--
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+    </ul>
+  -->
+<!-- hacks-guide change end -->
+
+</div>
+
+<!-- hacks-guide change start: custom footer -->
+
+
+
+<div class="page__footer-copyright">&copy; 2023 Nintendo Homebrew. - <a href="site-navigation">Oldaltérkép</a> - <a href="privacy-policy">Adatvédelmi Irányelv</a> <!-- Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.--></div>
+<!-- hacks-guide change end -->
+
+      </footer>
+    </div>
+<!-- hacks-guide change end -->
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+<!-- hacks-guide change start: Disable caching -->
+
+<!-- hacks-guide change end -->
+
+
+
+
+  <script>
+  window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+  ga('create','UA-86465881-1','auto');
+  ga('set', 'anonymizeIp', false);
+  ga('send','pageview')
+</script>
+<script src="https://www.google-analytics.com/analytics.js" async></script>
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
