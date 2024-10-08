@@ -2,6 +2,12 @@
 
 This page offers troubleshooting advice for commonly encountered issues with the "Installing boot9strap (super-skaterhax)" page. If you are unable to solve your issue with the advice on this page, please join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and describe your issue, including what you have already tried.
 
+::: warning
+
+These instructions are only valid for the "Installing boot9strap (super-skaterhax)" page. If you are using **anything other than** a **New 3DS** on version **11.15.0 through 11.17.0**, you should follow [troubleshooting instructions for Installing boot9strap (SSLoth-Browser)](troubleshooting-ssloth-browser) instead.
+
+:::
+
 ## Issues with super-skaterhax
 
 ::: details "An error has occurred. Please save your data in any software currently in use, then restart the system."
@@ -42,4 +48,14 @@ This likely indicates that you already have custom firmware. You should [check f
 
 <!--@include: ./_include/troubleshooting-sb9si-common.md -->
 
-<!--@include: ./_include/troubleshooting-footer.md -->
+<!--@include: ./_include/troubleshooting-get-help-common.md -->
+
+---
+
+::: tip
+
+Go back to [Installing boot9strap (super-skaterhax)](installing-boot9strap-(super-skaterhax))
+
+:::
+
+<!--@include: ./_include/troubleshooting-return.md -->

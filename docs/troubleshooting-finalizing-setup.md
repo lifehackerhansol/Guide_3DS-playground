@@ -138,4 +138,14 @@ You didn't remove MSET9 on the previous page. The script will attempt to remove 
 
 :::
 
-<!--@include: ./_include/troubleshooting-footer.md -->
+<!--@include: ./_include/troubleshooting-get-help-common.md -->
+
+---
+
+::: tip
+
+Go back to [Finalizing Setup](finalizing-setup)
+
+:::
+
+<!--@include: ./_include/troubleshooting-return.md -->

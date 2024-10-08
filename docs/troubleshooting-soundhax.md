@@ -1,6 +1,6 @@
 # Troubleshooting (Soundhax)
 
-This page offers troubleshooting advice for commonly encountered issues with the "Installing boot9strap (Soundhax)" page. If you are unable to solve your issue with the advice on this page, please join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and describe your issue, including what you have already tried.
+This page offers troubleshooting advice for commonly encountered issues with the "Installing boot9strap (Soundhax)" page, which is used on system versions between 1.0.0 and 11.3.0. If you are unable to solve your issue with the advice on this page, please join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and describe your issue, including what you have already tried.
 
 ## Issues with Soundhax
 
@@ -33,4 +33,14 @@ If this is unsuccessful, try using another SD card.
 
 <!--@include: ./_include/troubleshooting-sb9si-common.md -->
 
-<!--@include: ./_include/troubleshooting-footer.md -->
+<!--@include: ./_include/troubleshooting-get-help-common.md -->
+
+---
+
+::: tip
+
+Go back to [Installing boot9strap (Soundhax)](installing-boot9strap-(soundhax))
+
+:::
+
+<!--@include: ./_include/troubleshooting-return.md -->

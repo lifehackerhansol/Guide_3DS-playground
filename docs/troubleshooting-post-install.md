@@ -1,8 +1,8 @@
-# Troubleshooting boot issues on consoles with custom firmware
+# Troubleshooting (Post-Install)
 
-This page offers troubleshooting advice for commonly encountered booting issues on a console with custom firmware. If you are unable to solve your issue with the advice on this page, please join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and describe your issue, including what you have already tried.
+This page offers troubleshooting advice for commonly encountered issues after custom firmware is installed. If you are unable to solve your issue with the advice on this page, please join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and describe your issue, including what you have already tried.
 
-## Boot issues on consoles with custom firmware
+## Boot issues
 
 ::: info
 
@@ -97,4 +97,117 @@ Your console is likely hard-bricked. You will need to buy an ntrboot flashcart t
 
 :::
 
-<!--@include: ./_include/troubleshooting-footer.md -->
+::: details Some other error
+
+Please take a photo of the error and join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance.
+
+:::
+
+## Software issues on consoles with custom firmware
+
+::: details DSi / DS functionality is broken or has been replaced with Flipnote Studio
+
+1. Download the latest release of [TWLFix-CFW](https://github.com/MechanicalDragon0687/TWLFix-CFW/releases/latest) (the `.3dsx` file)
+1. Power off your console
+1. Create a folder named `3ds` on the root of your SD card if it does not already exist
+1. Copy `TWLFix-CFW.3dsx` to the `/3ds/` folder on your SD card
+1. Reinsert your SD card into your console
+1. Open the Homebrew Launcher
+1. Launch TWLFix-CFW from the list of homebrew
+1. Press (A) to uninstall the broken TWL titles
+1. Press (Start) to reboot the console
+1. Update your console by going to System Settings, then "Other Settings", then going all the way to the right and using "System Update"
+    + The update will see that the essential TWL titles have been uninstalled, and will redownload and reinstall them
+1. Once the update is complete, tap "OK" to reboot the console
+
+:::
+
+::: details GBA Virtual Console and/or Safe Mode functionality is broken
+
+Your console is running Luma3DS 6.6 or older, likely via arm9loaderhax. You should follow [A9LH to B9S](a9lh-to-b9s) to update your console to a modern custom firmware environment.
+
+:::
+
+::: details Extended memory mode games (Pokemon Sun/Moon, Smash, etc.) don't work
+
+This can occur after a CTRTransfer or region change on Old 3DS / 2DS. Follow the instructions [here](region-changing#section-vi---fixing-locale-related-issues) to fix this issue (skipping steps 3, 4, 5, and 6).
+
+:::
+
+::: details Exception screen when booting/loading an application
+
+Look for your exception screen in [this page](https://wiki.hacks.guide/wiki/3DS:Error_screens/Luma3DS_exception_screen).
+If you weren't able to find your error or the instructions didn't work, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for further assistance.
+
+:::
+
+::: details Opening the HOME Menu settings crashes the console or loads the Homebrew Launcher
+
+Your console likely still has menuhax67 installed. To uninstall menuhax67, download the latest release of [menuhax67](https://github.com/zoogie/menuhax67/releases/latest) (the menuhax `.zip`), then follow the ["Uninstall menuhax67" section](https://wiki.hacks.guide/wiki/3DS:Alternate_Exploits/menuhax67#Uninstall_menuhax67) here.
+
+:::
+
+::: details Something else
+
+Join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance, and describe the issue that you see.
+
+:::
+
+## Other troubleshooting
+
+::: details Clear HOME Menu extdata
+
+1. Power off your console
+1. Insert your SD card into your computer
+1. Navigate to the `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/` folder on your SD card
+1. Delete the corresponding folder for your 3DS region:
+    + **EUR Region**: `00000098`
+    + **JPN Region**: `00000082`
+    + **USA Region**: `0000008f`
+    + **CHN Region**: `000000A1`
+    + **KOR Region**: `000000A9`
+    + **TWN Region**: `000000B1`
+1. Reinsert your SD card into your console
+
+:::
+
+::: details Clear HOME Menu theme data
+
+1. Power off your console
+1. Insert your SD card into your computer
+1. Navigate to the `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/` folder on your SD card
+1. Delete the corresponding folder for your 3DS region:
+    + **EUR Region**: `000002ce`
+    + **JPN Region**: `000002cc`
+    + **USA Region**: `000002cd`
+    + **KOR Region**: `000002cf`
+1. Reinsert your SD card into your console
+
+:::
+
+::: details Manually entering Homebrew Launcher
+
+If you are missing the Homebrew Launcher application from your HOME Menu, you can follow these instructions to manually enter the Homebrew Launcher. (You will need [boot.3dsx and boot.firm](https://github.com/LumaTeam/Luma3DS/releases/latest) on the root of your SD card.)
+
+<!--@include: ./_include/launch-hbl-dlp.md -->
+
+:::
+
+::: details Turning off Parental Controls
+
+You can disable the Parental Controls feature by going to System Settings -> Parental Controls and inserting the PIN, then pressing "Clear Settings", then "Delete" to remove it.
+However, if you do not know the PIN and therefore cannot access the console's settings, you will need to disable it. In order to do this, you need to obtain your console's master key (mkey):
+1. Go to [this website](https://mkey.eiphax.tech/)
+1. Fill the following boxes with the information:
+    + Device Type: Select "3DS" (the same applies if you are using a 2DS, New 3DS (XL/LL) or New 2DS (XL/LL))
+    + System Date: The day and month your console's clock is set to
+    + Inquiry Number: Can be obtained by pressing "Forgot PIN" then "I Forgot" in the Parental Controls screen
+1. After you have obtained your mkey, press OK on the screen you have obtained your Inquiry Number, then input the master key
+1. Press "Clear Settings", then "Delete" to remove all Parental Controls data
+
+:::
+
+---
+
+<!--@include: ./_include/troubleshooting-return.md -->
+

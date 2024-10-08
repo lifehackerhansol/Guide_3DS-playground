@@ -1,8 +1,14 @@
 # Troubleshooting (SSLoth-Browser)
 
-This page offers troubleshooting advice for commonly encountered issues with the "Installing boot9strap (SSLoth-Browser)" page. If you are unable to solve your issue with the advice on this page, please join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and describe your issue, including what you have already tried.
+This page offers troubleshooting advice for commonly encountered issues with the "Installing boot9strap (SSLoth-Browser)" page, which is used on system versions between 11.4.0 and 11.13.0. If you are unable to solve your issue with the advice on this page, please join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and describe your issue, including what you have already tried.
 
-## Issues with SSLoth-Browser
+::: warning
+
+These instructions are only valid for the "Installing boot9strap (SSLoth-Browser)" page. If you are using a **New 3DS** on version **11.15.0 through 11.17.0**, you should follow [troubleshooting instructions for Installing boot9strap (super-skaterhax)](troubleshooting-super-skaterhax) instead.
+
+:::
+
+## SSLoth-Browser
 
 ::: details Red/purple/pink and white screen after running Browserhax
 
@@ -86,4 +92,14 @@ If this is unsuccessful, try using another SD card.
 
 <!--@include: ./_include/troubleshooting-sb9si-common.md -->
 
-<!--@include: ./_include/troubleshooting-footer.md -->
+<!--@include: ./_include/troubleshooting-get-help-common.md -->
+
+---
+
+::: tip
+
+Go back to [Installing boot9strap (SSLoth-Browser)](installing-boot9strap-(ssloth-browser))
+
+:::
+
+<!--@include: ./_include/troubleshooting-return.md -->

@@ -2,7 +2,7 @@
 
 This page offers troubleshooting advice for commonly encountered issues with the "Installing boot9strap (MSET9)", "Installing boot9strap (MSET9 CLI)" and "Installing boot9strap (MSET9 Play Store)" pages. If you are unable to solve your issue with the advice on this page, please join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and describe your issue, including what you have already tried.
 
-## Issues with MSET9
+## MSET9 (application / script)
 
 ::: details Python 3 is not installed
 
@@ -133,6 +133,8 @@ One or more files that MSET9 needs to run is missing or corrupted. Re-download t
 
 :::
 
+## MSET9 (exploit)
+
 ::: details Red screen after reinserting SD card (Section II Step 11)
 
 You may be missing `SafeB9S.bin` from the root of your SD card, or the file may be corrupted. Copy it from the MSET9 `.zip`, replacing any existing files then follow these instructions to remove the trigger file:
@@ -193,4 +195,21 @@ This likely indicates that you already have custom firmware. You should [check f
 
 <!--@include: ./_include/troubleshooting-sb9si-common.md -->
 
-<!--@include: ./_include/troubleshooting-footer.md -->
+<!--@include: ./_include/troubleshooting-get-help-common.md -->
+---
+
+::: tip
+
+Go back to [Installing boot9strap (MSET9-CLI)](installing-boot9strap-(mset9-cli))
+
+:::
+
+::: tip
+
+Go back to [Installing boot9strap (MSET9 Play Store)](installing-boot9strap-(mset9-play-store))
+
+:::
+
+<!--@include: ./_include/troubleshooting-return.md -->
+
+
